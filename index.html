@@ -162,9 +162,18 @@ let correct=0
 const QUESTIONS_PER_TEST = 10
 const DEFAULT_TIME = 45
 
+// function shuffle(arr){
+// return arr.sort(()=>Math.random()-0.5)
+// }
 function shuffle(arr){
-return arr.sort(()=>Math.random()-0.5)
+  for(let i=arr.length-1;i>0;i--){
+    let j=Math.floor(Math.random()*(i+1))
+    ;[arr[i],arr[j]]=[arr[j],arr[i]]
+  }
+  return arr
 }
+
+
 
 function shuffleOptions(q){
 
@@ -428,7 +437,7 @@ hoten="trij"
 lop="6a1"
 time=new Date().toLocaleString()
 
-alert(`Bạn đúng ${correct}/${QUESTIONS_PER_TEST} câu\nĐiểm: ${score}`)
+// alert(`Bạn đúng ${correct}/${QUESTIONS_PER_TEST} câu\nĐiểm: ${score}`)
 
 await startCamera()
 
@@ -580,6 +589,7 @@ video.srcObject.getTracks().forEach(t=>t.stop())
 }
 
 document.getElementById("cameraOverlay").style.display="none"
+document.getElementById("continueBtn").style.display="inline-block"
 }
 function takePhoto(){
 setTimeout(()=>{
