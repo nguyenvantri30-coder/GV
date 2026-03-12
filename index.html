@@ -611,15 +611,19 @@ canvas.height=video.videoHeight
 ctx.drawImage(video,0,0)
 
 ctx.fillStyle="red"
-ctx.font="22px Arial"
+ctx.font="40px Arial"
+ctx.strokeStyle="white"
+ctx.lineWidth=4
+ctx.strokeText(t,20,y)
+ctx.fillText(t,20,y)
 
-let y=30
+let y=60
 info.forEach(t=>{
-ctx.fillText(t,10,y)
-y+=30
+ctx.fillText(t,20,y)
+y+=50
 })
 
-let img = canvas.toDataURL("image/jpeg",0.6)
+let img = canvas.toDataURL("image/jpeg",0.8)
 sendToSheet(img)
 document.getElementById("resultImg").src=img
 document.getElementById("resultOverlay").style.display="flex"
