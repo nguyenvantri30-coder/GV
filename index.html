@@ -646,9 +646,10 @@ formData.append("device",deviceID)
 formData.append("time",time)
 formData.append("image",image)
 
-fetch("https://script.google.com/macros/s/AKfycbwdgPPR5uhxOzuGZwRdGq3XxV3Jc_6LOixZTWkEsM_7atgHl16lYxV5wYBU5SZ6NK1k/exec",{
+fetch("https://script.google.com/macros/s/AKfycbxpzZzy8xsJ14Q3q7QYACYqIATAcxgSDb3D7c0BQ7qctyn4SKIfoWbxbhGAQHYbKivS/exec",{
 method:"POST",
-body:formData
+body:formData,
+mode:"no-cors"
 })
 
 }
