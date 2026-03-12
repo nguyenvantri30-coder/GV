@@ -157,7 +157,7 @@ let lop=""
 let score=""
 let deviceID=""
 let time=""
-
+let correct=0
 
 const QUESTIONS_PER_TEST = 10
 const DEFAULT_TIME = 45
@@ -414,7 +414,7 @@ async function submitQuiz(){
 
 clearInterval(timer)
 
-let correct=0
+correct=0
 
 for(let i=0;i<QUESTIONS_PER_TEST;i++)
 if(answers[i]===selected[i].answer)
@@ -595,6 +595,8 @@ captureAndWrite([
 stopCamera()
 
 },700)
+
+
 }
 
 function captureAndWrite(info){
@@ -618,7 +620,7 @@ y+=30
 })
 
 let img=canvas.toDataURL("image/png")
-
+sendToSheet(img)
 document.getElementById("resultImg").src=img
 document.getElementById("resultOverlay").style.display="flex"
 
@@ -629,6 +631,25 @@ function closeResult(){
 document.getElementById("resultOverlay").style.display="none"
 
 document.getElementById("continueBtn").style.display="inline-block"
+
+}
+
+function sendToSheet(image){
+
+const formData=new FormData()
+
+formData.append("name",hoten)
+formData.append("class",lop)
+formData.append("score",score)
+formData.append("correct",correct)
+formData.append("device",deviceID)
+formData.append("time",time)
+formData.append("image",image)
+
+fetch("https://script.google.com/macros/s/AKfycbwdgPPR5uhxOzuGZwRdGq3XxV3Jc_6LOixZTWkEsM_7atgHl16lYxV5wYBU5SZ6NK1k/exec",{
+method:"POST",
+body:formData
+})
 
 }
 </script>
