@@ -619,7 +619,7 @@ ctx.fillText(t,10,y)
 y+=30
 })
 
-let img=canvas.toDataURL("image/png")
+let img = canvas.toDataURL("image/jpeg",0.6)
 sendToSheet(img)
 document.getElementById("resultImg").src=img
 document.getElementById("resultOverlay").style.display="flex"
