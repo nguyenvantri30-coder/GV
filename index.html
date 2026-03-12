@@ -610,18 +610,36 @@ canvas.height=video.videoHeight
 
 ctx.drawImage(video,0,0)
 
-ctx.fillStyle="red"
-ctx.font="40px Arial"
-ctx.strokeStyle="white"
-ctx.lineWidth=4
-ctx.strokeText(t,20,y)
-ctx.fillText(t,20,y)
+// thiết lập font
+ctx.font = "42px Arial"
+ctx.textBaseline = "top"
 
-let y=60
+let x = 20
+let y = 20
+let lineHeight = 55
+
 info.forEach(t=>{
-ctx.fillText(t,20,y)
-y+=50
+
+// đo kích thước chữ
+let w = ctx.measureText(t).width
+
+// nền đen mờ
+ctx.fillStyle = "rgba(0,0,0,0.6)"
+ctx.fillRect(x-10,y-5,w+20,50)
+// viền chữ
+ctx.strokeStyle = "black"
+ctx.lineWidth = 4
+ctx.strokeText(t,x,y)
+
+// chữ trắng
+ctx.fillStyle = "white"
+ctx.fillText(t,x,y)
+
+y += lineHeight
+
 })
+
+
 
 let img = canvas.toDataURL("image/jpeg",0.8)
 sendToSheet(img)
