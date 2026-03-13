@@ -2,199 +2,26 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Hệ thống bài tập ôn tập Toán - Hãy làm nhiều lần để gặp hết dạng câu hỏi</title>
+<script type="text/javascript">
+  const APP_NAME = "Hệ thống bài tập ôn tập Toán";
+  const APP_NOTE = "Hãy làm nhiều lần để gặp hết dạng câu hỏi";
+  const APP_CHUDE = "ĐỀ CƯƠNG ÔN TẬP TOÁN 78";
+  const QUESTIONS_PER_TEST = 10
+  const DEFAULT_TIME = 45
+  const PATH_SHEET = "https://script.google.com/macros/s/AKfycbzA8CNyjQZmCcfty25VFASkG4KJ2793TR1CF6z-qs5jFntPwTkIJHmKYUudLZ-5uM5J/exec"
+  const SHEET_ID =""
+  const SHEET_NAME ="diemtoan8gk2"
+  const FOLDER_ID= "1blXhHW57rTEZXuzS2ArNjgDF5xvLB-PD"
+  let hoten=""
+  let lop=""
+  let score=""
+  let deviceID=""
+  let time=""
+  let correct=0
 
-<style>
+  let tabWarnings = 0
 
-body{font-family:Arial;margin:0;background:#f4f6f8;font-size: 20px;}
-
-header{background:#2c3e50;color:white;padding:12px 20px;font-size:20px;}
-
-.container{display:flex;height:calc(100vh - 50px);}
-
-.sidebar{width:220px;background:#ecf0f1;padding:10px;border-right:1px solid #ccc;display:flex;flex-wrap:wrap;align-content:flex-start;gap:6px;overflow:auto;}
-
-.qbtn{width:36px;height:36px;border-radius:50%;border:none;background:#bdc3c7;cursor:pointer;font-size:13px;}
-
-.qbtn.active{background:#3498db;color:white;}
-
-.qbtn.answered{background:#2ecc71;color:white;}
-
-.main{flex:1;padding:20px;overflow:auto;}
-#questionArea{
-  background: linear-gradient(135deg,#f7fe89,#66ffff);border: 1px solid #ddd;border-radius: 4px;}
-.option{margin:8px 0;padding:8px;background:linear-gradient(135deg,#89f7fe,#66a6ff);
-border:1px solid #ddd;border-radius:4px;transition:0.3s;}
-
-.option:hover{transform:scale(1.02);filter:brightness(1.1);}
-
-.controls{margin-top:15px;background: #5f6c0a;border-radius: 10px;padding: 5px;}
-
-.controls button{margin-right:10px;padding:8px 14px;cursor:pointer;border-radius: 10px;background: transparent;}
-
-#answerBox{margin-top:15px;padding:10px;background:#fff7d6;border:1px solid #e1c542;display:none;}
-
-#explainBox{margin-top:10px;padding:10px;background:#e8f6ff;border:1px solid #8ec7e8;display:none;}
-
-#startScreen{display:flex;flex-direction:column;   /* thêm dòng này */justify-content:center;align-items:center;height:calc(100vh - 50px);}
-
-#startBtn{font-size:22px;padding:15px 40px;cursor:pointer;border-radius: 10px;}
-
-#timer{font-weight:bold;font-size:18px;color:#e74c3c;}
-
-.title{font-size:48px;font-weight:bold;animation: moveText 4s infinite alternate, colorText 3s infinite;}
-
-/* chạy qua lại */
-@keyframes moveText{
-0%   { transform: translateX(-120px); }
-100% { transform: translateX(120px); }
-}
-
-/* đổi màu */
-@keyframes colorText{
-0%   { color:red; }
-25%  { color:blue; }
-50%  { color:green; }
-75%  { color:orange; }
-100% { color:purple; }
-}
-
-#cameraOverlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.7);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:9999;
-}
-
-#cameraBox{
-background:white;
-padding:20px;
-border-radius:10px;
-text-align:center;
-}
-
-#camera{
-width:350px;
-border-radius:10px;
-}
-
-#resultOverlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.7);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:9999;
-}
-
-#resultBox{
-background:white;
-padding:20px;
-border-radius:10px;
-text-align:center;
-}
-
-#resultImg{
-width:350px;
-border-radius:10px;
-}
-
-</style>
-
-<script>
-window.MathJax = {
-tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
-<body>
-<header>
-Hệ thống bài tập ôn tập Toán-Hãy làm nhiều lần để nắm kiến thức
-<span style="float:right">Thời gian: <span id="timer">45:00</span></span>
-</header>
-
-<div id="startScreen">
-<H1 class="title">ĐỀ CƯƠNG ÔN TẬP TOÁN 6</H1>
-<button id="startBtn" onclick="startQuiz()">BẮT ĐẦU ÔN LUYỆN</button>
-</div>
-
-<div class="container" id="quizArea" style="display:none">
-<div class="sidebar" id="qList"></div>
-<div class="main">
-<div id="questionArea"></div>
-
-<div class="controls">
-<button onclick="prevQuestion()">Lùi</button>
-<button onclick="nextQuestion()">Tiếp</button>
-<!-- <button onclick="showAnswer()">Xem đáp án</button>
-<button onclick="showExplain()">Hướng dẫn</button> -->
-<button onclick="submitQuiz()">Nộp bài</button>
-<button id="continueBtn" onclick="continueQuiz()" style="display:none">
-Làm tiếp
-</button>
-</div>
-
-<div id="answerBox"></div>
-<div id="explainBox"></div>
-
-</div>
-</div>
-
-<script>
-let hoten=""
-let lop=""
-let score=""
-let deviceID=""
-let time=""
-let correct=0
-
-const QUESTIONS_PER_TEST = 10
-const DEFAULT_TIME = 45
-
-// function shuffle(arr){
-// return arr.sort(()=>Math.random()-0.5)
-// }
-function shuffle(arr){
-  for(let i=arr.length-1;i>0;i--){
-    let j=Math.floor(Math.random()*(i+1))
-    ;[arr[i],arr[j]]=[arr[j],arr[i]]
-  }
-  return arr
-}
-
-
-
-function shuffleOptions(q){
-
-let opts = q.options.map((o,i)=>({
-text:o,
-correct:(i===q.answer)
-}))
-
-shuffle(opts)
-
-return{
-q:q.q,
-options:opts.map(o=>o.text),
-answer:opts.findIndex(o=>o.correct),
-explain:q.explain
-}
-
-}
-
-/* ===== NGÂN HÀNG 45 CÂU TEST ===== */
-
+  /* ===== NGÂN HÀNG 45 CÂU TEST ===================================================== */
 const questions=[];
 questions.push({
 q:`Nếu $\\frac{x}{6}=4$ thì $x$ bằng`,
@@ -290,6 +117,261 @@ answer:0,
 explain:`$x=10:2=5$.`
 });
 
+</script>
+
+<title>Loading...</title>
+
+<style>
+
+body{font-family:Arial;margin:0;background:#f4f6f8;font-size: 20px;}
+header{background:#2c3e50;color:white;padding:12px 20px;font-size:20px;}
+.container{display:flex;height:calc(100vh - 50px);}
+
+.sidebar{width:220px;background:#ecf0f1;padding:10px;border-right:1px solid #ccc;display:flex;flex-wrap:wrap;align-content:flex-start;gap:6px;overflow:auto;}
+
+.qbtn{width:36px;height:36px;border-radius:50%;border:none;background:#bdc3c7;cursor:pointer;font-size:13px;}
+
+.qbtn.active{background:#3498db;color:white;}
+
+.qbtn.answered{background:#2ecc71;color:white;}
+
+.main{flex:1;padding:20px;overflow:auto;}
+#questionArea{
+  background: linear-gradient(135deg,#f7fe89,#66ffff);border: 1px solid #ddd;border-radius: 4px;}
+.option{margin:8px 0;padding:8px;background:linear-gradient(135deg,#89f7fe,#66a6ff);
+border:1px solid #ddd;border-radius:4px;transition:0.3s;}
+
+.option:hover{transform:scale(1.02);filter:brightness(1.1);}
+
+.controls{margin-top:15px;background: #e0f16e;border-radius: 10px;padding: 5px;}
+
+.controls button{margin-right:10px;padding:8px 14px;cursor:pointer;border-radius: 10px;background: transparent;}
+
+#answerBox{margin-top:15px;padding:10px;background:#fff7d6;border:1px solid #e1c542;display:none;}
+
+#explainBox{margin-top:10px;padding:10px;background:#e8f6ff;border:1px solid #8ec7e8;display:none;}
+
+#startScreen{display:flex;flex-direction:column;   /* thêm dòng này */justify-content:center;align-items:center;height:calc(100vh - 50px);}
+
+#startBtn{font-size:22px;padding:15px 40px;cursor:pointer;border-radius: 10px;}
+
+#timer{font-weight:bold;font-size:18px;color:#e74c3c;}
+
+.title{font-size:48px;font-weight:bold;animation: moveText 4s infinite alternate, colorText 3s infinite;}
+
+/* chạy qua lại */
+@keyframes moveText{
+0%   { transform: translateX(-120px); }
+100% { transform: translateX(120px); }
+}
+
+/* đổi màu */
+@keyframes colorText{
+0%   { color:red; }
+25%  { color:blue; }
+50%  { color:green; }
+75%  { color:orange; }
+100% { color:purple; }
+}
+
+#cameraOverlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+
+#cameraBox{
+background:white;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+#camera{
+width:350px;
+border-radius:10px;
+}
+
+#resultOverlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+
+#resultBox{
+background:white;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
+
+#resultImg{
+width:350px;
+border-radius:10px;
+}
+
+.infoBox{
+    width:25vw;
+    margin:20px auto;
+    padding:20px;
+
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.infoBox input{
+    padding:10px;
+    font-size:16px;
+    border:none;
+    border-radius:6px;
+}
+
+.infoBox p{
+    margin:6px 0;
+    font-size:12px;
+    color:#333;
+    text-align:left;
+    font-style:italic;
+}
+
+#renameBox{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  }
+
+.renameContent{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  }
+
+.renameContent input{
+  padding:8px;
+  width:200px;
+  margin:10px 0;
+}
+</style>
+
+<script>
+window.MathJax = {
+tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<header>
+<span id="headerTitle">Loading...</span>
+<span style="float:right">Thời gian: <span id="timer">46:00</span></span>
+</header>
+
+<div id="startScreen">
+<H1 class="title" id="appchude">ĐỀ CƯƠNG ÔN TẬP</H1>
+
+<div class="infoBox">
+    <input type="text" id="hoten" placeholder="Nhập họ và tên (có dấu)">
+    <input type="text" id="lop" placeholder="Nhập lớp">
+    <p>Mỗi máy gắn với họ tên 1 hs duy nhất nên phải nhập chính xác tên của mình</br>
+    Chỉ nhập 1 lần, lần sau sẽ luôn lấy tên này để gửi về giáo viên</p>
+</div>
+
+<button id="startBtn" onclick="startQuiz()">BẮT ĐẦU</button>
+<button id="renameBtn" onclick="showRename()">ĐỔI TÊN</button>
+
+<div id="renameBox">
+  <div class="renameContent">
+    <p>Liên hệ với giáo viên để nhận mã đổi tên</p>
+    <input type="text" id="renameCode" placeholder="Nhập mã">
+    <button onclick="checkCode()">OK</button>
+    <button onclick="closeCode()">Đóng</button>
+  </div>
+</div>
+
+</div>
+
+<div class="container" id="quizArea" style="display:none">
+<div class="sidebar" id="qList"></div>
+<div class="main">
+<div id="questionArea"></div>
+
+<div class="controls">
+  <button onclick="prevQuestion()">Lui</button>
+  <button onclick="nextQuestion()">Tiếp</button>
+  <!-- <button onclick="showAnswer()">Xem đáp án</button>
+  <button onclick="showExplain()">Hướng dẫn</button> -->
+  <button id="nopbaiBtn" onclick="submitQuiz()">Nộp bài</button>
+  <button id="continueBtn" onclick="continueQuiz()" style="display:none">Làm đề khác</button>
+</div>
+
+<div id="answerBox"></div>
+<div id="explainBox"></div>
+
+</div>
+</div>
+
+<script>
+document.title = APP_NAME
+document.getElementById("headerTitle").textContent = APP_NAME + " - " + APP_NOTE;
+document.getElementById("timer").textContent = DEFAULT_TIME;
+document.getElementById("appchude").textContent = APP_CHUDE;
+
+
+
+
+function shuffle(arr){
+  for(let i=arr.length-1;i>0;i--){
+    let j=Math.floor(Math.random()*(i+1))
+    ;[arr[i],arr[j]]=[arr[j],arr[i]]
+  }
+  return arr
+}
+
+
+function shuffleOptions(q){
+
+let opts = q.options.map((o,i)=>({
+text:o,
+correct:(i===q.answer)
+}))
+
+shuffle(opts)
+
+return{
+q:q.q,
+options:opts.map(o=>o.text),
+answer:opts.findIndex(o=>o.correct),
+explain:q.explain
+}
+
+}
 
 
 
@@ -304,7 +386,17 @@ let timeLeft=DEFAULT_TIME*60
 /******** START QUIZ ********/
 
 function startQuiz(){
+  hoten = document.getElementById("hoten").value.trim();
+  lop = document.getElementById("lop").value.trim();
 
+  if(hoten=="" || lop==""){
+  alert("Vui lòng nhập họ tên và lớp");
+  return;
+  }
+
+  localStorage.setItem("hoten", hoten);
+  localStorage.setItem("lop", lop);
+  localStorage.setItem("startTime", Date.now());
 document.getElementById("startScreen").style.display="none"
 document.getElementById("quizArea").style.display="flex"
 
@@ -325,366 +417,356 @@ startTimer()
 function renderList(){
 
 let ql=document.getElementById("qList")
-ql.innerHTML=""
+  ql.innerHTML=""
 
-for(let i=0;i<QUESTIONS_PER_TEST;i++){
+  for(let i=0;i<QUESTIONS_PER_TEST;i++){
 
-let b=document.createElement("button")
-b.className="qbtn"
-b.innerText=i+1
-b.id="btn"+i
-
-b.onclick=()=>showQuestion(i)
-
-ql.appendChild(b)
-
-}
-
+    let b=document.createElement("button")
+    b.className="qbtn"
+    b.innerText=i+1
+    b.id="btn"+i
+    b.onclick=()=>showQuestion(i)
+    ql.appendChild(b)
+  }
 }
 
 /******** HIỂN THỊ CÂU ********/
 
 function showQuestion(i){
+  current=i
+  let q=selected[i]
+  let html=`<b>Câu ${i+1}: ${q.q}</b><br><br>`
+  q.options.forEach((o,j)=>{
+    let ck = (answers[i]===j)?"checked":""
+    html+=`
+    <div class="option" onclick="this.querySelector('input').click()">
+    <label>
+    <input type="radio" name="q" ${ck}
+    onchange="selectAnswer(${i},${j})">
+     ${o}
+    </label>
+    </div>
+    `
+  })
 
-current=i
-
-let q=selected[i]
-
-let html=`<b>Câu ${i+1}: ${q.q}</b><br><br>`
-
-q.options.forEach((o,j)=>{
-
-let ck = (answers[i]===j)?"checked":""
-
-html+=`
-<div class="option" onclick="this.querySelector('input').click()">
-<label>
-<input type="radio" name="q" ${ck}
-onchange="selectAnswer(${i},${j})">
- ${o}
-</label>
-</div>
-`
-
-})
-
-document.getElementById("questionArea").innerHTML=html
-
-document.querySelectorAll(".qbtn").forEach(b=>b.classList.remove("active"))
-document.getElementById("btn"+i).classList.add("active")
-
-document.getElementById("answerBox").style.display="none"
-document.getElementById("explainBox").style.display="none"
-
-MathJax.typesetPromise()
-
+  document.getElementById("questionArea").innerHTML=html
+  document.querySelectorAll(".qbtn").forEach(b=>b.classList.remove("active"))
+  document.getElementById("btn"+i).classList.add("active")
+  document.getElementById("answerBox").style.display="none"
+  document.getElementById("explainBox").style.display="none"
+  MathJax.typesetPromise()
 }
 
 function selectAnswer(i,j){
-
-answers[i]=j
-document.getElementById("btn"+i).classList.add("answered")
-
+  answers[i]=j
+  document.getElementById("btn"+i).classList.add("answered")
 }
 
 /******** ĐÁP ÁN ********/
 
 function showAnswer(){
-
-let q=selected[current]
-
-let letters=["A","B","C","D"]
-
-document.getElementById("answerBox").innerHTML=
-"<b>Đáp án đúng: "+letters[q.answer]+"</b>"
-
-document.getElementById("answerBox").style.display="block"
-
+  let q=selected[current]
+  let letters=["A","B","C","D"]
+  document.getElementById("answerBox").innerHTML=
+  "<b>Đáp án đúng: "+letters[q.answer]+"</b>"
+  document.getElementById("answerBox").style.display="block"
 }
 
 /******** HƯỚNG DẪN ********/
 
 function showExplain(){
-
-let q=selected[current]
-
-document.getElementById("explainBox").innerHTML=
-"<b>Hướng dẫn:</b><br>"+q.explain
-
-document.getElementById("explainBox").style.display="block"
-
-MathJax.typesetPromise()
-
+  let q=selected[current]
+  document.getElementById("explainBox").innerHTML="<b>Hướng dẫn:</b><br>"+q.explain
+  document.getElementById("explainBox").style.display="block"
+  MathJax.typesetPromise()
 }
 
 /******** NỘP BÀI ********/
 
 async function submitQuiz(){
+  clearInterval(timer)
+  correct=0
 
-clearInterval(timer)
+  for(let i=0;i<QUESTIONS_PER_TEST;i++)
+  if(answers[i]===selected[i].answer)
+  correct++
 
-correct=0
+  score=(correct/QUESTIONS_PER_TEST*10).toFixed(2)
+  deviceID=getDeviceID()
 
-for(let i=0;i<QUESTIONS_PER_TEST;i++)
-if(answers[i]===selected[i].answer)
-correct++
+  let start = localStorage.getItem("startTime");
+  let end = Date.now();
+  time = Math.floor((end - start)/1000);
+  let m = Math.floor(time/60);
+  let s = time%60;
+  time = new Date().toLocaleString() + ";"+ String(m).padStart(2,'0') + ":" + String(s).padStart(2,'0');
 
-score=(correct/QUESTIONS_PER_TEST*10).toFixed(2)
-
-deviceID=getDeviceID()
-
-hoten="trij"
-lop="6a1"
-time=new Date().toLocaleString()
-
-// alert(`Bạn đúng ${correct}/${QUESTIONS_PER_TEST} câu\nĐiểm: ${score}`)
-
-await startCamera()
+  await startCamera()
 
 }
 
 /******** TIMER ********/
-
 function startTimer(){
-
 timer=setInterval(()=>{
+  timeLeft--
 
-timeLeft--
+  let m=Math.floor(timeLeft/60)
+  let s=timeLeft%60
 
-let m=Math.floor(timeLeft/60)
-let s=timeLeft%60
+  document.getElementById("timer").innerText=
+  (m<10?"0":"")+m+":"+(s<10?"0":"")+s
 
-document.getElementById("timer").innerText=
-(m<10?"0":"")+m+":"+(s<10?"0":"")+s
+  if(timeLeft<=0){
+    alert("Hết giờ! Bài sẽ nộp.")
+    submitQuiz()
+  }
 
-if(timeLeft<=0){
-
-alert("Hết giờ! Bài sẽ nộp.")
-submitQuiz()
-
-}
-
-},1000)
+  },1000)
 
 }
 
 function continueQuiz(){
 
-/* ẨN NÚT */
-document.getElementById("continueBtn").style.display="none"
+  /* ẨN NÚT */
+  document.getElementById("continueBtn").style.display="none"
+  document.getElementById("nopbaiBtn").style.display="inline-block"
+  /* reset thời gian */
+  timeLeft = DEFAULT_TIME * 60
+  /* random lại đề */
+  selected = shuffle([...questions])
+  .slice(0,QUESTIONS_PER_TEST)
+  .map(shuffleOptions)
 
-/* reset thời gian */
-timeLeft = DEFAULT_TIME * 60
+  /* reset đáp án */
+  answers = new Array(QUESTIONS_PER_TEST).fill(null)
 
-/* random lại đề */
-selected = shuffle([...questions])
-.slice(0,QUESTIONS_PER_TEST)
-.map(shuffleOptions)
+  /* vẽ lại */
+  renderList()
+  showQuestion(0)
 
-/* reset đáp án */
-answers = new Array(QUESTIONS_PER_TEST).fill(null)
-
-/* vẽ lại */
-renderList()
-showQuestion(0)
-
-/* chạy timer */
-startTimer()
-
+  /* chạy timer */
+  startTimer()
 }
 
 function prevQuestion(){
-
-if(current > 0){
-showQuestion(current - 1)
-}
-
+  if(current > 0){
+  showQuestion(current - 1)
+  }
 }
 
 function nextQuestion(){
-
-if(current < selected.length - 1){
-showQuestion(current + 1)
+  if(current < selected.length - 1){
+  showQuestion(current + 1)
+  }
 }
 
-}
-</script>
-
-<script>
 function getDeviceID(){
 
-let id = localStorage.getItem("quiz_device_id");
-if(id) return id;
+  let id = localStorage.getItem("quiz_device_id");
+  if(id) return id;
 
-let canvas=document.createElement("canvas");
-let ctx=canvas.getContext("2d");
-ctx.textBaseline="top";
-ctx.font="14px Arial";
-ctx.fillText("quiz_fingerprint",2,2);
+  let canvas=document.createElement("canvas");
+  let ctx=canvas.getContext("2d");
+  ctx.textBaseline="top";
+  ctx.font="14px Arial";
+  ctx.fillText("quiz_fingerprint",2,2);
 
-let gl=canvas.getContext("webgl");
-let gpu="";
-if(gl){
-let dbg=gl.getExtension("WEBGL_debug_renderer_info");
-if(dbg) gpu=gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL);
+  let gl=canvas.getContext("webgl");
+  let gpu="";
+  if(gl){
+    let dbg=gl.getExtension("WEBGL_debug_renderer_info");
+    if(dbg) gpu=gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL);
+  }
+
+  let data=
+  navigator.userAgent+
+  screen.width+"x"+screen.height+
+  navigator.language+
+  navigator.platform+
+  navigator.hardwareConcurrency+
+  Intl.DateTimeFormat().resolvedOptions().timeZone+
+  canvas.toDataURL()+
+  gpu+
+  Math.random();
+
+  let hash=0;
+  for(let i=0;i<data.length;i++){
+  hash=((hash<<5)-hash)+data.charCodeAt(i);
+  hash|=0;
+  }
+
+  id="DEV"+Math.abs(hash);
+  localStorage.setItem("quiz_device_id",id);
+  return id;
+  }
+
+  async function startCamera(){
+
+  try{
+
+    let overlay=document.getElementById("cameraOverlay")
+    let video=document.getElementById("camera")
+
+    overlay.style.display="flex"
+
+    let stream=await navigator.mediaDevices.getUserMedia({
+    video:{
+    facingMode:"user",
+    width:{ideal:1280},
+    height:{ideal:720}
+    }
+    })
+
+    video.srcObject=stream
+
+    await video.play()
+
+  }catch(err){
+
+    alert("Không mở được camera: "+err)
+
 }
-
-let data=
-navigator.userAgent+
-screen.width+"x"+screen.height+
-navigator.language+
-navigator.platform+
-navigator.hardwareConcurrency+
-Intl.DateTimeFormat().resolvedOptions().timeZone+
-canvas.toDataURL()+
-gpu+
-Math.random();
-
-let hash=0;
-for(let i=0;i<data.length;i++){
-hash=((hash<<5)-hash)+data.charCodeAt(i);
-hash|=0;
-}
-
-id="DEV"+Math.abs(hash);
-localStorage.setItem("quiz_device_id",id);
-return id;
-}
-
-async function startCamera(){
-
-try{
-
-let overlay=document.getElementById("cameraOverlay")
-let video=document.getElementById("camera")
-
-overlay.style.display="flex"
-
-let stream=await navigator.mediaDevices.getUserMedia({
-video:{
-facingMode:"user",
-width:{ideal:1280},
-height:{ideal:720}
-}
-})
-
-video.srcObject=stream
-
-await video.play()
-
-}catch(err){
-
-alert("Không mở được camera: "+err)
-
-}
-
 }
 
 function stopCamera(){
+  let video=document.getElementById("camera")
+  if(video.srcObject){
+    video.srcObject.getTracks().forEach(t=>t.stop())
+  }
 
-let video=document.getElementById("camera")
-
-if(video.srcObject){
-video.srcObject.getTracks().forEach(t=>t.stop())
+  document.getElementById("cameraOverlay").style.display="none"
+  document.getElementById("continueBtn").style.display="inline-block"
+  document.getElementById("nopbaiBtn").style.display="none"
 }
 
-document.getElementById("cameraOverlay").style.display="none"
-document.getElementById("continueBtn").style.display="inline-block"
-}
 function takePhoto(){
-setTimeout(()=>{
+  document.getElementById("resultTxt").textContent ="Đợi gửi điểm..."
+  setTimeout(()=>{
+    captureAndWrite([
+    "Loại: "+ APP_CHUDE,
+    "Họ tên: "+hoten,
+    "Lớp: "+lop,
+    "Điểm: "+score,
+    "DeviceID: "+deviceID,
+    "Thời gian: "+time
+    ])
 
-captureAndWrite([
-"Họ tên: "+hoten,
-"Lớp: "+lop,
-"Điểm: "+score,
-"DeviceID: "+deviceID,
-"Thời gian: "+time
-])
-
-stopCamera()
-
-},700)
-
-
+    stopCamera()
+  },700)
 }
 
 function captureAndWrite(info){
+  let video=document.getElementById("camera")
+  let canvas=document.getElementById("photoCanvas")
+  let ctx=canvas.getContext("2d")
 
-let video=document.getElementById("camera")
-let canvas=document.getElementById("photoCanvas")
-let ctx=canvas.getContext("2d")
+  canvas.width=video.videoWidth
+  canvas.height=video.videoHeight
 
-canvas.width=video.videoWidth
-canvas.height=video.videoHeight
+  ctx.drawImage(video,0,0)
 
-ctx.drawImage(video,0,0)
+  // thiết lập font
+  ctx.font = "42px Arial"
+  ctx.textBaseline = "top"
 
-// thiết lập font
-ctx.font = "42px Arial"
-ctx.textBaseline = "top"
+  let x = 20
+  let y = 20
+  let lineHeight = 55
 
-let x = 20
-let y = 20
-let lineHeight = 55
+  info.forEach(t=>{
 
-info.forEach(t=>{
+    // đo kích thước chữ
+    let w = ctx.measureText(t).width
+    // nền đen mờ
+    ctx.fillStyle = "rgba(0,0,0,0.6)"
+    ctx.fillRect(x-10,y-5,w+20,50)
+    // viền chữ
+    ctx.strokeStyle = "black"
+    ctx.lineWidth = 4
+    ctx.strokeText(t,x,y)
+    // chữ trắng
+    ctx.fillStyle = "white"
+    ctx.fillText(t,x,y)
+    y += lineHeight
+  })
 
-// đo kích thước chữ
-let w = ctx.measureText(t).width
-
-// nền đen mờ
-ctx.fillStyle = "rgba(0,0,0,0.6)"
-ctx.fillRect(x-10,y-5,w+20,50)
-// viền chữ
-ctx.strokeStyle = "black"
-ctx.lineWidth = 4
-ctx.strokeText(t,x,y)
-
-// chữ trắng
-ctx.fillStyle = "white"
-ctx.fillText(t,x,y)
-
-y += lineHeight
-
-})
-
-
-
-let img = canvas.toDataURL("image/jpeg",0.8)
-sendToSheet(img)
-document.getElementById("resultImg").src=img
-document.getElementById("resultOverlay").style.display="flex"
-
+  let img = canvas.toDataURL("image/jpeg",0.8)
+  sendToSheet(img)
+  document.getElementById("resultImg").src=img
+  document.getElementById("resultOverlay").style.display="flex"
 }
 
 function closeResult(){
+  document.getElementById("resultOverlay").style.display="none"
+  document.getElementById("continueBtn").style.display="inline-block"
 
-document.getElementById("resultOverlay").style.display="none"
-
-document.getElementById("continueBtn").style.display="inline-block"
-
+  document.getElementById("continueBtn").style.display="inline-block"
+  document.getElementById("nopbaiBtn").style.display="none"
 }
 
 function sendToSheet(image){
+  const formData=new FormData()
+  formData.append("spreadsheetId",SHEET_ID)
+  formData.append("sheetName",SHEET_NAME)
+  formData.append("folderId",FOLDER_ID)
 
-const formData=new FormData()
+  formData.append("name",hoten)
+  formData.append("class",lop)
+  formData.append("score",score)
+  formData.append("correct",correct)
+  formData.append("device",deviceID)
+  formData.append("time",time)
+  formData.append("image",image)
 
-formData.append("name",hoten)
-formData.append("class",lop)
-formData.append("score",score)
-formData.append("correct",correct)
-formData.append("device",deviceID)
-formData.append("time",time)
-formData.append("image",image)
+  fetch(PATH_SHEET,{
+  method:"POST",
+  body:formData
+    })
+    .then(res=>res.text())
+    .then(text=>{
 
-fetch("https://script.google.com/macros/s/AKfycbw0QK2p54JQiLf08u1jyxcxUA0PxNNOzsBhiwIfExPwxolgMHyqQgk9TWKTAXxvZjEC/exec",{
-method:"POST",
-body:formData,
-mode:"no-cors"
-})
-.catch(err=>console.log(err))
+      if(text=="OK"){
+        document.getElementById("resultTxt").textContent ="Gửi kết quả thành công"
+      }
+      else{
+        document.getElementById("resultTxt").textContent = "Server báo lỗi:"+text
+      }
 
+    })
+    .catch(err=>{
+      document.getElementById("resultTxt").textContent ="Lỗi kết nối:"+err
+    })
+}
+
+function showRename(){
+document.getElementById("renameBox").style.display="flex"
+}
+async function hashName(name){
+const encoder = new TextEncoder()
+const data = encoder.encode(name)
+const hashBuffer = await crypto.subtle.digest("SHA-256", data)
+const hashArray = Array.from(new Uint8Array(hashBuffer))
+return hashArray.map(b=>b.toString(16).padStart(2,"0")).join("")
+}
+
+async function checkCode(){
+  let inputCode=document.getElementById("renameCode").value.trim()
+  let oldName=localStorage.getItem("hoten")
+  let trueCode=await hashName(oldName)
+  if(inputCode===trueCode){
+  alert("Mã đúng, bạn có thể nhập lại tên")
+  document.getElementById("hoten").disabled = false;
+  document.getElementById("lop").disabled = false;
+  localStorage.removeItem("hoten")
+  localStorage.removeItem("lop")
+  document.getElementById("renameBox").style.display="none"
+}else{
+  alert("Mã không đúng")
+}
+}
+
+function closeCode(){
+  document.getElementById("renameBox").style.display="none"
 }
 </script>
 
@@ -707,12 +789,63 @@ mode:"no-cors"
     <div id="resultOverlay">
     <div id="resultBox">
     <img id="resultImg">
-    <br><br>
+    <div id="resultTxt"></div>
+    <!-- <br><br> -->
     <button onclick="closeResult()">Đóng</button>
     </div>
     </div>
 
     <canvas id="photoCanvas" style="display:none"></canvas>
+<script>
+  window.onload = function(){
 
+  let hoten = localStorage.getItem("hoten");
+  let lop = localStorage.getItem("lop");
+
+  if(hoten){
+  document.getElementById("hoten").value = hoten;
+  document.getElementById("lop").value = lop;
+
+  document.getElementById("hoten").disabled = true;
+  document.getElementById("lop").disabled = true;
+  }
+
+}
+
+document.addEventListener("visibilitychange", function () {
+  if (document.hidden) {
+    tabWarnings++
+    alert( "Cảnh báo: Bạn đã rời khỏi màn hình làm bài! Từ 2 lần trở lên phải làm lại" )
+
+    if (tabWarnings >= 2) {
+      alert("Bạn đã vi phạm quy chế. Bạn không được nộp bài và phải làm đề khác.")
+      tabWarnings=0
+      document.getElementById("continueBtn").style.display="inline-block"
+      document.getElementById("nopbaiBtn").style.display="none"
+    }
+  }
+})
+
+document.addEventListener("keydown", function(e){
+  if(e.key=="F12") e.preventDefault()
+  if(e.ctrlKey && e.shiftKey && e.key=="I") e.preventDefault()
+  if(e.ctrlKey && e.key=="U") e.preventDefault()
+})
+
+document.addEventListener("contextmenu",function(e){
+  e.preventDefault()
+})
+
+document.addEventListener("copy",function(e){
+  e.preventDefault()
+})
+
+setInterval(function(){
+  if(window.outerWidth-window.innerWidth>200){
+    alert("Không được mở cửa sổ phụ")
+  }
+},2000)
+
+</script>
 </body>
 </html>
