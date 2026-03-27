@@ -627,6 +627,7 @@ function stopCamera(){
 
 function takePhoto(){
   document.getElementById("resultTxt").textContent ="Đợi gửi điểm..."
+  quizStarted = false
   setTimeout(()=>{
     captureAndWrite([
     "Loại: "+ APP_CHUDE,
@@ -788,6 +789,7 @@ window.onload = async function(){
   let hoten = localStorage.getItem("hoten");
   let lop = localStorage.getItem("lop");
   let mon = localStorage.getItem("mon");
+  document.getElementById("startBtn").disabled = true;
 
   if(hoten){
     document.getElementById("hoten").value = hoten;
@@ -795,16 +797,13 @@ window.onload = async function(){
     document.getElementById("mon").value = mon;
 
     document.getElementById("hoten").disabled = true;
-    //document.getElementById("lop").disabled = true;
+    document.getElementById("lop").disabled = true;
   }
 
   document.getElementById("camStatus").textContent =
     "⏳ Đang khởi động camera...";
-
-  await loadFaceModels();      // ⭐ load model trước
-
   await initCameraPreview();   // ⭐ sau đó mở camera
-
+  await loadFaceModels();      // ⭐ load model trước
 }
 
 document.addEventListener("visibilitychange", function () {
@@ -849,7 +848,10 @@ async function initCameraPreview(){
 
     cameraStream =
       await navigator.mediaDevices.getUserMedia({
-        video:true
+      video:{
+        width:320,
+        height:240
+        }
       })
 
     video.srcObject=cameraStream
@@ -889,7 +891,7 @@ async function loadFaceModels(){
     await faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL);
 
     console.log("Model loaded OK");
-
+    document.getElementById("startBtn").disabled = false;
   }
 
   catch(err){
@@ -905,7 +907,9 @@ async function loadFaceModels(){
 let faceLostCount = 0;
 let multiFaceCount = 0;
 
+
 function startFaceMonitor(video){
+
   if(!quizStarted) return;
   if(monitorStarted) return;
 
@@ -913,17 +917,72 @@ function startFaceMonitor(video){
 
   setInterval(async ()=>{
 
-    if(video.readyState !== 4) return;
+    try{
 
-    const detections =
-      await faceapi.detectAllFaces(
-        video,
-        new faceapi.TinyFaceDetectorOptions()
-      );
+      if(video.readyState !== 4) return;
 
-    /* phần còn lại giữ nguyên */
+      const detections =
+        await faceapi.detectAllFaces(
+          video,
+          new faceapi.TinyFaceDetectorOptions({
+            inputSize:160,   // ⭐ giảm tải CPU
+            scoreThreshold:0.5
+          })
+        );
 
-  },2000);
+      /* ===== KHÔNG CÓ MẶT ===== */
+
+      if(detections.length === 0){
+
+        faceLostCount++;
+
+        if(faceLostCount >= 3 && quizStarted){
+
+          alert("Không thấy khuôn mặt!");
+
+          faceLostCount = 0;
+
+        }
+
+      }
+
+      else{
+
+        faceLostCount = 0;
+
+      }
+
+      /* ===== NHIỀU MẶT ===== */
+
+      if(detections.length > 1){
+
+        multiFaceCount++;
+
+        if(multiFaceCount >= 2 && quizStarted){
+
+          alert("Phát hiện nhiều khuôn mặt!");
+
+          multiFaceCount = 0;
+
+        }
+
+      }
+
+      else{
+
+        multiFaceCount = 0;
+
+      }
+
+    }
+
+    catch(err){
+
+      console.log("Face monitor error:",err);
+
+    }
+
+  },10000); // ⭐ tăng lên 3 giây cho nhẹ máy
 
 }
 
