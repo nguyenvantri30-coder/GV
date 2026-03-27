@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
 <script type="text/javascript">
   const APP_NAME = "Hệ thống bài tập ôn tập Toán";
   const APP_NOTE = "Hãy làm nhiều lần để gặp hết dạng câu hỏi";
@@ -580,7 +580,7 @@ function getDeviceID(){
   return id;
   }
 
-  async function startCamera(){
+async function startCamera(){
 
   try{
 
@@ -589,23 +589,20 @@ function getDeviceID(){
 
     overlay.style.display="flex"
 
-    let stream=await navigator.mediaDevices.getUserMedia({
-    video:{
-    facingMode:"user",
-    width:{ideal:1280},
-    height:{ideal:720}
-    }
-    })
+    /* ⭐ DÙNG LẠI camera đã bật */
 
-    video.srcObject=stream
+    video.srcObject = cameraStream;
 
-    await video.play()
+    await video.play();
 
-  }catch(err){
+  }
+
+  catch(err){
 
     alert("Không mở được camera: "+err)
 
-}
+  }
+
 }
 
 function stopCamera(){
@@ -924,7 +921,9 @@ function startFaceMonitor(video){
 
         alert("Không thấy khuôn mặt quá lâu! Bài sẽ bị nộp.");
 
-        submitQuiz();  // ⭐ tự nộp bài
+        faceLostCount = 0;
+
+        continueQuiz()   // ⭐ gọi hàm reset
 
       }
 
@@ -942,8 +941,8 @@ function startFaceMonitor(video){
       if(multiFaceCount >= 2){
 
         alert("Phát hiện nhiều người! Bài sẽ bị nộp.");
-
-        submitQuiz();
+        multiFaceCount = 0;
+        continueQuiz();
 
       }
 
