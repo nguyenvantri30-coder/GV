@@ -2,120 +2,42 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
+<script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
 <script type="text/javascript">
   const APP_NAME = "Hệ thống bài tập ôn tập Toán";
   const APP_NOTE = "Hãy làm nhiều lần để gặp hết dạng câu hỏi";
   const APP_CHUDE = "ĐỀ CƯƠNG ÔN TẬP TOÁN 78";
-  const QUESTIONS_PER_TEST = 10
+  const QUESTIONS_PER_TEST = 40
   const DEFAULT_TIME = 45
   const PATH_SHEET = "https://script.google.com/macros/s/AKfycbzA8CNyjQZmCcfty25VFASkG4KJ2793TR1CF6z-qs5jFntPwTkIJHmKYUudLZ-5uM5J/exec"
   const SHEET_ID =""
-  const SHEET_NAME ="diemtoan8gk2"
   const FOLDER_ID= "1blXhHW57rTEZXuzS2ArNjgDF5xvLB-PD"
+  const MODEL_URL ="https://justadudewhohacks.github.io/face-api.js/models"
+  let SHEET_NAME =""
   let hoten=""
   let lop=""
   let score=""
   let deviceID=""
   let time=""
   let correct=0
-
   let tabWarnings = 0
-
+  let cameraReady=false;
+  let cameraStream=null;
   /* ===== NGÂN HÀNG 45 CÂU TEST ===================================================== */
-const questions=[];
-questions.push({
-q:`Nếu $\\frac{x}{6}=4$ thì $x$ bằng`,
-options:[`24`,`18`,`12`,`30`],
-answer:0,
-explain:`$x=4\\times6=24$.`
-});
+  async function loadQuestions(mon, lop) {
+    let khoi= lop.charAt(0)
+    const url =`https://raw.githubusercontent.com/nguyenvantri30-coder/GV/main/${mon}${khoi}.json`;
+    const res = await fetch(url);
+    if (!res.ok) {
+      alert("Không tải được câu hỏi");
+      return [];
+    }
+    const data = await res.json();
+    return data;
+  }
+  
+  let questions=[];
 
-questions.push({
-q:`Kết quả của $\\frac{5}{6}+\\frac{1}{3}$ là`,
-options:[
-`$\\frac{7}{6}$`,
-`$1$`,
-`$\\frac{6}{6}$`,
-`$\\frac{5}{6}$`
-],
-answer:0,
-explain:`Quy đồng $\\frac{1}{3}=\\frac{2}{6}$ nên $\\frac{5}{6}+\\frac{2}{6}=\\frac{7}{6}$.`
-});
-
-questions.push({
-q:`Nếu giá một chiếc áo là $200000$ đồng và tăng $10\\%$ thì giá mới là`,
-options:[`210000`,`220000`,`230000`,`200000`],
-answer:0,
-explain:`$200000\\times1.1=220000$.`
-});
-
-questions.push({
-q:`Nếu $AB=7$ cm, $BC=5$ cm và $B$ nằm giữa $A,C$ thì $AC$ bằng`,
-options:[`12`,`2`,`35`,`7`],
-answer:0,
-explain:`$AC=AB+BC=12$.`
-});
-
-questions.push({
-q:`Số đối của $-8$ là`,
-options:[`8`,`-8`,`0`,`1`],
-answer:0,
-explain:`Số đối là số đổi dấu.`
-});
-
-questions.push({
-q:`Rút gọn phân số $\\frac{9}{12}$`,
-options:[
-`$\\frac{3}{4}$`,
-`$\\frac{4}{3}$`,
-`$\\frac{6}{8}$`,
-`$\\frac{9}{3}$`
-],
-answer:0,
-explain:`Chia cả tử và mẫu cho $3$.`
-});
-
-questions.push({
-q:`Kết quả của $3,5+2,4$ là`,
-options:[`5,9`,`6,1`,`5,8`,`6`],
-answer:0,
-explain:`Cộng số thập phân.`
-});
-
-questions.push({
-q:`Kết quả của $8,2-3,6$ là`,
-options:[`4,6`,`5,2`,`4,4`,`4`],
-answer:0,
-explain:`Trừ số thập phân.`
-});
-
-questions.push({
-q:`$\\frac{1}{2}$ của $20$ bằng`,
-options:[`10`,`5`,`20`,`2`],
-answer:0,
-explain:`$20\\times\\frac12=10$.`
-});
-
-questions.push({
-q:`$\\frac{3}{4}$ của $16$ bằng`,
-options:[`12`,`8`,`6`,`10`],
-answer:0,
-explain:`$16\\times\\frac34=12$.`
-});
-
-questions.push({
-q:`Nếu $x+5=12$ thì $x$ bằng`,
-options:[`7`,`6`,`8`,`5`],
-answer:0,
-explain:`$x=12-5=7$.`
-});
-
-questions.push({
-q:`Nếu $2x=10$ thì $x$ bằng`,
-options:[`5`,`10`,`20`,`2`],
-answer:0,
-explain:`$x=10:2=5$.`
-});
 
 </script>
 
@@ -278,6 +200,24 @@ border-radius:10px;
   width:200px;
   margin:10px 0;
 }
+
+#cameraSidebar{
+  width:100%;
+  margin-bottom:10px;
+  text-align:center;
+}
+
+#cameraPreview{
+  width:100%;
+  border-radius:8px;
+  border:2px solid #3498db;
+}
+
+#camStatus{
+  font-size:12px;
+  margin-top:4px;
+  color:#e74c3c;
+}
 </style>
 
 <script>
@@ -298,9 +238,28 @@ tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
 
 <div class="infoBox">
     <input type="text" id="hoten" placeholder="Nhập họ và tên (có dấu)">
-    <input type="text" id="lop" placeholder="Nhập lớp">
-    <p>Mỗi máy gắn với họ tên 1 hs duy nhất nên phải nhập chính xác tên của mình</br>
-    Chỉ nhập 1 lần, lần sau sẽ luôn lấy tên này để gửi về giáo viên</p>
+    <select id="mon">
+      <option value="">Chọn môn</option>
+      <option value="Tin">Tin</option>
+      <option value="Toan">Toán</option>
+    </select>
+    <select id="lop">
+      <option value="">Chọn lớp</option>
+      <option value="6A1">6A1</option>
+      <option value="6A2">6A2</option>
+      <option value="6A3">6A3</option>
+      <option value="6A4">6A4</option>
+      <option value="7A1">7A1</option>
+      <option value="7A2">7A2</option>
+      <option value="7A3">7A3</option>
+      <option value="7A4">7A4</option>
+      <option value="8A3">8A3</option>
+    </select>
+
+    <p>
+    Mỗi máy gắn với họ tên 1 hs duy nhất nên phải nhập chính xác tên của mình<br>
+    Chỉ nhập 1 lần, lần sau sẽ luôn lấy tên này để gửi về giáo viên
+    </p>
 </div>
 
 <button id="startBtn" onclick="startQuiz()">BẮT ĐẦU</button>
@@ -318,7 +277,18 @@ tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
 </div>
 
 <div class="container" id="quizArea" style="display:none">
-<div class="sidebar" id="qList"></div>
+<div class="sidebar">
+
+  <!-- CAMERA BOX -->
+  <div id="cameraSidebar">
+    <video id="cameraPreview" autoplay playsinline muted></video>
+    <div id="camStatus">📷 Chưa bật camera</div>
+  </div>
+
+  <!-- DANH SÁCH CÂU -->
+  <div id="qList"></div>
+
+</div>
 <div class="main">
 <div id="questionArea"></div>
 
@@ -385,17 +355,27 @@ let timeLeft=DEFAULT_TIME*60
 
 /******** START QUIZ ********/
 
-function startQuiz(){
+async function startQuiz(){
+  if(!cameraReady){
+    alert("Vui lòng bật camera trước khi bắt đầu");
+  return;
+  }
   hoten = document.getElementById("hoten").value.trim();
   lop = document.getElementById("lop").value.trim();
+  mon = document.getElementById("mon").value.trim();
 
-  if(hoten=="" || lop==""){
-  alert("Vui lòng nhập họ tên và lớp");
+  if(hoten=="" || lop=="" || mon==""){
+  alert("Vui lòng nhập họ tên, môn và lớp");
   return;
   }
 
+/* Tạo tên sheet */
+  SHEET_NAME = mon + lop;
+  questions = await loadQuestions(mon, lop);
   localStorage.setItem("hoten", hoten);
   localStorage.setItem("lop", lop);
+  localStorage.setItem("mon", mon);
+  localStorage.setItem("sheet", SHEET_NAME);
   localStorage.setItem("startTime", Date.now());
 document.getElementById("startScreen").style.display="none"
 document.getElementById("quizArea").style.display="flex"
@@ -797,18 +777,27 @@ function closeCode(){
 
     <canvas id="photoCanvas" style="display:none"></canvas>
 <script>
-  window.onload = function(){
+window.onload = async function(){
 
   let hoten = localStorage.getItem("hoten");
   let lop = localStorage.getItem("lop");
+  let mon = localStorage.getItem("mon");
 
   if(hoten){
-  document.getElementById("hoten").value = hoten;
-  document.getElementById("lop").value = lop;
+    document.getElementById("hoten").value = hoten;
+    document.getElementById("lop").value = lop;
+    document.getElementById("mon").value = mon;
 
-  document.getElementById("hoten").disabled = true;
-  document.getElementById("lop").disabled = true;
+    document.getElementById("hoten").disabled = true;
+    document.getElementById("lop").disabled = true;
   }
+
+  document.getElementById("camStatus").textContent =
+    "⏳ Đang khởi động camera...";
+
+  await loadFaceModels();      // ⭐ load model trước
+
+  await initCameraPreview();   // ⭐ sau đó mở camera
 
 }
 
@@ -826,25 +815,155 @@ document.addEventListener("visibilitychange", function () {
   }
 })
 
-document.addEventListener("keydown", function(e){
-  if(e.key=="F12") e.preventDefault()
-  if(e.ctrlKey && e.shiftKey && e.key=="I") e.preventDefault()
-  if(e.ctrlKey && e.key=="U") e.preventDefault()
-})
+// document.addEventListener("keydown", function(e){
+//   if(e.key=="F12") e.preventDefault()
+//   if(e.ctrlKey && e.shiftKey && e.key=="I") e.preventDefault()
+//   if(e.ctrlKey && e.key=="U") e.preventDefault()
+// })
 
-document.addEventListener("contextmenu",function(e){
-  e.preventDefault()
-})
+// document.addEventListener("contextmenu",function(e){
+//   e.preventDefault()
+// })
 
 document.addEventListener("copy",function(e){
   e.preventDefault()
 })
 
-setInterval(function(){
-  if(window.outerWidth-window.innerWidth>200){
-    alert("Không được mở cửa sổ phụ")
+// setInterval(function(){
+//   if(window.outerWidth-window.innerWidth>200){
+//     alert("Không được mở cửa sổ phụ")
+//   }
+// },2000)
+
+async function initCameraPreview(){
+
+  try{
+
+    let video=document.getElementById("cameraPreview")
+
+    cameraStream =
+      await navigator.mediaDevices.getUserMedia({
+        video:true
+      })
+
+    video.srcObject=cameraStream
+
+    await video.play()
+
+    cameraReady=true
+
+    document.getElementById("camStatus").textContent =
+      "✅ Camera đã bật"
+
+    startFaceMonitor(video)
+
   }
-},2000)
+
+  catch(err){
+
+    cameraReady=false
+
+    document.getElementById("camStatus").textContent =
+      "❌ Bạn chưa cho phép camera"
+
+    alert("Bạn phải cho phép camera trước khi làm bài")
+
+    console.error(err)
+
+  }
+
+}
+
+async function loadFaceModels(){
+
+  try{
+
+    console.log("Loading model...");
+
+    await faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL);
+
+    console.log("Model loaded OK");
+
+  }
+
+  catch(err){
+
+    console.error("Model load error:", err);
+
+    alert("Không tải được model nhận diện khuôn mặt.\nKiểm tra internet hoặc MODEL_URL.");
+
+  }
+
+}
+
+let faceLostCount = 0;
+let multiFaceCount = 0;
+
+function startFaceMonitor(video){
+
+  setInterval(async ()=>{
+
+    if(video.readyState !== 4) return;
+
+    const detections =
+      await faceapi.detectAllFaces(
+        video,
+        new faceapi.TinyFaceDetectorOptions()
+      );
+
+    /* ===== KHÔNG CÓ MẶT ===== */
+
+    if(detections.length === 0){
+
+      document.getElementById("camStatus").textContent =
+        "❌ Không thấy khuôn mặt";
+
+      faceLostCount++;
+
+      if(faceLostCount >= 3){
+
+        alert("Không thấy khuôn mặt quá lâu! Bài sẽ bị nộp.");
+
+        submitQuiz();  // ⭐ tự nộp bài
+
+      }
+
+    }
+
+    /* ===== NHIỀU MẶT ===== */
+
+    else if(detections.length > 1){
+
+      document.getElementById("camStatus").textContent =
+        "⚠️ Phát hiện nhiều khuôn mặt";
+
+      multiFaceCount++;
+
+      if(multiFaceCount >= 2){
+
+        alert("Phát hiện nhiều người! Bài sẽ bị nộp.");
+
+        submitQuiz();
+
+      }
+
+    }
+
+    /* ===== HỢP LỆ ===== */
+
+    else{
+
+      document.getElementById("camStatus").textContent =
+        "✅ Đã nhận diện khuôn mặt";
+
+      faceLostCount = 0;
+      multiFaceCount = 0;
+
+    }
+
+  },2000);
+
+}
 
 </script>
 </body>
