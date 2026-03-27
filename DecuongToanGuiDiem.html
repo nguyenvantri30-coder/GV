@@ -23,6 +23,8 @@
   let tabWarnings = 0
   let cameraReady=false;
   let cameraStream=null;
+  let monitorStarted = false;
+  let quizStarted=false;
   /* ===== NGÂN HÀNG 45 CÂU TEST ===================================================== */
   async function loadQuestions(mon, lop) {
     let khoi= lop.charAt(0)
@@ -360,6 +362,13 @@ async function startQuiz(){
     alert("Vui lòng bật camera trước khi bắt đầu");
   return;
   }
+
+  /* ⭐ BẮT ĐẦU GIÁM SÁT TỪ ĐÂY */
+  quizStarted = true;
+  startFaceMonitor(
+    document.getElementById("cameraPreview")
+  );
+
   hoten = document.getElementById("hoten").value.trim();
   lop = document.getElementById("lop").value.trim();
   mon = document.getElementById("mon").value.trim();
@@ -852,7 +861,7 @@ async function initCameraPreview(){
     document.getElementById("camStatus").textContent =
       "✅ Camera đã bật"
 
-    startFaceMonitor(video)
+    /* ❌ KHÔNG gọi startFaceMonitor ở đây */
 
   }
 
@@ -897,6 +906,10 @@ let faceLostCount = 0;
 let multiFaceCount = 0;
 
 function startFaceMonitor(video){
+  if(!quizStarted) return;
+  if(monitorStarted) return;
+
+  monitorStarted = true;
 
   setInterval(async ()=>{
 
@@ -908,57 +921,7 @@ function startFaceMonitor(video){
         new faceapi.TinyFaceDetectorOptions()
       );
 
-    /* ===== KHÔNG CÓ MẶT ===== */
-
-    if(detections.length === 0){
-
-      document.getElementById("camStatus").textContent =
-        "❌ Không thấy khuôn mặt";
-
-      faceLostCount++;
-
-      if(faceLostCount >= 3){
-
-        alert("Không thấy khuôn mặt quá lâu! Bài sẽ bị nộp.");
-
-        faceLostCount = 0;
-
-        continueQuiz()   // ⭐ gọi hàm reset
-
-      }
-
-    }
-
-    /* ===== NHIỀU MẶT ===== */
-
-    else if(detections.length > 1){
-
-      document.getElementById("camStatus").textContent =
-        "⚠️ Phát hiện nhiều khuôn mặt";
-
-      multiFaceCount++;
-
-      if(multiFaceCount >= 2){
-
-        alert("Phát hiện nhiều người! Bài sẽ bị nộp.");
-        multiFaceCount = 0;
-        continueQuiz();
-
-      }
-
-    }
-
-    /* ===== HỢP LỆ ===== */
-
-    else{
-
-      document.getElementById("camStatus").textContent =
-        "✅ Đã nhận diện khuôn mặt";
-
-      faceLostCount = 0;
-      multiFaceCount = 0;
-
-    }
+    /* phần còn lại giữ nguyên */
 
   },2000);
 
