@@ -616,9 +616,9 @@ async function startCamera(){
 
 function stopCamera(){
   let video=document.getElementById("camera")
-  if(video.srcObject){
-    video.srcObject.getTracks().forEach(t=>t.stop())
-  }
+  // if(video.srcObject){
+  //   video.srcObject.getTracks().forEach(t=>t.stop())
+  // }
 
   document.getElementById("cameraOverlay").style.display="none"
   document.getElementById("continueBtn").style.display="inline-block"
@@ -638,7 +638,7 @@ function takePhoto(){
     "Thời gian: "+time
     ])
 
-    stopCamera()
+    // stopCamera()
   },700)
 }
 
@@ -714,6 +714,7 @@ function sendToSheet(image){
 
       if(text=="OK"){
         document.getElementById("resultTxt").textContent ="Gửi kết quả thành công"
+        stopCamera();
       }
       else{
         document.getElementById("resultTxt").textContent = "Server báo lỗi:"+text
@@ -848,10 +849,11 @@ async function initCameraPreview(){
 
     cameraStream =
       await navigator.mediaDevices.getUserMedia({
-      video:{
-        width:320,
-        height:240
-        }
+        video: true
+      // video:{
+      //   width:320,
+      //   height:240
+      //   }
       })
 
     video.srcObject=cameraStream
