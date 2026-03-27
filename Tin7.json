@@ -1,0 +1,290 @@
+[
+  {
+    "q": "Trong Excel, lệnh nào dùng để kẻ đường viền cho các ô dữ liệu?",
+    "options": ["Borders", "Fill Color", "Font", "Wrap Text"],
+    "answer": 0,
+    "explain": "Borders dùng để kẻ khung"
+  },
+  {
+    "q": "Khi sử dụng Merge & Center trong Excel, dữ liệu nào được giữ lại?",
+    "options": ["Dữ liệu ô trên cùng bên trái", "Tất cả dữ liệu", "Không giữ dữ liệu", "Cộng dữ liệu lại"],
+    "answer": 0,
+    "explain": "Chỉ giữ ô trên trái"
+  },
+  {
+    "q": "Nhóm lệnh Number trong Excel dùng để",
+    "options": ["Định dạng kiểu dữ liệu", "Chèn hình", "Kẻ bảng", "Sửa công thức"],
+    "answer": 0,
+    "explain": "Number format"
+  },
+  {
+    "q": "Trong Excel, ta có thể đổi tên trang tính bằng cách",
+    "options": ["Nháy đúp vào tên Sheet", "Nhấn Ctrl+S", "Nhấn Delete", "Chọn Insert"],
+    "answer": 0,
+    "explain": "Double click"
+  },
+  {
+    "q": "Chức năng xem trước khi in trong Excel giúp",
+    "options": ["Xem trước bố cục khi in", "Tính lại dữ liệu", "Sửa công thức", "Đổi font"],
+    "answer": 0,
+    "explain": "Print Preview"
+  },
+  {
+    "q": "Nếu bảng tính quá rộng, nên làm gì để in vừa trang",
+    "options": ["Chọn Landscape", "Tăng cỡ chữ", "Xóa dữ liệu", "Tô màu"],
+    "answer": 0,
+    "explain": "Landscape"
+  },
+  {
+    "q": "Phần mềm trình chiếu dùng để",
+    "options": ["Tạo bài thuyết trình", "Viết chương trình", "Tính toán", "Quản lý dữ liệu"],
+    "answer": 0,
+    "explain": "PowerPoint"
+  },
+  {
+    "q": "Layout Title Slide thường dùng cho",
+    "options": ["Trang tiêu đề", "Trang nội dung", "Trang kết thúc", "Trang hình ảnh"],
+    "answer": 0,
+    "explain": "Trang đầu"
+  },
+  {
+    "q": "Layout Title and Content thường dùng cho",
+    "options": ["Trang nội dung", "Trang tiêu đề", "Trang trống", "Trang in"],
+    "answer": 0,
+    "explain": "Trang nội dung"
+  },
+  {
+    "q": "Phím tắt tạo slide mới trong PowerPoint",
+    "options": ["Ctrl + M", "Ctrl + N", "Ctrl + P", "Ctrl + S"],
+    "answer": 0,
+    "explain": "New slide"
+  },
+  {
+    "q": "Đối tượng nào có thể chèn vào trang chiếu",
+    "options": ["Hình ảnh", "Video", "SmartArt", "Tất cả"],
+    "answer": 3,
+    "explain": "Có thể chèn nhiều loại"
+  },
+  {
+    "q": "Hình ảnh trong bài trình chiếu giúp",
+    "options": ["Nội dung trực quan hơn", "Giảm kích thước file", "Thay chữ", "Không có tác dụng"],
+    "answer": 0,
+    "explain": "Minh họa"
+  },
+  {
+    "q": "Để nhiều hình vẽ có cùng định dạng ta nên",
+    "options": ["Chọn tất cả rồi định dạng", "Vẽ lại", "Xóa", "Tô màu"],
+    "answer": 0,
+    "explain": "Format chung"
+  },
+  {
+    "q": "Trong Excel, Fill Color dùng để",
+    "options": ["Tô màu nền ô", "Đổi font", "Chèn ảnh", "Tạo công thức"],
+    "answer": 0,
+    "explain": "Màu nền"
+  },
+  {
+    "q": "Bold trong Excel dùng để",
+    "options": ["In đậm chữ", "Đổi cỡ chữ", "Căn lề", "Tô màu"],
+    "answer": 0,
+    "explain": "Bold"
+  },
+  {
+    "q": "Căn giữa dữ liệu trong ô dùng",
+    "options": ["Center", "Wrap Text", "Merge", "Format"],
+    "answer": 0,
+    "explain": "Center"
+  },
+  {
+    "q": "Lệnh Borders trong Excel dùng để",
+    "options": ["Kẻ khung", "Tô màu", "Chèn ảnh", "Xóa ô"],
+    "answer": 0,
+    "explain": "Khung"
+  },
+  {
+    "q": "Ta có thể thay đổi màu nền ô bằng",
+    "options": ["Fill Color", "Font", "Border", "Layout"],
+    "answer": 0,
+    "explain": "Fill"
+  },
+  {
+    "q": "Trong Excel có thể in",
+    "options": ["Cả bảng", "Một vùng", "Một trang", "Tất cả"],
+    "answer": 3,
+    "explain": "Print area"
+  },
+  {
+    "q": "Trước khi in bảng tính nên",
+    "options": ["Kiểm tra dữ liệu", "Xóa bảng", "Đổi font", "Tô màu"],
+    "answer": 0,
+    "explain": "Kiểm tra"
+  },
+  {
+    "q": "Trang đầu bài trình chiếu thường là",
+    "options": ["Trang tiêu đề", "Trang nội dung", "Trang hình", "Trang kết"],
+    "answer": 0,
+    "explain": "Title slide"
+  },
+  {
+    "q": "Layout giúp",
+    "options": ["Sắp xếp bố cục nội dung", "Tính toán", "Chạy video", "In trang"],
+    "answer": 0,
+    "explain": "Bố cục"
+  },
+  {
+    "q": "Một slide nên",
+    "options": ["Ít chữ và rõ ràng", "Nhiều chữ", "Không chữ", "Toàn hình"],
+    "answer": 0,
+    "explain": "Dễ đọc"
+  },
+  {
+    "q": "Màu chữ và nền nên",
+    "options": ["Tương phản", "Giống nhau", "Mờ", "Không màu"],
+    "answer": 0,
+    "explain": "Dễ nhìn"
+  },
+  {
+    "q": "Chèn ảnh vào slide dùng",
+    "options": ["Insert Picture", "Font", "Layout", "View"],
+    "answer": 0,
+    "explain": "Insert"
+  },
+  {
+    "q": "SmartArt dùng để",
+    "options": ["Tạo sơ đồ", "Tạo video", "Tạo bảng", "Tạo công thức"],
+    "answer": 0,
+    "explain": "Diagram"
+  },
+  {
+    "q": "Shape trong PowerPoint là",
+    "options": ["Hình vẽ", "Video", "File", "Slide"],
+    "answer": 0,
+    "explain": "Shape"
+  },
+  {
+    "q": "Để chèn video vào slide ta dùng",
+    "options": ["Insert Video", "Insert Font", "Insert Border", "Insert Table"],
+    "answer": 0,
+    "explain": "Video"
+  },
+  {
+    "q": "Để đổi Layout của slide ta",
+    "options": ["Chọn Layout", "Chọn Font", "Chọn Insert", "Chọn View"],
+    "answer": 0,
+    "explain": "Layout"
+  },
+  {
+    "q": "Slide nên",
+    "options": ["Ngắn gọn", "Dài", "Nhiều chữ", "Không chữ"],
+    "answer": 0,
+    "explain": "Ngắn"
+  },
+  {
+    "q": "PowerPoint dùng để",
+    "options": ["Trình chiếu", "Soạn thảo", "Lập trình", "Tính toán"],
+    "answer": 0,
+    "explain": "Slide"
+  },
+  {
+    "q": "Excel là",
+    "options": ["Phần mềm bảng tính", "Trình chiếu", "Soạn thảo", "Lập trình"],
+    "answer": 0,
+    "explain": "Spreadsheet"
+  },
+  {
+    "q": "Ctrl + P dùng để",
+    "options": ["In", "Lưu", "Chèn", "Xóa"],
+    "answer": 0,
+    "explain": "Print"
+  },
+  {
+    "q": "Landscape là",
+    "options": ["Trang ngang", "Trang dọc", "Trang vuông", "Trang tròn"],
+    "answer": 0,
+    "explain": "Ngang"
+  },
+  {
+    "q": "Portrait là",
+    "options": ["Trang dọc", "Trang ngang", "Trang rộng", "Trang nhỏ"],
+    "answer": 0,
+    "explain": "Dọc"
+  },
+  {
+    "q": "Print Preview giúp",
+    "options": ["Xem trước khi in", "Sửa chữ", "Xóa dữ liệu", "Thêm sheet"],
+    "answer": 0,
+    "explain": "Preview"
+  },
+  {
+    "q": "Trong Excel có thể",
+    "options": ["Thêm Sheet", "Xóa Sheet", "Đổi tên Sheet", "Tất cả"],
+    "answer": 3,
+    "explain": "Sheet management"
+  },
+  {
+    "q": "Để thêm Sheet ta",
+    "options": ["Nhấn dấu +", "Nhấn Delete", "Nhấn Insert Font", "Nhấn Border"],
+    "answer": 0,
+    "explain": "Add sheet"
+  },
+  {
+    "q": "Để xóa Sheet ta",
+    "options": ["Delete Sheet", "Insert", "View", "Font"],
+    "answer": 0,
+    "explain": "Delete"
+  },
+  {
+    "q": "Bài trình chiếu nên",
+    "options": ["Rõ ràng", "Dễ đọc", "Ít chữ", "Tất cả"],
+    "answer": 3,
+    "explain": "Nguyên tắc"
+  },
+  {
+    "q": "Tiêu đề slide nên",
+    "options": ["Nổi bật", "Nhỏ", "Ẩn", "Không cần"],
+    "answer": 0,
+    "explain": "Highlight"
+  },
+  {
+    "q": "Trong Excel, để dữ liệu trong ô tự động xuống dòng khi dài, ta dùng lệnh nào?",
+    "options": ["Wrap Text", "Merge", "Borders", "Format"],
+    "answer": 0,
+    "explain": "Wrap Text giúp xuống dòng trong ô"
+  },
+  {
+    "q": "Để căn dữ liệu vào giữa ô theo chiều ngang, ta dùng lệnh",
+    "options": ["Center", "Bold", "Wrap Text", "Number"],
+    "answer": 0,
+    "explain": "Center căn giữa"
+  },
+  {
+    "q": "Lệnh Merge Cells dùng để",
+    "options": ["Gộp nhiều ô thành một", "Tô màu nền", "Đổi cỡ chữ", "Kẻ khung"],
+    "answer": 0,
+    "explain": "Merge gộp ô"
+  },
+  {
+    "q": "Để thay đổi màu chữ trong ô ta dùng",
+    "options": ["Font Color", "Fill Color", "Border", "Alignment"],
+    "answer": 0,
+    "explain": "Font Color đổi màu chữ"
+  },
+  {
+    "q": "Để thay đổi màu của hình vẽ ta dùng",
+    "options": ["Shape Fill", "Font", "Layout", "View"],
+    "answer": 0,
+    "explain": "Tô màu hình"
+  },
+  {
+    "q": "Để thay đổi viền của hình vẽ ta dùng",
+    "options": ["Shape Outline", "Insert", "Layout", "View"],
+    "answer": 0,
+    "explain": "Viền"
+  },
+  {
+    "q": "Định dạng đối tượng giúp",
+    "options": ["Bài trình chiếu đẹp và dễ hiểu", "Tăng RAM", "Tăng dung lượng", "Xóa dữ liệu"],
+    "answer": 0,
+    "explain": "Trình bày rõ"
+  }
+]

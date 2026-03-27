@@ -1,0 +1,904 @@
+[
+  {
+    "q": "Trong sơ đồ tư duy, yếu tố nào đóng vai trò trung tâm để phát triển các ý khác?",
+    "options": [
+      "Chủ đề trung tâm",
+      "Màu nền của trang",
+      "Hình ảnh trang trí",
+      "Các video minh họa"
+    ],
+    "answer": 0,
+    "explain": "Mọi nhánh xuất phát từ chủ đề trung tâm"
+  },
+  {
+    "q": "Trong sơ đồ tư duy, các nhánh chính thường được nối với",
+    "options": [
+      "Chủ đề trung tâm",
+      "Các nhánh phụ",
+      "Các hình ảnh",
+      "Các tệp tin"
+    ],
+    "answer": 0,
+    "explain": "Nhánh chính nối từ chủ đề trung tâm"
+  },
+  {
+    "q": "Lợi ích quan trọng của sơ đồ tư duy trong học tập là",
+    "options": [
+      "Giúp ghi nhớ và hệ thống kiến thức",
+      "Giúp máy tính chạy nhanh",
+      "Thay thế sách giáo khoa",
+      "Tăng dung lượng tệp"
+    ],
+    "answer": 0,
+    "explain": "Giúp tư duy logic"
+  },
+  {
+    "q": "Khi thay đổi vị trí của một nhánh chính trong phần mềm vẽ sơ đồ tư duy thì",
+    "options": [
+      "Các nhánh con di chuyển theo",
+      "Các nhánh con biến mất",
+      "Sơ đồ bị xóa",
+      "Không thực hiện được"
+    ],
+    "answer": 0,
+    "explain": "Nhánh con gắn với nhánh chính"
+  },
+  {
+    "q": "Trong soạn thảo văn bản, thay đổi màu chữ thuộc loại định dạng",
+    "options": [
+      "Định dạng kí tự",
+      "Định dạng đoạn",
+      "Định dạng trang",
+      "Định dạng bảng"
+    ],
+    "answer": 0,
+    "explain": "Áp dụng cho chữ"
+  },
+  {
+    "q": "Để văn bản có lề trái và lề phải thẳng hàng ta chọn",
+    "options": [
+      "Căn đều hai bên (Justify)",
+      "Căn trái",
+      "Căn phải",
+      "Căn giữa"
+    ],
+    "answer": 0,
+    "explain": "Justify"
+  },
+  {
+    "q": "Mục đích của việc định dạng văn bản là",
+    "options": [
+      "Làm văn bản đẹp và dễ đọc",
+      "Giảm dung lượng",
+      "Tránh virus",
+      "Tăng tốc máy"
+    ],
+    "answer": 0,
+    "explain": "Giúp trình bày rõ ràng"
+  },
+  {
+    "q": "Một bảng trong Word được tạo từ",
+    "options": [
+      "Các hàng và các cột",
+      "Các đoạn văn",
+      "Các hình ảnh",
+      "Các biểu tượng"
+    ],
+    "answer": 0,
+    "explain": "Hàng và cột"
+  },
+  {
+    "q": "Thông tin nào sau đây nên trình bày bằng bảng",
+    "options": [
+      "Thời khóa biểu",
+      "Bài thơ",
+      "Thư gửi bạn",
+      "Một câu chuyện"
+    ],
+    "answer": 0,
+    "explain": "Dữ liệu so sánh"
+  },
+  {
+    "q": "Công cụ nào giúp tìm nhanh một từ trong văn bản",
+    "options": [
+      "Find",
+      "Replace",
+      "Insert",
+      "Copy"
+    ],
+    "answer": 0,
+    "explain": "Find"
+  },
+  {
+    "q": "Lệnh Replace trong Word dùng để",
+    "options": [
+      "Thay thế từ hoặc cụm từ",
+      "Chèn hình",
+      "Xóa bảng",
+      "Căn lề"
+    ],
+    "answer": 0,
+    "explain": "Thay thế"
+  },
+  {
+    "q": "Lệnh Replace All có tác dụng",
+    "options": [
+      "Thay thế tất cả các từ tìm thấy",
+      "Chỉ thay thế một từ",
+      "Xóa văn bản",
+      "Chèn ảnh"
+    ],
+    "answer": 0,
+    "explain": "Thay toàn bộ"
+  },
+  {
+    "q": "Trong sơ đồ tư duy, chủ đề trung tâm nên đặt",
+    "options": [
+      "Ở giữa trang",
+      "Ở góc trái",
+      "Ở cuối trang",
+      "Ở góc phải"
+    ],
+    "answer": 0,
+    "explain": "Giữa trang"
+  },
+  {
+    "q": "Màu sắc và hình ảnh trong sơ đồ tư duy giúp",
+    "options": [
+      "Tăng khả năng ghi nhớ",
+      "Làm file nặng",
+      "Không có tác dụng",
+      "Làm chậm máy"
+    ],
+    "answer": 0,
+    "explain": "Kích thích trí nhớ"
+  },
+  {
+    "q": "Các nhánh phụ trong sơ đồ tư duy thường nối với",
+    "options": [
+      "Nhánh chính",
+      "Trang giấy",
+      "Hình ảnh",
+      "Video"
+    ],
+    "answer": 0,
+    "explain": "Từ nhánh chính"
+  },
+  {
+    "q": "Trong Word, để thay đổi font chữ ta sử dụng",
+    "options": [
+      "Font",
+      "Insert",
+      "Table",
+      "Layout"
+    ],
+    "answer": 0,
+    "explain": "Chọn font"
+  },
+  {
+    "q": "Để thay đổi cỡ chữ ta dùng",
+    "options": [
+      "Font Size",
+      "Insert",
+      "Layout",
+      "Table"
+    ],
+    "answer": 0,
+    "explain": "Cỡ chữ"
+  },
+  {
+    "q": "Để định dạng một từ trước tiên cần",
+    "options": [
+      "Bôi đen từ đó",
+      "Đóng văn bản",
+      "Xóa từ",
+      "In văn bản"
+    ],
+    "answer": 0,
+    "explain": "Chọn trước"
+  },
+  {
+    "q": "Lệnh Line Spacing dùng để",
+    "options": [
+      "Thay đổi khoảng cách dòng",
+      "Đổi màu chữ",
+      "Chèn bảng",
+      "Xóa chữ"
+    ],
+    "answer": 0,
+    "explain": "Khoảng cách dòng"
+  },
+  {
+    "q": "Trong bảng Word có thể",
+    "options": [
+      "Gộp nhiều ô thành một",
+      "Không chỉnh sửa",
+      "Không thêm cột",
+      "Không thêm hàng"
+    ],
+    "answer": 0,
+    "explain": "Có thể gộp"
+  },
+  {
+    "q": "Trình bày dữ liệu dạng bảng giúp",
+    "options": [
+      "Dễ so sánh thông tin",
+      "Khó đọc hơn",
+      "Làm file lớn",
+      "Không có lợi ích"
+    ],
+    "answer": 0,
+    "explain": "So sánh dễ"
+  },
+  {
+    "q": "Sau khi tạo bảng ta có thể",
+    "options": [
+      "Thay đổi độ rộng cột",
+      "Không chỉnh sửa",
+      "Không xóa",
+      "Không thêm"
+    ],
+    "answer": 0,
+    "explain": "Có thể chỉnh"
+  },
+  {
+    "q": "Công cụ Find giúp",
+    "options": [
+      "Tìm nhanh từ trong văn bản",
+      "Xóa bảng",
+      "Chèn hình",
+      "Đổi font"
+    ],
+    "answer": 0,
+    "explain": "Tìm kiếm"
+  },
+  {
+    "q": "Công cụ Replace giúp",
+    "options": [
+      "Thay từ này bằng từ khác",
+      "Tìm hình",
+      "Đổi bảng",
+      "Xóa trang"
+    ],
+    "answer": 0,
+    "explain": "Thay thế"
+  },
+  {
+    "q": "Công cụ Find và Replace thường nằm trong thẻ",
+    "options": [
+      "Home",
+      "Insert",
+      "Design",
+      "Layout"
+    ],
+    "answer": 0,
+    "explain": "Trong Home"
+  },
+  {
+    "q": "Bước đầu tiên khi vẽ sơ đồ tư duy bằng tay là",
+    "options": [
+      "Xác định chủ đề trung tâm",
+      "Tô màu",
+      "Viết nhánh phụ",
+      "Trang trí"
+    ],
+    "answer": 0,
+    "explain": "Xác định chủ đề"
+  },
+  {
+    "q": "Sau khi viết chủ đề trung tâm, bước tiếp theo là",
+    "options": [
+      "Vẽ các nhánh chính",
+      "In tài liệu",
+      "Xóa trang",
+      "Chèn video"
+    ],
+    "answer": 0,
+    "explain": "Nhánh chính"
+  },
+  {
+    "q": "Các nhánh phụ trong sơ đồ tư duy dùng để",
+    "options": [
+      "Bổ sung ý chi tiết",
+      "Trang trí",
+      "Xóa nội dung",
+      "Thay thế chủ đề"
+    ],
+    "answer": 0,
+    "explain": "Ý nhỏ"
+  },
+  {
+    "q": "Để thay đổi cỡ chữ từ 12 sang 14 trong Word ta",
+    "options": [
+      "Chọn văn bản và đổi Font Size",
+      "Đóng Word",
+      "Xóa văn bản",
+      "Chèn hình"
+    ],
+    "answer": 0,
+    "explain": "Đổi size"
+  },
+  {
+    "q": "Để in đậm chữ ta dùng",
+    "options": [
+      "Bold",
+      "Italic",
+      "Underline",
+      "Insert"
+    ],
+    "answer": 0,
+    "explain": "Bold"
+  },
+  {
+    "q": "Để căn giữa đoạn văn ta chọn",
+    "options": [
+      "Center",
+      "Left",
+      "Right",
+      "Justify"
+    ],
+    "answer": 0,
+    "explain": "Center"
+  },
+  {
+    "q": "Để xóa một hàng trong bảng ta",
+    "options": [
+      "Chọn hàng và Delete Row",
+      "Đóng Word",
+      "Xóa bảng",
+      "Chèn cột"
+    ],
+    "answer": 0,
+    "explain": "Delete Row"
+  },
+  {
+    "q": "Sơ đồ tư duy giúp người học",
+    "options": [
+      "Hệ thống kiến thức theo dạng nhánh",
+      "Viết văn dài hơn",
+      "Làm bài nhanh hơn",
+      "Trang trí văn bản"
+    ],
+    "answer": 0,
+    "explain": "Sơ đồ tư duy giúp hệ thống hóa kiến thức"
+  },
+  {
+    "q": "Trong sơ đồ tư duy, nhánh chính thường được vẽ",
+    "options": [
+      "Từ chủ đề trung tâm",
+      "Từ góc trang",
+      "Từ cuối trang",
+      "Từ hình ảnh"
+    ],
+    "answer": 0,
+    "explain": "Nhánh chính xuất phát từ chủ đề trung tâm"
+  },
+  {
+    "q": "Định dạng văn bản giúp",
+    "options": [
+      "Văn bản rõ ràng và dễ đọc",
+      "Văn bản dài hơn",
+      "Máy tính nhanh hơn",
+      "Xóa lỗi chính tả"
+    ],
+    "answer": 0,
+    "explain": "Mục đích là trình bày đẹp"
+  },
+  {
+    "q": "Để thay đổi màu chữ trong Word ta sử dụng",
+    "options": [
+      "Font Color",
+      "Insert",
+      "Layout",
+      "Table"
+    ],
+    "answer": 0,
+    "explain": "Font Color đổi màu chữ"
+  },
+  {
+    "q": "Trong bảng Word, giao điểm giữa hàng và cột gọi là",
+    "options": [
+      "Ô",
+      "Trang",
+      "Khối",
+      "Dòng"
+    ],
+    "answer": 0,
+    "explain": "Cell"
+  },
+  {
+    "q": "Một bảng có 5 hàng và 4 cột sẽ có",
+    "options": [
+      "20 ô",
+      "9 ô",
+      "10 ô",
+      "15 ô"
+    ],
+    "answer": 0,
+    "explain": "5×4"
+  },
+  {
+    "q": "Lệnh Find thường dùng để",
+    "options": [
+      "Tìm từ trong văn bản",
+      "Xóa từ",
+      "Chèn bảng",
+      "Chèn hình"
+    ],
+    "answer": 0,
+    "explain": "Tìm kiếm"
+  },
+  {
+    "q": "Replace giúp",
+    "options": [
+      "Thay từ này bằng từ khác",
+      "Chèn hình",
+      "Tô màu",
+      "Xóa bảng"
+    ],
+    "answer": 0,
+    "explain": "Thay thế"
+  },
+  {
+    "q": "Trong sơ đồ tư duy, nhánh phụ dùng để",
+    "options": [
+      "Thể hiện ý nhỏ",
+      "Trang trí",
+      "Xóa chủ đề",
+      "Chèn video"
+    ],
+    "answer": 0,
+    "explain": "Ý chi tiết"
+  },
+  {
+    "q": "Để chỉnh sửa văn bản trước hết ta cần",
+    "options": [
+      "Chọn (bôi đen) phần văn bản",
+      "In văn bản",
+      "Đóng Word",
+      "Xóa trang"
+    ],
+    "answer": 0,
+    "explain": "Phải chọn trước"
+  },
+  {
+    "q": "Sơ đồ tư duy là công cụ giúp",
+    "options": [
+      "Tổ chức và ghi nhớ thông tin",
+      "Viết chương trình",
+      "Tính toán",
+      "Chơi game"
+    ],
+    "answer": 0,
+    "explain": "Mindmap"
+  },
+  {
+    "q": "Chủ đề trung tâm của sơ đồ tư duy thường",
+    "options": [
+      "Đặt ở giữa",
+      "Ở cuối",
+      "Ở góc",
+      "Ở trên"
+    ],
+    "answer": 0,
+    "explain": "Giữa trang"
+  },
+  {
+    "q": "Các nhánh chính thường được vẽ",
+    "options": [
+      "Tỏa ra từ trung tâm",
+      "Song song",
+      "Thẳng đứng",
+      "Ngẫu nhiên"
+    ],
+    "answer": 0,
+    "explain": "Tỏa ra"
+  },
+  {
+    "q": "Trong sơ đồ tư duy có thể sử dụng",
+    "options": [
+      "Hình ảnh",
+      "Chữ",
+      "Màu sắc",
+      "Tất cả"
+    ],
+    "answer": 3,
+    "explain": "Kết hợp nhiều yếu tố"
+  },
+  {
+    "q": "Sơ đồ tư duy giúp",
+    "options": [
+      "Ghi nhớ nhanh",
+      "Học máy",
+      "Tăng dung lượng file",
+      "Tăng RAM"
+    ],
+    "answer": 0,
+    "explain": "Tăng khả năng nhớ"
+  },
+  {
+    "q": "Nhánh phụ trong sơ đồ tư duy",
+    "options": [
+      "Bổ sung ý cho nhánh chính",
+      "Trang trí",
+      "Xóa nội dung",
+      "Thay chủ đề"
+    ],
+    "answer": 0,
+    "explain": "Ý chi tiết"
+  },
+  {
+    "q": "Có thể tạo sơ đồ tư duy bằng",
+    "options": [
+      "Giấy và bút",
+      "Phần mềm",
+      "Cả hai",
+      "Không cách nào"
+    ],
+    "answer": 2,
+    "explain": "Cả hai"
+  },
+  {
+    "q": "Một sơ đồ tư duy tốt nên",
+    "options": [
+      "Ngắn gọn",
+      "Rõ ràng",
+      "Dễ nhìn",
+      "Tất cả"
+    ],
+    "answer": 3,
+    "explain": "Đặc điểm"
+  },
+  {
+    "q": "Sơ đồ tư duy giúp",
+    "options": [
+      "Tư duy logic",
+      "Giảm RAM",
+      "Xóa file",
+      "Chơi game"
+    ],
+    "answer": 0,
+    "explain": "Logic"
+  },
+  {
+    "q": "Từ khóa trong sơ đồ tư duy thường",
+    "options": [
+      "Ngắn gọn",
+      "Dài",
+      "Viết cả đoạn",
+      "Không cần"
+    ],
+    "answer": 0,
+    "explain": "Key word"
+  },
+  {
+    "q": "Định dạng văn bản là",
+    "options": [
+      "Thay đổi cách trình bày",
+      "Xóa nội dung",
+      "In văn bản",
+      "Chèn bảng"
+    ],
+    "answer": 0,
+    "explain": "Format"
+  },
+  {
+    "q": "Font chữ là",
+    "options": [
+      "Kiểu chữ",
+      "Cỡ chữ",
+      "Màu chữ",
+      "Trang"
+    ],
+    "answer": 0,
+    "explain": "Font"
+  },
+  {
+    "q": "Font Size dùng để",
+    "options": [
+      "Thay đổi cỡ chữ",
+      "Chèn hình",
+      "Xóa chữ",
+      "Chèn bảng"
+    ],
+    "answer": 0,
+    "explain": "Size"
+  },
+  {
+    "q": "Bold dùng để",
+    "options": [
+      "In đậm",
+      "In nghiêng",
+      "Gạch chân",
+      "Căn giữa"
+    ],
+    "answer": 0,
+    "explain": "Bold"
+  },
+  {
+    "q": "Italic dùng để",
+    "options": [
+      "In nghiêng",
+      "In đậm",
+      "Gạch chân",
+      "Xóa chữ"
+    ],
+    "answer": 0,
+    "explain": "Italic"
+  },
+  {
+    "q": "Underline dùng để",
+    "options": [
+      "Gạch chân",
+      "In đậm",
+      "Căn lề",
+      "Xóa chữ"
+    ],
+    "answer": 0,
+    "explain": "Underline"
+  },
+  {
+    "q": "Căn giữa văn bản dùng",
+    "options": [
+      "Center",
+      "Left",
+      "Right",
+      "Justify"
+    ],
+    "answer": 0,
+    "explain": "Center"
+  },
+  {
+    "q": "Căn đều hai bên",
+    "options": [
+      "Justify",
+      "Center",
+      "Left",
+      "Right"
+    ],
+    "answer": 0,
+    "explain": "Justify"
+  },
+  {
+    "q": "Line Spacing dùng để",
+    "options": [
+      "Khoảng cách dòng",
+      "Cỡ chữ",
+      "Font",
+      "Màu chữ"
+    ],
+    "answer": 0,
+    "explain": "Khoảng cách dòng"
+  },
+  {
+    "q": "Trước khi định dạng cần",
+    "options": [
+      "Chọn văn bản",
+      "Đóng Word",
+      "In văn bản",
+      "Chèn bảng"
+    ],
+    "answer": 0,
+    "explain": "Select"
+  },
+  {
+    "q": "Bảng trong Word gồm",
+    "options": [
+      "Hàng và cột",
+      "Trang",
+      "Hình",
+      "Kí tự"
+    ],
+    "answer": 0,
+    "explain": "Row Column"
+  },
+  {
+    "q": "Giao điểm hàng và cột là",
+    "options": [
+      "Ô",
+      "Trang",
+      "Dòng",
+      "Khối"
+    ],
+    "answer": 0,
+    "explain": "Cell"
+  },
+  {
+    "q": "Dữ liệu dạng bảng giúp",
+    "options": [
+      "Dễ so sánh",
+      "Khó đọc",
+      "Tăng dung lượng",
+      "Không lợi ích"
+    ],
+    "answer": 0,
+    "explain": "So sánh"
+  },
+  {
+    "q": "Có thể chèn bảng bằng",
+    "options": [
+      "Insert Table",
+      "Font",
+      "Layout",
+      "View"
+    ],
+    "answer": 0,
+    "explain": "Insert"
+  },
+  {
+    "q": "Có thể thêm",
+    "options": [
+      "Hàng",
+      "Cột",
+      "Ô",
+      "Tất cả"
+    ],
+    "answer": 3,
+    "explain": "Có thể chỉnh"
+  },
+  {
+    "q": "Có thể xóa",
+    "options": [
+      "Hàng",
+      "Cột",
+      "Bảng",
+      "Tất cả"
+    ],
+    "answer": 3,
+    "explain": "Delete"
+  },
+  {
+    "q": "Có thể gộp",
+    "options": [
+      "Nhiều ô",
+      "Trang",
+      "Dòng",
+      "Chữ"
+    ],
+    "answer": 0,
+    "explain": "Merge"
+  },
+  {
+    "q": "Có thể tách",
+    "options": [
+      "Ô",
+      "Trang",
+      "Chữ",
+      "Hình"
+    ],
+    "answer": 0,
+    "explain": "Split"
+  },
+  {
+    "q": "Có thể thay đổi",
+    "options": [
+      "Độ rộng cột",
+      "Cỡ chữ",
+      "Màu chữ",
+      "Tất cả"
+    ],
+    "answer": 3,
+    "explain": "Format"
+  },
+  {
+    "q": "Ví dụ thông tin nên dùng bảng",
+    "options": [
+      "Thời khóa biểu",
+      "Truyện",
+      "Thơ",
+      "Thư"
+    ],
+    "answer": 0,
+    "explain": "Bảng"
+  },
+  {
+    "q": "Find dùng để",
+    "options": [
+      "Tìm từ",
+      "Xóa từ",
+      "Chèn hình",
+      "Chèn bảng"
+    ],
+    "answer": 0,
+    "explain": "Search"
+  },
+  {
+    "q": "Replace dùng để",
+    "options": [
+      "Thay từ",
+      "Tìm từ",
+      "Xóa trang",
+      "Chèn bảng"
+    ],
+    "answer": 0,
+    "explain": "Replace"
+  },
+  {
+    "q": "Replace All dùng để",
+    "options": [
+      "Thay tất cả",
+      "Thay một",
+      "Xóa",
+      "Chèn"
+    ],
+    "answer": 0,
+    "explain": "All"
+  },
+  {
+    "q": "Find và Replace giúp",
+    "options": [
+      "Sửa lỗi nhanh",
+      "Chơi game",
+      "Tăng RAM",
+      "Tăng CPU"
+    ],
+    "answer": 0,
+    "explain": "Nhanh"
+  },
+  {
+    "q": "Find và Replace thường nằm trong",
+    "options": [
+      "Home",
+      "Insert",
+      "View",
+      "Design"
+    ],
+    "answer": 0,
+    "explain": "Home"
+  },
+  {
+    "q": "Find có thể",
+    "options": [
+      "Tìm cụm từ",
+      "Tìm chữ",
+      "Tìm số",
+      "Tất cả"
+    ],
+    "answer": 3,
+    "explain": "Search"
+  },
+  {
+    "q": "Replace hữu ích khi",
+    "options": [
+      "Sửa lỗi lặp",
+      "Viết văn",
+      "Chèn ảnh",
+      "Tạo bảng"
+    ],
+    "answer": 0,
+    "explain": "Sửa lỗi"
+  },
+  {
+    "q": "Find giúp",
+    "options": [
+      "Tìm nhanh trong văn bản dài",
+      "Tăng dung lượng",
+      "Xóa file",
+      "Chèn bảng"
+    ],
+    "answer": 0,
+    "explain": "Search"
+  },
+  {
+    "q": "Replace thường dùng khi",
+    "options": [
+      "Đổi từ sai",
+      "Đổi màu",
+      "Đổi font",
+      "Chèn bảng"
+    ],
+    "answer": 0,
+    "explain": "Thay từ"
+  },
+  {
+    "q": "Find và Replace đặc biệt hữu ích khi văn bản",
+    "options": [
+      "Rất dài",
+      "Rất ngắn",
+      "Có hình",
+      "Có bảng"
+    ],
+    "answer": 0,
+    "explain": "Tìm nhanh"
+  }
+]
