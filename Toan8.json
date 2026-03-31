@@ -1,0 +1,320 @@
+﻿[
+  {
+    "q": "Biểu thức nào sau đây **không phải** là phân thức đại số?",
+    "options": ["$\\frac{x+y}{0}$", "$\\frac{x^2y}{x+1}$", "$\\frac{8}{2x+3}$", "$\\frac{0}{4x-2}$"],
+    "answer": 0,
+    "explain": "Mẫu bằng 0 nên không phải phân thức"
+  },
+  {
+    "q": "Phân thức đại số có dạng nào sau đây?",
+    "options": ["$\\frac{A}{B}$ với $B\\ne0$", "$\\frac{A}{0}$", "$A+B$", "$\\sqrt{x}$"],
+    "answer": 0,
+    "explain": "Phân thức phải có dạng $\\frac{A}{B}$ và có mẫu khác 0"
+  },
+  {
+    "q": "Rút gọn phân thức $\\frac{(x-4)^2}{x(x-4)}$ (với $x\\ne4$)",
+    "options": ["$\\frac{x-4}{x}$", "$\\frac{x}{x-4}$", "$\\frac{1}{x}$", "$x-4$"],
+    "answer": 0,
+    "explain": "Khử nhân tử $(x-4)$"
+  },
+  {
+    "q": "Phân thức đối của $\\frac{3}{x}$ là",
+    "options": ["$-\\frac{3}{x}$", "$\\frac{3}{-x}$", "$\\frac{x}{3}$", "$\\frac{3}{x^2}$"],
+    "answer": 0,
+    "explain": "Hai phân thức đối nhau chỉ khác nhau phần dấu"
+  },
+  {
+    "q": "Tính $\\frac{x-5}{y}+\\frac{8}{y}$",
+    "options": ["$\\frac{x+3}{y}$", "$\\frac{x-3}{y}$", "$\\frac{x+13}{y}$", "$\\frac{x}{y}$"],
+    "answer": 0,
+    "explain": "Cộng tử số. Giữ nguyên mẫu"
+  },
+  {
+    "q": "Phương trình $ax+b=0$ là phương trình bậc nhất khi",
+    "options": ["$a\\ne0$", "$b=0$", "$a=0$", "$b\\ne0$"],
+    "answer": 0,
+    "explain": "Điều kiện $a≠0$"
+  },
+  {
+    "q": "Giá trị $x=2$ là nghiệm của phương trình nào?",
+    "options": ["$2x-4=0$", "$x-5=0$", "$2x=0$", "$x+2=0$"],
+    "answer": 0,
+    "explain": "Thay $x=2$ vào phương trình nào mà thấy 2 vế bằng nhau thì chọn"
+  },
+  {
+    "q": "Phương trình nào sau đây là phương trình bậc nhất một ẩn?",
+    "options": ["$5x-3=0$", "$x^2-7x+1=0$", "$0x+2=0$", "$x-y=2$"],
+    "answer": 0,
+    "explain": "Phương trình bậc nhất 1 ẩn phải có dạng $ax+b=0$ và $b\\ne0$"
+  },
+  {
+    "q": "Giải phương trình $4x-7=0$",
+    "options": ["$x=\\frac{7}{4}$", "$x=-\\frac{7}{4}$", "$x=\\frac{4}{7}$", "$x=-\\frac{4}{7}$"],
+    "answer": 0,
+    "explain": "$4x=7$ và..."
+  },
+  {
+    "q": "Chu vi hình vuông cạnh $x$",
+    "options": ["$4x$", "$2x$", "$x^2$", "$x+4$"],
+    "answer": 0,
+    "explain": "Chu vi của 1 hình bất kì là tổng độ dài đường biên. $P=4x$"
+  },
+  {
+    "q": "Hàm số nào sau đây là hàm số bậc nhất?",
+    "options": ["$y=2x-3$", "$y=\\frac{1}{x}$", "$y=2x^2+5$", "$y=6$"],
+    "answer": 0,
+    "explain": "Hàm số bậc nhất phải có dạng $y=ax+b$ với $b\\ne0$"
+  },
+  {
+    "q": "Cho $f(x)=3x+4$. Tính $f(1)$",
+    "options": ["7", "3", "1", "-1"],
+    "answer": 0,
+    "explain": "$f(1)=3·1+4$"
+  },
+  {
+    "q": "Tử thức của phân thức $P=\\frac{x^2-1}{x-1}$ là",
+    "options": ["$x^2-1$", "$x-1$", "$x^2$", "1"],
+    "answer": 0,
+    "explain": "Tử nằm trên"
+  },
+  {
+    "q": "Điều kiện xác định của $\\frac{x^2-1}{x-1}$",
+    "options": ["$x\\ne1$", "$x=1$", "$x>1$", "$x<1$"],
+    "answer": 0,
+    "explain": "Mẫu ≠0"
+  },
+  {
+    "q": "Rút gọn $\\frac{x^2-1}{x-1}$",
+    "options": ["$x+1$", "$x-1$", "1", "$x^2+1$"],
+    "answer": 0,
+    "explain": "$(x^2-1)=(x-1)(x+1)$"
+  },
+  {
+    "q": "Giá trị của $\\frac{x^2-1}{x-1}$ khi $x=3$",
+    "options": ["4", "2", "3", "1"],
+    "answer": 0,
+    "explain": "$3+1$"
+  },
+  {
+    "q": "Vế phải của phương trình $6x-1=x+3$ là",
+    "options": ["$x+3$", "$6x-1$", "6x", "3"],
+    "answer": 0,
+    "explain": "Biểu thức bên phải"
+  },
+  {
+    "q": "Hệ số góc của đường thẳng $y=3x-6$",
+    "options": ["3", "-6", "6", "-3"],
+    "answer": 0,
+    "explain": "Hệ số góc là con số đi với x"
+  },
+  {
+    "q": "Hai đường thẳng $y=2x+4$ và $y=x-5$",
+    "options": ["Cắt nhau", "Song song", "Trùng nhau", "Không xác định"],
+    "answer": 0,
+    "explain": "Hệ số góc khác thì cắt; bằng thì tùy vào b và b' mà quyết định // hay trùng"
+  },
+  {
+    "q": "Tính $\\frac{3x}{4y^2}·\\frac{4xy^2}{x^2}$",
+    "options": ["3", "$\\frac{3}{x}$", "$3x$", "$\\frac{1}{3}$"],
+    "answer": 0,
+    "explain": "Rút gọn là bỏ đi nhân tử giống nhau ở tử và mẫu"
+  },
+  {
+    "q": "Phân thức nghịch đảo của $\\frac{10}{x-3}$",
+    "options": ["$\\frac{x-3}{10}$", "$\\frac{10}{x-3}$", "$\\frac{-10}{x-3}$", "$\\frac{1}{10}$"],
+    "answer": 0,
+    "explain": "Đảo tử mẫu"
+  },
+  {
+    "q": "Nếu tuổi em là $x$ thì tuổi anh (hơn 7 tuổi) được biểu diễn bởi biểu thức",
+    "options": ["$x+7$", "$x-7$", "$7x$", "$x/7$"],
+    "answer": 0,
+    "explain": "Hơn 7 tuổi thì cộng"
+  },
+  {
+    "q": "Đổi $x$ euro sang VND khi $1EUR=27640$ VND",
+    "options": ["$y=27640x$", "$y=27640+x$", "$y=x/27640$", "$y=27640-x$"],
+    "answer": 0,
+    "explain": "Nhân tỉ giá"
+  },
+  {
+    "q": "Một phòng học hình chữ nhật có diện tích $56m^2$, chiều rộng $x$ (m). Biểu thức biểu thị chiều dài phòng học là",
+    "options": ["$\\frac{56}{x}$", "$56x$", "$56+x$", "$x-56$"],
+    "answer": 0,
+    "explain": "Dài = S / rộng"
+  },
+  {
+    "q": "Cho hàm số $y=x+2$. Khi $x=1$ thì $y=$",
+    "options": ["3", "1", "2", "-1"],
+    "answer": 0,
+    "explain": "1+2"
+  },
+  {
+    "q": "Điểm nào sau đây thuộc đồ thị hàm số $y=x+2$",
+    "options": ["(1,3)", "(2,3)", "(0,1)", "(2,2)"],
+    "answer": 0,
+    "explain": "Thay tọa độ từng điểm vào hàm số, thỏa mãn thì chọn"
+  },
+  {
+    "q": "Điểm nào thuộc đồ thị hàm số $y=x+2$",
+    "options": ["(2,4)", "(1,2)", "(0,0)", "(3,4)"],
+    "answer": 0,
+    "explain": "Thay tọa độ từng điểm vào hàm số, thỏa mãn thì chọn"
+  },
+  {
+    "q": "Tính $\\frac{1}{x}-\\frac{3}{x(x+5)}$",
+    "options": ["$\\frac{x+2}{x(x+5)}$", "$\\frac{x-2}{x(x+5)}$", "$\\frac{x+5}{x(x+5)}$", "$\\frac{1}{x+5}$"],
+    "answer": 0,
+    "explain": "Quy đồng"
+  },
+  {
+    "q": "Điều kiện xác định của biểu thức $\\frac{1}{x}-\\frac{3}{x(x+5)}$",
+    "options": ["$x\\ne0, x\\ne -5$", "$x\\ne0$", "$x\\ne-5$", "$x>0$"],
+    "answer": 0,
+    "explain": "Mẫu ≠0"
+  },
+  {
+    "q": "Phân tích $x^2-x$ thành nhân tử",
+    "options": ["$x(x-1)$", "$(x-1)^2$", "$x(x+1)$", "$x^2(1-x)$"],
+    "answer": 0,
+    "explain": "Đặt nhân tử chung"
+  },
+  {
+    "q": "Phân tích $x^2-4$",
+    "options": ["$(x-2)(x+2)$", "$(x-4)(x+1)$", "$(x-1)(x+4)$", "$(x-2)^2$"],
+    "answer": 0,
+    "explain": "Hiệu hai bình phương"
+  },
+  {
+    "q": "Rút gọn $\\frac{x-1}{x+2} : \\frac{x^2-x}{x^2-4}$",
+    "options": ["$\\frac{x+2}{x}$", "$\\frac{x}{x+2}$", "$\\frac{x-1}{x}$", "$\\frac{x}{x-1}$"],
+    "answer": 0,
+    "explain": "Đổi phép chia"
+  },
+  {
+    "q": "Hai bạn cách nhau $11km$ cùng xuất phát và gặp nhau sau $0.5h$. Tổng vận tốc hai bạn là",
+    "options": ["22 km/h", "11 km/h", "5.5 km/h", "44 km/h"],
+    "answer": 0,
+    "explain": "v=s/t"
+  },
+  {
+    "q": "Nếu vận tốc của Nam là $x$ km/h và vận tốc của Hùng lớn hơn 2 km/h thì vận tốc của Hùng là",
+    "options": ["$x+2$", "$x-2$", "$2x$", "$x/2$"],
+    "answer": 0,
+    "explain": "Hơn 2"
+  },
+  {
+    "q": "Tổng vận tốc hai bạn khi Nam đi $x$ km/h và Hùng đi $x+2$ km/h",
+    "options": ["$2x+2$", "$x+2$", "$2x$", "$x-2$"],
+    "answer": 0,
+    "explain": "Cộng vận tốc"
+  },
+  {
+    "q": "Nếu 2 bạn xuất phát cùng lúc đi ngược chiều trên cùng 1 quãng đường, đến lúc gặp nhau thì cái gì không đổi",
+    "options": ["Thời gian đi", "Vận tốc", "Quãng đường", "Vị trí"],
+    "answer": 0,
+    "explain": "Thời gian bằng nhau bất kể ai đi nhanh hơn"
+  },
+  {
+    "q": "Phương trình lập được từ bài toán gà và chó là",
+    "options": ["$2x+4(36-x)=100$", "$x-y=36$", "$2x=22$", "$4x=36$"],
+    "answer": 0,
+    "explain": "Vừa gà và chó. Bó lại cho tròn. 36 con. 100 chân chẵn"
+  },
+  {
+    "q": "Giải phương trình $2x+2=22$ ta được nghiệm x=",
+    "options": ["10", "11", "9", "12"],
+    "answer": 0,
+    "explain": "2x=20"
+  },
+  {
+    "q": "Vận tốc của Nam chậm hơn của hùng là 5km/h. Vận tốc của hùng là 7km/h. Vận tốc Nam là",
+    "options": ["2 km/h", "12 km/h", "10 km/h", "11 km/h"],
+    "answer": 0,
+    "explain": "x=2"
+  },
+  {
+    "q": "Vận tốc của Hùng nhanh hơn gấp đôi vận tốc của Nam. Nam đi với vận tốc x km/h. Vận tốc Hùng là",
+    "options": ["2x km/h", "2 km/h", "4 km/h", "x+2 km/h"],
+    "answer": 0,
+    "explain": "2x"
+  },
+  {
+    "q": "Trên quãng đường AB. Nam đi trước lúc 6h với vận tốc 2km/h và Hùng đi sau 0,5h. Hỏi Hùng muốn đuổi kịp Nam lúc 7h thì vận tốc của Hùng phải bằng",
+    "options": ["4 km/h", "2 km/h", "8 km/h", "18 km/h"],
+    "answer": 0,
+    "explain": "Thời gian Hùng đi: 7h-6h30=0,5h. Để gặp Nam thì Hùng phải đi 2 km trong 0,5 giờ"
+  },
+  {
+    "q": "Giải phương trình $5x-10=0$",
+    "options": ["2", "5", "10", "1"],
+    "answer": 0,
+    "explain": "5x=10"
+  },
+  {
+    "q": "Giải phương trình $3x+6=0$",
+    "options": ["-2", "2", "-3", "3"],
+    "answer": 0,
+    "explain": "3x=-6..."
+  },
+  {
+    "q": "Giải phương trình $7x-14=0$",
+    "options": ["2", "7", "-2", "14"],
+    "answer": 0,
+    "explain": "7x=14"
+  },
+  {
+    "q": "Giải phương trình $9x=27$",
+    "options": ["3", "9", "27", "1"],
+    "answer": 0,
+    "explain": "27/9"
+  },
+  {
+    "q": "Cho hàm số $y=3x+4$. Khi $x=2$ thì $y=$",
+    "options": ["10", "8", "7", "6"],
+    "answer": 0,
+    "explain": "y=3·2+4"
+  },
+  {
+    "q": "Cho hàm số $y=3x+4$. Khi $x=0$ thì $y=$",
+    "options": ["4", "3", "0", "-4"],
+    "answer": 0,
+    "explain": "4"
+  },
+  {
+    "q": "Điểm nào thuộc đồ thị $y=3x+4$",
+    "options": ["(1,7)", "(1,3)", "(0,3)", "(2,8)"],
+    "answer": 0,
+    "explain": "Thay tọa độ từng điểm vào hàm số. Thỏa thì chọn"
+  },
+  {
+    "q": "Hệ số góc của hàm số $y=3x+4$",
+    "options": ["3", "4", "-3", "1"],
+    "answer": 0,
+    "explain": "Hệ số góc là số đi với x"
+  },
+  {
+    "q": "Giá trị của $\\frac{x^2-1}{x-1}$ khi $x=5$",
+    "options": ["6", "4", "5", "3"],
+    "answer": 0,
+    "explain": "Rút gọn được x+1. Thay số vào..."
+  },
+  {
+    "q": "Điều kiện xác định của $\\frac{10}{x-3}$",
+    "options": ["$x\\ne3$", "$x=3$", "$x>3$", "$x<3$"],
+    "answer": 0,
+    "explain": "Mẫu ≠0"
+  },
+  {
+    "q": "Giá trị của $\\frac{10}{x-3}$ khi $x=5$",
+    "options": ["5", "10", "2", "1"],
+    "answer": 0,
+    "explain": "10/2"
+  },
+  {
+    "q": "Rút gọn $\\frac{3x}{x}$ (với $x\\ne0$)",
+    "options": ["3", "x", "1", "3x"],
+    "answer": 0,
+    "explain": "Khử x"
+  }
+]

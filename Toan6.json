@@ -1,0 +1,374 @@
+﻿[
+  {
+    "q": "Nếu $\\frac{x}{6}=4$ thì $x$ bằng",
+    "options": ["24", "18", "12", "30"],
+    "answer": 0,
+    "explain": "$x=4\\times6=24$."
+  },
+  {
+    "q": "Kết quả của $\\frac{5}{6}+\\frac{1}{3}$ là",
+    "options": ["$\\frac{7}{6}$", "1", "$\\frac{6}{6}$", "$\\frac{5}{6}$"],
+    "answer": 0,
+    "explain": "Quy đồng $\\frac{1}{3}=\\frac{2}{6}$ nên $\\frac{5}{6}+\\frac{2}{6}=\\frac{7}{6}$."
+  },
+  {
+    "q": "Nếu giá một chiếc áo là $200000$ đồng và tăng $10\\%$ thì giá mới là",
+    "options": ["220000", "210000", "230000", "200000"],
+    "answer": 0,
+    "explain": "$200000\\times(1 + 10\\%) = 220000$."
+  },
+  {
+    "q": "Nếu $AB=7$ cm, $BC=5$ cm và $B$ nằm giữa $A,C$ thì $AC$ bằng",
+    "options": ["12", "2", "35", "7"],
+    "answer": 0,
+    "explain": "$AC=AB+BC=12$."
+  },
+  {
+    "q": "Số đối của $-8$ là",
+    "options": ["8", "-8", "0", "1"],
+    "answer": 0,
+    "explain": "Số đối là số đổi dấu."
+  },
+  {
+    "q": "Rút gọn phân số $\\frac{9}{12}$",
+    "options": ["$\\frac{3}{4}$", "$\\frac{4}{3}$", "$\\frac{6}{8}$", "$\\frac{9}{3}$"],
+    "answer": 0,
+    "explain": "Chia cả tử và mẫu cho $3$."
+  },
+  {
+    "q": "Kết quả của $3,5+2,4$ là",
+    "options": ["5,9", "6,1", "5,8", "6"],
+    "answer": 0,
+    "explain": "Cộng số thập phân."
+  },
+  {
+    "q": "Kết quả của $8,2-3,6$ là",
+    "options": ["4,6", "5,2", "4,4", "4"],
+    "answer": 0,
+    "explain": "Trừ số thập phân."
+  },
+  {
+    "q": "$\\frac{1}{2}$ của $20$ bằng",
+    "options": ["10", "5", "20", "2"],
+    "answer": 0,
+    "explain": "$20\\times\\frac{1}{2}=10$."
+  },
+  {
+    "q": "$\\frac{3}{4}$ của $16$ bằng",
+    "options": ["12", "8", "6", "10"],
+    "answer": 0,
+    "explain": "$16\\times\\frac{3}{4}=12$."
+  },
+  {
+    "q": "Nếu $x+5=12$ thì $x$ bằng",
+    "options": ["7", "6", "8", "5"],
+    "answer": 0,
+    "explain": "$x=12-5=7$."
+  },
+  {
+    "q": "Nếu $2x=10$ thì $x$ bằng",
+    "options": ["5", "10", "20", "2"],
+    "answer": 0,
+    "explain": "$x=10:2=5$."
+  },
+  {
+    "q": "Trong ba điểm thẳng hàng $A,B,C$ nếu $B$ nằm giữa thì",
+    "options": ["$AB+BC=AC$", "$AB=AC$", "$AC+BC=AB$", "$AB\\times BC=AC$"],
+    "answer": 0,
+    "explain": "Tính chất điểm nằm giữa."
+  },
+  {
+    "q": "Nếu $OA=3$ cm, $OB=7$ cm trên cùng tia $Ox$ thì $AB$ bằng",
+    "options": ["4", "10", "21", "3"],
+    "answer": 0,
+    "explain": "$AB=OB-OA=4$."
+  },
+  {
+    "q": "$0,75$ viết dưới dạng phân số là",
+    "options": ["$\\frac{3}{4}$", "$\\frac{1}{4}$", "$\\frac{2}{3}$", "$\\frac{3}{5}$"],
+    "answer": 0,
+    "explain": "$0,75=\\frac{75}{100}=\\frac{3}{4}$."
+  },
+  {
+    "q": "Tính $\\frac{7}{10}+0,3$",
+    "options": ["1", "0,7", "1,0", "0,9"],
+    "answer": 0,
+    "explain": "$0,7+0,3=1$."
+  },
+  {
+    "q": "Kết quả của $5^2$",
+    "options": ["25", "10", "20", "15"],
+    "answer": 0,
+    "explain": "$5\\times5=25$."
+  },
+  {
+    "q": "Kết quả của $3^3$",
+    "options": ["27", "9", "6", "12"],
+    "answer": 0,
+    "explain": "$3\\times3\\times3=27$."
+  },
+  {
+    "q": "Số tự nhiên nhỏ nhất là",
+    "options": ["0", "1", "-1", "2"],
+    "answer": 0,
+    "explain": "Số tự nhiên bắt đầu từ $0$."
+  },
+  {
+    "q": "Rút gọn phân số $\\frac{6}{9}$",
+    "options": ["$\\frac{2}{3}$", "$\\frac{3}{2}$", "$\\frac{1}{3}$", "$\\frac{4}{3}$"],
+    "answer": 0,
+    "explain": "Chia cả tử và mẫu cho $3$."
+  },
+  {
+    "q": "$2^4$ bằng",
+    "options": ["16", "8", "4", "32"],
+    "answer": 0,
+    "explain": "$2\\times2\\times2\\times2=16$."
+  },
+  {
+    "q": "$\\frac{1}{5}$ của $50$ bằng",
+    "options": ["10", "5", "15", "20"],
+    "answer": 0,
+    "explain": "$50\\times\\frac{1}{5}=10$."
+  },
+  {
+    "q": "Phân số nào bằng $\\frac{2}{3}$ ?",
+    "options": ["$\\frac{4}{6}$", "$\\frac{3}{4}$", "$\\frac{5}{6}$", "$\\frac{3}{5}$"],
+    "answer": 0,
+    "explain": "$\\frac{4}{6}=\\frac{2}{3}$."
+  },
+  {
+    "q": "Rút gọn phân số $\\frac{12}{18}$",
+    "options": ["$\\frac{2}{3}$", "$\\frac{3}{2}$", "$\\frac{4}{9}$", "$\\frac{6}{9}$"],
+    "answer": 0,
+    "explain": "Chia cả tử và mẫu cho $6$."
+  },
+  {
+    "q": "Kết quả của $\\frac{3}{5}+\\frac{1}{5}$ là",
+    "options": ["$\\frac{4}{5}$", "$\\frac{3}{10}$", "$\\frac{2}{5}$", "1"],
+    "answer": 0,
+    "explain": "Cộng hai phân số cùng mẫu."
+  },
+  {
+    "q": "Kết quả của $\\frac{7}{8}-\\frac{3}{8}$ là",
+    "options": ["$\\frac{1}{2}$", "$\\frac{4}{8}$", "$\\frac{5}{8}$", "$\\frac{3}{4}$"],
+    "answer": 0,
+    "explain": "$\\frac{4}{8}=\\frac{1}{2}$."
+  },
+  {
+    "q": "$0,5$ viết dưới dạng phân số là",
+    "options": ["$\\frac{1}{2}$", "$\\frac{1}{5}$", "$\\frac{5}{1}$", "$\\frac{2}{5}$"],
+    "answer": 0,
+    "explain": "$0,5=\\frac{1}{2}$."
+  },
+  {
+    "q": "Làm tròn số $3,46$ đến chữ số thập phân thứ nhất",
+    "options": ["3,5", "3,4", "3,46", "3,3"],
+    "answer": 0,
+    "explain": "$6 \\ge 5$ nên làm tròn lên."
+  },
+  {
+    "q": "Nếu $AB=4$ cm, $BC=6$ cm và $B$ nằm giữa $A,C$ thì $AC$ bằng",
+    "options": ["10", "2", "24", "6"],
+    "answer": 0,
+    "explain": "$AC=AB+BC=10$."
+  },
+  {
+    "q": "Nếu $OA=3$ cm, $OB=9$ cm trên cùng tia $Ox$ thì $AB$ bằng",
+    "options": ["6", "12", "3", "9"],
+    "answer": 0,
+    "explain": "$AB=OB-OA=6$."
+  },
+  {
+    "q": "Số đối của $-12$ là",
+    "options": ["12", "-12", "0", "1"],
+    "answer": 0,
+    "explain": "Số đối là số đổi dấu."
+  },
+  {
+    "q": "Kết quả của $\\frac{2}{3}\\times3$",
+    "options": ["2", "1", "3", "6"],
+    "answer": 0,
+    "explain": "$3\\times\\frac{2}{3}=2$."
+  },
+  {
+    "q": "Kết quả của $15\\%$ của $200$",
+    "options": ["30", "20", "15", "40"],
+    "answer": 0,
+    "explain": "$200\\times0.15=30$."
+  },
+  {
+    "q": "$\\frac{1}{4}$ của $32$ bằng",
+    "options": ["8", "4", "16", "12"],
+    "answer": 0,
+    "explain": "$32\\times\\frac{1}{4}=8$."
+  },
+  {
+    "q": "Kết quả của $\\frac{9}{10}+0,1$",
+    "options": ["1", "0,9", "1,1", "0,8"],
+    "answer": 0,
+    "explain": "$0,9+0,1=1$."
+  },
+  {
+    "q": "Phân số nào tối giản",
+    "options": ["$\\frac{5}{7}$", "$\\frac{6}{8}$", "$\\frac{9}{12}$", "$\\frac{10}{15}$"],
+    "answer": 0,
+    "explain": "$5$ và $7$ không có ước chung ngoài 1."
+  },
+  {
+    "q": "$2,5+1,7$ bằng",
+    "options": ["4,2", "4,1", "3,2", "3,5"],
+    "answer": 0,
+    "explain": "Cộng số thập phân."
+  },
+  {
+    "q": "$6,3-2,8$ bằng",
+    "options": ["3,5", "3,3", "3,1", "4,5"],
+    "answer": 0,
+    "explain": "Trừ số thập phân."
+  },
+  {
+    "q": "Nếu $x+7=15$ thì $x$ bằng",
+    "options": ["8", "7", "9", "6"],
+    "answer": 0,
+    "explain": "$x=15-7$."
+  },
+  {
+    "q": "Nếu $3x=21$ thì $x$ bằng",
+    "options": ["7", "6", "8", "9"],
+    "answer": 0,
+    "explain": "$x=21:3$."
+  },
+  {
+    "q": "$\\frac{3}{10}$ viết dưới dạng số thập phân",
+    "options": ["0,3", "3", "0,03", "0,33"],
+    "answer": 0,
+    "explain": "$3\\div10=0,3$."
+  },
+  {
+    "q": "Qua hai điểm phân biệt vẽ được",
+    "options": ["1 đường thẳng", "2 đường thẳng", "3 đường thẳng", "vô số"],
+    "answer": 0,
+    "explain": "Qua hai điểm phân biệt chỉ có một đường thẳng."
+  },
+  {
+    "q": "Tỉ số của $8$ và $4$ là",
+    "options": ["2", "4", "1", "3"],
+    "answer": 0,
+    "explain": "$8:4=2$."
+  },
+  {
+    "q": "Tỉ số của $6$ và $12$ là",
+    "options": ["$\\frac{1}{2}$", "$\\frac{2}{3}$", "$\\frac{3}{2}$", "2"],
+    "answer": 0,
+    "explain": "$6:12=\\frac{1}{2}$."
+  },
+  {
+    "q": "$25\\%$ viết dưới dạng phân số",
+    "options": ["$\\frac{1}{4}$", "$\\frac{1}{5}$", "$\\frac{1}{2}$", "$\\frac{3}{4}$"],
+    "answer": 0,
+    "explain": "$25\\%=\\frac{25}{100}=\\frac{1}{4}$."
+  },
+  {
+    "q": "$40\\%$ của $50$ bằng",
+    "options": ["20", "15", "25", "30"],
+    "answer": 0,
+    "explain": "$50\\times0.4=20$."
+  },
+  {
+    "q": "$0,75$ viết dưới dạng phần trăm",
+    "options": ["75\\%", "7,5\\%", "0,75\\%", "750\\%"],
+    "answer": 0,
+    "explain": "$0,75=75\\%$."
+  },
+  {
+    "q": "$\\frac{3}{5}$ của $40$",
+    "options": ["24", "20", "30", "15"],
+    "answer": 0,
+    "explain": "$40\\times\\frac{3}{5}=24$."
+  },
+  {
+    "q": "Một lớp có $40$ học sinh, $\\frac{1}{5}$ số học sinh là nữ. Số học sinh nữ là",
+    "options": ["8", "5", "10", "6"],
+    "answer": 0,
+    "explain": "$40\\times\\frac{1}{5}=8$."
+  },
+  {
+    "q": "Một thùng có $60$ quả cam, $20\\%$ bị hỏng. Số cam hỏng",
+    "options": ["12", "10", "15", "6"],
+    "answer": 0,
+    "explain": "$60\\times0.2=12$."
+  },
+  {
+    "q": "Tỉ số phần trăm của $20$ so với $50$",
+    "options": ["40\\%", "20\\%", "50\\%", "25\\%"],
+    "answer": 0,
+    "explain": "$20:50=0.4=40\\%$."
+  },
+  {
+    "q": "Nếu $\\frac{x}{5}=3$ thì $x$ bằng",
+    "options": ["15", "10", "8", "20"],
+    "answer": 0,
+    "explain": "$x=3\\times5=15$."
+  },
+  {
+    "q": "$\\frac{7}{10}$ viết dưới dạng số thập phân",
+    "options": ["0,7", "0,07", "7", "0,17"],
+    "answer": 0,
+    "explain": "$7\\div10=0,7$."
+  },
+  {
+    "q": "$0,25$ viết dưới dạng phân số",
+    "options": ["$\\frac{1}{4}$", "$\\frac{1}{2}$", "$\\frac{1}{3}$", "$\\frac{1}{5}$"],
+    "answer": 0,
+    "explain": "$0,25=\\frac{25}{100}=\\frac{1}{4}$."
+  },
+  {
+    "q": "$\\frac{5}{8}$ của $32$",
+    "options": ["20", "16", "24", "18"],
+    "answer": 0,
+    "explain": "$32\\times\\frac{5}{8}=20$."
+  },
+  {
+    "q": "$30\\%$ của $90$",
+    "options": ["27", "30", "20", "18"],
+    "answer": 0,
+    "explain": "$90\\times0.3=27$."
+  },
+  {
+    "q": "Tỉ số của $15$ và $5$",
+    "options": ["3", "2", "4", "5"],
+    "answer": 0,
+    "explain": "$15:5=3$."
+  },
+  {
+    "q": "Một số bằng $\\frac{3}{4}$ của $20$. Số đó là",
+    "options": ["15", "10", "12", "18"],
+    "answer": 0,
+    "explain": "$20\\times\\frac{3}{4}=15$."
+  },
+  {
+    "q": "$50\\%$ của $60$",
+    "options": ["30", "20", "25", "15"],
+    "answer": 0,
+    "explain": "$60\\times0.5=30$."
+  },
+  {
+    "q": "Phân số thập phân là phân số có",
+    "options": ["mẫu là $10,100,1000...$", "mẫu là số lẻ", "tử lớn hơn mẫu", "mẫu nhỏ hơn tử"],
+    "answer": 0,
+    "explain": "Định nghĩa phân số thập phân."
+  },
+  {
+    "q": "$0,4$ viết dưới dạng phân số",
+    "options": ["$\\frac{2}{5}$", "$\\frac{1}{5}$", "$\\frac{4}{5}$", "$\\frac{1}{4}$"],
+    "answer": 0,
+    "explain": "$0,4=\\frac{4}{10}=\\frac{2}{5}$."
+  },
+  {
+    "q": "Tỉ số phần trăm của $25$ so với $100$",
+    "options": ["25\\%", "50\\%", "20\\%", "75\\%"],
+    "answer": 0,
+    "explain": "$25:100=25\\%$."
+  }
+]
