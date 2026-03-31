@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
 <script type="text/javascript">
-  const APP_NAME = "Hệ thống bài tập ôn tập Toán";
-  const APP_NOTE = "Hãy làm nhiều lần để gặp hết dạng câu hỏi";
-  const APP_CHUDE = "ĐỀ CƯƠNG ÔN TẬP TOÁN 78";
-  const QUESTIONS_PER_TEST = 40
-  const DEFAULT_TIME = 45
+  const APP_NAME = "Học sinh đè tay lên Tệp, chọn mở bằng trình duyệt";
+  const APP_NOTE = "Không nên nhấn trực tiếp vào link trong Zalo";
+  const APP_CHUDE = "KIỂM TRA THƯỜNG XUYÊN - 6A3 LÀM 2 MÔN";
+  const APP_Nhac ="Môn toán làm ít nhất 2 điểm >=5; Môn Tin làm ít nhất 1 điểm >=5. Đc làm nhiều lần" 
+  const QUESTIONS_PER_TEST = 20
+  const DEFAULT_TIME = 30
   const PATH_SHEET = "https://script.google.com/macros/s/AKfycbzA8CNyjQZmCcfty25VFASkG4KJ2793TR1CF6z-qs5jFntPwTkIJHmKYUudLZ-5uM5J/exec"
   const SHEET_ID =""
   const FOLDER_ID= "1blXhHW57rTEZXuzS2ArNjgDF5xvLB-PD"
@@ -264,7 +265,7 @@ tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
     </select>
 
     <p>
-    Mỗi máy gắn với họ tên 1 hs duy nhất nên phải nhập chính xác tên của mình<br>
+    Mỗi máy gắn với họ tên 1 hs duy nhất nên phải nhập chính xác họ và tên của mình<br>
     Chỉ nhập 1 lần, lần sau sẽ luôn lấy tên này để gửi về giáo viên
     </p>
 </div>
@@ -363,6 +364,7 @@ let timeLeft=DEFAULT_TIME*60
 /******** START QUIZ ********/
 
 async function startQuiz(){
+  document.getElementById("headerTitle").textContent = APP_Nhac
   if(!cameraReady){
     alert("Vui lòng bật camera trước khi bắt đầu");
   return;
@@ -520,12 +522,13 @@ timer=setInterval(()=>{
 }
 
 function continueQuiz(){
-
+  document.getElementById("headerTitle").textContent = APP_Nhac
   /* ẨN NÚT */
   document.getElementById("continueBtn").style.display="none"
   document.getElementById("nopbaiBtn").style.display="inline-block"
   /* reset thời gian */
   timeLeft = DEFAULT_TIME * 60
+  quizStarted = true
   /* random lại đề */
   selected = shuffle([...questions])
   .slice(0,QUESTIONS_PER_TEST)
@@ -600,21 +603,14 @@ async function startCamera(){
 
     let overlay=document.getElementById("cameraOverlay")
     let video=document.getElementById("camera")
-
     overlay.style.display="flex"
-
     /* ⭐ DÙNG LẠI camera đã bật */
-
     video.srcObject = cameraStream;
-
     await video.play();
-
   }
 
   catch(err){
-
     alert("Không mở được camera: "+err)
-
   }
 
 }
@@ -635,12 +631,9 @@ function takePhoto(){
   quizStarted = false
   setTimeout(()=>{
     captureAndWrite([
-    "Loại: "+ APP_CHUDE,
     "Họ tên: "+hoten,
     "Lớp: "+lop,
-    "Điểm: "+score,
-    "DeviceID: "+deviceID,
-    "Thời gian: "+time
+    "Điểm: "+score
     ])
 
     // stopCamera()
@@ -651,22 +644,18 @@ function captureAndWrite(info){
   let video=document.getElementById("camera")
   let canvas=document.getElementById("photoCanvas")
   let ctx=canvas.getContext("2d")
-
   canvas.width=video.videoWidth
   canvas.height=video.videoHeight
-
   ctx.drawImage(video,0,0)
 
   // thiết lập font
   ctx.font = "42px Arial"
   ctx.textBaseline = "top"
-
   let x = 20
   let y = 20
   let lineHeight = 55
 
   info.forEach(t=>{
-
     // đo kích thước chữ
     let w = ctx.measureText(t).width
     // nền đen mờ
@@ -762,21 +751,14 @@ function closeCode(){
   document.getElementById("renameBox").style.display="none"
 }
 </script>
-
-
     <div id="cameraOverlay">
-
     <div id="cameraBox">
-
     <video id="camera" autoplay playsinline muted></video>
-
     <div style="margin-top:15px">
     <button onclick="takePhoto()">📸 Chụp ảnh</button>
     <button onclick="stopCamera()">❌ Đóng</button>
     </div>
-
     </div>
-
     </div>
 
     <div id="resultOverlay">
@@ -791,7 +773,6 @@ function closeCode(){
     <canvas id="photoCanvas" style="display:none"></canvas>
 <script>
 window.onload = async function(){
-
   let hoten = localStorage.getItem("hoten");
   let lop = localStorage.getItem("lop");
   let mon = localStorage.getItem("mon");
@@ -801,13 +782,11 @@ window.onload = async function(){
     document.getElementById("hoten").value = hoten;
     document.getElementById("lop").value = lop;
     document.getElementById("mon").value = mon;
-
     document.getElementById("hoten").disabled = true;
     document.getElementById("lop").disabled = true;
   }
 
-  document.getElementById("camStatus").textContent =
-    "⏳ Đang khởi động camera...";
+  document.getElementById("camStatus").textContent ="⏳ Đang khởi động camera...";
   await initCameraPreview();   // ⭐ sau đó mở camera
   await loadFaceModels();      // ⭐ load model trước
 }
@@ -826,32 +805,30 @@ document.addEventListener("visibilitychange", function () {
   }
 })
 
-// document.addEventListener("keydown", function(e){
-//   if(e.key=="F12") e.preventDefault()
-//   if(e.ctrlKey && e.shiftKey && e.key=="I") e.preventDefault()
-//   if(e.ctrlKey && e.key=="U") e.preventDefault()
-// })
+document.addEventListener("keydown", function(e){
+  if(e.key=="F12") e.preventDefault()
+  if(e.ctrlKey && e.shiftKey && e.key=="I") e.preventDefault()
+  if(e.ctrlKey && e.key=="U") e.preventDefault()
+})
 
-// document.addEventListener("contextmenu",function(e){
-//   e.preventDefault()
-// })
+document.addEventListener("contextmenu",function(e){
+  e.preventDefault()
+})
 
 document.addEventListener("copy",function(e){
   e.preventDefault()
 })
 
-// setInterval(function(){
-//   if(window.outerWidth-window.innerWidth>200){
-//     alert("Không được mở cửa sổ phụ")
-//   }
-// },2000)
+setInterval(function(){
+  if(window.outerWidth-window.innerWidth>200){
+    alert("Không được mở cửa sổ phụ")
+  }
+},2000)
 
 async function initCameraPreview(){
 
   try{
-
     let video=document.getElementById("cameraPreview")
-
     cameraStream =
       await navigator.mediaDevices.getUserMedia({
         video: true
@@ -860,74 +837,44 @@ async function initCameraPreview(){
       //   height:240
       //   }
       })
-
     video.srcObject=cameraStream
-
     await video.play()
-
     cameraReady=true
 
-    document.getElementById("camStatus").textContent =
-      "✅ Camera đã bật"
-
-    /* ❌ KHÔNG gọi startFaceMonitor ở đây */
-
+    document.getElementById("camStatus").textContent ="✅ Camera đã bật"
   }
-
   catch(err){
-
     cameraReady=false
-
-    document.getElementById("camStatus").textContent =
-      "❌ Bạn chưa cho phép camera"
-
+    document.getElementById("camStatus").textContent ="❌ Bạn chưa cho phép camera"
     alert("Bạn phải cho phép camera trước khi làm bài")
-
     console.error(err)
-
   }
-
 }
 
 async function loadFaceModels(){
-
   try{
-
     console.log("Loading model...");
-
     await faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL);
-
     console.log("Model loaded OK");
     document.getElementById("startBtn").disabled = false;
   }
-
   catch(err){
-
     console.error("Model load error:", err);
-
-    alert("Không tải được model nhận diện khuôn mặt.\nKiểm tra internet hoặc MODEL_URL.");
-
+    alert("Không tải được model nhận diện khuôn mặt.\nKiểm tra internet hoặc MODEL_URL.\nMở lại hoặc refresh trang.");
   }
-
 }
 
 let faceLostCount = 0;
 let multiFaceCount = 0;
 
-
 function startFaceMonitor(video){
-
   if(!quizStarted) return;
   if(monitorStarted) return;
 
   monitorStarted = true;
-
   setInterval(async ()=>{
-
     try{
-
       if(video.readyState !== 4) return;
-
       const detections =
         await faceapi.detectAllFaces(
           video,
@@ -940,57 +887,35 @@ function startFaceMonitor(video){
       /* ===== KHÔNG CÓ MẶT ===== */
 
       if(detections.length === 0){
-
         faceLostCount++;
-
         if(faceLostCount >= 3 && quizStarted){
-
           alert("Không thấy khuôn mặt!");
-
           faceLostCount = 0;
           continueQuiz();
         }
-
       }
-
       else{
-
         faceLostCount = 0;
-
       }
 
       /* ===== NHIỀU MẶT ===== */
-
       if(detections.length > 1){
-
         multiFaceCount++;
-
         if(multiFaceCount >= 2 && quizStarted){
-
           alert("Phát hiện nhiều khuôn mặt!");
-
           multiFaceCount = 0;
           continueQuiz();
         }
-
       }
 
       else{
-
         multiFaceCount = 0;
-
       }
-
     }
-
     catch(err){
-
       console.log("Face monitor error:",err);
-
     }
-
-  },10000); // ⭐ tăng lên 3 giây cho nhẹ máy
-
+  },5000); // ⭐ tăng lên 3 giây cho nhẹ máy
 }
 
 </script>
