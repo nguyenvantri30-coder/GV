@@ -6,10 +6,10 @@
 <script type="text/javascript">
   const APP_NAME = "Học sinh đè tay lên Tệp, chọn mở bằng trình duyệt";
   const APP_NOTE = "Không nên nhấn trực tiếp vào link trong Zalo";
-  const APP_CHUDE = "KIỂM TRA THƯỜNG XUYÊN - 6A3 LÀM 2 MÔN";
-  const APP_Nhac ="Môn toán làm ít nhất 2 điểm >=5; Môn Tin làm ít nhất 1 điểm >=5. Đc làm nhiều lần" 
-  const QUESTIONS_PER_TEST = 20
-  const DEFAULT_TIME = 30
+  const APP_CHUDE = "ĐỀ CƯƠNG ÔN TẬP TOÁN - TIN";
+  const APP_Nhac ="Làm nhiều lần để nắm được các dạng câu hỏi. Ít nhất nên làm 10 lần" 
+  const QUESTIONS_PER_TEST = 60
+  const DEFAULT_TIME = 90
   const PATH_SHEET = "https://script.google.com/macros/s/AKfycbzA8CNyjQZmCcfty25VFASkG4KJ2793TR1CF6z-qs5jFntPwTkIJHmKYUudLZ-5uM5J/exec"
   const SHEET_ID =""
   const FOLDER_ID= "1blXhHW57rTEZXuzS2ArNjgDF5xvLB-PD"
@@ -27,9 +27,11 @@
   let monitorStarted = false;
   let quizStarted=false;
   /* ===== NGÂN HÀNG 45 CÂU TEST ===================================================== */
+
   async function loadQuestions(mon, lop) {
     let khoi= lop.charAt(0)
     const url =`https://raw.githubusercontent.com/nguyenvantri30-coder/GV/main/${mon}${khoi}.json`;
+    
     const res = await fetch(url);
     if (!res.ok) {
       alert("Không tải được câu hỏi");
@@ -41,13 +43,11 @@
   
   let questions=[];
 
-
 </script>
 
 <title>Loading...</title>
 
 <style>
-
 body{font-family:Arial;margin:0;background:#f4f6f8;font-size: 20px;}
 header{background:#2c3e50;color:white;padding:12px 20px;font-size:20px;}
 /*.container{display:flex;height:calc(100vh - 50px);}*/
@@ -250,6 +250,8 @@ tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
       <option value="">Chọn môn</option>
       <option value="Tin">Tin</option>
       <option value="Toan">Toán</option>
+      <option value="Tin_GKII">Tin GKII</option>
+      <option value="Toan_GKII">Toán GKII</option>
     </select>
     <select id="lop">
       <option value="">Chọn lớp</option>
@@ -266,7 +268,8 @@ tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
 
     <p>
     Mỗi máy gắn với họ tên 1 hs duy nhất nên phải nhập chính xác họ và tên của mình<br>
-    Chỉ nhập 1 lần, lần sau sẽ luôn lấy tên này để gửi về giáo viên
+    Chỉ nhập 1 lần, lần sau sẽ luôn lấy tên này để gửi về giáo viên<br>
+    Học sinh nào chưa thi Giữa kì II thì chọn đúng môn, lớp để làm bài.
     </p>
 </div>
 
@@ -918,6 +921,124 @@ function startFaceMonitor(video){
   },5000); // ⭐ tăng lên 3 giây cho nhẹ máy
 }
 
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hotenInput = document.getElementById('hoten');
+    const monSelect = document.getElementById('mon');
+    const lopSelect = document.getElementById('lop');
+    const startBtn = document.getElementById('startBtn');
+
+    const handleChange = async () => {
+        const mon = monSelect.value;
+        const lop = lopSelect.value;
+        const hoten = hotenInput.value.trim();
+
+        // Chỉ kiểm tra khi đã chọn đủ Môn, Lớp và nhập Tên
+        if (mon && lop && hoten) {
+            const data = await loadSodiem(mon, lop);
+            if (data && data.length > 0) {
+                checkHocSinh(data, hoten, mon);
+            }
+        } else {
+            // Nếu thiếu thông tin thì chưa cho bắt đầu
+            startBtn.disabled = true;
+        }
+    };
+
+    [hotenInput, monSelect, lopSelect].forEach(el => {
+        el.addEventListener('change', handleChange);
+    });
+
+    function checkHocSinh(data, hoten, mon) {
+        // Tìm học sinh trong dữ liệu
+        const student = data.find(item => {
+            const fullName = `${item.holot} ${item.ten}`.trim().toLowerCase();
+            return fullName === hoten.toLowerCase();
+        });
+
+        if (!student) {
+            alert("Không tìm thấy họ tên học sinh này trong lớp! Vui lòng kiểm tra lại.");
+            hotenInput.disabled = false;
+            hotenInput.focus();
+            startBtn.disabled = true; // Vô hiệu hóa vì sai tên
+            return;
+        }
+
+        // Logic đếm điểm (chỉ để hiển thị thông báo hỗ trợ, không chặn)
+        let requiredTX = mon.toLowerCase().includes("tin") ? 2 : 4;
+        let countTX = 0;
+        let diemhs1 ="";
+        for (let i = 1; i <= 4; i++) {
+            let score = student[`tx${i}`];
+            // Kiểm tra: 
+            // 1. score có tồn tại và không rỗng
+            // 2. Chuyển score sang số và kiểm tra xem có >= 5 không
+            if (score !== undefined && score !== null && score !== "" && Number(score) >= 5) {
+                countTX++;
+                diemhs1+= score + ";" ;
+            }
+        }
+        let diemgk2 = student[`gkii`];
+        let chuy ="Đây là thông báo lần đầu, các lần sau sẽ không còn đúng nữa vì dữ liệu mới chưa được cập nhật.\n";
+        // Kiểm tra: Nếu là undefined, null, chuỗi rỗng
+        if (diemgk2 === undefined || diemgk2 === null || diemgk2 === "" ) {
+            let khutrung= mon.includes("_GKII") ? mon : mon + "_GKII";
+            chuy+= (`Bạn còn thiếu điểm Giữa kì II. Chọn môn ${khutrung} để làm bổ sung!`);
+        } else {
+          if (mon.includes("GKII"))  {
+            chuy+= (`Bạn đã có điểm Giữa kì II môn ${mon}. Không cần làm bài này nữa!`);
+            startBtn.disabled = true;
+            return;
+          }
+        }
+        
+        // Thông báo trạng thái điểm hiện tại để học sinh biết
+
+        if (countTX >= requiredTX) {
+            alert(`Học sinh ${hoten} đã đủ ${countTX} điểm hs1: ${diemhs1} nhưng vẫn cho phép làm để ôn tập. ${chuy}`);
+        } else {
+            alert(`Học sinh ${hoten} đã có ${countTX} điểm hs1: ${diemhs1} thiếu ${requiredTX - countTX} con điểm. Đã mở quyền làm bài. ${chuy}`);
+        }
+
+        // KÍCH HOẠT nút bắt đầu vì tên đã khớp
+        startBtn.disabled = false;
+        hotenInput.disabled = true;
+        localStorage.setItem("hoten", hoten);
+        localStorage.setItem("lop", document.getElementById("lop").value);
+        document.getElementById('lop').disabled =true;
+        localStorage.setItem("mon", mon);
+    }
+});
+
+
+async function loadSodiem(mon, lop) {
+    let monLower = mon.toLowerCase();
+    let lopLower = lop.toLowerCase();
+
+    // Kiểm tra nếu chuỗi có chứa dấu gạch dưới "_"
+    if (monLower.includes('_')) {
+        let prefix = monLower.split('_')[0]; // Lấy phần trước dấu "_"
+        
+        if (prefix === "toan" || prefix === "tin") {
+            monLower = prefix; 
+        }
+    }
+    // Nếu không thuộc các trường hợp trên, monLower vẫn giữ nguyên chuỗi gốc
+    const url = `https://raw.githubusercontent.com/nguyenvantri30-coder/GV/main/${monLower}${lopLower}.json`;
+    try {
+        const res = await fetch(url);
+        if (!res.ok) {
+            alert("Không tìm thấy dữ liệu sổ điểm lớp này.");
+            return [];
+        }
+        return await res.json();
+    } catch (error) {
+        console.error("Lỗi:", error);
+        return [];
+    }
+}
 </script>
 </body>
 </html>
