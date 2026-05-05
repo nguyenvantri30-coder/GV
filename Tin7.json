@@ -1,290 +1,362 @@
-[
+﻿[
   {
-    "q": "Trong Excel, lệnh nào dùng để kẻ đường viền cho các ô dữ liệu?",
-    "options": ["Borders", "Fill Color", "Font", "Wrap Text"],
-    "answer": 0,
-    "explain": "Borders dùng để kẻ khung"
+    "q": "Trong phần mềm bảng tính Excel, khi nhập dữ liệu '25/12/2026' vào ô tính, phần mềm sẽ tự động nhận biết đây là kiểu dữ liệu nào?",
+    "options": ["Kiểu văn bản (Text)", "Kiểu số (Number/Date)", "Kiểu công thức (Formula)", "Kiểu logic (Boolean)"],
+    "answer": 1,
+    "explain": "Excel nhận dạng các định dạng ngày tháng là một dạng đặc biệt của kiểu số để có thể tính toán khoảng cách giữa các ngày[cite: 7]."
   },
   {
-    "q": "Khi sử dụng Merge & Center trong Excel, dữ liệu nào được giữ lại?",
-    "options": ["Dữ liệu ô trên cùng bên trái", "Tất cả dữ liệu", "Không giữ dữ liệu", "Cộng dữ liệu lại"],
-    "answer": 0,
-    "explain": "Chỉ giữ ô trên trái"
+    "q": "Phần mềm Microsoft PowerPoint được thiết kế chuyên dụng cho mục đích nào sau đây?",
+    "options": ["Tính toán các bảng biểu phức tạp", "Soạn thảo văn bản hành chính", "Thiết kế và trình bày bài chiếu", "Quản trị cơ sở dữ liệu"],
+    "answer": 2,
+    "explain": "PowerPoint là công cụ hỗ trợ trình bày thông tin thông qua các trang chiếu sinh động[cite: 7]."
   },
   {
-    "q": "Nhóm lệnh Number trong Excel dùng để",
-    "options": ["Định dạng kiểu dữ liệu", "Chèn hình", "Kẻ bảng", "Sửa công thức"],
-    "answer": 0,
-    "explain": "Number format"
+    "q": "Trong thẻ Home của PowerPoint, biểu tượng nào dưới đây được sử dụng để căn lề giữa cho nội dung trong một khung văn bản?",
+    "options": ["Align Left", "Align Right", "Center", "Justify"],
+    "answer": 2,
+    "explain": "Lệnh Center (căn giữa) giúp nội dung cân đối so với khung chứa, thường dùng cho tiêu đề[cite: 7]."
   },
   {
-    "q": "Trong Excel, ta có thể đổi tên trang tính bằng cách",
-    "options": ["Nháy đúp vào tên Sheet", "Nhấn Ctrl+S", "Nhấn Delete", "Chọn Insert"],
-    "answer": 0,
-    "explain": "Double click"
+    "q": "Trong thuật toán tìm kiếm tuần tự, điều gì xảy ra nếu máy tính đã kiểm tra đến phần tử cuối cùng của dãy mà vẫn không thấy giá trị cần tìm?",
+    "options": ["Máy tính sẽ báo lỗi hệ thống", "Kết quả trả về là 'Không tìm thấy'", "Máy tính sẽ tự động tìm lại từ đầu", "Máy tính sẽ lấy giá trị trung bình của dãy"],
+    "answer": 1,
+    "explain": "Thuật toán dừng lại và thông báo không tìm thấy khi đã duyệt hết phạm vi tìm kiếm mà không có kết quả trùng khớp[cite: 7]."
   },
   {
-    "q": "Chức năng xem trước khi in trong Excel giúp",
-    "options": ["Xem trước bố cục khi in", "Tính lại dữ liệu", "Sửa công thức", "Đổi font"],
-    "answer": 0,
-    "explain": "Print Preview"
+    "q": "Để làm nổi bật bảng dữ liệu 'Sản lượng nông sản xã Trường Xuân', em nên sử dụng công cụ nào trong nhóm Font của thẻ Home để kẻ đường biên?",
+    "options": ["Fill Color", "Borders", "Font Color", "Bold"],
+    "answer": 1,
+    "explain": "Công cụ Borders cho phép kẻ các đường lưới hoặc khung đậm để phân tách các vùng dữ liệu rõ ràng hơn[cite: 7]."
   },
   {
-    "q": "Nếu bảng tính quá rộng, nên làm gì để in vừa trang",
-    "options": ["Chọn Landscape", "Tăng cỡ chữ", "Xóa dữ liệu", "Tô màu"],
-    "answer": 0,
-    "explain": "Landscape"
+    "q": "Khi nội dung trên một trang chiếu quá dài, cách xử lý nào dưới đây được coi là chuyên nghiệp nhất?",
+    "options": ["Giảm cỡ chữ xuống 10pt để hiển thị hết nội dung", "Tách nội dung sang các trang chiếu mới và chỉ giữ lại từ khóa chính", "Xóa bớt hình ảnh để có thêm không gian cho chữ", "Để nguyên nội dung và đọc nhanh khi thuyết trình"],
+    "answer": 1,
+    "explain": "Trang chiếu chỉ nên chứa các ý chính; việc tách trang giúp người xem dễ theo dõi và không bị 'ngợp' bởi quá nhiều chữ[cite: 7]."
   },
   {
-    "q": "Phần mềm trình chiếu dùng để",
-    "options": ["Tạo bài thuyết trình", "Viết chương trình", "Tính toán", "Quản lý dữ liệu"],
-    "answer": 0,
-    "explain": "PowerPoint"
+    "q": "Mục đích quan trọng nhất của việc sử dụng phông chữ lớn và màu sắc tương phản trên trang chiếu là gì?",
+    "options": ["Để trang chiếu trông đẹp mắt hơn", "Giúp người xem ở khoảng cách xa vẫn đọc được nội dung", "Để giảm bớt thời gian thiết kế bài thuyết trình", "Để máy tính xử lý hình ảnh nhanh hơn"],
+    "answer": 1,
+    "explain": "Thiết kế trang chiếu ưu tiên tính dễ đọc (readability) để phục vụ khán giả trong hội trường[cite: 7]."
   },
   {
-    "q": "Layout Title Slide thường dùng cho",
-    "options": ["Trang tiêu đề", "Trang nội dung", "Trang kết thúc", "Trang hình ảnh"],
-    "answer": 0,
-    "explain": "Trang đầu"
+    "q": "Tại sao việc tra cứu một từ trong cuốn từ điển giấy thường nhanh hơn việc tìm trong một danh sách các từ được viết lộn xộn?",
+    "options": ["Vì từ điển có đánh số trang", "Vì các từ trong từ điển đã được sắp xếp theo thứ tự bảng chữ cái", "Vì từ điển có kích thước lớn hơn", "Vì từ điển sử dụng nhiều màu sắc khác nhau"],
+    "answer": 1,
+    "explain": "Dữ liệu đã sắp xếp cho phép con người và máy tính áp dụng các phương pháp tìm kiếm tối ưu hơn tìm kiếm ngẫu nhiên[cite: 7]."
   },
   {
-    "q": "Layout Title and Content thường dùng cho",
-    "options": ["Trang nội dung", "Trang tiêu đề", "Trang trống", "Trang in"],
-    "answer": 0,
-    "explain": "Trang nội dung"
+    "q": "Em đang thiết kế trang chiếu về đặc sản 'Cà phê Lâm Đồng'. Để tiêu đề thực sự gây ấn tượng, em nên chọn cách định dạng nào?",
+    "options": ["Cỡ chữ 12, màu xám nhạt trên nền trắng", "Cỡ chữ lớn, chữ đậm, màu tương phản mạnh với màu nền", "Cỡ chữ 18, phông chữ mảnh, trùng màu với nền", "Không cần định dạng vì nội dung quan trọng hơn hình thức"],
+    "answer": 1,
+    "explain": "Sử dụng độ tương phản và kích thước chữ là nguyên tắc cơ bản để tạo điểm nhấn thị giác[cite: 7]."
   },
   {
-    "q": "Phím tắt tạo slide mới trong PowerPoint",
-    "options": ["Ctrl + M", "Ctrl + N", "Ctrl + P", "Ctrl + S"],
-    "answer": 0,
-    "explain": "New slide"
+    "q": "Tính năng nào của PowerPoint giúp tạo ra các hiệu ứng xuất hiện cho từng dòng chữ hoặc hình ảnh bên trong một trang chiếu?",
+    "options": ["Transitions", "Animations", "Slide Show", "Design"],
+    "answer": 1,
+    "explain": "Animations dùng cho đối tượng bên trong trang, còn Transitions dùng để chuyển giữa các trang chiếu[cite: 7]."
   },
   {
-    "q": "Đối tượng nào có thể chèn vào trang chiếu",
-    "options": ["Hình ảnh", "Video", "SmartArt", "Tất cả"],
+    "q": "Cho dãy số đã sắp xếp: 5, 10, 15, 20, 25. Nếu sử dụng thuật toán tìm kiếm nhị phân để tìm số 15, bước đầu tiên thuật toán sẽ so sánh số 15 với số nào?",
+    "options": ["Số 5", "Số 10", "Số 15", "Số 25"],
+    "answer": 2,
+    "explain": "Tìm kiếm nhị phân luôn bắt đầu bằng việc so sánh giá trị cần tìm với phần tử ở vị trí giữa dãy[cite: 7]."
+  },
+  {
+    "q": "Trong thuật toán sắp xếp nổi bọt (Bubble Sort) để được dãy tăng dần, nếu em có dãy số 12, 5, 8, sau khi so sánh cặp số đầu tiên (12 và 5), dãy số sẽ thay đổi như thế nào?",
+    "options": ["Giữ nguyên 12, 5, 8", "Đổi chỗ thành 5, 12, 8", "Đổi chỗ thành 8, 5, 12", "Đổi chỗ thành 5, 8, 12"],
+    "answer": 1,
+    "explain": "Vì $12 > 5$, thuật toán sẽ thực hiện đổi chỗ để số lớn hơn 'nổi' về phía sau[cite: 7]."
+  },
+  {
+    "q": "Phát biểu nào sau đây về định dạng dữ liệu trong Excel là SAI?",
+    "options": ["Dữ liệu kiểu số mặc định căn lề phải", "Có thể gộp nhiều ô thành một ô duy nhất bằng lệnh Merge & Center", "Dữ liệu kiểu văn bản luôn tự động căn lề giữa", "Có thể thay đổi màu sắc và độ dày của đường biên bảng"],
+    "answer": 2,
+    "explain": "Mặc định, dữ liệu văn bản trong Excel được căn lề trái, không phải căn giữa[cite: 7]."
+  },
+  {
+    "q": "Để bắt đầu trình chiếu toàn màn hình từ trang đầu tiên trong PowerPoint, em sử dụng phím tắt nào?",
+    "options": ["F1", "F5", "Shift + F5", "Ctrl + P"],
+    "answer": 1,
+    "explain": "F5 là phím tắt tiêu chuẩn để bắt đầu bài thuyết trình từ slide 1[cite: 7]."
+  },
+  {
+    "q": "Khi thiết lập hiệu ứng chuyển trang (Transition), nếu muốn tất cả các trang chiếu đều có chung một kiểu hiệu ứng, em phải nhấn vào nút nào?",
+    "options": ["Preview", "Apply to All", "Effect Options", "Duration"],
+    "answer": 1,
+    "explain": "Nút Apply to All giúp đồng bộ hóa hiệu ứng cho toàn bộ bài trình chiếu một cách nhanh chóng[cite: 7]."
+  },
+  {
+    "q": "Tại sao tìm kiếm nhị phân lại nhanh hơn tìm kiếm tuần tự đối với các danh sách lớn?",
+    "options": ["Vì nó kiểm tra từng phần tử từ đầu đến cuối", "Vì mỗi bước so sánh nó loại bỏ được một nửa số phần tử của vùng tìm kiếm", "Vì nó chỉ tìm trên các số chẵn", "Vì nó không cần dãy số phải sắp xếp"],
+    "answer": 1,
+    "explain": "Cơ chế chia đôi giúp thu hẹp phạm vi tìm kiếm theo cấp số nhân, cực kỳ hiệu quả với dữ liệu lớn[cite: 7]."
+  },
+  {
+    "q": "Trong thực tế tại trường học, việc sắp xếp danh sách học sinh theo thứ tự bảng chữ cái của Tên mang lại lợi ích gì?",
+    "options": ["Giúp giáo viên gọi tên học sinh theo đúng lứa tuổi", "Giúp việc tìm tên để vào điểm hoặc phát bài diễn ra nhanh chóng và chính xác", "Làm cho danh sách trông đẹp và cân đối hơn", "Giúp học sinh đạt điểm cao hơn trong các bài kiểm tra"],
+    "answer": 1,
+    "explain": "Sắp xếp theo tên giúp con người tra cứu thông tin theo quy luật bảng chữ cái đã quen thuộc[cite: 7]."
+  },
+  {
+    "q": "Dựa trên dữ liệu sản lượng cà phê: năm 2021 (50 tấn), 2022 (48 tấn), 2023 (55 tấn) nằm lần lượt ở các ô B2, B3, B4. Công thức nào giúp tìm sản lượng cao nhất?",
+    "options": ["=SUM(B2:B4)", "=AVERAGE(B2:B4)", "=MAX(B2:B4)", "=MIN(B2:B4)"],
+    "answer": 2,
+    "explain": "Hàm MAX được sử dụng để tìm giá trị lớn nhất trong một vùng dữ liệu số[cite: 7]."
+  },
+  {
+    "q": "Để in một vùng dữ liệu đã chọn trong Excel (ví dụ vùng sản lượng cà phê), quy trình thực hiện đúng là gì?",
+    "options": ["Nhấn Ctrl + S -> Chọn máy in -> Nhấn OK", "Chọn vùng dữ liệu -> Vào thẻ File -> Chọn Print -> Tại Settings chọn Print Selection -> Nhấn Print", "Vào thẻ Insert -> Chọn Table -> Nhấn Ctrl + P", "Chọn vùng dữ liệu -> Nhấn phím Delete -> Vào File -> Print"],
+    "answer": 1,
+    "explain": "Để in chỉ vùng đã chọn, bước quan trọng nhất là thiết lập chế độ 'Print Selection' trong menu Print[cite: 7]."
+  },
+  {
+    "q": "Quy trình 4 bước để thiết lập hiệu ứng chuyển trang cho toàn bộ bài trình chiếu về 'Cảnh đẹp Tây Nguyên' là gì?",
+    "options": ["Chọn ảnh -> Chọn Animations -> Chọn kiểu -> Nhấn OK", "Vào File -> Chọn Print -> Chọn Transition -> Nhấn Apply", "Chọn trang chiếu -> Chọn thẻ Transitions -> Chọn kiểu hiệu ứng -> Nhấn nút Apply to All", "Chọn thẻ Home -> Chọn Transition -> Chọn Apply to All -> Chọn kiểu hiệu ứng"],
+    "answer": 2,
+    "explain": "Học sinh cần thực hiện theo thứ tự: Chọn đối tượng -> Thẻ chức năng -> Kiểu hiệu ứng -> Áp dụng diện rộng[cite: 7]."
+  },
+  {
+    "q": "Địa chỉ ô nào sau đây là địa chỉ ô nằm ở cột C và hàng 5?",
+    "options": ["5C", "$C5", "C$5", "C5"],
     "answer": 3,
-    "explain": "Có thể chèn nhiều loại"
+    "explain": "Địa chỉ ô trong Excel được viết theo quy tắc: Tên cột trước, số hàng sau[cite: 7]."
   },
   {
-    "q": "Hình ảnh trong bài trình chiếu giúp",
-    "options": ["Nội dung trực quan hơn", "Giảm kích thước file", "Thay chữ", "Không có tác dụng"],
+    "q": "Trong PowerPoint, trang chiếu đầu tiên của bài trình bày thường được gọi là gì?",
+    "options": ["Trang nội dung", "Trang tiêu đề (Title Slide)", "Trang kết thúc", "Trang mục lục"],
+    "answer": 1,
+    "explain": "Trang tiêu đề chứa tên chủ đề và thông tin tác giả, là bộ mặt của bài thuyết trình[cite: 7]."
+  },
+  {
+    "q": "Khi thực hiện thuật toán tìm kiếm tuần tự trên dãy: 8, 3, 5, 2, 1 để tìm số 5, máy tính cần thực hiện bao nhiêu lần so sánh?",
+    "options": ["1 lần", "2 lần", "3 lần", "5 lần"],
+    "answer": 2,
+    "explain": "Máy tính so sánh lần lượt: (1) số 8, (2) số 3, (3) số 5. Vậy cần 3 lần so sánh[cite: 7]."
+  },
+  {
+    "q": "Điều kiện tiên quyết để có thể áp dụng thuật toán tìm kiếm nhị phân là gì?",
+    "options": ["Dãy số phải có ít nhất 100 phần tử", "Dãy số phải được sắp xếp (tăng hoặc giảm dần)", "Dãy số chỉ được chứa các số nguyên dương", "Dãy số không được có các giá trị trùng nhau"],
+    "answer": 1,
+    "explain": "Tìm kiếm nhị phân dựa trên tính thứ tự của dãy để loại bỏ các vùng không chứa giá trị cần tìm[cite: 7]."
+  },
+  {
+    "q": "Lệnh 'Merge & Center' trong Excel có tác dụng gì?",
+    "options": ["Gộp các ô lại và căn lề trái", "Gộp các ô lại và căn giữa nội dung", "Chia một ô thành nhiều ô nhỏ", "Tự động tính tổng các ô đã chọn"],
+    "answer": 1,
+    "explain": "Đây là lệnh phổ biến dùng để trình bày tiêu đề bảng biểu nằm giữa các cột[cite: 7]."
+  },
+  {
+    "q": "Trong thuật toán sắp xếp nổi bọt, mục tiêu của mỗi lượt duyệt dãy số là gì?",
+    "options": ["Đưa phần tử nhỏ nhất về cuối dãy", "Đưa phần tử lớn nhất về đúng vị trí ở cuối dãy (nếu sắp tăng dần)", "Xóa các phần tử trùng lặp", "Tìm kiếm giá trị trung bình"],
+    "answer": 1,
+    "explain": "Các phần tử lớn hơn sẽ dần được đẩy (nổi) về phía cuối dãy sau mỗi chu kỳ so sánh[cite: 7]."
+  },
+  {
+    "q": "Trên trang chiếu, khi muốn chèn thêm một hình ảnh minh họa về 'Hoa cà phê', em vào thẻ nào?",
+    "options": ["Design", "Insert", "Transitions", "Review"],
+    "answer": 1,
+    "explain": "Thẻ Insert chứa tất cả các công cụ để đưa đối tượng bên ngoài (ảnh, video, hình khối) vào trang chiếu[cite: 7]."
+  },
+  {
+    "q": "Kết quả của hàm =AVERAGE(10, 20, 30) trong Excel là bao nhiêu?",
+    "options": ["60", "20", "10", "30"],
+    "answer": 1,
+    "explain": "Hàm AVERAGE tính trung bình cộng: $(10+20+30)/3 = 20$[cite: 7]."
+  },
+  {
+    "q": "Nếu muốn thay đổi màu nền của một trang chiếu trong PowerPoint, em sử dụng tính năng nào?",
+    "options": ["Format Background trong thẻ Design", "Slide Show", "Animations", "Font Color trong thẻ Home"],
     "answer": 0,
-    "explain": "Minh họa"
+    "explain": "Thẻ Design quản lý diện mạo tổng thể của trang chiếu, bao gồm cả màu nền[cite: 7]."
   },
   {
-    "q": "Để nhiều hình vẽ có cùng định dạng ta nên",
-    "options": ["Chọn tất cả rồi định dạng", "Vẽ lại", "Xóa", "Tô màu"],
+    "q": "Trong tìm kiếm nhị phân, nếu phần tử ở giữa nhỏ hơn giá trị cần tìm (x), ta sẽ tiếp tục tìm kiếm ở đâu?",
+    "options": ["Nửa đầu của dãy", "Nửa sau của dãy", "Dừng thuật toán", "Quay lại tìm từ đầu dãy"],
+    "answer": 1,
+    "explain": "Vì dãy đã sắp xếp tăng dần, nếu giá trị giữa nhỏ hơn x thì x chỉ có thể nằm ở nửa sau[cite: 7]."
+  },
+  {
+    "q": "Biểu tượng hình cái thùng sơn đổ (Fill Color) trong Excel dùng để làm gì?",
+    "options": ["Thay đổi màu chữ", "Thay đổi màu nền của ô tính", "Xóa dữ liệu trong ô", "Kẻ đường biên bảng"],
+    "answer": 1,
+    "explain": "Fill Color giúp tô màu nền để phân biệt tiêu đề hoặc các vùng dữ liệu quan trọng[cite: 7]."
+  },
+  {
+    "q": "Khi thuyết trình, em nên chọn phông chữ nào để đảm bảo tính chuyên nghiệp và dễ đọc?",
+    "options": ["Phông chữ có nhiều nét uốn lượn nghệ thuật", "Phông chữ không chân (như Arial, Calibri) với kích thước rõ ràng", "Phông chữ cực nhỏ để chứa được nhiều thông tin", "Mỗi dòng một phông chữ khác nhau cho sinh động"],
+    "answer": 1,
+    "explain": "Phông chữ không chân giúp mắt ít bị mỏi và dễ nhận diện mặt chữ từ xa[cite: 7]."
+  },
+  {
+    "q": "Công thức =SUM(B2:B4) có tác dụng gì đối với bảng dữ liệu sản lượng?",
+    "options": ["Tìm sản lượng thấp nhất", "Tính tổng sản lượng của 3 năm", "Tìm sản lượng trung bình", "Đếm số năm có sản lượng"],
+    "answer": 1,
+    "explain": "Hàm SUM dùng để tính tổng các giá trị trong vùng tham chiếu được chỉ định[cite: 7]."
+  },
+  {
+    "q": "Trong thuật toán sắp xếp chọn (Selection Sort), ở mỗi bước thuật toán sẽ làm gì?",
+    "options": ["Chọn một phần tử ngẫu nhiên và đưa về đầu", "Tìm phần tử nhỏ nhất trong phần còn lại của dãy và đổi chỗ nó về vị trí đầu của phần đó", "Đổi chỗ tất cả các cặp phần tử cạnh nhau", "Xóa phần tử lớn nhất"],
+    "answer": 1,
+    "explain": "Sắp xếp chọn lấy phần tử ưu tiên (nhỏ nhất/lớn nhất) để đặt vào đúng vị trí sau mỗi lượt[cite: 7]."
+  },
+  {
+    "q": "Để xóa một hiệu ứng chuyển động (Animation) đã gán cho một hình ảnh, em làm thế nào?",
+    "options": ["Xóa hình ảnh đó đi", "Vào thẻ Animations, chọn đối tượng và chọn 'None' trong danh sách hiệu ứng", "Nhấn phím F5", "Thay đổi màu nền trang chiếu"],
+    "answer": 1,
+    "explain": "Tùy chọn 'None' cho phép loại bỏ hoàn toàn hiệu ứng mà không ảnh hưởng đến đối tượng[cite: 7]."
+  },
+  {
+    "q": "Khi in bảng tính, nếu muốn trang in luôn có tiêu đề ở phía trên, em cần thiết lập trong mục nào?",
+    "options": ["Page Setup -> Sheet -> Rows to repeat at top", "Font Size", "Merge & Center", "Fill Color"],
     "answer": 0,
-    "explain": "Format chung"
+    "explain": "Tính năng này giúp tiêu đề bảng xuất hiện ở mọi trang giấy khi bảng tính quá dài[cite: 7]."
   },
   {
-    "q": "Trong Excel, Fill Color dùng để",
-    "options": ["Tô màu nền ô", "Đổi font", "Chèn ảnh", "Tạo công thức"],
-    "answer": 0,
-    "explain": "Màu nền"
+    "q": "Trong tìm kiếm nhị phân trên dãy: 2, 4, 6, 8, 10 để tìm số 4. Vị trí giữa ban đầu là số mấy?",
+    "options": ["Số 2", "Số 6", "Số 10", "Số 8"],
+    "answer": 1,
+    "explain": "Dãy có 5 phần tử, phần tử ở giữa là phần tử thứ 3 (số 6)[cite: 7]."
   },
   {
-    "q": "Bold trong Excel dùng để",
-    "options": ["In đậm chữ", "Đổi cỡ chữ", "Căn lề", "Tô màu"],
-    "answer": 0,
-    "explain": "Bold"
+    "q": "Thao tác nào dưới đây dùng để thay đổi kích thước của một hình ảnh trong PowerPoint?",
+    "options": ["Nhấn chuột phải chọn Delete", "Kéo các nút tròn nhỏ ở góc hoặc cạnh của hình ảnh", "Vào thẻ Transitions", "Gõ văn bản vào hình ảnh"],
+    "answer": 1,
+    "explain": "Kéo ở góc giúp thay đổi kích thước mà vẫn giữ nguyên tỷ lệ khung hình của ảnh[cite: 7]."
   },
   {
-    "q": "Căn giữa dữ liệu trong ô dùng",
-    "options": ["Center", "Wrap Text", "Merge", "Format"],
-    "answer": 0,
-    "explain": "Center"
+    "q": "Trong Excel, muốn cố định địa chỉ ô $B$2 khi sao chép công thức, em sử dụng ký tự nào?",
+    "options": ["Ký tự #", "Ký tự %", "Ký tự $", "Ký tự &"],
+    "answer": 2,
+    "explain": "Dấu $ dùng để tạo địa chỉ tuyệt đối, giúp ô tham chiếu không bị thay đổi khi di chuyển công thức[cite: 7]."
   },
   {
-    "q": "Lệnh Borders trong Excel dùng để",
-    "options": ["Kẻ khung", "Tô màu", "Chèn ảnh", "Xóa ô"],
-    "answer": 0,
-    "explain": "Khung"
+    "q": "Thuật toán sắp xếp nào thực hiện đổi chỗ các phần tử kề nhau nếu chúng ngược thứ tự?",
+    "options": ["Sắp xếp chọn", "Sắp xếp nổi bọt", "Tìm kiếm tuần tự", "Tìm kiếm nhị phân"],
+    "answer": 1,
+    "explain": "Đây là đặc điểm nhận dạng cơ bản của thuật toán nổi bọt (Bubble Sort)[cite: 7]."
   },
   {
-    "q": "Ta có thể thay đổi màu nền ô bằng",
-    "options": ["Fill Color", "Font", "Border", "Layout"],
-    "answer": 0,
-    "explain": "Fill"
+    "q": "Để lưu bài trình chiếu với một tên khác, em sử dụng lệnh nào trong File?",
+    "options": ["Save", "Save As", "Print", "Close"],
+    "answer": 1,
+    "explain": "Save As cho phép tạo một bản sao mới của tệp với tên hoặc định dạng khác[cite: 7]."
   },
   {
-    "q": "Trong Excel có thể in",
-    "options": ["Cả bảng", "Một vùng", "Một trang", "Tất cả"],
+    "q": "Giá trị của hàm =MIN(5, 8, 2, 10) là?",
+    "options": ["5", "10", "8", "2"],
     "answer": 3,
-    "explain": "Print area"
+    "explain": "Hàm MIN trả về giá trị nhỏ nhất trong danh sách đối số[cite: 7]."
   },
   {
-    "q": "Trước khi in bảng tính nên",
-    "options": ["Kiểm tra dữ liệu", "Xóa bảng", "Đổi font", "Tô màu"],
+    "q": "Tại sao không nên chèn quá nhiều hiệu ứng chuyển động mạnh trong một bài trình chiếu học tập?",
+    "options": ["Vì làm máy tính nhanh hỏng", "Vì gây mất tập trung cho người xem và làm bài trình bày thiếu chuyên nghiệp", "Vì tốn bộ nhớ lưu trữ", "Vì người thuyết trình sẽ nhanh mệt"],
+    "answer": 1,
+    "explain": "Hiệu ứng chỉ nên đóng vai trò hỗ trợ truyền tải, tránh lạm dụng gây nhiễu thông tin[cite: 7]."
+  },
+  {
+    "q": "Kết quả của thuật toán tìm kiếm tuần tự trên dãy: 'An, Bình, Hoa, Lan' khi tìm tên 'Lan' là gì?",
+    "options": ["Không tìm thấy", "Vị trí số 1", "Vị trí số 4", "Vị trí số 2"],
+    "answer": 2,
+    "explain": "Tên 'Lan' nằm ở vị trí cuối cùng (thứ 4) trong danh sách cung cấp[cite: 7]."
+  },
+  {
+    "q": "Trong PowerPoint, để xem trước bài trình chiếu từ slide hiện tại, em sử dụng tổ hợp phím?",
+    "options": ["F5", "Shift + F5", "Ctrl + F5", "Alt + F5"],
+    "answer": 1,
+    "explain": "Shift + F5 giúp kiểm tra nhanh nội dung tại trang đang thiết kế[cite: 7]."
+  },
+  {
+    "q": "Khi nhập công thức vào ô tính trong Excel, ký tự đầu tiên bắt buộc phải là?",
+    "options": ["Dấu cộng (+)", "Dấu ngoặc đơn (()", "Dấu bằng (=)", "Dấu nháy kép (\")"],
+    "answer": 2,
+    "explain": "Dấu bằng báo hiệu cho Excel rằng các ký tự tiếp theo là một phép toán hoặc hàm[cite: 7]."
+  },
+  {
+    "q": "Hiệu ứng 'Fade' hoặc 'Push' trong thẻ Transitions dùng để làm gì?",
+    "options": ["Làm chữ biến mất", "Tạo cách thức chuyển từ trang chiếu này sang trang chiếu khác", "Thay đổi màu sắc của ảnh", "Tự động phát nhạc"],
+    "answer": 1,
+    "explain": "Đây là các kiểu chuyển trang nhẹ nhàng, phổ biến trong trình chiếu chuyên nghiệp[cite: 7]."
+  },
+  {
+    "q": "Nếu một dãy số có 10 phần tử và đã được sắp xếp, số lần so sánh tối đa của tìm kiếm nhị phân là khoảng bao nhiêu?",
+    "options": ["10 lần", "1 lần", "4 lần", "100 lần"],
+    "answer": 2,
+    "explain": "Với $n=10$, số lần chia đôi tối đa là $4$ vì $2^3 < 10 < 2^4$[cite: 7]."
+  },
+  {
+    "q": "Trong Excel, biểu tượng chữ 'B' đậm (Bold) dùng để làm gì?",
+    "options": ["In nghiêng văn bản", "Gạch chân văn bản", "Làm đậm văn bản", "Thay đổi phông chữ"],
+    "answer": 2,
+    "explain": "Dùng để nhấn mạnh các từ khóa hoặc tiêu đề cột[cite: 7]."
+  },
+  {
+    "q": "Để thoát khỏi chế độ trình chiếu và quay về màn hình soạn thảo, em nhấn phím?",
+    "options": ["Enter", "Esc", "Tab", "Space"],
+    "answer": 1,
+    "explain": "Phím Esc (Escape) dùng để hủy bỏ hoặc thoát trạng thái hiện tại[cite: 7]."
+  },
+  {
+    "q": "Một dãy số chưa sắp xếp có 1000 phần tử. Nếu tìm kiếm một số không có trong dãy bằng tìm kiếm tuần tự, ta cần bao nhiêu lần so sánh?",
+    "options": ["1 lần", "500 lần", "1000 lần", "10 lần"],
+    "answer": 2,
+    "explain": "Tìm kiếm tuần tự phải kiểm tra từng phần tử một cho đến hết danh sách[cite: 7]."
+  },
+  {
+    "q": "Muốn chèn một bảng biểu từ Excel vào PowerPoint, em sử dụng lệnh nào?",
+    "options": ["Cut và Paste", "Copy và Paste", "Chỉ có thể vẽ lại thủ công", "Vào thẻ Design"],
+    "answer": 1,
+    "explain": "Sao chép và dán là cách nhanh nhất để chuyển dữ liệu giữa các phần mềm Office[cite: 7]."
+  },
+  {
+    "q": "Trong Excel, để căn dữ liệu vào giữa ô (theo chiều ngang), em sử dụng lệnh nào trong nhóm Alignment?",
+    "options": ["Top Align", "Bottom Align", "Center", "Orientation"],
+    "answer": 2,
+    "explain": "Lệnh Center giúp dữ liệu nằm chính giữa cột[cite: 7]."
+  },
+  {
+    "q": "Khi dùng thuật toán sắp xếp nổi bọt cho dãy: 5, 1, 4. Sau lượt duyệt đầu tiên (đưa số lớn nhất về cuối), dãy trở thành?",
+    "options": ["1, 4, 5", "5, 4, 1", "4, 1, 5", "1, 5, 4"],
     "answer": 0,
-    "explain": "Kiểm tra"
+    "explain": "Cặp (5,1) đổi thành (1,5). Cặp (5,4) đổi thành (4,5). Kết quả là 1, 4, 5[cite: 7]."
   },
   {
-    "q": "Trang đầu bài trình chiếu thường là",
-    "options": ["Trang tiêu đề", "Trang nội dung", "Trang hình", "Trang kết"],
+    "q": "Trong PowerPoint, 'Slide Layout' dùng để làm gì?",
+    "options": ["Thay đổi màu sắc trang chiếu", "Chọn cấu trúc sắp xếp các khung văn bản và hình ảnh có sẵn trên trang", "Thiết lập thời gian trình chiếu", "Kẻ bảng"],
+    "answer": 1,
+    "explain": "Layout giúp người dùng bố cục nội dung nhanh chóng theo các mẫu chuẩn (như Title and Content)[cite: 7]."
+  },
+  {
+    "q": "Công thức =B2+C2 trong Excel có ý nghĩa gì?",
+    "options": ["Cộng giá trị của ô B2 và ô C2", "Ghép chữ của ô B2 và ô C2", "Tìm giá trị lớn nhất giữa B2 và C2", "Xóa hai ô B2 và C2"],
     "answer": 0,
-    "explain": "Title slide"
+    "explain": "Đây là phép cộng cơ bản giữa các tham chiếu ô tính[cite: 7]."
   },
   {
-    "q": "Layout giúp",
-    "options": ["Sắp xếp bố cục nội dung", "Tính toán", "Chạy video", "In trang"],
-    "answer": 0,
-    "explain": "Bố cục"
+    "q": "Nếu em muốn in bài trình chiếu ra giấy để học bài, em nên chọn chế độ in nào để tiết kiệm giấy?",
+    "options": ["Full Page Slides", "Handouts (ví dụ 6 Slides per page)", "Notes Pages", "Outline"],
+    "answer": 1,
+    "explain": "Chế độ Handouts cho phép in nhiều trang chiếu trên một mặt giấy[cite: 7]."
   },
   {
-    "q": "Một slide nên",
-    "options": ["Ít chữ và rõ ràng", "Nhiều chữ", "Không chữ", "Toàn hình"],
-    "answer": 0,
-    "explain": "Dễ đọc"
+    "q": "Trong thuật toán tìm kiếm tuần tự, biến 'found' (tìm thấy) thường được khởi tạo giá trị ban đầu là gì?",
+    "options": ["Đúng (True)", "Sai (False)", "Không xác định", "Bằng 0"],
+    "answer": 1,
+    "explain": "Ban đầu ta giả định chưa tìm thấy, sau đó mới duyệt dãy để cập nhật lại[cite: 7]."
   },
   {
-    "q": "Màu chữ và nền nên",
-    "options": ["Tương phản", "Giống nhau", "Mờ", "Không màu"],
-    "answer": 0,
-    "explain": "Dễ nhìn"
+    "q": "Khi thực hiện in trong Excel, mục 'Orientation' cho phép em chọn?",
+    "options": ["Màu sắc in", "Khổ giấy dọc (Portrait) hoặc ngang (Landscape)", "Số bản in", "Độ phân giải ảnh"],
+    "answer": 1,
+    "explain": "Chọn hướng giấy phù hợp với chiều rộng của bảng tính để dữ liệu không bị ngắt quãng[cite: 7]."
   },
   {
-    "q": "Chèn ảnh vào slide dùng",
-    "options": ["Insert Picture", "Font", "Layout", "View"],
-    "answer": 0,
-    "explain": "Insert"
-  },
-  {
-    "q": "SmartArt dùng để",
-    "options": ["Tạo sơ đồ", "Tạo video", "Tạo bảng", "Tạo công thức"],
-    "answer": 0,
-    "explain": "Diagram"
-  },
-  {
-    "q": "Shape trong PowerPoint là",
-    "options": ["Hình vẽ", "Video", "File", "Slide"],
-    "answer": 0,
-    "explain": "Shape"
-  },
-  {
-    "q": "Để chèn video vào slide ta dùng",
-    "options": ["Insert Video", "Insert Font", "Insert Border", "Insert Table"],
-    "answer": 0,
-    "explain": "Video"
-  },
-  {
-    "q": "Để đổi Layout của slide ta",
-    "options": ["Chọn Layout", "Chọn Font", "Chọn Insert", "Chọn View"],
-    "answer": 0,
-    "explain": "Layout"
-  },
-  {
-    "q": "Slide nên",
-    "options": ["Ngắn gọn", "Dài", "Nhiều chữ", "Không chữ"],
-    "answer": 0,
-    "explain": "Ngắn"
-  },
-  {
-    "q": "PowerPoint dùng để",
-    "options": ["Trình chiếu", "Soạn thảo", "Lập trình", "Tính toán"],
-    "answer": 0,
-    "explain": "Slide"
-  },
-  {
-    "q": "Excel là",
-    "options": ["Phần mềm bảng tính", "Trình chiếu", "Soạn thảo", "Lập trình"],
-    "answer": 0,
-    "explain": "Spreadsheet"
-  },
-  {
-    "q": "Ctrl + P dùng để",
-    "options": ["In", "Lưu", "Chèn", "Xóa"],
-    "answer": 0,
-    "explain": "Print"
-  },
-  {
-    "q": "Landscape là",
-    "options": ["Trang ngang", "Trang dọc", "Trang vuông", "Trang tròn"],
-    "answer": 0,
-    "explain": "Ngang"
-  },
-  {
-    "q": "Portrait là",
-    "options": ["Trang dọc", "Trang ngang", "Trang rộng", "Trang nhỏ"],
-    "answer": 0,
-    "explain": "Dọc"
-  },
-  {
-    "q": "Print Preview giúp",
-    "options": ["Xem trước khi in", "Sửa chữ", "Xóa dữ liệu", "Thêm sheet"],
-    "answer": 0,
-    "explain": "Preview"
-  },
-  {
-    "q": "Trong Excel có thể",
-    "options": ["Thêm Sheet", "Xóa Sheet", "Đổi tên Sheet", "Tất cả"],
-    "answer": 3,
-    "explain": "Sheet management"
-  },
-  {
-    "q": "Để thêm Sheet ta",
-    "options": ["Nhấn dấu +", "Nhấn Delete", "Nhấn Insert Font", "Nhấn Border"],
-    "answer": 0,
-    "explain": "Add sheet"
-  },
-  {
-    "q": "Để xóa Sheet ta",
-    "options": ["Delete Sheet", "Insert", "View", "Font"],
-    "answer": 0,
-    "explain": "Delete"
-  },
-  {
-    "q": "Bài trình chiếu nên",
-    "options": ["Rõ ràng", "Dễ đọc", "Ít chữ", "Tất cả"],
-    "answer": 3,
-    "explain": "Nguyên tắc"
-  },
-  {
-    "q": "Tiêu đề slide nên",
-    "options": ["Nổi bật", "Nhỏ", "Ẩn", "Không cần"],
-    "answer": 0,
-    "explain": "Highlight"
-  },
-  {
-    "q": "Trong Excel, để dữ liệu trong ô tự động xuống dòng khi dài, ta dùng lệnh nào?",
-    "options": ["Wrap Text", "Merge", "Borders", "Format"],
-    "answer": 0,
-    "explain": "Wrap Text giúp xuống dòng trong ô"
-  },
-  {
-    "q": "Để căn dữ liệu vào giữa ô theo chiều ngang, ta dùng lệnh",
-    "options": ["Center", "Bold", "Wrap Text", "Number"],
-    "answer": 0,
-    "explain": "Center căn giữa"
-  },
-  {
-    "q": "Lệnh Merge Cells dùng để",
-    "options": ["Gộp nhiều ô thành một", "Tô màu nền", "Đổi cỡ chữ", "Kẻ khung"],
-    "answer": 0,
-    "explain": "Merge gộp ô"
-  },
-  {
-    "q": "Để thay đổi màu chữ trong ô ta dùng",
-    "options": ["Font Color", "Fill Color", "Border", "Alignment"],
-    "answer": 0,
-    "explain": "Font Color đổi màu chữ"
-  },
-  {
-    "q": "Để thay đổi màu của hình vẽ ta dùng",
-    "options": ["Shape Fill", "Font", "Layout", "View"],
-    "answer": 0,
-    "explain": "Tô màu hình"
-  },
-  {
-    "q": "Để thay đổi viền của hình vẽ ta dùng",
-    "options": ["Shape Outline", "Insert", "Layout", "View"],
-    "answer": 0,
-    "explain": "Viền"
-  },
-  {
-    "q": "Định dạng đối tượng giúp",
-    "options": ["Bài trình chiếu đẹp và dễ hiểu", "Tăng RAM", "Tăng dung lượng", "Xóa dữ liệu"],
-    "answer": 0,
-    "explain": "Trình bày rõ"
+    "q": "Mục tiêu cuối cùng của việc học về thuật toán tìm kiếm và sắp xếp là gì?",
+    "options": ["Để trở thành lập trình viên giỏi", "Để biết cách giải quyết các vấn đề tương tự trong thực tế và lập trình một cách tối ưu", "Để máy tính chạy tốn nhiều điện hơn", "Để không phải dùng từ điển giấy nữa"],
+    "answer": 1,
+    "explain": "Tư duy thuật toán giúp chúng ta tìm ra phương án xử lý thông tin hiệu quả nhất trong mọi lĩnh vực[cite: 7]."
   }
 ]
