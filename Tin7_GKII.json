@@ -1,0 +1,482 @@
+﻿[
+  {
+    "q": "Trong Excel, để thay đổi màu chữ cho dữ liệu trong ô, ta sử dụng lệnh nào?",
+    "options": ["Fill Color", "Font Color", "Borders", "Merge & Center"],
+    "answer": 1,
+    "explain": "Font Color được dùng để định dạng màu sắc cho văn bản/số trong ô tính."
+  },
+  {
+    "q": "Lệnh 'Borders' trong thẻ Home của Excel có chức năng gì?",
+    "options": ["Tô màu nền", "Căn giữa ô", "Kẻ đường biên", "Đổi kiểu chữ"],
+    "answer": 2,
+    "explain": "Lệnh Borders dùng để tạo các đường kẻ bao quanh ô hoặc vùng dữ liệu."
+  },
+  {
+    "q": "Khi sử dụng lệnh Merge & Center, nếu các ô đều có dữ liệu thì điều gì xảy ra?",
+    "options": ["Giữ lại dữ liệu ô góc trên bên trái", "Giữ lại toàn bộ dữ liệu", "Xóa toàn bộ dữ liệu", "Báo lỗi và không thực hiện"],
+    "answer": 0,
+    "explain": "Excel chỉ giữ lại dữ liệu của ô đầu tiên (góc trên bên trái) và xóa dữ liệu các ô còn lại khi gộp."
+  },
+  {
+    "q": "Để định dạng dữ liệu kiểu phần trăm (%), em chọn lệnh nào trong nhóm Number?",
+    "options": ["Currency", "Percent Style", "Comma Style", "Increase Decimal"],
+    "answer": 1,
+    "explain": "Percent Style dùng để hiển thị giá trị dưới dạng tỷ lệ phần trăm."
+  },
+  {
+    "q": "Thao tác nào sau đây dùng để đổi tên một trang tính (Sheet)?",
+    "options": ["Nháy đúp chuột vào tên Sheet", "Ấn phím Delete", "Ấn Ctrl + C", "Chọn thẻ Insert"],
+    "answer": 0,
+    "explain": "Nháy đúp chuột vào thẻ tên trang tính ở dưới cùng cho phép nhập tên mới."
+  },
+  {
+    "q": "Mục đích chính của việc thiết lập trang in (Page Setup) là gì?",
+    "options": ["Làm tệp nhẹ hơn", "Sắp xếp dữ liệu in ra hợp lý và thẩm mỹ", "Tự động sửa lỗi sai công thức", "Tăng tốc độ máy in"],
+    "answer": 1,
+    "explain": "Thiết lập trang in giúp dữ liệu nằm gọn trong khổ giấy, dễ đọc khi in ra."
+  },
+  {
+    "q": "Trong thẻ Page Layout, lệnh 'Orientation' dùng để làm gì?",
+    "options": ["Chọn vùng in", "Thay đổi hướng trang (Dọc/Ngang)", "Chèn ngắt trang", "Định dạng lề"],
+    "answer": 1,
+    "explain": "Orientation cho phép người dùng chọn hướng giấy in là Portrait (Dọc) hoặc Landscape (Ngang)."
+  },
+  {
+    "q": "Để xem trước bảng tính trước khi in, em thực hiện thao tác nào?",
+    "options": ["File -> Save", "File -> Print", "File -> Close", "File -> New"],
+    "answer": 1,
+    "explain": "Trong mục Print của thẻ File, Excel hiển thị cửa sổ Print Preview để người dùng xem trước."
+  },
+  {
+    "q": "Phần mềm Microsoft PowerPoint được dùng để làm gì?",
+    "options": ["Tính toán lương", "Quản lý cơ sở dữ liệu", "Tạo bài trình chiếu", "Gửi email"],
+    "answer": 2,
+    "explain": "PowerPoint là phần mềm chuyên dụng để tạo các trang chiếu phục vụ thuyết trình."
+  },
+  {
+    "q": "Trang đầu tiên của một bài trình chiếu thường được gọi là gì?",
+    "options": ["Trang nội dung", "Trang tiêu đề", "Trang kết thúc", "Trang trắng"],
+    "answer": 1,
+    "explain": "Title Slide (Trang tiêu đề) là trang dùng để giới thiệu tên chủ đề và tác giả."
+  },
+  {
+    "q": "Lệnh 'New Slide' dùng để thực hiện thao tác nào?",
+    "options": ["Mở một bài trình chiếu mới", "Lưu bài trình chiếu", "Thêm một trang chiếu mới", "Xóa trang chiếu hiện tại"],
+    "answer": 2,
+    "explain": "New Slide (Ctrl+M) dùng để chèn thêm một trang mới vào bài đang soạn thảo."
+  },
+  {
+    "q": "Layout trong PowerPoint có vai trò gì?",
+    "options": ["Thay đổi màu sắc toàn bộ bài", "Quy định cách sắp xếp các khung văn bản, hình ảnh trên trang", "Kiểm tra lỗi chính tả", "Tạo hiệu ứng chuyển động"],
+    "answer": 1,
+    "explain": "Layout (Mẫu bố trí) giúp sắp xếp các đối tượng trên trang chiếu một cách khoa học."
+  },
+  {
+    "q": "Đối tượng nào sau đây có thể chèn vào trang chiếu để minh họa nội dung?",
+    "options": ["Hình ảnh", "Video", "Bảng biểu", "Tất cả các đáp án trên"],
+    "answer": 3,
+    "explain": "Trang chiếu hỗ trợ đa phương tiện bao gồm văn bản, hình ảnh, âm thanh, video và bảng."
+  },
+  {
+    "q": "Để căn lề giữa cho văn bản trong một ô của Excel, ta chọn biểu tượng nào?",
+    "options": ["Align Left", "Align Right", "Center", "Justify"],
+    "answer": 2,
+    "explain": "Biểu tượng Center trong nhóm Alignment dùng để căn giữa văn bản."
+  },
+  {
+    "q": "Trong Excel, để tăng số chữ số thập phân, ta dùng lệnh nào?",
+    "options": ["Decrease Decimal", "Increase Decimal", "Number Format", "Merge"],
+    "answer": 1,
+    "explain": "Increase Decimal giúp hiển thị thêm các chữ số sau dấu phẩy."
+  },
+  {
+    "q": "Muốn chọn hướng giấy in nằm ngang, em chọn lệnh nào?",
+    "options": ["Portrait", "Landscape", "A4", "Narrow"],
+    "answer": 1,
+    "explain": "Landscape là chế độ in theo chiều ngang của khổ giấy."
+  },
+  {
+    "q": "Để chọn nhanh toàn bộ một cột trong trang tính, em nháy chuột vào đâu?",
+    "options": ["Ô đầu tiên của cột", "Tên hàng (1, 2, 3...)", "Tên cột (A, B, C...)", "Góc dưới cùng bên phải"],
+    "answer": 2,
+    "explain": "Nháy chuột vào tên cột (đầu cột) sẽ chọn toàn bộ các ô trong cột đó."
+  },
+  {
+    "q": "Phím tắt nào dùng để in bài trình chiếu?",
+    "options": ["Ctrl + P", "Ctrl + I", "Ctrl + O", "Ctrl + E"],
+    "answer": 0,
+    "explain": "Ctrl + P là phím tắt chung cho lệnh Print trong hầu hết các phần mềm."
+  },
+  {
+    "q": "Trên trang chiếu, văn bản thường được nhập vào đâu?",
+    "options": ["Nhập trực tiếp lên nền", "Các khung văn bản (Text box)", "Thanh trạng thái", "Thanh thước kẻ"],
+    "answer": 1,
+    "explain": "Dữ liệu văn bản trên trang chiếu phải nằm trong các khung (placeholder) hoặc Text box."
+  },
+  {
+    "q": "Để thay đổi bố cục của một trang chiếu đang chọn, em vào thẻ Home và chọn lệnh nào?",
+    "options": ["New Slide", "Reset", "Section", "Layout"],
+    "answer": 3,
+    "explain": "Lệnh Layout cho phép thay đổi mẫu bố trí cho trang chiếu hiện hành."
+  },
+  {
+    "q": "Để chèn hình ảnh từ máy tính, ta vào thẻ Insert và chọn lệnh nào?",
+    "options": ["Shapes", "Pictures", "Icons", "Screenshot"],
+    "answer": 1,
+    "explain": "Pictures cho phép chọn và chèn các tệp ảnh lưu trữ trong bộ nhớ máy tính."
+  },
+  {
+    "q": "Khi trình bày văn bản trên trang chiếu, điều nào sau đây là KHÔNG nên?",
+    "options": ["Dùng cỡ chữ lớn", "Sử dụng màu chữ tương phản với nền", "Viết quá nhiều chữ trên một trang", "Sử dụng các dấu đầu dòng"],
+    "answer": 2,
+    "explain": "Trang chiếu quá nhiều chữ sẽ gây khó theo dõi cho người xem; nên tóm tắt ý chính."
+  },
+  {
+    "q": "Để định dạng chữ in nghiêng trong Excel, em sử dụng tổ hợp phím nào?",
+    "options": ["Ctrl + B", "Ctrl + U", "Ctrl + I", "Ctrl + N"],
+    "answer": 2,
+    "explain": "Ctrl + I (Italic) dùng để định dạng chữ in nghiêng."
+  },
+  {
+    "q": "Trong Excel, để xóa một trang tính, em nháy chuột phải vào tên trang tính đó và chọn lệnh gì?",
+    "options": ["Insert", "Delete", "Rename", "Hide"],
+    "answer": 1,
+    "explain": "Lệnh Delete trong menu chuột phải dùng để xóa trang tính được chọn."
+  },
+  {
+    "q": "Lệnh 'Wrap Text' trong Excel dùng để làm gì?",
+    "options": ["Gộp ô", "Tự động xuống dòng trong ô khi văn bản quá dài", "Căn lề trên", "Kẻ khung"],
+    "answer": 1,
+    "explain": "Wrap Text giúp nội dung hiển thị trên nhiều dòng trong cùng một ô nếu vượt quá độ rộng cột."
+  },
+  {
+    "q": "Muốn thay đổi kích thước của một hình ảnh trên trang chiếu, em thực hiện như thế nào?",
+    "options": ["Nhấn phím Delete", "Kéo thả các nút tròn ở góc hoặc cạnh của ảnh", "Nháy đúp vào ảnh", "Ấn Ctrl + S"],
+    "answer": 1,
+    "explain": "Kéo các nút bao quanh đối tượng là cách thay đổi kích thước thủ công nhanh nhất."
+  },
+  {
+    "q": "Khi chọn màu nền và màu chữ cho trang chiếu, nguyên tắc quan trọng nhất là gì?",
+    "options": ["Cùng tông màu đậm", "Cùng tông màu nhạt", "Màu chữ phải tương phản với màu nền", "Sử dụng càng nhiều màu càng tốt"],
+    "answer": 2,
+    "explain": "Sự tương phản (ví dụ nền sáng chữ tối) giúp nội dung dễ đọc từ xa."
+  },
+  {
+    "q": "Lệnh 'SmartArt' trong PowerPoint dùng để tạo đối tượng nào?",
+    "options": ["Ảnh chụp", "Sơ đồ tổ chức, quy trình", "Bảng tính", "Video"],
+    "answer": 1,
+    "explain": "SmartArt là công cụ tạo các sơ đồ thông minh, trực quan."
+  },
+  {
+    "q": "Trong Excel, lệnh nào dùng để sao chép định dạng từ ô này sang ô khác?",
+    "options": ["Copy", "Paste", "Format Painter", "Cut"],
+    "answer": 2,
+    "explain": "Format Painter (biểu tượng cây chổi) chuyên dùng để sao chép thuộc tính định dạng."
+  },
+  {
+    "q": "Để in dữ liệu Excel vào chính giữa trang giấy theo chiều ngang, ta thiết lập trong mục nào?",
+    "options": ["Margins -> Center on page", "Orientation", "Size", "Print Titles"],
+    "answer": 0,
+    "explain": "Trong hộp thoại Page Setup, mục Margins có tùy chọn căn giữa dữ liệu trên trang in."
+  },
+  {
+    "q": "Phím F5 trong PowerPoint có chức năng gì?",
+    "options": ["Lưu bài trình chiếu", "Bắt đầu trình chiếu từ trang đầu tiên", "Thêm trang chiếu mới", "Đóng phần mềm"],
+    "answer": 1,
+    "explain": "Phím F5 là lệnh tắt để bắt đầu buổi thuyết trình từ slide 1."
+  },
+  {
+    "q": "Khi chèn hình ảnh, để ảnh không bị méo, em nên kéo từ vị trí nào?",
+    "options": ["Nút ở giữa cạnh bên", "Nút ở giữa cạnh trên", "Nút ở các góc", "Vị trí nào cũng được"],
+    "answer": 2,
+    "explain": "Kéo ở góc giúp giữ nguyên tỷ lệ chiều rộng và chiều cao của ảnh."
+  },
+  {
+    "q": "Trong Excel, nhóm lệnh 'Alignment' không chứa lệnh nào sau đây?",
+    "options": ["Merge & Center", "Wrap Text", "Conditional Formatting", "Orientation (xoay chữ)"],
+    "answer": 2,
+    "explain": "Conditional Formatting nằm trong nhóm Styles, không thuộc Alignment."
+  },
+  {
+    "q": "Tên file PowerPoint mặc định thường có phần mở rộng là gì?",
+    "options": [".xlsx", ".docx", ".pptx", ".pdf"],
+    "answer": 2,
+    "explain": ".pptx là định dạng chuẩn của các phiên bản PowerPoint hiện đại."
+  },
+  {
+    "q": "Để kẻ đường viền đậm cho ô, ta chọn tùy chọn nào trong danh sách Borders?",
+    "options": ["No Border", "Thick Outside Borders", "All Borders", "Left Border"],
+    "answer": 1,
+    "explain": "Thick Outside Borders tạo đường viền đậm bao quanh vùng được chọn."
+  },
+  {
+    "q": "Tại sao cần phải định dạng bảng tính?",
+    "options": ["Để máy tính chạy nhanh hơn", "Để dữ liệu trông chuyên nghiệp, dễ đọc và nổi bật thông tin quan trọng", "Để không bị mất dữ liệu", "Để Excel tự động tính toán"],
+    "answer": 1,
+    "explain": "Định dạng giúp người xem dễ dàng phân biệt tiêu đề, dữ liệu số và các kết luận."
+  },
+  {
+    "q": "Tổ hợp phím Ctrl + Shift + $ trong Excel có tác dụng gì?",
+    "options": ["Định dạng kiểu tiền tệ", "Định dạng kiểu phần trăm", "Xóa toàn bộ định dạng", "Ẩn cột hiện tại"],
+    "answer": 0,
+    "explain": "Tổ hợp phím này áp dụng định dạng Currency nhanh cho vùng chọn."
+  },
+  {
+    "q": "Trong PowerPoint, đối tượng 'Shape' là gì?",
+    "options": ["Ảnh từ internet", "Các hình vẽ cơ bản (vuông, tròn, mũi tên...)", "Âm thanh", "Biểu đồ cột"],
+    "answer": 1,
+    "explain": "Shapes là kho các hình khối cơ bản được tích hợp sẵn."
+  },
+  {
+    "q": "Muốn xóa một khung văn bản (Text box) trên trang chiếu, em thực hiện thế nào?",
+    "options": ["Chọn khung và nhấn phím Delete", "Nháy đúp vào khung", "Gõ văn bản mới đè lên", "Nhấn tổ hợp phím Ctrl + Z"],
+    "answer": 0,
+    "explain": "Khi khung được chọn (đường viền liền), nhấn Delete sẽ xóa bỏ khung đó."
+  },
+  {
+    "q": "Lệnh nào dùng để đổi màu nền cho trang chiếu?",
+    "options": ["Font Color", "Format Background", "Slide Size", "Transition"],
+    "answer": 1,
+    "explain": "Format Background (trong thẻ Design hoặc chuột phải) dùng để đổi màu, ảnh nền trang chiếu."
+  },
+  {
+    "q": "Trong Excel, để hiển thị dấu ngăn cách hàng nghìn, ta chọn biểu tượng nào trong nhóm Number?",
+    "options": ["$", "%", ",", "0.00"],
+    "answer": 2,
+    "explain": "Biểu tượng dấu phẩy (Comma Style) dùng để định dạng ngăn cách hàng nghìn."
+  },
+  {
+    "q": "Để chèn một bảng biểu vào PowerPoint, em vào thẻ nào?",
+    "options": ["Insert", "Design", "Animations", "View"],
+    "answer": 0,
+    "explain": "Mọi đối tượng bên ngoài (bảng, ảnh, sơ đồ) đều nằm trong thẻ Insert."
+  },
+  {
+    "q": "Thao tác 'Drag and Drop' (Kéo và thả) tên trang tính dùng để làm gì?",
+    "options": ["Xóa trang tính", "Đổi tên trang tính", "Di chuyển vị trí trang tính", "Sao chép trang tính"],
+    "answer": 2,
+    "explain": "Kéo thả thẻ tên trang tính giúp thay đổi thứ tự xuất hiện của các Sheet."
+  },
+  {
+    "q": "Trong PowerPoint, chế độ hiển thị nào cho phép xem nhiều trang chiếu cùng lúc trên màn hình?",
+    "options": ["Normal", "Slide Sorter", "Reading View", "Slide Show"],
+    "answer": 1,
+    "explain": "Slide Sorter hiển thị bài trình chiếu dưới dạng các ảnh thu nhỏ để dễ sắp xếp."
+  },
+  {
+    "q": "Đâu là một mẫu bố trí (Layout) phổ biến trong PowerPoint?",
+    "options": ["Title and Content", "Table Style", "Merge Layout", "Number Layout"],
+    "answer": 0,
+    "explain": "Title and Content là mẫu gồm một tiêu đề và một khung nội dung bên dưới."
+  },
+  {
+    "q": "Để tô màu nền cho một ô tính, biểu tượng lệnh có hình gì?",
+    "options": ["Chữ A có gạch chân màu", "Thùng sơn đang đổ", "Cửa sổ bốn ô vuông", "Cây chổi"],
+    "answer": 1,
+    "explain": "Biểu tượng thùng sơn (Fill Color) đại diện cho việc đổ màu nền."
+  },
+  {
+    "q": "Muốn căn lề văn bản trong Text box ra chính giữa, em dùng lệnh trong thẻ nào?",
+    "options": ["Insert", "Home", "Design", "Transitions"],
+    "answer": 1,
+    "explain": "Các lệnh định dạng văn bản (font, căn lề) luôn nằm trong thẻ Home."
+  },
+  {
+    "q": "Lệnh 'Print Active Sheets' có nghĩa là gì?",
+    "options": ["In toàn bộ file Excel", "Chỉ in trang tính hiện đang mở", "In vùng đang bôi đen", "In ra file PDF"],
+    "answer": 1,
+    "explain": "Active Sheets là các trang tính đang được chọn hoặc đang hiển thị."
+  },
+  {
+    "q": "Để thoát khỏi chế độ trình chiếu, em nhấn phím nào?",
+    "options": ["Enter", "Esc", "Tab", "Shift"],
+    "answer": 1,
+    "explain": "Phím Esc (Escape) dùng để hủy bỏ chế độ trình chiếu và quay về màn hình soạn thảo."
+  },
+  {
+    "q": "Khi in bảng tính bị thiếu cột do quá rộng, cách xử lý nào tiết kiệm giấy nhất?",
+    "options": ["In trên nhiều tờ giấy rồi dán lại", "Giảm lề (Margins) và chỉnh hướng giấy sang Landscape", "Xóa bớt cột dữ liệu", "Chụp ảnh màn hình rồi in"],
+    "answer": 1,
+    "explain": "Chỉnh lề và hướng giấy là cách tối ưu để khớp dữ liệu vào một trang mà không mất nội dung."
+  },
+  {
+    "q": "Biểu tượng chữ 'B' đậm trong thẻ Home có chức năng gì?",
+    "options": ["In nghiêng", "In đậm", "Gạch chân", "Đổi màu"],
+    "answer": 1,
+    "explain": "B là viết tắt của Bold (In đậm)."
+  },
+  {
+    "q": "Để chọn nhiều ô không liền kề nhau trong Excel, em nhấn giữ phím nào khi chọn?",
+    "options": ["Shift", "Alt", "Ctrl", "Tab"],
+    "answer": 2,
+    "explain": "Phím Ctrl cho phép chọn các vùng dữ liệu rời rạc."
+  },
+  {
+    "q": "Lệnh 'Scale to Fit' trong Excel dùng để làm gì?",
+    "options": ["Tự động co giãn dữ liệu để in vừa trong số trang quy định", "Thay đổi font chữ", "Sắp xếp dữ liệu", "Lọc dữ liệu"],
+    "answer": 0,
+    "explain": "Scale to Fit giúp ép toàn bộ cột hoặc hàng vào 1 trang in bằng cách giảm tỷ lệ hiển thị."
+  },
+  {
+    "q": "Trong PowerPoint, để thêm nội dung vào một Shape, em làm thế nào?",
+    "options": ["Không thể thêm chữ vào Shape", "Nháy chuột phải chọn Edit Text", "Chèn một Text box đè lên", "Cả B và C đều đúng"],
+    "answer": 3,
+    "explain": "Có thể gõ trực tiếp (Edit Text) hoặc chèn Text box chồng lên hình vẽ."
+  },
+  {
+    "q": "Để xóa định dạng của một ô mà không mất dữ liệu, em dùng lệnh gì?",
+    "options": ["Delete", "Clear Formats", "Backspace", "Cut"],
+    "answer": 1,
+    "explain": "Lệnh Clear Formats (trong nút Clear) chỉ xóa các thuộc tính trang trí."
+  },
+  {
+    "q": "Thẻ nào trong Excel chứa các lệnh về kẻ khung và tô màu nền?",
+    "options": ["Insert", "Home", "Data", "Review"],
+    "answer": 1,
+    "explain": "Thẻ Home chứa hầu hết các công cụ định dạng cơ bản."
+  },
+  {
+    "q": "Muốn chèn một sơ đồ quy trình vào trang chiếu, lệnh nào là phù hợp nhất?",
+    "options": ["Table", "SmartArt", "Chart", "Online Pictures"],
+    "answer": 1,
+    "explain": "SmartArt có các mẫu Process (quy trình) rất chuyên nghiệp."
+  },
+  {
+    "q": "Trong Excel, nếu thấy ô xuất hiện các ký hiệu '####', nguyên nhân là gì?",
+    "options": ["Lỗi công thức", "Dữ liệu bị xóa", "Độ rộng cột quá hẹp để hiển thị số", "Máy tính bị treo"],
+    "answer": 2,
+    "explain": "Khi cột không đủ rộng để hiện số, Excel sẽ hiện dấu #; cần kéo rộng cột ra."
+  },
+  {
+    "q": "Phím tắt để lưu nhanh bài trình chiếu là gì?",
+    "options": ["Ctrl + S", "Ctrl + L", "Ctrl + A", "Ctrl + V"],
+    "answer": 0,
+    "explain": "Ctrl + S (Save) dùng để lưu lại các thay đổi."
+  },
+  {
+    "q": "Đâu là bước cuối cùng trước khi nhấn nút 'Print' để in bảng tính?",
+    "options": ["Đổi tên file", "Xem trước tại Print Preview", "Đóng phần mềm", "Tô màu cho bảng"],
+    "answer": 1,
+    "explain": "Xem trước giúp đảm bảo không có lỗi trình bày trước khi xuất ra giấy."
+  },
+ {
+    "q": "Trong Excel, lệnh nào dùng để kẻ đường viền cho các ô dữ liệu?",
+    "options": ["Borders", "Fill Color", "Font", "Wrap Text"],
+    "answer": 0,
+    "explain": "Borders dùng để kẻ khung"
+  },
+  {
+    "q": "Khi sử dụng Merge & Center trong Excel, dữ liệu nào được giữ lại?",
+    "options": ["Dữ liệu ô trên cùng bên trái", "Tất cả dữ liệu", "Không giữ dữ liệu", "Cộng dữ liệu lại"],
+    "answer": 0,
+    "explain": "Chỉ giữ ô trên trái"
+  },
+  {
+    "q": "Nhóm lệnh Number trong Excel dùng để",
+    "options": ["Định dạng kiểu dữ liệu", "Chèn hình", "Kẻ bảng", "Sửa công thức"],
+    "answer": 0,
+    "explain": "Number format"
+  },
+  {
+    "q": "Trong Excel, ta có thể đổi tên trang tính bằng cách",
+    "options": ["Nháy đúp vào tên Sheet", "Nhấn Ctrl+S", "Nhấn Delete", "Chọn Insert"],
+    "answer": 0,
+    "explain": "Double click"
+  },
+  {
+    "q": "Chức năng xem trước khi in trong Excel giúp",
+    "options": ["Xem trước bố cục khi in", "Tính lại dữ liệu", "Sửa công thức", "Đổi font"],
+    "answer": 0,
+    "explain": "Print Preview"
+  },
+  {
+    "q": "Nếu bảng tính quá rộng, nên làm gì để in vừa trang",
+    "options": ["Chọn Landscape", "Tăng cỡ chữ", "Xóa dữ liệu", "Tô màu"],
+    "answer": 0,
+    "explain": "Landscape"
+  },
+  {
+    "q": "Phần mềm trình chiếu dùng để",
+    "options": ["Tạo bài thuyết trình", "Viết chương trình", "Tính toán", "Quản lý dữ liệu"],
+    "answer": 0,
+    "explain": "PowerPoint"
+  },
+  {
+    "q": "Layout Title Slide thường dùng cho",
+    "options": ["Trang tiêu đề", "Trang nội dung", "Trang kết thúc", "Trang hình ảnh"],
+    "answer": 0,
+    "explain": "Trang đầu"
+  },
+  {
+    "q": "Layout Title and Content thường dùng cho",
+    "options": ["Trang nội dung", "Trang tiêu đề", "Trang trống", "Trang in"],
+    "answer": 0,
+    "explain": "Trang nội dung"
+  },
+  {
+    "q": "Phím tắt tạo slide mới trong PowerPoint",
+    "options": ["Ctrl + M", "Ctrl + N", "Ctrl + P", "Ctrl + S"],
+    "answer": 0,
+    "explain": "New slide"
+  },
+  {
+    "q": "Đối tượng nào có thể chèn vào trang chiếu",
+    "options": ["Hình ảnh", "Video", "SmartArt", "Tất cả"],
+    "answer": 3,
+    "explain": "Có thể chèn nhiều loại"
+  },
+  {
+    "q": "Hình ảnh trong bài trình chiếu giúp",
+    "options": ["Nội dung trực quan hơn", "Giảm kích thước file", "Thay chữ", "Không có tác dụng"],
+    "answer": 0,
+    "explain": "Minh họa"
+  },
+  {
+    "q": "Để nhiều hình vẽ có cùng định dạng ta nên",
+    "options": ["Chọn tất cả rồi định dạng", "Vẽ lại", "Xóa", "Tô màu"],
+    "answer": 0,
+    "explain": "Format chung"
+  },
+  {
+    "q": "Trong Excel, Fill Color dùng để",
+    "options": ["Tô màu nền ô", "Đổi font", "Chèn ảnh", "Tạo công thức"],
+    "answer": 0,
+    "explain": "Màu nền"
+  },
+  {
+    "q": "Bold trong Excel dùng để",
+    "options": ["In đậm chữ", "Đổi cỡ chữ", "Căn lề", "Tô màu"],
+    "answer": 0,
+    "explain": "Bold"
+  },
+  {
+    "q": "Căn giữa dữ liệu trong ô dùng",
+    "options": ["Center", "Wrap Text", "Merge", "Format"],
+    "answer": 0,
+    "explain": "Center"
+  },
+  {
+    "q": "Lệnh Borders trong Excel dùng để",
+    "options": ["Kẻ khung", "Tô màu", "Chèn ảnh", "Xóa ô"],
+    "answer": 0,
+    "explain": "Khung"
+  },
+  {
+    "q": "Ta có thể thay đổi màu nền ô bằng",
+    "options": ["Fill Color", "Font", "Border", "Layout"],
+    "answer": 0,
+    "explain": "Fill"
+  },
+  {
+    "q": "Trong Excel có thể in",
+    "options": ["Cả bảng", "Một vùng", "Một trang", "Tất cả"],
+    "answer": 3,
+    "explain": "Print area"
+  },
+  {
+    "q": "Trước khi in bảng tính nên",
+    "options": ["Kiểm tra dữ liệu", "Xóa bảng", "Đổi font", "Tô màu"],
+    "answer": 0,
+    "explain": "Kiểm tra"
+  }
+]
