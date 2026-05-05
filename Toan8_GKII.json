@@ -1,0 +1,783 @@
+﻿[
+  {
+    "q": "Biểu thức nào dưới đây **không là** phân thức đại số?",
+    "options": [
+      "$\\frac{x-z}{0}$",
+      "$\\frac{3x^2}{y-2}$",
+      "$\\frac{12}{3x-1}$",
+      "$\\frac{0}{x^2+1}$"
+    ],
+    "answer": 0,
+    "explain": "Phân thức đại số có dạng A/B với B là một đa thức khác 0. Ở phương án A, mẫu thức bằng 0 nên không phải phân thức."
+  },
+  {
+    "q": "Hai phân thức $\\frac{M}{N}$ và $\\frac{P}{Q}$ ($N, Q \\neq 0$) được gọi là bằng nhau nếu:",
+    "options": [
+      "$M \\cdot Q = N \\cdot P$",
+      "$M \\cdot P = N \\cdot Q$",
+      "$M + Q = N + P$",
+      "$M - Q = N - P$"
+    ],
+    "answer": 0,
+    "explain": "Theo định nghĩa hai phân thức bằng nhau: A/B = C/D nếu A.D = B.C"
+  },
+  {
+    "q": "Phân thức $\\frac{x-5}{3x(x-5)}$ bằng phân thức nào sau đây với điều kiện xác định phù hợp?",
+    "options": [
+      "$\\frac{1}{3x}$",
+      "$\\frac{x-5}{3x}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{3x}{x-5}$"
+    ],
+    "answer": 0,
+    "explain": "Rút gọn tử và mẫu cho nhân tử chung (x-5), ta được 1/(3x)."
+  },
+  {
+    "q": "Phân thức đối của phân thức $\\frac{2-x}{x+3}$ là:",
+    "options": [
+      "$\\frac{x-2}{x+3}$",
+      "$\\frac{2-x}{-(x+3)}$",
+      "$\\frac{-(2-x)}{-(x+3)}$",
+      "Cả A và B đều đúng"
+    ],
+    "answer": 3,
+    "explain": "Phân thức đối của A/B là -A/B hoặc A/(-B). -(2-x) = x-2."
+  },
+  {
+    "q": "Kết quả của phép tính $\\frac{x-7}{4y} + \\frac{11}{4y}$ là:",
+    "options": [
+      "$\\frac{x+4}{4y}$",
+      "$\\frac{x+18}{4y}$",
+      "$\\frac{x-4}{4y}$",
+      "$\\frac{x+4}{8y}$"
+    ],
+    "answer": 0,
+    "explain": "Cộng hai phân thức cùng mẫu: (x-7+11)/4y = (x+4)/4y."
+  },
+  {
+    "q": "Phương trình nào sau đây là phương trình bậc nhất một ẩn?",
+    "options": [
+      "$0x + 5 = 0$",
+      "$\\frac{1}{x} - 3 = 0$",
+      "$-2x + 7 = 0$",
+      "$x^2 + x = 0$"
+    ],
+    "answer": 2,
+    "explain": "Phương trình bậc nhất một ẩn có dạng ax + b = 0 với a khác 0."
+  },
+  {
+    "q": "Giá trị $x = 3$ là nghiệm của phương trình nào sau đây?",
+    "options": [
+      "$x + 3 = 0$",
+      "$2x - 6 = 0$",
+      "$3x = 1$",
+      "$x - 1 = 3$"
+    ],
+    "answer": 1,
+    "explain": "Thay x = 3 vào phương trình 2x - 6 = 0 ta được 2(3) - 6 = 0 (đúng)."
+  },
+  {
+    "q": "Trong các phương trình sau, phương trình nào **không phải** là phương trình bậc nhất một ẩn?",
+    "options": [
+      "$3 - 5x = 0$",
+      "$\\frac{1}{2}x - 4 = 0$",
+      "$0x - 7 = 0$",
+      "$-x = 0$"
+    ],
+    "answer": 2,
+    "explain": "Phương trình 0x - 7 = 0 có hệ số a = 0 nên không phải phương trình bậc nhất một ẩn."
+  },
+  {
+    "q": "Nghiệm của phương trình $5x - 15 = 0$ là:",
+    "options": [
+      "$x = 3$",
+      "$x = -3$",
+      "$x = 5$",
+      "$x = 15$"
+    ],
+    "answer": 0,
+    "explain": "5x = 15 => x = 15/5 = 3."
+  },
+  {
+    "q": "Một hình chữ nhật có chiều dài gấp 3 lần chiều rộng $x$. Công thức tính diện tích $S$ theo $x$ là $S = 3x^2$. Với mỗi giá trị $x > 0$, ta xác định được bao nhiêu giá trị $S$?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "Vô số"
+    ],
+    "answer": 1,
+    "explain": "Với mỗi giá trị của biến độc lập x, ta chỉ xác định được duy nhất một giá trị tương ứng của hàm số S."
+  },
+  {
+    "q": "Hàm số nào sau đây là hàm số bậc nhất?",
+    "options": [
+      "$y = \\sqrt{x} + 1$",
+      "$y = x^2 - 2$",
+      "$y = -3x + 4$",
+      "$y = 0x - 5$"
+    ],
+    "answer": 2,
+    "explain": "Hàm số bậc nhất có dạng y = ax + b (a khác 0)."
+  },
+  {
+    "q": "Cho hàm số $y = f(x) = 2x - 5$. Giá trị của $f(2)$ là:",
+    "options": [
+      "9",
+      "-1",
+      "1",
+      "0"
+    ],
+    "answer": 1,
+    "explain": "f(2) = 2(2) - 5 = 4 - 5 = -1."
+  },
+  {
+    "q": "Cho phân thức $A = \\frac{x^2 - 4}{x - 2}$. Phát biểu nào sau đây là **sai**?",
+    "options": [
+      "Tử thức của A là $x^2 - 4$",
+      "Điều kiện xác định của A là $x \\neq 2$",
+      "Giá trị của A tại $x = 3$ là 5",
+      "Rút gọn phân thức A ta được $A = x - 2$"
+    ],
+    "answer": 3,
+    "explain": "A = (x-2)(x+2)/(x-2) = x + 2. Vậy rút gọn A được x - 2 là sai."
+  },
+  {
+    "q": "Cho phân thức $B = \\frac{2x}{x+1}$. Khi $x = 1$, giá trị của phân thức là:",
+    "options": [
+      "1",
+      "2",
+      "0",
+      "4"
+    ],
+    "answer": 0,
+    "explain": "Thay x = 1 vào B: (2*1)/(1+1) = 2/2 = 1."
+  },
+  {
+    "q": "Điều kiện xác định của phân thức $\\frac{x+3}{x-4}$ là:",
+    "options": [
+      "$x \\neq -3$",
+      "$x \\neq 4$",
+      "$x \\neq 0$",
+      "$x \\in \\mathbb{R}$"
+    ],
+    "answer": 1,
+    "explain": "Mẫu thức x - 4 khác 0 khi x khác 4."
+  },
+  {
+    "q": "Rút gọn phân thức $\\frac{5x+5y}{10}$ ta được:",
+    "options": [
+      "$\\frac{x+y}{2}$",
+      "$5(x+y)$",
+      "$\\frac{x+y}{5}$",
+      "$x+y$"
+    ],
+    "answer": 0,
+    "explain": "5(x+y)/10 = (x+y)/2."
+  },
+  {
+    "q": "Phát biểu nào sau đây đúng về phương trình $3x + 6 = x - 2$?",
+    "options": [
+      "Vế trái của phương trình là $x - 2$",
+      "Nghiệm của phương trình là $x = -4$",
+      "Đây không phải là phương trình bậc nhất một ẩn",
+      "Phương trình vô nghiệm"
+    ],
+    "answer": 1,
+    "explain": "3x - x = -2 - 6 => 2x = -8 => x = -4."
+  },
+  {
+    "q": "Hệ số góc của đường thẳng $y = -5x + 1$ là:",
+    "options": [
+      "1",
+      "5",
+      "-5",
+      "0"
+    ],
+    "answer": 2,
+    "explain": "Hệ số góc a trong y = ax + b là -5."
+  },
+  {
+    "q": "Hai đường thẳng $y = 3x + 2$ và $y = 3x - 5$ có vị trí tương đối là:",
+    "options": [
+      "Cắt nhau",
+      "Song song với nhau",
+      "Trùng nhau",
+      "Vuông góc với nhau"
+    ],
+    "answer": 1,
+    "explain": "Hai đường thẳng có cùng hệ số góc a=3 và b khác nhau nên song song."
+  },
+  {
+    "q": "Điểm nào sau đây thuộc đồ thị hàm số $y = 2x + 1$?",
+    "options": [
+      "(0; 1)",
+      "(1; 2)",
+      "(-1; 1)",
+      "(2; 3)"
+    ],
+    "answer": 0,
+    "explain": "Thay x = 0 vào y = 2(0) + 1 = 1. Vậy (0;1) thuộc đồ thị."
+  },
+  {
+    "q": "Kết quả phép tính $\\frac{2x}{x-1} \\cdot \\frac{x-1}{4}$ là:",
+    "options": [
+      "$\\frac{x}{2}$",
+      "$\\frac{x}{4}$",
+      "$\\frac{1}{2}$",
+      "$2x$"
+    ],
+    "answer": 0,
+    "explain": "Triệt tiêu (x-1), còn 2x/4 = x/2."
+  },
+  {
+    "q": "Phân thức nghịch đảo của $\\frac{x+2}{3x}$ là:",
+    "options": [
+      "$\\frac{-x-2}{3x}$",
+      "$\\frac{3x}{x+2}$",
+      "$\\frac{1}{3x}$",
+      "$\\frac{x-2}{3x}$"
+    ],
+    "answer": 1,
+    "explain": "Nghịch đảo của A/B là B/A."
+  },
+  {
+    "q": "Mẹ hơn con 25 tuổi. Nếu gọi tuổi con là $t$ (tuổi) thì biểu thức biểu thị tuổi mẹ là:",
+    "options": [
+      "$t - 25$",
+      "$25t$",
+      "$t + 25$",
+      "$25 - t$"
+    ],
+    "answer": 2,
+    "explain": "Tuổi mẹ = Tuổi con + khoảng cách tuổi."
+  },
+  {
+    "q": "Công thức đổi từ dặm ($x$) sang kilômét ($y$) là $y = 1,61x$. Nếu một đoạn đường dài 10 dặm thì độ dài kilômét tương ứng là:",
+    "options": [
+      "16,1 km",
+      "1,61 km",
+      "10,61 km",
+      "161 km"
+    ],
+    "answer": 0,
+    "explain": "y = 1,61 * 10 = 16,1."
+  },
+  {
+    "q": "Một bể bơi hình chữ nhật có diện tích $300 m^2$ và chiều dài là $x (m)$. Biểu thức biểu thị chiều rộng bể bơi là:",
+    "options": [
+      "$300x$",
+      "$\\frac{x}{300}$",
+      "$\\frac{300}{x}$",
+      "$300 - x$"
+    ],
+    "answer": 2,
+    "explain": "Chiều rộng = Diện tích / Chiều dài."
+  },
+  {
+    "q": "Đồ thị hàm số $y = x - 3$ cắt trục tung tại điểm có tọa độ là:",
+    "options": [
+      "(3; 0)",
+      "(0; -3)",
+      "(0; 3)",
+      "(-3; 0)"
+    ],
+    "answer": 1,
+    "explain": "Giao điểm với trục tung có x = 0 => y = 0 - 3 = -3."
+  },
+  {
+    "q": "Thực hiện phép trừ $\\frac{5}{x} - \\frac{2}{x}$ ta được:",
+    "options": [
+      "$\\frac{3}{x}$",
+      "$\\frac{7}{x}$",
+      "$3$",
+      "$\\frac{3}{2x}$"
+    ],
+    "answer": 0,
+    "explain": "Cùng mẫu thức x, lấy 5 - 2 = 3."
+  },
+  {
+    "q": "Tìm $x$ biết $x + 12 = 20$:",
+    "options": [
+      "8",
+      "32",
+      "-8",
+      "12"
+    ],
+    "answer": 0,
+    "explain": "x = 20 - 12 = 8."
+  },
+  {
+    "q": "Biểu thức $\\frac{x^2 - 1}{x+1}$ rút gọn bằng:",
+    "options": [
+      "$x+1$",
+      "$x-1$",
+      "$x$",
+      "1"
+    ],
+    "answer": 1,
+    "explain": "(x-1)(x+1)/(x+1) = x - 1."
+  },
+  {
+    "q": "Hàm số nào dưới đây nghịch biến trên $\\mathbb{R}$?",
+    "options": [
+      "$y = 2x + 1$",
+      "$y = -x + 5$",
+      "$y = \\frac{1}{2}x$",
+      "$y = x - 10$"
+    ],
+    "answer": 1,
+    "explain": "Hàm số bậc nhất y = ax + b nghịch biến khi a < 0. Ở đây a = -1."
+  },
+  {
+    "q": "Kết quả phép chia $\\frac{x^2}{y} : \\frac{x}{y^2}$ là:",
+    "options": [
+      "$xy$",
+      "$\\frac{x}{y}$",
+      "$\\frac{y}{x}$",
+      "$x^2y^2$"
+    ],
+    "answer": 0,
+    "explain": "(x^2/y) * (y^2/x) = x*y."
+  },
+  {
+    "q": "Điều kiện để hai đường thẳng $y = ax + b$ và $y = a'x + b'$ cắt nhau là:",
+    "options": [
+      "$a = a'$",
+      "$a \\neq a'$",
+      "$a = a'$ và $b \\neq b'$",
+      "$b = b'$"
+    ],
+    "answer": 1,
+    "explain": "Hai đường thẳng cắt nhau khi và chỉ khi hệ số góc khác nhau."
+  },
+  {
+    "q": "Phương trình $2x - 4 = 0$ có tập nghiệm là:",
+    "options": [
+      "$S = \\{2\\}$",
+      "$S = \\{-2\\}$",
+      "$S = \\{4\\}$",
+      "$S = \\{0\\}$"
+    ],
+    "answer": 0,
+    "explain": "2x = 4 => x = 2."
+  },
+  {
+    "q": "Giá trị của phân thức $\\frac{x+1}{x-1}$ tại $x = 0$ là:",
+    "options": [
+      "1",
+      "-1",
+      "0",
+      "Không xác định"
+    ],
+    "answer": 1,
+    "explain": "(0+1)/(0-1) = 1/-1 = -1."
+  },
+  {
+    "q": "Đường thẳng $y = 2x - 4$ đi qua điểm nào?",
+    "options": [
+      "(2; 0)",
+      "(0; 2)",
+      "(1; 2)",
+      "(2; 2)"
+    ],
+    "answer": 0,
+    "explain": "Thay x = 2: y = 2(2) - 4 = 0. Vậy (2;0) thuộc đồ thị."
+  },
+  {
+    "q": "Số nghiệm của phương trình $0x = 0$ là:",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "Vô số nghiệm"
+    ],
+    "answer": 3,
+    "explain": "Mọi giá trị của x đều thỏa mãn 0x = 0."
+  },
+  {
+    "q": "Tìm mẫu thức chung của hai phân thức $\\frac{1}{x-1}$ và $\\frac{1}{x+1}$:",
+    "options": [
+      "$x-1$",
+      "$x+1$",
+      "$x^2-1$",
+      "$x^2+1$"
+    ],
+    "answer": 2,
+    "explain": "MTC = (x-1)(x+1) = x^2 - 1."
+  },
+  {
+    "q": "Đồ thị hàm số $y = ax$ đi qua điểm $M(1; 3)$. Hệ số $a$ bằng:",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "-3"
+    ],
+    "answer": 2,
+    "explain": "Thay x = 1, y = 3 vào y = ax: 3 = a*1 => a = 3."
+  },
+  {
+    "q": "Phép tính $\\frac{1}{x} + \\frac{1}{y}$ bằng:",
+    "options": [
+      "$\\frac{2}{x+y}$",
+      "$\\frac{x+y}{xy}$",
+      "$\\frac{1}{xy}$",
+      "$\\frac{xy}{x+y}$"
+    ],
+    "answer": 1,
+    "explain": "Quy đồng mẫu thức: (y + x)/xy."
+  },
+  {
+    "q": "Phương trình $x - 5 = 5 - x$ có nghiệm là:",
+    "options": [
+      "$x = 0$",
+      "$x = 5$",
+      "$x = 10$",
+      "Vô nghiệm"
+    ],
+    "answer": 1,
+    "explain": "x + x = 5 + 5 => 2x = 10 => x = 5."
+  },
+  {
+    "q": "Trong các điểm sau, điểm nào thuộc trục hoành?",
+    "options": [
+      "(0; 5)",
+      "(3; 0)",
+      "(2; 2)",
+      "(0; 0)"
+    ],
+    "answer": 1,
+    "explain": "Điểm thuộc trục hoành có tung độ y = 0."
+  },
+  {
+    "q": "Phân thức $\\frac{A}{B}$ xác định khi nào?",
+    "options": [
+      "$A \\neq 0$",
+      "$B \\neq 0$",
+      "$A = 0$",
+      "$B > 0$"
+    ],
+    "answer": 1,
+    "explain": "Phân thức xác định khi mẫu thức khác 0."
+  },
+  {
+    "q": "Nếu $f(x) = -2x$, thì $f(-3)$ bằng:",
+    "options": [
+      "6",
+      "-6",
+      "5",
+      "-5"
+    ],
+    "answer": 0,
+    "explain": "f(-3) = -2 * (-3) = 6."
+  },
+  {
+    "q": "Nghiệm của phương trình $2(x+1) = 4$ là:",
+    "options": [
+      "$x = 1$",
+      "$x = 2$",
+      "$x = 3$",
+      "$x = 0$"
+    ],
+    "answer": 0,
+    "explain": "x + 1 = 2 => x = 1."
+  },
+  {
+    "q": "Rút gọn phân thức $\\frac{x^2y}{xy^2}$ ta được:",
+    "options": [
+      "$\\frac{x}{y}$",
+      "$\\frac{y}{x}$",
+      "$xy$",
+      "1"
+    ],
+    "answer": 0,
+    "explain": "Triệt tiêu x và y, còn lại x ở tử và y ở mẫu."
+  },
+  {
+    "q": "Đường thẳng $y = x + 1$ song song với đường thẳng nào?",
+    "options": [
+      "$y = 2x + 1$",
+      "$y = x - 5$",
+      "$y = -x + 1$",
+      "$y = 3x$"
+    ],
+    "answer": 1,
+    "explain": "Hai đường thẳng song song khi có cùng hệ số góc a=1."
+  },
+  {
+    "q": "Kết quả của $\\frac{3}{x+1} - \\frac{2}{x+1}$ là:",
+    "options": [
+      "$\\frac{1}{x+1}$",
+      "$\\frac{5}{x+1}$",
+      "$\\frac{1}{2x+2}$",
+      "$1$"
+    ],
+    "answer": 0,
+    "explain": "(3-2)/(x+1) = 1/(x+1)."
+  },
+  {
+    "q": "Giá trị $a$ để phương trình $ax + 2 = 0$ có nghiệm $x = 1$ là:",
+    "options": [
+      "$a = 2$",
+      "$a = -2$",
+      "$a = 0$",
+      "$a = 1$"
+    ],
+    "answer": 1,
+    "explain": "a(1) + 2 = 0 => a = -2."
+  },
+  {
+    "q": "Biểu thức nào là đa thức?",
+    "options": [
+      "$\\frac{1}{x}$",
+      "$2x + 3$",
+      "$\\sqrt{x}$",
+      "$\\frac{x+1}{x-1}$"
+    ],
+    "answer": 1,
+    "explain": "2x + 3 là đa thức bậc nhất."
+  },
+  {
+    "q": "Hàm số $y = 3x - 2$ có tung độ gốc là:",
+    "options": [
+      "3",
+      "-2",
+      "2",
+      "0"
+    ],
+    "answer": 1,
+    "explain": "Tung độ gốc là giá trị b trong y = ax + b."
+  },
+  {
+    "q": "Phương trình nào tương đương với phương trình $x - 1 = 0$?",
+    "options": [
+      "$2x = 2$",
+      "$x + 1 = 0$",
+      "$x^2 = 1$",
+      "$x = 0$"
+    ],
+    "answer": 0,
+    "explain": "Cả hai phương trình đều có nghiệm duy nhất x = 1."
+  },
+  {
+    "q": "Kết quả của $\\frac{x}{y} + \\frac{y}{x}$ là:",
+    "options": [
+      "$\\frac{x+y}{xy}$",
+      "$\\frac{x^2+y^2}{xy}$",
+      "1",
+      "2"
+    ],
+    "answer": 1,
+    "explain": "Quy đồng mẫu thức xy, ta được (x^2 + y^2)/xy."
+  },
+  {
+    "q": "Đồ thị hàm số $y = -2x + 3$ đi qua điểm nào dưới đây?",
+    "options": [
+      "(1; 1)",
+      "(0; 0)",
+      "(1; 5)",
+      "(2; 1)"
+    ],
+    "answer": 0,
+    "explain": "Thay x = 1: y = -2(1) + 3 = 1. Vậy (1;1) thuộc đồ thị."
+  },
+  {
+    "q": "Nghiệm của phương trình $\\frac{x}{3} = 4$ là:",
+    "options": [
+      "12",
+      "7",
+      "1.33",
+      "4/3"
+    ],
+    "answer": 0,
+    "explain": "x = 4 * 3 = 12."
+  },
+  {
+    "q": "Phân thức nào bằng với phân thức $\\frac{-A}{B}$?",
+    "options": [
+      "$\\frac{A}{-B}$",
+      "$-\\frac{A}{B}$",
+      "Cả A và B đều đúng",
+      "$\\frac{-A}{-B}$"
+    ],
+    "answer": 2,
+    "explain": "Quy tắc đổi dấu phân thức: -A/B = A/-B = -(A/B)."
+  },
+  {
+    "q": "Hai xe máy khởi hành ngược chiều từ A và B cách nhau 150km và gặp nhau sau 2 giờ. Tổng vận tốc của hai xe là:",
+    "options": [
+      "75 km/h",
+      "300 km/h",
+      "150 km/h",
+      "50 km/h"
+    ],
+    "answer": 0,
+    "explain": "Tổng vận tốc = Quãng đường / Thời gian gặp nhau = 150 / 2 = 75."
+  },
+  {
+    "q": "Hệ số $b$ của hàm số bậc nhất $y = 2x$ là:",
+    "options": [
+      "2",
+      "1",
+      "0",
+      "Không có"
+    ],
+    "answer": 2,
+    "explain": "y = 2x có thể viết là y = 2x + 0, nên b = 0."
+  },
+  {
+    "q": "Phương trình $3x = x + 4$ có nghiệm là:",
+    "options": [
+      "$x = 2$",
+      "$x = 4$",
+      "$x = 1$",
+      "$x = -2$"
+    ],
+    "answer": 0,
+    "explain": "3x - x = 4 => 2x = 4 => x = 2."
+  },
+  {
+    "q": "Phân thức $\\frac{x-1}{x^2-1}$ rút gọn tối giản là:",
+    "options": [
+      "$\\frac{1}{x+1}$",
+      "$\\frac{1}{x-1}$",
+      "$x+1$",
+      "$x-1$"
+    ],
+    "answer": 0,
+    "explain": "(x-1)/[(x-1)(x+1)] = 1/(x+1)."
+  },
+  {
+    "q": "Giá trị của $m$ để đường thẳng $y = mx + 1$ đi qua điểm $(1; 2)$ là:",
+    "options": [
+      "1",
+      "2",
+      "0",
+      "-1"
+    ],
+    "answer": 0,
+    "explain": "2 = m(1) + 1 => m = 1."
+  },
+
+{
+    "q": "Biểu thức nào sau đây **không phải** là phân thức đại số?",
+    "options": ["$\\frac{x+y}{0}$", "$\\frac{x^2y}{x+1}$", "$\\frac{8}{2x+3}$", "$\\frac{0}{4x-2}$"],
+    "answer": 0,
+    "explain": "Mẫu bằng 0 nên không phải phân thức"
+  },
+  {
+    "q": "Phân thức đại số có dạng nào sau đây?",
+    "options": ["$\\frac{A}{B}$ với $B\\ne0$", "$\\frac{A}{0}$", "$A+B$", "$\\sqrt{x}$"],
+    "answer": 0,
+    "explain": "Phân thức phải có dạng $\\frac{A}{B}$ và có mẫu khác 0"
+  },
+  {
+    "q": "Rút gọn phân thức $\\frac{(x-4)^2}{x(x-4)}$ (với $x\\ne4$)",
+    "options": ["$\\frac{x-4}{x}$", "$\\frac{x}{x-4}$", "$\\frac{1}{x}$", "$x-4$"],
+    "answer": 0,
+    "explain": "Khử nhân tử $(x-4)$"
+  },
+  {
+    "q": "Phân thức đối của $\\frac{3}{x}$ là",
+    "options": ["$-\\frac{3}{x}$", "$\\frac{3}{-x}$", "$\\frac{x}{3}$", "$\\frac{3}{x^2}$"],
+    "answer": 0,
+    "explain": "Hai phân thức đối nhau chỉ khác nhau phần dấu"
+  },
+  {
+    "q": "Tính $\\frac{x-5}{y}+\\frac{8}{y}$",
+    "options": ["$\\frac{x+3}{y}$", "$\\frac{x-3}{y}$", "$\\frac{x+13}{y}$", "$\\frac{x}{y}$"],
+    "answer": 0,
+    "explain": "Cộng tử số. Giữ nguyên mẫu"
+  },
+  {
+    "q": "Phương trình $ax+b=0$ là phương trình bậc nhất khi",
+    "options": ["$a\\ne0$", "$b=0$", "$a=0$", "$b\\ne0$"],
+    "answer": 0,
+    "explain": "Điều kiện $a≠0$"
+  },
+  {
+    "q": "Giá trị $x=2$ là nghiệm của phương trình nào?",
+    "options": ["$2x-4=0$", "$x-5=0$", "$2x=0$", "$x+2=0$"],
+    "answer": 0,
+    "explain": "Thay $x=2$ vào phương trình nào mà thấy 2 vế bằng nhau thì chọn"
+  },
+  {
+    "q": "Phương trình nào sau đây là phương trình bậc nhất một ẩn?",
+    "options": ["$5x-3=0$", "$x^2-7x+1=0$", "$0x+2=0$", "$x-y=2$"],
+    "answer": 0,
+    "explain": "Phương trình bậc nhất 1 ẩn phải có dạng $ax+b=0$ và $b\\ne0$"
+  },
+  {
+    "q": "Giải phương trình $4x-7=0$",
+    "options": ["$x=\\frac{7}{4}$", "$x=-\\frac{7}{4}$", "$x=\\frac{4}{7}$", "$x=-\\frac{4}{7}$"],
+    "answer": 0,
+    "explain": "$4x=7$ và..."
+  },
+  {
+    "q": "Chu vi hình vuông cạnh $x$",
+    "options": ["$4x$", "$2x$", "$x^2$", "$x+4$"],
+    "answer": 0,
+    "explain": "Chu vi của 1 hình bất kì là tổng độ dài đường biên. $P=4x$"
+  },
+  {
+    "q": "Hàm số nào sau đây là hàm số bậc nhất?",
+    "options": ["$y=2x-3$", "$y=\\frac{1}{x}$", "$y=2x^2+5$", "$y=6$"],
+    "answer": 0,
+    "explain": "Hàm số bậc nhất phải có dạng $y=ax+b$ với $b\\ne0$"
+  },
+  {
+    "q": "Cho $f(x)=3x+4$. Tính $f(1)$",
+    "options": ["7", "3", "1", "-1"],
+    "answer": 0,
+    "explain": "$f(1)=3·1+4$"
+  },
+  {
+    "q": "Tử thức của phân thức $P=\\frac{x^2-1}{x-1}$ là",
+    "options": ["$x^2-1$", "$x-1$", "$x^2$", "1"],
+    "answer": 0,
+    "explain": "Tử nằm trên"
+  },
+  {
+    "q": "Điều kiện xác định của $\\frac{x^2-1}{x-1}$",
+    "options": ["$x\\ne1$", "$x=1$", "$x>1$", "$x<1$"],
+    "answer": 0,
+    "explain": "Mẫu ≠0"
+  },
+  {
+    "q": "Rút gọn $\\frac{x^2-1}{x-1}$",
+    "options": ["$x+1$", "$x-1$", "1", "$x^2+1$"],
+    "answer": 0,
+    "explain": "$(x^2-1)=(x-1)(x+1)$"
+  },
+  {
+    "q": "Giá trị của $\\frac{x^2-1}{x-1}$ khi $x=3$",
+    "options": ["4", "2", "3", "1"],
+    "answer": 0,
+    "explain": "$3+1$"
+  },
+  {
+    "q": "Vế phải của phương trình $6x-1=x+3$ là",
+    "options": ["$x+3$", "$6x-1$", "6x", "3"],
+    "answer": 0,
+    "explain": "Biểu thức bên phải"
+  },
+  {
+    "q": "Hệ số góc của đường thẳng $y=3x-6$",
+    "options": ["3", "-6", "6", "-3"],
+    "answer": 0,
+    "explain": "Hệ số góc là con số đi với x"
+  },
+  {
+    "q": "Hai đường thẳng $y=2x+4$ và $y=x-5$",
+    "options": ["Cắt nhau", "Song song", "Trùng nhau", "Không xác định"],
+    "answer": 0,
+    "explain": "Hệ số góc khác thì cắt; bằng thì tùy vào b và b' mà quyết định // hay trùng"
+  },
+  {
+    "q": "Tính $\\frac{3x}{4y^2}·\\frac{4xy^2}{x^2}$",
+    "options": ["3", "$\\frac{3}{x}$", "$3x$", "$\\frac{1}{3}$"],
+    "answer": 0,
+    "explain": "Rút gọn là bỏ đi nhân tử giống nhau ở tử và mẫu"
+  }
+]
