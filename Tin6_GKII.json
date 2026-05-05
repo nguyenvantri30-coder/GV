@@ -1,0 +1,582 @@
+﻿[
+  {
+    "q": "Trong sơ đồ tư duy, thành phần nào đóng vai trò là trung tâm, từ đó phát triển các ý tưởng khác?",
+    "options": ["Nhánh chính", "Chủ đề trung tâm", "Nhánh phụ", "Hình ảnh minh họa"],
+    "answer": 1,
+    "explain": "Sơ đồ tư duy bắt đầu từ một chủ đề trung tâm nằm ở giữa."
+  },
+  {
+    "q": "Lợi ích nào sau đây là tiêu biểu nhất khi sử dụng sơ đồ tư duy?",
+    "options": ["Giúp trình bày văn bản theo dòng", "Kích thích tư duy sáng tạo và ghi nhớ logic", "Tăng dung lượng lưu trữ của ổ cứng", "Thay thế hoàn toàn phần mềm soạn thảo"],
+    "answer": 1,
+    "explain": "Sơ đồ tư duy giúp kết nối các ý tưởng và tăng khả năng ghi nhớ."
+  },
+  {
+    "q": "Khi vẽ sơ đồ tư duy, các nhánh con thường được kết nối trực tiếp vào đâu?",
+    "options": ["Nhánh chính", "Chủ đề trung tâm", "Khung trang giấy", "Hình ảnh minh họa"],
+    "answer": 0,
+    "explain": "Các ý phụ (nhánh con) được phát triển từ các ý chính (nhánh chính)."
+  },
+  {
+    "q": "Đâu là bước đầu tiên trong quy trình tạo sơ đồ tư duy bằng tay?",
+    "options": ["Vẽ các nhánh phụ", "Tô màu cho các nhánh", "Viết tên chủ đề trung tâm ở giữa tờ giấy", "Vẽ hình minh họa"],
+    "answer": 2,
+    "explain": "Bước đầu tiên là xác định và đặt chủ đề trung tâm ở giữa trang giấy."
+  },
+  {
+    "q": "Để làm cho sơ đồ tư duy sinh động và dễ nhớ hơn, chúng ta nên sử dụng thêm yếu tố nào?",
+    "options": ["Nhiều đoạn văn bản dài", "Các bảng biểu phức tạp", "Màu sắc và hình ảnh minh họa", "Các kí hiệu toán học dày đặc"],
+    "answer": 2,
+    "explain": "Màu sắc và hình ảnh giúp não bộ ghi nhận thông tin nhanh và lâu hơn."
+  },
+  {
+    "q": "Trong phần mềm soạn thảo, lệnh nào sau đây dùng để thay đổi màu sắc của chữ?",
+    "options": ["Font Size", "Font Color", "Bold", "Italic"],
+    "answer": 1,
+    "explain": "Font Color là lệnh dùng để định dạng màu sắc cho kí tự."
+  },
+  {
+    "q": "Thao tác nào sau đây được coi là định dạng đoạn văn?",
+    "options": ["Thay đổi kiểu chữ (Font)", "Gạch chân dưới chữ", "Căn lề giữa", "Đổi màu chữ"],
+    "answer": 2,
+    "explain": "Căn lề là thao tác tác động lên toàn bộ đoạn văn bản."
+  },
+  {
+    "q": "Để căn lề đều hai bên cho một đoạn văn bản, ta sử dụng nút lệnh nào?",
+    "options": ["Align Left", "Align Right", "Center", "Justify"],
+    "answer": 3,
+    "explain": "Nút Justify giúp văn bản thẳng cả lề trái và lề phải."
+  },
+  {
+    "q": "Việc định dạng văn bản nhằm mục đích chủ yếu là gì?",
+    "options": ["Làm nội dung dài thêm", "Để văn bản đẹp, rõ ràng và dễ đọc", "Tiết kiệm bộ nhớ máy tính", "Thay đổi ý nghĩa của từ ngữ"],
+    "answer": 1,
+    "explain": "Định dạng giúp văn bản trở nên chuyên nghiệp và thu hút người đọc."
+  },
+  {
+    "q": "Muốn định dạng một từ thành chữ in đậm, sau khi chọn từ đó ta nhấn tổ hợp phím nào?",
+    "options": ["Ctrl + I", "Ctrl + U", "Ctrl + B", "Ctrl + E"],
+    "answer": 2,
+    "explain": "Ctrl + B là phím tắt cho lệnh Bold (in đậm)."
+  },
+  {
+    "q": "Trong bảng (Table), phần giao nhau giữa một hàng và một cột được gọi là gì?",
+    "options": ["Vùng", "Ô", "Khối", "Dòng"],
+    "answer": 1,
+    "explain": "Giao của hàng và cột tạo thành các ô chứa dữ liệu."
+  },
+  {
+    "q": "Nên sử dụng bảng (Table) khi nào?",
+    "options": ["Khi viết một bức thư dài", "Khi muốn liệt kê danh sách và so sánh dữ liệu", "Khi vẽ một bức tranh", "Khi chèn đoạn video"],
+    "answer": 1,
+    "explain": "Bảng giúp tổ chức thông tin khoa học, đặc biệt là khi cần so sánh."
+  },
+  {
+    "q": "Để chèn thêm một hàng nằm phía dưới hàng đang chọn, ta dùng lệnh nào trong thẻ Layout?",
+    "options": ["Insert Above", "Insert Below", "Insert Left", "Insert Right"],
+    "answer": 1,
+    "explain": "Insert Below giúp chèn hàng mới vào phía dưới vị trí hiện tại."
+  },
+  {
+    "q": "Lệnh nào sau đây dùng để gộp nhiều ô đã chọn thành một ô duy nhất?",
+    "options": ["Split Cells", "Merge Cells", "Delete Cells", "Insert Cells"],
+    "answer": 1,
+    "explain": "Merge Cells là lệnh gộp các ô trong bảng."
+  },
+  {
+    "q": "Để xóa một hàng trong bảng, thao tác nào sau đây là đúng?",
+    "options": ["Chọn hàng, nhấn phím Space", "Chọn hàng, vào Layout chọn Delete Rows", "Nhấn phím Enter", "Nháy đúp chuột vào hàng đó"],
+    "answer": 1,
+    "explain": "Lệnh Delete Rows trong thẻ Layout dùng để xóa hàng."
+  },
+  {
+    "q": "Công cụ Find trong phần mềm soạn thảo có chức năng gì?",
+    "options": ["Tìm kiếm một từ hoặc cụm từ", "Thay thế một từ bằng từ khác", "Xóa văn bản", "Định dạng font chữ"],
+    "answer": 0,
+    "explain": "Find dùng để tìm kiếm nhanh nội dung trong văn bản."
+  },
+  {
+    "q": "Điểm khác biệt của lệnh Replace All so với Replace là gì?",
+    "options": ["Chỉ thay thế từ đầu tiên tìm thấy", "Thay thế tất cả các từ tìm thấy trong toàn văn bản", "Chỉ tìm kiếm mà không thay thế", "Làm cho văn bản biến mất"],
+    "answer": 1,
+    "explain": "Replace All thực hiện thay thế hàng loạt tất cả các cụm từ khớp."
+  },
+  {
+    "q": "Công cụ Tìm kiếm và Thay thế nằm trong thẻ nào của Microsoft Word?",
+    "options": ["Insert", "Layout", "Home", "View"],
+    "answer": 2,
+    "explain": "Nhóm lệnh Editing chứa Find và Replace nằm ở cuối thẻ Home."
+  },
+  {
+    "q": "Khi sử dụng công cụ Replace, nếu muốn thay thế từ 'học sinh' thành 'học viên', ta nhập 'học sinh' vào ô nào?",
+    "options": ["Find what", "Replace with", "Search Options", "Go to"],
+    "answer": 0,
+    "explain": "Ô Find what chứa từ cần tìm để thay thế."
+  },
+  {
+    "q": "Tác dụng lớn nhất của Find và Replace đối với văn bản dài hàng trăm trang là gì?",
+    "options": ["Giúp máy tính thông minh hơn", "Tiết kiệm thời gian và đảm bảo độ chính xác khi sửa lỗi", "Làm văn bản ngắn lại", "Tự động dịch sang ngôn ngữ khác"],
+    "answer": 1,
+    "explain": "Tìm kiếm thủ công trong văn bản dài rất mất thời gian và dễ sót."
+  },
+  {
+    "q": "Trong các lệnh sau, lệnh nào **không** thuộc định dạng kí tự?",
+    "options": ["Chọn cỡ chữ", "Chọn kiểu chữ in nghiêng", "Căn lề trái", "Chọn màu chữ"],
+    "answer": 2,
+    "explain": "Căn lề là định dạng đoạn văn, không phải định dạng kí tự."
+  },
+  {
+    "q": "Khi tạo sơ đồ tư duy bằng phần mềm, nếu xóa chủ đề trung tâm thì điều gì sẽ xảy ra?",
+    "options": ["Các nhánh vẫn giữ nguyên", "Toàn bộ sơ đồ thường sẽ bị xóa hoặc mất gốc", "Sơ đồ tự động đổi tên", "Không có chuyện gì xảy ra"],
+    "answer": 1,
+    "explain": "Chủ đề trung tâm là gốc của sơ đồ, mất gốc thì các nhánh không còn điểm tựa."
+  },
+  {
+    "q": "Để thay đổi độ rộng của một cột trong bảng bằng chuột, ta thực hiện như thế nào?",
+    "options": ["Kéo thả đường biên của cột đó", "Nhấn phím Delete", "Gõ nội dung thật dài", "Nháy đúp vào ô đầu tiên"],
+    "answer": 0,
+    "explain": "Đưa con trỏ vào đường biên cột đến khi xuất hiện mũi tên hai chiều rồi kéo thả."
+  },
+  {
+    "q": "Muốn tìm từ 'Hoa' mà không tìm từ 'hoa', ta cần chọn tùy chọn nào trong Find?",
+    "options": ["Find whole words only", "Match case", "Sounds like", "Wildcards"],
+    "answer": 1,
+    "explain": "Match case giúp phân biệt chữ hoa và chữ thường."
+  },
+  {
+    "q": "Sơ đồ tư duy là phương thức nhận thức tận dụng khả năng của:",
+    "options": ["Chỉ não trái", "Chỉ não phải", "Cả hai bán cầu não", "Các ngón tay"],
+    "answer": 2,
+    "explain": "Sơ đồ tư duy kết hợp từ ngữ (não trái) và hình ảnh, màu sắc (nào phải)."
+  },
+  {
+    "q": "Lệnh 'Line Spacing' trong nhóm Paragraph dùng để làm gì?",
+    "options": ["Thay đổi khoảng cách giữa các kí tự", "Thay đổi khoảng cách giữa các dòng trong đoạn", "Thay đổi khoảng cách giữa các trang", "Kẻ đường viền cho đoạn văn"],
+    "answer": 1,
+    "explain": "Line Spacing là khoảng cách dòng."
+  },
+  {
+    "q": "Nút lệnh có hình chữ 'U' gạch chân (Underline) có tác dụng gì?",
+    "options": ["Làm chữ in nghiêng", "Làm chữ in đậm", "Tạo đường gạch chân dưới chữ", "Gạch ngang giữa chữ"],
+    "answer": 2,
+    "explain": "Underline dùng để gạch chân văn bản."
+  },
+  {
+    "q": "Phát biểu nào sau đây về bảng là **sai**?",
+    "options": ["Có thể chèn hình ảnh vào ô của bảng", "Có thể chia một ô thành nhiều ô nhỏ", "Bảng chỉ có thể chứa số, không chứa được chữ", "Có thể thay đổi màu nền của các ô"],
+    "answer": 2,
+    "explain": "Ô trong bảng có thể chứa văn bản, số, hình ảnh..."
+  },
+  {
+    "q": "Phím tắt để mở nhanh hộp thoại Tìm kiếm (Find) là:",
+    "options": ["Ctrl + H", "Ctrl + F", "Ctrl + P", "Ctrl + S"],
+    "answer": 1,
+    "explain": "Ctrl + F là viết tắt của Find."
+  },
+  {
+    "q": "Phím tắt để mở nhanh hộp thoại Thay thế (Replace) là:",
+    "options": ["Ctrl + H", "Ctrl + F", "Ctrl + Z", "Ctrl + C"],
+    "answer": 0,
+    "explain": "Ctrl + H dùng để mở tính năng Replace."
+  },
+  {
+    "q": "Trong sơ đồ tư duy, các nhánh nên được thể hiện như thế nào để dễ phân biệt?",
+    "options": ["Tất cả cùng một màu", "Sử dụng các màu sắc khác nhau cho mỗi nhánh chính", "Chỉ dùng đường thẳng đen", "Không cần vẽ đường nối"],
+    "answer": 1,
+    "explain": "Màu sắc giúp phân loại thông tin giữa các nhánh chính rõ ràng hơn."
+  },
+  {
+    "q": "Khi thực hiện định dạng văn bản, việc đầu tiên cần làm là gì?",
+    "options": ["Nhấn nút lệnh định dạng", "Chọn phần văn bản cần định dạng", "Tắt máy tính", "Mở một tệp tin mới"],
+    "answer": 1,
+    "explain": "Nguyên tắc: 'Chọn trước, tác động sau'."
+  },
+  {
+    "q": "Để xóa một cột trong bảng, ta chọn cột đó rồi thực hiện lệnh:",
+    "options": ["Delete Rows", "Delete Columns", "Delete Table", "Delete Cells"],
+    "answer": 1,
+    "explain": "Delete Columns dùng để xóa cột."
+  },
+  {
+    "q": "Trong Microsoft Word, nhóm lệnh Font nằm ở thẻ nào?",
+    "options": ["Insert", "Design", "Home", "Layout"],
+    "answer": 2,
+    "explain": "Các định dạng cơ bản nhất nằm ở thẻ Home."
+  },
+  {
+    "q": "Nếu muốn quay lại trạng thái trước khi thực hiện một thao tác sai, ta nhấn:",
+    "options": ["Ctrl + Y", "Ctrl + Z", "Ctrl + X", "Ctrl + V"],
+    "answer": 1,
+    "explain": "Ctrl + Z là lệnh Undo (hoàn tác)."
+  },
+  {
+    "q": "Việc căn lề giữa thường được sử dụng cho loại nội dung nào?",
+    "options": ["Nội dung chính của bài", "Tiêu đề của văn bản", "Danh sách liệt kê", "Địa chỉ người gửi"],
+    "answer": 1,
+    "explain": "Tiêu đề thường được căn giữa để tạo sự chú ý và cân đối."
+  },
+  {
+    "q": "Sơ đồ tư duy giúp chúng ta chuyển đổi thông tin từ dạng văn bản thuần túy sang dạng gì?",
+    "options": ["Dạng bảng", "Dạng hình ảnh và mạng lưới liên kết", "Dạng video", "Dạng mã hóa"],
+    "answer": 1,
+    "explain": "Sơ đồ tư duy trực quan hóa thông tin."
+  },
+  {
+    "q": "Khi thay thế một từ bằng từ khác, nếu muốn kiểm tra từng trường hợp trước khi thay, ta nhấn nút:",
+    "options": ["Replace All", "Replace", "Find Next", "Cancel"],
+    "answer": 1,
+    "explain": "Nút Replace sẽ thay thế từ hiện tại và nhảy đến từ tiếp theo."
+  },
+  {
+    "q": "Cỡ chữ trong phần mềm soạn thảo thường được tính bằng đơn vị gì?",
+    "options": ["cm", "inch", "pt (point)", "pixel"],
+    "answer": 2,
+    "explain": "Point là đơn vị chuẩn cho kích thước font chữ."
+  },
+  {
+    "q": "Để tạo một bảng có 3 hàng và 4 cột, ta vào thẻ Insert -> Table và chọn ô lưới có kích thước:",
+    "options": ["3x4", "4x3", "3x3", "4x4"],
+    "answer": 1,
+    "explain": "Kí hiệu thường là Cột x Hàng (4x3)."
+  },
+  {
+    "q": "Phát biểu nào đúng về việc sử dụng phần mềm tạo sơ đồ tư duy?",
+    "options": ["Khó chỉnh sửa hơn vẽ tay", "Có thể dễ dàng di chuyển, thêm bớt các nhánh", "Không thể in ra giấy", "Chỉ chạy được trên điện thoại"],
+    "answer": 1,
+    "explain": "Tính linh hoạt là ưu điểm lớn của phần mềm."
+  },
+  {
+    "q": "Định dạng nào sau đây giúp chữ nghiêng đi?",
+    "options": ["Bold", "Italic", "Underline", "Strikethrough"],
+    "answer": 1,
+    "explain": "Italic là kiểu chữ in nghiêng."
+  },
+  {
+    "q": "Khoảng cách thụt lề dòng đầu tiên của đoạn văn được điều chỉnh ở đâu?",
+    "options": ["Thẻ Home -> nhóm Paragraph", "Thẻ Insert", "Thẻ View", "Thẻ Review"],
+    "answer": 0,
+    "explain": "Các thông số về đoạn văn nằm trong nhóm Paragraph."
+  },
+  {
+    "q": "Khi chèn bảng, nếu không thấy thẻ 'Layout' trên thanh công cụ, ta cần làm gì?",
+    "options": ["Khởi động lại máy", "Nháy chuột vào bên trong bảng", "Cài lại phần mềm", "Nhấn phím F1"],
+    "answer": 1,
+    "explain": "Thẻ ngữ cảnh Table Tools chỉ xuất hiện khi đang làm việc với bảng."
+  },
+  {
+    "q": "Trong hộp thoại Find and Replace, muốn đóng hộp thoại ta nhấn nút:",
+    "options": ["Find Next", "Replace", "Close", "More"],
+    "answer": 2,
+    "explain": "Close dùng để đóng hộp thoại."
+  },
+  {
+    "q": "Lợi ích của việc gộp ô trong bảng là gì?",
+    "options": ["Làm bảng nhỏ đi", "Tạo các tiêu đề chung cho nhiều cột hoặc hàng", "Làm mất dữ liệu", "Làm bảng trông rối hơn"],
+    "answer": 1,
+    "explain": "Gộp ô giúp trình bày các tiêu đề nhóm rõ ràng."
+  },
+  {
+    "q": "Phần mềm nào sau đây là phần mềm soạn thảo văn bản phổ biến nhất?",
+    "options": ["Microsoft Word", "Microsoft Excel", "Microsoft PowerPoint", "Notepad++"],
+    "answer": 0,
+    "explain": "Word là chuẩn mực cho soạn thảo văn bản."
+  },
+  {
+    "q": "Trên sơ đồ tư duy, các đường nối nên vẽ như thế nào để trông tự nhiên?",
+    "options": ["Đường thẳng tắp", "Đường cong mềm mại", "Đường đứt đoạn", "Không nên có đường nối"],
+    "answer": 1,
+    "explain": "Đường cong giúp sơ đồ trông sinh động và lôi cuốn hơn."
+  },
+  {
+    "q": "Để định dạng cỡ chữ 14 cho đoạn văn, sau khi chọn đoạn văn đó, ta chọn số 14 ở ô nào?",
+    "options": ["Font", "Font Size", "Change Case", "Clear Formatting"],
+    "answer": 1,
+    "explain": "Ô Font Size quản lý kích thước chữ."
+  },
+  {
+    "q": "Nếu muốn xóa toàn bộ nội dung trong bảng nhưng vẫn giữ lại khung bảng, ta chọn bảng rồi nhấn:",
+    "options": ["Delete", "Backspace", "Ctrl + X", "Shift + Delete"],
+    "answer": 1,
+    "explain": "Trong Word, Backspace xóa bảng, còn Delete xóa nội dung bên trong."
+  },
+  {
+    "q": "Việc sử dụng từ khóa (keyword) thay vì viết cả câu dài trên sơ đồ tư duy có tác dụng gì?",
+    "options": ["Làm sơ đồ khó hiểu hơn", "Giúp não bộ tập trung vào ý chính và ghi nhớ nhanh", "Làm sơ đồ trông trống trải", "Tiết kiệm mực in"],
+    "answer": 1,
+    "explain": "Từ khóa giúp cô đọng thông tin tối đa."
+  },
+  {
+    "q": "Khi căn lề trái, văn bản sẽ như thế nào?",
+    "options": ["Thẳng ở lề phải", "Thẳng ở lề trái", "Thẳng ở giữa", "Thẳng ở cả hai lề"],
+    "answer": 1,
+    "explain": "Align Left làm thẳng lề bên trái."
+  },
+  {
+    "q": "Để thay đổi Font chữ sang 'Times New Roman', ta thực hiện ở đâu?",
+    "options": ["Thẻ Insert", "Ô Font trong thẻ Home", "Thẻ Layout", "Thẻ Design"],
+    "answer": 1,
+    "explain": "Tên font chữ được chọn trong danh sách thả xuống của ô Font."
+  },
+  {
+    "q": "Thao tác 'Split Cells' trong bảng dùng để làm gì?",
+    "options": ["Gộp các ô", "Chia một ô thành nhiều ô", "Xóa ô", "Đổi màu ô"],
+    "answer": 1,
+    "explain": "Split là chia nhỏ, ngược lại với Merge."
+  },
+  {
+    "q": "Muốn thay thế từ 'Hà Nội' thành 'Thủ đô Hà Nội' trong toàn bộ văn bản, lệnh nào là nhanh nhất?",
+    "options": ["Dùng chuột sửa từng từ", "Dùng lệnh Find", "Dùng lệnh Replace All", "Xóa đi viết lại bài mới"],
+    "answer": 2,
+    "explain": "Replace All xử lý tất cả các vị trí trong một giây."
+  },
+  {
+    "q": "Trong sơ đồ tư duy, các nhánh phụ mang tính chất gì đối với nhánh chính?",
+    "options": ["Giải thích hoặc chi tiết hóa ý của nhánh chính", "Hoàn toàn không liên quan", "Ngược nghĩa với nhánh chính", "Làm mờ nhánh chính"],
+    "answer": 0,
+    "explain": "Nhánh phụ bổ sung thông tin cho nhánh cấp cao hơn."
+  },
+  {
+    "q": "Khi định dạng văn bản, nếu ta nhấn nút 'B' rồi nhấn tiếp một lần nữa thì chữ sẽ như thế nào?",
+    "options": ["Đậm hơn nữa", "Trở về trạng thái chữ thường", "Biến thành chữ nghiêng", "Bị xóa mất"],
+    "answer": 1,
+    "explain": "Các nút định dạng Bold, Italic... hoạt động theo cơ chế bật/tắt."
+  },
+  {
+    "q": "Để chọn nhanh toàn bộ văn bản, ta dùng tổ hợp phím:",
+    "options": ["Ctrl + S", "Ctrl + A", "Ctrl + C", "Ctrl + V"],
+    "answer": 1,
+    "explain": "Ctrl + A (All) dùng để chọn tất cả nội dung."
+  },
+  {
+    "q": "Muốn chèn một hình ảnh vào một ô trong bảng, ta đặt con trỏ vào ô đó rồi chọn:",
+    "options": ["Insert -> Table", "Insert -> Pictures", "Layout -> Insert Above", "Home -> Paste"],
+    "answer": 1,
+    "explain": "Thao tác chèn ảnh vào ô tương tự như chèn vào văn bản bình thường."
+  },
+  {
+    "q": "Hành động nào sau đây giúp bảo vệ kết quả làm việc khi đang soạn thảo văn bản?",
+    "options": ["Nhấn Ctrl + S thường xuyên", "Tắt màn hình", "Rút phích cắm điện", "Nhấn nút Reset trên máy tính"],
+    "answer": 0,
+    "explain": "Ctrl + S giúp lưu trữ dữ liệu vào ổ cứng liên tục."
+  },
+  {
+    "q": "Trong sơ đồ tư duy, yếu tố nào đóng vai trò trung tâm để phát triển các ý khác?",
+    "options": [
+      "Chủ đề trung tâm",
+      "Màu nền của trang",
+      "Hình ảnh trang trí",
+      "Các video minh họa"
+    ],
+    "answer": 0,
+    "explain": "Mọi nhánh xuất phát từ chủ đề trung tâm"
+  },
+  {
+    "q": "Trong sơ đồ tư duy, các nhánh chính thường được nối với",
+    "options": [
+      "Chủ đề trung tâm",
+      "Các nhánh phụ",
+      "Các hình ảnh",
+      "Các tệp tin"
+    ],
+    "answer": 0,
+    "explain": "Nhánh chính nối từ chủ đề trung tâm"
+  },
+  {
+    "q": "Lợi ích quan trọng của sơ đồ tư duy trong học tập là",
+    "options": [
+      "Giúp ghi nhớ và hệ thống kiến thức",
+      "Giúp máy tính chạy nhanh",
+      "Thay thế sách giáo khoa",
+      "Tăng dung lượng tệp"
+    ],
+    "answer": 0,
+    "explain": "Giúp tư duy logic"
+  },
+  {
+    "q": "Khi thay đổi vị trí của một nhánh chính trong phần mềm vẽ sơ đồ tư duy thì",
+    "options": [
+      "Các nhánh con di chuyển theo",
+      "Các nhánh con biến mất",
+      "Sơ đồ bị xóa",
+      "Không thực hiện được"
+    ],
+    "answer": 0,
+    "explain": "Nhánh con gắn với nhánh chính"
+  },
+  {
+    "q": "Trong soạn thảo văn bản, thay đổi màu chữ thuộc loại định dạng",
+    "options": [
+      "Định dạng kí tự",
+      "Định dạng đoạn",
+      "Định dạng trang",
+      "Định dạng bảng"
+    ],
+    "answer": 0,
+    "explain": "Áp dụng cho chữ"
+  },
+  {
+    "q": "Để văn bản có lề trái và lề phải thẳng hàng ta chọn",
+    "options": [
+      "Căn đều hai bên (Justify)",
+      "Căn trái",
+      "Căn phải",
+      "Căn giữa"
+    ],
+    "answer": 0,
+    "explain": "Justify"
+  },
+  {
+    "q": "Mục đích của việc định dạng văn bản là",
+    "options": [
+      "Làm văn bản đẹp và dễ đọc",
+      "Giảm dung lượng",
+      "Tránh virus",
+      "Tăng tốc máy"
+    ],
+    "answer": 0,
+    "explain": "Giúp trình bày rõ ràng"
+  },
+  {
+    "q": "Một bảng trong Word được tạo từ",
+    "options": [
+      "Các hàng và các cột",
+      "Các đoạn văn",
+      "Các hình ảnh",
+      "Các biểu tượng"
+    ],
+    "answer": 0,
+    "explain": "Hàng và cột"
+  },
+  {
+    "q": "Thông tin nào sau đây nên trình bày bằng bảng",
+    "options": [
+      "Thời khóa biểu",
+      "Bài thơ",
+      "Thư gửi bạn",
+      "Một câu chuyện"
+    ],
+    "answer": 0,
+    "explain": "Dữ liệu so sánh"
+  },
+  {
+    "q": "Công cụ nào giúp tìm nhanh một từ trong văn bản",
+    "options": [
+      "Find",
+      "Replace",
+      "Insert",
+      "Copy"
+    ],
+    "answer": 0,
+    "explain": "Find"
+  },
+  {
+    "q": "Lệnh Replace trong Word dùng để",
+    "options": [
+      "Thay thế từ hoặc cụm từ",
+      "Chèn hình",
+      "Xóa bảng",
+      "Căn lề"
+    ],
+    "answer": 0,
+    "explain": "Thay thế"
+  },
+  {
+    "q": "Lệnh Replace All có tác dụng",
+    "options": [
+      "Thay thế tất cả các từ tìm thấy",
+      "Chỉ thay thế một từ",
+      "Xóa văn bản",
+      "Chèn ảnh"
+    ],
+    "answer": 0,
+    "explain": "Thay toàn bộ"
+  },
+  {
+    "q": "Trong sơ đồ tư duy, chủ đề trung tâm nên đặt",
+    "options": [
+      "Ở giữa trang",
+      "Ở góc trái",
+      "Ở cuối trang",
+      "Ở góc phải"
+    ],
+    "answer": 0,
+    "explain": "Giữa trang"
+  },
+  {
+    "q": "Màu sắc và hình ảnh trong sơ đồ tư duy giúp",
+    "options": [
+      "Tăng khả năng ghi nhớ",
+      "Làm file nặng",
+      "Không có tác dụng",
+      "Làm chậm máy"
+    ],
+    "answer": 0,
+    "explain": "Kích thích trí nhớ"
+  },
+  {
+    "q": "Các nhánh phụ trong sơ đồ tư duy thường nối với",
+    "options": [
+      "Nhánh chính",
+      "Trang giấy",
+      "Hình ảnh",
+      "Video"
+    ],
+    "answer": 0,
+    "explain": "Từ nhánh chính"
+  },
+  {
+    "q": "Trong Word, để thay đổi font chữ ta sử dụng",
+    "options": [
+      "Font",
+      "Insert",
+      "Table",
+      "Layout"
+    ],
+    "answer": 0,
+    "explain": "Chọn font"
+  },
+  {
+    "q": "Để thay đổi cỡ chữ ta dùng",
+    "options": [
+      "Font Size",
+      "Insert",
+      "Layout",
+      "Table"
+    ],
+    "answer": 0,
+    "explain": "Cỡ chữ"
+  },
+  {
+    "q": "Để định dạng một từ trước tiên cần",
+    "options": [
+      "Bôi đen từ đó",
+      "Đóng văn bản",
+      "Xóa từ",
+      "In văn bản"
+    ],
+    "answer": 0,
+    "explain": "Chọn trước"
+  },
+  {
+    "q": "Lệnh Line Spacing dùng để",
+    "options": [
+      "Thay đổi khoảng cách dòng",
+      "Đổi màu chữ",
+      "Chèn bảng",
+      "Xóa chữ"
+    ],
+    "answer": 0,
+    "explain": "Khoảng cách dòng"
+  },
+  {
+    "q": "Trong bảng Word có thể",
+    "options": [
+      "Gộp nhiều ô thành một",
+      "Không chỉnh sửa",
+      "Không thêm cột",
+      "Không thêm hàng"
+    ],
+    "answer": 0,
+    "explain": "Có thể gộp"
+  }
+]
