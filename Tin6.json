@@ -1,362 +1,772 @@
 ﻿[
   {
-    "q": "Sơ đồ tư duy là công cụ dùng để làm gì?[cite: 6]",
-    "options": ["Ghi chép và hệ thống hóa thông tin một cách trực quan", "Vẽ bản đồ địa lý các vùng miền", "Lập bảng biểu để tính toán con số", "Soạn thảo văn bản hành chính"],
-    "answer": 0,
-    "explain": "Sơ đồ tư duy giúp thể hiện các khái niệm và ý tưởng một cách trực quan bằng từ ngữ và hình ảnh[cite: 6]."
-  },
-  {
-    "q": "Thành phần nào sau đây **không** thể thiếu trong một sơ đồ tư duy?[cite: 6]",
-    "options": ["Đoạn văn bản dài", "Chủ đề trung tâm, các nhánh và từ khóa", "Các công thức hóa học phức tạp", "Video minh họa"],
-    "answer": 1,
-    "explain": "Sơ đồ tư duy gồm các thành phần chính là từ ngữ ngắn gọn (từ khóa), hình ảnh và các đường nối[cite: 6]."
-  },
-  {
-    "q": "Ưu điểm nổi bật nhất của việc sử dụng phần mềm để tạo sơ đồ tư duy so với vẽ tay là gì?[cite: 6]",
-    "options": ["Không cần dùng đến máy tính", "Dễ dàng chỉnh sửa, mở rộng và chia sẻ với người khác", "Tiết kiệm giấy và mực", "Làm cho thông tin trở nên khó hiểu hơn"],
-    "answer": 1,
-    "explain": "Phần mềm giúp khắc phục nhược điểm khó sửa chữa và chia sẻ của cách làm thủ công[cite: 6]."
-  },
-  {
-    "q": "Tại sao sơ đồ tư duy giúp chúng ta ghi nhớ tốt hơn?[cite: 6]",
-    "options": ["Vì nó sử dụng nhiều chữ viết", "Vì nó trình bày thông tin theo dạng cột", "Vì nó kết hợp hình ảnh, màu sắc và sự liên tưởng giữa các ý tưởng", "Vì nó chỉ sử dụng một màu duy nhất"],
+    "q": "Khái niệm nào sau đây mô tả đúng nhất về sơ đồ tư duy?",
+    "options": [
+      "Bản vẽ kiến trúc chi tiết của một ngôi nhà hiện đại.",
+      "Một bản đồ hướng dẫn đường đi giữa các địa điểm trong thành phố.",
+      "Phương pháp trình bày thông tin trực quan sử dụng từ ngữ ngắn gọn, hình ảnh và đường nối để thể hiện ý tưởng.",
+      "Kịch bản bằng chữ của một bộ phim truyền hình dài tập."
+    ],
     "answer": 2,
-    "explain": "Cách trình bày trực quan giúp nhìn nhận và phân tích vấn đề rõ ràng hơn[cite: 6]."
+    "explain": "Sơ đồ tư duy là công cụ trực quan hóa thông tin, giúp biểu diễn các ý tưởng và khái niệm một cách rõ ràng thông qua từ khóa, hình vẽ và các nhánh liên kết."
   },
   {
-    "q": "Khi tạo sơ đồ tư duy trên máy tính, để thêm một ý tưởng mới phát sinh từ ý chính, ta thường thực hiện thao tác nào?",
-    "options": ["Xóa sơ đồ cũ và vẽ lại", "Tạo thêm một 'nhánh con' (sub-topic) từ nhánh chính", "Chỉ viết thêm chữ vào nhánh cũ", "Vẽ một hình tròn rời rạc"],
-    "answer": 1,
-    "explain": "Cấu trúc sơ đồ tư duy phát triển từ tâm ra ngoài thông qua các nhánh con liên kết."
-  },
-  {
-    "q": "Trong học tập, sơ đồ tư duy thường được dùng hiệu quả nhất vào việc gì?[cite: 6]",
-    "options": ["Viết nhật ký", "Tóm tắt nội dung bài học hoặc lập kế hoạch ôn tập", "Chơi trò chơi điện tử", "Gửi tin nhắn cho bạn bè"],
-    "answer": 1,
-    "explain": "Phần mềm sơ đồ tư duy đáp ứng nhu cầu giải quyết vấn đề và trao đổi thông tin trực quan[cite: 6]."
-  },
-  {
-    "q": "Để định dạng dòng chữ 'Uống nước nhớ nguồn' thành **đậm** và *nghiêng*, bạn sử dụng tổ hợp phím nào?[cite: 6]",
-    "options": ["Ctrl + B và Ctrl + I", "Ctrl + U và Ctrl + E", "Ctrl + C và Ctrl + V", "Ctrl + S và Ctrl + P"],
-    "answer": 0,
-    "explain": "Ctrl+B dùng để định dạng chữ đậm, Ctrl+I dùng để định dạng chữ nghiêng[cite: 6]."
-  },
-  {
-    "q": "Giả sử bạn cần căn dòng chữ 'Ăn quả nhớ kẻ trồng cây' vào chính giữa trang giấy, bạn sử dụng công cụ nào trên thanh ribbon?[cite: 6]",
-    "options": ["Align Left", "Align Right", "Center", "Justify"],
+    "q": "Những yếu tố nào sau đây là thành phần cấu tạo nên một sơ đồ tư duy hoàn chỉnh?",
+    "options": [
+      "Danh sách các nhân vật kịch bản và bối cảnh xung quanh.",
+      "Các thiết bị phần cứng máy tính như CPU, RAM và ổ cứng.",
+      "Từ khóa ngắn gọn, hình ảnh minh họa, đường nối liên kết và màu sắc.",
+      "Các dụng cụ học tập thủ công như bút chì, giấy nháp và thước kẻ."
+    ],
     "answer": 2,
-    "explain": "Nút lệnh Center (Căn giữa) giúp trình bày văn bản cân đối giữa trang[cite: 6]."
+    "explain": "Các thành phần cơ bản cấu tạo nên sơ đồ tư duy bao gồm từ khóa, hình ảnh, đường nối (nhánh) và màu sắc để phân biệt các nhánh ý tưởng."
   },
   {
-    "q": "Để thực hiện yêu cầu 'định dạng gạch chân' cho một đoạn văn bản, bước đầu tiên học sinh cần làm là gì?[cite: 6]",
-    "options": ["Nhấn nút Underline (U)", "Chọn (bôi đen) phần văn bản cần định dạng", "Thay đổi màu chữ", "Lưu văn bản"],
+    "q": "Khi vẽ sơ đồ tư duy bằng phương pháp thủ công trên giấy, người dùng thường gặp phải hạn chế lớn nào?",
+    "options": [
+      "Đòi hỏi bắt buộc phải có máy tính cấu hình cao mới thực hiện được.",
+      "Gặp khó khăn khi muốn chỉnh sửa, mở rộng nội dung hoặc chia sẻ tức thời cho nhiều người.",
+      "Làm mất hoàn toàn khả năng sáng tạo và tư duy logic của người vẽ.",
+      "Không thể tự do lựa chọn màu sắc hay hình vẽ theo ý thích cá nhân."
+    ],
     "answer": 1,
-    "explain": "Trước khi định dạng bất kỳ thao tác nào, ta đều phải chọn vùng văn bản muốn áp dụng[cite: 6]."
+    "explain": "Nhược điểm lớn nhất của vẽ sơ đồ tư duy thủ công là khó tẩy xóa chỉnh sửa khi muốn thay đổi bố cục, khó mở rộng khi hết trang giấy và khó chia sẻ trực tuyến."
   },
   {
-    "q": "Thao tác nào sau đây giúp thay đổi kích thước chữ (Font size) của văn bản?",
-    "options": ["Chọn dải lệnh Home, nhập số vào ô Font Size", "Nhấn phím Enter", "Nhấn nút Bold", "Vào dải lệnh Insert"],
-    "answer": 0,
-    "explain": "Font size nằm trong nhóm Font của dải lệnh Home, cho phép điều chỉnh độ lớn của chữ."
-  },
-  {
-    "q": "Lợi ích chính của việc định dạng văn bản là gì?[cite: 6]",
-    "options": ["Giúp văn bản ngắn lại", "Làm cho văn bản đẹp, rõ ràng và dễ nhấn mạnh nội dung quan trọng", "Làm cho máy tính chạy nhanh hơn", "Để máy in không bị hỏng"],
-    "answer": 1,
-    "explain": "Định dạng giúp trình bày văn bản chuyên nghiệp và thu hút người đọc[cite: 6]."
-  },
-  {
-    "q": "Sau khi định dạng xong bài thơ, để xem kết quả trước khi in ra giấy, em sử dụng chức năng nào?",
-    "options": ["Print Preview", "Save As", "Copy", "Delete"],
-    "answer": 0,
-    "explain": "Print Preview cho phép xem trước bố cục văn bản trên trang giấy."
-  },
-  {
-    "q": "Thông tin dạng bảng thường được sử dụng khi nào là hiệu quả nhất?[cite: 6]",
-    "options": ["Khi muốn kể một câu chuyện dài", "Khi cần so sánh dữ liệu hoặc trình bày các thông tin có tính hệ thống", "Khi muốn vẽ một bức tranh", "Khi muốn ghi âm lời nói"],
-    "answer": 1,
-    "explain": "Thông tin dạng bảng giúp ta dễ dàng so sánh, tìm kiếm và tổng hợp[cite: 6]."
-  },
-  {
-    "q": "Để tạo một bảng gồm 5 cột và 2 hàng trong Word, tại hộp thoại 'Insert Table', em nhập các chỉ số như thế nào?[cite: 6]",
-    "options": ["Number of columns: 2, Number of rows: 5", "Number of columns: 5, Number of rows: 2", "Number of columns: 5, Number of rows: 5", "Number of columns: 2, Number of rows: 2"],
-    "answer": 1,
-    "explain": "Columns là số cột, Rows là số hàng[cite: 6]."
-  },
-  {
-    "q": "Dữ liệu nào sau đây **không** nên trình bày dưới dạng bảng?[cite: 6]",
-    "options": ["Thời khóa biểu", "Bảng điểm lớp học", "Một bức thư xin lỗi bạn", "Danh sách thiết bị tin học"],
-    "answer": 2,
-    "explain": "Thư từ là dạng văn bản đoạn văn, không phù hợp để kẻ bảng[cite: 6]."
-  },
-  {
-    "q": "Khi đang ở trong một bảng, để thêm một hàng mới phía dưới hàng hiện tại, em thực hiện thao tác gì?[cite: 6]",
-    "options": ["Vào dải lệnh Layout, chọn Insert Below", "Nhấn phím Delete", "Vào dải lệnh Home chọn Center", "Tắt phần mềm rồi mở lại"],
-    "answer": 0,
-    "explain": "Dải lệnh Layout của Table Tools cung cấp các công cụ thêm/xóa hàng và cột[cite: 6]."
-  },
-  {
-    "q": "Lệnh 'Merge Cells' trong bảng dùng để làm gì?[cite: 6]",
-    "options": ["Xóa toàn bộ bảng", "Gộp nhiều ô được chọn thành một ô duy nhất", "Chia một ô thành nhiều ô nhỏ", "Tô màu cho bảng"],
-    "answer": 1,
-    "explain": "Merge cells giúp kết nối các ô lại với nhau để tạo tiêu đề hoặc trình bày đặc biệt[cite: 6]."
-  },
-  {
-    "q": "Để xóa một cột trong bảng, học sinh nên thực hiện hướng dẫn nào dưới đây?[cite: 6]",
-    "options": ["Bôi đen cột đó và nhấn phím Space", "Nhấn chuột phải vào cột, chọn Delete Columns", "Nhấn phím Enter nhiều lần", "Dùng công cụ Eraser xóa từng chữ"],
-    "answer": 1,
-    "explain": "Thao tác Delete Columns sẽ loại bỏ hoàn toàn cấu trúc cột đã chọn[cite: 6]."
-  },
-  {
-    "q": "Muốn thay đổi độ rộng của một cột bằng chuột, em làm thế nào?",
-    "options": ["Kéo thả biên phải của cột đó", "Nhấn đúp chuột vào giữa ô", "Nhấn phím Ctrl", "Không thể thay đổi độ rộng cột"],
-    "answer": 0,
-    "explain": "Đưa con trỏ vào đường biên cột cho đến khi xuất hiện mũi tên hai chiều rồi kéo thả để chỉnh kích thước."
-  },
-  {
-    "q": "Trong phần mềm soạn thảo, nút lệnh 'Table' nằm ở dải lệnh (Tab) nào?[cite: 6]",
-    "options": ["Home", "Insert", "Page Layout", "View"],
-    "answer": 1,
-    "explain": "Bảng được chèn vào văn bản thông qua dải lệnh Insert[cite: 6]."
-  },
-  {
-    "q": "Để căn lề văn bản bên trong các ô của bảng, em sử dụng nhóm lệnh 'Alignment' trong dải lệnh nào?",
-    "options": ["Table Tools Layout", "Design", "Insert", "References"],
-    "answer": 0,
-    "explain": "Layout cho phép căn lề văn bản theo 9 vị trí khác nhau trong ô (trên/giữa/dưới kết hợp trái/phải/giữa)."
-  },
-  {
-    "q": "Việc trình bày thông tin ngắn gọn dưới dạng bảng có ưu điểm gì so với đoạn văn?[cite: 6]",
-    "options": ["Làm người đọc buồn ngủ", "Khó tìm thấy thông tin cần thiết", "Giúp tìm kiếm nhanh và dễ tổng hợp thông tin", "Tốn nhiều diện tích giấy hơn"],
-    "answer": 2,
-    "explain": "Sự phân chia hàng/cột giúp thông tin được khu trú rõ ràng[cite: 6]."
-  },
-  {
-    "q": "Nếu em muốn tạo một bảng bằng cách tự tay vẽ các đường biên, em chọn công cụ nào?[cite: 6]",
-    "options": ["Insert Table", "Quick Tables", "Draw Table", "Excel Spreadsheet"],
-    "answer": 2,
-    "explain": "Draw Table cho phép vẽ các đường kẻ để tạo bảng một cách linh hoạt[cite: 6]."
-  },
-  {
-    "q": "Trong một bảng điểm, hàng đầu tiên thường dùng để ghi nội dung gì?",
-    "options": ["Điểm số của học sinh đầu tiên", "Tiêu đề các cột (STT, Họ tên, Điểm...)", "Tên của giáo viên", "Ngày tháng năm"],
-    "answer": 1,
-    "explain": "Hàng tiêu đề giúp người đọc biết được ý nghĩa của dữ liệu trong các cột bên dưới."
-  },
-  {
-    "q": "Công cụ 'Find' (Tìm kiếm) trong Word thường được sử dụng khi nào?[cite: 6]",
-    "options": ["Khi muốn thay đổi font chữ", "Khi cần tìm nhanh một từ hoặc cụm từ trong văn bản dài", "Khi muốn xóa toàn bộ văn bản", "Khi muốn chèn thêm hình ảnh"],
-    "answer": 1,
-    "explain": "Find giúp xác định vị trí các từ khóa một cách tức thì[cite: 6]."
-  },
-  {
-    "q": "Để mở hộp thoại Tìm kiếm và Thay thế (Replace), em sử dụng tổ hợp phím tắt nào?[cite: 6]",
-    "options": ["Ctrl + F", "Ctrl + H", "Ctrl + S", "Ctrl + N"],
-    "answer": 1,
-    "explain": "Ctrl+H mở trực tiếp tab Replace, trong khi Ctrl+F thường mở khung Navigation hoặc tab Find[cite: 6]."
-  },
-  {
-    "q": "Chức năng 'Replace All' có tác dụng gì?[cite: 6]",
-    "options": ["Chỉ thay thế từ đầu tiên tìm thấy", "Thay thế tất cả các từ thỏa mãn điều kiện tìm kiếm trong toàn bộ văn bản", "Xóa hết tất cả các từ được tìm thấy", "Đóng hộp thoại thay thế"],
-    "answer": 1,
-    "explain": "Replace All thực hiện thay đổi hàng loạt một cách tự động[cite: 6]."
-  },
-  {
-    "q": "Khi sử dụng công cụ Tìm kiếm và Thay thế, nếu em chỉ muốn tìm mà không muốn thay đổi nội dung, em nên dùng lệnh nào?[cite: 6]",
-    "options": ["Replace", "Find Next", "Replace All", "Cancel"],
-    "answer": 1,
-    "explain": "Find Next giúp di chuyển đến vị trí tiếp theo của từ cần tìm mà không thay đổi nó[cite: 6]."
-  },
-  {
-    "q": "Công cụ thay thế có thể gây ra sai sót gì nếu người dùng không kiểm soát kỹ?[cite: 6]",
-    "options": ["Làm máy tính bị tắt đột ngột", "Thay thế nhầm các từ có chứa cụm từ cần tìm (ví dụ thay 'học' bằng 'tập' có thể biến 'học sinh' thành 'tập sinh')", "Làm biến mất toàn bộ hình ảnh", "Tự động gửi email văn bản đi"],
-    "answer": 1,
-    "explain": "Nếu không chọn 'Find whole words only', phần mềm có thể thay thế nhầm các từ con nằm trong từ khác[cite: 6]."
-  },
-  {
-    "q": "Trong hướng dẫn sử dụng công cụ Thay thế, ô 'Replace with' dùng để nhập nội dung gì?",
-    "options": ["Từ cần tìm", "Từ mới sẽ thay thế cho từ cũ", "Địa chỉ email", "Tên tệp tin"],
-    "answer": 1,
-    "explain": "Find what chứa từ cũ, Replace with chứa nội dung mới."
-  },
-  {
-    "q": "Thuật toán có thể được hiểu đơn giản là gì?[cite: 6]",
-    "options": ["Một bài toán khó", "Dãy các chỉ dẫn từng bước để giải quyết một nhiệm vụ hoặc bài toán", "Một loại ngôn ngữ lập trình", "Phần cứng của máy tính"],
-    "answer": 1,
-    "explain": "Thuật toán là quy trình các bước cụ thể để đạt được kết quả mong muốn[cite: 6]."
-  },
-  {
-    "q": "Trong sơ đồ khối của thuật toán, hình chữ nhật dùng để mô tả thao tác nào?[cite: 6]",
-    "options": ["Bắt đầu/Kết thúc", "Nhập/Xuất dữ liệu", "Các bước xử lý, tính toán", "Kiểm tra điều kiện"],
-    "answer": 2,
-    "explain": "Hình chữ nhật đại diện cho quá trình thực hiện một công việc cụ thể[cite: 6]."
-  },
-  {
-    "q": "Hình thoi trong sơ đồ khối có ý nghĩa gì?[cite: 6]",
-    "options": ["Ghi giá trị đầu ra", "Thực hiện phép cộng", "Kiểm tra điều kiện để rẽ nhánh", "Chỉ hướng đi của thuật toán"],
-    "answer": 2,
-    "explain": "Hình thoi dùng cho các cấu trúc rẽ nhánh hoặc vòng lặp dựa trên điều kiện Đúng/Sai[cite: 6]."
-  },
-  {
-    "q": "Đâu là hai cách phổ biến nhất để mô tả thuật toán?[cite: 6]",
-    "options": ["Vẽ tranh và hát", "Liệt kê các bước bằng ngôn ngữ tự nhiên và dùng sơ đồ khối", "Chụp ảnh và quay phim", "Sử dụng bảng tính và biểu đồ"],
-    "answer": 1,
-    "explain": "Đây là hai cách cơ bản để trình bày logic của thuật toán cho con người và máy tính hiểu[cite: 6]."
-  },
-  {
-    "q": "Trong thuật toán tính tổng hai số $a$ và $b$, giá trị 'Tổng' được gọi là gì?[cite: 6]",
-    "options": ["Đầu vào (Input)", "Đầu ra (Output)", "Điều kiện", "Tên thuật toán"],
-    "answer": 1,
-    "explain": "Tổng là kết quả cuối cùng thu được sau quá trình xử lý[cite: 6]."
-  },
-  {
-    "q": "Khi mô tả thuật toán bằng sơ đồ khối, hình oval (hình bầu dục) được đặt ở vị trí nào?[cite: 6]",
-    "options": ["Ở giữa sơ đồ", "Ở vị trí Bắt đầu và Kết thúc", "Dùng để nối các khối", "Dùng để kiểm tra điều kiện"],
-    "answer": 1,
-    "explain": "Hình oval đánh dấu điểm khởi đầu và điểm dừng của một quy trình[cite: 6]."
-  },
-  {
-    "q": "Trong sơ đồ khối thuật toán tính tổng $a$ và $b$, thao tác 'Giá trị $a, b$' được đặt trong hình gì?[cite: 6]",
-    "options": ["Hình chữ nhật", "Hình thoi", "Hình bình hành", "Hình tròn"],
-    "answer": 2,
-    "explain": "Hình bình hành dùng để mô tả việc nhập dữ liệu đầu vào hoặc xuất dữ liệu đầu ra[cite: 6]."
-  },
-  {
-    "q": "Một thuật toán tốt cần có đặc điểm nào?",
-    "options": ["Càng dài càng tốt", "Có tính dừng (phải kết thúc sau một số bước hữu hạn)", "Không cần có đầu vào", "Chỉ người viết mới hiểu được"],
-    "answer": 1,
-    "explain": "Thuật toán phải dẫn đến kết quả sau một số bước nhất định, không được lặp vô hạn không mục đích."
-  },
-  {
-    "q": "Thao tác 'Tính Tổng $\\leftarrow a + b$' thuộc loại bước nào trong thuật toán?[cite: 6]",
-    "options": ["Nhập dữ liệu", "Xử lý dữ liệu", "Xuất dữ liệu", "Kiểm tra điều kiện"],
-    "answer": 1,
-    "explain": "Đây là bước thực hiện phép toán để biến đổi dữ liệu đầu vào[cite: 6]."
-  },
-  {
-    "q": "Tại sao cần phải mô tả thuật toán trước khi viết chương trình máy tính?",
-    "options": ["Để máy tính chạy nhanh hơn", "Để giúp người lập trình kiểm tra tính đúng đắn và logic của giải pháp", "Để làm cho chương trình phức tạp hơn", "Để không cần dùng đến bàn phím"],
-    "answer": 1,
-    "explain": "Mô tả thuật toán giúp định hình tư duy logic trước khi chuyển ngữ sang mã máy."
-  },
-  {
-    "q": "Trong sơ đồ khối, mũi tên có tác dụng gì?[cite: 6]",
-    "options": ["Để trang trí", "Chỉ trình tự thực hiện các bước của thuật toán", "Dùng để ghi chú thích", "Thay thế cho hình chữ nhật"],
-    "answer": 1,
-    "explain": "Mũi tên xác định luồng dữ liệu và hướng thực hiện tiếp theo[cite: 6]."
-  },
-  {
-    "q": "Nếu sơ đồ khối có một đường quay ngược lại một bước phía trước, đó thường là biểu hiện của cấu trúc gì?[cite: 6]",
-    "options": ["Cấu trúc tuần tự", "Cấu trúc rẽ nhánh", "Cấu trúc lặp", "Cấu trúc dừng"],
-    "answer": 2,
-    "explain": "Việc quay lại thực hiện bước trước đó dựa trên điều kiện cho thấy một chu kỳ lặp[cite: 6]."
-  },
-  {
-    "q": "Đầu vào (Input) của thuật toán 'Pha trà mời khách' là gì?",
-    "options": ["Trà đã pha xong", "Trà khô, nước sôi, ấm chén", "Lời khen của khách", "Đổ trà ra chén"],
-    "answer": 1,
-    "explain": "Input là những nguyên liệu hoặc dữ liệu cần thiết ban đầu để thực hiện thuật toán."
-  },
-  {
-    "q": "Đầu ra (Output) của thuật toán 'Tìm số lớn nhất trong hai số $a, b$' là gì?",
-    "options": ["Hai số $a$ và $b$", "Số có giá trị lớn hơn", "Phép toán so sánh", "Kết quả sai"],
-    "answer": 1,
-    "explain": "Output là mục tiêu cuối cùng của bài toán tìm số lớn nhất."
-  },
-  {
-    "q": "Tính chất 'xác định' của thuật toán nghĩa là gì?",
-    "options": ["Mỗi bước phải rõ ràng, không gây nhầm lẫn", "Mọi người đều có thể làm được", "Phải viết bằng tiếng Anh", "Phải vẽ bằng bút màu"],
-    "answer": 0,
-    "explain": "Sau mỗi bước, máy tính hoặc người thực hiện phải biết chính xác bước tiếp theo là gì."
-  },
-  {
-    "q": "Cấu trúc điều khiển nào thực hiện các bước theo thứ tự từ trên xuống dưới, bước này xong mới đến bước kia?[cite: 6]",
-    "options": ["Cấu trúc rẽ nhánh", "Cấu trúc lặp", "Cấu trúc tuần tự", "Cấu trúc hỗn hợp"],
-    "answer": 2,
-    "explain": "Đây là cấu trúc cơ bản nhất của mọi thuật toán[cite: 6]."
-  },
-  {
-    "q": "Câu nói: 'Nếu trời mưa thì em mang ô' thể hiện cấu trúc điều khiển nào?[cite: 6]",
-    "options": ["Tuần tự", "Rẽ nhánh dạng thiếu", "Rẽ nhánh dạng đủ", "Lặp"],
-    "answer": 1,
-    "explain": "Chỉ có một điều kiện và một hành động đi kèm nếu điều kiện đúng[cite: 6]."
-  },
-  {
-    "q": "Cấu trúc rẽ nhánh dạng đủ khác dạng thiếu ở điểm nào?[cite: 6]",
-    "options": ["Dạng đủ có thêm hành động thực hiện khi điều kiện Sai", "Dạng đủ không có hình thoi", "Dạng thiếu không có mũi tên", "Dạng thiếu thực hiện nhanh hơn"],
-    "answer": 0,
-    "explain": "Dạng đủ bao gồm: Nếu <Điều kiện> thì <Hành động 1>, ngược lại <Hành động 2>[cite: 6]."
-  },
-  {
-    "q": "Hoạt động 'Học bài cho đến khi thuộc lòng' thuộc cấu trúc điều khiển nào?[cite: 6]",
-    "options": ["Tuần tự", "Rẽ nhánh", "Lặp", "Dừng"],
-    "answer": 2,
-    "explain": "Hành động 'Học bài' được lặp lại nhiều lần cho đến khi thỏa mãn điều kiện 'thuộc lòng'[cite: 6]."
-  },
-  {
-    "q": "Trong sơ đồ khối cấu trúc rẽ nhánh, từ hình thoi điều kiện sẽ có mấy hướng mũi tên đi ra?[cite: 6]",
-    "options": ["1 hướng", "2 hướng (Đúng và Sai)", "3 hướng", "Không có hướng nào"],
-    "answer": 1,
-    "explain": "Kết quả kiểm tra điều kiện chỉ có thể rơi vào một trong hai trường hợp: Đúng hoặc Sai[cite: 6]."
-  },
-  {
-    "q": "Để hướng dẫn học sinh mô tả thuật toán 'Nếu chưa làm hết bài tập thì phải làm tiếp', em chọn cấu trúc nào là phù hợp nhất?[cite: 6]",
-    "options": ["Lặp với điều kiện dừng là đã làm hết bài tập", "Tuần tự từ bài 1 đến bài cuối", "Rẽ nhánh xem bài nào dễ làm trước", "Kết thúc luôn không làm nữa"],
-    "answer": 0,
-    "explain": "Việc kiểm tra tình trạng bài tập và làm tiếp tạo thành một vòng lặp[cite: 6]."
-  },
-  {
-    "q": "Khi điều kiện trong cấu trúc rẽ nhánh dạng thiếu bị 'Sai', máy tính sẽ làm gì?[cite: 6]",
-    "options": ["Thoát khỏi chương trình", "Bỏ qua hành động đi kèm và thực hiện lệnh tiếp theo sau cấu trúc đó", "Quay lại kiểm tra điều kiện mãi mãi", "Báo lỗi hệ thống"],
-    "answer": 1,
-    "explain": "Cấu trúc rẽ nhánh dạng thiếu không có hành động cho trường hợp Sai, nên nó sẽ đi tiếp[cite: 6]."
-  },
-  {
-    "q": "Câu 'Nếu em làm sai ý này em sẽ bị trừ 0.25 điểm, ngược lại em được cộng 0.25 điểm' là ví dụ của cấu trúc nào?[cite: 6]",
-    "options": ["Tuần tự", "Rẽ nhánh dạng thiếu", "Rẽ nhánh dạng đủ", "Lặp"],
-    "answer": 2,
-    "explain": "Có hai hành động khác nhau cho hai kết quả của điều kiện[cite: 6]."
-  },
-  {
-    "q": "Hoạt động nào dưới đây **không** chứa cấu trúc lặp?",
-    "options": ["Đánh răng hàng ngày", "Mỗi sáng thức dậy lúc 6 giờ", "Đi bộ từ cổng trường vào lớp (lặp lại bước chân)", "Ký tên vào một tờ giấy duy nhất"],
+    "q": "Trong quá trình giải quyết một vấn đề phức tạp, việc sử dụng phần mềm sơ đồ tư duy mang lại lợi ích gì?",
+    "options": [
+      "Làm cho các luồng thông tin trở nên rối rắm và khó tiếp cận hơn.",
+      "Hoàn toàn không hỗ trợ gì cho quá trình động não (brainstorming).",
+      "Hạn chế tư duy phản biện và làm giảm chất lượng giải pháp đưa ra.",
+      "Hỗ trợ biểu diễn thông tin trực quan, giúp phân tích vấn đề rõ ràng và toàn diện hơn."
+    ],
     "answer": 3,
-    "explain": "Ký tên một lần là một hành động đơn lẻ, mang tính tuần tự."
+    "explain": "Sử dụng phần mềm sơ đồ tư duy giúp người dùng sắp xếp các ý tưởng một cách khoa học, nhìn nhận và phân tích vấn đề một cách trực quan, mạch lạc."
   },
   {
-    "q": "Trong sơ đồ khối của cấu trúc lặp, điều kiện thường được đặt ở đâu để kiểm tra trước khi thực hiện hành động?[cite: 6]",
-    "options": ["Trong hình oval", "Trong hình thoi đặt trước khối hành động", "Trong hình chữ nhật", "Ở cuối sơ đồ"],
+    "q": "Việc sắp xếp và trình bày dữ liệu dưới dạng bảng biểu mang lại lợi ích chủ yếu nào cho người đọc?",
+    "options": [
+      "Giúp người đọc dễ dàng quan sát, so sánh và đối chiếu các thông tin với nhau.",
+      "Giúp việc in ấn tài liệu ra giấy trở nên nhanh chóng hơn.",
+      "Giúp người đọc ghi nhớ thông tin một cách thụ động mà không cần suy nghĩ.",
+      "Giúp di chuyển vị trí của văn bản trên màn hình một cách tự động."
+    ],
+    "answer": 0,
+    "explain": "Ưu điểm nổi bật của thông tin dạng bảng là cấu trúc rõ ràng theo hàng và cột, giúp người xem dễ dàng tìm kiếm, so sánh và đối chiếu số liệu."
+  },
+  {
+    "q": "Phát biểu nào sau đây không chỉ ra một ưu điểm của việc trình bày thông tin bằng bảng?",
+    "options": [
+      "Giúp người xem tìm kiếm dữ liệu một cách nhanh chóng.",
+      "Giúp việc tổng hợp thông tin trở nên dễ dàng và khoa học.",
+      "Nội dung thông tin được biểu diễn ngắn gọn, súc tích.",
+      "Bảng tự động thực hiện các phép toán phức tạp mà không cần công cụ hỗ trợ."
+    ],
+    "answer": 3,
+    "explain": "Việc tạo bảng trong soạn thảo văn bản chỉ giúp trình bày dữ liệu trực quan, ngắn gọn, dễ tìm kiếm và tổng hợp; bảng không tự động tính toán nếu người dùng không thiết lập công thức."
+  },
+  {
+    "q": "Loại tài liệu hoặc thông tin nào dưới đây thường không phù hợp để biểu diễn dưới dạng bảng?",
+    "options": [
+      "Bảng điểm tổng kết học tập của học sinh trong một lớp học.",
+      "Một cuốn sổ tay dùng để viết nhật ký cảm xúc cá nhân hằng ngày.",
+      "Bảng theo dõi số liệu nhiệt độ trung bình của các tháng trong năm.",
+      "Sổ đầu bài ghi nhận xét tiết học và xếp loại thi đua của các lớp."
+    ],
     "answer": 1,
-    "explain": "Kiểm tra điều kiện trước giúp quyết định có bắt đầu vòng lặp hay không[cite: 6]."
+    "explain": "Sổ điểm, nhiệt độ các tháng và sổ đầu bài đều là các thông tin có cấu trúc lặp lại nên rất phù hợp dạng bảng. Nhật ký cá nhân mang tính tự sự nên không thích hợp dạng bảng."
   },
   {
-    "q": "Điều kiện dừng của một vòng lặp là gì?[cite: 6]",
-    "options": ["Là khi người dùng tắt máy tính", "Là một biểu thức điều kiện mà khi nó thỏa mãn (hoặc không thỏa mãn), vòng lặp sẽ kết thúc", "Là khi hết bộ nhớ", "Là khi ta nhấn phím Enter"],
+    "q": "Trong hộp thoại Insert Table của phần mềm Word, nếu bạn thiết lập số cột (Number of columns) là 5 và số dòng (Number of rows) là 2, bảng được tạo ra sẽ có cấu trúc như thế nào?",
+    "options": [
+      "Bảng gồm có 2 cột và 5 hàng.",
+      "Bảng gồm có 5 cột và 2 hàng.",
+      "Bảng gồm có 10 cột và 10 hàng.",
+      "Bảng gồm có 7 cột và 7 hàng."
+    ],
     "answer": 1,
-    "explain": "Vòng lặp cần một điểm dừng để thuật toán không bị lặp vô tận[cite: 6]."
+    "explain": "Number of columns nghĩa là số cột, Number of rows là số hàng (dòng). Vì vậy thiết lập này tạo ra bảng có 5 cột và 2 hàng."
   },
   {
-    "q": "Trong thuật toán 'Nếu bị đe dọa thì em cần nói cho cha mẹ biết', đâu là điều kiện?[cite: 6]",
-    "options": ["Nói cho cha mẹ biết", "Bị đe dọa", "Em cần", "Cha mẹ biết"],
+    "q": "Khái niệm thuật toán trong Tin học được định nghĩa một cách chính xác là gì?",
+    "options": [
+      "Một dãy các chỉ dẫn rõ ràng, có trình tự nhằm giải quyết một bài toán hay công việc cụ thể.",
+      "Kết quả cuối cùng thu được sau khi giải xong một bài toán khó.",
+      "Sơ đồ hình vẽ mô tả các bước để thực hiện một công việc.",
+      "Một lời khuyên chung chung về cách giải quyết các tình huống khó khăn."
+    ],
+    "answer": 0,
+    "explain": "Thuật toán là một chuỗi các chỉ dẫn có trình tự, rõ ràng và khả thi, nhằm biến đổi dữ liệu đầu vào (Input) thành kết quả đầu ra (Output) mong muốn."
+  },
+  {
+    "q": "Trong sơ đồ khối của một thuật toán, hình bình hành được sử dụng để biểu diễn thao tác nào?",
+    "options": [
+      "Nhập dữ liệu đầu vào (Input) hoặc xuất kết quả đầu ra (Output).",
+      "Thực hiện một phép toán tính toán hoặc xử lý dữ liệu.",
+      "Kiểm tra một điều kiện để rẽ sang các hướng khác nhau.",
+      "Chỉ hướng đi tiếp theo của các bước thực hiện."
+    ],
+    "answer": 0,
+    "explain": "Quy ước trong sơ đồ khối: Hình bình hành dùng để thể hiện các thao tác nhập dữ liệu (Input) hoặc xuất kết quả (Output)."
+  },
+  {
+    "q": "Phát biểu: 'Nếu hôm nay trời mưa thì em sẽ nghỉ đi chơi bóng đá' sử dụng cấu trúc điều khiển nào dưới đây?",
+    "options": [
+      "Cấu trúc lặp.",
+      "Cấu trúc rẽ nhánh dạng thiếu.",
+      "Cấu trúc rẽ nhánh dạng đủ.",
+      "Cấu trúc tuần tự."
+    ],
     "answer": 1,
-    "explain": "Sự việc 'Bị đe dọa' là yếu tố để quyết định có thực hiện hành động báo cho cha mẹ hay không[cite: 6]."
+    "explain": "Phát biểu chỉ có mệnh đề 'Nếu... thì...' mà không có vế 'ngược lại thì...' biểu thị cấu trúc rẽ nhánh dạng thiếu."
   },
   {
-    "q": "Khi biểu diễn thuật toán dưới dạng sơ đồ khối, việc nối mũi tên từ khối hành động quay ngược lại khối điều kiện tạo nên cấu trúc gì?[cite: 6]",
-    "options": ["Cấu trúc tuần tự", "Cấu trúc lặp", "Cấu trúc rẽ nhánh", "Cấu trúc dừng"],
+    "q": "Trong sơ đồ khối rẽ nhánh dạng thiếu, điều gì xảy ra nếu điều kiện kiểm tra được đánh giá là đúng?",
+    "options": [
+      "Thuật toán dừng lại ngay lập tức.",
+      "Thực hiện công việc tương ứng ở nhánh Đúng, sau đó chuyển tiếp sang thực hiện công việc tiếp theo.",
+      "Bỏ qua công việc ở nhánh Đúng và nhảy cóc đến kết thúc thuật toán.",
+      "Lặp lại việc kiểm tra điều kiện đó vô hạn lần."
+    ],
     "answer": 1,
-    "explain": "Đường nối ngược tạo nên một chu trình thực hiện lại công việc[cite: 6]."
+    "explain": "Nếu điều kiện đúng, thuật toán thực hiện khối lệnh xử lý ở nhánh Đúng rồi tiếp tục đi xuôi theo mũi tên để thực hiện các câu lệnh tuần tự phía dưới."
   },
   {
-    "q": "Lợi ích của việc sử dụng các cấu trúc điều khiển trong lập trình là gì?",
-    "options": ["Làm cho mã nguồn dài hơn", "Cho phép xử lý các tình huống phức tạp, linh hoạt và lặp lại công việc tự động", "Làm cho máy tính dễ hỏng hơn", "Để không cần phải suy nghĩ khi lập trình"],
-    "answer": 1,
-    "explain": "Các cấu trúc điều khiển là 'xương sống' tạo nên sự thông minh của chương trình."
-  },
-  {
-    "q": "Nếu một thuật toán chỉ gồm các hình oval, hình bình hành và hình chữ nhật nối tiếp nhau theo một đường thẳng, đó là cấu trúc gì?[cite: 6]",
-    "options": ["Cấu trúc lặp", "Cấu trúc rẽ nhánh", "Cấu trúc tuần tự", "Cấu trúc sai"],
+    "q": "Trong tin học, có bao nhiêu cấu trúc điều khiển cơ bản được sử dụng để xây dựng và mô tả thuật toán?",
+    "options": [
+      "1 cấu trúc duy nhất.",
+      "2 cấu trúc điều khiển.",
+      "3 cấu trúc điều khiển cơ bản.",
+      "4 cấu trúc điều khiển."
+    ],
     "answer": 2,
-    "explain": "Sự thiếu vắng hình thoi (điều kiện) cho thấy thuật toán thực hiện thẳng một lèo từ đầu đến cuối[cite: 6]."
+    "explain": "Ba cấu trúc điều khiển cơ bản để biểu diễn mọi thuật toán là cấu trúc tuần tự, cấu trúc rẽ nhánh và cấu trúc lặp."
+  },
+  {
+    "q": "Phát biểu: 'Nếu trả lời đúng câu hỏi em sẽ được cộng 1 điểm, ngược lại em sẽ bị trừ 1 điểm' thể hiện cấu trúc nào?",
+    "options": [
+      "Cấu trúc tuần tự.",
+      "Cấu trúc rẽ nhánh dạng thiếu.",
+      "Cấu trúc rẽ nhánh dạng đủ.",
+      "Cấu trúc lặp."
+    ],
+    "answer": 2,
+    "explain": "Phát biểu chứa cả vế 'Nếu... thì...' và vế 'ngược lại...' thể hiện đầy đủ hai nhánh quyết định nên thuộc cấu trúc rẽ nhánh dạng đủ."
+  },
+  {
+    "q": "Đối với hoạt động 'Học sinh làm bài kiểm tra cho đến khi hết giờ làm bài hoặc đã hoàn thiện xong toàn bộ bài làm', điều kiện để dừng việc lặp lại hành động làm bài là gì?",
+    "options": [
+      "Học sinh bắt đầu nhận đề từ giáo viên.",
+      "Hết thời gian làm bài hoặc học sinh đã hoàn thành xong bài làm.",
+      "Học sinh nộp giấy nháp cho giám thị.",
+      "Học sinh làm sai một câu hỏi ngẫu nhiên."
+    ],
+    "answer": 1,
+    "explain": "Hành động lặp là 'làm bài'. Việc làm bài sẽ dừng lại ngay khi một trong hai điều kiện 'hết giờ' hoặc 'làm xong bài' xảy ra."
+  },
+  {
+    "q": "Phát biểu nào sau đây đúng khi nói về cấu trúc tuần tự trong hoạt động tham gia một buổi thi học kỳ?",
+    "options": [
+      "Không tồn tại cấu trúc tuần tự vì học sinh thích làm câu nào trước cũng được.",
+      "Quy trình lớn gồm: Nhận đề thi -> Làm bài thi -> Nộp bài thi tuân theo cấu trúc tuần tự.",
+      "Chỉ có cấu trúc lặp chứ hoàn toàn không có cấu trúc tuần tự.",
+      "Cấu trúc tuần tự bắt buộc học sinh phải làm đúng câu hỏi trước mới được phép đọc câu hỏi sau."
+    ],
+    "answer": 1,
+    "explain": "Mặc dù thứ tự làm các câu hỏi nhỏ có thể linh hoạt, nhưng quy trình lớn (Nhận đề -> Làm bài -> Nộp bài) bắt buộc phải diễn ra theo đúng trình tự trước sau, đó chính là cấu trúc tuần tự."
+  },
+  {
+    "q": "Quan sát một sơ đồ khối có đường mũi tên quay ngược lại một khối lệnh kiểm tra 'Chưa hiểu bài?' (Nếu Đúng thì 'Đọc lại sách' rồi quay lại kiểm tra tiếp). Sơ đồ này chứa cấu trúc điều khiển nào?",
+    "options": [
+      "Chỉ chứa cấu trúc tuần tự đơn thuần.",
+      "Có chứa cấu trúc lặp.",
+      "Chỉ chứa cấu trúc rẽ nhánh dạng đủ.",
+      "Không chứa bất kỳ cấu trúc điều khiển nào."
+    ],
+    "answer": 1,
+    "explain": "Đường mũi tên quay ngược lại phía trước tạo thành một vòng khép kín để thực hiện lại thao tác 'Đọc lại sách' khi điều kiện thỏa mãn biểu thị cấu trúc lặp."
+  },
+  {
+    "q": "Trong sơ đồ khối mô tả việc học tập: 'Nếu chưa hiểu bài thì đọc lại sách, khi đã hiểu bài thì chuyển sang làm bài tập'. Sơ đồ này sử dụng kết hợp các cấu trúc nào?",
+    "options": [
+      "Chỉ chứa duy nhất cấu trúc rẽ nhánh dạng đủ.",
+      "Có chứa cấu trúc lặp (đọc lại sách khi chưa hiểu) và cấu trúc tuần tự (làm bài tập khi đã hiểu).",
+      "Chỉ chứa duy nhất cấu trúc tuần tự từ đầu đến cuối.",
+      "Là cấu trúc rẽ nhánh dạng đủ không chứa bất kỳ vòng lặp nào."
+    ],
+    "answer": 1,
+    "explain": "Sơ đồ khối lặp lại hành động 'đọc lại sách' khi chưa hiểu bài (cấu trúc lặp) và sau khi thoát khỏi vòng lặp sẽ thực hiện công việc tiếp theo là 'làm bài tập' (cấu trúc tuần tự)."
+  },
+  {
+    "q": "Theo sơ đồ khối học tập nêu trên, việc thực hiện hành động lặp 'Đọc lại sách' sẽ chính thức kết thúc khi nào?",
+    "options": [
+      "Khi học sinh vẫn chưa hiểu bài.",
+      "Khi học sinh đã hiểu bài (điều kiện 'Chưa hiểu bài?' nhận kết quả Sai).",
+      "Ngay khi học sinh vừa mở cuốn sách ra.",
+      "Khi học sinh gấp sách lại để đi ngủ."
+    ],
+    "answer": 1,
+    "explain": "Vòng lặp tiếp diễn khi điều kiện 'Chưa hiểu bài?' là Đúng. Do đó, vòng lặp sẽ kết thúc khi điều kiện này Sai, tức là khi học sinh đã hiểu bài."
+  },
+  {
+    "q": "Mục đích logic của việc lặp lại hành động 'Đọc lại sách' khi gặp tình huống 'Chưa hiểu bài' trước khi chuyển sang 'Làm bài tập' là gì?",
+    "options": [
+      "Làm tiêu tốn thời gian học tập của học sinh một cách vô ích.",
+      "Đảm bảo học sinh đã nắm vững kiến thức lý thuyết để thực hiện phần bài tập hiệu quả hơn.",
+      "Ép buộc học sinh phải thuộc lòng từng câu chữ trong sách giáo khoa.",
+      "Bỏ qua các bài tập khó để chuyển sang làm các bài tập dễ hơn."
+    ],
+    "answer": 1,
+    "explain": "Đọc lại sách giúp củng cố kiến thức chưa vững, tạo nền tảng để giải quyết phần bài tập phía sau một cách chính xác."
+  },
+  {
+    "q": "Trong phần mềm soạn thảo văn bản Word, tổ hợp phím nào được dùng để mở nhanh công cụ tìm kiếm (Find)?",
+    "options": [
+      "Ctrl + H",
+      "Ctrl + F",
+      "Ctrl + C",
+      "Ctrl + V"
+    ],
+    "answer": 1,
+    "explain": "Tổ hợp phím Ctrl + F (Find) dùng để kích hoạt nhanh thanh tìm kiếm hoặc hộp thoại tìm kiếm văn bản."
+  },
+  {
+    "q": "Trong công cụ Tìm kiếm và Thay thế (Find and Replace) của Word, nút lệnh 'Replace All' có chức năng gì?",
+    "options": [
+      "Chỉ thay thế duy nhất từ tìm thấy đầu tiên trong văn bản.",
+      "Thay thế toàn bộ các từ tìm thấy thỏa mãn điều kiện bằng từ mới trong toàn bộ văn bản.",
+      "Xóa bỏ toàn bộ nội dung của tệp văn bản hiện tại.",
+      "Tìm kiếm các từ trùng khớp nhưng không thực hiện bất kỳ thay thế nào."
+    ],
+    "answer": 1,
+    "explain": "'Replace All' nghĩa là thay thế tất cả các cụm từ tìm thấy bằng cụm từ thay thế mới trên phạm vi toàn bộ tài liệu soạn thảo."
+  },
+  {
+    "q": "Ý kiến nào sau đây là chính xác khi nói về việc sử dụng công cụ 'Find and Replace'?",
+    "options": [
+      "Chỉ có thể dùng để thay thế từ ngữ chứ không thể dùng để tìm kiếm đơn thuần.",
+      "Chỉ có thể dùng để tìm kiếm từ ngữ chứ không có chức năng thay thế từ mới.",
+      "Có thể sử dụng công cụ này chỉ để tìm kiếm vị trí các từ trong văn bản mà không cần thiết phải thay thế.",
+      "Bắt buộc người dùng phải thay thế mỗi khi máy tính tìm thấy một từ trùng khớp."
+    ],
+    "answer": 2,
+    "explain": "Người dùng hoàn toàn có thể sử dụng tab Find hoặc nhập từ khóa để tìm kiếm vị trí của từ trong văn bản mà không cần phải thực hiện thao tác thay thế."
+  },
+  {
+    "q": "Nhận định nào sau đây là chính xác về độ tin cậy của công cụ Tìm kiếm và Thay thế tự động trong phần mềm soạn thảo văn bản?",
+    "options": [
+      "Công cụ hoạt động hoàn toàn chính xác theo đúng cụm ký tự mà người dùng yêu cầu tìm và thay thế.",
+      "Công cụ thường xuyên tự ý thay đổi từ ngữ ngẫu nhiên trong văn bản.",
+      "Công cụ hoạt động không chính xác và hay bỏ sót các từ tiếng Việt có dấu.",
+      "Công cụ chỉ tìm kiếm được các từ tiếng Anh chứ không hỗ trợ tiếng Việt."
+    ],
+    "answer": 0,
+    "explain": "Công cụ Tìm kiếm và Thay thế hoạt động tự động và cực kỳ chính xác theo đúng chuỗi ký tự mà người dùng cung cấp."
+  },
+  {
+    "q": "Sau khi đã chèn một bảng biểu vào văn bản Word, chúng ta có thể thực hiện thao tác nào sau đây đối với cấu trúc của bảng?",
+    "options": [
+      "Chỉ được nhập dữ liệu vào ô chứ không thể thay đổi số lượng hàng và cột.",
+      "Có thể tự do thêm hàng, thêm cột hoặc xóa bớt các hàng, cột tùy ý.",
+      "Chỉ được phép xóa hàng chứ không bao giờ được phép xóa cột.",
+      "Chỉ được phép thêm cột mới chứ không được phép thêm hàng mới."
+    ],
+    "answer": 1,
+    "explain": "Word cung cấp các công cụ linh hoạt cho phép người dùng chèn thêm hoặc xóa bớt hàng, cột của bảng biểu đã tạo."
+  },
+  {
+    "q": "Khi muốn kết hợp nhiều ô liền kề trong bảng thành một ô duy nhất, ta sử dụng tính năng nào trong thẻ Layout của Table Tools?",
+    "options": [
+      "Split Cells",
+      "Merge Cells",
+      "Delete Cells",
+      "Insert Table"
+    ],
+    "answer": 1,
+    "explain": "Tính năng 'Merge Cells' (Gộp ô) dùng để kết hợp nhiều ô được chọn thành một ô lớn duy nhất."
+  },
+  {
+    "q": "Để thực hiện chèn một bảng biểu mới vào văn bản, người dùng cần truy cập vào dải lệnh (tab) nào trên thanh công cụ?",
+    "options": [
+      "Home",
+      "Insert",
+      "Page Layout",
+      "View"
+    ],
+    "answer": 1,
+    "explain": "Để chèn các đối tượng bên ngoài như bảng biểu (Table), hình ảnh (Picture), hình vẽ (Shape),... ta sử dụng dải lệnh Insert."
+  },
+  {
+    "q": "Khi sử dụng công cụ vẽ bảng 'Draw Table' trong phần mềm soạn thảo Word, thao tác của người dùng là gì?",
+    "options": [
+      "Nhập trực tiếp số lượng hàng và số lượng cột vào một hộp thoại có sẵn.",
+      "Sử dụng con trỏ chuột (lúc này biến thành hình cây bút) để tự tay phác họa các đường biên và hàng, cột của bảng.",
+      "Chọn một mẫu bảng biểu được thiết kế và định dạng sẵn từ thư viện.",
+      "Đọc khẩu lệnh qua micro để máy tính tự động nhận diện và vẽ bảng."
+    ],
+    "answer": 1,
+    "explain": "Draw Table cho phép người dùng dùng chuột như một cây bút vẽ để tự tay phác họa trực tiếp các đường viền, hàng và cột của bảng trên trang văn bản."
+  },
+  {
+    "q": "Thao tác nào sau đây được sử dụng để định dạng chữ in đậm cho đoạn văn bản trong Word?",
+    "options": [
+      "Bấm tổ hợp phím Ctrl + I",
+      "Bấm tổ hợp phím Ctrl + B",
+      "Bấm tổ hợp phím Ctrl + U",
+      "Bấm tổ hợp phím Ctrl + E"
+    ],
+    "answer": 1,
+    "explain": "Ctrl + B (Bold) là tổ hợp phím tắt chuẩn để định dạng kiểu chữ in đậm trong các phần mềm soạn thảo."
+  },
+  {
+    "q": "Để định dạng chữ in nghiêng cho một đoạn văn bản đã chọn, ta sử dụng tổ hợp phím nào?",
+    "options": [
+      "Ctrl + B",
+      "Ctrl + U",
+      "Ctrl + I",
+      "Ctrl + L"
+    ],
+    "answer": 2,
+    "explain": "Ctrl + I (Italic) là tổ hợp phím tắt dùng để định dạng kiểu chữ in nghiêng."
+  },
+  {
+    "q": "Tổ hợp phím nào dưới đây có tác dụng gạch chân dưới đoạn văn bản được chọn?",
+    "options": [
+      "Ctrl + B",
+      "Ctrl + I",
+      "Ctrl + E",
+      "Ctrl + U"
+    ],
+    "answer": 3,
+    "explain": "Ctrl + U (Underline) là tổ hợp phím tắt dùng để định dạng kiểu chữ gạch dưới."
+  },
+  {
+    "q": "Để căn dòng văn bản được chọn vào chính giữa trang giấy theo chiều ngang, tổ hợp phím nào được sử dụng?",
+    "options": [
+      "Ctrl + L",
+      "Ctrl + R",
+      "Ctrl + E",
+      "Ctrl + J"
+    ],
+    "answer": 2,
+    "explain": "Ctrl + E (Center) dùng để căn lề giữa cho đoạn văn bản hoặc dòng tiêu đề."
+  },
+  {
+    "q": "Khi muốn căn lề thẳng tắp cả hai bên trái và phải cho một đoạn văn bản, ta chọn tổ hợp phím nào?",
+    "options": [
+      "Ctrl + L",
+      "Ctrl + R",
+      "Ctrl + E",
+      "Ctrl + J"
+    ],
+    "answer": 3,
+    "explain": "Ctrl + J (Justify) là tổ hợp phím dùng để căn đều hai bên của đoạn văn bản, làm cho các dòng căn thẳng lề trái và phải."
+  },
+  {
+    "q": "Để căn lề thẳng bên trái cho đoạn văn bản, ta sử dụng tổ hợp phím nào?",
+    "options": [
+      "Ctrl + L",
+      "Ctrl + R",
+      "Ctrl + E",
+      "Ctrl + J"
+    ],
+    "answer": 0,
+    "explain": "Ctrl + L (Left) dùng để căn lề trái cho văn bản."
+  },
+  {
+    "q": "Để căn dòng văn bản lệch sát về phía lề phải của trang giấy, ta sử dụng tổ hợp phím nào?",
+    "options": [
+      "Ctrl + L",
+      "Ctrl + R",
+      "Ctrl + E",
+      "Ctrl + J"
+    ],
+    "answer": 1,
+    "explain": "Ctrl + R (Right) dùng để căn lề phải cho văn bản."
+  },
+  {
+    "q": "Muốn thay đổi cỡ chữ (Font size) của văn bản trong thẻ Home, ta nhấp chuột vào ô danh sách số bên cạnh ô chứa yếu tố nào?",
+    "options": [
+      "Phông chữ (Font)",
+      "Kiểu chữ (Font Style)",
+      "Màu chữ (Font Color)",
+      "Căn lề (Alignment)"
+    ],
+    "answer": 0,
+    "explain": "Trên thanh công cụ của thẻ Home, ô nhập/chọn cỡ chữ (Font Size) nằm ngay bên phải ô chọn phông chữ (Font)."
+  },
+  {
+    "q": "Thao tác nào dưới đây giúp thay đổi phông chữ (Font) của đoạn văn bản?",
+    "options": [
+      "Chọn văn bản, vào thẻ Home, nhấp chọn tên phông chữ trong danh sách ô Font.",
+      "Chọn văn bản, vào thẻ Insert, chọn công cụ Table.",
+      "Chọn văn bản, nhấn tổ hợp phím Ctrl + B.",
+      "Chọn văn bản, nhấp nút căn giữa (Center)."
+    ],
+    "answer": 0,
+    "explain": "Để đổi phông chữ, ta bôi đen văn bản, vào thẻ Home và chọn kiểu phông chữ mong muốn từ danh sách thả xuống của ô Font."
+  },
+  {
+    "q": "Để định dạng một đoạn văn bản có kiểu chữ vừa đậm vừa nghiêng, ta có thể thực hiện thế nào?",
+    "options": [
+      "Chỉ nhấn duy nhất tổ hợp phím Ctrl + B.",
+      "Chỉ nhấn duy nhất tổ hợp phím Ctrl + I.",
+      "Nhấn lần lượt cả hai tổ hợp phím Ctrl + B và Ctrl + I trên bàn phím.",
+      "Nhấn tổ hợp phím Ctrl + U."
+    ],
+    "answer": 2,
+    "explain": "Các thuộc tính định dạng chữ có thể kết hợp song song. Để chữ vừa đậm vừa nghiêng, ta kích hoạt cả hai thuộc tính bằng phím tắt Ctrl+B và Ctrl+I."
+  },
+  {
+    "q": "Mục đích chính và quan trọng nhất của việc định dạng văn bản là gì?",
+    "options": [
+      "Làm cho văn bản đẹp mắt, rõ ràng, dễ đọc, giúp người đọc dễ theo dõi và ghi nhớ nội dung quan trọng.",
+      "Thay đổi hoàn toàn nội dung gốc và ý nghĩa biểu đạt của văn bản.",
+      "Làm giảm dung lượng lưu trữ của tệp văn bản trên đĩa cứng.",
+      "Chuyển dịch tự động văn bản từ ngôn ngữ này sang ngôn ngữ khác."
+    ],
+    "answer": 0,
+    "explain": "Định dạng văn bản giúp trình bày tài liệu chuyên nghiệp, thẩm mỹ, khoa học, giúp người đọc dễ nắm bắt các thông tin cốt lõi."
+  },
+  {
+    "q": "Cho dòng chữ được trình bày như sau: \"<u><b><i>Học tốt, chăm ngoan</i></b></u>\". Dòng chữ này đã được áp dụng đồng thời những kiểu định dạng nào?",
+    "options": [
+      "Chỉ định dạng in đậm và in nghiêng.",
+      "Chỉ định dạng in nghiêng và gạch chân.",
+      "Áp dụng cả ba định dạng: in đậm, in nghiêng và gạch dưới chân chữ.",
+      "Chỉ định dạng in đậm và gạch dưới chân chữ."
+    ],
+    "answer": 2,
+    "explain": "Dòng chữ có nét dày (in đậm), nghiêng (in nghiêng) và có đường kẻ dưới chân (gạch dưới)."
+  },
+  {
+    "q": "Khi soạn thảo một bài thơ gồm nhiều khổ thơ ngắn, để trình bày các dòng thơ căn chỉnh đẹp mắt ở chính giữa trang giấy, thao tác định dạng nào là tối ưu?",
+    "options": [
+      "Sử dụng phím cách (Spacebar) để căn chỉnh thủ công từng dòng thơ ra giữa.",
+      "Chọn toàn bộ bài thơ rồi nhấn nút lệnh căn giữa (Center) hoặc phím Ctrl + E.",
+      "Nhấn phím xuống dòng Enter nhiều lần ở đầu mỗi dòng thơ.",
+      "Đổi phông chữ của bài thơ sang cỡ chữ thật lớn để tự động đẩy ra giữa."
+    ],
+    "answer": 1,
+    "explain": "Công cụ căn giữa (Center / Ctrl + E) giúp toàn bộ bài thơ được căn đều đối xứng qua trục dọc của trang giấy một cách tự động và chuẩn xác."
+  },
+  {
+    "q": "Trong phần mềm Word, làm thế nào để thay đổi màu sắc của chữ?",
+    "options": [
+      "Chọn văn bản, nhấp chọn biểu tượng Font Color (ký hiệu chữ A có vệt màu ở dưới) trên dải lệnh Home.",
+      "Chọn văn bản, nhấn tổ hợp phím Ctrl + C trên bàn phím.",
+      "Chọn văn bản, nhấp vào biểu tượng Highlight Color trên dải lệnh Insert.",
+      "Chọn văn bản, nhấp chuột phải và nhấn phím Delete."
+    ],
+    "answer": 0,
+    "explain": "Nút lệnh Font Color (chữ A có dải màu phía dưới) trên thẻ Home là công cụ chuyên dùng để thay đổi màu sắc cho ký tự văn bản."
+  },
+  {
+    "q": "Đầu vào (Input) của thuật toán \"Tính tổng của hai số nguyên a và b\" là gì?",
+    "options": [
+      "Giá trị tổng thu được của hai số.",
+      "Giá trị của hai số nguyên a và b.",
+      "Phép toán cộng (+).",
+      "Sơ đồ khối mô tả thuật toán."
+    ],
+    "answer": 1,
+    "explain": "Để thực hiện phép tính tổng, thuật toán cần được cung cấp trước giá trị của hai số nguyên a và b. Đó chính là dữ liệu đầu vào (Input)."
+  },
+  {
+    "q": "Đầu ra (Output) của thuật toán \"Tìm số lớn nhất trong hai số x và y\" là gì?",
+    "options": [
+      "Giá trị của cả hai số x và y.",
+      "Số có giá trị lớn hơn trong hai số x và y.",
+      "Phép toán so sánh lớn hơn (>).",
+      "Tổng của hai số x và y."
+    ],
+    "answer": 1,
+    "explain": "Mục tiêu của thuật toán là xác định số lớn nhất, vì thế kết quả trả về cuối cùng (Output) là số lớn hơn trong hai số đã cho."
+  },
+  {
+    "q": "Trong sơ đồ khối biểu diễn thuật toán, hình chữ nhật được sử dụng để mô tả hoạt động nào?",
+    "options": [
+      "Bắt đầu hoặc Kết thúc chương trình.",
+      "Nhập dữ liệu vào hoặc xuất dữ liệu ra.",
+      "Thực hiện phép toán tính toán hoặc các bước xử lý dữ liệu.",
+      "Kiểm tra điều kiện logic để quyết định hướng đi."
+    ],
+    "answer": 2,
+    "explain": "Theo quy ước sơ đồ khối, hình chữ nhật biểu thị các khối lệnh xử lý, thực hiện tính toán dữ liệu."
+  },
+  {
+    "q": "Hình thoi trong sơ đồ khối của thuật toán biểu diễn thành phần nào dưới đây?",
+    "options": [
+      "Điểm khởi đầu của thuật toán.",
+      "Thao tác nhập thông tin đầu vào.",
+      "Phép toán tính toán số học thông thường.",
+      "Khối kiểm tra điều kiện logic để rẽ nhánh."
+    ],
+    "answer": 3,
+    "explain": "Hình thoi được sử dụng làm khối quyết định, kiểm tra điều kiện để phân chia luồng xử lý của thuật toán thành các nhánh (Đúng / Sai)."
+  },
+  {
+    "q": "Hình oval (hình elip) trong sơ đồ khối có ý nghĩa quy ước như thế nào?",
+    "options": [
+      "Biểu diễn các thao tác xử lý dữ liệu phức tạp.",
+      "Biểu diễn trạng thái Bắt đầu (Start) hoặc Kết thúc (End) của thuật toán.",
+      "Biểu diễn việc nhập dữ liệu từ bàn phím.",
+      "Biểu diễn các phép so sánh số học."
+    ],
+    "answer": 1,
+    "explain": "Khối oval được đặt ở vị trí bắt đầu và kết thúc để giới hạn phạm vi hoạt động của sơ đồ khối thuật toán."
+  },
+  {
+    "q": "Các đường mũi tên trong sơ đồ khối của thuật toán có chức năng gì?",
+    "options": [
+      "Xác định trình tự, hướng thực hiện lần lượt các bước của thuật toán.",
+      "Dùng để trang trí cho sơ đồ khối trực quan hơn.",
+      "Dùng để thực hiện các phép tính toán nhân và chia.",
+      "Biểu diễn dữ liệu đầu ra cần đạt được."
+    ],
+    "answer": 0,
+    "explain": "Mũi tên chỉ rõ luồng điều khiển, giúp người xem biết bước tiếp theo cần thực hiện câu lệnh nào."
+  },
+  {
+    "q": "Cho thuật toán tính chu vi hình chữ nhật khi biết chiều dài d và chiều rộng r. Đầu ra (Output) của thuật toán này là gì?",
+    "options": [
+      "Giá trị chiều dài d và chiều rộng r.",
+      "Giá trị chu vi của hình chữ nhật.",
+      "Giá trị diện tích của hình chữ nhật.",
+      "Biểu thức toán học d cộng r nhân 2."
+    ],
+    "answer": 1,
+    "explain": "Đầu ra (Output) là kết quả cần đạt được sau khi thực hiện thuật toán, tức là giá trị chu vi hình chữ nhật."
+  },
+  {
+    "q": "Bạn Nam xây dựng thuật toán tính điểm trung bình học tập gồm 3 môn: Toán, Văn, Anh. Đầu vào (Input) của thuật toán này là gì?",
+    "options": [
+      "Điểm trung bình của cả 3 môn học.",
+      "Điểm số của ba môn học cụ thể: Toán, Văn, Anh.",
+      "Họ và tên của học sinh cần tính điểm.",
+      "Tổng điểm của ba môn học cộng lại."
+    ],
+    "answer": 1,
+    "explain": "Để tính được điểm trung bình, dữ liệu cần nhập vào hệ thống trước tiên là điểm số của ba môn học Toán, Văn và Anh."
+  },
+  {
+    "q": "Phát biểu nào sau đây đúng về mối quan hệ giữa Input và Output của một thuật toán?",
+    "options": [
+      "Thuật toán nhận dữ liệu vào (Input), thực hiện các bước xử lý để cho ra kết quả mong muốn (Output).",
+      "Thuật toán không cần có Input mà vẫn luôn tạo ra được Output chính xác.",
+      "Output luôn có giá trị trùng khớp hoàn toàn với dữ liệu Input.",
+      "Input là kết quả thu được sau khi đã hoàn thành bước Output."
+    ],
+    "answer": 0,
+    "explain": "Bản chất của thuật toán là quá trình xử lý có hệ thống nhằm biến đổi dữ liệu đầu vào (Input) thành thông tin đầu ra hữu ích (Output)."
+  },
+  {
+    "q": "Cho sơ đồ khối thực hiện công việc sau: 'Nhập hai số a, b -> Tính tích T = a x b -> Xuất T'. Sơ đồ khối này gồm các hình hình học nào biểu diễn tương ứng?",
+    "options": [
+      "Hình thoi -> Hình chữ nhật -> Hình bình hành.",
+      "Hình bình hành -> Hình chữ nhật -> Hình bình hành.",
+      "Hình chữ nhật -> Hình thoi -> Hình chữ nhật.",
+      "Hình oval -> Hình thoi -> Hình bình hành."
+    ],
+    "answer": 1,
+    "explain": "'Nhập a, b' (Nhập liệu -> Hình bình hành); 'Tính tích T' (Xử lý -> Hình chữ nhật); 'Xuất T' (Xuất liệu -> Hình bình hành)."
+  },
+  {
+    "q": "Nếu một thuật toán rơi vào vòng lặp vô tận (không bao giờ dừng lại), thuật toán đó được coi là gì?",
+    "options": [
+      "Một thuật toán hoàn hảo và tối ưu.",
+      "Một thuật toán không hoàn chỉnh và bị lỗi logic (vi phạm tính hữu hạn).",
+      "Một thuật toán chạy cực kỳ nhanh trên máy tính.",
+      "Thuật toán không cần sử dụng Input."
+    ],
+    "answer": 1,
+    "explain": "Một trong các thuộc tính bắt buộc của thuật toán là tính hữu hạn (phải dừng sau một số bước nhất định). Lặp vô hạn là một lỗi logic nghiêm trọng."
+  },
+  {
+    "q": "Ý nghĩa lớn nhất của việc biểu diễn thuật toán dưới dạng sơ đồ khối là gì?",
+    "options": [
+      "Giúp chương trình phần mềm chạy nhanh hơn.",
+      "Biểu diễn các bước thuật toán một cách trực quan, dễ hiểu, dễ kiểm tra và theo dõi logic.",
+      "Tiết kiệm mực in và giấy khi xuất tài liệu.",
+      "Tự động sửa các lỗi sai về mặt cú pháp lập trình."
+    ],
+    "answer": 1,
+    "explain": "Sơ đồ khối sử dụng các ký hiệu hình học trực quan giúp con người dễ dàng đọc hiểu, phân tích và phát hiện lỗi sai trong logic của thuật toán."
+  },
+  {
+    "q": "Cho thuật toán sau: 'Nhập số nguyên dương N. Nếu N chia hết cho 2 thì xuất ra 'N là số chẵn', ngược lại xuất ra 'N là số lẻ''. Mục đích của thuật toán này là gì?",
+    "options": [
+      "Tính tổng các số tự nhiên từ 1 đến N.",
+      "Tìm số lớn nhất trong dãy số.",
+      "Kiểm tra tính chẵn hoặc lẻ của số nguyên dương N.",
+      "Thực hiện nhân N với số 2."
+    ],
+    "answer": 2,
+    "explain": "Thuật toán kiểm tra điều kiện chia hết cho 2 của N để đưa ra kết luận số đó là số chẵn hay số lẻ."
+  },
+  {
+    "q": "Đầu ra (Output) của thuật toán 'Kiểm tra số nguyên dương N có phải số nguyên tố hay không' là gì?",
+    "options": [
+      "Giá trị của số nguyên dương N.",
+      "Kết luận 'N là số nguyên tố' hoặc 'N không phải là số nguyên tố'.",
+      "Tất cả các ước số của số nguyên dương N.",
+      "Tổng các số nguyên tố nhỏ hơn N."
+    ],
+    "answer": 1,
+    "explain": "Đầu ra của thuật toán kiểm tra số nguyên tố là lời kết luận khẳng định tính chất nguyên tố của số N dựa trên quá trình kiểm tra."
+  },
+  {
+    "q": "Cấu trúc điều khiển tuần tự được hiểu như thế nào?",
+    "options": [
+      "Các câu lệnh được thực hiện lặp đi lặp lại nhiều lần.",
+      "Các câu lệnh được thực hiện lần lượt theo trình tự từ trên xuống dưới, lệnh sau chỉ bắt đầu khi lệnh trước đã hoàn thành.",
+      "Chương trình sẽ kiểm tra điều kiện rồi chọn một trong hai nhánh để thực hiện.",
+      "Chương trình thực hiện các câu lệnh ngẫu nhiên không cần thứ tự."
+    ],
+    "answer": 1,
+    "explain": "Cấu trúc tuần tự là cấu trúc cơ bản nhất, thực hiện các công việc lần lượt theo đúng trình tự trước sau từ đầu đến cuối."
+  },
+  {
+    "q": "Phát biểu nào dưới đây biểu thị chính xác cấu trúc rẽ nhánh dạng thiếu?",
+    "options": [
+      "\"Nếu hôm nay trời mưa, em sẽ ở nhà đọc sách.\"",
+      "\"Nếu hôm nay trời mưa, em sẽ ở nhà đọc sách; ngược lại, em sẽ đi đá bóng với các bạn.\"",
+      "\"Em làm bài tập toán 10 lần cho đến khi thuộc lòng công thức.\"",
+      "\"Đầu tiên em ngủ dậy, sau đó em đánh răng, rồi em ăn sáng.\""
+    ],
+    "answer": 0,
+    "explain": "Cấu trúc rẽ nhánh dạng thiếu chỉ thực hiện hành động khi điều kiện Đúng, nếu điều kiện Sai thì bỏ qua và không có nhánh hành động thay thế (không có 'ngược lại')."
+  },
+  {
+    "q": "Phát biểu nào sau đây biểu thị cấu trúc rẽ nhánh dạng đủ?",
+    "options": [
+      "\"Nếu vẫn chưa hiểu bài thì em cần xem lại video bài giảng.\"",
+      "\"Nếu số dư của phép chia bằng 0 thì xuất ra 'Số chẵn', ngược lại thì xuất ra 'Số lẻ'.\"",
+      "\"Em thực hiện rửa bát xong rồi em đi học bài.\"",
+      "\"Lặp lại việc quét nhà cho đến khi sàn nhà sạch bụi.\""
+    ],
+    "answer": 1,
+    "explain": "Cấu trúc rẽ nhánh dạng đủ phân chia rõ ràng hai hướng thực hiện: Nếu điều kiện đúng thì làm việc này, ngược lại (điều kiện sai) thì làm việc khác."
+  },
+  {
+    "q": "Trong mô tả thuật toán, cấu trúc lặp được sử dụng trong trường hợp nào?",
+    "options": [
+      "Khi ta chỉ muốn thực hiện một công việc duy nhất một lần rồi kết thúc.",
+      "Khi một hoặc một nhóm công việc cần được thực hiện lặp đi lặp lại nhiều lần cho đến khi thỏa mãn một điều kiện dừng.",
+      "Khi cần rẽ sang hai hướng khác nhau dựa vào kết quả kiểm tra điều kiện.",
+      "Khi không xác định được các bước thực hiện tiếp theo."
+    ],
+    "answer": 1,
+    "explain": "Cấu trúc lặp dùng để tự động hóa việc lặp đi lặp lại một nhóm hành động nhiều lần theo một điều kiện kiểm soát."
+  },
+  {
+    "q": "Phát biểu nào sau đây chứa cấu trúc lặp với điều kiện dừng rõ ràng?",
+    "options": [
+      "\"Nếu gặp tình huống bị đe dọa, hãy báo ngay cho cha mẹ hoặc thầy cô giáo.\"",
+      "\"Mỗi sáng thức dậy em đều chuẩn bị sách vở đi học.\"",
+      "\"Bạn Nam thực hiện việc hít đất liên tục cho đến khi thấy mệt thì dừng.\"",
+      "\"Nếu điểm trung bình lớn hơn 8.0 thì xếp loại Giỏi, ngược lại xếp loại Khá.\""
+    ],
+    "answer": 2,
+    "explain": "Hành động 'hít đất' được thực hiện lặp đi lặp lại, và điều kiện để dừng hành động này lại là khi gặp trạng thái 'mệt'."
+  },
+  {
+    "q": "Trong sơ đồ khối của cấu trúc rẽ nhánh dạng thiếu, nhánh điều kiện mang nhãn 'Sai' sẽ dẫn tới đâu?",
+    "options": [
+      "Quay ngược mũi tên lại để kiểm tra điều kiện từ đầu.",
+      "Thực hiện một công việc thay thế khác được chỉ định sẵn.",
+      "Bỏ qua câu lệnh ở nhánh Đúng và đi thẳng đến câu lệnh tiếp theo sau cấu trúc rẽ nhánh.",
+      "Dừng toàn bộ hoạt động của thuật toán ngay lập tức."
+    ],
+    "answer": 2,
+    "explain": "Trong cấu trúc rẽ nhánh dạng thiếu, nếu điều kiện Sai, chương trình không làm gì cả mà đi thẳng tới câu lệnh tuần tự kế tiếp sau khối rẽ nhánh đó."
+  },
+  {
+    "q": "Trong sơ đồ khối của cấu trúc rẽ nhánh dạng đủ, nếu điều kiện kiểm tra nhận kết quả 'Đúng' thì công việc ở nhánh nào được thực hiện?",
+    "options": [
+      "Công việc ở nhánh 'Đúng' được thực hiện, công việc ở nhánh 'Sai' bị bỏ qua.",
+      "Công việc ở nhánh 'Sai' được thực hiện, công việc ở nhánh 'Đúng' bị bỏ qua.",
+      "Cả hai công việc ở nhánh 'Đúng' và 'Sai' đều được thực hiện song song.",
+      "Cả hai nhánh đều bị bỏ qua để chuyển sang bước tiếp theo."
+    ],
+    "answer": 0,
+    "explain": "Đối với rẽ nhánh dạng đủ, hai nhánh 'Đúng' và 'Sai' loại trừ lẫn nhau. Nếu điều kiện Đúng thì chỉ nhánh Đúng được thực hiện."
+  },
+  {
+    "q": "Một sơ đồ khối có đường mũi tên chỉ quay ngược lại một khối lệnh đã thực hiện ở phía trước biểu thị cấu trúc điều khiển nào?",
+    "options": [
+      "Cấu trúc tuần tự.",
+      "Cấu trúc rẽ nhánh dạng thiếu.",
+      "Cấu trúc rẽ nhánh dạng đủ.",
+      "Cấu trúc lặp."
+    ],
+    "answer": 3,
+    "explain": "Mũi tên quay ngược lại chỉ thị việc quay lại thực hiện một công việc đã làm trước đó, đây là ký hiệu đặc trưng của cấu trúc lặp."
+  },
+  {
+    "q": "Cho phát biểu: 'Nếu chưa làm hết bài tập thì em phải làm bài tập tiếp'. Đây là hoạt động lặp, điều kiện để em dừng việc làm bài tập là gì?",
+    "options": [
+      "Khi em cảm thấy mệt mỏi.",
+      "Khi em đã hoàn thành toàn bộ bài tập (điều kiện 'chưa làm hết bài tập' nhận giá trị Sai).",
+      "Khi ngoài trời bắt đầu tối.",
+      "Khi có bạn gọi đi chơi."
+    ],
+    "answer": 1,
+    "explain": "Hành động lặp 'Làm bài tập' diễn ra khi điều kiện 'chưa làm hết' là Đúng. Hành động này dừng lại khi điều kiện trở thành Sai, tức là đã làm hết bài tập."
+  },
+  {
+    "q": "Hoạt động nào sau đây trong đời sống hằng ngày tương ứng với cấu trúc tuần tự?",
+    "options": [
+      "\"Nếu thời tiết lạnh thì em mặc thêm áo ấm.\"",
+      "\"Em thực hiện quy trình: Vo gạo sạch -> Đổ nước vào nồi -> Cắm điện và nhấn nút nấu.\"",
+      "\"Em tập viết chữ mẫu cho đến khi viết đẹp mới dừng.\"",
+      "\"Nếu làm bài tập đúng em được điểm cao, ngược lại em phải làm lại bài.\""
+    ],
+    "answer": 1,
+    "explain": "Quy trình cắm cơm gồm các bước thực hiện lần lượt, tuần tự theo một trình tự cố định từ trước đến sau."
+  },
+  {
+    "q": "Cho câu điều khiển: 'Nếu điểm thi của em dưới trung bình thì em phải ôn tập lại lý thuyết'. Đây là ví dụ của cấu trúc nào?",
+    "options": [
+      "Cấu trúc tuần tự.",
+      "Cấu trúc rẽ nhánh dạng thiếu.",
+      "Cấu trúc rẽ nhánh dạng đủ.",
+      "Cấu trúc lặp."
+    ],
+    "answer": 1,
+    "explain": "Câu điều khiển có dạng 'Nếu... thì...' mà không có vế phản ứng ngược lại, tương ứng với cấu trúc rẽ nhánh dạng thiếu."
+  },
+  {
+    "q": "Hãy chỉ ra phát biểu thể hiện cấu trúc lặp trong các phương án thực tế sau:",
+    "options": [
+      "\"Để dọn bể cá, em xả nước cũ -> cọ rửa bể -> bơm nước mới vào.\"",
+      "\"Nếu tài khoản đủ số dư thì giao dịch thành công, ngược lại báo lỗi.\"",
+      "\"Mẹ bảo em nhặt rau cho đến khi nào hết sạch rổ rau mới thôi.\"",
+      "\"Nếu có tin nhắn mới đến thì điện thoại sẽ phát âm báo.\""
+    ],
+    "answer": 2,
+    "explain": "Hành động 'nhặt rau' được lặp đi lặp lại liên tục, điều kiện dừng là khi 'hết sạch rổ rau'."
+  },
+  {
+    "q": "Trong cấu trúc lặp, nếu điều kiện dừng không bao giờ xảy ra khiến công việc tiếp diễn mãi mãi, hiện tượng lỗi này được gọi là gì?",
+    "options": [
+      "Lặp tuần tự.",
+      "Lặp vô hạn (vòng lặp vô tận).",
+      "Rẽ nhánh sai hướng.",
+      "Thuật toán tối ưu."
+    ],
+    "answer": 1,
+    "explain": "Lặp vô hạn xảy ra khi điều kiện dừng vòng lặp không bao giờ thỏa mãn, khiến chương trình chạy lặp lại mãi mãi không thoát ra được."
+  },
+  {
+    "q": "Cho bài toán: 'Nếu đèn tín hiệu giao thông màu đỏ thì dừng lại, nếu màu vàng thì đi chậm, nếu màu xanh thì được đi'. Cấu trúc điều khiển nào được áp dụng ở đây?",
+    "options": [
+      "Một chuỗi các cấu trúc rẽ nhánh lồng nhau.",
+      "Cấu trúc lặp vô hạn.",
+      "Cấu trúc tuần tự đơn giản.",
+      "Không áp dụng cấu trúc nào."
+    ],
+    "answer": 0,
+    "explain": "Để đưa ra quyết định dựa trên nhiều trường hợp màu sắc khác nhau của đèn tín hiệu, ta phải sử dụng một chuỗi các cấu trúc rẽ nhánh lồng nhau hoặc liên tiếp nhau."
   }
 ]
