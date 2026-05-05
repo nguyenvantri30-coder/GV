@@ -1,904 +1,362 @@
-[
+﻿[
   {
-    "q": "Trong sơ đồ tư duy, yếu tố nào đóng vai trò trung tâm để phát triển các ý khác?",
-    "options": [
-      "Chủ đề trung tâm",
-      "Màu nền của trang",
-      "Hình ảnh trang trí",
-      "Các video minh họa"
-    ],
+    "q": "Sơ đồ tư duy là công cụ dùng để làm gì?[cite: 6]",
+    "options": ["Ghi chép và hệ thống hóa thông tin một cách trực quan", "Vẽ bản đồ địa lý các vùng miền", "Lập bảng biểu để tính toán con số", "Soạn thảo văn bản hành chính"],
     "answer": 0,
-    "explain": "Mọi nhánh xuất phát từ chủ đề trung tâm"
+    "explain": "Sơ đồ tư duy giúp thể hiện các khái niệm và ý tưởng một cách trực quan bằng từ ngữ và hình ảnh[cite: 6]."
   },
   {
-    "q": "Trong sơ đồ tư duy, các nhánh chính thường được nối với",
-    "options": [
-      "Chủ đề trung tâm",
-      "Các nhánh phụ",
-      "Các hình ảnh",
-      "Các tệp tin"
-    ],
-    "answer": 0,
-    "explain": "Nhánh chính nối từ chủ đề trung tâm"
+    "q": "Thành phần nào sau đây **không** thể thiếu trong một sơ đồ tư duy?[cite: 6]",
+    "options": ["Đoạn văn bản dài", "Chủ đề trung tâm, các nhánh và từ khóa", "Các công thức hóa học phức tạp", "Video minh họa"],
+    "answer": 1,
+    "explain": "Sơ đồ tư duy gồm các thành phần chính là từ ngữ ngắn gọn (từ khóa), hình ảnh và các đường nối[cite: 6]."
   },
   {
-    "q": "Lợi ích quan trọng của sơ đồ tư duy trong học tập là",
-    "options": [
-      "Giúp ghi nhớ và hệ thống kiến thức",
-      "Giúp máy tính chạy nhanh",
-      "Thay thế sách giáo khoa",
-      "Tăng dung lượng tệp"
-    ],
-    "answer": 0,
-    "explain": "Giúp tư duy logic"
+    "q": "Ưu điểm nổi bật nhất của việc sử dụng phần mềm để tạo sơ đồ tư duy so với vẽ tay là gì?[cite: 6]",
+    "options": ["Không cần dùng đến máy tính", "Dễ dàng chỉnh sửa, mở rộng và chia sẻ với người khác", "Tiết kiệm giấy và mực", "Làm cho thông tin trở nên khó hiểu hơn"],
+    "answer": 1,
+    "explain": "Phần mềm giúp khắc phục nhược điểm khó sửa chữa và chia sẻ của cách làm thủ công[cite: 6]."
   },
   {
-    "q": "Khi thay đổi vị trí của một nhánh chính trong phần mềm vẽ sơ đồ tư duy thì",
-    "options": [
-      "Các nhánh con di chuyển theo",
-      "Các nhánh con biến mất",
-      "Sơ đồ bị xóa",
-      "Không thực hiện được"
-    ],
-    "answer": 0,
-    "explain": "Nhánh con gắn với nhánh chính"
-  },
-  {
-    "q": "Trong soạn thảo văn bản, thay đổi màu chữ thuộc loại định dạng",
-    "options": [
-      "Định dạng kí tự",
-      "Định dạng đoạn",
-      "Định dạng trang",
-      "Định dạng bảng"
-    ],
-    "answer": 0,
-    "explain": "Áp dụng cho chữ"
-  },
-  {
-    "q": "Để văn bản có lề trái và lề phải thẳng hàng ta chọn",
-    "options": [
-      "Căn đều hai bên (Justify)",
-      "Căn trái",
-      "Căn phải",
-      "Căn giữa"
-    ],
-    "answer": 0,
-    "explain": "Justify"
-  },
-  {
-    "q": "Mục đích của việc định dạng văn bản là",
-    "options": [
-      "Làm văn bản đẹp và dễ đọc",
-      "Giảm dung lượng",
-      "Tránh virus",
-      "Tăng tốc máy"
-    ],
-    "answer": 0,
-    "explain": "Giúp trình bày rõ ràng"
-  },
-  {
-    "q": "Một bảng trong Word được tạo từ",
-    "options": [
-      "Các hàng và các cột",
-      "Các đoạn văn",
-      "Các hình ảnh",
-      "Các biểu tượng"
-    ],
-    "answer": 0,
-    "explain": "Hàng và cột"
-  },
-  {
-    "q": "Thông tin nào sau đây nên trình bày bằng bảng",
-    "options": [
-      "Thời khóa biểu",
-      "Bài thơ",
-      "Thư gửi bạn",
-      "Một câu chuyện"
-    ],
-    "answer": 0,
-    "explain": "Dữ liệu so sánh"
-  },
-  {
-    "q": "Công cụ nào giúp tìm nhanh một từ trong văn bản",
-    "options": [
-      "Find",
-      "Replace",
-      "Insert",
-      "Copy"
-    ],
-    "answer": 0,
-    "explain": "Find"
-  },
-  {
-    "q": "Lệnh Replace trong Word dùng để",
-    "options": [
-      "Thay thế từ hoặc cụm từ",
-      "Chèn hình",
-      "Xóa bảng",
-      "Căn lề"
-    ],
-    "answer": 0,
-    "explain": "Thay thế"
-  },
-  {
-    "q": "Lệnh Replace All có tác dụng",
-    "options": [
-      "Thay thế tất cả các từ tìm thấy",
-      "Chỉ thay thế một từ",
-      "Xóa văn bản",
-      "Chèn ảnh"
-    ],
-    "answer": 0,
-    "explain": "Thay toàn bộ"
-  },
-  {
-    "q": "Trong sơ đồ tư duy, chủ đề trung tâm nên đặt",
-    "options": [
-      "Ở giữa trang",
-      "Ở góc trái",
-      "Ở cuối trang",
-      "Ở góc phải"
-    ],
-    "answer": 0,
-    "explain": "Giữa trang"
-  },
-  {
-    "q": "Màu sắc và hình ảnh trong sơ đồ tư duy giúp",
-    "options": [
-      "Tăng khả năng ghi nhớ",
-      "Làm file nặng",
-      "Không có tác dụng",
-      "Làm chậm máy"
-    ],
-    "answer": 0,
-    "explain": "Kích thích trí nhớ"
-  },
-  {
-    "q": "Các nhánh phụ trong sơ đồ tư duy thường nối với",
-    "options": [
-      "Nhánh chính",
-      "Trang giấy",
-      "Hình ảnh",
-      "Video"
-    ],
-    "answer": 0,
-    "explain": "Từ nhánh chính"
-  },
-  {
-    "q": "Trong Word, để thay đổi font chữ ta sử dụng",
-    "options": [
-      "Font",
-      "Insert",
-      "Table",
-      "Layout"
-    ],
-    "answer": 0,
-    "explain": "Chọn font"
-  },
-  {
-    "q": "Để thay đổi cỡ chữ ta dùng",
-    "options": [
-      "Font Size",
-      "Insert",
-      "Layout",
-      "Table"
-    ],
-    "answer": 0,
-    "explain": "Cỡ chữ"
-  },
-  {
-    "q": "Để định dạng một từ trước tiên cần",
-    "options": [
-      "Bôi đen từ đó",
-      "Đóng văn bản",
-      "Xóa từ",
-      "In văn bản"
-    ],
-    "answer": 0,
-    "explain": "Chọn trước"
-  },
-  {
-    "q": "Lệnh Line Spacing dùng để",
-    "options": [
-      "Thay đổi khoảng cách dòng",
-      "Đổi màu chữ",
-      "Chèn bảng",
-      "Xóa chữ"
-    ],
-    "answer": 0,
-    "explain": "Khoảng cách dòng"
-  },
-  {
-    "q": "Trong bảng Word có thể",
-    "options": [
-      "Gộp nhiều ô thành một",
-      "Không chỉnh sửa",
-      "Không thêm cột",
-      "Không thêm hàng"
-    ],
-    "answer": 0,
-    "explain": "Có thể gộp"
-  },
-  {
-    "q": "Trình bày dữ liệu dạng bảng giúp",
-    "options": [
-      "Dễ so sánh thông tin",
-      "Khó đọc hơn",
-      "Làm file lớn",
-      "Không có lợi ích"
-    ],
-    "answer": 0,
-    "explain": "So sánh dễ"
-  },
-  {
-    "q": "Sau khi tạo bảng ta có thể",
-    "options": [
-      "Thay đổi độ rộng cột",
-      "Không chỉnh sửa",
-      "Không xóa",
-      "Không thêm"
-    ],
-    "answer": 0,
-    "explain": "Có thể chỉnh"
-  },
-  {
-    "q": "Công cụ Find giúp",
-    "options": [
-      "Tìm nhanh từ trong văn bản",
-      "Xóa bảng",
-      "Chèn hình",
-      "Đổi font"
-    ],
-    "answer": 0,
-    "explain": "Tìm kiếm"
-  },
-  {
-    "q": "Công cụ Replace giúp",
-    "options": [
-      "Thay từ này bằng từ khác",
-      "Tìm hình",
-      "Đổi bảng",
-      "Xóa trang"
-    ],
-    "answer": 0,
-    "explain": "Thay thế"
-  },
-  {
-    "q": "Công cụ Find và Replace thường nằm trong thẻ",
-    "options": [
-      "Home",
-      "Insert",
-      "Design",
-      "Layout"
-    ],
-    "answer": 0,
-    "explain": "Trong Home"
-  },
-  {
-    "q": "Bước đầu tiên khi vẽ sơ đồ tư duy bằng tay là",
-    "options": [
-      "Xác định chủ đề trung tâm",
-      "Tô màu",
-      "Viết nhánh phụ",
-      "Trang trí"
-    ],
-    "answer": 0,
-    "explain": "Xác định chủ đề"
-  },
-  {
-    "q": "Sau khi viết chủ đề trung tâm, bước tiếp theo là",
-    "options": [
-      "Vẽ các nhánh chính",
-      "In tài liệu",
-      "Xóa trang",
-      "Chèn video"
-    ],
-    "answer": 0,
-    "explain": "Nhánh chính"
-  },
-  {
-    "q": "Các nhánh phụ trong sơ đồ tư duy dùng để",
-    "options": [
-      "Bổ sung ý chi tiết",
-      "Trang trí",
-      "Xóa nội dung",
-      "Thay thế chủ đề"
-    ],
-    "answer": 0,
-    "explain": "Ý nhỏ"
-  },
-  {
-    "q": "Để thay đổi cỡ chữ từ 12 sang 14 trong Word ta",
-    "options": [
-      "Chọn văn bản và đổi Font Size",
-      "Đóng Word",
-      "Xóa văn bản",
-      "Chèn hình"
-    ],
-    "answer": 0,
-    "explain": "Đổi size"
-  },
-  {
-    "q": "Để in đậm chữ ta dùng",
-    "options": [
-      "Bold",
-      "Italic",
-      "Underline",
-      "Insert"
-    ],
-    "answer": 0,
-    "explain": "Bold"
-  },
-  {
-    "q": "Để căn giữa đoạn văn ta chọn",
-    "options": [
-      "Center",
-      "Left",
-      "Right",
-      "Justify"
-    ],
-    "answer": 0,
-    "explain": "Center"
-  },
-  {
-    "q": "Để xóa một hàng trong bảng ta",
-    "options": [
-      "Chọn hàng và Delete Row",
-      "Đóng Word",
-      "Xóa bảng",
-      "Chèn cột"
-    ],
-    "answer": 0,
-    "explain": "Delete Row"
-  },
-  {
-    "q": "Sơ đồ tư duy giúp người học",
-    "options": [
-      "Hệ thống kiến thức theo dạng nhánh",
-      "Viết văn dài hơn",
-      "Làm bài nhanh hơn",
-      "Trang trí văn bản"
-    ],
-    "answer": 0,
-    "explain": "Sơ đồ tư duy giúp hệ thống hóa kiến thức"
-  },
-  {
-    "q": "Trong sơ đồ tư duy, nhánh chính thường được vẽ",
-    "options": [
-      "Từ chủ đề trung tâm",
-      "Từ góc trang",
-      "Từ cuối trang",
-      "Từ hình ảnh"
-    ],
-    "answer": 0,
-    "explain": "Nhánh chính xuất phát từ chủ đề trung tâm"
-  },
-  {
-    "q": "Định dạng văn bản giúp",
-    "options": [
-      "Văn bản rõ ràng và dễ đọc",
-      "Văn bản dài hơn",
-      "Máy tính nhanh hơn",
-      "Xóa lỗi chính tả"
-    ],
-    "answer": 0,
-    "explain": "Mục đích là trình bày đẹp"
-  },
-  {
-    "q": "Để thay đổi màu chữ trong Word ta sử dụng",
-    "options": [
-      "Font Color",
-      "Insert",
-      "Layout",
-      "Table"
-    ],
-    "answer": 0,
-    "explain": "Font Color đổi màu chữ"
-  },
-  {
-    "q": "Trong bảng Word, giao điểm giữa hàng và cột gọi là",
-    "options": [
-      "Ô",
-      "Trang",
-      "Khối",
-      "Dòng"
-    ],
-    "answer": 0,
-    "explain": "Cell"
-  },
-  {
-    "q": "Một bảng có 5 hàng và 4 cột sẽ có",
-    "options": [
-      "20 ô",
-      "9 ô",
-      "10 ô",
-      "15 ô"
-    ],
-    "answer": 0,
-    "explain": "5×4"
-  },
-  {
-    "q": "Lệnh Find thường dùng để",
-    "options": [
-      "Tìm từ trong văn bản",
-      "Xóa từ",
-      "Chèn bảng",
-      "Chèn hình"
-    ],
-    "answer": 0,
-    "explain": "Tìm kiếm"
-  },
-  {
-    "q": "Replace giúp",
-    "options": [
-      "Thay từ này bằng từ khác",
-      "Chèn hình",
-      "Tô màu",
-      "Xóa bảng"
-    ],
-    "answer": 0,
-    "explain": "Thay thế"
-  },
-  {
-    "q": "Trong sơ đồ tư duy, nhánh phụ dùng để",
-    "options": [
-      "Thể hiện ý nhỏ",
-      "Trang trí",
-      "Xóa chủ đề",
-      "Chèn video"
-    ],
-    "answer": 0,
-    "explain": "Ý chi tiết"
-  },
-  {
-    "q": "Để chỉnh sửa văn bản trước hết ta cần",
-    "options": [
-      "Chọn (bôi đen) phần văn bản",
-      "In văn bản",
-      "Đóng Word",
-      "Xóa trang"
-    ],
-    "answer": 0,
-    "explain": "Phải chọn trước"
-  },
-  {
-    "q": "Sơ đồ tư duy là công cụ giúp",
-    "options": [
-      "Tổ chức và ghi nhớ thông tin",
-      "Viết chương trình",
-      "Tính toán",
-      "Chơi game"
-    ],
-    "answer": 0,
-    "explain": "Mindmap"
-  },
-  {
-    "q": "Chủ đề trung tâm của sơ đồ tư duy thường",
-    "options": [
-      "Đặt ở giữa",
-      "Ở cuối",
-      "Ở góc",
-      "Ở trên"
-    ],
-    "answer": 0,
-    "explain": "Giữa trang"
-  },
-  {
-    "q": "Các nhánh chính thường được vẽ",
-    "options": [
-      "Tỏa ra từ trung tâm",
-      "Song song",
-      "Thẳng đứng",
-      "Ngẫu nhiên"
-    ],
-    "answer": 0,
-    "explain": "Tỏa ra"
-  },
-  {
-    "q": "Trong sơ đồ tư duy có thể sử dụng",
-    "options": [
-      "Hình ảnh",
-      "Chữ",
-      "Màu sắc",
-      "Tất cả"
-    ],
-    "answer": 3,
-    "explain": "Kết hợp nhiều yếu tố"
-  },
-  {
-    "q": "Sơ đồ tư duy giúp",
-    "options": [
-      "Ghi nhớ nhanh",
-      "Học máy",
-      "Tăng dung lượng file",
-      "Tăng RAM"
-    ],
-    "answer": 0,
-    "explain": "Tăng khả năng nhớ"
-  },
-  {
-    "q": "Nhánh phụ trong sơ đồ tư duy",
-    "options": [
-      "Bổ sung ý cho nhánh chính",
-      "Trang trí",
-      "Xóa nội dung",
-      "Thay chủ đề"
-    ],
-    "answer": 0,
-    "explain": "Ý chi tiết"
-  },
-  {
-    "q": "Có thể tạo sơ đồ tư duy bằng",
-    "options": [
-      "Giấy và bút",
-      "Phần mềm",
-      "Cả hai",
-      "Không cách nào"
-    ],
+    "q": "Tại sao sơ đồ tư duy giúp chúng ta ghi nhớ tốt hơn?[cite: 6]",
+    "options": ["Vì nó sử dụng nhiều chữ viết", "Vì nó trình bày thông tin theo dạng cột", "Vì nó kết hợp hình ảnh, màu sắc và sự liên tưởng giữa các ý tưởng", "Vì nó chỉ sử dụng một màu duy nhất"],
     "answer": 2,
-    "explain": "Cả hai"
+    "explain": "Cách trình bày trực quan giúp nhìn nhận và phân tích vấn đề rõ ràng hơn[cite: 6]."
   },
   {
-    "q": "Một sơ đồ tư duy tốt nên",
-    "options": [
-      "Ngắn gọn",
-      "Rõ ràng",
-      "Dễ nhìn",
-      "Tất cả"
-    ],
+    "q": "Khi tạo sơ đồ tư duy trên máy tính, để thêm một ý tưởng mới phát sinh từ ý chính, ta thường thực hiện thao tác nào?",
+    "options": ["Xóa sơ đồ cũ và vẽ lại", "Tạo thêm một 'nhánh con' (sub-topic) từ nhánh chính", "Chỉ viết thêm chữ vào nhánh cũ", "Vẽ một hình tròn rời rạc"],
+    "answer": 1,
+    "explain": "Cấu trúc sơ đồ tư duy phát triển từ tâm ra ngoài thông qua các nhánh con liên kết."
+  },
+  {
+    "q": "Trong học tập, sơ đồ tư duy thường được dùng hiệu quả nhất vào việc gì?[cite: 6]",
+    "options": ["Viết nhật ký", "Tóm tắt nội dung bài học hoặc lập kế hoạch ôn tập", "Chơi trò chơi điện tử", "Gửi tin nhắn cho bạn bè"],
+    "answer": 1,
+    "explain": "Phần mềm sơ đồ tư duy đáp ứng nhu cầu giải quyết vấn đề và trao đổi thông tin trực quan[cite: 6]."
+  },
+  {
+    "q": "Để định dạng dòng chữ 'Uống nước nhớ nguồn' thành **đậm** và *nghiêng*, bạn sử dụng tổ hợp phím nào?[cite: 6]",
+    "options": ["Ctrl + B và Ctrl + I", "Ctrl + U và Ctrl + E", "Ctrl + C và Ctrl + V", "Ctrl + S và Ctrl + P"],
+    "answer": 0,
+    "explain": "Ctrl+B dùng để định dạng chữ đậm, Ctrl+I dùng để định dạng chữ nghiêng[cite: 6]."
+  },
+  {
+    "q": "Giả sử bạn cần căn dòng chữ 'Ăn quả nhớ kẻ trồng cây' vào chính giữa trang giấy, bạn sử dụng công cụ nào trên thanh ribbon?[cite: 6]",
+    "options": ["Align Left", "Align Right", "Center", "Justify"],
+    "answer": 2,
+    "explain": "Nút lệnh Center (Căn giữa) giúp trình bày văn bản cân đối giữa trang[cite: 6]."
+  },
+  {
+    "q": "Để thực hiện yêu cầu 'định dạng gạch chân' cho một đoạn văn bản, bước đầu tiên học sinh cần làm là gì?[cite: 6]",
+    "options": ["Nhấn nút Underline (U)", "Chọn (bôi đen) phần văn bản cần định dạng", "Thay đổi màu chữ", "Lưu văn bản"],
+    "answer": 1,
+    "explain": "Trước khi định dạng bất kỳ thao tác nào, ta đều phải chọn vùng văn bản muốn áp dụng[cite: 6]."
+  },
+  {
+    "q": "Thao tác nào sau đây giúp thay đổi kích thước chữ (Font size) của văn bản?",
+    "options": ["Chọn dải lệnh Home, nhập số vào ô Font Size", "Nhấn phím Enter", "Nhấn nút Bold", "Vào dải lệnh Insert"],
+    "answer": 0,
+    "explain": "Font size nằm trong nhóm Font của dải lệnh Home, cho phép điều chỉnh độ lớn của chữ."
+  },
+  {
+    "q": "Lợi ích chính của việc định dạng văn bản là gì?[cite: 6]",
+    "options": ["Giúp văn bản ngắn lại", "Làm cho văn bản đẹp, rõ ràng và dễ nhấn mạnh nội dung quan trọng", "Làm cho máy tính chạy nhanh hơn", "Để máy in không bị hỏng"],
+    "answer": 1,
+    "explain": "Định dạng giúp trình bày văn bản chuyên nghiệp và thu hút người đọc[cite: 6]."
+  },
+  {
+    "q": "Sau khi định dạng xong bài thơ, để xem kết quả trước khi in ra giấy, em sử dụng chức năng nào?",
+    "options": ["Print Preview", "Save As", "Copy", "Delete"],
+    "answer": 0,
+    "explain": "Print Preview cho phép xem trước bố cục văn bản trên trang giấy."
+  },
+  {
+    "q": "Thông tin dạng bảng thường được sử dụng khi nào là hiệu quả nhất?[cite: 6]",
+    "options": ["Khi muốn kể một câu chuyện dài", "Khi cần so sánh dữ liệu hoặc trình bày các thông tin có tính hệ thống", "Khi muốn vẽ một bức tranh", "Khi muốn ghi âm lời nói"],
+    "answer": 1,
+    "explain": "Thông tin dạng bảng giúp ta dễ dàng so sánh, tìm kiếm và tổng hợp[cite: 6]."
+  },
+  {
+    "q": "Để tạo một bảng gồm 5 cột và 2 hàng trong Word, tại hộp thoại 'Insert Table', em nhập các chỉ số như thế nào?[cite: 6]",
+    "options": ["Number of columns: 2, Number of rows: 5", "Number of columns: 5, Number of rows: 2", "Number of columns: 5, Number of rows: 5", "Number of columns: 2, Number of rows: 2"],
+    "answer": 1,
+    "explain": "Columns là số cột, Rows là số hàng[cite: 6]."
+  },
+  {
+    "q": "Dữ liệu nào sau đây **không** nên trình bày dưới dạng bảng?[cite: 6]",
+    "options": ["Thời khóa biểu", "Bảng điểm lớp học", "Một bức thư xin lỗi bạn", "Danh sách thiết bị tin học"],
+    "answer": 2,
+    "explain": "Thư từ là dạng văn bản đoạn văn, không phù hợp để kẻ bảng[cite: 6]."
+  },
+  {
+    "q": "Khi đang ở trong một bảng, để thêm một hàng mới phía dưới hàng hiện tại, em thực hiện thao tác gì?[cite: 6]",
+    "options": ["Vào dải lệnh Layout, chọn Insert Below", "Nhấn phím Delete", "Vào dải lệnh Home chọn Center", "Tắt phần mềm rồi mở lại"],
+    "answer": 0,
+    "explain": "Dải lệnh Layout của Table Tools cung cấp các công cụ thêm/xóa hàng và cột[cite: 6]."
+  },
+  {
+    "q": "Lệnh 'Merge Cells' trong bảng dùng để làm gì?[cite: 6]",
+    "options": ["Xóa toàn bộ bảng", "Gộp nhiều ô được chọn thành một ô duy nhất", "Chia một ô thành nhiều ô nhỏ", "Tô màu cho bảng"],
+    "answer": 1,
+    "explain": "Merge cells giúp kết nối các ô lại với nhau để tạo tiêu đề hoặc trình bày đặc biệt[cite: 6]."
+  },
+  {
+    "q": "Để xóa một cột trong bảng, học sinh nên thực hiện hướng dẫn nào dưới đây?[cite: 6]",
+    "options": ["Bôi đen cột đó và nhấn phím Space", "Nhấn chuột phải vào cột, chọn Delete Columns", "Nhấn phím Enter nhiều lần", "Dùng công cụ Eraser xóa từng chữ"],
+    "answer": 1,
+    "explain": "Thao tác Delete Columns sẽ loại bỏ hoàn toàn cấu trúc cột đã chọn[cite: 6]."
+  },
+  {
+    "q": "Muốn thay đổi độ rộng của một cột bằng chuột, em làm thế nào?",
+    "options": ["Kéo thả biên phải của cột đó", "Nhấn đúp chuột vào giữa ô", "Nhấn phím Ctrl", "Không thể thay đổi độ rộng cột"],
+    "answer": 0,
+    "explain": "Đưa con trỏ vào đường biên cột cho đến khi xuất hiện mũi tên hai chiều rồi kéo thả để chỉnh kích thước."
+  },
+  {
+    "q": "Trong phần mềm soạn thảo, nút lệnh 'Table' nằm ở dải lệnh (Tab) nào?[cite: 6]",
+    "options": ["Home", "Insert", "Page Layout", "View"],
+    "answer": 1,
+    "explain": "Bảng được chèn vào văn bản thông qua dải lệnh Insert[cite: 6]."
+  },
+  {
+    "q": "Để căn lề văn bản bên trong các ô của bảng, em sử dụng nhóm lệnh 'Alignment' trong dải lệnh nào?",
+    "options": ["Table Tools Layout", "Design", "Insert", "References"],
+    "answer": 0,
+    "explain": "Layout cho phép căn lề văn bản theo 9 vị trí khác nhau trong ô (trên/giữa/dưới kết hợp trái/phải/giữa)."
+  },
+  {
+    "q": "Việc trình bày thông tin ngắn gọn dưới dạng bảng có ưu điểm gì so với đoạn văn?[cite: 6]",
+    "options": ["Làm người đọc buồn ngủ", "Khó tìm thấy thông tin cần thiết", "Giúp tìm kiếm nhanh và dễ tổng hợp thông tin", "Tốn nhiều diện tích giấy hơn"],
+    "answer": 2,
+    "explain": "Sự phân chia hàng/cột giúp thông tin được khu trú rõ ràng[cite: 6]."
+  },
+  {
+    "q": "Nếu em muốn tạo một bảng bằng cách tự tay vẽ các đường biên, em chọn công cụ nào?[cite: 6]",
+    "options": ["Insert Table", "Quick Tables", "Draw Table", "Excel Spreadsheet"],
+    "answer": 2,
+    "explain": "Draw Table cho phép vẽ các đường kẻ để tạo bảng một cách linh hoạt[cite: 6]."
+  },
+  {
+    "q": "Trong một bảng điểm, hàng đầu tiên thường dùng để ghi nội dung gì?",
+    "options": ["Điểm số của học sinh đầu tiên", "Tiêu đề các cột (STT, Họ tên, Điểm...)", "Tên của giáo viên", "Ngày tháng năm"],
+    "answer": 1,
+    "explain": "Hàng tiêu đề giúp người đọc biết được ý nghĩa của dữ liệu trong các cột bên dưới."
+  },
+  {
+    "q": "Công cụ 'Find' (Tìm kiếm) trong Word thường được sử dụng khi nào?[cite: 6]",
+    "options": ["Khi muốn thay đổi font chữ", "Khi cần tìm nhanh một từ hoặc cụm từ trong văn bản dài", "Khi muốn xóa toàn bộ văn bản", "Khi muốn chèn thêm hình ảnh"],
+    "answer": 1,
+    "explain": "Find giúp xác định vị trí các từ khóa một cách tức thì[cite: 6]."
+  },
+  {
+    "q": "Để mở hộp thoại Tìm kiếm và Thay thế (Replace), em sử dụng tổ hợp phím tắt nào?[cite: 6]",
+    "options": ["Ctrl + F", "Ctrl + H", "Ctrl + S", "Ctrl + N"],
+    "answer": 1,
+    "explain": "Ctrl+H mở trực tiếp tab Replace, trong khi Ctrl+F thường mở khung Navigation hoặc tab Find[cite: 6]."
+  },
+  {
+    "q": "Chức năng 'Replace All' có tác dụng gì?[cite: 6]",
+    "options": ["Chỉ thay thế từ đầu tiên tìm thấy", "Thay thế tất cả các từ thỏa mãn điều kiện tìm kiếm trong toàn bộ văn bản", "Xóa hết tất cả các từ được tìm thấy", "Đóng hộp thoại thay thế"],
+    "answer": 1,
+    "explain": "Replace All thực hiện thay đổi hàng loạt một cách tự động[cite: 6]."
+  },
+  {
+    "q": "Khi sử dụng công cụ Tìm kiếm và Thay thế, nếu em chỉ muốn tìm mà không muốn thay đổi nội dung, em nên dùng lệnh nào?[cite: 6]",
+    "options": ["Replace", "Find Next", "Replace All", "Cancel"],
+    "answer": 1,
+    "explain": "Find Next giúp di chuyển đến vị trí tiếp theo của từ cần tìm mà không thay đổi nó[cite: 6]."
+  },
+  {
+    "q": "Công cụ thay thế có thể gây ra sai sót gì nếu người dùng không kiểm soát kỹ?[cite: 6]",
+    "options": ["Làm máy tính bị tắt đột ngột", "Thay thế nhầm các từ có chứa cụm từ cần tìm (ví dụ thay 'học' bằng 'tập' có thể biến 'học sinh' thành 'tập sinh')", "Làm biến mất toàn bộ hình ảnh", "Tự động gửi email văn bản đi"],
+    "answer": 1,
+    "explain": "Nếu không chọn 'Find whole words only', phần mềm có thể thay thế nhầm các từ con nằm trong từ khác[cite: 6]."
+  },
+  {
+    "q": "Trong hướng dẫn sử dụng công cụ Thay thế, ô 'Replace with' dùng để nhập nội dung gì?",
+    "options": ["Từ cần tìm", "Từ mới sẽ thay thế cho từ cũ", "Địa chỉ email", "Tên tệp tin"],
+    "answer": 1,
+    "explain": "Find what chứa từ cũ, Replace with chứa nội dung mới."
+  },
+  {
+    "q": "Thuật toán có thể được hiểu đơn giản là gì?[cite: 6]",
+    "options": ["Một bài toán khó", "Dãy các chỉ dẫn từng bước để giải quyết một nhiệm vụ hoặc bài toán", "Một loại ngôn ngữ lập trình", "Phần cứng của máy tính"],
+    "answer": 1,
+    "explain": "Thuật toán là quy trình các bước cụ thể để đạt được kết quả mong muốn[cite: 6]."
+  },
+  {
+    "q": "Trong sơ đồ khối của thuật toán, hình chữ nhật dùng để mô tả thao tác nào?[cite: 6]",
+    "options": ["Bắt đầu/Kết thúc", "Nhập/Xuất dữ liệu", "Các bước xử lý, tính toán", "Kiểm tra điều kiện"],
+    "answer": 2,
+    "explain": "Hình chữ nhật đại diện cho quá trình thực hiện một công việc cụ thể[cite: 6]."
+  },
+  {
+    "q": "Hình thoi trong sơ đồ khối có ý nghĩa gì?[cite: 6]",
+    "options": ["Ghi giá trị đầu ra", "Thực hiện phép cộng", "Kiểm tra điều kiện để rẽ nhánh", "Chỉ hướng đi của thuật toán"],
+    "answer": 2,
+    "explain": "Hình thoi dùng cho các cấu trúc rẽ nhánh hoặc vòng lặp dựa trên điều kiện Đúng/Sai[cite: 6]."
+  },
+  {
+    "q": "Đâu là hai cách phổ biến nhất để mô tả thuật toán?[cite: 6]",
+    "options": ["Vẽ tranh và hát", "Liệt kê các bước bằng ngôn ngữ tự nhiên và dùng sơ đồ khối", "Chụp ảnh và quay phim", "Sử dụng bảng tính và biểu đồ"],
+    "answer": 1,
+    "explain": "Đây là hai cách cơ bản để trình bày logic của thuật toán cho con người và máy tính hiểu[cite: 6]."
+  },
+  {
+    "q": "Trong thuật toán tính tổng hai số $a$ và $b$, giá trị 'Tổng' được gọi là gì?[cite: 6]",
+    "options": ["Đầu vào (Input)", "Đầu ra (Output)", "Điều kiện", "Tên thuật toán"],
+    "answer": 1,
+    "explain": "Tổng là kết quả cuối cùng thu được sau quá trình xử lý[cite: 6]."
+  },
+  {
+    "q": "Khi mô tả thuật toán bằng sơ đồ khối, hình oval (hình bầu dục) được đặt ở vị trí nào?[cite: 6]",
+    "options": ["Ở giữa sơ đồ", "Ở vị trí Bắt đầu và Kết thúc", "Dùng để nối các khối", "Dùng để kiểm tra điều kiện"],
+    "answer": 1,
+    "explain": "Hình oval đánh dấu điểm khởi đầu và điểm dừng của một quy trình[cite: 6]."
+  },
+  {
+    "q": "Trong sơ đồ khối thuật toán tính tổng $a$ và $b$, thao tác 'Giá trị $a, b$' được đặt trong hình gì?[cite: 6]",
+    "options": ["Hình chữ nhật", "Hình thoi", "Hình bình hành", "Hình tròn"],
+    "answer": 2,
+    "explain": "Hình bình hành dùng để mô tả việc nhập dữ liệu đầu vào hoặc xuất dữ liệu đầu ra[cite: 6]."
+  },
+  {
+    "q": "Một thuật toán tốt cần có đặc điểm nào?",
+    "options": ["Càng dài càng tốt", "Có tính dừng (phải kết thúc sau một số bước hữu hạn)", "Không cần có đầu vào", "Chỉ người viết mới hiểu được"],
+    "answer": 1,
+    "explain": "Thuật toán phải dẫn đến kết quả sau một số bước nhất định, không được lặp vô hạn không mục đích."
+  },
+  {
+    "q": "Thao tác 'Tính Tổng $\\leftarrow a + b$' thuộc loại bước nào trong thuật toán?[cite: 6]",
+    "options": ["Nhập dữ liệu", "Xử lý dữ liệu", "Xuất dữ liệu", "Kiểm tra điều kiện"],
+    "answer": 1,
+    "explain": "Đây là bước thực hiện phép toán để biến đổi dữ liệu đầu vào[cite: 6]."
+  },
+  {
+    "q": "Tại sao cần phải mô tả thuật toán trước khi viết chương trình máy tính?",
+    "options": ["Để máy tính chạy nhanh hơn", "Để giúp người lập trình kiểm tra tính đúng đắn và logic của giải pháp", "Để làm cho chương trình phức tạp hơn", "Để không cần dùng đến bàn phím"],
+    "answer": 1,
+    "explain": "Mô tả thuật toán giúp định hình tư duy logic trước khi chuyển ngữ sang mã máy."
+  },
+  {
+    "q": "Trong sơ đồ khối, mũi tên có tác dụng gì?[cite: 6]",
+    "options": ["Để trang trí", "Chỉ trình tự thực hiện các bước của thuật toán", "Dùng để ghi chú thích", "Thay thế cho hình chữ nhật"],
+    "answer": 1,
+    "explain": "Mũi tên xác định luồng dữ liệu và hướng thực hiện tiếp theo[cite: 6]."
+  },
+  {
+    "q": "Nếu sơ đồ khối có một đường quay ngược lại một bước phía trước, đó thường là biểu hiện của cấu trúc gì?[cite: 6]",
+    "options": ["Cấu trúc tuần tự", "Cấu trúc rẽ nhánh", "Cấu trúc lặp", "Cấu trúc dừng"],
+    "answer": 2,
+    "explain": "Việc quay lại thực hiện bước trước đó dựa trên điều kiện cho thấy một chu kỳ lặp[cite: 6]."
+  },
+  {
+    "q": "Đầu vào (Input) của thuật toán 'Pha trà mời khách' là gì?",
+    "options": ["Trà đã pha xong", "Trà khô, nước sôi, ấm chén", "Lời khen của khách", "Đổ trà ra chén"],
+    "answer": 1,
+    "explain": "Input là những nguyên liệu hoặc dữ liệu cần thiết ban đầu để thực hiện thuật toán."
+  },
+  {
+    "q": "Đầu ra (Output) của thuật toán 'Tìm số lớn nhất trong hai số $a, b$' là gì?",
+    "options": ["Hai số $a$ và $b$", "Số có giá trị lớn hơn", "Phép toán so sánh", "Kết quả sai"],
+    "answer": 1,
+    "explain": "Output là mục tiêu cuối cùng của bài toán tìm số lớn nhất."
+  },
+  {
+    "q": "Tính chất 'xác định' của thuật toán nghĩa là gì?",
+    "options": ["Mỗi bước phải rõ ràng, không gây nhầm lẫn", "Mọi người đều có thể làm được", "Phải viết bằng tiếng Anh", "Phải vẽ bằng bút màu"],
+    "answer": 0,
+    "explain": "Sau mỗi bước, máy tính hoặc người thực hiện phải biết chính xác bước tiếp theo là gì."
+  },
+  {
+    "q": "Cấu trúc điều khiển nào thực hiện các bước theo thứ tự từ trên xuống dưới, bước này xong mới đến bước kia?[cite: 6]",
+    "options": ["Cấu trúc rẽ nhánh", "Cấu trúc lặp", "Cấu trúc tuần tự", "Cấu trúc hỗn hợp"],
+    "answer": 2,
+    "explain": "Đây là cấu trúc cơ bản nhất của mọi thuật toán[cite: 6]."
+  },
+  {
+    "q": "Câu nói: 'Nếu trời mưa thì em mang ô' thể hiện cấu trúc điều khiển nào?[cite: 6]",
+    "options": ["Tuần tự", "Rẽ nhánh dạng thiếu", "Rẽ nhánh dạng đủ", "Lặp"],
+    "answer": 1,
+    "explain": "Chỉ có một điều kiện và một hành động đi kèm nếu điều kiện đúng[cite: 6]."
+  },
+  {
+    "q": "Cấu trúc rẽ nhánh dạng đủ khác dạng thiếu ở điểm nào?[cite: 6]",
+    "options": ["Dạng đủ có thêm hành động thực hiện khi điều kiện Sai", "Dạng đủ không có hình thoi", "Dạng thiếu không có mũi tên", "Dạng thiếu thực hiện nhanh hơn"],
+    "answer": 0,
+    "explain": "Dạng đủ bao gồm: Nếu <Điều kiện> thì <Hành động 1>, ngược lại <Hành động 2>[cite: 6]."
+  },
+  {
+    "q": "Hoạt động 'Học bài cho đến khi thuộc lòng' thuộc cấu trúc điều khiển nào?[cite: 6]",
+    "options": ["Tuần tự", "Rẽ nhánh", "Lặp", "Dừng"],
+    "answer": 2,
+    "explain": "Hành động 'Học bài' được lặp lại nhiều lần cho đến khi thỏa mãn điều kiện 'thuộc lòng'[cite: 6]."
+  },
+  {
+    "q": "Trong sơ đồ khối cấu trúc rẽ nhánh, từ hình thoi điều kiện sẽ có mấy hướng mũi tên đi ra?[cite: 6]",
+    "options": ["1 hướng", "2 hướng (Đúng và Sai)", "3 hướng", "Không có hướng nào"],
+    "answer": 1,
+    "explain": "Kết quả kiểm tra điều kiện chỉ có thể rơi vào một trong hai trường hợp: Đúng hoặc Sai[cite: 6]."
+  },
+  {
+    "q": "Để hướng dẫn học sinh mô tả thuật toán 'Nếu chưa làm hết bài tập thì phải làm tiếp', em chọn cấu trúc nào là phù hợp nhất?[cite: 6]",
+    "options": ["Lặp với điều kiện dừng là đã làm hết bài tập", "Tuần tự từ bài 1 đến bài cuối", "Rẽ nhánh xem bài nào dễ làm trước", "Kết thúc luôn không làm nữa"],
+    "answer": 0,
+    "explain": "Việc kiểm tra tình trạng bài tập và làm tiếp tạo thành một vòng lặp[cite: 6]."
+  },
+  {
+    "q": "Khi điều kiện trong cấu trúc rẽ nhánh dạng thiếu bị 'Sai', máy tính sẽ làm gì?[cite: 6]",
+    "options": ["Thoát khỏi chương trình", "Bỏ qua hành động đi kèm và thực hiện lệnh tiếp theo sau cấu trúc đó", "Quay lại kiểm tra điều kiện mãi mãi", "Báo lỗi hệ thống"],
+    "answer": 1,
+    "explain": "Cấu trúc rẽ nhánh dạng thiếu không có hành động cho trường hợp Sai, nên nó sẽ đi tiếp[cite: 6]."
+  },
+  {
+    "q": "Câu 'Nếu em làm sai ý này em sẽ bị trừ 0.25 điểm, ngược lại em được cộng 0.25 điểm' là ví dụ của cấu trúc nào?[cite: 6]",
+    "options": ["Tuần tự", "Rẽ nhánh dạng thiếu", "Rẽ nhánh dạng đủ", "Lặp"],
+    "answer": 2,
+    "explain": "Có hai hành động khác nhau cho hai kết quả của điều kiện[cite: 6]."
+  },
+  {
+    "q": "Hoạt động nào dưới đây **không** chứa cấu trúc lặp?",
+    "options": ["Đánh răng hàng ngày", "Mỗi sáng thức dậy lúc 6 giờ", "Đi bộ từ cổng trường vào lớp (lặp lại bước chân)", "Ký tên vào một tờ giấy duy nhất"],
     "answer": 3,
-    "explain": "Đặc điểm"
+    "explain": "Ký tên một lần là một hành động đơn lẻ, mang tính tuần tự."
   },
   {
-    "q": "Sơ đồ tư duy giúp",
-    "options": [
-      "Tư duy logic",
-      "Giảm RAM",
-      "Xóa file",
-      "Chơi game"
-    ],
-    "answer": 0,
-    "explain": "Logic"
+    "q": "Trong sơ đồ khối của cấu trúc lặp, điều kiện thường được đặt ở đâu để kiểm tra trước khi thực hiện hành động?[cite: 6]",
+    "options": ["Trong hình oval", "Trong hình thoi đặt trước khối hành động", "Trong hình chữ nhật", "Ở cuối sơ đồ"],
+    "answer": 1,
+    "explain": "Kiểm tra điều kiện trước giúp quyết định có bắt đầu vòng lặp hay không[cite: 6]."
   },
   {
-    "q": "Từ khóa trong sơ đồ tư duy thường",
-    "options": [
-      "Ngắn gọn",
-      "Dài",
-      "Viết cả đoạn",
-      "Không cần"
-    ],
-    "answer": 0,
-    "explain": "Key word"
+    "q": "Điều kiện dừng của một vòng lặp là gì?[cite: 6]",
+    "options": ["Là khi người dùng tắt máy tính", "Là một biểu thức điều kiện mà khi nó thỏa mãn (hoặc không thỏa mãn), vòng lặp sẽ kết thúc", "Là khi hết bộ nhớ", "Là khi ta nhấn phím Enter"],
+    "answer": 1,
+    "explain": "Vòng lặp cần một điểm dừng để thuật toán không bị lặp vô tận[cite: 6]."
   },
   {
-    "q": "Định dạng văn bản là",
-    "options": [
-      "Thay đổi cách trình bày",
-      "Xóa nội dung",
-      "In văn bản",
-      "Chèn bảng"
-    ],
-    "answer": 0,
-    "explain": "Format"
+    "q": "Trong thuật toán 'Nếu bị đe dọa thì em cần nói cho cha mẹ biết', đâu là điều kiện?[cite: 6]",
+    "options": ["Nói cho cha mẹ biết", "Bị đe dọa", "Em cần", "Cha mẹ biết"],
+    "answer": 1,
+    "explain": "Sự việc 'Bị đe dọa' là yếu tố để quyết định có thực hiện hành động báo cho cha mẹ hay không[cite: 6]."
   },
   {
-    "q": "Font chữ là",
-    "options": [
-      "Kiểu chữ",
-      "Cỡ chữ",
-      "Màu chữ",
-      "Trang"
-    ],
-    "answer": 0,
-    "explain": "Font"
+    "q": "Khi biểu diễn thuật toán dưới dạng sơ đồ khối, việc nối mũi tên từ khối hành động quay ngược lại khối điều kiện tạo nên cấu trúc gì?[cite: 6]",
+    "options": ["Cấu trúc tuần tự", "Cấu trúc lặp", "Cấu trúc rẽ nhánh", "Cấu trúc dừng"],
+    "answer": 1,
+    "explain": "Đường nối ngược tạo nên một chu trình thực hiện lại công việc[cite: 6]."
   },
   {
-    "q": "Font Size dùng để",
-    "options": [
-      "Thay đổi cỡ chữ",
-      "Chèn hình",
-      "Xóa chữ",
-      "Chèn bảng"
-    ],
-    "answer": 0,
-    "explain": "Size"
+    "q": "Lợi ích của việc sử dụng các cấu trúc điều khiển trong lập trình là gì?",
+    "options": ["Làm cho mã nguồn dài hơn", "Cho phép xử lý các tình huống phức tạp, linh hoạt và lặp lại công việc tự động", "Làm cho máy tính dễ hỏng hơn", "Để không cần phải suy nghĩ khi lập trình"],
+    "answer": 1,
+    "explain": "Các cấu trúc điều khiển là 'xương sống' tạo nên sự thông minh của chương trình."
   },
   {
-    "q": "Bold dùng để",
-    "options": [
-      "In đậm",
-      "In nghiêng",
-      "Gạch chân",
-      "Căn giữa"
-    ],
-    "answer": 0,
-    "explain": "Bold"
-  },
-  {
-    "q": "Italic dùng để",
-    "options": [
-      "In nghiêng",
-      "In đậm",
-      "Gạch chân",
-      "Xóa chữ"
-    ],
-    "answer": 0,
-    "explain": "Italic"
-  },
-  {
-    "q": "Underline dùng để",
-    "options": [
-      "Gạch chân",
-      "In đậm",
-      "Căn lề",
-      "Xóa chữ"
-    ],
-    "answer": 0,
-    "explain": "Underline"
-  },
-  {
-    "q": "Căn giữa văn bản dùng",
-    "options": [
-      "Center",
-      "Left",
-      "Right",
-      "Justify"
-    ],
-    "answer": 0,
-    "explain": "Center"
-  },
-  {
-    "q": "Căn đều hai bên",
-    "options": [
-      "Justify",
-      "Center",
-      "Left",
-      "Right"
-    ],
-    "answer": 0,
-    "explain": "Justify"
-  },
-  {
-    "q": "Line Spacing dùng để",
-    "options": [
-      "Khoảng cách dòng",
-      "Cỡ chữ",
-      "Font",
-      "Màu chữ"
-    ],
-    "answer": 0,
-    "explain": "Khoảng cách dòng"
-  },
-  {
-    "q": "Trước khi định dạng cần",
-    "options": [
-      "Chọn văn bản",
-      "Đóng Word",
-      "In văn bản",
-      "Chèn bảng"
-    ],
-    "answer": 0,
-    "explain": "Select"
-  },
-  {
-    "q": "Bảng trong Word gồm",
-    "options": [
-      "Hàng và cột",
-      "Trang",
-      "Hình",
-      "Kí tự"
-    ],
-    "answer": 0,
-    "explain": "Row Column"
-  },
-  {
-    "q": "Giao điểm hàng và cột là",
-    "options": [
-      "Ô",
-      "Trang",
-      "Dòng",
-      "Khối"
-    ],
-    "answer": 0,
-    "explain": "Cell"
-  },
-  {
-    "q": "Dữ liệu dạng bảng giúp",
-    "options": [
-      "Dễ so sánh",
-      "Khó đọc",
-      "Tăng dung lượng",
-      "Không lợi ích"
-    ],
-    "answer": 0,
-    "explain": "So sánh"
-  },
-  {
-    "q": "Có thể chèn bảng bằng",
-    "options": [
-      "Insert Table",
-      "Font",
-      "Layout",
-      "View"
-    ],
-    "answer": 0,
-    "explain": "Insert"
-  },
-  {
-    "q": "Có thể thêm",
-    "options": [
-      "Hàng",
-      "Cột",
-      "Ô",
-      "Tất cả"
-    ],
-    "answer": 3,
-    "explain": "Có thể chỉnh"
-  },
-  {
-    "q": "Có thể xóa",
-    "options": [
-      "Hàng",
-      "Cột",
-      "Bảng",
-      "Tất cả"
-    ],
-    "answer": 3,
-    "explain": "Delete"
-  },
-  {
-    "q": "Có thể gộp",
-    "options": [
-      "Nhiều ô",
-      "Trang",
-      "Dòng",
-      "Chữ"
-    ],
-    "answer": 0,
-    "explain": "Merge"
-  },
-  {
-    "q": "Có thể tách",
-    "options": [
-      "Ô",
-      "Trang",
-      "Chữ",
-      "Hình"
-    ],
-    "answer": 0,
-    "explain": "Split"
-  },
-  {
-    "q": "Có thể thay đổi",
-    "options": [
-      "Độ rộng cột",
-      "Cỡ chữ",
-      "Màu chữ",
-      "Tất cả"
-    ],
-    "answer": 3,
-    "explain": "Format"
-  },
-  {
-    "q": "Ví dụ thông tin nên dùng bảng",
-    "options": [
-      "Thời khóa biểu",
-      "Truyện",
-      "Thơ",
-      "Thư"
-    ],
-    "answer": 0,
-    "explain": "Bảng"
-  },
-  {
-    "q": "Find dùng để",
-    "options": [
-      "Tìm từ",
-      "Xóa từ",
-      "Chèn hình",
-      "Chèn bảng"
-    ],
-    "answer": 0,
-    "explain": "Search"
-  },
-  {
-    "q": "Replace dùng để",
-    "options": [
-      "Thay từ",
-      "Tìm từ",
-      "Xóa trang",
-      "Chèn bảng"
-    ],
-    "answer": 0,
-    "explain": "Replace"
-  },
-  {
-    "q": "Replace All dùng để",
-    "options": [
-      "Thay tất cả",
-      "Thay một",
-      "Xóa",
-      "Chèn"
-    ],
-    "answer": 0,
-    "explain": "All"
-  },
-  {
-    "q": "Find và Replace giúp",
-    "options": [
-      "Sửa lỗi nhanh",
-      "Chơi game",
-      "Tăng RAM",
-      "Tăng CPU"
-    ],
-    "answer": 0,
-    "explain": "Nhanh"
-  },
-  {
-    "q": "Find và Replace thường nằm trong",
-    "options": [
-      "Home",
-      "Insert",
-      "View",
-      "Design"
-    ],
-    "answer": 0,
-    "explain": "Home"
-  },
-  {
-    "q": "Find có thể",
-    "options": [
-      "Tìm cụm từ",
-      "Tìm chữ",
-      "Tìm số",
-      "Tất cả"
-    ],
-    "answer": 3,
-    "explain": "Search"
-  },
-  {
-    "q": "Replace hữu ích khi",
-    "options": [
-      "Sửa lỗi lặp",
-      "Viết văn",
-      "Chèn ảnh",
-      "Tạo bảng"
-    ],
-    "answer": 0,
-    "explain": "Sửa lỗi"
-  },
-  {
-    "q": "Find giúp",
-    "options": [
-      "Tìm nhanh trong văn bản dài",
-      "Tăng dung lượng",
-      "Xóa file",
-      "Chèn bảng"
-    ],
-    "answer": 0,
-    "explain": "Search"
-  },
-  {
-    "q": "Replace thường dùng khi",
-    "options": [
-      "Đổi từ sai",
-      "Đổi màu",
-      "Đổi font",
-      "Chèn bảng"
-    ],
-    "answer": 0,
-    "explain": "Thay từ"
-  },
-  {
-    "q": "Find và Replace đặc biệt hữu ích khi văn bản",
-    "options": [
-      "Rất dài",
-      "Rất ngắn",
-      "Có hình",
-      "Có bảng"
-    ],
-    "answer": 0,
-    "explain": "Tìm nhanh"
+    "q": "Nếu một thuật toán chỉ gồm các hình oval, hình bình hành và hình chữ nhật nối tiếp nhau theo một đường thẳng, đó là cấu trúc gì?[cite: 6]",
+    "options": ["Cấu trúc lặp", "Cấu trúc rẽ nhánh", "Cấu trúc tuần tự", "Cấu trúc sai"],
+    "answer": 2,
+    "explain": "Sự thiếu vắng hình thoi (điều kiện) cho thấy thuật toán thực hiện thẳng một lèo từ đầu đến cuối[cite: 6]."
   }
 ]
