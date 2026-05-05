@@ -144,219 +144,363 @@
     "explain": "Số góc là $\\frac{4 \\times 3}{2} = 6$."
   },
   {
-    "q": "**Hướng dẫn Q19a (Bước 1):** Để tính $\\frac{5}{6} + \\frac{1}{4}$, ta cần tìm mẫu số chung thấp nhất. Mẫu chung là bao nhiêu?",
-    "options": ["6", "4", "12", "24"],
+    "q": "Trong các cách viết sau, cách viết nào cho ta phân số?",
+    "options": ["$\\frac{2,5}{4}$", "$\\frac{5}{0}$", "$\\frac{-3}{7}$", "$\\frac{8}{1,2}$"],
     "answer": 2,
-    "explain": "BCNN(6, 4) = 12."
+    "explain": "Phân số có dạng $\\frac{a}{b}$ với $a, b \\in \\mathbb{Z}$ và $b \\ne 0$. Ở đây $-3$ và $7$ là số nguyên."
   },
   {
-    "q": "**Hướng dẫn Q19a (Bước 2):** Quy đồng phân số $\\frac{5}{6}$ về mẫu số 12 ta được?",
-    "options": ["$\\frac{10}{12}$", "$\\frac{5}{12}$", "$\\frac{15}{12}$", "$\\frac{10}{6}$"],
+    "q": "Làm tròn số $74,583$ đến chữ số thập phân thứ hai?",
+    "options": ["$74,58$", "$74,59$", "$74,60$", "$75,00$"],
     "answer": 0,
-    "explain": "Nhân cả tử và mẫu với 2."
+    "explain": "Chữ số sau hàng làm tròn (số 3) nhỏ hơn 5 nên ta giữ nguyên chữ số hàng làm tròn."
   },
   {
-    "q": "**Hướng dẫn Q19a (Bước 3):** Kết quả cuối cùng của $\\frac{5}{6} + \\frac{1}{4}$ là?",
-    "options": ["$\\frac{6}{10}$", "$\\frac{13}{12}$", "$\\frac{11}{12}$", "$\\frac{7}{12}$"],
+    "q": "Kết quả của phép tính $\\frac{-5}{12} + \frac{1}{12}$ là?",
+    "options": ["$\\frac{-1}{2}$", "$\\frac{-1}{3}$", "$\\frac{1}{3}$", "$\\frac{1}{2}$"],
     "answer": 1,
-    "explain": "$\\frac{10}{12} + \\frac{3}{12} = \\frac{13}{12}$."
+    "explain": "$\\frac{-5+1}{12} = \\frac{-4}{12} = \\frac{-1}{3}$."
   },
   {
-    "q": "**Hướng dẫn Q19b (Bước 1):** Tính nhanh $A = \\frac{3}{7} \\cdot \\frac{5}{11} + \\frac{3}{7} \\cdot \\frac{6}{11}$. Ta dùng tính chất nào?",
-    "options": ["Giao hoán", "Kết hợp", "Phân phối", "Quy tắc dấu ngoặc"],
+    "q": "Điền dấu thích hợp vào chỗ chấm: $\\frac{-2}{5} \\dots \\frac{-3}{5}$?",
+    "options": ["$>$", "$<$", "$=$", "$\\le$"],
+    "answer": 0,
+    "explain": "Vì $-2 > -3$ nên $\\frac{-2}{5} > \\frac{-3}{5}$."
+  },
+  {
+    "q": "Cho điểm $O$ nằm giữa hai điểm $A$ và $B$. Hai tia nào sau đây là hai tia đối nhau?",
+    "options": ["Tia $OA$ và tia $OB$", "Tia $AB$ và tia $BA$", "Tia $AO$ và tia $AB$", "Tia $BO$ và tia $BA$"],
+    "answer": 0,
+    "explain": "Hai tia chung gốc và tạo thành một đường thẳng là hai tia đối nhau."
+  },
+  {
+    "q": "Nếu kim đồng hồ chỉ đúng 3 giờ thì góc tạo bởi kim giờ và kim phút có số đo là?",
+    "options": ["$45^\\circ$", "$60^\\circ$", "$90^\\circ$", "$180^\\circ$"],
     "answer": 2,
-    "explain": "Đặt $\\frac{3}{7}$ làm nhân tử chung."
+    "explain": "Tại thời điểm 3 giờ, hai kim vuông góc với nhau."
   },
   {
-    "q": "**Hướng dẫn Q19b (Bước 2):** Sau khi đặt nhân tử chung, biểu thức trở thành $\\frac{3}{7} \\cdot ( \\dots )$. Phần trong ngoặc là?",
-    "options": ["$\\frac{5}{11} + \\frac{6}{11}$", "$\\frac{5}{11} \\cdot \\frac{6}{11}$", "$\\frac{3}{7} + \\frac{5}{11}$", "1"],
-    "answer": 0,
-    "explain": "Áp dụng tính chất $a \\cdot b + a \\cdot c = a(b+c)$."
+    "q": "Cho điểm $M$ thuộc đường thẳng $d$. Khẳng định nào sau đây là đúng?",
+    "options": ["$M \\notin d$", "$d \\in M$", "$M \\subset d$", "$M \\in d$"],
+    "answer": 3,
+    "explain": "Điểm thuộc đường thẳng được ký hiệu bằng ký hiệu thuộc ($\\in$)."
   },
   {
-    "q": "**Hướng dẫn Q19b (Bước 3):** Tính giá trị của $A$?",
-    "options": ["$\\frac{3}{7}$", "1", "$\\frac{11}{7}$", "$\\frac{3}{11}$"],
-    "answer": 0,
-    "explain": "$\\frac{3}{7} \\cdot 1 = \\frac{3}{7}$."
-  },
-  {
-    "q": "**Hướng dẫn Q19c (Bước 1):** Tính $B = (1,5 + 2,7) - 1,5$. Cách làm nhanh nhất là?",
-    "options": ["Tính trong ngoặc trước", "Phá ngoặc rồi nhóm số giống nhau", "Lấy $2,7 - 1,5$", "Nhân phân phối"],
-    "answer": 1,
-    "explain": "Phá ngoặc sẽ triệt tiêu được 1,5."
-  },
-  {
-    "q": "**Hướng dẫn Q19c (Bước 2):** Khi phá ngoặc biểu thức $(1,5 + 2,7) - 1,5$ ta được?",
-    "options": ["$1,5 + 2,7 - 1,5$", "$1,5 + 2,7 + 1,5$", "$1,5 - 2,7 - 1,5$", "$4,2 - 1,5$"],
-    "answer": 0,
-    "explain": "Vì trước ngoặc là dấu cộng nên giữ nguyên dấu các hạng tử."
-  },
-  {
-    "q": "**Hướng dẫn Q19c (Bước 3):** Giá trị cuối cùng của $B$ là?",
-    "options": ["0", "2,7", "1,5", "4,2"],
-    "answer": 1,
-    "explain": "$1,5 - 1,5 + 2,7 = 2,7$."
-  },
-  {
-    "q": "**Hướng dẫn Q20 (Bước 1):** Tìm $x$ biết $x + \\frac{1}{2} = \\frac{3}{4}$. Ta thực hiện chuyển vế $\\frac{1}{2}$ sang vế phải thì dấu của nó đổi thành?",
-    "options": ["Dấu cộng", "Dấu trừ", "Dấu nhân", "Dấu chia"],
-    "answer": 1,
-    "explain": "Quy tắc chuyển vế: đang cộng chuyển sang thành trừ."
-  },
-  {
-    "q": "**Hướng dẫn Q20 (Bước 2):** Khi đó $x = \\frac{3}{4} - \\frac{1}{2}$. Quy đồng $\\frac{1}{2}$ ta được?",
-    "options": ["$\\frac{1}{4}$", "$\\frac{2}{4}$", "$\\frac{3}{4}$", "$\\frac{4}{4}$"],
-    "answer": 1,
-    "explain": "$\\frac{1 \\times 2}{2 \\times 2} = \\frac{2}{4}$."
-  },
-  {
-    "q": "**Hướng dẫn Q20 (Bước 3):** Vậy giá trị của $x$ là?",
-    "options": ["$\\frac{1}{4}$", "$\\frac{5}{4}$", "$\\frac{2}{4}$", "$\\frac{1}{2}$"],
-    "answer": 0,
-    "explain": "$\\frac{3}{4} - \\frac{2}{4} = \\frac{1}{4}$."
-  },
-  {
-    "q": "**Hướng dẫn Q20 (Bài 2 - Bước 1):** Tìm $x$ biết $2x - 1,2 = 3,8$. Bước đầu tiên ta tính $2x$ bằng cách?",
-    "options": ["$3,8 - 1,2$", "$3,8 + 1,2$", "$3,8 \\cdot 1,2$", "$3,8 / 2$"],
-    "answer": 1,
-    "explain": "$2x = 3,8 + 1,2$."
-  },
-  {
-    "q": "**Hướng dẫn Q20 (Bài 2 - Bước 2):** Giá trị của $2x$ là?",
-    "options": ["2,6", "5,0", "4,0", "5,2"],
-    "answer": 1,
-    "explain": "$3,8 + 1,2 = 5,0$."
-  },
-  {
-    "q": "**Hướng dẫn Q20 (Bài 2 - Bước 3):** Vậy $x$ bằng?",
-    "options": ["10", "2,5", "5", "3"],
-    "answer": 1,
-    "explain": "$x = 5,0 / 2 = 2,5$."
-  },
-  {
-    "q": "**Hướng dẫn Q20 (Bài 3 - Bước 1):** Tìm $x$ biết $\\frac{x}{10} = \\frac{-2}{5}$. Ta dùng quy tắc nhân chéo là?",
-    "options": ["$5x = 10 \\cdot (-2)$", "$2x = -50$", "$10x = -10$", "$x = 10 - 2$"],
-    "answer": 0,
-    "explain": "Tích ngoại tỷ bằng tích trung tỷ."
-  },
-  {
-    "q": "**Hướng dẫn Q20 (Bài 3 - Bước 2):** Suy ra $5x = -20$. Vậy $x$ là?",
-    "options": ["4", "-4", "15", "-10"],
-    "answer": 1,
-    "explain": "$x = -20 / 5 = -4$."
-  },
-  {
-    "q": "**Hướng dẫn Q20 (Bài 3 - Bước 3):** Kiểm tra lại: $\\frac{-4}{10}$ rút gọn có bằng $\\frac{-2}{5}$ không?",
-    "options": ["Có", "Không", "Bằng $\\frac{2}{5}$", "Bằng $\\frac{-1}{2}$"],
-    "answer": 0,
-    "explain": "Chia cả tử và mẫu cho 2."
-  },
-  {
-    "q": "**Hướng dẫn Q21 (Bước 1):** Trên tia $Ox$ lấy $OA = 3$ cm, $OB = 7$ cm. Trong ba điểm $O, A, B$, điểm nào nằm giữa hai điểm còn lại?",
-    "options": ["Điểm $O$", "Điểm $A$", "Điểm $B$", "Không xác định được"],
-    "answer": 1,
-    "explain": "Trên cùng một tia, vì $OA < OB$ ($3 < 7$) nên $A$ nằm giữa $O$ và $B$."
-  },
-  {
-    "q": "**Hướng dẫn Q21 (Bước 2):** Công thức để tính độ dài đoạn $AB$ khi $A$ nằm giữa $O$ và $B$ là?",
-    "options": ["$OA + OB = AB$", "$OA + AB = OB$", "$AB + OB = OA$", "$OA = AB$"],
-    "answer": 1,
-    "explain": "Điểm nằm giữa chia đoạn thẳng thành hai đoạn nhỏ."
-  },
-  {
-    "q": "**Hướng dẫn Q21 (Bước 3):** Tính độ dài đoạn thẳng $AB$?",
-    "options": ["10 cm", "4 cm", "3 cm", "7 cm"],
-    "answer": 1,
-    "explain": "$AB = OB - OA = 7 - 3 = 4$ cm."
-  },
-  {
-    "q": "**Hướng dẫn Q21 (Bước 4):** Gọi $M$ là trung điểm của $OA$. Tính độ dài $OM$?",
-    "options": ["3 cm", "1,5 cm", "1 cm", "2 cm"],
-    "answer": 1,
-    "explain": "$OM = OA / 2 = 3 / 2 = 1,5$ cm."
-  },
-  {
-    "q": "**Hướng dẫn Q21 (Bước 5):** Gọi $N$ là trung điểm của $AB$. Tính độ dài $AN$?",
-    "options": ["4 cm", "2 cm", "7 cm", "3,5 cm"],
-    "answer": 1,
-    "explain": "$AN = AB / 2 = 4 / 2 = 2$ cm."
-  },
-  {
-    "q": "**Hướng dẫn Q21 (Bước 6):** Tính độ dài đoạn thẳng $MN$. Biết $A$ nằm giữa $M$ và $N$. Công thức là?",
-    "options": ["$MN = MA + AN$", "$MN = OA + AB$", "$MN = MA - AN$", "$MN = AN - MA$"],
-    "answer": 0,
-    "explain": "$MN = MA + AN$."
-  },
-  {
-    "q": "**Hướng dẫn Q21 (Bước 7):** Tính giá trị $MN$ (với $MA = 1,5$ cm, $AN = 2$ cm)?",
-    "options": ["0,5 cm", "3,5 cm", "4 cm", "3 cm"],
-    "answer": 1,
-    "explain": "$1,5 + 2 = 3,5$ cm."
-  },
-  {
-    "q": "**Hướng dẫn Q21 (Bước 8):** Nếu một điểm $I$ nằm giữa $X, Y$ và $IX = IY$ thì $I$ được gọi là gì của đoạn $XY$?",
-    "options": ["Điểm đầu", "Điểm cuối", "Trung điểm", "Điểm nằm ngoài"],
+    "q": "Trong các góc sau, góc nào là góc nhọn?",
+    "options": ["$90^\\circ$", "$120^\\circ$", "$75^\\circ$", "$180^\\circ$"],
     "answer": 2,
-    "explain": "Định nghĩa trung điểm."
+    "explain": "Góc nhọn là góc có số đo lớn hơn $0^\\circ$ và nhỏ hơn $90^\\circ$."
   },
   {
-    "q": "**Hướng dẫn Q21 (Bước 9):** Nếu $OA = 3$ cm và $A$ là trung điểm của $OC$ thì độ dài $OC$ là?",
-    "options": ["3 cm", "6 cm", "1,5 cm", "9 cm"],
+    "q": "Góc có số đo bằng $180^\\circ$ là góc gì?",
+    "options": ["Góc nhọn", "Góc vuông", "Góc tù", "Góc bẹt"],
+    "answer": 3,
+    "explain": "Góc bẹt có số đo bằng $180^\\circ$."
+  },
+  {
+    "q": "Một hộp có 5 viên bi xanh và 3 viên bi đỏ. Lấy ngẫu nhiên 1 viên bi, khả năng lấy được bi xanh là?",
+    "options": ["$\\frac{3}{8}$", "$\\frac{5}{8}$", "$\\frac{5}{3}$", "$\\frac{3}{5}$"],
     "answer": 1,
-    "explain": "$OC = 2 \\cdot OA = 6$ cm."
+    "explain": "Tổng số bi là 8. Số bi xanh là 5 nên xác suất là $5/8$."
   },
   {
-    "q": "**Hướng dẫn Q22 (Bước 1):** Để vẽ biểu đồ cột cho bảng thống kê số chấm xúc xắc, trục nằm ngang thường biểu diễn gì?",
-    "options": ["Số lần xuất hiện", "Số chấm xuất hiện (1 đến 6)", "Tên bạn Minh", "Tổng số lần gieo"],
+    "q": "Nếu biểu đồ tranh sử dụng biểu tượng $\\bigcirc$ đại diện cho 5 học sinh, vậy 3 biểu tượng $\\bigcirc$ đại diện cho bao nhiêu học sinh?",
+    "options": ["10 học sinh", "15 học sinh", "20 học sinh", "25 học sinh"],
     "answer": 1,
-    "explain": "Trục hoành biểu diễn các đối tượng thống kê."
+    "explain": "$3 \\times 5 = 15$."
   },
   {
-    "q": "**Hướng dẫn Q22 (Bước 2):** Trục thẳng đứng thường biểu diễn gì?",
-    "options": ["Số lần xuất hiện (tần số)", "Số chấm", "Thời gian", "Xác suất"],
-    "answer": 0,
-    "explain": "Trục tung biểu diễn số lượng/tần số."
-  },
-  {
-    "q": "**Hướng dẫn Q22 (Bước 3):** Nếu số chấm 4 xuất hiện 21 lần, cột tại vị trí số 4 sẽ cao bao nhiêu đơn vị trên trục đứng?",
-    "options": ["4", "10", "21", "100"],
+    "q": "Dữ liệu nào sau đây là dữ liệu định lượng (số liệu)?",
+    "options": ["Họ và tên học sinh", "Nơi sinh", "Chiều cao (cm)", "Màu sắc yêu thích"],
     "answer": 2,
-    "explain": "Độ cao của cột tương ứng với tần số."
+    "explain": "Chiều cao được biểu diễn bằng các con số cụ thể."
   },
   {
-    "q": "**Hướng dẫn Q22 (Bước 4):** Tổng số lần gieo trong bảng thống kê là 100. Đây được gọi là gì?",
-    "options": ["Dữ liệu", "Số chấm", "Kích thước mẫu (Tổng số liệu)", "Xác suất"],
-    "answer": 2,
-    "explain": "Tổng số lần thực hiện thí nghiệm."
-  },
-  {
-    "q": "**Hướng dẫn Q22 (Bước 5):** Mặt nào của con xúc xắc xuất hiện ít nhất dựa trên bảng dữ liệu (1: 20 lần, 6: 10 lần)?",
-    "options": ["Mặt 1 chấm", "Mặt 2 chấm", "Mặt 6 chấm", "Mặt 4 chấm"],
-    "answer": 2,
-    "explain": "Mặt 6 chấm có số lần thấp nhất (10)."
-  },
-  {
-    "q": "**Hướng dẫn Q22 (Bước 6):** Xác suất thực nghiệm để gieo được mặt 1 chấm (xuất hiện 20 lần trên 100 lần gieo) là?",
-    "options": ["1/5", "1/4", "1/10", "1/2"],
-    "answer": 0,
-    "explain": "$20/100 = 1/5$."
-  },
-  {
-    "q": "**Hướng dẫn Q22 (Bước 7):** Khi vẽ biểu đồ cột, khoảng cách giữa các cột nên như thế nào?",
-    "options": ["Dính sát vào nhau", "Cách đều nhau", "Cái xa cái gần", "Không quan trọng"],
+    "q": "Lớp 6B có 40 học sinh, trong đó có 8 học sinh chưa đạt. Tỉ lệ học sinh chưa đạt là bao nhiêu?",
+    "options": ["10%", "20%", "25%", "30%"],
     "answer": 1,
-    "explain": "Để đảm bảo tính thẩm mỹ và rõ ràng."
+    "explain": "$\\frac{8}{40} \\times 100\\% = 20\\%$."
   },
   {
-    "q": "**Hướng dẫn Q22 (Bước 8):** Tên biểu đồ nên đặt ở đâu?",
-    "options": ["Phía dưới biểu đồ", "Phía trên biểu đồ", "Bên trái biểu đồ", "Không cần đặt tên"],
+    "q": "Tiếp tục dữ liệu lớp 6B (40 học sinh), nếu có 12 học sinh đạt loại Tốt. Tỉ lệ học sinh Tốt là?",
+    "options": ["20%", "25%", "30%", "35%"],
+    "answer": 2,
+    "explain": "$\\frac{12}{40} \\times 100\\% = 30\\%$."
+  },
+  {
+    "q": "Nếu số học sinh Khá chiếm 40% lớp 6B (40 học sinh), thì số học sinh Khá là?",
+    "options": ["14 học sinh", "16 học sinh", "18 học sinh", "20 học sinh"],
     "answer": 1,
-    "explain": "Thông thường tên biểu đồ đặt phía trên để người xem dễ nhận biết."
+    "explain": "$40 \\times 40\\% = 16$."
   },
   {
-    "q": "**Hướng dẫn Q22 (Bước 9):** Nếu muốn so sánh số lần xuất hiện giữa các mặt, biểu đồ nào là trực quan nhất?",
-    "options": ["Biểu đồ cột", "Bảng số liệu", "Sơ đồ tia", "Hình vẽ minh họa"],
+    "q": "Tổng số học sinh Khá và Tốt của lớp 6B (40 học sinh) là bao nhiêu nếu Tốt là 12 và Khá là 16?",
+    "options": ["24", "26", "28", "30"],
+    "answer": 2,
+    "explain": "$12 + 16 = 28$."
+  },
+  {
+    "q": "Cho đoạn thẳng $PQ = 10$ cm. Gọi $K$ là trung điểm của $PQ$. Độ dài đoạn $PK$ là?",
+    "options": ["4 cm", "5 cm", "6 cm", "10 cm"],
+    "answer": 1,
+    "explain": "Trung điểm chia đoạn thẳng thành 2 phần bằng nhau: $10 / 2 = 5$."
+  },
+  {
+    "q": "Cho tia $Mx$ và $My$ là hai tia trùng nhau. Điểm $A$ thuộc tia $Mx$ ($A$ khác $M$). Khẳng định nào đúng?",
+    "options": ["$A$ không thuộc tia $My$", "$A$ thuộc tia $My$", "$M$ nằm giữa $A$ và $x$", "$x$ là gốc của tia"],
+    "answer": 1,
+    "explain": "Hai tia trùng nhau thì mọi điểm thuộc tia này cũng thuộc tia kia."
+  },
+  {
+    "q": "Cho 3 điểm $D, E, F$ thẳng hàng theo thứ tự đó. Khẳng định nào sau đây sai?",
+    "options": ["Tia $ED$ và $EF$ đối nhau", "Tia $DE$ và $DF$ trùng nhau", "Điểm $E$ nằm giữa $D$ và $F$", "Tia $FE$ và $FD$ đối nhau"],
+    "answer": 3,
+    "explain": "$FE$ và $FD$ là hai tia trùng nhau vì chung gốc $F$ và đi qua cùng các điểm $E, D$."
+  },
+  {
+    "q": "Nếu đoạn thẳng $MN = 8$ cm và điểm $I$ nằm trên $MN$ sao cho $MI = 4$ cm. $I$ có là trung điểm của $MN$ không?",
+    "options": ["Có", "Không", "Chỉ khi $M, I, N$ không thẳng hàng", "Không đủ dữ kiện"],
     "answer": 0,
-    "explain": "Biểu đồ cột giúp so sánh độ cao thấp của các đại lượng rất nhanh."
+    "explain": "$MI = 4$ cm và $I$ nằm trên $MN$ nên $IN = 8 - 4 = 4$ cm. Vì $MI = IN = 4$ nên $I$ là trung điểm."
+  },
+  {
+    "q": "Tính giá trị biểu thức: $12,5 \\times 0,4$?",
+    "options": ["4", "5", "6", "50"],
+    "answer": 1,
+    "explain": "$12,5 \\times 0,4 = 5,0$."
+  },
+  {
+    "q": "Tìm $x$ biết: $x + 2,5 = 4,1$?",
+    "options": ["1,5", "1,6", "2,6", "6,6"],
+    "answer": 1,
+    "explain": "$x = 4,1 - 2,5 = 1,6$."
+  },
+  {
+    "q": "Kết quả tung đồng xu 20 lần thấy có 12 lần xuất hiện mặt Ngửa. Xác suất thực nghiệm mặt Sấp là?",
+    "options": ["$\\frac{3}{5}$", "$\\frac{2}{5}$", "$\\frac{12}{20}$", "$\\frac{8}{12}$"],
+    "answer": 1,
+    "explain": "Số lần mặt Sấp là $20 - 12 = 8$. Xác suất là $8/20 = 2/5$."
+  },
+  {
+    "q": "Trong hình vẽ có 4 tia chung gốc. Số lượng góc tạo thành là?",
+    "options": ["4", "5", "6", "8"],
+    "answer": 2,
+    "explain": "Số góc tạo bởi $n$ tia là $\\frac{n(n-1)}{2}$. Với $n=4$, ta có $4 \\times 3 / 2 = 6$."
+  },
+  {
+    "q": "Tính nhanh: $\\frac{3}{7} \\cdot \\frac{8}{11} + \\frac{3}{7} \\cdot \\frac{3}{11}$?",
+    "options": ["$\\frac{3}{7}$", "$\\frac{11}{11}$", "$\\frac{9}{77}$", "$\\frac{6}{7}$"],
+    "answer": 0,
+    "explain": "$\\frac{3}{7}(\\frac{8}{11} + \\frac{3}{11}) = \\frac{3}{7} \\cdot 1 = \\frac{3}{7}$."
+  },
+  {
+    "q": "Giá trị của biểu thức $A = \\frac{-5}{9} + \\frac{8}{15} + \\frac{-4}{9} + \\frac{7}{15}$ là?",
+    "options": ["0", "1", "-1", "2"],
+    "answer": 0,
+    "explain": "$(\\frac{-5}{9} + \\frac{-4}{9}) + (\\frac{8}{15} + \\frac{7}{15}) = -1 + 1 = 0$."
+  },
+  {
+    "q": "Tính $B = \\frac{1}{3} + \\frac{1}{6} + \\frac{1}{10} + \\dots + \\frac{1}{45}$ (tương tự bài toán dãy số quy luật)?",
+    "options": ["$\\frac{4}{5}$", "$\\frac{9}{11}$", "$\\frac{8}{10}$", "$\\frac{2}{3}$"],
+    "answer": 0,
+    "explain": "Đây là dạng tổng phân số quy luật $\\frac{2}{n(n+1)}$."
+  },
+  {
+    "q": "Tìm $x$ biết $\\frac{2}{3}x - \\frac{1}{2} = \\frac{1}{6}$?",
+    "options": ["$x = 1$", "$x = \\frac{1}{2}$", "$x = 2$", "$x = \\frac{3}{2}$"],
+    "answer": 0,
+    "explain": "$\\frac{2}{3}x = \\frac{1}{6} + \\frac{3}{6} = \\frac{4}{6} = \\frac{2}{3} \\implies x = 1$."
+  },
+  {
+    "q": "Tìm $x$ biết $|x - 0,5| = 1,2$?",
+    "options": ["$x=1,7$", "$x=-0,7$", "$x=1,7$ hoặc $x=-0,7$", "$x=0,7$"],
+    "answer": 2,
+    "explain": "$x-0,5 = 1,2$ hoặc $x-0,5 = -1,2$."
+  },
+  {
+    "q": "Phân số nào sau đây bằng phân số $\\frac{3}{4}$?",
+    "options": ["$\\frac{6}{12}$", "$\\frac{9}{12}$", "$\\frac{12}{9}$", "$\\frac{15}{16}$"],
+    "answer": 1,
+    "explain": "$\\frac{3 \\times 3}{4 \\times 3} = \\frac{9}{12}$."
+  },
+  {
+    "q": "Kết quả của phép chia $\\frac{4}{5} : 2$ là?",
+    "options": ["$\\frac{8}{5}$", "$\\frac{2}{5}$", "$\\frac{4}{10}$", "$\\frac{1}{5}$"],
+    "answer": 1,
+    "explain": "$\\frac{4}{5} \\times \\frac{1}{2} = \\frac{2}{5}$."
+  },
+  {
+    "q": "Hỗn số $2\\frac{3}{4}$ viết dưới dạng phân số là?",
+    "options": ["$\\frac{9}{4}$", "$\\frac{11}{4}$", "$\\frac{6}{4}$", "$\\frac{5}{4}$"],
+    "answer": 1,
+    "explain": "$(2 \\times 4 + 3)/4 = 11/4$."
+  },
+  {
+    "q": "Tính $25\\%$ của $80$ là?",
+    "options": ["10", "20", "30", "40"],
+    "answer": 1,
+    "explain": "$80 \\times 0,25 = 20$."
+  },
+  {
+    "q": "Biết $40\\%$ của một số là 16. Số đó là?",
+    "options": ["32", "40", "64", "80"],
+    "answer": 1,
+    "explain": "$16 : 0,4 = 40$."
+  },
+  {
+    "q": "Số đối của số thập phân $-3,25$ là?",
+    "options": ["$3,25$", "$-3,25$", "$0,25$", "$3,52$"],
+    "answer": 0,
+    "explain": "Số đối của $-a$ là $a$."
+  },
+  {
+    "q": "Số thập phân $0,75$ được viết dưới dạng phân số tối giản là?",
+    "options": ["$\\frac{75}{100}$", "$\\frac{15}{20}$", "$\\frac{3}{4}$", "$\\frac{3}{5}$"],
+    "answer": 2,
+    "explain": "$75/100 = 3/4$."
+  },
+  {
+    "q": "Sắp xếp các số sau theo thứ tự tăng dần: $-1,2; 0,5; -2,3; 1,1$?",
+    "options": ["$-1,2; -2,3; 0,5; 1,1$", "$-2,3; -1,2; 0,5; 1,1$", "$1,1; 0,5; -1,2; -2,3$", "$0,5; 1,1; -1,2; -2,3$"],
+    "answer": 1,
+    "explain": "Số âm càng lớn thì giá trị càng nhỏ."
+  },
+  {
+    "q": "Cho đoạn thẳng $AB = 6$ cm. Điểm $C$ nằm giữa $A$ và $B$ sao cho $AC = 2$ cm. Độ dài $BC$ là?",
+    "options": ["2 cm", "3 cm", "4 cm", "8 cm"],
+    "answer": 2,
+    "explain": "$BC = AB - AC = 6 - 2 = 4$ cm."
+  },
+  {
+    "q": "Cho $\\angle xOy = 60^\\circ$ và $\\angle yOz = 30^\\circ$. Nếu tia $Oy$ nằm giữa $Ox$ và $Oz$ thì $\\angle xOz = $?",
+    "options": ["$30^\\circ$", "$60^\\circ$", "$90^\\circ$", "$120^\\circ$"],
+    "answer": 2,
+    "explain": "$\\angle xOz = \\angle xOy + \\angle yOz = 60 + 30 = 90^\\circ$."
+  },
+  {
+    "q": "Khẳng định nào đúng về hình tia?",
+    "options": ["Tia bị giới hạn ở hai đầu", "Tia có độ dài vô hạn", "Tia chỉ có một gốc và kéo dài vô tận về một phía", "Hai tia chung gốc luôn đối nhau"],
+    "answer": 2,
+    "explain": "Định nghĩa về tia trong hình học cơ bản."
+  },
+  {
+    "q": "Nếu điểm $M$ nằm giữa $A$ và $B$ thì:",
+    "options": ["$AM + MB = AB$", "$AM = MB$", "$AM + AB = MB$", "$AB + MB = AM$"],
+    "answer": 0,
+    "explain": "Hệ thức cộng đoạn thẳng khi có điểm nằm giữa."
+  },
+  {
+    "q": "Góc vuông có số đo là?",
+    "options": ["$0^\\circ$", "$45^\\circ$", "$90^\\circ$", "$180^\\circ$"],
+    "answer": 2,
+    "explain": "Định nghĩa góc vuông."
+  },
+  {
+    "q": "Số đo góc tù là góc $a$ thỏa mãn?",
+    "options": ["$a < 90^\\circ$", "$a = 90^\\circ$", "$90^\\circ < a < 180^\\circ$", "$a = 180^\\circ$"],
+    "answer": 2,
+    "explain": "Định nghĩa góc tù."
+  },
+  {
+    "q": "Cho đường tròn $(O; 3cm)$. Một điểm $A$ nằm trên đường tròn thì đoạn $OA$ bằng?",
+    "options": ["1,5 cm", "3 cm", "6 cm", "Không xác định"],
+    "answer": 1,
+    "explain": "Khoảng cách từ tâm đến mọi điểm trên đường tròn bằng bán kính."
+  },
+  {
+    "q": "Trong biểu đồ cột, trục nằm ngang thường biểu diễn?",
+    "options": ["Số liệu", "Đối tượng thống kê", "Tên biểu đồ", "Đơn vị tính"],
+    "answer": 1,
+    "explain": "Trục ngang biểu diễn các danh mục hoặc đối tượng."
+  },
+  {
+    "q": "Để so sánh dân số hai tỉnh qua các năm, loại biểu đồ nào phù hợp nhất?",
+    "options": ["Biểu đồ tranh", "Biểu đồ cột đơn", "Biểu đồ cột kép", "Bảng số liệu đơn giản"],
+    "answer": 2,
+    "explain": "Biểu đồ cột kép dùng để so sánh hai nhóm đối tượng cùng tiêu chí."
+  },
+  {
+    "q": "Dữ liệu 'Xếp loại học lực: Giỏi, Khá, Trung bình' là loại dữ liệu gì?",
+    "options": ["Dữ liệu số", "Dữ liệu không là số", "Dữ liệu định lượng", "Số nguyên"],
+    "answer": 1,
+    "explain": "Đây là các nhãn tên, không phải con số tính toán được."
+  },
+  {
+    "q": "Tính xác suất thực nghiệm xuất hiện mặt ngửa khi tung đồng xu 50 lần, biết có 26 lần ngửa?",
+    "options": ["0,5", "0,52", "0,48", "0,26"],
+    "answer": 1,
+    "explain": "26 / 50 = 0,52."
+  },
+  {
+    "q": "Gieo con xúc xắc 6 mặt, sự kiện 'số chấm xuất hiện là 7' là:",
+    "options": ["Sự kiện chắc chắn", "Sự kiện không thể", "Sự kiện có thể", "Sự kiện ngẫu nhiên"],
+    "answer": 1,
+    "explain": "Xúc xắc chỉ có từ 1 đến 6 chấm."
+  },
+  {
+    "q": "Số nguyên âm lớn nhất là?",
+    "options": ["0", "-1", "Không tồn tại", "-999"],
+    "answer": 1,
+    "explain": "Trong các số nguyên âm, -1 là số gần 0 nhất về phía bên phải."
+  },
+  {
+    "q": "Kết quả của $(-5) \\times (-4)$ là?",
+    "options": ["-20", "20", "9", "-9"],
+    "answer": 1,
+    "explain": "Nhân hai số cùng dấu kết quả dương."
+  },
+  {
+    "q": "Số thập phân nào lớn nhất trong các số: $0,12; 0,102; 0,11; 0,2$?",
+    "options": ["0,12", "0,102", "0,11", "0,2"],
+    "answer": 3,
+    "explain": "So sánh phần mười: 2 là lớn nhất."
+  },
+  {
+    "q": "Phân số $\\frac{4}{5}$ viết dưới dạng số thập phân là?",
+    "options": ["0,4", "0,5", "0,8", "1,2"],
+    "answer": 2,
+    "explain": "4 : 5 = 0,8."
+  },
+  {
+    "q": "Cho góc $\\angle ABC$. Đỉnh của góc là?",
+    "options": ["Điểm A", "Điểm B", "Điểm C", "Đoạn AB"],
+    "answer": 1,
+    "explain": "Đỉnh là điểm chung của hai tia."
+  },
+  {
+    "q": "Nếu tia $Ot$ là tia phân giác của góc $\\angle xOy$ và $\\angle xOy = 80^\\circ$ thì $\\angle xOt = $?",
+    "options": ["$40^\\circ$", "$80^\\circ$", "$160^\\circ$", "$20^\\circ$"],
+    "answer": 0,
+    "explain": "Tia phân giác chia góc thành 2 phần bằng nhau: $80/2 = 40$."
+  },
+  {
+    "q": "Hai tia chung gốc tạo thành một đường thẳng được gọi là:",
+    "options": ["Hai tia trùng nhau", "Hai tia đối nhau", "Hai tia song song", "Hai tia vuông góc"],
+    "answer": 1,
+    "explain": "Định nghĩa hai tia đối nhau."
+  },
+  {
+    "q": "Muốn tìm $\\frac{m}{n}$ của số $a$, ta tính:",
+    "options": ["$a + \\frac{m}{n}$", "$a : \\frac{m}{n}$", "$a \\cdot \\frac{m}{n}$", "$a - \\frac{m}{n}$"],
+    "answer": 2,
+    "explain": "Quy tắc tìm giá trị phân số của một số cho trước."
+  },
+  {
+    "q": "Số thập phân gồm 5 đơn vị và 3 phần trăm viết là?",
+    "options": ["5,3", "5,03", "53", "0,53"],
+    "answer": 1,
+    "explain": "Hàng đơn vị là 5, hàng phần mười là 0, hàng phần trăm là 3."
+  },
+  {
+    "q": "Tỉ số phần trăm của 5 và 20 là?",
+    "options": ["20%", "25%", "40%", "50%"],
+    "answer": 1,
+    "explain": "5 / 20 = 0,25 = 25%."
+  },
+  {
+    "q": "Cho tập hợp dữ liệu: {Cam, Xoài, Ổi, Mận}. Đây là dữ liệu:",
+    "options": ["Định lượng", "Định tính", "Số thực", "Số nguyên"],
+    "answer": 1,
+    "explain": "Dữ liệu mô tả tính chất, chủng loại (không phải số)."
   }
 ]
