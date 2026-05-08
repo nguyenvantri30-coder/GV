@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Công cụ lấy Mã Đổi Tên</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f4f6f8; text-align: center; }
+        .container { max-width: 400px; margin: 50px auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        input { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background: #3498db; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; }
+        button:hover { background: #2980b9; }
+        #result { margin-top: 20px; padding: 10px; background: #e8f6ff; border: 1px solid #8ec7e8; border-radius: 6px; word-break: break-all; display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h3>Tạo Mã Đổi Tên</h3>
+    <p style="font-size: 14px; color: #666;">Nhập chính xác họ tên đã sử dụng để lấy mã xác thực</p>
+    
+    <input type="text" id="hotenInput" placeholder="Nhập họ và tên (có dấu)">
+    <button onclick="generateCode()">LẤY MÃ</button>
+
+    <div id="result">
+        <strong>Mã của bạn:</strong>
+        <p id="keyCode"></p>
+    </div>
+</div>
+
+<script>
+    /**
+     * Hàm băm tên (giữ nguyên từ file gốc)
+     * Sử dụng thuật toán SHA-256 để tạo mã từ chuỗi văn bản
+     */
+    async function hashName(name) {
+        const encoder = new TextEncoder();
+        const data = encoder.encode(name);
+        const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+    }
+
+    /**
+     * Hàm xử lý khi nhấn nút Lấy Mã
+     */
+    async function generateCode() {
+        const name = document.getElementById('hotenInput').value.trim();
+        
+        if (!name) {
+            alert("Vui lòng nhập họ tên!");
+            return;
+        }
+
+        try {
+            // Gọi hàm hashName gốc để lấy mã
+            const code = await hashName(name);
+            
+            const resultBox = document.getElementById('result');
+            const keyCodeP = document.getElementById('keyCode');
+            
+            keyCodeP.textContent = code;
+            resultBox.style.display = "block";
+        } catch (err) {
+            alert("Có lỗi xảy ra: " + err);
+        }
+    }
+</script>
+
+</body>
+</html>
