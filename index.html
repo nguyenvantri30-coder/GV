@@ -572,6 +572,68 @@
       color: var(--primary);
       margin: 10px 0;
     }
+
+    /* Modal Zoom Hình Ảnh SGK In-Page (Không mở tab mới để không vi phạm giám sát) */
+    #imgZoomOverlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 999999;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+      cursor: zoom-out;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      animation: fadeInZoom 0.2s ease-out;
+    }
+    @keyframes fadeInZoom {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    #imgZoomOverlay img {
+      max-width: 95vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+      background: #fff;
+      cursor: default;
+    }
+    #imgZoomCloseBtn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(255, 255, 255, 0.25);
+      color: #fff;
+      border: 1.5px solid rgba(255, 255, 255, 0.6);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1000000;
+      transition: all 0.2s;
+    }
+    #imgZoomCloseBtn:hover {
+      background: rgba(239, 68, 68, 0.9);
+      border-color: #ef4444;
+    }
+    #imgZoomHint {
+      position: absolute;
+      bottom: 20px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 13px;
+      pointer-events: none;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
   </style>
 </head>
 <body>
@@ -744,6 +806,13 @@
         LÀM ĐỀ KHÁC
       </button>
     </div>
+  </div>
+
+  <!-- Modal Zoom Hình Ảnh SGK In-Page (Không mở tab mới để không vi phạm giám sát) -->
+  <div id="imgZoomOverlay" onclick="closeZoomImage()">
+    <button id="imgZoomCloseBtn" onclick="closeZoomImage()" title="Đóng">✕</button>
+    <img id="imgZoomTarget" src="" alt="Hình ảnh phóng to" onclick="event.stopPropagation()">
+    <div id="imgZoomHint">Chạm ra ngoài hoặc bấm nút ✕ để đóng</div>
   </div>
 
   <canvas id="snapshotCanvas" style="display:none;"></canvas>
@@ -2219,9 +2288,27 @@
     }
 
     function zoomImage(src) {
-      const win = window.open("", "_blank");
-      win.document.write(`<body style="margin:0;background:#000;display:flex;align-items:center;justify-content:center;"><img src="${src}" style="max-width:100%;max-height:100vh;"></body>`);
+      const overlay = document.getElementById("imgZoomOverlay");
+      const target = document.getElementById("imgZoomTarget");
+      if (overlay && target) {
+        target.src = src;
+        overlay.style.display = "flex";
+        document.body.style.overflow = "hidden"; // Khóa cuộn trang nền khi đang soi ảnh
+      }
     }
+
+    function closeZoomImage() {
+      const overlay = document.getElementById("imgZoomOverlay");
+      if (overlay) {
+        overlay.style.display = "none";
+        document.body.style.overflow = ""; // Khôi phục cuộn trang
+      }
+    }
+
+    // Nhấn phím Escape để đóng modal soi ảnh
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeZoomImage();
+    });
   </script>
 </body>
 </html>
