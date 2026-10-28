@@ -324,7 +324,7 @@ function capNhatDashboard() {
 }
 
 // ================================================================
-// 5. QUÉT PHÁT HIỆN GIAN LẬN
+// 5. QUÉT PHÁT HIỆN GIAN LẬN & PHÂN BIỆT ANH EM CHUNG MÁY
 // ================================================================
 function quetGianLan() {
   const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
@@ -332,12 +332,12 @@ function quetGianLan() {
   if (!dash) { capNhatDashboard(); dash = ss.getSheetByName("Dashboard"); }
 
   let startRow = dash.getLastRow() + 3;
-  dash.getRange(`A${startRow}:E${startRow}`).merge();
-  dash.getRange(`A${startRow}`).setValue("⚠️ DANH SÁCH NGHI VẤN GIAN LẬN (1 Thiết bị làm thay nhiều tên HS)")
+  dash.getRange(`A${startRow}:F${startRow}`).merge();
+  dash.getRange(`A${startRow}`).setValue("⚠️ DANH SÁCH THIẾT BỊ DÙNG CHUNG (Phát hiện thi hộ hoặc Anh/Em chung máy)")
       .setBackground("#c53030").setFontColor("#ffffff").setFontWeight("bold");
 
-  const alertHeaders = ["Mã thiết bị (Device ID)", "Số học sinh dùng chung", "Danh sách các học sinh", "Các lớp", "Đợt thi"];
-  dash.getRange(startRow + 1, 1, 1, 5).setValues([alertHeaders])
+  const alertHeaders = ["Mã thiết bị (Device ID)", "Số học sinh dùng chung", "Danh sách các học sinh", "Các lớp", "Đợt thi", "Phân loại"];
+  dash.getRange(startRow + 1, 1, 1, 6).setValues([alertHeaders])
       .setBackground("#e53e3e").setFontColor("#ffffff").setFontWeight("bold").setHorizontalAlignment("center");
 
   let deviceMap = {};
@@ -346,14 +346,17 @@ function quetGianLan() {
     if (s && s.getLastRow() > 1) {
       let data = s.getRange(2, 1, s.getLastRow() - 1, 8).getValues();
       data.forEach(r => {
-        let dev = r[7];
+        let dev = (r[7] || "").toString();
         let hs = r[2];
         let lop = r[1];
         if (dev && dev !== "") {
-          if (!deviceMap[dev]) deviceMap[dev] = { students: new Set(), classes: new Set(), sheets: new Set() };
-          deviceMap[dev].students.add(hs);
-          deviceMap[dev].classes.add(lop);
-          deviceMap[dev].sheets.add(sName);
+          let isSibling = dev.indexOf("Anh/em chung máy") !== -1;
+          let pureDev = dev.split(" [")[0];
+          if (!deviceMap[pureDev]) deviceMap[pureDev] = { students: new Set(), classes: new Set(), sheets: new Set(), isSibling: false };
+          deviceMap[pureDev].students.add(hs);
+          deviceMap[pureDev].classes.add(lop);
+          deviceMap[pureDev].sheets.add(sName);
+          if (isSibling) deviceMap[pureDev].isSibling = true;
         }
       });
     }
@@ -363,24 +366,31 @@ function quetGianLan() {
   let suspectCount = 0;
   for (let dev in deviceMap) {
     if (deviceMap[dev].students.size > 1) {
-      dash.getRange(suspectRow, 1, 1, 5).setValues([[
+      let classification = deviceMap[dev].isSibling ? "👨‍👩‍👧‍👦 Anh em chung máy (Hợp lệ)" : "🔴 Nghi vấn thi hộ / làm thay";
+      dash.getRange(suspectRow, 1, 1, 6).setValues([[
         dev,
         deviceMap[dev].students.size,
         Array.from(deviceMap[dev].students).join(", "),
         Array.from(deviceMap[dev].classes).join(", "),
-        Array.from(deviceMap[dev].sheets).join(", ")
+        Array.from(deviceMap[dev].sheets).join(", "),
+        classification
       ]]);
+      if (deviceMap[dev].isSibling) {
+        dash.getRange(suspectRow, 6).setFontColor("#2b6cb0").setFontWeight("bold");
+      } else {
+        dash.getRange(suspectRow, 6).setFontColor("#c53030").setFontWeight("bold");
+        suspectCount++;
+      }
       suspectRow++;
-      suspectCount++;
     }
   }
 
-  if (suspectCount === 0) {
-    dash.getRange(suspectRow, 1, 1, 5).merge().setValue("✅ Không phát hiện thiết bị nào làm thay nhiều học sinh!")
+  if (suspectRow === startRow + 2) {
+    dash.getRange(suspectRow, 1, 1, 6).merge().setValue("✅ Không phát hiện thiết bị nào làm thay nhiều học sinh!")
         .setHorizontalAlignment("center").setFontColor("#2f855a");
   }
 
-  return `Phát hiện ${suspectCount} thiết bị nghi vấn.`;
+  return `Đã quét xong: Phát hiện ${suspectCount} thiết bị nghi vấn thi hộ.`;
 }
 
 // ================================================================

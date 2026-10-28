@@ -643,6 +643,14 @@
         <div id="studentValidateMsg" style="font-size:13px;margin-top:6px;font-weight:600;"></div>
       </div>
 
+      <!-- HỘP XÁC NHẬN ANH/CHỊ/EM DÙNG CHUNG THIẾT BỊ -->
+      <div id="siblingNoticeBox" style="display:none;background:#e8f4fd;border:1px solid #3182ce;border-radius:8px;padding:12px;margin:10px 0;font-size:14px;color:#2c5282;">
+        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
+          <input type="checkbox" id="siblingCheckbox" style="margin-top:3px;transform:scale(1.2);">
+          <span>Thiết bị này vừa được bạn <b><span id="prevStudentTxt"></span></b> sử dụng. Tích vào đây nếu các em là <b>anh/chị/em trong cùng gia đình dùng chung máy</b>.</span>
+        </label>
+      </div>
+
       <!-- CAMERA PREVIEW & PROCTORING -->
       <div class="form-group">
         <label>Camera giám sát khuôn mặt:</label>
@@ -700,9 +708,18 @@
       <h2>KẾT QUẢ BÀI LÀM</h2>
       <div class="result-score" id="resultScore">0.0</div>
       <p id="resultDetails">Số câu đúng: 0/0</p>
-      <div id="resultStatusTxt" style="font-size:14px;color:var(--gray-700);margin-bottom:15px;">Đang gửi kết quả...</div>
-      <button class="btn-main" onclick="reviewQuiz()">XEM LẠI BÀI LÀM</button>
-      <button class="btn-main" style="background:var(--gray-700);margin-top:8px;" onclick="location.reload()">LÀM ĐỀ KHÁC</button>
+      <div id="resultStatusTxt" style="font-size:14px;color:var(--gray-700);margin-bottom:15px;font-weight:600;">⏳ Đang đồng bộ kết quả về máy chủ...</div>
+      
+      <button id="retrySubmitBtn" class="btn-main" style="background:#dd6b20;display:none;margin-bottom:10px;" onclick="retrySendResult()">
+        🔄 GỬI LẠI KẾT QUẢ VỀ MÁY CHỦ
+      </button>
+
+      <button id="reviewQuizBtn" class="btn-main" onclick="reviewQuiz()" disabled style="opacity:0.6;cursor:not-allowed;">
+        ⏳ ĐANG LƯU KẾT QUẢ...
+      </button>
+      <button id="newQuizBtn" class="btn-main" style="background:var(--gray-700);margin-top:8px;opacity:0.6;cursor:not-allowed;" onclick="location.reload()" disabled>
+        LÀM ĐỀ KHÁC
+      </button>
     </div>
   </div>
 
@@ -916,11 +933,26 @@
         isStudentVerified = true;
         msgEl.textContent = `✅ Xác thực thành công: ${found.HoTen} (Mã HS: ${found.MaHs || found.HsId || 'OK'})`;
         msgEl.style.color = "var(--success)";
+
+        // Kiểm tra xem thiết bị này trước đó đã có học sinh khác làm không (anh/chị/em chung máy)
+        const prevName = localStorage.getItem("quiz_last_hoten");
+        const prevLop = localStorage.getItem("quiz_last_lop");
+        const sibBox = document.getElementById("siblingNoticeBox");
+        if (prevName && prevName.toLowerCase() !== found.HoTen.toLowerCase()) {
+          const txtEl = document.getElementById("prevStudentTxt");
+          if (txtEl) txtEl.textContent = `${prevName} (${prevLop || 'Lớp khác'})`;
+          if (sibBox) sibBox.style.display = "block";
+        } else {
+          if (sibBox) sibBox.style.display = "none";
+        }
+
         return true;
       } else {
         isStudentVerified = false;
         msgEl.textContent = `❌ Không tìm thấy tên "${rawName}" trong danh sách lớp ${lop} từ vnEdu!`;
         msgEl.style.color = "var(--danger)";
+        const sibBox = document.getElementById("siblingNoticeBox");
+        if (sibBox) sibBox.style.display = "none";
         return false;
       }
     }
@@ -1896,8 +1928,93 @@
       await captureAndSendResult(finalScore, correctCount);
     }
 
+    let lastSubmitFormData = null;
+
+    async function retrySendResult() {
+      if (!lastSubmitFormData) return;
+      const retryBtn = document.getElementById("retrySubmitBtn");
+      if (retryBtn) retryBtn.style.display = "none";
+      await doSendResultPayload(lastSubmitFormData);
+    }
+
+    async function doSendResultPayload(fd) {
+      const statusTxt = document.getElementById("resultStatusTxt");
+      const reviewBtn = document.getElementById("reviewQuizBtn");
+      const newBtn = document.getElementById("newQuizBtn");
+      const retryBtn = document.getElementById("retrySubmitBtn");
+
+      try {
+        statusTxt.textContent = "⏳ Đang đồng bộ điểm và ảnh xác thực về máy chủ...";
+        statusTxt.style.color = "var(--primary)";
+
+        const resp = await fetch(PATH_SHEET, { method: "POST", body: fd });
+        const resText = await resp.text();
+
+        if (resText.includes("OK") || resp.ok) {
+          statusTxt.textContent = "✅ ĐÃ LƯU KẾT QUẢ THÀNH CÔNG VÀO BẢNG ĐIỂM!";
+          statusTxt.style.color = "var(--success)";
+
+          if (reviewBtn) {
+            reviewBtn.disabled = false;
+            reviewBtn.style.opacity = "1";
+            reviewBtn.style.cursor = "pointer";
+            reviewBtn.textContent = "📋 XEM LẠI BÀI LÀM";
+          }
+          if (newBtn) {
+            newBtn.disabled = false;
+            newBtn.style.opacity = "1";
+            newBtn.style.cursor = "pointer";
+          }
+          if (retryBtn) retryBtn.style.display = "none";
+
+          // Lưu lại học sinh cuối cùng dùng thiết bị này (phục vụ xác nhận anh em)
+          localStorage.setItem("quiz_last_hoten", studentInfo.hoten);
+          localStorage.setItem("quiz_last_lop", studentInfo.lop);
+        } else {
+          statusTxt.textContent = "⚠️ Máy chủ phản hồi: " + resText + ". Bạn có thể bấm nút thử lại!";
+          statusTxt.style.color = "#c53030";
+          if (retryBtn) retryBtn.style.display = "block";
+          if (reviewBtn) {
+            reviewBtn.disabled = false;
+            reviewBtn.style.opacity = "1";
+            reviewBtn.style.cursor = "pointer";
+            reviewBtn.textContent = "📋 XEM LẠI BÀI LÀM";
+          }
+        }
+      } catch (err) {
+        console.warn("Sheet send error:", err);
+        statusTxt.textContent = "❌ LỖI KẾT NỐI MẠNG: Không thể gửi kết quả về máy chủ! Hãy kiểm tra mạng và bấm GỬI LẠI.";
+        statusTxt.style.color = "#c53030";
+        if (retryBtn) retryBtn.style.display = "block";
+        if (reviewBtn) {
+          reviewBtn.disabled = false;
+          reviewBtn.style.opacity = "1";
+          reviewBtn.style.cursor = "pointer";
+          reviewBtn.textContent = "📋 XEM LẠI BÀI LÀM";
+        }
+      }
+    }
+
     async function captureAndSendResult(score, correctCount) {
       const statusTxt = document.getElementById("resultStatusTxt");
+      const reviewBtn = document.getElementById("reviewQuizBtn");
+      const newBtn = document.getElementById("newQuizBtn");
+      const retryBtn = document.getElementById("retrySubmitBtn");
+
+      // Khóa 2 nút lại để đợi gửi xong
+      if (reviewBtn) {
+        reviewBtn.disabled = true;
+        reviewBtn.style.opacity = "0.6";
+        reviewBtn.style.cursor = "not-allowed";
+        reviewBtn.textContent = "⏳ ĐANG LƯU KẾT QUẢ...";
+      }
+      if (newBtn) {
+        newBtn.disabled = true;
+        newBtn.style.opacity = "0.6";
+        newBtn.style.cursor = "not-allowed";
+      }
+      if (retryBtn) retryBtn.style.display = "none";
+
       const video = document.getElementById("floatingCamVideo") || document.getElementById("cameraVideo");
       const canvas = document.getElementById("snapshotCanvas");
 
@@ -1943,7 +2060,14 @@
           return id;
         }
 
-        const deviceID = getDeviceID();
+        let deviceID = getDeviceID();
+
+        // Ghi nhận cờ anh/chị/em chung thiết bị nếu có xác nhận
+        const sibCheckbox = document.getElementById("siblingCheckbox");
+        if (sibCheckbox && sibCheckbox.checked) {
+          const prevTxt = document.getElementById("prevStudentTxt") ? document.getElementById("prevStudentTxt").textContent : "";
+          deviceID += ` [Anh/em chung máy: ${prevTxt}]`;
+        }
 
         // Calculate test duration
         const durationSec = Math.floor((Date.now() - (quizStartTime || Date.now())) / 1000);
@@ -1966,19 +2090,12 @@
         fd.append("time", timeFormatted);
         fd.append("image", imgData);
 
-        statusTxt.textContent = "⏳ Đang đồng bộ điểm về máy chủ...";
-        const resp = await fetch(PATH_SHEET, { method: "POST", body: fd });
-        const resText = await resp.text();
+        lastSubmitFormData = fd;
+        await doSendResultPayload(fd);
 
-        if (resText.includes("OK") || resp.ok) {
-          statusTxt.textContent = "✅ Đã lưu kết quả thành công!";
-          statusTxt.style.color = "var(--success)";
-        } else {
-          statusTxt.textContent = "⚠️ Đã ghi nhận điểm (Máy chủ phản hồi: " + resText + ")";
-        }
       } catch (err) {
-        console.warn("Sheet send error:", err);
-        statusTxt.textContent = "⚠️ Không thể gửi ảnh lên Google Sheet. Điểm đã được lưu tại máy.";
+        console.warn("Snapshot error:", err);
+        statusTxt.textContent = "⚠️ Lỗi xử lý ảnh xác thực: " + err.message;
       }
     }
 
