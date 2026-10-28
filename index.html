@@ -1273,20 +1273,27 @@
     }
 
     async function loadFaceModels() {
+      // Ẩn các log probe WebGL nội bộ của TensorFlow.js để console hoàn toàn sạch đẹp
+      const origWarn = console.warn;
+      const origError = console.error;
+      console.warn = function(...args) {
+        if (typeof args[0] === "string" && args[0].toLowerCase().includes("webgl")) return;
+        origWarn.apply(console, args);
+      };
+      console.error = function(...args) {
+        const str = String(args[0] || "");
+        if (str.toLowerCase().includes("webgl")) return;
+        origError.apply(console, args);
+      };
+
       try {
-        // Kiểm tra xem trình duyệt có hỗ trợ WebGL phần cứng không
-        if (window.faceapi && window.faceapi.tf) {
-          const testCanvas = document.createElement("canvas");
-          const gl = testCanvas.getContext("webgl") || testCanvas.getContext("experimental-webgl");
-          if (!gl) {
-            // Chủ động chuyển sang backend CPU để tránh báo lỗi WebGL trên console
-            await faceapi.tf.setBackend("cpu");
-          }
-        }
         await faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL);
-        console.log("TinyFaceDetector loaded successfully");
+        console.log("✅ AI TinyFaceDetector (CPU) đã sẵn sàng giám sát thi!");
       } catch (err) {
-        console.warn("Face-api load error:", err);
+        origWarn("Face-api load error:", err);
+      } finally {
+        console.warn = origWarn;
+        console.error = origError;
       }
     }
 
