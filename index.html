@@ -869,7 +869,8 @@
 
       // 3. Trộn ngẫu nhiên các phương án đáp án của từng câu
       shuffledQ.forEach(q => {
-        q._imgBase = `${GITHUB_RAW}/${cachedFolderPath}/images/`;
+        const ppctPart = q._ppct ? `${q._ppct}/` : "";
+        q._imgBase = `${GITHUB_RAW}/${encodeURI(cachedFolderPath)}/images/${ppctPart}`;
 
         // Trộn các lựa chọn trắc nghiệm A, B, C, D (multichoice, calculatedmulti)
         // (Không trộn truefalse để Đúng / Sai giữ nguyên trực quan)
@@ -1466,7 +1467,12 @@
                 let rLes = await fetch(`${GITHUB_RAW}/${folderPath}/${encodeURIComponent(les.filename)}`);
                 if (rLes.ok) {
                   let lData = await rLes.json();
-                  if (lData.questions) pool.push(...lData.questions);
+                  if (lData.questions) {
+                    const mPpct = les.filename.match(/^\[(\d+)\]/);
+                    const ppctStr = mPpct ? mPpct[1] : (les.ppct ? String(les.ppct).padStart(3, '0') : '');
+                    lData.questions.forEach(q => { q._ppct = ppctStr; });
+                    pool.push(...lData.questions);
+                  }
                 }
               } catch(e) {}
             }
@@ -1483,6 +1489,9 @@
           if (!res.ok) throw new Error("HTTP " + res.status);
           const data = await res.json();
           questionsToLoad = data.questions || [];
+          const mPpct = filename.match(/^\[(\d+)\]/);
+          const ppctStr = mPpct ? mPpct[1] : "";
+          questionsToLoad.forEach(q => { q._ppct = ppctStr; });
         }
 
         if (questionsToLoad.length === 0) {
@@ -1565,14 +1574,14 @@
 
       // Replace [img:xxx.jpeg] tags
       qText = qText.replace(/\[img:([^\]]+)\]/g, (m, imgFile) => {
-        return `<img src="${q._imgBase}${imgFile}" class="q-img" alt="Hình SGK" onclick="zoomImage(this.src)">`;
+        return `<img src="${q._imgBase}${imgFile}" class="q-img" alt="Hình SGK" onerror="this.style.display='none'" onclick="zoomImage(this.src)">`;
       });
 
       // Also append images from imgs array if not present in text
       if (q.imgs && q.imgs.length > 0) {
         q.imgs.forEach(imgFile => {
           if (!qText.includes(imgFile)) {
-            qText += `<br><img src="${q._imgBase}${imgFile}" class="q-img" alt="Hình SGK" onclick="zoomImage(this.src)">`;
+            qText += `<br><img src="${q._imgBase}${imgFile}" class="q-img" alt="Hình SGK" onerror="this.style.display='none'" onclick="zoomImage(this.src)">`;
           }
         });
       }
