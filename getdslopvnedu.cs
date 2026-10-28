@@ -15,8 +15,8 @@ namespace VnEduFastSync
         public string LopId { get; set; }
         public string TenLop { get; set; }
         public string Khoi { get; set; }
-        public string MonId { get; set; }
-        public string TenMon { get; set; }
+        public string MonChuyenId { get; set; }
+        public int SoLuongHs { get; set; }
     }
 
     class Program
@@ -26,7 +26,6 @@ namespace VnEduFastSync
         static string myUserId = "";
         static string teacherFullName = "";
         static string schoolDomain = "mevzecueusitessgddaknong.vnedu.vn";
-        static string internalGvId = "";
 
         static string HttpGet(string url, string referer = "")
         {
@@ -142,107 +141,47 @@ namespace VnEduFastSync
             Console.WriteLine("[vnEdu] Dang nhap thanh cong: {0} ({1})", teacherFullName, schoolDomain);
         }
 
-        static List<ClassInfo> GetAssignedClasses(int namHoc)
+        static List<ClassInfo> GetAllSchoolClasses(int namHoc)
         {
-            Console.WriteLine("[vnEdu] Dang tai danh sach phan cong giang day...");
+            Console.WriteLine("[vnEdu] Dang tai TOAN BO danh sach lop toan truong tu vnEdu...");
             List<ClassInfo> result = new List<ClassInfo>();
 
-            try
+            string urlLop = string.Format("https://{0}/v5/?call=edu.lop_hoc.getLopAndMonChuyen&nam_hoc={1}&my_user_id={2}&app_nam_hoc={1}&my_token={3}&app_status_lop_hoc=*",
+                schoolDomain, namHoc, myUserId, myToken);
+            string rLop = HttpPost(urlLop, "[]", "application/json");
+            JObject jLop = JObject.Parse(rLop);
+            JArray arrLop = jLop["aRoot"] as JArray;
+
+            if (arrLop != null)
             {
-                string urlGv = string.Format("https://{0}/v5/?call=vnedu.giaovien.api.getUser&my_user_id={1}&app_nam_hoc={2}&my_token={3}&nam_hoc={2}&page=1&start=0&limit=1000",
-                    schoolDomain, myUserId, namHoc, myToken);
-                string rGv = HttpGet(urlGv);
-                JObject jGv = JObject.Parse(rGv);
-                JArray arrGv = jGv["aRoot"] as JArray;
-                if (arrGv != null)
+                foreach (JObject l in arrLop)
                 {
-                    foreach (JObject g in arrGv)
+                    string lid = (string)l["id"];
+                    string ten = (string)l["ten"];
+                    string khoi = (string)l["khoi"];
+                    string mc = (string)l["mon_chuyen_id"] ?? "";
+
+                    if (!string.IsNullOrEmpty(lid) && !string.IsNullOrEmpty(ten))
                     {
-                        string uid = (string)g["user_id"];
-                        string un = (string)g["user_name"];
-                        if (uid == myUserId || (!string.IsNullOrEmpty(un) && un.ToLower().Contains("nguyenvantri")))
+                        result.Add(new ClassInfo
                         {
-                            internalGvId = (string)g["gv_id"] ?? (string)g["id"];
-                            break;
-                        }
+                            LopId = lid,
+                            TenLop = ten,
+                            Khoi = khoi,
+                            MonChuyenId = mc
+                        });
                     }
                 }
             }
-            catch { }
 
-            if (string.IsNullOrEmpty(internalGvId)) internalGvId = "7219009384";
+            result.Sort((a, b) => {
+                int ka = 0, kb = 0;
+                int.TryParse(a.Khoi, out ka);
+                int.TryParse(b.Khoi, out kb);
+                if (ka != kb) return ka.CompareTo(kb);
+                return string.Compare(a.TenLop, b.TenLop, StringComparison.Ordinal);
+            });
 
-            Dictionary<string, JObject> lopDict = new Dictionary<string, JObject>();
-            try
-            {
-                string urlLop = string.Format("https://{0}/v5/?call=edu.lop_hoc.getLopAndMonChuyen&nam_hoc={1}&my_user_id={2}&app_nam_hoc={1}&my_token={3}&app_status_lop_hoc=*",
-                    schoolDomain, namHoc, myUserId, myToken);
-                string rLop = HttpPost(urlLop, "[]", "application/json");
-                JObject jLop = JObject.Parse(rLop);
-                JArray arrLop = jLop["aRoot"] as JArray;
-                if (arrLop != null)
-                {
-                    foreach (JObject l in arrLop)
-                    {
-                        string lid = (string)l["id"];
-                        if (!string.IsNullOrEmpty(lid)) lopDict[lid] = l;
-                    }
-                }
-            }
-            catch { }
-
-            Dictionary<string, string> monMap = new Dictionary<string, string>()
-            {
-                {"1", "Toán"}, {"11", "Tin"}, {"104", "KHTN"}, {"102", "LS&ĐL"},
-                {"5", "Ngữ văn"}, {"8", "Tiếng Anh"}, {"14", "Thể dục"}
-            };
-
-            try
-            {
-                string urlPc = string.Format("https://{0}/v5/?call=edu.pcgd.getPhanCong&app_nam_hoc={1}&my_token={2}",
-                    schoolDomain, namHoc, myToken);
-                string postData = string.Format("my_token={0}&my_user_id={1}&app_nam_hoc={2}&nam_hoc={2}&cap_hoc=2",
-                    Uri.EscapeDataString(myToken), Uri.EscapeDataString(myUserId), namHoc);
-                string rPc = HttpPost(urlPc, postData);
-                JObject jPc = JObject.Parse(rPc);
-
-                JObject myAssign = jPc[internalGvId] as JObject;
-                if (myAssign != null)
-                {
-                    foreach (var monProp in myAssign.Properties())
-                    {
-                        string monId = monProp.Name;
-                        string tenMon = monMap.ContainsKey(monId) ? monMap[monId] : ("Môn " + monId);
-                        JObject lops = monProp.Value as JObject;
-                        if (lops != null)
-                        {
-                            foreach (var lopProp in lops.Properties())
-                            {
-                                string lopId = lopProp.Name;
-                                string tenLop = "Lớp " + lopId;
-                                string khoi = "6";
-                                if (lopDict.ContainsKey(lopId))
-                                {
-                                    tenLop = (string)lopDict[lopId]["ten"] ?? tenLop;
-                                    khoi = (string)lopDict[lopId]["khoi"] ?? khoi;
-                                }
-
-                                result.Add(new ClassInfo
-                                {
-                                    LopId = lopId,
-                                    TenLop = tenLop,
-                                    Khoi = khoi,
-                                    MonId = monId,
-                                    TenMon = tenMon
-                                });
-                            }
-                        }
-                    }
-                }
-            }
-            catch { }
-
-            result.Sort((a, b) => string.Compare(a.TenLop, b.TenLop, StringComparison.Ordinal));
             return result;
         }
 
@@ -276,7 +215,7 @@ namespace VnEduFastSync
             try
             {
                 LoginSSO(user, pwd, namHoc);
-                var classes = GetAssignedClasses(namHoc);
+                var classes = GetAllSchoolClasses(namHoc);
 
                 string outDir = @"E:\Giao an\AGiaoan26_27\ontap_github";
                 if (!Directory.Exists(outDir)) Directory.CreateDirectory(outDir);
@@ -285,7 +224,7 @@ namespace VnEduFastSync
                 File.WriteAllText(jsonPath, JsonConvert.SerializeObject(classes, Formatting.Indented), Encoding.UTF8);
 
                 Console.WriteLine("==================================================");
-                Console.WriteLine("THANH CONG: Da xuat {0} lop phan cong vao:", classes.Count);
+                Console.WriteLine("THANH CONG: Da xuat {0} LOP TOAN TRUONG vao:", classes.Count);
                 Console.WriteLine(jsonPath);
                 Console.WriteLine("==================================================");
             }

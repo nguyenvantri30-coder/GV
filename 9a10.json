@@ -1,0 +1,392 @@
+﻿[
+  {
+    "Stt": "1",
+    "HsId": "5009974863",
+    "MaHs": "2407309303",
+    "HoTen": "Lục Huỳnh Bình An",
+    "Dob": "2012-09-16 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "2",
+    "HsId": "3891379442",
+    "MaHs": "2304646723",
+    "HoTen": "Hà Anh",
+    "Dob": "2012-05-30 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "3",
+    "HsId": "3918326743",
+    "MaHs": "2305469410",
+    "HoTen": "Nguyễn Tuấn Anh",
+    "Dob": "2012-12-08 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "4",
+    "HsId": "3908270887",
+    "MaHs": "2305109375",
+    "HoTen": "Nguyễn Bình Di",
+    "Dob": "2012-12-12 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "5",
+    "HsId": "3836963294",
+    "MaHs": "2303610386",
+    "HoTen": "Phạm Kim Diệu",
+    "Dob": "2012-01-21 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "6",
+    "HsId": "3816864613",
+    "MaHs": "2302742612",
+    "HoTen": "Võ Minh Đức",
+    "Dob": "2012-02-11 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "7",
+    "HsId": "3912232008",
+    "MaHs": "2305266356",
+    "HoTen": "Trần Thanh Hằng",
+    "Dob": "2012-10-22 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "8",
+    "HsId": "3928903900",
+    "MaHs": "2305761748",
+    "HoTen": "Nguyễn Ngọc Gia Hân",
+    "Dob": "2012-09-11 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "9",
+    "HsId": "3908362899",
+    "MaHs": "2305110795",
+    "HoTen": "Vũ Hoàng Gia Hân",
+    "Dob": "2012-04-22 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "10",
+    "HsId": "3891380010",
+    "MaHs": "2304646751",
+    "HoTen": "Thạch Đinh Quỳnh Hương",
+    "Dob": "2012-01-14 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "11",
+    "HsId": "3918288681",
+    "MaHs": "2305468699",
+    "HoTen": "Đinh Nhật Khang",
+    "Dob": "2012-10-13 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "12",
+    "HsId": "3891379945",
+    "MaHs": "2304646748",
+    "HoTen": "Nguyễn Anh Khang",
+    "Dob": "2012-09-08 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "13",
+    "HsId": "3908456002",
+    "MaHs": "2305113590",
+    "HoTen": "Nguyễn Hữu An Khang",
+    "Dob": "2011-03-15 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "14",
+    "HsId": "5009762283",
+    "MaHs": "2407096503",
+    "HoTen": "Nguyễn Đình Duy Khánh",
+    "Dob": "2012-02-12 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "15",
+    "HsId": "3911049996",
+    "MaHs": "2305228692",
+    "HoTen": "Nguyễn Trúc Ly",
+    "Dob": "2011-05-14 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "16",
+    "HsId": "3908373374",
+    "MaHs": "2305111310",
+    "HoTen": "Phan Thị Trúc Ly",
+    "Dob": "2012-05-22 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "17",
+    "HsId": "3911050002",
+    "MaHs": "2305228694",
+    "HoTen": "Cao Thị Mai",
+    "Dob": "2010-12-10 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "18",
+    "HsId": "3908475592",
+    "MaHs": "2305114236",
+    "HoTen": "Ngô Thị Ngọc Mai",
+    "Dob": "2012-01-23 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "19",
+    "HsId": "5010036783",
+    "MaHs": "2407371983",
+    "HoTen": "Võ Gia Mẫn",
+    "Dob": "2011-07-07 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "20",
+    "HsId": "3908342278",
+    "MaHs": "2305110319",
+    "HoTen": "Ngô Sỹ Hoài Nam",
+    "Dob": "2012-09-21 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "21",
+    "HsId": "3908448440",
+    "MaHs": "2305113394",
+    "HoTen": "Trần Hoài Nam",
+    "Dob": "2012-06-24 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "22",
+    "HsId": "3914798378",
+    "MaHs": "2305361851",
+    "HoTen": "Trần Thị Hồng Ngọc",
+    "Dob": "2012-07-06 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "23",
+    "HsId": "3911050016",
+    "MaHs": "2305228699",
+    "HoTen": "Mạc Hoàng Nguyên",
+    "Dob": "2011-10-21 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "24",
+    "HsId": "3891379362",
+    "MaHs": "2304646716",
+    "HoTen": "Vũ Duy Phương",
+    "Dob": "2012-06-02 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "25",
+    "HsId": "3911050026",
+    "MaHs": "2305228702",
+    "HoTen": "Hoàng Phú Quốc",
+    "Dob": "2012-09-04 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "26",
+    "HsId": "3908037542",
+    "MaHs": "2305103754",
+    "HoTen": "Bùi Thị Khánh Thi",
+    "Dob": "2012-01-20 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "27",
+    "HsId": "3911050046",
+    "MaHs": "2305228710",
+    "HoTen": "Võ Thị Yến Thơm",
+    "Dob": "2011-07-30 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "28",
+    "HsId": "3891379387",
+    "MaHs": "2304646718",
+    "HoTen": "Lê Thị Hoài Thu",
+    "Dob": "2012-11-15 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "29",
+    "HsId": "3891379501",
+    "MaHs": "2304646728",
+    "HoTen": "Phạm Thị Minh Thư",
+    "Dob": "2012-04-03 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "30",
+    "HsId": "3911050062",
+    "MaHs": "2305228715",
+    "HoTen": "Nguyễn Ngọc Bảo Trân",
+    "Dob": "2012-11-06 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "31",
+    "HsId": "3911050071",
+    "MaHs": "2305228718",
+    "HoTen": "Nguyễn Thị Thanh Trúc",
+    "Dob": "2012-12-03 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "32",
+    "HsId": "3911050072",
+    "MaHs": "2305228719",
+    "HoTen": "Đỗ Nhật Trường",
+    "Dob": "2012-09-06 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "33",
+    "HsId": "3908387506",
+    "MaHs": "2305112081",
+    "HoTen": "Nguyễn Minh Tuấn",
+    "Dob": "2012-09-17 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "34",
+    "HsId": "3914972031",
+    "MaHs": "2305366874",
+    "HoTen": "Lê Trần Đại Việt",
+    "Dob": "2012-04-28 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "35",
+    "HsId": "3911050088",
+    "MaHs": "2305228726",
+    "HoTen": "Phạm Khánh Vinh",
+    "Dob": "2012-11-08 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "36",
+    "HsId": "3914836903",
+    "MaHs": "2305362889",
+    "HoTen": "Ma Hoàng Lâm Vũ",
+    "Dob": "2012-09-09 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "37",
+    "HsId": "3918298247",
+    "MaHs": "2305468917",
+    "HoTen": "Nguyễn Minh Vương",
+    "Dob": "2012-07-22 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "38",
+    "HsId": "3891379690",
+    "MaHs": "2304646744",
+    "HoTen": "Đặng Thị Hải Yến",
+    "Dob": "2012-04-28 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  },
+  {
+    "Stt": "39",
+    "HsId": "2020362893",
+    "MaHs": "2001222176",
+    "HoTen": "Phan Vũ Minh Khang",
+    "Dob": "2012-06-30 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "9A10",
+    "Khoi": "9"
+  }
+]

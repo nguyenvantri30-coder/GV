@@ -1,58 +1,303 @@
 ﻿[
   {
+    "LopId": "5004806184",
+    "TenLop": "6A1",
+    "Khoi": "6",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5005478884",
+    "TenLop": "6A10",
+    "Khoi": "6",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
     "LopId": "5005478904",
     "TenLop": "6A11",
     "Khoi": "6",
-    "MonId": "1",
-    "TenMon": "Toán"
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004806204",
+    "TenLop": "6A2",
+    "Khoi": "6",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004806224",
+    "TenLop": "6A3",
+    "Khoi": "6",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004806244",
+    "TenLop": "6A4",
+    "Khoi": "6",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004806264",
+    "TenLop": "6A5",
+    "Khoi": "6",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004806284",
+    "TenLop": "6A6",
+    "Khoi": "6",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5005478824",
+    "TenLop": "6A7",
+    "Khoi": "6",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5005478844",
+    "TenLop": "6A8",
+    "Khoi": "6",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5005478864",
+    "TenLop": "6A9",
+    "Khoi": "6",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004806304",
+    "TenLop": "7A1",
+    "Khoi": "7",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
   },
   {
     "LopId": "5005478984",
     "TenLop": "7A10",
     "Khoi": "7",
-    "MonId": "1",
-    "TenMon": "Toán"
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004806324",
+    "TenLop": "7A2",
+    "Khoi": "7",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004806344",
+    "TenLop": "7A3",
+    "Khoi": "7",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004806364",
+    "TenLop": "7A4",
+    "Khoi": "7",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004806384",
+    "TenLop": "7A5",
+    "Khoi": "7",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004806404",
+    "TenLop": "7A6",
+    "Khoi": "7",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5005478924",
+    "TenLop": "7A7",
+    "Khoi": "7",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5005478944",
+    "TenLop": "7A8",
+    "Khoi": "7",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
   },
   {
     "LopId": "5005478964",
     "TenLop": "7A9",
     "Khoi": "7",
-    "MonId": "1",
-    "TenMon": "Toán"
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004806464",
+    "TenLop": "8A1",
+    "Khoi": "8",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
   },
   {
     "LopId": "5005479404",
     "TenLop": "8A10",
     "Khoi": "8",
-    "MonId": "11",
-    "TenMon": "Tin"
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
   },
   {
-    "LopId": "5005479404",
-    "TenLop": "8A10",
+    "LopId": "5004806484",
+    "TenLop": "8A2",
     "Khoi": "8",
-    "MonId": "1",
-    "TenMon": "Toán"
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004806504",
+    "TenLop": "8A3",
+    "Khoi": "8",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004806524",
+    "TenLop": "8A4",
+    "Khoi": "8",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004806424",
+    "TenLop": "8A5",
+    "Khoi": "8",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004806444",
+    "TenLop": "8A6",
+    "Khoi": "8",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
   },
   {
     "LopId": "5005479284",
     "TenLop": "8A7",
     "Khoi": "8",
-    "MonId": "11",
-    "TenMon": "Tin"
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
   },
   {
     "LopId": "5005479364",
     "TenLop": "8A8",
     "Khoi": "8",
-    "MonId": "11",
-    "TenMon": "Tin"
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
   },
   {
     "LopId": "5005479384",
     "TenLop": "8A9",
     "Khoi": "8",
-    "MonId": "11",
-    "TenMon": "Tin"
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004818344",
+    "TenLop": "9A1",
+    "Khoi": "9",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5005479464",
+    "TenLop": "9A10",
+    "Khoi": "9",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5005479484",
+    "TenLop": "9A11",
+    "Khoi": "9",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5005479504",
+    "TenLop": "9A12",
+    "Khoi": "9",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004818364",
+    "TenLop": "9A2",
+    "Khoi": "9",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004818384",
+    "TenLop": "9A3",
+    "Khoi": "9",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004818404",
+    "TenLop": "9A4",
+    "Khoi": "9",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004818424",
+    "TenLop": "9A5",
+    "Khoi": "9",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004818444",
+    "TenLop": "9A6",
+    "Khoi": "9",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5004818464",
+    "TenLop": "9A7",
+    "Khoi": "9",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5005479424",
+    "TenLop": "9A8",
+    "Khoi": "9",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
+  },
+  {
+    "LopId": "5005479444",
+    "TenLop": "9A9",
+    "Khoi": "9",
+    "MonChuyenId": "0",
+    "SoLuongHs": 0
   }
 ]

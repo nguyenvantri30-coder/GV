@@ -14,16 +14,12 @@ namespace VnEduFastSync
     {
         public string Stt { get; set; }
         public string HsId { get; set; }
-        public string EnrollId { get; set; }
+        public string MaHs { get; set; }
         public string HoTen { get; set; }
         public string Dob { get; set; }
-        public string Tx1 { get; set; }
-        public string Tx2 { get; set; }
-        public string Tx3 { get; set; }
-        public string Tx4 { get; set; }
-        public string Gk { get; set; }
-        public string Ck { get; set; }
-        public string Tbm { get; set; }
+        public string GioiTinh { get; set; }
+        public string LopTen { get; set; }
+        public string Khoi { get; set; }
     }
 
     public class ClassInfo
@@ -31,8 +27,7 @@ namespace VnEduFastSync
         public string LopId { get; set; }
         public string TenLop { get; set; }
         public string Khoi { get; set; }
-        public string MonId { get; set; }
-        public string TenMon { get; set; }
+        public string MonChuyenId { get; set; }
     }
 
     class Program
@@ -42,7 +37,6 @@ namespace VnEduFastSync
         static string myUserId = "";
         static string teacherFullName = "";
         static string schoolDomain = "mevzecueusitessgddaknong.vnedu.vn";
-        static string internalGvId = "";
 
         static string HttpGet(string url, string referer = "")
         {
@@ -158,85 +152,78 @@ namespace VnEduFastSync
             Console.WriteLine("[vnEdu] Dang nhap thanh cong: {0} ({1})", teacherFullName, schoolDomain);
         }
 
-        static List<StudentItem> FetchStudentsForClass(ClassInfo c, int namHoc, int hocKy)
-        {
-            string thang = (hocKy == 2) ? ("222-" + (namHoc + 1)) : ("13-" + namHoc);
-            string muc = (hocKy == 2) ? "ck2" : "ck1";
-
-            string gbPayload = string.Format("my_token={0}&my_user_id={1}&app_nam_hoc={2}&nam_hoc={2}&iLopId={3}&iKhoi={4}&iMonHocId={5}&iHocKyId={6}&deleteMode=0&thang={7}&muc={8}&dot_diem_id=0&dot_diem_data=&dot_id=1&dm_cua_mon_hoc=0&dm_cua_khoi_hoc=0&dm_cua_toi=1&winid=2848a8a588ed399dc351ffb1f00ec6cf",
-                Uri.EscapeDataString(myToken),
-                Uri.EscapeDataString(myUserId),
-                namHoc,
-                Uri.EscapeDataString(c.LopId),
-                Uri.EscapeDataString(c.Khoi),
-                Uri.EscapeDataString(c.MonId),
-                hocKy,
-                Uri.EscapeDataString(thang),
-                Uri.EscapeDataString(muc));
-
-            string urlGb = string.Format("https://{0}/v5/?load=edu.so_diem.nhap&app_nam_hoc={1}&my_token={2}",
-                schoolDomain, namHoc, myToken);
-
-            string gbHtml = HttpPost(urlGb, gbPayload, "application/x-www-form-urlencoded; charset=UTF-8");
-            return ParseStudents(gbHtml);
-        }
-
-        static List<StudentItem> ParseStudents(string html)
+        static List<StudentItem> FetchAllStudentsByClass(ClassInfo c, int namHoc)
         {
             List<StudentItem> list = new List<StudentItem>();
-            if (string.IsNullOrEmpty(html)) return list;
 
-            var rowMatches = Regex.Matches(html, @"<tr\s+id=[""'](\d+)[""'][^>]*>(.*?)</tr>", RegexOptions.Singleline | RegexOptions.IgnoreCase);
-
-            foreach (Match rm in rowMatches)
+            // Method 1: vnEdu official endpoint edu.hoc_sinh.getHocSinh
+            try
             {
-                string hsId = rm.Groups[1].Value;
-                string rowContent = rm.Groups[2].Value;
+                string urlHs = string.Format("https://{0}/v5/?call=edu.hoc_sinh.getHocSinh&lop_id={1}&nam_hoc={2}&check=1&my_user_id={3}&app_nam_hoc={2}&my_token={4}",
+                    schoolDomain, c.LopId, namHoc, myUserId, myToken);
+                string rHs = HttpGet(urlHs);
+                JObject jHs = JObject.Parse(rHs);
+                JArray aRoot = jHs["aRoot"] as JArray;
 
-                StudentItem stu = new StudentItem();
-                stu.HsId = hsId;
-
-                var tdMatches = Regex.Matches(rowContent, @"<td[^>]*>(.*?)</td>", RegexOptions.Singleline | RegexOptions.IgnoreCase);
-                if (tdMatches.Count >= 5)
+                if (aRoot != null && aRoot.Count > 0)
                 {
-                    stu.Stt = StripTags(tdMatches[1].Groups[1].Value).Trim();
-                    string ho = StripTags(tdMatches[2].Groups[1].Value).Trim();
-                    string ten = StripTags(tdMatches[3].Groups[1].Value).Trim();
-                    stu.HoTen = (ho + " " + ten).Trim();
-                    stu.Dob = StripTags(tdMatches[4].Groups[1].Value).Trim();
+                    int stt = 1;
+                    foreach (JObject st in aRoot)
+                    {
+                        string ho = (string)st["ho_dem"] ?? (string)st["ho"] ?? "";
+                        string ten = (string)st["ten"] ?? "";
+                        string full = (string)st["ho_ten"] ?? (string)st["ten_hoc_sinh"] ?? (ho + " " + ten).Trim();
+
+                        list.Add(new StudentItem
+                        {
+                            Stt = (stt++).ToString(),
+                            HsId = (string)st["hs_id"] ?? (string)st["id"] ?? "",
+                            MaHs = (string)st["ma_hoc_sinh"] ?? (string)st["ma_hs"] ?? "",
+                            HoTen = full.Trim(),
+                            Dob = (string)st["ngay_sinh"] ?? "",
+                            GioiTinh = ((string)st["gioi_tinh"] == "1" || (string)st["gioi_tinh"] == "Nam") ? "Nam" : "Nữ",
+                            LopTen = c.TenLop,
+                            Khoi = c.Khoi
+                        });
+                    }
+                    if (list.Count > 0) return list;
                 }
-
-                var aMatch = Regex.Match(rowContent, @"name=[""']txt_(\d+)_");
-                if (!aMatch.Success) aMatch = Regex.Match(rowContent, @"name=[""']txtNx_(\d+)[""']");
-                stu.EnrollId = aMatch.Success ? aMatch.Groups[1].Value : hsId;
-
-                stu.Tx1 = ExtractInputValue(rowContent, "txt_" + stu.EnrollId + "_2_1");
-                stu.Tx2 = ExtractInputValue(rowContent, "txt_" + stu.EnrollId + "_2_2");
-                stu.Tx3 = ExtractInputValue(rowContent, "txt_" + stu.EnrollId + "_2_3");
-                stu.Tx4 = ExtractInputValue(rowContent, "txt_" + stu.EnrollId + "_2_4");
-                stu.Gk  = ExtractInputValue(rowContent, "txt_" + stu.EnrollId + "_3_1");
-                stu.Ck  = ExtractInputValue(rowContent, "txt_" + stu.EnrollId + "_4_1");
-                stu.Tbm = ExtractInputValue(rowContent, "txt_" + stu.EnrollId + "_TBM");
-
-                list.Add(stu);
             }
+            catch { }
+
+            // Method 2: Sổ đầu bài endpoint (app.sodaubai.serv.so_dau_bai.getDaSachHocSinhVangByLop)
+            try
+            {
+                string urlHs = string.Format("https://{0}/v5/?call=app.sodaubai.serv.so_dau_bai.getDaSachHocSinhVangByLop&app_nam_hoc={1}&my_token={2}&my_user_id={3}",
+                    schoolDomain, namHoc, myToken, myUserId);
+                string postParams = string.Format("lop_id={0}&cap_hoc=2&tuan_hoc=1&sodaubai_id=0&chitiet_id=0&tiet=1&thu=2", c.LopId);
+                string rHs = HttpPost(urlHs, postParams);
+                JObject jHs = JObject.Parse(rHs);
+                JArray aRoot = jHs["aRoot"] as JArray;
+
+                if (aRoot != null && aRoot.Count > 0)
+                {
+                    int stt = 1;
+                    foreach (JObject st in aRoot)
+                    {
+                        string full = (string)st["full_name"] ?? (string)st["ho_ten"] ?? "";
+                        list.Add(new StudentItem
+                        {
+                            Stt = (stt++).ToString(),
+                            HsId = (string)st["id"] ?? "",
+                            MaHs = (string)st["ma_hoc_sinh"] ?? "",
+                            HoTen = full.Trim(),
+                            Dob = (string)st["ngay_sinh"] ?? "",
+                            GioiTinh = "",
+                            LopTen = c.TenLop,
+                            Khoi = c.Khoi
+                        });
+                    }
+                }
+            }
+            catch { }
 
             return list;
-        }
-
-        static string ExtractInputValue(string html, string inputName)
-        {
-            var tagMatch = Regex.Match(html, @"<input\b[^>]*\bname=['""]" + Regex.Escape(inputName) + @"['""][^>]*>", RegexOptions.IgnoreCase);
-            if (!tagMatch.Success) return "";
-            string tag = tagMatch.Value;
-            var valMatch = Regex.Match(tag, @"\bvalue=['""]([^'""]*)['""]", RegexOptions.IgnoreCase);
-            return valMatch.Success ? valMatch.Groups[1].Value.Trim() : "";
-        }
-
-        static string StripTags(string input)
-        {
-            if (string.IsNullOrEmpty(input)) return "";
-            return Regex.Replace(input, @"<[^>]*>", "").Replace("&nbsp;", " ").Trim();
         }
 
         static void Main(string[] args)
@@ -264,14 +251,12 @@ namespace VnEduFastSync
             string user = "";
             string pwd = "";
             int namHoc = 2026;
-            int hocKy = 1;
 
             if (args != null && args.Length >= 2)
             {
                 user = args[0];
                 pwd = args[1];
                 if (args.Length >= 3) int.TryParse(args[2], out namHoc);
-                if (args.Length >= 4) int.TryParse(args[3], out hocKy);
             }
             else
             {
@@ -283,37 +268,39 @@ namespace VnEduFastSync
                 LoginSSO(user, pwd, namHoc);
 
                 Console.WriteLine("==================================================");
-                Console.WriteLine("BAT DAU TAI DANH SACH HOC SINH CHO {0} LOP...", classes.Count);
+                Console.WriteLine("BAT DAU TAI HOC SINH TOAN TRUONG ({0} LOP)...", classes.Count);
                 Console.WriteLine("==================================================");
 
+                // Master dictionary keyed by TenLop (vd: "6A1", "6A2", ... "9A9")
                 Dictionary<string, List<StudentItem>> masterDict = new Dictionary<string, List<StudentItem>>(StringComparer.OrdinalIgnoreCase);
+                int totalStudents = 0;
 
-                foreach (var c in classes)
+                for (int i = 0; i < classes.Count; i++)
                 {
-                    string monSlug = (c.TenMon.ToLower().Contains("tin")) ? "tin" : "toan";
-                    string lopSlug = c.TenLop.ToLower().Replace("lớp", "").Trim();
-                    string fileName = string.Format("{0}{1}.json", monSlug, lopSlug);
-                    string key = string.Format("{0}_{1}", monSlug, lopSlug);
+                    var c = classes[i];
+                    string lopTenClean = c.TenLop.Trim();
+                    string lopFileKey = lopTenClean.ToLower();
 
-                    Console.Write("--> Dang tai lop: {0} ({1})... ", c.TenLop, c.TenMon);
-                    var stus = FetchStudentsForClass(c, namHoc, hocKy);
+                    Console.Write("[{0}/{1}] Dang tai lop: {2} (Khoi {3})... ", i + 1, classes.Count, c.TenLop, c.Khoi);
+                    var stus = FetchAllStudentsByClass(c, namHoc);
                     Console.WriteLine("{0} HS", stus.Count);
+                    totalStudents += stus.Count;
 
-                    // 1. Luu file rieng theo format truyen thong gv da dung (vd: toan6a11.json, tin8a7.json)
-                    string singlePath = Path.Combine(outDir, fileName);
+                    // 1. Luu file rieng tung lop: 6a1.json, 7a2.json, 8a10.json ...
+                    string singlePath = Path.Combine(outDir, lopFileKey + ".json");
                     File.WriteAllText(singlePath, JsonConvert.SerializeObject(stus, Formatting.Indented), Encoding.UTF8);
 
-                    // 2. Gom vao master dictionary
-                    masterDict[key] = stus;
+                    // 2. Gom vao master dict theo TenLop
+                    masterDict[lopTenClean] = stus;
                 }
 
-                // Luu master file tong hop: dshs_master.json de frontend HTML tra cuu cuc nhanh
+                // Luu master file tong hop: dshs_master.json
                 string masterPath = Path.Combine(outDir, "dshs_master.json");
                 File.WriteAllText(masterPath, JsonConvert.SerializeObject(masterDict, Formatting.Indented), Encoding.UTF8);
 
                 Console.WriteLine("==================================================");
-                Console.WriteLine("HOAN TAT: Da tai xong toan bo hoc sinh cac lop!");
-                Console.WriteLine("Master JSON: " + masterPath);
+                Console.WriteLine("HOAN TAT: Da tai xong {0} hoc sinh cua {1} lop toan truong!", totalStudents, classes.Count);
+                Console.WriteLine("File Master: " + masterPath);
                 Console.WriteLine("==================================================");
             }
             catch (Exception ex)

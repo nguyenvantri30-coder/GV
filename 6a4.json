@@ -1,0 +1,452 @@
+﻿[
+  {
+    "Stt": "1",
+    "HsId": "5065707284",
+    "MaHs": "2515723124",
+    "HoTen": "Lưu Hải Anh",
+    "Dob": "2015-11-18 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "2",
+    "HsId": "5083975144",
+    "MaHs": "2607871684",
+    "HoTen": "Phan Thị Đan Anh",
+    "Dob": "2015-05-10 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "3",
+    "HsId": "5065708124",
+    "MaHs": "2515724784",
+    "HoTen": "Triệu Anh Bách",
+    "Dob": "2015-01-22 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "4",
+    "HsId": "5065708144",
+    "MaHs": "2515724804",
+    "HoTen": "Nguyễn Văn Bảo",
+    "Dob": "2015-05-25 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "5",
+    "HsId": "5065708864",
+    "MaHs": "2515726344",
+    "HoTen": "Nguyễn Linh Chi",
+    "Dob": "2015-10-28 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "6",
+    "HsId": "5065708904",
+    "MaHs": "2515726384",
+    "HoTen": "Y - Ni Da",
+    "Dob": "2015-10-10 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "7",
+    "HsId": "5065706744",
+    "MaHs": "2515721844",
+    "HoTen": "Nguyễn Y Minh Dương",
+    "Dob": "2014-10-03 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "8",
+    "HsId": "5065708284",
+    "MaHs": "2515724944",
+    "HoTen": "Nguyễn Đình Đại",
+    "Dob": "2015-12-24 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "9",
+    "HsId": "5065706764",
+    "MaHs": "2515721864",
+    "HoTen": "Trần Thị Thu Hằng",
+    "Dob": "2015-12-01 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "10",
+    "HsId": "5065706784",
+    "MaHs": "2515721884",
+    "HoTen": "Trần Thị Thu Hiền",
+    "Dob": "2013-12-14 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "11",
+    "HsId": "5084529024",
+    "MaHs": "2607874724",
+    "HoTen": "Nguyễn Trung Hiếu",
+    "Dob": "2015-12-07 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "12",
+    "HsId": "5065707424",
+    "MaHs": "2515723264",
+    "HoTen": "Trương Hoàng Hiếu",
+    "Dob": "2015-03-24 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "13",
+    "HsId": "5065706804",
+    "MaHs": "2515721904",
+    "HoTen": "Hồ Huy Hoàng",
+    "Dob": "2015-12-31 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "14",
+    "HsId": "5065709844",
+    "MaHs": "2515728104",
+    "HoTen": "Hứa Huy Hoàng",
+    "Dob": "2015-11-01 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "15",
+    "HsId": "5084529064",
+    "MaHs": "2607874764",
+    "HoTen": "Đào Quang Huy",
+    "Dob": "2015-09-07 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "16",
+    "HsId": "5087547984",
+    "MaHs": "2610050224",
+    "HoTen": "Y Khánh",
+    "Dob": "2014-03-17 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "17",
+    "HsId": "5084541464",
+    "MaHs": "2607887164",
+    "HoTen": "Điểu Khuyết",
+    "Dob": "2024-06-06 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "18",
+    "HsId": "5065706884",
+    "MaHs": "2515721984",
+    "HoTen": "Vi Lộc Gia Kiệt",
+    "Dob": "2015-07-11 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "19",
+    "HsId": "5065709944",
+    "MaHs": "2515728204",
+    "HoTen": "Điểu Y- Kin",
+    "Dob": "2015-08-10 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "20",
+    "HsId": "5084541504",
+    "MaHs": "2607887204",
+    "HoTen": "Mi Liê",
+    "Dob": "2015-11-28 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "21",
+    "HsId": "5084541544",
+    "MaHs": "2607887244",
+    "HoTen": "Đoàn Tấn Lộc",
+    "Dob": "2015-08-04 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "22",
+    "HsId": "5065710004",
+    "MaHs": "2515728264",
+    "HoTen": "Đỗ Mười",
+    "Dob": "2015-04-24 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "23",
+    "HsId": "5065707604",
+    "MaHs": "2515723444",
+    "HoTen": "Nguyễn Trung Nghĩa",
+    "Dob": "2015-07-10 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "24",
+    "HsId": "5084541564",
+    "MaHs": "2607887264",
+    "HoTen": "Hà H - Như Ngọc",
+    "Dob": "2015-07-22 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "25",
+    "HsId": "5065710064",
+    "MaHs": "2515728324",
+    "HoTen": "Nguyễn Thị Bảo Ngọc",
+    "Dob": "2015-06-29 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "26",
+    "HsId": "5084541584",
+    "MaHs": "2607887284",
+    "HoTen": "Vũ Y Thái Nhật",
+    "Dob": "2015-04-15 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "27",
+    "HsId": "5084542204",
+    "MaHs": "2607887904",
+    "HoTen": "Y - Phái",
+    "Dob": "2015-01-13 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "28",
+    "HsId": "5092978924",
+    "MaHs": "2614286284",
+    "HoTen": "Trương Thiên Phú",
+    "Dob": "2015-05-03 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "29",
+    "HsId": "5065707064",
+    "MaHs": "2515722164",
+    "HoTen": "Bùi Trung Anh Quốc",
+    "Dob": "2015-10-13 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "30",
+    "HsId": "5065707104",
+    "MaHs": "2515722204",
+    "HoTen": "H - Mi Ra",
+    "Dob": "2015-02-24 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "31",
+    "HsId": "5065710184",
+    "MaHs": "2515728444",
+    "HoTen": "Lê Tuấn Tài",
+    "Dob": "2015-09-25 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "32",
+    "HsId": "5084542264",
+    "MaHs": "2607887964",
+    "HoTen": "Nguyễn Nhật Tâm",
+    "Dob": "2015-05-18 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "33",
+    "HsId": "5065707164",
+    "MaHs": "2515722264",
+    "HoTen": "Lê Ngọc Thuận",
+    "Dob": "2014-11-07 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "34",
+    "HsId": "5084542404",
+    "MaHs": "2607888104",
+    "HoTen": "H - Bao Thùy",
+    "Dob": "2015-08-16 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "35",
+    "HsId": "5065707844",
+    "MaHs": "2515723684",
+    "HoTen": "Nguyễn Ngọc Anh Thư",
+    "Dob": "2015-09-22 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "36",
+    "HsId": "5065708744",
+    "MaHs": "2515725404",
+    "HoTen": "Triệu Thị Anh Thư",
+    "Dob": "2015-07-12 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "37",
+    "HsId": "5065707884",
+    "MaHs": "2515723724",
+    "HoTen": "Trịnh Hoàng Anh Thư",
+    "Dob": "2015-09-11 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "38",
+    "HsId": "5065710304",
+    "MaHs": "2515728564",
+    "HoTen": "Nguyễn Minh Tiến",
+    "Dob": "2015-07-05 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "39",
+    "HsId": "5065709564",
+    "MaHs": "2515727044",
+    "HoTen": "Nguyễn Anh Trí Tịnh",
+    "Dob": "2015-06-27 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "40",
+    "HsId": "5065707944",
+    "MaHs": "2515723784",
+    "HoTen": "Y - Trung",
+    "Dob": "2015-01-15 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "41",
+    "HsId": "5065710364",
+    "MaHs": "2515728624",
+    "HoTen": "Lê Hoàng Anh Tuấn",
+    "Dob": "2015-09-19 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "42",
+    "HsId": "5084542444",
+    "MaHs": "2607888144",
+    "HoTen": "Nguyễn Trung Tuấn",
+    "Dob": "2015-12-14 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "43",
+    "HsId": "5065707964",
+    "MaHs": "2515723804",
+    "HoTen": "Nguyễn Trần Tố Uyên",
+    "Dob": "2014-08-15 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "44",
+    "HsId": "5084542484",
+    "MaHs": "2607888184",
+    "HoTen": "Dương Thị Vi",
+    "Dob": "2015-01-17 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  },
+  {
+    "Stt": "45",
+    "HsId": "5065710424",
+    "MaHs": "2515728684",
+    "HoTen": "Nguyễn Thị Tường Vy",
+    "Dob": "2015-07-30 00:00:00",
+    "GioiTinh": "",
+    "LopTen": "6A4",
+    "Khoi": "6"
+  }
+]
