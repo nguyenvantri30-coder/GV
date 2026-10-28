@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>Hệ thống Ôn tập & Kiểm tra Trắc nghiệm ALSM</title>
 
   <!-- KaTeX CSS & JS for ultra-fast formula rendering on Mobile -->
@@ -1140,7 +1143,7 @@
 
     async function loadCatalog() {
       try {
-        const res = await fetch(`${GITHUB_RAW}/catalog.json`);
+        const res = await fetch(`${GITHUB_RAW}/catalog.json?v=` + Date.now());
         catalog = await res.json();
         const sel = document.getElementById("subjectSelect");
         sel.innerHTML = '<option value="">-- Chọn Môn & Khối --</option>';
@@ -1527,7 +1530,7 @@
           let loaded = false;
           for (let fUrl of decuongFiles) {
             try {
-              let rDc = await fetch(fUrl);
+              let rDc = await fetch(fUrl + "?v=" + Date.now());
               if (rDc.ok) {
                 let dcData = await rDc.json();
                 if (Array.isArray(dcData) && dcData.length > 0) {
@@ -1558,7 +1561,7 @@
             let pool = [];
             for (let les of pickLessons) {
               try {
-                let rLes = await fetch(`${GITHUB_RAW}/${folderPath}/${encodeURIComponent(les.filename)}`);
+                let rLes = await fetch(`${GITHUB_RAW}/${folderPath}/${encodeURIComponent(les.filename)}?v=` + Date.now());
                 if (rLes.ok) {
                   let lData = await rLes.json();
                   if (lData.questions) {
@@ -1583,7 +1586,7 @@
           lessonTitle = `Tiết ${ppctNum}: ${cleanT}`;
           const url = `${GITHUB_RAW}/${folderPath}/${encodeURIComponent(filename)}`;
 
-          const res = await fetch(url);
+          const res = await fetch(url + "?v=" + Date.now());
           if (!res.ok) throw new Error("HTTP " + res.status);
           const data = await res.json();
           questionsToLoad = data.questions || [];
