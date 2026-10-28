@@ -1646,9 +1646,17 @@
 
         const imgData = canvas.toDataURL("image/jpeg", 0.75);
 
+        // Build exact Sheet Name to match teacher's Google Sheet tabs:
+        // Examples: Tin8A1, Toan6A3, Toan7A2, Toan8A3, Toan9A1
+        let monPrefix = "Toan";
+        if (studentInfo.mon.toLowerCase().includes("tin")) {
+          monPrefix = "Tin";
+        }
+        let sheetNameTarget = monPrefix + studentInfo.lop;
+
         // Send to Google Sheet
         const fd = new FormData();
-        fd.append("sheetName", studentInfo.lop);
+        fd.append("sheetName", sheetNameTarget);
         fd.append("folderId", FOLDER_ID);
         fd.append("name", studentInfo.hoten);
         fd.append("class", studentInfo.lop);
