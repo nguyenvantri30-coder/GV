@@ -1,0 +1,646 @@
+[
+  {
+    "q": "Cho tập hợp \\(A = \\{1; 3; 5; 7; 9\\}\\). Khẳng định nào sau đây là đúng?",
+    "options": [
+      "\\(5 \\in A\\)",
+      "\\(2 \\in A\\)",
+      "\\(3 \\notin A\\)",
+      "\\(9 \\notin A\\)"
+    ],
+    "answer": 0,
+    "explain": "Tập hợp \\(A\\) gồm các phần tử 1, 3, 5, 7, 9. Do đó khẳng định \\(5 \\in A\\) là đúng."
+  },
+  {
+    "q": "Tập hợp \\(M\\) các số tự nhiên nhỏ hơn 12 có thể viết dưới dạng chỉ ra tính chất đặc trưng là:",
+    "options": [
+      "\\(M = \\{x \\in \\mathbb{N} \\mid x < 12\\}\\)",
+      "\\(M = \\{x \\in \\mathbb{N} \\mid x > 12\\}\\)",
+      "\\(M = \\{x \\in \\mathbb{N} \\mid x \\le 12\\}\\)",
+      "\\(M = \\{x \\in \\mathbb{N} \\mid x \\ge 12\\}\\)"
+    ],
+    "answer": 0,
+    "explain": "Các số tự nhiên nhỏ hơn 12 được viết dưới dạng tính chất đặc trưng là \\(M = \\{x \\in \\mathbb{N} \\mid x < 12\\}\\)."
+  },
+  {
+    "q": "Viết tích \\(7 \\cdot 7 \\cdot 7 \\cdot 7 \\cdot 7\\) dưới dạng một lũy thừa ta được:",
+    "options": [
+      "\\(7^5\\)",
+      "\\(7^4\\)",
+      "\\(7 \\cdot 5\\)",
+      "\\(5^7\\)"
+    ],
+    "answer": 0,
+    "explain": "Tích của 5 thừa số 7 bằng \\(7^5\\)."
+  },
+  {
+    "q": "Kết quả của phép tính \\(5^4 \\cdot 5^3\\) dưới dạng một lũy thừa là:",
+    "options": [
+      "\\(5^7\\)",
+      "\\(25^7\\)",
+      "\\(5^{12}\\)",
+      "\\(25^{12}\\)"
+    ],
+    "answer": 0,
+    "explain": "Áp dụng quy tắc nhân hai lũy thừa cùng cơ số: \\(a^m \\cdot a^n = a^{m+n}\\). Ta có \\(5^4 \\cdot 5^3 = 5^{4+3} = 5^7\\)."
+  },
+  {
+    "q": "Kết quả của phép tính \\(3^3 - 2^3 + 5^2\\) là:",
+    "options": [
+      "44",
+      "34",
+      "15",
+      "24"
+    ],
+    "answer": 0,
+    "explain": "Thực hiện phép tính lũy thừa trước: \\(3^3 = 27\\), \\(2^3 = 8\\), \\(5^2 = 25\\). Sau đó tính: \\(27 - 8 + 25 = 19 + 25 = 44\\)."
+  },
+  {
+    "q": "Viết số 24 bằng chữ số La Mã ta được:",
+    "options": [
+      "XXIV",
+      "XXVI",
+      "XXIIII",
+      "IXXV"
+    ],
+    "answer": 0,
+    "explain": "Số 20 là XX, số 4 là IV. Do đó 24 viết là XXIV."
+  },
+  {
+    "q": "Sắp xếp các số sau theo thứ tự tăng dần, cách sắp xếp nào sau đây là đúng? \\(7; 15; 0; -2; -25\\)",
+    "options": [
+      "\\(-25; -2; 0; 7; 15\\)",
+      "\\(15; 7; 0; -2; -25\\)",
+      "\\(0; -2; 7; 15; -25\\)",
+      "\\(-2; -25; 0; 7; 15\\)"
+    ],
+    "answer": 0,
+    "explain": "Số nguyên âm nhỏ hơn 0 và nhỏ hơn số nguyên dương. So sánh hai số nguyên âm ta có \\(-25 < -2\\). Thứ tự tăng dần đúng là: \\(-25; -2; 0; 7; 15\\)."
+  },
+  {
+    "q": "Số nào sau đây là bội của 7?",
+    "options": [
+      "21",
+      "1",
+      "16",
+      "34"
+    ],
+    "answer": 0,
+    "explain": "Ta thấy \\(21 : 7 = 3\\) (chia hết) nên 21 là bội của 7."
+  },
+  {
+    "q": "Biết \\(x + 8 = 45\\). Giá trị của số tự nhiên \\(x\\) là:",
+    "options": [
+      "37",
+      "53",
+      "-37",
+      "-53"
+    ],
+    "answer": 0,
+    "explain": "Ta có \\(x = 45 - 8 = 37\\)."
+  },
+  {
+    "q": "Tập hợp các ước tự nhiên của 20 là:",
+    "options": [
+      "\\(\\{1; 2; 4; 5; 10; 20\\}\\)",
+      "\\(\\{0; 2; 4; 5; 10; 20\\}\\)",
+      "\\(\\{1; 2; 4; 5; 20\\}\\)",
+      "\\(\\{1; 2; 4; 10; 20\\}\\)"
+    ],
+    "answer": 0,
+    "explain": "Các số tự nhiên mà 20 chia hết là 1, 2, 4, 5, 10, 20. Do đó tập hợp ước là \\(\\{1; 2; 4; 5; 10; 20\\}\\)."
+  },
+  {
+    "q": "Số đối của số nguyên 15 là:",
+    "options": [
+      "-15",
+      "15",
+      "0",
+      "\\(\\frac{1}{15}\\)"
+    ],
+    "answer": 0,
+    "explain": "Số đối của số nguyên \\(a\\) là \\(-a\\). Do đó số đối của 15 là \\(-15\\)."
+  },
+  {
+    "q": "Kết quả của phép tính \\(6 + (-14)\\) là:",
+    "options": [
+      "-8",
+      "-20",
+      "8",
+      "20"
+    ],
+    "answer": 0,
+    "explain": "Quy tắc cộng hai số nguyên khác dấu: \\(6 + (-14) = -(14 - 6) = -8\\)."
+  },
+  {
+    "q": "Cho các số: 2; 5; 15; 17; 49. Khẳng định 'Các số nguyên tố là 2; 5; 17' là đúng hay sai?",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
+    "answer": 0,
+    "explain": "Các số 2, 5, 17 là số nguyên tố vì chỉ có hai ước dương là 1 và chính nó. Còn 15 và 49 là hợp số. Do đó khẳng định trên là Đúng."
+  },
+  {
+    "q": "Khẳng định 'Số 49 chia cho 4 có thương là 12 và dư 2' là đúng hay sai?",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
+    "answer": 1,
+    "explain": "Ta có \\(49 = 4 \\cdot 12 + 1\\), nên số dư phải là 1. Do đó khẳng định trên là Sai."
+  },
+  {
+    "q": "Khẳng định '\\(\\text{ƯCLN}(4, 16) = 4\\)' là đúng hay sai?",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
+    "answer": 0,
+    "explain": "Vì 16 chia hết cho 4 nên ước chung lớn nhất của 4 và 16 chính là 4. Khẳng định trên là Đúng."
+  },
+  {
+    "q": "Khẳng định '\\(\\text{BCNN}(16, 48) = 16\\)' là đúng hay sai?",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
+    "answer": 1,
+    "explain": "Vì 48 chia hết cho 16 nên \\(\\text{BCNN}(16, 48) = 48\\), không phải 16. Khẳng định trên là Sai."
+  },
+  {
+    "q": "Cho các số: 130; 35; 52; 29. Khẳng định 'Các số chia hết cho 5 là 130 và 35' là đúng hay sai?",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
+    "answer": 0,
+    "explain": "Dấu hiệu chia hết cho 5 là chữ số tận cùng là 0 hoặc 5. Trong các số trên, 130 và 35 có tận cùng 0 và 5 nên chia hết cho 5. Khẳng định là Đúng."
+  },
+  {
+    "q": "Cho hai số 130 và 52. Khẳng định 'Tổng \\(130 + 52\\) không chia hết cho 2' là đúng hay sai?",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
+    "answer": 1,
+    "explain": "Vì 130 chia hết cho 2 và 52 chia hết cho 2 nên tổng của chúng chia hết cho 2. Khẳng định 'không chia hết' là Sai."
+  },
+  {
+    "q": "Khẳng định 'Số 52 chia hết cho 9' là đúng hay sai?",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
+    "answer": 1,
+    "explain": "Tổng các chữ số của 52 là \\(5 + 2 = 7\\) không chia hết cho 9 nên 52 không chia hết cho 9. Khẳng định trên là Sai."
+  },
+  {
+    "q": "Cho hai số 35 và 27. Khẳng định 'Cả hai số 35 và 27 đều chia hết cho 3' là đúng hay sai?",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
+    "answer": 1,
+    "explain": "Số 35 có tổng các chữ số là 8 không chia hết cho 3, nên 35 không chia hết cho 3. Khẳng định trên là Sai."
+  },
+  {
+    "q": "Kết quả của phép chia lũy thừa \\(4^5 : 4^4\\) là:",
+    "options": [
+      "4",
+      "1",
+      "\\(4^9\\)",
+      "16"
+    ],
+    "answer": 0,
+    "explain": "Áp dụng quy tắc chia hai lũy thừa cùng cơ số: \\(4^5 : 4^4 = 4^{5-4} = 4^1 = 4\\)."
+  },
+  {
+    "q": "Cho tập hợp \\(D\\) gồm các số tự nhiên nhỏ hơn 5. Hỏi tập hợp \\(D\\) có bao nhiêu phần tử?",
+    "options": [
+      "5 phần tử",
+      "4 phần tử",
+      "6 phần tử",
+      "3 phần tử"
+    ],
+    "answer": 0,
+    "explain": "Các số tự nhiên nhỏ hơn 5 là: 0; 1; 2; 3; 4. Có tất cả 5 phần tử."
+  },
+  {
+    "q": "Kết quả của phép tính trừ hai số nguyên \\(-8 - 5\\) là:",
+    "options": [
+      "-13",
+      "-3",
+      "3",
+      "13"
+    ],
+    "answer": 0,
+    "explain": "Ta có \\(-8 - 5 = -8 + (-5) = -13\\)."
+  },
+  {
+    "q": "Khối 6 có 420 học sinh đi tham quan. Nhà trường phải thuê ít nhất bao nhiêu xe ô tô 45 chỗ ngồi để chở hết số học sinh đó?",
+    "options": [
+      "10 xe",
+      "9 xe",
+      "8 xe",
+      "11 xe"
+    ],
+    "answer": 0,
+    "explain": "Ta thực hiện phép chia có dư: \\(420 : 45 = 9\\) (dư 15). Cần 9 xe chở được 405 học sinh và thêm 1 xe nữa để chở 15 học sinh còn lại. Vậy cần ít nhất 10 xe ô tô."
+  },
+  {
+    "q": "Thực hiện phép tính: \\(8 + (-20) + 15\\). Kết quả là:",
+    "options": [
+      "3",
+      "43",
+      "-3",
+      "13"
+    ],
+    "answer": 0,
+    "explain": "Ta tính từ trái sang phải: \\(8 + (-20) + 15 = (-12) + 15 = 3\\)."
+  },
+  {
+    "q": "Thực hiện phép tính biểu thức có ngoặc: \\(\\{20 - [50 : (5 \\cdot 3^2 - 20) \\cdot 2]\\} + 1^{2026}\\). Kết quả là:",
+    "options": [
+      "17",
+      "16",
+      "18",
+      "15"
+    ],
+    "answer": 0,
+    "explain": "Thực hiện theo thứ tự: Trong ngoặc tròn: \\(5 \\cdot 9 - 20 = 45 - 20 = 25\\). Trong ngoặc vuông: \\(50 : 25 \\cdot 2 = 2 \\cdot 2 = 4\\). Trong ngoặc nhọn: \\(20 - 4 = 16\\). Cuối cùng: \\(16 + 1^{2026} = 16 + 1 = 17\\)."
+  },
+  {
+    "q": "Học sinh lớp 6B khi xếp thành hàng 3, hàng 4 đều vừa đủ hàng. Gọi \\(x\\) là số học sinh của lớp 6B. Mối quan hệ giữa \\(x\\) với 3 và 4 là gì?",
+    "options": [
+      "\\(x \\in \\text{BC}(3, 4)\\)",
+      "\\(x \\in \\text{BCNN}(3, 4)\\)",
+      "\\(x \\in \\text{ƯC}(3, 4)\\)",
+      "\\(x \\in \\text{ƯCLN}(3, 4)\\)"
+    ],
+    "answer": 0,
+    "explain": "Vì xếp hàng 3, hàng 4 đều vừa đủ nên \\(x\\) chia hết cho 3 và \\(x\\) chia hết cho 4. Do đó \\(x\\) là bội chung của 3 và 4: \\(x \\in \\text{BC}(3, 4)\\)."
+  },
+  {
+    "q": "Biết rằng số học sinh lớp 6B thỏa mãn \\(x \\in \\text{BC}(3, 4)\\) và số học sinh nằm trong khoảng từ 30 đến 40 em. Số học sinh của lớp 6B là:",
+    "options": [
+      "36 học sinh",
+      "32 học sinh",
+      "30 học sinh",
+      "40 học sinh"
+    ],
+    "answer": 0,
+    "explain": "Ta có \\(\\text{BCNN}(3, 4) = 12\\). Tập hợp các bội chung là \\(\\text{BC}(3, 4) = \\{0; 12; 24; 36; 48; \\dots\\}\\). Trong khoảng từ 30 đến 40 chỉ có số 36 thỏa mãn."
+  },
+  {
+    "q": "Để tìm số tự nhiên \\(x\\) biết \\((x + 25) \\;\\vdots\\; (x + 10)\\), ta phân tích biểu thức \\((x + 25)\\) thành tổng xuất hiện đại lượng \\((x + 10)\\). Phép tách nào sau đây là đúng?",
+    "options": [
+      "\\(x + 25 = (x + 10) + 15\\)",
+      "\\(x + 25 = (x + 10) + 25\\)",
+      "\\(x + 25 = (x + 10) + 10\\)",
+      "\\(x + 25 = (x + 10) + 5\\)"
+    ],
+    "answer": 0,
+    "explain": "Ta tách số hạng tự do: \\(25 = 10 + 15\\), do đó \\(x + 25 = (x + 10) + 15\\)."
+  },
+  {
+    "q": "Từ phân tích \\(x + 25 = (x + 10) + 15\\), để \\((x + 25) \\;\\vdots\\; (x + 10)\\) thì \\(15 \\;\\vdots\\; (x + 10)\\). Giá trị của số tự nhiên \\(x\\) là:",
+    "options": [
+      "\\(x = 5\\)",
+      "\\(x = 15\\)",
+      "\\(x = 1\\)",
+      "\\(x = 0\\)"
+    ],
+    "answer": 0,
+    "explain": "Vì \\(15 \\;\\vdots\\; (x + 10)\\) nên \\(x + 10 \\in \\text{Ư}(15) = \\{1; 3; 5; 15\\}\\). Vì \\(x\\) là số tự nhiên nên \\(x + 10 \\ge 10\\), suy ra \\(x + 10 = 15 \\Rightarrow x = 5\\)."
+  },
+  {
+    "q": "Cho tập hợp \\(B = \\{2; 4; 6; 8; 10\\}\\). Khẳng định nào sau đây là SAI?",
+    "options": [
+      "\\(5 \\in B\\)",
+      "\\(2 \\in B\\)",
+      "\\(6 \\in B\\)",
+      "\\(7 \\notin B\\)"
+    ],
+    "answer": 0,
+    "explain": "Số 5 không nằm trong tập hợp B, nên khẳng định \\(5 \\in B\\) là khẳng định sai."
+  },
+  {
+    "q": "Viết tập hợp \\(P = \\{x \\in \\mathbb{N}^* \\mid x \\le 5\\}\\) bằng cách liệt kê các phần tử:",
+    "options": [
+      "\\(P = \\{1; 2; 3; 4; 5\\}\\)",
+      "\\(P = \\{0; 1; 2; 3; 4; 5\\}\\)",
+      "\\(P = \\{1; 2; 3; 4\\}\\)",
+      "\\(P = \\{0; 1; 2; 3; 4\\}\\)"
+    ],
+    "answer": 0,
+    "explain": "\\(\\mathbb{N}^*\\) là tập hợp các số tự nhiên khác 0. Các số nhỏ hơn hoặc bằng 5 là 1, 2, 3, 4, 5. Vậy \\(P = \\{1; 2; 3; 4; 5\\}\\)."
+  },
+  {
+    "q": "Số La Mã XIX biểu diễn số tự nhiên nào sau đây?",
+    "options": [
+      "19",
+      "21",
+      "14",
+      "29"
+    ],
+    "answer": 0,
+    "explain": "X là 10, IX là 9. Do đó XIX biểu diễn số 19."
+  },
+  {
+    "q": "Số tự nhiên 29 được viết dưới dạng số La Mã là:",
+    "options": [
+      "XXIX",
+      "XXVIIII",
+      "XIX",
+      "XXXI"
+    ],
+    "answer": 0,
+    "explain": "Số 20 là XX, số 9 là IX. Do đó 29 viết là XXIX."
+  },
+  {
+    "q": "Kết quả của phép tính nhân các lũy thừa \\(2^3 \\cdot 2^2 \\cdot 2^4\\) là:",
+    "options": [
+      "\\(2^9\\)",
+      "\\(2^{24}\\)",
+      "\\(8^9\\)",
+      "\\(2^8\\)"
+    ],
+    "answer": 0,
+    "explain": "Áp dụng công thức cộng số mũ: \\(2^{3+2+4} = 2^9\\)."
+  },
+  {
+    "q": "Giá trị của lũy thừa \\(10^4\\) bằng:",
+    "options": [
+      "10 000",
+      "1 000",
+      "40",
+      "100 000"
+    ],
+    "answer": 0,
+    "explain": "\\(10^4 = 10 \\cdot 10 \\cdot 10 \\cdot 10 = 10\\,000\\)."
+  },
+  {
+    "q": "Thứ tự thực hiện các phép tính đối với biểu thức có dấu ngoặc là:",
+    "options": [
+      "\\(( \\; ) \\rightarrow [ \\; ] \\rightarrow \\{ \\; \\}\\)",
+      "\\([ \\; ] \\rightarrow ( \\; ) \\rightarrow \\{ \\; \\}\\)",
+      "\\(\\{ \\; \\} \\rightarrow [ \\; ] \\rightarrow ( \\; )\\)",
+      "\\(( \\; ) \\rightarrow \\{ \\; \\} \\rightarrow [ \\; ]\\)"
+    ],
+    "answer": 0,
+    "explain": "Quy tắc: Ngoặc tròn ( ) thực hiện trước, sau đó đến ngoặc vuông [ ], cuối cùng là ngoặc nhọn { }."
+  },
+  {
+    "q": "Giá trị của biểu thức \\(120 - [30 - (4 - 1)^2]\\) là:",
+    "options": [
+      "99",
+      "111",
+      "81",
+      "91"
+    ],
+    "answer": 0,
+    "explain": "Tính trong ngoặc tròn: \\((4 - 1)^2 = 3^2 = 9\\). Trong ngoặc vuông: \\(30 - 9 = 21\\). Kết quả: \\(120 - 21 = 99\\)."
+  },
+  {
+    "q": "Tổng nào sau đây chia hết cho 5?",
+    "options": [
+      "\\(125 + 350 + 20\\)",
+      "\\(10 + 25 + 34\\)",
+      "\\(50 + 15 + 11\\)",
+      "\\(5 + 10 + 23\\)"
+    ],
+    "answer": 0,
+    "explain": "Vì 125, 350, 20 đều có chữ số tận cùng là 0 hoặc 5 nên mỗi số đều chia hết cho 5. Do đó tổng của chúng chia hết cho 5."
+  },
+  {
+    "q": "Biết \\(a \\;\\vdots\\; 6\\) và \\(b \\;\\vdots\\; 6\\). Khẳng định nào sau đây là chắc chắn đúng?",
+    "options": [
+      "\\((a + b) \\;\\vdots\\; 6\\)",
+      "\\((a + b) \\;\\vdots\\; 12\\)",
+      "\\((a - b) \\;\\vdots\\; 12\\)",
+      "\\((a + b) \\;\\vdots\\; 36\\)"
+    ],
+    "answer": 0,
+    "explain": "Theo tính chất chia hết của một tổng: Nếu cả hai số hạng cùng chia hết cho một số thì tổng của chúng cũng chia hết cho số đó."
+  },
+  {
+    "q": "Trong các số: 0; 1; 2; 9; 13; 27, số nào là số nguyên tố chẵn duy nhất?",
+    "options": [
+      "2",
+      "0",
+      "1",
+      "9"
+    ],
+    "answer": 0,
+    "explain": "Số 2 là số nguyên tố chẵn duy nhất trong tập hợp các số nguyên tố."
+  },
+  {
+    "q": "Phân tích số 60 ra thừa số nguyên tố ta được kết quả là:",
+    "options": [
+      "\\(2^2 \\cdot 3 \\cdot 5\\)",
+      "\\(4 \\cdot 3 \\cdot 5\\)",
+      "\\(2 \\cdot 3 \\cdot 10\\)",
+      "\\(2^3 \\cdot 3 \\cdot 5\\)"
+    ],
+    "answer": 0,
+    "explain": "Ta có: \\(60 = 4 \\cdot 15 = 2^2 \\cdot 3 \\cdot 5\\)."
+  },
+  {
+    "q": "Ước chung lớn nhất của 18 và 24 là:",
+    "options": [
+      "6",
+      "12",
+      "3",
+      "72"
+    ],
+    "answer": 0,
+    "explain": "Phân tích: \\(18 = 2 \\cdot 3^2\\); \\(24 = 2^3 \\cdot 3\\). Do đó \\(\\text{ƯCLN}(18, 24) = 2 \\cdot 3 = 6\\)."
+  },
+  {
+    "q": "Bội chung nhỏ nhất của 12 và 18 là:",
+    "options": [
+      "36",
+      "72",
+      "6",
+      "18"
+    ],
+    "answer": 0,
+    "explain": "Phân tích: \\(12 = 2^2 \\cdot 3\\); \\(18 = 2 \\cdot 3^2\\). Do đó \\(\\text{BCNN}(12, 18) = 2^2 \\cdot 3^2 = 4 \\cdot 9 = 36\\)."
+  },
+  {
+    "q": "Hai bạn An và Bình cùng trực nhật vào một ngày. An cứ 6 ngày trực nhật một lần, Bình cứ 8 ngày trực nhật một lần. Hỏi ít nhất sau bao nhiêu ngày thì hai bạn lại cùng trực nhật vào một ngày?",
+    "options": [
+      "24 ngày",
+      "48 ngày",
+      "14 ngày",
+      "16 ngày"
+    ],
+    "answer": 0,
+    "explain": "Số ngày để hai bạn lại cùng trực nhật là bội chung nhỏ nhất của 6 và 8. Ta có \\(\\text{BCNN}(6, 8) = 24\\). Vậy sau ít nhất 24 ngày."
+  },
+  {
+    "q": "Một đội y tế gồm 24 bác sĩ và 108 y tá. Đội có thể chia thành nhiều nhất bao nhiêu tổ để số bác sĩ và y tá ở mỗi tổ là bằng nhau?",
+    "options": [
+      "12 tổ",
+      "6 tổ",
+      "24 tổ",
+      "4 tổ"
+    ],
+    "answer": 0,
+    "explain": "Số tổ nhiều nhất có thể chia là ước chung lớn nhất của 24 và 108. Ta có \\(\\text{ƯCLN}(24, 108) = 12\\). Vậy chia được nhiều nhất 12 tổ."
+  },
+  {
+    "q": "Số đối của các số \\(-7; 0; 12\\) lần lượt là:",
+    "options": [
+      "\\(7; 0; -12\\)",
+      "\\(-7; 0; 12\\)",
+      "\\(7; 0; 12\\)",
+      "\\(-7; 0; -12\\)"
+    ],
+    "answer": 0,
+    "explain": "Số đối của \\(-7\\) là 7; số đối của 0 là 0; số đối của 12 là \\(-12\\)."
+  },
+  {
+    "q": "Khẳng định nào sau đây là đúng về mối quan hệ giữa các số nguyên?",
+    "options": [
+      "\\(-15 < -8 < 0 < 3\\)",
+      "\\(-8 < -15 < 0 < 3\\)",
+      "\\(0 < -8 < -15 < 3\\)",
+      "\\(-15 < 0 < -8 < 3\\)"
+    ],
+    "answer": 0,
+    "explain": "Ta có: \\(-15 < -8 < 0 < 3\\) là khẳng định hoàn toàn chính xác."
+  },
+  {
+    "q": "Nhiệt độ buổi sáng ở Sa Pa là \\(-2^\\circ\\text{C}\\), đến trưa nhiệt độ tăng thêm \\(5^\\circ\\text{C}\\). Hỏi nhiệt độ buổi trưa ở Sa Pa là bao nhiêu?",
+    "options": [
+      "\\(3^\\circ\\text{C}\\)",
+      "\\(-7^\\circ\\text{C}\\)",
+      "\\(7^\\circ\\text{C}\\)",
+      "\\(-3^\\circ\\text{C}\\)"
+    ],
+    "answer": 0,
+    "explain": "Nhiệt độ buổi trưa là: \\(-2 + 5 = 3^\\circ\\text{C}\\)."
+  },
+  {
+    "q": "Kết quả của phép nhân hai số nguyên âm \\((-4) \\cdot (-25)\\) là:",
+    "options": [
+      "100",
+      "-100",
+      "-29",
+      "29"
+    ],
+    "answer": 0,
+    "explain": "Quy tắc: Nhân hai số nguyên cùng dấu cho kết quả là số nguyên dương: \\((-4) \\cdot (-25) = 100\\)."
+  },
+  {
+    "q": "Trong một tam giác đều, khẳng định nào sau đây là đúng?",
+    "options": [
+      "Ba cạnh bằng nhau và ba góc bằng nhau",
+      "Chỉ có hai cạnh bằng nhau",
+      "Ba cạnh có độ dài khác nhau",
+      "Có một góc vuông"
+    ],
+    "answer": 0,
+    "explain": "Tam giác đều là tam giác có ba cạnh bằng nhau và ba góc bằng nhau (mỗi góc bằng \\(60^\\circ\\))."
+  },
+  {
+    "q": "Một hình vuông có độ dài cạnh bằng \\(6\\text{ cm}\\). Chu vi và diện tích của hình vuông đó lần lượt là:",
+    "options": [
+      "\\(24\\text{ cm}\\) và \\(36\\text{ cm}^2\\)",
+      "\\(36\\text{ cm}\\) và \\(24\\text{ cm}^2\\)",
+      "\\(12\\text{ cm}\\) và \\(36\\text{ cm}^2\\)",
+      "\\(24\\text{ cm}\\) và \\(24\\text{ cm}^2\\)"
+    ],
+    "answer": 0,
+    "explain": "Chu vi hình vuông: \\(C = 4 \\cdot 6 = 24\\text{ cm}\\). Diện tích hình vuông: \\(S = 6^2 = 36\\text{ cm}^2\\)."
+  },
+  {
+    "q": "Hình lục giác đều có bao nhiêu đường chéo chính nối các đỉnh đối diện?",
+    "options": [
+      "3 đường chéo chính",
+      "6 đường chéo chính",
+      "4 đường chéo chính",
+      "2 đường chéo chính"
+    ],
+    "answer": 0,
+    "explain": "Hình lục giác đều có đúng 3 đường chéo chính cắt nhau tại trung điểm của mỗi đường."
+  },
+  {
+    "q": "Một hình thoi có độ dài hai đường chéo là \\(8\\text{ cm}\\) và \\(10\\text{ cm}\\). Diện tích của hình thoi đó là:",
+    "options": [
+      "\\(40\\text{ cm}^2\\)",
+      "\\(80\\text{ cm}^2\\)",
+      "\\(36\\text{ cm}^2\\)",
+      "\\(20\\text{ cm}^2\\)"
+    ],
+    "answer": 0,
+    "explain": "Diện tích hình thoi bằng nửa tích hai đường chéo: \\(S = \\frac{1}{2} \\cdot 8 \\cdot 10 = 40\\text{ cm}^2\\)."
+  },
+  {
+    "q": "Một mảnh vườn hình chữ nhật có chiều dài \\(15\\text{ m}\\) và chiều rộng \\(8\\text{ m}\\). Chu vi của mảnh vườn đó là:",
+    "options": [
+      "\\(46\\text{ m}\\)",
+      "\\(120\\text{ m}\\)",
+      "\\(23\\text{ m}\\)",
+      "\\(92\\text{ m}\\)"
+    ],
+    "answer": 0,
+    "explain": "Chu vi hình chữ nhật bằng: \\((15 + 8) \\cdot 2 = 23 \\cdot 2 = 46\\text{ m}\\)."
+  },
+  {
+    "q": "Một hình bình hành có độ dài một cạnh đáy là \\(12\\text{ cm}\\) và chiều cao tương ứng là \\(7\\text{ cm}\\). Diện tích của hình bình hành đó là:",
+    "options": [
+      "\\(84\\text{ cm}^2\\)",
+      "\\(42\\text{ cm}^2\\)",
+      "\\(38\\text{ cm}^2\\)",
+      "\\(19\\text{ cm}^2\\)"
+    ],
+    "answer": 0,
+    "explain": "Diện tích hình bình hành bằng cạnh đáy nhân chiều cao: \\(S = 12 \\cdot 7 = 84\\text{ cm}^2\\)."
+  },
+  {
+    "q": "Trong một hình thang cân, khẳng định nào sau đây là SAI?",
+    "options": [
+      "Hai cạnh đáy bằng nhau",
+      "Hai cạnh bên bằng nhau",
+      "Hai đường chéo bằng nhau",
+      "Hai góc kề một đáy bằng nhau"
+    ],
+    "answer": 0,
+    "explain": "Hình thang cân có hai cạnh bên bằng nhau, hai đường chéo bằng nhau, hai góc kề một đáy bằng nhau. Hai cạnh đáy song song nhưng có độ dài khác nhau (không bằng nhau)."
+  },
+  {
+    "q": "Tìm số tự nhiên \\(x\\) biết: \\(3 \\cdot (x - 4) = 27\\). Giá trị của \\(x\\) là:",
+    "options": [
+      "\\(x = 13\\)",
+      "\\(x = 5\\)",
+      "\\(x = 7\\)",
+      "\\(x = 9\\)"
+    ],
+    "answer": 0,
+    "explain": "Ta có: \\(x - 4 = 27 : 3 \\Rightarrow x - 4 = 9 \\Rightarrow x = 9 + 4 = 13\\)."
+  },
+  {
+    "q": "Tìm số tự nhiên \\(x\\) biết: \\(2^x = 32\\). Giá trị của \\(x\\) là:",
+    "options": [
+      "\\(x = 5\\)",
+      "\\(x = 4\\)",
+      "\\(x = 6\\)",
+      "\\(x = 16\\)"
+    ],
+    "answer": 0,
+    "explain": "Ta viết số 32 dưới dạng lũy thừa cơ số 2: \\(32 = 2^5\\). Do đó \\(2^x = 2^5 \\Rightarrow x = 5\\)."
+  },
+  {
+    "q": "Tìm số tự nhiên \\(n\\) để biểu thức \\((n + 7)\\) chia hết cho \\((n + 2)\\).",
+    "options": [
+      "\\(n = 3\\)",
+      "\\(n = 5\\)",
+      "\\(n = 2\\)",
+      "\\(n = 7\\)"
+    ],
+    "answer": 0,
+    "explain": "Ta tách \\(n + 7 = (n + 2) + 5\\). Để \\((n + 7) \\;\\vdots\\; (n + 2)\\) thì \\(5 \\;\\vdots\\; (n + 2)\\). Vì \\(n\\) là số tự nhiên nên \\(n + 2 \\in \\text{Ư}(5) = \\{1; 5\\}\\). Do \\(n + 2 \\ge 2\\) nên \\(n + 2 = 5 \\Rightarrow n = 3\\)."
+  }
+]
