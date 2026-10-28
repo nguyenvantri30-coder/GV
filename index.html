@@ -672,8 +672,8 @@
       <div class="form-group">
         <label>Chế độ ôn tập:</label>
         <select id="modeSelect" class="form-control" onchange="onModeChanged()">
+          <option value="DECUONG" selected>📑 Đề cương Ôn tập Tổng hợp (GK1, CK1, GK2, CK2)</option>
           <option value="LESSON">📖 Ôn tập theo từng Bài học (Tiết PPCT)</option>
-          <option value="DECUONG">📑 Đề cương Ôn tập Tổng hợp (GK1, CK1, GK2, CK2)</option>
         </select>
       </div>
 
@@ -684,20 +684,20 @@
         </select>
       </div>
 
-      <div class="form-group" id="groupLesson">
-        <label>Chọn Bài học (Tiết PPCT):</label>
-        <select id="lessonSelect" class="form-control" disabled>
-          <option value="">-- Vui lòng chọn môn trước --</option>
-        </select>
-      </div>
-
-      <div class="form-group" id="groupDecuong" style="display:none;">
+      <div class="form-group" id="groupDecuong">
         <label>Chọn Đề cương ôn tập:</label>
         <select id="decuongSelect" class="form-control">
-          <option value="GK1">Đề cương Ôn tập Giữa Kì I (GK1)</option>
+          <option value="GK1" selected>Đề cương Ôn tập Giữa Kì I (GK1)</option>
           <option value="CK1">Đề cương Ôn tập Cuối Kì I (CK1)</option>
           <option value="GK2">Đề cương Ôn tập Giữa Kì II (GK2)</option>
           <option value="CK2">Đề cương Ôn tập Cuối Kì II (CK2)</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="groupLesson" style="display:none;">
+        <label>Chọn Bài học (Tiết PPCT):</label>
+        <select id="lessonSelect" class="form-control" disabled>
+          <option value="">-- Vui lòng chọn môn trước --</option>
         </select>
       </div>
 
@@ -713,9 +713,9 @@
       </div>
 
       <div class="form-group">
-        <label>Lớp học (Dữ liệu toàn trường vnEdu):</label>
-        <select id="lopSelect" class="form-control" onchange="onClassChanged()">
-          <option value="">-- Đang nạp danh sách lớp... --</option>
+        <label>Lớp học (Đúng theo Khối lớp đã chọn):</label>
+        <select id="lopSelect" class="form-control" onchange="onClassChanged()" disabled>
+          <option value="">-- Vui lòng chọn Môn & Khối trước --</option>
         </select>
       </div>
 
@@ -1286,20 +1286,83 @@
        INITIALIZATION & CATALOG LOADING
        ========================================================================= */
     window.addEventListener("DOMContentLoaded", async () => {
-      // Restore cached student info if available
-      const savedName = localStorage.getItem("quiz_hoten");
-      const savedLop = localStorage.getItem("quiz_lop");
-      if (savedName) document.getElementById("hotenInput").value = savedName;
+      // Đặt mặc định giao diện chế độ Đề cương
+      onModeChanged();
 
       await initCamera();
-      await loadClassesAndStudents();
-      if (savedLop) {
-        document.getElementById("lopSelect").value = savedLop;
-        onClassChanged();
-      }
       await loadCatalog();
+      await loadClassesAndStudents();
+
+      // Phục hồi lựa chọn trước đó nếu hợp lệ
+      const savedSubKey = localStorage.getItem("quiz_subkey");
+      const savedName = localStorage.getItem("quiz_hoten");
+      const savedLop = localStorage.getItem("quiz_lop");
+
+      if (savedSubKey && document.getElementById("subjectSelect").querySelector(`option[value="${savedSubKey}"]`)) {
+        document.getElementById("subjectSelect").value = savedSubKey;
+      }
+      // Kích hoạt cập nhật combo lớp theo môn đã chọn
+      onSubjectChanged();
+
+      if (savedLop && document.getElementById("lopSelect").querySelector(`option[value="${savedLop}"]`)) {
+        document.getElementById("lopSelect").value = savedLop;
+      }
+      if (savedName) {
+        document.getElementById("hotenInput").value = savedName;
+        validateStudentName();
+      }
+
       await loadFaceModels();
     });
+
+    function updateClassOptionsForGrade() {
+      const subKey = document.getElementById("subjectSelect").value;
+      const lopSel = document.getElementById("lopSelect");
+      const prevLop = lopSel.value;
+      lopSel.innerHTML = "";
+
+      if (!subKey) {
+        lopSel.disabled = true;
+        lopSel.innerHTML = '<option value="">-- Vui lòng chọn Môn & Khối trước --</option>';
+        isStudentVerified = false;
+        document.getElementById("studentValidateMsg").textContent = "";
+        checkCanStart();
+        return;
+      }
+
+      // Trích xuất số khối từ mã môn (ví dụ: "Toán_hoc_Khối_6" -> "6", "Tin_hoc_Khối_8" -> "8")
+      const m = subKey.match(/(\d+)/);
+      const targetGrade = m ? m[1] : "";
+
+      lopSel.disabled = false;
+      lopSel.innerHTML = `<option value="">-- Chọn Lớp Khối ${targetGrade} --</option>`;
+
+      // Lọc danh sách lớp CHỈ thuộc đúng Khối đã chọn (tuyệt đối không hiển thị lớp khối khác)
+      const filtered = schoolClasses.filter(c => {
+        return String(c.Khoi) === targetGrade || (c.TenLop && c.TenLop.startsWith(targetGrade));
+      });
+
+      // Gom duy nhất tên lớp và sắp xếp chuẩn số (ví dụ: 6A1, 6A2... 6A11)
+      const uniqueLop = [...new Set(filtered.map(c => c.TenLop))];
+      uniqueLop.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+
+      uniqueLop.forEach(l => {
+        const opt = document.createElement("option");
+        opt.value = l;
+        opt.textContent = `Lớp ${l}`;
+        lopSel.appendChild(opt);
+      });
+
+      // Nếu lớp trước đó vẫn thuộc khối mới thì giữ, nếu khác khối thì reset
+      if (prevLop && uniqueLop.includes(prevLop)) {
+        lopSel.value = prevLop;
+      } else {
+        lopSel.value = "";
+        isStudentVerified = false;
+        document.getElementById("studentValidateMsg").textContent = "";
+      }
+      checkCanStart();
+    }
 
     async function loadClassesAndStudents() {
       try {
@@ -1307,19 +1370,7 @@
         const resCls = await fetch(`${GV_RAW}/dslop.json?v=` + Date.now());
         if (resCls.ok) {
           schoolClasses = await resCls.json();
-          const lopSel = document.getElementById("lopSelect");
-          lopSel.innerHTML = '<option value="">-- Chọn Lớp --</option>';
-
-          // Gom duy nhất tên lớp và sắp xếp chuẩn
-          const uniqueLop = [...new Set(schoolClasses.map(c => c.TenLop))];
-          uniqueLop.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
-
-          uniqueLop.forEach(l => {
-            const opt = document.createElement("option");
-            opt.value = l;
-            opt.textContent = `Lớp ${l}`;
-            lopSel.appendChild(opt);
-          });
+          updateClassOptionsForGrade();
         }
 
         // 2. Tải master danh sách học sinh toàn trường
@@ -1362,6 +1413,7 @@
     }
 
     function validateStudentName() {
+      const subKey = document.getElementById("subjectSelect").value;
       const lop = document.getElementById("lopSelect").value;
       const rawName = document.getElementById("hotenInput").value.trim();
       const msgEl = document.getElementById("studentValidateMsg");
@@ -1372,11 +1424,25 @@
         return false;
       }
 
+      // Khóa bảo mật: Lớp phải thuộc đúng Khối của Môn đang chọn
+      if (subKey) {
+        const m = subKey.match(/(\d+)/);
+        if (m && !lop.startsWith(m[1])) {
+          currentStudentData = null;
+          isStudentVerified = false;
+          msgEl.textContent = `❌ Lớp ${lop} không thuộc Khối ${m[1]} của môn học đã chọn!`;
+          msgEl.style.color = "var(--danger)";
+          checkCanStart();
+          return false;
+        }
+      }
+
       if (!studentMaster || !studentMaster[lop]) {
         // Nếu chưa nạp được master, cho phép qua nếu tên đủ dài
         isStudentVerified = (rawName.length >= 3);
         msgEl.textContent = "ℹ️ Đang chạy chế độ xác thực mềm";
         msgEl.style.color = "var(--gray-700)";
+        checkCanStart();
         return isStudentVerified;
       }
 
@@ -1410,6 +1476,7 @@
         }
 
         updateMasteryDashboard();
+        checkCanStart();
         return true;
       } else {
         currentStudentData = null;
@@ -1421,6 +1488,7 @@
         siblingChallengePending = false;
         siblingChallengeResolved = false;
         updateMasteryDashboard();
+        checkCanStart();
         return false;
       }
     }
@@ -1471,6 +1539,12 @@
       const lessonSel = document.getElementById("lessonSelect");
       lessonSel.innerHTML = "";
 
+      // Lưu lại môn đã chọn
+      if (subKey) localStorage.setItem("quiz_subkey", subKey);
+
+      // CẬP NHẬT DANH SÁCH LỚP CHỈ CHỨA CÁC LỚP THUỘC ĐÚNG KHỐI ĐƯỢC CHỌN
+      updateClassOptionsForGrade();
+
       if (!subKey || !catalog.subjects[subKey]) {
         lessonSel.disabled = true;
         lessonSel.innerHTML = '<option value="">-- Vui lòng chọn môn trước --</option>';
@@ -1478,7 +1552,7 @@
         return;
       }
 
-      const lessons = catalog.subjects[subKey].lessons;
+      const lessons = catalog.subjects[subKey].lessons || [];
       lessonSel.disabled = false;
       lessonSel.innerHTML = '<option value="">-- Chọn Bài học (Tổng số ' + lessons.length + ' bài) --</option>';
 
@@ -1490,6 +1564,8 @@
         lessonSel.appendChild(opt);
       });
 
+      // Xác thực lại tên nếu có
+      validateStudentName();
       updateMasteryDashboard();
       checkCanStart();
     }
