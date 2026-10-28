@@ -701,6 +701,17 @@
         </select>
       </div>
 
+      <!-- CHỌN SỐ LƯỢNG CÂU HỎI LUYỆN TẬP -->
+      <div class="form-group" id="groupNumQuestions">
+        <label>🎯 Số lượng câu hỏi muốn luyện tập mỗi lần:</label>
+        <select id="numQuestionsSelect" class="form-control" onchange="updateMasteryDashboard()">
+          <option value="10">⚡ 10 câu (Luyện nhanh 10-15 phút)</option>
+          <option value="15" selected>🎯 15 câu (Chuẩn sư phạm - Khuyên dùng)</option>
+          <option value="20">🔥 20 câu (Luyện sâu nâng cao)</option>
+          <option value="ALL">📚 Toàn bộ ngân hàng câu hỏi</option>
+        </select>
+      </div>
+
       <div class="form-group">
         <label>Lớp học (Dữ liệu toàn trường vnEdu):</label>
         <select id="lopSelect" class="form-control" onchange="onClassChanged()">
@@ -712,6 +723,46 @@
         <label>Họ và tên học sinh (nhập đúng có dấu để kiểm tra danh sách):</label>
         <input type="text" id="hotenInput" class="form-control" placeholder="Ví dụ: Nguyễn Văn An">
         <div id="studentValidateMsg" style="font-size:13px;margin-top:6px;font-weight:600;"></div>
+      </div>
+
+      <!-- BẢNG THEO DÕI TIẾN TRÌNH & ĐỘ THÀNH THỤC CỦA HỌC SINH -->
+      <div id="masteryCard" style="display:none;background:#f0fff4;border:1.5px solid #68d391;border-radius:12px;padding:14px 16px;margin:14px 0;box-shadow:0 2px 8px rgba(72,187,120,0.12);">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+          <div style="font-weight:700;color:#22543d;font-size:14px;display:flex;align-items:center;gap:6px;">
+            <span>📊 TIẾN TRÌNH THÀNH THỤC BÀI NÀY</span>
+          </div>
+          <span id="masteryBadgePill" style="font-size:12px;padding:3px 10px;border-radius:20px;background:#c6f6d5;color:#22543d;font-weight:700;">
+            🌱 Khởi động
+          </span>
+        </div>
+
+        <!-- Thanh 1: Độ phủ ngân hàng câu hỏi -->
+        <div style="margin-bottom:10px;">
+          <div style="display:flex;justify-content:space-between;font-size:12px;color:#2d3748;margin-bottom:4px;font-weight:600;">
+            <span>📈 Độ phủ đề (đã tiếp xúc):</span>
+            <span id="coverageText" style="color:#2b6cb0;">0/0 (0%)</span>
+          </div>
+          <div style="background:#e2e8f0;border-radius:6px;height:9px;overflow:hidden;">
+            <div id="coverageBar" style="width:0%;height:100%;background:linear-gradient(90deg, #3182ce, #38b2ac);transition:width 0.4s ease;"></div>
+          </div>
+        </div>
+
+        <!-- Thanh 2: Số câu làm đúng thành thạo -->
+        <div style="margin-bottom:10px;">
+          <div style="display:flex;justify-content:space-between;font-size:12px;color:#2d3748;margin-bottom:4px;font-weight:600;">
+            <span>⭐ Đã làm đúng thành thạo:</span>
+            <span id="masteredText" style="color:#276749;">0/0 (0%)</span>
+          </div>
+          <div style="background:#e2e8f0;border-radius:6px;height:9px;overflow:hidden;">
+            <div id="masteredBar" style="width:0%;height:100%;background:linear-gradient(90deg, #48bb78, #2f855a);transition:width 0.4s ease;"></div>
+          </div>
+        </div>
+
+        <!-- Lịch sử điểm các lần luyện gần nhất -->
+        <div id="masteryHistoryBox" style="font-size:12px;color:#4a5568;border-top:1px dashed #cbd5e0;padding-top:8px;">
+          <span style="font-weight:600;">🕒 Lịch sử điểm các lần luyện:</span>
+          <span id="historyDots" style="margin-left:6px;font-weight:500;">Chưa có lần luyện nào</span>
+        </div>
       </div>
 
       <!-- THỬ THÁCH BẢO MẬT XÁC THỰC THIẾT BỊ DÙNG CHUNG (ANH/EM RUỘT) -->
@@ -809,6 +860,22 @@
       <div class="result-score" id="resultScore">0.0</div>
       <p id="resultDetails">Số câu đúng: 0/0</p>
       <div id="resultStatusTxt" style="font-size:14px;color:var(--gray-700);margin-bottom:15px;font-weight:600;">⏳ Đang đồng bộ kết quả về máy chủ...</div>
+      
+      <!-- TIẾN TRÌNH THÀNH THỤC SAU KHI NỘP -->
+      <div id="resultMasteryBox" style="background:#f7fafc;border:1px solid #cbd5e0;border-radius:10px;padding:12px;margin:12px 0;text-align:left;font-size:13px;">
+        <div style="font-weight:700;color:#2d3748;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;">
+          <span>📈 Tiến trình tích lũy:</span>
+          <span id="resultMasteryBadge" style="font-size:12px;padding:2px 8px;border-radius:12px;background:#c6f6d5;color:#22543d;font-weight:700;">🌱 Khởi động</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;color:#4a5568;font-size:12px;margin-bottom:4px;">
+          <span>Độ phủ đề (số câu đã tiếp xúc):</span>
+          <b id="resultCoverageTxt" style="color:#2b6cb0;">0/0 (0%)</b>
+        </div>
+        <div style="display:flex;justify-content:space-between;color:#4a5568;font-size:12px;">
+          <span>Số câu đã làm đúng thành thạo:</span>
+          <b id="resultMasteredTxt" style="color:#276749;">0/0 (0%)</b>
+        </div>
+      </div>
       
       <button id="retrySubmitBtn" class="btn-main" style="background:#dd6b20;display:none;margin-bottom:10px;" onclick="retrySendResult()">
         🔄 GỬI LẠI KẾT QUẢ VỀ MÁY CHỦ
@@ -945,16 +1012,221 @@
       return copy;
     }
 
+    /* =========================================================================
+       HỆ THỐNG GHI NHỚ TIẾN TRÌNH & ĐỘ THÀNH THỤC (MASTERY & COVERAGE ENGINE)
+       ========================================================================= */
+    function getQuestionKey(q) {
+      if (q.id) return String(q.id);
+      const text = (q.questiontext || "").replace(/\s+/g, " ").trim().substring(0, 120);
+      const type = q.type || "";
+      let hash = 0;
+      const str = type + "_" + text;
+      for (let i = 0; i < str.length; i++) {
+        hash = ((hash << 5) - hash) + str.charCodeAt(i);
+        hash |= 0;
+      }
+      return "q_" + Math.abs(hash);
+    }
+
+    function getMasteryKeys() {
+      const hoten = document.getElementById("hotenInput")?.value?.trim() || studentInfo?.hoten || "";
+      const lop = document.getElementById("lopSelect")?.value || studentInfo?.lop || "";
+      if (!hoten || !lop) return null;
+
+      const mode = document.getElementById("modeSelect")?.value || studentInfo?.mode || "LESSON";
+      const subKey = document.getElementById("subjectSelect")?.value || "";
+      
+      let lessonId = "";
+      let lessonName = "";
+      if (mode === "DECUONG") {
+        const dcKey = document.getElementById("decuongSelect")?.value || studentInfo?.decuongType || "GK1";
+        lessonId = "DECUONG_" + subKey + "_" + dcKey;
+        lessonName = "Đề cương " + dcKey;
+      } else {
+        const lesFile = document.getElementById("lessonSelect")?.value || "";
+        if (!lesFile && !studentInfo?.lessonTitle) return null;
+        lessonId = subKey + "_" + lesFile;
+        lessonName = studentInfo?.lessonTitle || lesFile;
+      }
+
+      const studentKey = normalizeVietnamese(hoten).toLowerCase().replace(/\s+/g, "_") + "_" + lop.toLowerCase();
+      return { studentKey, lessonId, lessonName, subKey, mode };
+    }
+
+    function getStudentMastery(studentKey, lessonId) {
+      try {
+        const allStr = localStorage.getItem("ALSM_MASTERY_STORE");
+        const all = allStr ? JSON.parse(allStr) : {};
+        if (all[studentKey] && all[studentKey][lessonId]) {
+          return all[studentKey][lessonId];
+        }
+      } catch (e) {
+        console.warn("Lỗi đọc mastery:", e);
+      }
+      return {
+        totalInBank: 0,
+        seen: [],
+        mastered: [],
+        wrong: [],
+        history: []
+      };
+    }
+
+    function saveStudentMastery(studentKey, lessonId, data) {
+      try {
+        const allStr = localStorage.getItem("ALSM_MASTERY_STORE");
+        const all = allStr ? JSON.parse(allStr) : {};
+        if (!all[studentKey]) all[studentKey] = {};
+        all[studentKey][lessonId] = data;
+        localStorage.setItem("ALSM_MASTERY_STORE", JSON.stringify(all));
+      } catch (e) {
+        console.warn("Lỗi lưu mastery:", e);
+      }
+    }
+
+    function getMasteryBadge(pct) {
+      if (pct >= 100) return { title: "👑 Bậc thầy", color: "#b7791f", bg: "#fefcbf" };
+      if (pct >= 75)  return { title: "🌟 Thành thạo", color: "#22543d", bg: "#c6f6d5" };
+      if (pct >= 40)  return { title: "🌿 Tiến bộ", color: "#2b6cb0", bg: "#bee3f8" };
+      return { title: "🌱 Khởi động", color: "#4a5568", bg: "#edf2f7" };
+    }
+
+    function updateMasteryDashboard() {
+      const card = document.getElementById("masteryCard");
+      if (!card) return;
+
+      const keys = getMasteryKeys();
+      if (!keys) {
+        card.style.display = "none";
+        return;
+      }
+
+      // Tìm tổng số câu hỏi của bài học từ catalog hoặc bộ nhớ
+      let totalQuestionsInBank = 0;
+      if (keys.mode === "LESSON") {
+        const lesFile = document.getElementById("lessonSelect")?.value || "";
+        const lessons = catalog?.subjects?.[keys.subKey]?.lessons || [];
+        const found = lessons.find(l => l.filename === lesFile);
+        if (found && found.question_count) {
+          totalQuestionsInBank = found.question_count;
+        }
+      }
+
+      const profile = getStudentMastery(keys.studentKey, keys.lessonId);
+      if (profile.totalInBank > 0 && !totalQuestionsInBank) {
+        totalQuestionsInBank = profile.totalInBank;
+      }
+      if (!totalQuestionsInBank) totalQuestionsInBank = Math.max((profile.seen || []).length, 20);
+
+      const seenCount = (profile.seen || []).length;
+      const masteredCount = (profile.mastered || []).length;
+      const total = Math.max(totalQuestionsInBank, seenCount);
+      const covPct = total > 0 ? Math.min(100, Math.round((seenCount / total) * 100)) : 0;
+      const mastPct = total > 0 ? Math.min(100, Math.round((masteredCount / total) * 100)) : 0;
+      const badge = getMasteryBadge(mastPct);
+
+      card.style.display = "block";
+
+      const covTxt = document.getElementById("coverageText");
+      const covBar = document.getElementById("coverageBar");
+      const mastTxt = document.getElementById("masteredText");
+      const mastBar = document.getElementById("masteredBar");
+      const badgePill = document.getElementById("masteryBadgePill");
+      const histDots = document.getElementById("historyDots");
+
+      if (covTxt) covTxt.textContent = `${seenCount}/${total} câu (${covPct}%)`;
+      if (covBar) covBar.style.width = `${covPct}%`;
+      if (mastTxt) mastTxt.textContent = `${masteredCount}/${total} câu (${mastPct}%)`;
+      if (mastBar) mastBar.style.width = `${mastPct}%`;
+
+      if (badgePill) {
+        badgePill.textContent = badge.title;
+        badgePill.style.color = badge.color;
+        badgePill.style.background = badge.bg;
+      }
+
+      if (histDots) {
+        if (profile.history && profile.history.length > 0) {
+          histDots.innerHTML = profile.history.map((h, i) => {
+            const isHigh = h.score >= 8;
+            const bg = isHigh ? "#c6f6d5" : "#e2e8f0";
+            const col = isHigh ? "#22543d" : "#2d3748";
+            return `<span style="display:inline-block;padding:2px 7px;border-radius:6px;background:${bg};color:${col};font-weight:700;margin:2px 3px;font-size:11px;">L${i+1}: ${h.score}đ</span>`;
+          }).join(" ➜ ");
+        } else {
+          histDots.textContent = "Chưa có lần luyện nào. Bấm 'Bắt đầu' để tích lũy!";
+        }
+      }
+    }
+
     function generateQuizQuestions() {
       if (!cachedRawQuestions || cachedRawQuestions.length === 0) return;
 
       // 1. Sinh lại số ngẫu nhiên cho các câu có biến {k}, {a}, {b}...
       const processed = cachedRawQuestions.map(processQuestionWildcards);
 
-      // 2. Trộn thứ tự các câu hỏi (Fisher-Yates) và lấy tối đa 25 câu
-      const shuffledQ = shuffleArray(processed).slice(0, Math.min(25, processed.length));
+      // Gán mã định danh duy nhất _qKey cho từng câu hỏi
+      processed.forEach(q => {
+        q._qKey = getQuestionKey(q);
+      });
 
-      // 3. Trộn ngẫu nhiên các phương án đáp án của từng câu
+      // 2. Lấy số lượng câu hỏi học sinh muốn luyện tập
+      const numChoice = document.getElementById("numQuestionsSelect") ? document.getElementById("numQuestionsSelect").value : "15";
+      const targetCount = (numChoice === "ALL") ? processed.length : Math.min(parseInt(numChoice) || 15, processed.length);
+
+      // 3. THUẬT TOÁN BỐC ĐỀ THÔNG MINH (SMART ADAPTIVE SAMPLING)
+      let selectedQuestions = [];
+      const keys = getMasteryKeys();
+      if (keys && targetCount < processed.length) {
+        const profile = getStudentMastery(keys.studentKey, keys.lessonId);
+        const seenSet = new Set(profile.seen || []);
+        const wrongSet = new Set(profile.wrong || []);
+        const masteredSet = new Set(profile.mastered || []);
+
+        const unseenQ = [];
+        const wrongQ = [];
+        const masteredQ = [];
+        const otherQ = [];
+
+        processed.forEach(q => {
+          if (!seenSet.has(q._qKey)) {
+            unseenQ.push(q);
+          } else if (wrongSet.has(q._qKey)) {
+            wrongQ.push(q);
+          } else if (masteredSet.has(q._qKey)) {
+            masteredQ.push(q);
+          } else {
+            otherQ.push(q);
+          }
+        });
+
+        // Ưu tiên 1: Câu CHƯA TỪNG TIẾP XÚC (tối đa ~60% chỉ tiêu) để tăng độ phủ
+        const unseenQuota = Math.round(targetCount * 0.6);
+        const pickedUnseen = shuffleArray(unseenQ).slice(0, unseenQuota);
+        selectedQuestions.push(...pickedUnseen);
+
+        // Ưu tiên 2: Câu TỪNG LÀM SAI (tối đa ~30% chỉ tiêu) để học sinh sửa sai
+        const wrongQuota = Math.round(targetCount * 0.3);
+        const pickedWrong = shuffleArray(wrongQ).slice(0, wrongQuota);
+        selectedQuestions.push(...pickedWrong);
+
+        // Ưu tiên 3: Bù đắp số câu còn thiếu từ câu đã thành thục hoặc câu còn lại
+        const remainingNeeded = targetCount - selectedQuestions.length;
+        if (remainingNeeded > 0) {
+          const pickedSet = new Set(selectedQuestions.map(q => q._qKey));
+          const leftovers = [...unseenQ, ...wrongQ, ...masteredQ, ...otherQ].filter(q => !pickedSet.has(q._qKey));
+          selectedQuestions.push(...shuffleArray(leftovers).slice(0, remainingNeeded));
+        }
+
+        // Trộn ngẫu nhiên lại thứ tự câu được bốc
+        selectedQuestions = shuffleArray(selectedQuestions);
+      } else {
+        selectedQuestions = shuffleArray(processed).slice(0, targetCount);
+      }
+
+      const shuffledQ = selectedQuestions;
+
+      // 4. Trộn ngẫu nhiên các phương án đáp án của từng câu
       shuffledQ.forEach(q => {
         const ppctPart = q._ppct ? `${q._ppct}/` : "";
         q._imgBase = `${GITHUB_RAW}/${encodeURI(cachedFolderPath)}/images/${ppctPart}`;
@@ -1062,6 +1334,7 @@
         document.getElementById("groupLesson").style.display = "block";
         document.getElementById("groupDecuong").style.display = "none";
       }
+      updateMasteryDashboard();
       checkCanStart();
     }
 
@@ -1128,6 +1401,7 @@
           siblingStatusTag = "";
         }
 
+        updateMasteryDashboard();
         return true;
       } else {
         currentStudentData = null;
@@ -1138,6 +1412,7 @@
         if (card) card.style.display = "none";
         siblingChallengePending = false;
         siblingChallengeResolved = false;
+        updateMasteryDashboard();
         return false;
       }
     }
@@ -1207,19 +1482,22 @@
         lessonSel.appendChild(opt);
       });
 
+      updateMasteryDashboard();
       checkCanStart();
     }
 
-    // Input listeners to enable start button
-    ["subjectSelect", "lessonSelect", "decuongSelect", "lopSelect", "hotenInput"].forEach(id => {
+    // Input listeners to enable start button and update mastery dashboard
+    ["subjectSelect", "lessonSelect", "decuongSelect", "lopSelect", "hotenInput", "numQuestionsSelect", "modeSelect"].forEach(id => {
       const el = document.getElementById(id);
       if (el) {
         el.addEventListener("input", () => {
           if (id === "hotenInput" || id === "lopSelect") validateStudentName();
+          updateMasteryDashboard();
           checkCanStart();
         });
         el.addEventListener("change", () => {
           if (id === "hotenInput" || id === "lopSelect") validateStudentName();
+          updateMasteryDashboard();
           checkCanStart();
         });
       }
@@ -2249,10 +2527,66 @@
         }
 
         if (qFraction > 0.99) correctCount++;
+        q._lastCorrect = (qFraction > 0.99);
         totalScore += Math.max(0, qFraction);
       });
 
       const finalScore = ((totalScore / currentQuestions.length) * 10).toFixed(2);
+
+      // CẬP NHẬT TIẾN TRÌNH THÀNH THỤC VÀO LOCALSTORAGE
+      const keys = getMasteryKeys();
+      if (keys) {
+        const profile = getStudentMastery(keys.studentKey, keys.lessonId);
+        profile.totalInBank = cachedRawQuestions ? cachedRawQuestions.length : currentQuestions.length;
+        const seenSet = new Set(profile.seen || []);
+        const masteredSet = new Set(profile.mastered || []);
+        const wrongSet = new Set(profile.wrong || []);
+
+        currentQuestions.forEach(q => {
+          const qKey = q._qKey || getQuestionKey(q);
+          seenSet.add(qKey);
+          if (q._lastCorrect) {
+            masteredSet.add(qKey);
+            wrongSet.delete(qKey);
+          } else {
+            wrongSet.add(qKey);
+          }
+        });
+
+        profile.seen = Array.from(seenSet);
+        profile.mastered = Array.from(masteredSet);
+        profile.wrong = Array.from(wrongSet);
+
+        profile.history = profile.history || [];
+        const now = new Date();
+        const timeStr = `${now.getDate()}/${now.getMonth()+1} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+        profile.history.push({
+          time: timeStr,
+          score: parseFloat(finalScore),
+          correct: correctCount,
+          total: currentQuestions.length
+        });
+        if (profile.history.length > 8) profile.history.shift();
+
+        saveStudentMastery(keys.studentKey, keys.lessonId, profile);
+
+        // Hiển thị tiến trình tích lũy trên bảng tổng kết kết quả
+        const totalBank = Math.max(profile.totalInBank, profile.seen.length);
+        const covPct = totalBank > 0 ? Math.min(100, Math.round((profile.seen.length / totalBank) * 100)) : 100;
+        const mastPct = totalBank > 0 ? Math.min(100, Math.round((profile.mastered.length / totalBank) * 100)) : 100;
+        const badge = getMasteryBadge(mastPct);
+
+        const resCov = document.getElementById("resultCoverageTxt");
+        const resMast = document.getElementById("resultMasteredTxt");
+        const resBadge = document.getElementById("resultMasteryBadge");
+        if (resCov) resCov.textContent = `${profile.seen.length}/${totalBank} câu (${covPct}%)`;
+        if (resMast) resMast.textContent = `${profile.mastered.length}/${totalBank} câu (${mastPct}%)`;
+        if (resBadge) {
+          resBadge.textContent = badge.title;
+          resBadge.style.color = badge.color;
+          resBadge.style.background = badge.bg;
+        }
+      }
 
       // Show result overlay
       document.getElementById("resultScore").textContent = finalScore;
@@ -2477,6 +2811,7 @@
         startBtn.disabled = false;
       }
 
+      updateMasteryDashboard();
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
