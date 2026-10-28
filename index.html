@@ -643,12 +643,35 @@
         <div id="studentValidateMsg" style="font-size:13px;margin-top:6px;font-weight:600;"></div>
       </div>
 
-      <!-- HỘP XÁC NHẬN ANH/CHỊ/EM DÙNG CHUNG THIẾT BỊ -->
-      <div id="siblingNoticeBox" style="display:none;background:#e8f4fd;border:1px solid #3182ce;border-radius:8px;padding:12px;margin:10px 0;font-size:14px;color:#2c5282;">
-        <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;">
-          <input type="checkbox" id="siblingCheckbox" style="margin-top:3px;transform:scale(1.2);">
-          <span>Thiết bị này vừa được bạn <b><span id="prevStudentTxt"></span></b> sử dụng. Tích vào đây nếu các em là <b>anh/chị/em trong cùng gia đình dùng chung máy</b>.</span>
-        </label>
+      <!-- THỬ THÁCH BẢO MẬT XÁC THỰC THIẾT BỊ DÙNG CHUNG (ANH/EM RUỘT) -->
+      <div id="siblingChallengeCard" style="display:none;background:#f7fafc;border:2px dashed #3182ce;border-radius:12px;padding:16px;margin:15px 0;">
+        <div style="font-weight:700;color:#2b6cb0;margin-bottom:8px;font-size:15px;">
+          👨‍👩‍👧‍👦 XÁC THỰC THIẾT BỊ DÙNG CHUNG (ANH/EM CÙNG GIA ĐÌNH)
+        </div>
+        <div style="font-size:13px;color:#4a5568;margin-bottom:12px;line-height:1.5;">
+          Hệ thống phát hiện thiết bị này vừa được một học sinh khác sử dụng. Để bảo vệ các em không bị đánh dấu nhầm là thi hộ, vui lòng nhập thông tin xác thực của người anh/chị/em vừa làm bài trước đó:
+        </div>
+
+        <div class="form-group" style="margin-bottom:10px;">
+          <label style="font-size:13px;font-weight:600;">1. Họ và tên người vừa làm bài trước em trên máy này:</label>
+          <input type="text" id="challengeNameInput" class="form-control" placeholder="Nhập đúng họ tên anh/chị/em của em..." style="font-size:14px;">
+        </div>
+
+        <div class="form-group" style="margin-bottom:12px;">
+          <label style="font-size:13px;font-weight:600;">2. Ngày sinh của người đó (DD/MM/YYYY) hoặc 4 số cuối CCCD:</label>
+          <input type="text" id="challengeSecretInput" class="form-control" placeholder="Ví dụ: 15/07/2012 hoặc 4 số cuối CCCD..." style="font-size:14px;">
+        </div>
+
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button type="button" class="btn-main" style="flex:1.2;background:#3182ce;padding:10px;font-size:14px;" onclick="verifySiblingSecret()">
+            🔐 XÁC THỰC ANH EM
+          </button>
+          <button type="button" class="btn-main" style="flex:1;background:#718096;padding:10px;font-size:14px;" onclick="enableSoftAuditPass()">
+            🤝 Em không nhớ (Nhờ thầy cô duyệt ảnh)
+          </button>
+        </div>
+
+        <div id="challengeResultMsg" style="font-size:13px;font-weight:600;margin-top:10px;"></div>
       </div>
 
       <!-- CAMERA PREVIEW & PROCTORING -->
@@ -758,6 +781,72 @@
     let isStudentVerified = false;
     let cachedRawQuestions = [];
     let cachedFolderPath = "";
+
+    // Quản lý xác thực thiết bị dùng chung (Anh/em ruột)
+    let currentStudentData = null;
+    let siblingChallengePending = false;
+    let siblingChallengeResolved = false;
+    let siblingStatusTag = "";
+
+    function verifySiblingSecret() {
+      const lastStuStr = localStorage.getItem("quiz_last_student_obj");
+      let lastStu = null;
+      try { if (lastStuStr) lastStu = JSON.parse(lastStuStr); } catch (e) {}
+      const resMsg = document.getElementById("challengeResultMsg");
+      if (!lastStu) {
+        resMsg.innerHTML = "ℹ️ Không tìm thấy dữ liệu học sinh trước để đối chiếu. Em có thể làm bài.";
+        siblingChallengeResolved = true;
+        checkCanStart();
+        return;
+      }
+
+      const inName = normalizeVietnamese(document.getElementById("challengeNameInput").value.trim());
+      const inSecret = document.getElementById("challengeSecretInput").value.trim().toLowerCase().replace(/[^0-9a-z]/g, "");
+
+      const targetName = normalizeVietnamese(lastStu.hoten);
+      const isNameMatch = (inName === targetName);
+
+      let isSecretMatch = false;
+      const targetDob = (lastStu.dob_dmy || "").replace(/[^0-9]/g, "");
+      const targetCid = (lastStu.cid_last4 || "").replace(/[^0-9]/g, "");
+
+      if (inSecret.length >= 2) {
+        if (targetDob && targetDob.includes(inSecret)) isSecretMatch = true;
+        if (targetCid && targetCid.includes(inSecret)) isSecretMatch = true;
+      }
+
+      // Kiểm tra nếu ALSM đã liên kết 2 em là anh em ruột
+      if (currentStudentData && Array.isArray(lastStu.siblings)) {
+        const curNorm = normalizeVietnamese(currentStudentData.HoTen);
+        if (lastStu.siblings.some(s => normalizeVietnamese(s) === curNorm)) {
+          isSecretMatch = true;
+        }
+      }
+
+      if (isNameMatch && isSecretMatch) {
+        siblingChallengeResolved = true;
+        siblingStatusTag = `ĐÃ XÁC THỰC BẢO MẬT: Anh/em với ${lastStu.hoten} (${lastStu.lop})`;
+        resMsg.innerHTML = `✅ <b>Xác thực thành công!</b> Hệ thống đã ghi nhận các em là anh/chị/em trong cùng gia đình dùng chung thiết bị. Chúc em làm bài tốt!`;
+        resMsg.style.color = "var(--success)";
+        checkCanStart();
+      } else {
+        resMsg.innerHTML = `❌ <b>Thông tin chưa khớp!</b> Vui lòng kiểm tra lại họ tên hoặc ngày sinh. Hoặc bấm nút <i>"Em không nhớ"</i> bên cạnh để thầy cô duyệt ảnh sau.`;
+        resMsg.style.color = "var(--danger)";
+      }
+    }
+
+    function enableSoftAuditPass() {
+      const lastStuStr = localStorage.getItem("quiz_last_student_obj");
+      let lastStu = null;
+      try { if (lastStuStr) lastStu = JSON.parse(lastStuStr); } catch (e) {}
+
+      siblingChallengeResolved = true;
+      siblingStatusTag = lastStu ? `CẦN GV DUYỆT ẢNH: Chung máy với ${lastStu.hoten} (${lastStu.lop})` : "CẦN GV DUYỆT ẢNH (Chung máy)";
+      const resMsg = document.getElementById("challengeResultMsg");
+      resMsg.innerHTML = `🟡 <b>Đã bật Xác thực mềm:</b> Em có thể bắt đầu làm bài. Hệ thống sẽ chụp ảnh khuôn mặt để thầy/cô đối chiếu duyệt sau, em không lo bị mất bài nhé!`;
+      resMsg.style.color = "#b7791f";
+      checkCanStart();
+    }
 
     function shuffleArray(arr) {
       if (!Array.isArray(arr)) return arr;
@@ -930,29 +1019,37 @@
       });
 
       if (found) {
+        currentStudentData = found;
         isStudentVerified = true;
         msgEl.textContent = `✅ Xác thực thành công: ${found.HoTen} (Mã HS: ${found.MaHs || found.HsId || 'OK'})`;
         msgEl.style.color = "var(--success)";
 
-        // Kiểm tra xem thiết bị này trước đó đã có học sinh khác làm không (anh/chị/em chung máy)
-        const prevName = localStorage.getItem("quiz_last_hoten");
-        const prevLop = localStorage.getItem("quiz_last_lop");
-        const sibBox = document.getElementById("siblingNoticeBox");
-        if (prevName && prevName.toLowerCase() !== found.HoTen.toLowerCase()) {
-          const txtEl = document.getElementById("prevStudentTxt");
-          if (txtEl) txtEl.textContent = `${prevName} (${prevLop || 'Lớp khác'})`;
-          if (sibBox) sibBox.style.display = "block";
+        // Kiểm tra xem thiết bị này trước đó đã có học sinh khác làm không (Thử thách bảo mật bí mật)
+        const lastStuStr = localStorage.getItem("quiz_last_student_obj");
+        let lastStu = null;
+        try { if (lastStuStr) lastStu = JSON.parse(lastStuStr); } catch (e) {}
+
+        const card = document.getElementById("siblingChallengeCard");
+        if (lastStu && normalizeVietnamese(lastStu.hoten) !== normalizeVietnamese(found.HoTen)) {
+          if (card) card.style.display = "block";
+          siblingChallengePending = true;
         } else {
-          if (sibBox) sibBox.style.display = "none";
+          if (card) card.style.display = "none";
+          siblingChallengePending = false;
+          siblingChallengeResolved = true;
+          siblingStatusTag = "";
         }
 
         return true;
       } else {
+        currentStudentData = null;
         isStudentVerified = false;
         msgEl.textContent = `❌ Không tìm thấy tên "${rawName}" trong danh sách lớp ${lop} từ vnEdu!`;
         msgEl.style.color = "var(--danger)";
-        const sibBox = document.getElementById("siblingNoticeBox");
-        if (sibBox) sibBox.style.display = "none";
+        const card = document.getElementById("siblingChallengeCard");
+        if (card) card.style.display = "none";
+        siblingChallengePending = false;
+        siblingChallengeResolved = false;
         return false;
       }
     }
@@ -1043,7 +1140,8 @@
         contentReady = (s !== "" && l !== "");
       }
 
-      if (contentReady && lop && isStudentVerified && cameraReady) {
+      const siblingOk = (!siblingChallengePending || siblingChallengeResolved);
+      if (contentReady && lop && isStudentVerified && cameraReady && siblingOk) {
         btn.disabled = false;
       } else {
         btn.disabled = true;
@@ -2062,12 +2160,19 @@
 
         let deviceID = getDeviceID();
 
-        // Ghi nhận cờ anh/chị/em chung thiết bị nếu có xác nhận
-        const sibCheckbox = document.getElementById("siblingCheckbox");
-        if (sibCheckbox && sibCheckbox.checked) {
-          const prevTxt = document.getElementById("prevStudentTxt") ? document.getElementById("prevStudentTxt").textContent : "";
-          deviceID += ` [Anh/em chung máy: ${prevTxt}]`;
+        // Gắn cờ trạng thái xác thực anh/chị/em chung thiết bị
+        if (siblingStatusTag) {
+          deviceID += ` [${siblingStatusTag}]`;
         }
+
+        // Lưu đối tượng học sinh hiện tại làm người dùng gần nhất trên máy này
+        localStorage.setItem("quiz_last_student_obj", JSON.stringify({
+          hoten: studentInfo.hoten,
+          lop: studentInfo.lop,
+          dob_dmy: (currentStudentData && currentStudentData.dob_dmy) ? currentStudentData.dob_dmy : "",
+          cid_last4: (currentStudentData && currentStudentData.cid_last4) ? currentStudentData.cid_last4 : "",
+          siblings: (currentStudentData && currentStudentData.siblings) ? currentStudentData.siblings : []
+        }));
 
         // Calculate test duration
         const durationSec = Math.floor((Date.now() - (quizStartTime || Date.now())) / 1000);

@@ -350,13 +350,21 @@ function quetGianLan() {
         let hs = r[2];
         let lop = r[1];
         if (dev && dev !== "") {
-          let isSibling = dev.indexOf("Anh/em chung máy") !== -1;
           let pureDev = dev.split(" [")[0];
-          if (!deviceMap[pureDev]) deviceMap[pureDev] = { students: new Set(), classes: new Set(), sheets: new Set(), isSibling: false };
+          if (!deviceMap[pureDev]) {
+            deviceMap[pureDev] = {
+              students: new Set(),
+              classes: new Set(),
+              sheets: new Set(),
+              hasVerified: false,
+              hasSoftAudit: false
+            };
+          }
           deviceMap[pureDev].students.add(hs);
           deviceMap[pureDev].classes.add(lop);
           deviceMap[pureDev].sheets.add(sName);
-          if (isSibling) deviceMap[pureDev].isSibling = true;
+          if (dev.indexOf("ĐÃ XÁC THỰC BẢO MẬT") !== -1) deviceMap[pureDev].hasVerified = true;
+          if (dev.indexOf("CẦN GV DUYỆT") !== -1) deviceMap[pureDev].hasSoftAudit = true;
         }
       });
     }
@@ -366,7 +374,19 @@ function quetGianLan() {
   let suspectCount = 0;
   for (let dev in deviceMap) {
     if (deviceMap[dev].students.size > 1) {
-      let classification = deviceMap[dev].isSibling ? "👨‍👩‍👧‍👦 Anh em chung máy (Hợp lệ)" : "🔴 Nghi vấn thi hộ / làm thay";
+      let classification = "🔴 Nghi vấn thi hộ / làm thay";
+      let color = "#c53030";
+
+      if (deviceMap[dev].hasVerified) {
+        classification = "👨‍👩‍👧‍👦 Anh em ruột (Đã xác thực bí mật)";
+        color = "#2b6cb0";
+      } else if (deviceMap[dev].hasSoftAudit) {
+        classification = "🟡 Chờ GV đối chiếu ảnh (Chung máy)";
+        color = "#d69e2e";
+      } else {
+        suspectCount++;
+      }
+
       dash.getRange(suspectRow, 1, 1, 6).setValues([[
         dev,
         deviceMap[dev].students.size,
@@ -375,12 +395,7 @@ function quetGianLan() {
         Array.from(deviceMap[dev].sheets).join(", "),
         classification
       ]]);
-      if (deviceMap[dev].isSibling) {
-        dash.getRange(suspectRow, 6).setFontColor("#2b6cb0").setFontWeight("bold");
-      } else {
-        dash.getRange(suspectRow, 6).setFontColor("#c53030").setFontWeight("bold");
-        suspectCount++;
-      }
+      dash.getRange(suspectRow, 6).setFontColor(color).setFontWeight("bold");
       suspectRow++;
     }
   }
