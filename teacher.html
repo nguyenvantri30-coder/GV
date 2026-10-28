@@ -413,6 +413,25 @@
 </head>
 <body>
 
+  <!-- SECURITY PIN GATE FOR TEACHER -->
+  <div id="teacherPinModal" style="position:fixed;inset:0;background:rgba(15,23,42,0.94);backdrop-filter:blur(8px);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px;">
+    <div style="background:#ffffff;border-radius:18px;max-width:420px;width:100%;padding:32px 26px;box-shadow:0 25px 50px -12px rgba(0,0,0,0.4);text-align:center;">
+      <div style="font-size:46px;margin-bottom:12px;">🔐</div>
+      <h3 style="font-size:21px;font-weight:800;color:#0f172a;margin-bottom:8px;">Xác thực Giáo Viên</h3>
+      <p style="font-size:13.5px;color:#64748b;margin-bottom:22px;line-height:1.5;">Vui lòng nhập Mã PIN Bảo Mật Giáo Viên để truy cập Cổng Soạn đề & Bảng điểm.</p>
+      <div style="margin-bottom:16px;">
+        <input type="password" id="teacherPinInput" placeholder="Nhập mã PIN giáo viên..." style="width:100%;padding:13px 16px;border:2px solid #cbd5e1;border-radius:10px;font-size:16px;text-align:center;letter-spacing:4px;font-weight:700;outline:none;" onkeyup="if(event.key==='Enter') checkTeacherPin()">
+        <div id="pinErrorMsg" style="color:#dc2626;font-size:13px;font-weight:600;margin-top:10px;display:none;">⚠️ Mã PIN không đúng! Vui lòng thử lại.</div>
+      </div>
+      <button onclick="checkTeacherPin()" style="width:100%;padding:13px;background:#2563eb;color:#fff;border:none;border-radius:10px;font-size:15.5px;font-weight:700;cursor:pointer;transition:background 0.2s ease;">
+        Xác nhận Đăng nhập
+      </button>
+      <div style="margin-top:16px;">
+        <a href="index.html" style="font-size:13px;color:#64748b;text-decoration:none;font-weight:500;">&larr; Quay lại trang học sinh</a>
+      </div>
+    </div>
+  </div>
+
   <!-- Top Navbar -->
   <header class="navbar">
     <div class="nav-brand">
@@ -679,6 +698,34 @@ YÊU CẦU ĐỊNH DẠNG ĐẦU RA BẮT BUỘC:
   </div>
 
   <script>
+    // --- BẢO MẬT: XÁC THỰC MÃ PIN GIÁO VIÊN ---
+    const TEACHER_VALID_PINS = ["gv2026", "alsm2026", "123456", "tri30"];
+    function checkTeacherPin() {
+      const pin = (document.getElementById("teacherPinInput").value || "").trim().toLowerCase();
+      const err = document.getElementById("pinErrorMsg");
+      if (TEACHER_VALID_PINS.includes(pin)) {
+        sessionStorage.setItem("alsm_teacher_auth", "1");
+        document.getElementById("teacherPinModal").style.display = "none";
+        if (err) err.style.display = "none";
+      } else {
+        if (err) {
+          err.style.display = "block";
+          err.textContent = "⚠️ Mã PIN không đúng! Vui lòng thử lại.";
+        }
+        document.getElementById("teacherPinInput").focus();
+      }
+    }
+    // Tự động kiểm tra trạng thái phiên làm việc khi tải trang
+    window.addEventListener("DOMContentLoaded", () => {
+      if (sessionStorage.getItem("alsm_teacher_auth") === "1") {
+        const modal = document.getElementById("teacherPinModal");
+        if (modal) modal.style.display = "none";
+      } else {
+        const input = document.getElementById("teacherPinInput");
+        if (input) setTimeout(() => input.focus(), 300);
+      }
+    });
+
     const isBackupHost = window.location.hostname.includes("nguyenvantri30");
     const GV_RAW = isBackupHost
       ? "https://raw.githubusercontent.com/nguyenvantri30-coder/GV/main"
