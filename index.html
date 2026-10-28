@@ -1536,18 +1536,34 @@
           const decuongText = document.getElementById("decuongSelect").selectedOptions[0].text;
           lessonTitle = `${decuongText} (${subKey.replace(/_/g, " ")})`;
 
-          // 1. Thử tìm file đề cương chuyên dụng trên repo GV (ví dụ Toan6.json, Tin8.json, Toan_GKII8.json...)
-          let monShort = subKey.toLowerCase().includes("tin") ? "Tin" : "Toan";
-          let khoiShort = subKey.replace(/\D/g, "");
-          let decuongFiles = [
-            `${GV_RAW}/${monShort}_${decuongKey}${khoiShort}.json`,
-            `${GV_RAW}/${monShort}${khoiShort}.json`
+          // 1. Danh sách các file đề cương ôn tập thực tế có trên repo GV (tránh gọi URL không tồn tại sinh lỗi 404)
+          const KNOWN_DECUONG_FILES = [
+            "Toan6.json", "Toan8.json", "Toan_GKII8.json",
+            "Tin6.json", "Tin7.json", "Tin_GKII6.json", "Tin_GKII7.json"
           ];
 
+          let monShort = subKey.toLowerCase().includes("tin") ? "Tin" : "Toan";
+          let khoiShort = subKey.replace(/\D/g, "");
+          const romanKey = decuongKey.replace("1", "I").replace("2", "II");
+
+          // Tìm file khớp nhất trong danh sách có sẵn (ưu tiên file theo kỳ thi -> file chung của khối)
+          let targetFile = null;
+          const candidates = [
+            `${monShort}_${romanKey}${khoiShort}.json`,
+            `${monShort}_${decuongKey}${khoiShort}.json`,
+            `${monShort}${khoiShort}.json`
+          ];
+          for (let cand of candidates) {
+            if (KNOWN_DECUONG_FILES.includes(cand)) {
+              targetFile = cand;
+              break;
+            }
+          }
+
           let loaded = false;
-          for (let fUrl of decuongFiles) {
+          if (targetFile) {
             try {
-              let rDc = await fetch(fUrl + "?v=" + Date.now());
+              let rDc = await fetch(`${GV_RAW}/${targetFile}?v=` + Date.now());
               if (rDc.ok) {
                 let dcData = await rDc.json();
                 if (Array.isArray(dcData) && dcData.length > 0) {
@@ -1565,10 +1581,11 @@
                     };
                   });
                   loaded = true;
-                  break;
                 }
               }
-            } catch(e) {}
+            } catch(e) {
+              console.warn("Không thể tải file đề cương:", e);
+            }
           }
 
           // 2. Nếu chưa có file đề cương riêng, tự động tổng hợp câu hỏi từ các bài học của môn đó
