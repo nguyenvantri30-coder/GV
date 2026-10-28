@@ -1155,6 +1155,16 @@
       }
     }
 
+    function extractCleanLessonTitle(rawStr) {
+      if (!rawStr) return "";
+      let s = rawStr.replace(/\.json$/i, "").trim();
+      const m = s.match(/\]_?([^\[\]]+?)(?:\s*\[[\d_]+\])?$/);
+      if (m && m[1].trim()) {
+        return m[1].trim().replace(/^[-_]\s*/, "");
+      }
+      return s.replace(/\[[^\]]*\]/g, "").trim().replace(/^[-_]\s*/, "") || s;
+    }
+
     function onSubjectChanged() {
       const subKey = document.getElementById("subjectSelect").value;
       const lessonSel = document.getElementById("lessonSelect");
@@ -1174,7 +1184,8 @@
       lessons.forEach((les, idx) => {
         const opt = document.createElement("option");
         opt.value = les.filename;
-        opt.textContent = `Tiết ${les.ppct || (idx+1)}: ${les.title || les.filename} (${les.question_count} câu)`;
+        const cleanTitle = extractCleanLessonTitle(les.title || les.filename);
+        opt.textContent = `Tiết ${les.ppct || (idx+1)}: ${cleanTitle}`;
         lessonSel.appendChild(opt);
       });
 
