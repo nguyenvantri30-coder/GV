@@ -1274,6 +1274,15 @@
 
     async function loadFaceModels() {
       try {
+        // Kiểm tra xem trình duyệt có hỗ trợ WebGL phần cứng không
+        if (window.faceapi && window.faceapi.tf) {
+          const testCanvas = document.createElement("canvas");
+          const gl = testCanvas.getContext("webgl") || testCanvas.getContext("experimental-webgl");
+          if (!gl) {
+            // Chủ động chuyển sang backend CPU để tránh báo lỗi WebGL trên console
+            await faceapi.tf.setBackend("cpu");
+          }
+        }
         await faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL);
         console.log("TinyFaceDetector loaded successfully");
       } catch (err) {
