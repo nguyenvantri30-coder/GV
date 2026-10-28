@@ -692,6 +692,10 @@
 
         const subjectLabels = {
           "Tin_hoc_Khối_8": "Tin học - Khối 8 (GDPT 2018)",
+          "Toán_hoc_Khối_6": "Toán học - Khối 6 (GDPT 2018)",
+          "Toán_hoc_Khối_7": "Toán học - Khối 7 (GDPT 2018)",
+          "Toán_hoc_Khối_8": "Toán học - Khối 8 (GDPT 2018)",
+          "Toán_hoc_Khối_9": "Toán học - Khối 9 (GDPT 2018)",
           "Toan_hoc_Khối_6": "Toán học - Khối 6 (GDPT 2018)",
           "Toan_hoc_Khối_7": "Toán học - Khối 7 (GDPT 2018)",
           "Toan_hoc_Khối_8": "Toán học - Khối 8 (GDPT 2018)",
@@ -1005,13 +1009,17 @@
       // Map folder path in GitHub
       const folderMap = {
         "Tin_hoc_Khối_8": "Tin_hoc/Khối_8",
+        "Toán_hoc_Khối_6": "Toán_hoc/Khối_6",
+        "Toán_hoc_Khối_7": "Toán_hoc/Khối_7",
+        "Toán_hoc_Khối_8": "Toán_hoc/Khối_8",
+        "Toán_hoc_Khối_9": "Toán_hoc/Khối_9",
         "Toan_hoc_Khối_6": "Toán_hoc/Khối_6",
         "Toan_hoc_Khối_7": "Toán_hoc/Khối_7",
         "Toan_hoc_Khối_8": "Toán_hoc/Khối_8",
         "Toan_hoc_Khối_9": "Toán_hoc/Khối_9"
       };
 
-      const folderPath = folderMap[subKey];
+      const folderPath = folderMap[subKey] || subKey.replace("_Khối_", "/Khối_");
       const encodedFilename = encodeURIComponent(filename);
       const url = `${GITHUB_RAW}/${folderPath}/${encodedFilename}`;
 
