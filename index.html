@@ -640,7 +640,12 @@
 
   <!-- Header -->
   <header>
-    <div class="header-title" id="topLessonTitle">Đề Cương Ôn Tập</div>
+    <div style="display:flex;align-items:center;gap:10px;min-width:0;">
+      <button id="headerHomeBtn" onclick="confirmGoHome()" title="Về màn hình chính" style="display:none;background:rgba(255,255,255,0.22);color:#fff;border:1px solid rgba(255,255,255,0.6);border-radius:8px;padding:4px 10px;font-size:16px;cursor:pointer;flex-shrink:0;">
+        🏠
+      </button>
+      <div class="header-title" id="topLessonTitle">Đề Cương Ôn Tập</div>
+    </div>
     <div class="header-timer">
       <span>⏱</span>
       <span id="timerTxt">45:00</span>
@@ -750,6 +755,11 @@
 
     <!-- QUIZ SCREEN -->
     <div id="quizScreen" style="display:none;">
+      <!-- Banner hiển thị khi đang xem lại bài làm -->
+      <div id="reviewBanner" style="display:none;background:#ebf8ff;border:1.5px solid #3182ce;color:#2b6cb0;padding:10px 14px;border-radius:var(--radius);margin-bottom:14px;align-items:center;justify-content:space-between;gap:10px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="font-weight:700;font-size:15px;">🔍 ĐANG XEM LẠI BÀI <span id="reviewScoreTxt" style="color:var(--danger);margin-left:4px;"></span></div>
+        <button class="btn-main" style="width:auto;padding:6px 14px;font-size:13px;background:#3182ce;margin:0;border-radius:6px;" onclick="goHome()">🏠 Về trang chính</button>
+      </div>
       <div id="questionContainer"></div>
     </div>
 
@@ -772,7 +782,8 @@
         <div class="drawer-close" onclick="closeDrawer()">×</div>
       </div>
       <div class="q-grid" id="paletteGrid"></div>
-      <button class="btn-main" style="background:var(--success);" onclick="confirmSubmit()">NỘP BÀI THI</button>
+      <button id="drawerSubmitBtn" class="btn-main" style="background:var(--success);" onclick="confirmSubmit()">NỘP BÀI THI</button>
+      <button id="drawerHomeBtn" class="btn-main" style="background:var(--primary);display:none;margin-top:8px;" onclick="goHome()">🏠 VỀ MÀN HÌNH CHÍNH</button>
     </div>
   </div>
 
@@ -802,8 +813,11 @@
       <button id="reviewQuizBtn" class="btn-main" onclick="reviewQuiz()" disabled style="opacity:0.6;cursor:not-allowed;">
         ⏳ ĐANG LƯU KẾT QUẢ...
       </button>
-      <button id="newQuizBtn" class="btn-main" style="background:var(--gray-700);margin-top:8px;opacity:0.6;cursor:not-allowed;" onclick="location.reload()" disabled>
-        LÀM ĐỀ KHÁC
+      <button id="retryQuizBtn" class="btn-main" style="background:#2b6cb0;margin-top:8px;opacity:0.6;cursor:not-allowed;" onclick="retrySameQuiz()" disabled>
+        🔄 LÀM LẠI ĐỀ NÀY
+      </button>
+      <button id="homeBtn" class="btn-main" style="background:var(--gray-700);margin-top:8px;opacity:0.6;cursor:not-allowed;" onclick="goHome()" disabled>
+        🏠 VỀ MÀN HÌNH CHÍNH (CHỌN BÀI KHÁC)
       </button>
     </div>
   </div>
@@ -1610,6 +1624,10 @@
         document.getElementById("quizScreen").style.display = "block";
         document.getElementById("bottomBar").style.display = "flex";
         document.getElementById("topLessonTitle").textContent = studentInfo.lessonTitle;
+        const headerHome = document.getElementById("headerHomeBtn");
+        if (headerHome) headerHome.style.display = "block";
+        const revBanner = document.getElementById("reviewBanner");
+        if (revBanner) revBanner.style.display = "none";
 
         // Show floating camera preview during quiz
         const floatBox = document.getElementById("floatingCamBox");
@@ -2070,6 +2088,18 @@
         };
         grid.appendChild(btn);
       });
+
+      const subBtn = document.getElementById("drawerSubmitBtn");
+      const homeBtn = document.getElementById("drawerHomeBtn");
+      if (subBtn && homeBtn) {
+        if (isSubmitted) {
+          subBtn.style.display = "none";
+          homeBtn.style.display = "block";
+        } else {
+          subBtn.style.display = "block";
+          homeBtn.style.display = "none";
+        }
+      }
     }
 
     /* =========================================================================
@@ -2209,8 +2239,20 @@
     async function doSendResultPayload(fd) {
       const statusTxt = document.getElementById("resultStatusTxt");
       const reviewBtn = document.getElementById("reviewQuizBtn");
-      const newBtn = document.getElementById("newQuizBtn");
+      const retryQuizBtn = document.getElementById("retryQuizBtn");
+      const homeBtn = document.getElementById("homeBtn");
       const retryBtn = document.getElementById("retrySubmitBtn");
+
+      function enableButtons() {
+        [reviewBtn, retryQuizBtn, homeBtn].forEach(b => {
+          if (b) {
+            b.disabled = false;
+            b.style.opacity = "1";
+            b.style.cursor = "pointer";
+          }
+        });
+        if (reviewBtn) reviewBtn.textContent = "🔍 XEM LẠI BÀI LÀM";
+      }
 
       try {
         statusTxt.textContent = "⏳ Đang đồng bộ điểm và ảnh xác thực về máy chủ...";
@@ -2222,18 +2264,7 @@
         if (resText.includes("OK") || resp.ok) {
           statusTxt.textContent = "✅ ĐÃ LƯU KẾT QUẢ THÀNH CÔNG VÀO BẢNG ĐIỂM!";
           statusTxt.style.color = "var(--success)";
-
-          if (reviewBtn) {
-            reviewBtn.disabled = false;
-            reviewBtn.style.opacity = "1";
-            reviewBtn.style.cursor = "pointer";
-            reviewBtn.textContent = "📋 XEM LẠI BÀI LÀM";
-          }
-          if (newBtn) {
-            newBtn.disabled = false;
-            newBtn.style.opacity = "1";
-            newBtn.style.cursor = "pointer";
-          }
+          enableButtons();
           if (retryBtn) retryBtn.style.display = "none";
 
           // Lưu lại học sinh cuối cùng dùng thiết bị này (phục vụ xác nhận anh em)
@@ -2243,45 +2274,33 @@
           statusTxt.textContent = "⚠️ Máy chủ phản hồi: " + resText + ". Bạn có thể bấm nút thử lại!";
           statusTxt.style.color = "#c53030";
           if (retryBtn) retryBtn.style.display = "block";
-          if (reviewBtn) {
-            reviewBtn.disabled = false;
-            reviewBtn.style.opacity = "1";
-            reviewBtn.style.cursor = "pointer";
-            reviewBtn.textContent = "📋 XEM LẠI BÀI LÀM";
-          }
+          enableButtons();
         }
       } catch (err) {
         console.warn("Sheet send error:", err);
         statusTxt.textContent = "❌ LỖI KẾT NỐI MẠNG: Không thể gửi kết quả về máy chủ! Hãy kiểm tra mạng và bấm GỬI LẠI.";
         statusTxt.style.color = "#c53030";
         if (retryBtn) retryBtn.style.display = "block";
-        if (reviewBtn) {
-          reviewBtn.disabled = false;
-          reviewBtn.style.opacity = "1";
-          reviewBtn.style.cursor = "pointer";
-          reviewBtn.textContent = "📋 XEM LẠI BÀI LÀM";
-        }
+        enableButtons();
       }
     }
 
     async function captureAndSendResult(score, correctCount) {
       const statusTxt = document.getElementById("resultStatusTxt");
       const reviewBtn = document.getElementById("reviewQuizBtn");
-      const newBtn = document.getElementById("newQuizBtn");
+      const retryQuizBtn = document.getElementById("retryQuizBtn");
+      const homeBtn = document.getElementById("homeBtn");
       const retryBtn = document.getElementById("retrySubmitBtn");
 
-      // Khóa 2 nút lại để đợi gửi xong
-      if (reviewBtn) {
-        reviewBtn.disabled = true;
-        reviewBtn.style.opacity = "0.6";
-        reviewBtn.style.cursor = "not-allowed";
-        reviewBtn.textContent = "⏳ ĐANG LƯU KẾT QUẢ...";
-      }
-      if (newBtn) {
-        newBtn.disabled = true;
-        newBtn.style.opacity = "0.6";
-        newBtn.style.cursor = "not-allowed";
-      }
+      // Khóa các nút lại để đợi gửi xong
+      [reviewBtn, retryQuizBtn, homeBtn].forEach(b => {
+        if (b) {
+          b.disabled = true;
+          b.style.opacity = "0.6";
+          b.style.cursor = "not-allowed";
+        }
+      });
+      if (reviewBtn) reviewBtn.textContent = "⏳ ĐANG LƯU KẾT QUẢ...";
       if (retryBtn) retryBtn.style.display = "none";
 
       const video = document.getElementById("floatingCamVideo") || document.getElementById("cameraVideo");
@@ -2377,7 +2396,84 @@
 
     function reviewQuiz() {
       document.getElementById("resultOverlay").style.display = "none";
+      const revBanner = document.getElementById("reviewBanner");
+      if (revBanner) {
+        revBanner.style.display = "flex";
+        const scoreEl = document.getElementById("resultScore");
+        document.getElementById("reviewScoreTxt").textContent = `(Điểm: ${scoreEl ? scoreEl.textContent : ''}đ)`;
+      }
+      const headerHome = document.getElementById("headerHomeBtn");
+      if (headerHome) headerHome.style.display = "block";
       renderQuestion(0);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function goHome() {
+      if (timer) clearInterval(timer);
+      timeLeft = 45 * 60;
+
+      document.getElementById("resultOverlay").style.display = "none";
+      const revBanner = document.getElementById("reviewBanner");
+      if (revBanner) revBanner.style.display = "none";
+      document.getElementById("quizScreen").style.display = "none";
+      document.getElementById("bottomBar").style.display = "none";
+      const headerHome = document.getElementById("headerHomeBtn");
+      if (headerHome) headerHome.style.display = "none";
+
+      const floatBox = document.getElementById("floatingCamBox");
+      if (floatBox) floatBox.style.display = "none";
+      const previewVideo = document.getElementById("cameraVideo");
+      if (previewVideo && cameraStream) {
+        previewVideo.srcObject = cameraStream;
+        previewVideo.play().catch(e => console.log(e));
+      }
+
+      isSubmitted = false;
+      userAnswers = {};
+      currentQuestions = [];
+      document.getElementById("timerTxt").textContent = "45:00";
+      document.getElementById("topLessonTitle").textContent = "Đề Cương Ôn Tập";
+
+      document.getElementById("startScreen").style.display = "block";
+      const startBtn = document.getElementById("startBtn");
+      if (startBtn) {
+        startBtn.textContent = "BẮT ĐẦU LÀM BÀI";
+        startBtn.disabled = false;
+      }
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function retrySameQuiz() {
+      if (!cachedRawQuestions || cachedRawQuestions.length === 0) {
+        goHome();
+        return;
+      }
+      if (timer) clearInterval(timer);
+      timeLeft = 45 * 60;
+      isSubmitted = false;
+      userAnswers = {};
+
+      document.getElementById("resultOverlay").style.display = "none";
+      const revBanner = document.getElementById("reviewBanner");
+      if (revBanner) revBanner.style.display = "none";
+
+      generateQuizQuestions();
+
+      quizStartTime = Date.now();
+      startTimer();
+      renderQuestion(0);
+      renderPalette();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function confirmGoHome() {
+      if (!isSubmitted) {
+        if (!confirm("Em có chắc muốn dừng làm bài để về màn hình chính không? Bài làm hiện tại chưa nộp sẽ không được lưu.")) {
+          return;
+        }
+      }
+      goHome();
     }
 
     function zoomImage(src) {
