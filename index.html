@@ -1115,6 +1115,8 @@
           totalQuestionsInBank = 60;
         } else if (keys.subKey === "Toan_hoc_Khối_7" && (keys.lessonId.includes("GK1") || keys.lessonId.includes("GKI"))) {
           totalQuestionsInBank = 82;
+        } else if (keys.subKey === "Tin_hoc_Khối_8" && (keys.lessonId.includes("GK1") || keys.lessonId.includes("GKI"))) {
+          totalQuestionsInBank = 60;
         }
       }
 
@@ -1716,9 +1718,9 @@
         delimiters: [
           { left: "$$", right: "$$", display: true },
           { left: "\\[", right: "\\]", display: true },
-          { left: "$", right: "$", display: false },
           { left: "\\(", right: "\\)", display: false }
         ],
+        ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"],
         throwOnError: false
       });
     }
@@ -1823,7 +1825,7 @@
           // 1. Danh sách các file đề cương ôn tập thực tế có trên repo GV (tránh gọi URL không tồn tại sinh lỗi 404)
           const KNOWN_DECUONG_FILES = [
             "Toan_GKI6.json", "Toan6.json", "Toan_GKI7.json", "Toan7.json", "Toan8.json", "Toan_GKII8.json",
-            "Tin6.json", "Tin7.json", "Tin_GKII6.json", "Tin_GKII7.json"
+            "Tin_GKI8.json", "Tin8.json", "Tin6.json", "Tin7.json", "Tin_GKII6.json", "Tin_GKII7.json"
           ];
 
           let monShort = subKey.toLowerCase().includes("tin") ? "Tin" : "Toan";
@@ -1836,6 +1838,8 @@
             targetFile = "Toan_GKI6.json";
           } else if (subKey === "Toan_hoc_Khối_7" && (decuongKey === "GK1" || decuongKey === "GKI")) {
             targetFile = "Toan_GKI7.json";
+          } else if (subKey === "Tin_hoc_Khối_8" && (decuongKey === "GK1" || decuongKey === "GKI")) {
+            targetFile = "Tin_GKI8.json";
           } else {
             const candidates = [
               `${monShort}_${romanKey}${khoiShort}.json`,
@@ -1886,6 +1890,9 @@
             }
             if (subKey === "Toan_hoc_Khối_7" && (decuongKey === "GK1" || decuongKey === "GKI")) {
               throw new Error("Không thể tải bộ 82 câu hỏi ôn tập GK1 Toán 7 mới nhất từ máy chủ!");
+            }
+            if (subKey === "Tin_hoc_Khối_8" && (decuongKey === "GK1" || decuongKey === "GKI")) {
+              throw new Error("Không thể tải bộ 60 câu hỏi ôn tập GK1 Tin học 8 mới nhất từ máy chủ!");
             }
             const lessons = catalog.subjects[subKey]?.lessons || [];
             const pickLessons = lessons.slice(0, Math.min(8, lessons.length));

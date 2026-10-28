@@ -1,0 +1,1522 @@
+[
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Chiếc máy tính cơ học đầu tiên có tên là Pascaline ra đời vào thời gian nào và do ai sáng chế?",
+    "generalfeedback": "Năm 1642, nhà bác học người Pháp Blaise Pascal đã cho ra đời chiếc máy tính cơ học Pascaline.",
+    "answers": [
+      {
+        "text": "Năm 1642, do Blaise Pascal.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Năm 1833, do Charles Babbage.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Năm 1945, do John Von Neumann.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Hơn 2000 năm trước Công nguyên, do người Trung Quốc.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Thành phần điện tử chính của máy tính thế hệ thứ tư là gì?",
+    "generalfeedback": "Máy tính thế hệ thứ tư sử dụng thành phần chính là mạch tích hợp cỡ rất lớn (VLSI) và bộ vi xử lí.",
+    "answers": [
+      {
+        "text": "Mạch tích hợp cỡ rất lớn và bộ vi xử lí.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Đèn điện tử chân không.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Bóng bán dẫn.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Mạch tích hợp cỡ siêu lớn (trí tuệ nhân tạo).",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Nguyên lí thiết kế máy tính của Charles Babbage có đặc điểm nào giống với máy tính ngày nay?",
+    "generalfeedback": "Nguyên lí của Babbage thiết kế loại máy đa năng, thực hiện tính toán tự động và có ứng dụng ngoài tính toán thuần tuý.",
+    "answers": [
+      {
+        "text": "Là loại máy đa năng, thực hiện tính toán tự động và có ứng dụng ngoài tính toán thuần tuý.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Chỉ sử dụng bóng bán dẫn để hoạt động.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Có thể kết nối Internet không dây.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Kích thước nhỏ gọn, có thể mang theo người.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Đặc điểm nào sau đây KHÔNG PHẢI là đặc điểm của thông tin số?",
+    "generalfeedback": "Thông tin số rất khó bị xóa bỏ hoàn toàn trên môi trường mạng vì nó dễ dàng được sao chép và lan truyền.",
+    "answers": [
+      {
+        "text": "Dễ dàng bị xóa bỏ hoàn toàn trên môi trường mạng.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Dễ dàng được nhân bản và chia sẻ.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Có thể truy cập từ xa thông qua kết nối Internet.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Đa dạng, được thu thập nhanh và lưu trữ với dung lượng rất lớn.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Tiêu chí nào dưới đây giúp em đánh giá một thông tin trên mạng có độ tin cậy thấp?",
+    "generalfeedback": "Thông tin mang tính chất quan điểm, cảm xúc cá nhân thường không khách quan và có độ tin cậy thấp hơn thông tin dựa trên sự kiện và chứng cứ.",
+    "answers": [
+      {
+        "text": "Thông tin đưa ra dưới dạng ý kiến, quan điểm cá nhân, mang nhiều cảm xúc.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Thông tin được công bố trên trang web có đuôi .gov.vn của chính phủ.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Thông tin được đưa ra đi kèm với minh chứng và số liệu rõ ràng.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Thông tin vừa được cập nhật, có tính thời sự cao.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "Khi nhận được một thông tin chia sẻ trên mạng xã hội nói rằng 'Uống nước chanh pha muối có thể chữa bách bệnh', cách xử lí nào sau đây là vận dụng đúng kiến thức về thông tin đáng tin cậy?",
+    "generalfeedback": "Các tin đồn thổi liên quan đến sức khỏe cần được kiểm chứng thông qua các cơ quan y tế có chuyên môn và uy tín.",
+    "answers": [
+      {
+        "text": "Kiểm tra xem thông tin đó được phát ngôn từ cơ quan y tế uy tín nào không trước khi tin tưởng.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Chia sẻ ngay cho người thân và bạn bè cùng áp dụng.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Bình luận xác nhận thông tin này là đúng để mọi người tin tưởng.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Áp dụng ngay lập tức vì không tốn kém.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "Để hoàn thành bài trình chiếu nhóm về chủ đề 'Năng lượng tái tạo' với số liệu quy hoạch quốc gia mới nhất, em nên ưu tiên thu thập dữ liệu từ nguồn nào sau đây?",
+    "generalfeedback": "Trang thông tin của Bộ Công Thương hoặc EVN (có đuôi .gov.vn hoặc .vn chính thức) là cơ quan có thẩm quyền về năng lượng nên độ tin cậy rất cao.",
+    "answers": [
+      {
+        "text": "Trang thông tin điện tử của Bộ Công Thương hoặc Tập đoàn Điện lực Việt Nam.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Một diễn đàn trực tuyến nơi bất kỳ ai cũng có thể bình luận.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Một blog cá nhân ghi chép kinh nghiệm sống xanh.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Một bài đăng trên mạng xã hội không có trích dẫn nguồn gốc.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Hành động nào sau đây KHÔNG vi phạm đạo đức và pháp luật khi sử dụng công nghệ kĩ thuật số?",
+    "generalfeedback": "Tặng một đĩa nhạc mà em đã mua hợp pháp là việc chia sẻ tài sản vật lý hợp pháp, không vi phạm bản quyền hay đạo đức.",
+    "answers": [
+      {
+        "text": "Tặng đĩa nhạc có bản quyền mà em đã mua hợp pháp cho người khác.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Tải lậu một phần mềm có bản quyền về máy để sử dụng miễn phí.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Quay lén và lan truyền video bạo lực học đường lên mạng.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Sao chép thông tin từ một trang web và ghi tên mình là tác giả.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Vì sao việc tự ý lấy bức ảnh của bạn mình, chỉnh sửa lại rồi đăng lên mạng xã hội kèm lời ghi chú gây hiểu lầm là một hành vi thiếu văn hóa?",
+    "generalfeedback": "Hành vi này xâm phạm bản quyền, thiếu tính trung thực và làm tổn hại đến danh dự hoặc gây hiểu lầm tiêu cực cho người khác.",
+    "answers": [
+      {
+        "text": "Vì không tôn trọng bản quyền cá nhân, thiếu trung thực và gây hiểu lầm cho người khác.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Vì đã sử dụng dữ liệu di động của bạn để đăng ảnh.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Vì bức ảnh sau khi chỉnh sửa tốn nhiều dung lượng máy tính.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Vì chưa nộp phí sử dụng mạng xã hội.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "Trong phần mềm bảng tính, điều gì sẽ xảy ra đối với địa chỉ tuyệt đối khi ta thực hiện thao tác sao chép công thức sang ô khác?",
+    "generalfeedback": "Địa chỉ tuyệt đối (có dấu $) không bị thay đổi cả tên hàng và tên cột khi thực hiện sao chép công thức.",
+    "answers": [
+      {
+        "text": "Địa chỉ tuyệt đối hoàn toàn không thay đổi.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Địa chỉ tuyệt đối sẽ thay đổi cột nhưng giữ nguyên hàng.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Địa chỉ tuyệt đối sẽ thay đổi hàng nhưng giữ nguyên cột.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Địa chỉ tuyệt đối sẽ tự động chuyển thành địa chỉ tương đối.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "Nếu tại ô E4 có công thức =C4*D4. Khi em sao chép công thức này xuống ô E5, công thức tại ô E5 sẽ tự động thay đổi thành gì?",
+    "generalfeedback": "Khi chép xuống 1 hàng, địa chỉ tương đối tự động tăng chỉ số hàng thêm 1 đơn vị: C4 thành C5, D4 thành D5.",
+    "answers": [
+      {
+        "text": "=C5*D5",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "=C4*D4",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "=$C$4*$D$4",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "=C4*D5",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "Giả sử ô F2 chứa tỉ lệ phần trăm doanh thu (70%). Tại ô F4 cần nhập công thức tính doanh thu của công ty (bằng ô E4 nhân với ô F2) sao cho khi sao chép công thức xuống F5, F6 thì địa chỉ ô F2 không bị thay đổi. Công thức đúng tại F4 là:",
+    "generalfeedback": "Để giữ cố định ô F2, ta cần dùng địa chỉ tuyệt đối $F$2, trong khi ô E4 là địa chỉ tương đối để có thể thay đổi thành E5, E6.",
+    "answers": [
+      {
+        "text": "=E4*$F$2",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "=E4*F2",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "=$E$4*F2",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "=$E$4*$F$2",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Máy tính thế hệ thứ nhất sử dụng thành phần điện tử chính là bóng bán dẫn.",
+    "generalfeedback": "Sai. Máy tính thế hệ thứ nhất sử dụng đèn điện tử chân không. Bóng bán dẫn là thành phần của máy tính thế hệ thứ hai.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Sai",
+        "fraction": 100,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Máy tính điện - cơ ra đời là nền tảng cho việc thiết kế các máy tính kĩ thuật số hiện đại.",
+    "generalfeedback": "Đúng. Đây là mốc lịch sử quan trọng làm nền tảng phát triển sang kỉ nguyên điện tử.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Sai",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Kích thước của máy tính thế hệ thứ nhất rất lớn, thường chiếm diện tích cả một căn phòng.",
+    "generalfeedback": "Đúng. Do sử dụng hàng chục ngàn đèn điện tử chân không nên kích thước máy ENIAC rất khổng lồ.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Sai",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Điện thoại thông minh, kính thông minh là các thiết bị tiêu biểu của máy tính thế hệ thứ năm.",
+    "generalfeedback": "Đúng. Thế hệ 5 có tính năng thông minh, kích thước nhỏ và tích hợp trí tuệ nhân tạo.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Sai",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Bất cứ thông tin, hình ảnh nào tìm được trên Internet đều có thể tải về và tùy ý sửa chữa thành sản phẩm của mình.",
+    "generalfeedback": "Sai. Hầu hết thông tin, hình ảnh trên mạng đều có bản quyền. Việc lấy về tùy ý sử dụng là vi phạm bản quyền.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Sai",
+        "fraction": 100,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Hầu hết thông tin trên Internet là có bản quyền, em chỉ nên sử dụng khi được phép hoặc mua bản quyền.",
+    "generalfeedback": "Đúng. Tôn trọng bản quyền tác giả là nguyên tắc khi sử dụng tài nguyên số.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Sai",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Việc dùng ngôn ngữ lịch sự, không dùng hình ảnh giật gân khi thiết kế sản phẩm số là biểu hiện của tính văn hóa.",
+    "generalfeedback": "Đúng. Đây là cách ứng xử văn minh và tuân thủ đạo đức khi hoạt động trên môi trường mạng.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Sai",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Tự sáng tác một bài thơ về lớp và đánh máy, thiết kế thành file PDF chia sẻ cho bạn bè là hành động vi phạm pháp luật vì chưa đăng kí bản quyền.",
+    "generalfeedback": "Sai. Quyền tác giả đối với tác phẩm tự sáng tác (như bài thơ) tự động phát sinh kể từ khi tác phẩm được định hình mà không bắt buộc phải đăng ký.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Sai",
+        "fraction": 100,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Khi gửi ảnh qua thư điện tử cho một người bạn, người gửi sẽ bị mất bức ảnh gốc trong máy của mình.",
+    "generalfeedback": "Sai. Thông tin số khi gửi đi là tạo ra bản sao, người gửi không bị mất bản gốc.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Sai",
+        "fraction": 100,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Bức ảnh số là loại thông tin dễ dàng được nhân bản và chia sẻ trên môi trường mạng.",
+    "generalfeedback": "Đúng. Đây là một đặc điểm cơ bản của thông tin số.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Sai",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Kể cả khi người nhận đã xóa thư điện tử chứa ảnh, bức ảnh đó vẫn có thể còn được lưu trữ trên máy chủ của dịch vụ thư.",
+    "generalfeedback": "Đúng. Thông tin số có thể được lưu trữ độc lập trên máy chủ của nhà cung cấp dịch vụ.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Sai",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Nếu một bức ảnh cá nhân bị đăng tải công khai lên mạng xã hội, sẽ rất khó để kiểm soát và xóa bỏ hoàn toàn bức ảnh đó khỏi môi trường số.",
+    "generalfeedback": "Đúng. Bởi vì ảnh có thể đã bị người khác tải về, nhân bản và chia sẻ lại trên nhiều nền tảng khác.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Sai",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Để minh họa cho bài làm, em có thể lên Google tải trực tiếp bất kỳ ảnh nào, sau đó cắt ghép tên mình vào để làm avatar cá nhân hợp pháp.",
+    "generalfeedback": "Sai. Tải ảnh bản quyền và thay đổi tên tác giả là vi phạm quyền tác giả.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Sai",
+        "fraction": 100,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Việc lên danh sách các câu hỏi cụ thể trước khi tìm kiếm giúp em xác định từ khóa chính xác hơn.",
+    "generalfeedback": "Đúng. Đặt câu hỏi cụ thể giúp thu hẹp phạm vi và chọn được từ khóa phù hợp nhất trên máy tìm kiếm.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Sai",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Khi thu thập thông tin, ghi chép kết quả tìm kiếm kèm nguồn gốc và thời gian bài viết là một bước thừa, làm mất thời gian thực hành.",
+    "generalfeedback": "Sai. Việc ghi nguồn gốc và thời gian giúp đánh giá độ tin cậy và tính thời sự của thông tin.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Sai",
+        "fraction": 100,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Khi hoàn thành một bài trình chiếu, em có thể sử dụng tính năng lưu trữ dùng chung (như Google Drive) để gửi link cho giáo viên thay vì in ra giấy.",
+    "generalfeedback": "Đúng. Đây là cách chia sẻ thông tin số nhanh chóng, tiện lợi và tiết kiệm.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Sai",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Hành vi nào sau đây là biểu hiện vi phạm đạo đức hoặc pháp luật khi sử dụng công nghệ số?",
+    "generalfeedback": "Phát trực tiếp hoặc lan truyền các nội dung bạo lực học đường là hành vi vi phạm đạo đức và có thể vi phạm pháp luật nghiêm trọng.",
+    "answers": [
+      {
+        "text": "Phát trực tiếp (livestream) hoặc chia sẻ các vụ bạo lực học đường.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Tự sáng tác và đăng tải một đoạn video blog chia sẻ về kinh nghiệm học tập.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Nhắn tin xin phép tác giả trước khi sử dụng một bài viết trên mạng.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Chia sẻ đường dẫn bài học của bộ giáo dục cho bạn bè cùng xem.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Hành động nào dưới đây thể hiện sự thiếu văn hóa, vi phạm quyền riêng tư trên môi trường số?",
+    "generalfeedback": "Ghi âm trái phép cuộc nói chuyện khi không được sự đồng ý của người khác là hành vi vi phạm quyền riêng tư và thiếu văn hóa.",
+    "answers": [
+      {
+        "text": "Cố ý nghe, ghi âm trái phép các cuộc nói chuyện cá nhân của người khác.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Cài đặt mật khẩu mạnh để bảo vệ thông tin cá nhân trên mạng xã hội.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Nhấn nút báo cáo (report) khi thấy các bài viết chứa nội dung độc hại.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Gửi email góp ý chân thành cho tác giả của một bài viết chưa chính xác.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Để chuyển đổi địa chỉ tương đối sang địa chỉ tuyệt đối trong phần mềm bảng tính, sau khi nhập hoặc chọn địa chỉ ô, em cần nhấn phím nào trên bàn phím?",
+    "generalfeedback": "Phím F4 là phím tắt phổ biến trong Excel để cố định địa chỉ ô thành địa chỉ tuyệt đối (thêm dấu $).",
+    "answers": [
+      {
+        "text": "Phím F4",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Phím F2",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Phím Enter",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Phím Shift",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Trong phần mềm bảng tính, địa chỉ nào sau đây là địa chỉ tuyệt đối hợp lệ?",
+    "generalfeedback": "Địa chỉ tuyệt đối được định dạng bằng cách đặt dấu $ trước tên cột và tên dòng, ví dụ: $C$4.",
+    "answers": [
+      {
+        "text": "$C$4",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "C$4",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "$C4",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "C4",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "Khi thực hiện thao tác sao chép công thức sang ô khác, sự khác biệt cơ bản giữa địa chỉ tương đối và địa chỉ tuyệt đối là gì?",
+    "generalfeedback": "Khi sao chép công thức, địa chỉ tương đối tự động thay đổi dựa trên vị trí mới, trong khi địa chỉ tuyệt đối vẫn giữ nguyên tọa độ gốc.",
+    "answers": [
+      {
+        "text": "Địa chỉ tương đối tự động thay đổi tọa độ, còn địa chỉ tuyệt đối không thay đổi.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Địa chỉ tuyệt đối tự động thay đổi tọa độ, còn địa chỉ tương đối không thay đổi.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Cả hai loại địa chỉ đều tự động thay đổi nhưng với tỷ lệ khác nhau.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Cả hai loại địa chỉ đều không thay đổi khi sao chép công thức.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Nếu em được giao chuẩn bị một bài thuyết trình về 'Tác hại của tin giả trên mạng xã hội', từ khóa (keyword) nào sau đây là phù hợp nhất để dùng khi tra cứu?",
+    "generalfeedback": "Sử dụng từ khóa cụ thể 'tác hại của tin giả' giúp bộ máy tìm kiếm trả về các kết quả đúng trọng tâm nhất với yêu cầu đề bài.",
+    "answers": [
+      {
+        "text": "\"tác hại của tin giả\"",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "\"tin tức mới nhất\"",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "\"cách sử dụng mạng xã hội\"",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "\"sự phát triển của Internet\"",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Để kiểm tra tính đáng tin cậy của một bài viết tìm được trên mạng, tiêu chí nào sau đây cần được xem xét đầu tiên?",
+    "generalfeedback": "Nguồn gốc, thẩm quyền và uy tín của tổ chức hoặc cá nhân cung cấp thông tin là yếu tố quan trọng nhất để xác định độ tin cậy.",
+    "answers": [
+      {
+        "text": "Nguồn gốc, thẩm quyền và uy tín của tổ chức hoặc tác giả cung cấp thông tin.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Bài viết có chứa nhiều hình ảnh sặc sỡ và giật gân hay không.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Số lượng lượt 'Thích' (Like) và 'Chia sẻ' (Share) của bài viết.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Tốc độ tải trang web nhanh hay chậm.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Khi đọc một thông tin trên Internet, dấu hiệu nào cho thấy thông tin đó có thể không đáng tin cậy?",
+    "generalfeedback": "Những thông tin dựa trên quan điểm cá nhân, mang nhiều cảm xúc và thiếu bằng chứng cụ thể thường không đáng tin cậy.",
+    "answers": [
+      {
+        "text": "Nội dung thiếu chứng cứ, mang tính chất cảm xúc, đồn thổi cá nhân.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Có dẫn chứng số liệu rõ ràng từ Tổng cục Thống kê.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Được đăng tải trên trang thông tin chính thức của Bộ Y tế.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Cung cấp thời gian đăng tải và tên tác giả chịu trách nhiệm cụ thể.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Máy tính ENIAC, một trong những chiếc máy tính điện tử đa năng đầu tiên, thuộc thế hệ máy tính thứ mấy?",
+    "generalfeedback": "ENIAC ra đời vào những năm 1940 và dùng đèn điện tử chân không, là đại diện của máy tính thế hệ thứ nhất.",
+    "answers": [
+      {
+        "text": "Thế hệ thứ nhất",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Thế hệ thứ hai",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Thế hệ thứ ba",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Thế hệ thứ tư",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Nhân vật lịch sử nào được tôn vinh là cha đẻ của công nghệ máy tính nhờ những ý tưởng thiết kế máy tính tự động đa năng?",
+    "generalfeedback": "Charles Babbage, với ý tưởng thiết kế máy phân tích, được coi là cha đẻ của công nghệ máy tính.",
+    "answers": [
+      {
+        "text": "Charles Babbage",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Blaise Pascal",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "John Von Neumann",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Claude Shannon",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Đặc điểm cốt lõi của kiến trúc máy tính Von Neumann là gì?",
+    "generalfeedback": "Kiến trúc Von Neumann nổi bật với nguyên lý 'chương trình được lưu trữ' trong bộ nhớ giống như dữ liệu.",
+    "answers": [
+      {
+        "text": "Các lệnh của chương trình được lưu trữ trong bộ nhớ giống như dữ liệu.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Chỉ sử dụng đèn điện tử chân không làm thành phần xử lý.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Không cần thiết bị vào ra mà tính toán tự động qua bánh răng.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Lưu trữ dữ liệu độc quyền trên đám mây (Cloud).",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Sự khác biệt lớn nhất giữa máy tính thế hệ thứ nhất và máy tính thế hệ thứ hai là việc chuyển đổi linh kiện điện tử nào?",
+    "generalfeedback": "Thế hệ hai thay thế đèn điện tử chân không bằng bóng bán dẫn, giúp thu nhỏ kích thước và giảm nhiệt lượng.",
+    "answers": [
+      {
+        "text": "Từ đèn điện tử chân không sang bóng bán dẫn.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Từ mạch tích hợp sang bóng bán dẫn.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Từ vi xử lý sang đèn điện tử chân không.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Từ rơ le điện cơ sang bánh răng cơ học.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Các dòng máy vi tính (kích thước nhỏ, để bàn) như IBM PC hay Apple II xuất hiện phổ biến từ thế hệ máy tính thứ mấy?",
+    "generalfeedback": "Nhờ công nghệ mạch tích hợp cỡ rất lớn và vi xử lí, máy vi tính ra đời trong thế hệ thứ tư.",
+    "answers": [
+      {
+        "text": "Thế hệ thứ tư",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Thế hệ thứ nhất",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Thế hệ thứ hai",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Thế hệ thứ ba",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Trong các thiết bị sau, thiết bị nào KHÔNG phải là ứng dụng của máy tính thế hệ thứ năm?",
+    "generalfeedback": "Máy tính cơ học là thế hệ sơ khai, không thuộc thế hệ thứ năm (dùng trí tuệ nhân tạo, thiết bị di động).",
+    "answers": [
+      {
+        "text": "Máy tính cơ học Pascaline",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Điện thoại thông minh (Smartphone)",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Kính thông minh",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Loa thông minh điều khiển bằng giọng nói",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Đặc điểm nào giúp phân biệt thông tin số với thông tin lưu trữ trên giấy truyền thống?",
+    "generalfeedback": "Thông tin số có thể được truyền tải qua mạng và truy cập từ xa mọi lúc mọi nơi.",
+    "answers": [
+      {
+        "text": "Có thể truy cập, nhân bản và chia sẻ từ xa qua môi trường mạng.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Luôn luôn bị phân hủy theo thời gian nhanh hơn giấy.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Không thể thay đổi hay chỉnh sửa khi đã tạo ra.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Chỉ có thể được xem bởi một người duy nhất tại một thời điểm.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Trong môi trường số, tại sao ta cần thận trọng trước khi đăng tải một hình ảnh riêng tư lên mạng?",
+    "generalfeedback": "Bởi vì một khi được đăng tải, thông tin số có thể được nhân bản, lưu trữ tại các máy chủ và rất khó xóa bỏ hoàn toàn.",
+    "answers": [
+      {
+        "text": "Vì thông tin số rất khó bị xóa bỏ hoàn toàn một khi đã phát tán trên mạng.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Vì hình ảnh riêng tư luôn tốn nhiều dung lượng lưu trữ hơn ảnh phong cảnh.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Vì đăng ảnh sẽ làm hỏng thiết bị di động của người xem.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Vì máy chủ sẽ tự động xóa tất cả ảnh sau 24 giờ đăng tải.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Vì sao các ý kiến, quan điểm cá nhân trên mạng xã hội thường có độ tin cậy thấp hơn các tin tức báo cáo sự kiện thực tế?",
+    "generalfeedback": "Ý kiến cá nhân phản ánh cảm xúc, định kiến và thường chưa qua các bước kiểm chứng minh bạch.",
+    "answers": [
+      {
+        "text": "Vì chúng mang tính chủ quan, cảm xúc và thường thiếu chứng cứ kiểm chứng.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Vì mạng xã hội không cho phép đăng tải sự kiện thực tế.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Vì các bài đăng sự kiện không thể có hình ảnh minh họa.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Vì ý kiến cá nhân không thể viết bằng ngôn ngữ tiếng Việt.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Tại sao thông tin lấy từ một trang web có đuôi '.gov.vn' thường được đánh giá là nguồn đáng tin cậy cao ở Việt Nam?",
+    "generalfeedback": "Tên miền .gov.vn chỉ được cấp cho các cơ quan chính phủ, nhà nước nên thông tin có tính pháp lý và độ chính xác cao.",
+    "answers": [
+      {
+        "text": "Vì đó là trang thông tin chính thức của các cơ quan chính phủ, nhà nước.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Vì trang web đó luôn có giao diện đẹp và hiện đại nhất.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Vì bất kỳ ai cũng có thể tự do chỉnh sửa nội dung trên trang đó.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Vì các trang đó thu phí người dùng khi truy cập.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Nếu em cần thu thập số liệu thống kê dân số Việt Nam để làm báo cáo học tập, nguồn nào sau đây là uy tín nhất?",
+    "generalfeedback": "Tổng cục Thống kê là cơ quan có thẩm quyền cao nhất về số liệu thống kê quốc gia.",
+    "answers": [
+      {
+        "text": "Trang web của Tổng cục Thống kê Việt Nam.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Một nhóm chat trên ứng dụng nhắn tin.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Một trang bách khoa toàn thư mở chưa được kiểm duyệt.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Bài đăng của một nghệ sĩ nổi tiếng trên mạng.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Khi đánh giá 'tính thời sự' của một bài báo trên mạng, em đang thực hiện công việc gì?",
+    "generalfeedback": "Tính thời sự nghĩa là đánh giá xem thông tin đó được đăng tải khi nào, có còn phù hợp với hiện tại hay đã lỗi thời.",
+    "answers": [
+      {
+        "text": "Kiểm tra thời điểm bài viết được công bố để xem thông tin còn giá trị thực tế không.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Đếm số lượt thả tim và bình luận của người đọc trên bài báo.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Đoạn tốc độ tải hình ảnh của trang web.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Phân tích ngữ pháp và lỗi chính tả của tác giả bài viết.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Khi sử dụng một bức ảnh đẹp tải từ Internet để làm tài liệu học tập minh họa, hành động nào sau đây tuân thủ đúng đạo đức và bản quyền?",
+    "generalfeedback": "Ghi rõ nguồn gốc hoặc xin phép tác giả là hành động bắt buộc để tôn trọng quyền sở hữu trí tuệ.",
+    "answers": [
+      {
+        "text": "Ghi chú rõ ràng tên tác giả hoặc đường dẫn nguồn nơi lấy bức ảnh.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Cắt bỏ chữ ký của tác giả góc ảnh rồi đăng bài.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Nhận mình là người chụp ảnh để bài học ấn tượng hơn.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Tải về và bán lại cho người khác kiếm tiền.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Một học sinh tải file bài trình chiếu của người khác trên mạng về, thay tên mình vào trang bìa rồi nộp cho giáo viên để lấy điểm. Hành vi này gọi là gì?",
+    "generalfeedback": "Hành động lấy sản phẩm của người khác nhận làm của mình là đạo văn và vi phạm bản quyền trắng trợn.",
+    "answers": [
+      {
+        "text": "Đạo văn và vi phạm bản quyền.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Kỹ năng tìm kiếm thông tin xuất sắc.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Hợp tác trong môi trường số.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Ứng dụng trí tuệ nhân tạo.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Hành vi sử dụng thiết bị điện thoại để lén lút quay phim một người khác khi chưa được phép vi phạm quyền gì cơ bản của con người?",
+    "generalfeedback": "Quay lén là hành động xâm phạm trực tiếp đến quyền riêng tư, hình ảnh cá nhân được pháp luật bảo vệ.",
+    "answers": [
+      {
+        "text": "Quyền riêng tư cá nhân.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Quyền tự do ngôn luận.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Quyền tác giả tác phẩm.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Quyền truy cập Internet.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Khi tham gia thảo luận trên một diễn đàn mạng, hành động sử dụng từ ngữ thô tục, xúc phạm người khác là vi phạm chuẩn mực nào?",
+    "generalfeedback": "Sử dụng từ ngữ lịch sự, tôn trọng người khác là chuẩn mực đạo đức, văn hóa cơ bản trên không gian mạng.",
+    "answers": [
+      {
+        "text": "Chuẩn mực văn hóa, đạo đức trên môi trường số.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Các nguyên lý của kiến trúc Von Neumann.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Luật an toàn an ninh máy tính cá nhân.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Quy định về định dạng file tài liệu.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Trong phần mềm bảng tính Excel, địa chỉ tương đối có đặc điểm hình thức nào giúp nhận biết?",
+    "generalfeedback": "Địa chỉ tương đối chỉ có tên cột và số hàng (như A1) và không chứa ký hiệu $ bảo vệ.",
+    "answers": [
+      {
+        "text": "Không chứa ký hiệu $ ở trước tên cột và tên dòng.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Luôn luôn bắt đầu bằng ký hiệu @.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Bắt buộc có ký tự $ nằm giữa tên cột và tên dòng.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Chỉ bao gồm các con số mà không có chữ cái.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "Giả sử tại ô B2 có chứa công thức =A1+A2. Khi em dùng chuột kéo sao chép công thức này xuống ngay ô dưới (ô B3), công thức tại ô B3 sẽ là gì?",
+    "generalfeedback": "Vì đều là địa chỉ tương đối, khi chép xuống 1 hàng, các số thứ tự hàng (1 và 2) sẽ tự động cộng thêm 1 thành (2 và 3).",
+    "answers": [
+      {
+        "text": "=A2+A3",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "=A1+A2",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "=$A$1+A2",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "=B1+B2",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "Giả sử ô C1 chứa công thức =$A$1*B1. Nếu sao chép công thức này sang ô bên phải (ô D1), công thức tại D1 sẽ thay đổi như thế nào?",
+    "generalfeedback": "Địa chỉ $A$1 là tuyệt đối nên giữ nguyên. Địa chỉ B1 là tương đối, khi sao chép sang cột bên phải (D) thì cột B tăng lên 1 cột thành cột C, nên thành C1.",
+    "answers": [
+      {
+        "text": "=$A$1*C1",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "=$B$1*C1",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "=$A$1*B2",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "=A1*C1",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "Giả sử ô C2 chứa công thức =A$1+B2. Loại địa chỉ của ô A$1 trong trường hợp này gọi là gì?",
+    "generalfeedback": "Chỉ có một ký hiệu $ trước số dòng (1), nên cố định dòng nhưng không cố định cột. Đây gọi là địa chỉ hỗn hợp.",
+    "answers": [
+      {
+        "text": "Địa chỉ hỗn hợp",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Địa chỉ tương đối hoàn toàn",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Địa chỉ tuyệt đối hoàn toàn",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Địa chỉ mạng máy tính",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Ký hiệu nào trong phần mềm bảng tính Excel được sử dụng để khóa cố định cột hoặc khóa cố định dòng của một địa chỉ ô?",
+    "generalfeedback": "Ký hiệu $ (dấu đô-la) đứng trước ký tự chữ hoặc số để thực hiện khóa tuyệt đối tương ứng.",
+    "answers": [
+      {
+        "text": "$",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "#",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "@",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "&",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Ý nghĩa của địa chỉ $D$5 trong công thức bảng tính là gì?",
+    "generalfeedback": "Có cả hai ký hiệu $ trước D và trước 5 nên đây là địa chỉ tuyệt đối, cố định cả cột và hàng khi sao chép.",
+    "answers": [
+      {
+        "text": "Cố định cả cột D và dòng 5, không thay đổi khi sao chép.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Cố định cột D nhưng cho phép thay đổi dòng 5.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Cố định dòng 5 nhưng cho phép thay đổi cột D.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Không cố định thành phần nào, thay đổi tự do.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "Khi lập bảng tính thanh toán hóa đơn với một mức thuế VAT không đổi là 10% được nhập sẵn tại ô B1. Trong công thức tính tiền thuế của hàng loạt sản phẩm phía dưới, ta phải sử dụng địa chỉ B1 ở định dạng nào để kết quả tính đúng?",
+    "generalfeedback": "Cần dùng địa chỉ tuyệt đối ($B$1) để giá trị thuế luôn tham chiếu đúng vào ô B1 khi sao chép công thức tính cho các dòng sản phẩm khác nhau.",
+    "answers": [
+      {
+        "text": "Địa chỉ tuyệt đối ($B$1)",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Địa chỉ tương đối (B1)",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Chỉ cần gõ chữ B1 mà không cần thiết lập gì",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Phải tính tay thuế cho từng sản phẩm",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "Thao tác sao chép công thức (copy & paste hoặc kéo thả) trong bảng tính mang lại lợi ích lớn nhất nào cho người sử dụng?",
+    "generalfeedback": "Sao chép công thức tự động hóa quá trình tính toán hàng loạt, giúp hoàn thành công việc nhanh chóng và loại bỏ lỗi do gõ tay lặp lại.",
+    "answers": [
+      {
+        "text": "Tự động hóa tính toán, tiết kiệm rất nhiều thời gian và hạn chế sai sót.",
+        "fraction": 100,
+        "feedback": ""
+      },
+      {
+        "text": "Làm cho bảng tính có nhiều màu sắc sinh động hơn.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Tự động tạo ra các bài trình chiếu PowerPoint.",
+        "fraction": 0,
+        "feedback": ""
+      },
+      {
+        "text": "Tránh được sự tấn công của virus máy tính.",
+        "fraction": 0,
+        "feedback": ""
+      }
+    ]
+  }
+]
