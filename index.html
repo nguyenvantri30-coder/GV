@@ -701,7 +701,8 @@
     let currentIndex = 0;
     let timer = null;
     let timeLeft = 45 * 60;
-    let studentInfo = { hoten: "", lop: "", mon: "", lessonTitle: "" };
+    let quizStartTime = 0;
+    let studentInfo = { hoten: "", lop: "", mon: "", lessonTitle: "", mode: "LESSON", decuongType: "" };
     let isSubmitted = false;
 
     // Proctoring & Anti-cheat
@@ -1272,10 +1273,13 @@
         studentInfo = {
           hoten: hoten,
           lop: lop,
-          mon: subKey,
-          lessonTitle: lessonTitle
+          mon: subKey.toLowerCase().includes("tin") ? "Tin học" : "Toán học",
+          lessonTitle: lessonTitle,
+          mode: mode,
+          decuongType: (mode === "DECUONG") ? document.getElementById("decuongSelect").value : ""
         };
 
+        quizStartTime = Date.now();
         localStorage.setItem("quiz_hoten", hoten);
         localStorage.setItem("quiz_lop", lop);
 
@@ -1838,23 +1842,47 @@
 
         const imgData = canvas.toDataURL("image/jpeg", 0.75);
 
-        // Build exact Sheet Name to match teacher's Google Sheet tabs:
-        // Examples: Tin8A1, Toan6A3, Toan7A2, Toan8A3, Toan9A1
-        let monPrefix = "Toan";
-        if (studentInfo.mon.toLowerCase().includes("tin")) {
-          monPrefix = "Tin";
+        // Generate / retrieve device fingerprint (chống làm hộ)
+        function getDeviceID() {
+          let id = localStorage.getItem("quiz_device_id");
+          if (id) return id;
+          let canvas = document.createElement("canvas");
+          let ctx = canvas.getContext("2d");
+          ctx.textBaseline = "top";
+          ctx.font = "14px Arial";
+          ctx.fillText("quiz_fingerprint", 2, 2);
+          let data = navigator.userAgent + screen.width + "x" + screen.height + navigator.language + canvas.toDataURL() + Math.random();
+          let hash = 0;
+          for (let i = 0; i < data.length; i++) {
+            hash = ((hash << 5) - hash) + data.charCodeAt(i);
+            hash |= 0;
+          }
+          id = "DEV" + Math.abs(hash);
+          localStorage.setItem("quiz_device_id", id);
+          return id;
         }
-        let sheetNameTarget = monPrefix + studentInfo.lop;
 
-        // Send to Google Sheet
+        const deviceID = getDeviceID();
+
+        // Calculate test duration
+        const durationSec = Math.floor((Date.now() - (quizStartTime || Date.now())) / 1000);
+        const m = Math.floor(durationSec / 60);
+        const s = durationSec % 60;
+        const timeFormatted = `${new Date().toLocaleString()} (Làm trong: ${m}p ${s}s)`;
+
+        // Send to Google Sheet (Chuẩn 9 cột đồng bộ với 5 sheet mới)
         const fd = new FormData();
-        fd.append("sheetName", sheetNameTarget);
+        fd.append("mode", studentInfo.mode || "LESSON");
+        fd.append("decuongType", studentInfo.decuongType || "");
         fd.append("folderId", FOLDER_ID);
-        fd.append("name", studentInfo.hoten);
         fd.append("class", studentInfo.lop);
+        fd.append("name", studentInfo.hoten);
+        fd.append("mon", studentInfo.mon);
+        fd.append("lessonTitle", studentInfo.lessonTitle);
         fd.append("score", score);
         fd.append("correct", `${correctCount}/${currentQuestions.length}`);
-        fd.append("time", new Date().toLocaleString());
+        fd.append("device", deviceID);
+        fd.append("time", timeFormatted);
         fd.append("image", imgData);
 
         statusTxt.textContent = "⏳ Đang đồng bộ điểm về máy chủ...";
