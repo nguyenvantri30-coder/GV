@@ -675,6 +675,16 @@
         </a>
       </div>
 
+      <!-- ĐIỀU PHỐI TẢI: THÔNG BÁO CHUYỂN SERVER KHI BỊ NGHẼN/LAG -->
+      <div id="serverSwitchBanner" style="margin-bottom:18px;padding:12px 14px;border-radius:10px;font-size:13px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:#fef3c7;border:1px solid #fde68a;color:#92400e;">
+        <div id="serverBannerText">
+          ⚡ <b>Server 1 (Chính)</b>: Nếu hệ thống bị nghẽn/lag do quá tải học sinh, em có thể bấm sang <b>Server 2 (Dự phòng)</b> để làm bài mượt mà. Điểm số vẫn lưu chung 1 bảng điểm!
+        </div>
+        <a id="serverBannerLink" href="https://nguyenvantri30-coder.github.io/GV/" style="font-weight:700;color:#1e40af;background:#dbeafe;padding:6px 14px;border-radius:8px;text-decoration:none;white-space:nowrap;font-size:12.5px;border:1px solid #bfdbfe;flex-shrink:0;">
+          🚀 Sang Server 2
+        </a>
+      </div>
+
       <div class="form-group">
         <label>Chế độ ôn tập:</label>
         <select id="modeSelect" class="form-control" onchange="onModeChanged()">
@@ -912,8 +922,11 @@
     /* =========================================================================
        CONSTANTS & STATE MANAGEMENT
        ========================================================================= */
+    const isBackupHost = window.location.hostname.includes("nguyenvantri30");
     const GITHUB_RAW = "https://raw.githubusercontent.com/nguyenvantroithcs/ALSM-QuizBank/main";
-    const GV_RAW = "https://raw.githubusercontent.com/nguyenvantroithcs/GV/main";
+    const GV_RAW = isBackupHost
+      ? "https://raw.githubusercontent.com/nguyenvantri30-coder/GV/main"
+      : "https://raw.githubusercontent.com/nguyenvantroithcs/GV/main";
     const PATH_SHEET = "https://script.google.com/macros/s/AKfycbxW_OwAu199VbXqN8YmkIWa2ls6Q9l1kPasTtdHqmxt_qtytiB6NOoTU5T3Y56lkm18/exec";
     const FOLDER_ID = "1blXhHW57rTEZXuzS2ArNjgDF5xvLB-PD";
     const MODEL_URL = "https://justadudewhohacks.github.io/face-api.js/models";
@@ -1294,6 +1307,7 @@
     window.addEventListener("DOMContentLoaded", async () => {
       // Đặt mặc định giao diện chế độ Đề cương
       onModeChanged();
+      initServerBanner();
 
       await initCamera();
       await loadCatalog();
@@ -1320,6 +1334,30 @@
 
       await loadFaceModels();
     });
+
+    function initServerBanner() {
+      const hostname = window.location.hostname;
+      const banner = document.getElementById("serverSwitchBanner");
+      const txt = document.getElementById("serverBannerText");
+      const link = document.getElementById("serverBannerLink");
+      if (!banner || !txt || !link) return;
+
+      if (hostname.includes("nguyenvantri30")) {
+        txt.innerHTML = "🛡️ <b>Đang trên Server 2 (Dự phòng)</b>: Điểm số vẫn lưu chung 1 bảng điểm. Nếu bên này bị chậm, em có thể bấm quay lại <b>Server 1</b>.";
+        link.href = "https://nguyenvantroithcs.github.io/GV/";
+        link.textContent = "↩️ Về Server 1";
+        banner.style.background = "#ecfdf5";
+        banner.style.borderColor = "#a7f3d0";
+        banner.style.color = "#065f46";
+        link.style.background = "#dcfce7";
+        link.style.color = "#166534";
+        link.style.borderColor = "#86efac";
+      } else {
+        txt.innerHTML = "⚡ <b>Đang trên Server 1 (Chính)</b>: Nếu hệ thống bị nghẽn/lag do quá tải học sinh, em có thể bấm sang <b>Server 2 (Dự phòng)</b> để làm bài mượt mà. Điểm số vẫn lưu chung 1 bảng điểm!";
+        link.href = "https://nguyenvantri30-coder.github.io/GV/";
+        link.textContent = "🚀 Sang Server 2";
+      }
+    }
 
     function updateClassOptionsForGrade() {
       const subKey = document.getElementById("subjectSelect").value;

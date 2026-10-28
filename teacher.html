@@ -679,7 +679,10 @@ YÊU CẦU ĐỊNH DẠNG ĐẦU RA BẮT BUỘC:
   </div>
 
   <script>
-    const GV_RAW = "https://raw.githubusercontent.com/nguyenvantroithcs/GV/main";
+    const isBackupHost = window.location.hostname.includes("nguyenvantri30");
+    const GV_RAW = isBackupHost
+      ? "https://raw.githubusercontent.com/nguyenvantri30-coder/GV/main"
+      : "https://raw.githubusercontent.com/nguyenvantroithcs/GV/main";
     const PATH_SHEET = "https://script.google.com/macros/s/AKfycbxW_OwAu199VbXqN8YmkIWa2ls6Q9l1kPasTtdHqmxt_qtytiB6NOoTU5T3Y56lkm18/exec";
 
     let schoolClasses = [];
