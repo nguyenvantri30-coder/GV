@@ -1110,6 +1110,10 @@
         if (found && found.question_count) {
           totalQuestionsInBank = found.question_count;
         }
+      } else if (keys.mode === "DECUONG") {
+        if (keys.subKey === "Toan_hoc_Khối_6" && (keys.lessonId.includes("GK1") || keys.lessonId.includes("GKI"))) {
+          totalQuestionsInBank = 60;
+        }
       }
 
       const profile = getStudentMastery(keys.studentKey, keys.lessonId);
@@ -1824,17 +1828,21 @@
           let khoiShort = subKey.replace(/\D/g, "");
           const romanKey = decuongKey.replace("1", "I").replace("2", "II");
 
-          // Tìm file khớp nhất trong danh sách có sẵn (ưu tiên file theo kỳ thi -> file chung của khối)
+          // Khóa trực tiếp file đề cương chính thức: nạp chính xác bộ mới nhất, không fallback
           let targetFile = null;
-          const candidates = [
-            `${monShort}_${romanKey}${khoiShort}.json`,
-            `${monShort}_${decuongKey}${khoiShort}.json`,
-            `${monShort}${khoiShort}.json`
-          ];
-          for (let cand of candidates) {
-            if (KNOWN_DECUONG_FILES.includes(cand)) {
-              targetFile = cand;
-              break;
+          if (subKey === "Toan_hoc_Khối_6" && (decuongKey === "GK1" || decuongKey === "GKI")) {
+            targetFile = "Toan_GKI6.json";
+          } else {
+            const candidates = [
+              `${monShort}_${romanKey}${khoiShort}.json`,
+              `${monShort}_${decuongKey}${khoiShort}.json`,
+              `${monShort}${khoiShort}.json`
+            ];
+            for (let cand of candidates) {
+              if (KNOWN_DECUONG_FILES.includes(cand)) {
+                targetFile = cand;
+                break;
+              }
             }
           }
 
@@ -1867,8 +1875,11 @@
             }
           }
 
-          // 2. Nếu chưa có file đề cương riêng, tự động tổng hợp câu hỏi từ các bài học của môn đó
+          // 2. Nếu chưa có file đề cương riêng (chỉ áp dụng môn chưa có file, riêng Toán 6 GK1 cấm fallback)
           if (!loaded) {
+            if (subKey === "Toan_hoc_Khối_6" && (decuongKey === "GK1" || decuongKey === "GKI")) {
+              throw new Error("Không thể tải bộ 60 câu hỏi ôn tập GK1 Toán 6 mới nhất từ máy chủ!");
+            }
             const lessons = catalog.subjects[subKey]?.lessons || [];
             const pickLessons = lessons.slice(0, Math.min(8, lessons.length));
             let pool = [];
