@@ -1566,8 +1566,8 @@
                 if (rLes.ok) {
                   let lData = await rLes.json();
                   if (lData.questions) {
-                    const mPpct = les.filename.match(/^\[(\d+)\]/);
-                    const ppctStr = mPpct ? mPpct[1] : (les.ppct ? String(les.ppct).padStart(3, '0') : '');
+                    const mLesPpct = les.filename.match(/^\[(\d+)\]/);
+                    const ppctStr = mLesPpct ? mLesPpct[1] : (les.ppct ? String(les.ppct).padStart(3, '0') : '');
                     lData.questions.forEach(q => { q._ppct = ppctStr; });
                     pool.push(...lData.questions);
                   }
@@ -1581,9 +1581,9 @@
           // MODE LESSON: Tải bài học cụ thể
           const filename = document.getElementById("lessonSelect").value;
           const rawText = document.getElementById("lessonSelect").selectedOptions[0].text;
-          const mPpct = filename.match(/^\[(\d+)\]/);
-          const ppctNum = mPpct ? parseInt(mPpct[1]) : 1;
-          const ppctStr = mPpct ? mPpct[1] : "";
+          const mMatchPpct = filename.match(/^\[(\d+)\]/);
+          const ppctNum = mMatchPpct ? parseInt(mMatchPpct[1]) : 1;
+          const ppctStr = mMatchPpct ? mMatchPpct[1] : "";
           const cleanT = extractCleanLessonTitle(rawText);
           lessonTitle = `Tiết ${ppctNum}: ${cleanT}`;
           const url = `${GITHUB_RAW}/${folderPath}/${encodeURIComponent(filename)}`;
