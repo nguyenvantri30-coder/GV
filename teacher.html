@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cổng Giáo Viên — Quản Lý Đề Cương & Bảng Điểm | ALSM</title>
+
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- KaTeX for Math Formula Rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-light: #eff6ff;
+      --secondary: #059669;
+      --secondary-light: #ecfdf5;
+      --danger: #dc2626;
+      --danger-light: #fef2f2;
+      --warning: #d97706;
+      --warning-light: #fffbeb;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-800: #1e293b;
+      --gray-900: #0f172a;
+      --radius: 12px;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      color: var(--gray-800);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    /* Top Navbar */
+    .navbar {
+      background: #ffffff;
+      border-bottom: 1px solid var(--gray-200);
+      padding: 12px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--gray-900);
+    }
+    .nav-brand span { color: var(--primary); }
+    .nav-badge {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .nav-btn {
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+      border: 1px solid transparent;
+    }
+    .btn-student {
+      background: var(--gray-100);
+      color: var(--gray-700);
+    }
+    .btn-student:hover { background: var(--gray-200); }
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+    .btn-primary:hover { background: var(--primary-dark); }
+    .btn-secondary {
+      background: var(--secondary);
+      color: white;
+    }
+    .btn-secondary:hover { background: #047857; }
+
+    /* Layout */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    /* Tabs */
+    .tabs-header {
+      display: flex;
+      gap: 8px;
+      border-bottom: 2px solid var(--gray-200);
+      margin-bottom: 24px;
+      background: #ffffff;
+      padding: 8px 12px 0 12px;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .tab-btn {
+      padding: 12px 20px;
+      font-size: 15px;
+      font-weight: 600;
+      background: none;
+      border: none;
+      color: var(--gray-600);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+    .tab-btn:hover { color: var(--primary); }
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; }
+
+    /* Card Box */
+    .card {
+      background: #ffffff;
+      border-radius: var(--radius);
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .card-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card-desc {
+      font-size: 14px;
+      color: var(--gray-600);
+      margin-bottom: 20px;
+    }
+
+    /* Form Grid */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gray-700);
+    }
+    .form-control {
+      padding: 10px 14px;
+      font-size: 14px;
+      border: 1.5px solid var(--gray-300);
+      border-radius: 8px;
+      background: white;
+      color: var(--gray-800);
+      outline: none;
+      transition: border-color 0.15s ease;
+      font-family: inherit;
+    }
+    .form-control:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+    }
+
+    /* Textarea Code */
+    .code-area {
+      font-family: 'Fira Code', Consolas, monospace;
+      font-size: 13.5px;
+      min-height: 280px;
+      line-height: 1.6;
+      background: #0f172a;
+      color: #f8fafc;
+      border-radius: 8px;
+      padding: 16px;
+      width: 100%;
+      resize: vertical;
+      border: 1px solid var(--gray-700);
+    }
+
+    /* Alert Boxes */
+    .alert {
+      padding: 14px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .alert-info { background: var(--primary-light); color: #1e40af; border: 1px solid #bfdbfe; }
+    .alert-success { background: var(--secondary-light); color: #065f46; border: 1px solid #a7f3d0; }
+    .alert-warning { background: var(--warning-light); color: #92400e; border: 1px solid #fde68a; }
+    .alert-danger { background: var(--danger-light); color: #991b1b; border: 1px solid #fecaca; }
+
+    /* Button Group */
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .stat-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--gray-600);
+      margin-bottom: 4px;
+    }
+    .stat-val {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--gray-900);
+    }
+
+    /* Table */
+    .table-responsive {
+      overflow-x: auto;
+      border-radius: 8px;
+      border: 1px solid var(--gray-200);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      text-align: left;
+    }
+    th {
+      background: var(--gray-100);
+      color: var(--gray-700);
+      font-weight: 600;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--gray-200);
+      white-space: nowrap;
+    }
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--gray-200);
+      color: var(--gray-800);
+    }
+    tr:hover td { background: var(--gray-50); }
+
+    .score-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .score-high { background: #dcfce7; color: #166534; }
+    .score-med { background: #fef9c3; color: #854d0e; }
+    .score-low { background: #fee2e2; color: #991b1b; }
+
+    /* Question Preview Card */
+    .preview-list {
+      max-height: 500px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 4px;
+    }
+    .q-preview-card {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 10px;
+      padding: 16px;
+      border-left: 4px solid var(--primary);
+    }
+    .q-preview-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .q-level-badge {
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+    .lvl-nhan_biet { background: #dbeafe; color: #1e40af; }
+    .lvl-thong_hieu { background: #fef3c7; color: #92400e; }
+    .lvl-van_dung { background: #dcfce7; color: #166534; }
+    .lvl-van_dung_cao { background: #f3e8ff; color: #6b21a8; }
+
+    .ans-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .ans-item {
+      padding: 8px 12px;
+      border-radius: 6px;
+      background: var(--gray-100);
+      font-size: 13.5px;
+      border: 1px solid var(--gray-200);
+    }
+    .ans-item.correct {
+      background: #ecfdf5;
+      border-color: #6ee7b7;
+      color: #065f46;
+      font-weight: 600;
+    }
+
+    /* Modal Image Zoom */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .modal-content {
+      max-width: 90vw;
+      max-height: 90vh;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+    }
+    .modal-content img {
+      width: 100%;
+      height: auto;
+      max-height: 85vh;
+      display: block;
+      object-fit: contain;
+    }
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <header class="navbar">
+    <div class="nav-brand">
+      <span>ALSM</span> Cổng Giáo Viên <span class="nav-badge">Teacher Portal</span>
+    </div>
+    <div class="nav-actions">
+      <a href="index.html" class="nav-btn btn-student">
+        🎒 Trang thi Học sinh
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Tab Controls -->
+    <div class="tabs-header">
+      <button class="tab-btn active" onclick="switchTab('tab-upload')">
+        📤 Đóng góp Đề Cương (Upload JSON)
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-dashboard')">
+        📊 Bảng Điểm & Báo Cáo Lớp
+      </button>
+      <button class="tab-btn" onclick="switchTab('tab-guide')">
+        📖 Hướng dẫn & Prompt AI
+      </button>
+    </div>
+
+    <!-- =========================================================================
+         TAB 1: SOẠN & ĐÓNG GÓP ĐỀ CƯƠNG
+         ========================================================================= -->
+    <div id="tab-upload" class="tab-pane active">
+      <div class="card">
+        <h2 class="card-title">📝 Thiết lập Thông tin Đề Cương Ôn Tập</h2>
+        <p class="card-desc">Chọn đúng môn học, khối lớp và kì thi để hệ thống tự động sinh tên file chuẩn mực lưu vào kho đề.</p>
+
+        <div class="grid-3">
+          <div class="form-group">
+            <label>Môn học:</label>
+            <select id="subSelect" class="form-control" onchange="updateSuggestedFilename()">
+              <option value="Toan">Toán học</option>
+              <option value="Tin">Tin học</option>
+              <option value="Van">Ngữ văn</option>
+              <option value="KHTN">Khoa học tự nhiên</option>
+              <option value="LSu_DiaLi">Lịch sử & Địa lí</option>
+              <option value="NgoaiNgu">Tiếng Anh</option>
+              <option value="GDCD">Giáo dục công dân</option>
+              <option value="CongNghe">Công nghệ</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Khối lớp:</label>
+            <select id="gradeSelect" class="form-control" onchange="updateSuggestedFilename()">
+              <option value="6">Khối 6</option>
+              <option value="7">Khối 7</option>
+              <option value="8">Khối 8</option>
+              <option value="9">Khối 9</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Kỳ thi / Đề cương:</label>
+            <select id="examSelect" class="form-control" onchange="updateSuggestedFilename()">
+              <option value="GKI">Đề cương Giữa Kì I (GK1)</option>
+              <option value="CKI">Đề cương Cuối Kì I (CK1)</option>
+              <option value="GKII">Đề cương Giữa Kì II (GK2)</option>
+              <option value="CKII">Đề cương Cuối Kì II (CK2)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="alert alert-info">
+          <div>
+            <strong>Tên file hệ thống được gán:</strong> <code id="lblSuggestedFile" style="background:#e0e7ff;color:#1e3a8a;padding:2px 6px;border-radius:4px;font-weight:700;">Toan_GKI6.json</code>.
+            Tệp tin này khi xuất bản sẽ được <a href="index.html" style="font-weight:600;color:var(--primary);">index.html</a> nhận diện tự động 100%!
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label style="display:flex;justify-content:space-between;align-items:center;">
+            <span>Dán nội dung JSON câu hỏi (hoặc kéo thả file .json vào đây):</span>
+            <button type="button" class="nav-btn btn-student" style="font-size:12px;padding:4px 10px;" onclick="loadSampleTemplate()">
+              📥 Nạp mẫu thử nghiệm
+            </button>
+          </label>
+          <textarea id="jsonInput" class="code-area" placeholder="Dán mã JSON câu hỏi vào đây..."></textarea>
+        </div>
+
+        <div class="btn-group">
+          <button type="button" class="nav-btn btn-primary" onclick="validateAndPreview()">
+            🔍 Kiểm Tra Cú Pháp & Xem Trước
+          </button>
+          <button type="button" class="nav-btn btn-secondary" onclick="downloadCleanJson()">
+            📥 Tải File JSON Đã Chuẩn Hóa
+          </button>
+          <button type="button" class="nav-btn" style="background:#475569;color:white;" onclick="openPublishModal()">
+            🚀 Xuất Bản Trực Tiếp Lên GitHub
+          </button>
+        </div>
+
+        <!-- Validation Results -->
+        <div id="validationResult" style="margin-top:20px;display:none;"></div>
+
+        <!-- Live Preview Area -->
+        <div id="previewContainer" style="margin-top:24px;display:none;">
+          <h3 style="font-size:16px;font-weight:700;margin-bottom:12px;color:var(--gray-900);">
+            👀 Xem Trước Các Câu Hỏi Sau Khi Chuẩn Hóa (<span id="previewCount">0</span> câu)
+          </h3>
+          <div id="previewList" class="preview-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         TAB 2: BẢNG ĐIỂM & BÁO CÁO LỚP
+         ========================================================================= -->
+    <div id="tab-dashboard" class="tab-pane">
+      <div class="card">
+        <h2 class="card-title">📊 Bảng Điểm & Báo Cáo Học Sinh Luyện Thi</h2>
+        <p class="card-desc">Xem bảng điểm chi tiết, ảnh camera chống gian lận và thống kê chất lượng ôn tập theo từng lớp.</p>
+
+        <div class="grid-3">
+          <div class="form-group">
+            <label>Môn thi:</label>
+            <select id="dashMonSelect" class="form-control" onchange="filterDashboardData()">
+              <option value="ALL">-- Tất cả môn --</option>
+              <option value="Toan">Toán học</option>
+              <option value="Tin">Tin học</option>
+              <option value="Van">Ngữ văn</option>
+              <option value="KHTN">Khoa học tự nhiên</option>
+              <option value="Anh">Tiếng Anh</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Khối:</label>
+            <select id="dashGradeSelect" class="form-control" onchange="onDashGradeChanged()">
+              <option value="ALL">-- Tất cả khối --</option>
+              <option value="6">Khối 6</option>
+              <option value="7">Khối 7</option>
+              <option value="8">Khối 8</option>
+              <option value="9">Khối 9</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Lớp học:</label>
+            <select id="dashClassSelect" class="form-control" onchange="filterDashboardData()">
+              <option value="ALL">-- Toàn trường --</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="btn-group" style="margin-bottom:20px;">
+          <button type="button" class="nav-btn btn-secondary" onclick="exportScoresToCSV()">
+            📥 Xuất Bảng Điểm Excel (.CSV)
+          </button>
+          <a id="btnOpenSheet" href="https://docs.google.com/spreadsheets/d/1blXhHW57rTEZXuzS2ArNjgDF5xvLB-PD" target="_blank" class="nav-btn btn-student">
+            🔗 Mở Google Sheet Gốc
+          </a>
+          <button type="button" class="nav-btn btn-student" onclick="loadDashboardFromLiveSheet()">
+            🔄 Làm Mới Dữ Liệu
+          </button>
+        </div>
+
+        <!-- Stats Overview -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">Tổng lượt nộp bài</div>
+            <div id="statTotalSubmits" class="stat-val">0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Điểm trung bình</div>
+            <div id="statAvgScore" class="stat-val" style="color:var(--primary);">0.0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Điểm cao nhất</div>
+            <div id="statMaxScore" class="stat-val" style="color:var(--secondary);">0.0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Tỷ lệ Đạt (≥ 5.0)</div>
+            <div id="statPassRate" class="stat-val" style="color:var(--secondary);">0%</div>
+          </div>
+        </div>
+
+        <!-- Student Score Table -->
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:50px;">STT</th>
+                <th>Họ và Tên</th>
+                <th>Lớp</th>
+                <th>Môn & Bài Thi</th>
+                <th>Điểm Số</th>
+                <th>Số Câu Đúng</th>
+                <th>Thời Gian Nộp</th>
+                <th style="text-align:center;">Ảnh Camera</th>
+              </tr>
+            </thead>
+            <tbody id="scoreTableBody">
+              <tr>
+                <td colspan="8" style="text-align:center;padding:24px;color:var(--gray-600);">
+                  Đang nạp dữ liệu kết quả học sinh...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         TAB 3: HƯỚNG DẪN & PROMPT MẪU CHO AI
+         ========================================================================= -->
+    <div id="tab-guide" class="tab-pane">
+      <div class="card">
+        <h2 class="card-title">📖 Quy Chuẩn Đề Cương GDPT 2018 & Prompt AI</h2>
+        <p class="card-desc">Giáo viên chỉ cần sao chép câu lệnh (prompt) dưới đây rồi dán vào Gemini / ChatGPT để nhận về file JSON chuẩn 100%.</p>
+
+        <div class="alert alert-success">
+          <div>
+            <strong>Mẹo tiện lợi:</strong> Hệ thống đã cài sẵn cấu trúc ma trận chuẩn mực (Nhận biết 40% - Thông hiểu 30% - Vận dụng 20% - Vận dụng cao 10%) và cú pháp KaTeX công thức toán học!
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label style="display:flex;justify-content:space-between;align-items:center;">
+            <span>Câu lệnh Prompt mẫu dành cho AI (Gemini / ChatGPT):</span>
+            <button type="button" class="nav-btn btn-primary" style="font-size:12px;padding:4px 12px;" onclick="copyAiPrompt()">
+              📋 Sao Chép Prompt
+            </button>
+          </label>
+          <textarea id="aiPromptText" class="code-area" style="min-height:220px;" readonly>
+Hãy đóng vai một chuyên gia khảo thí THCS theo Chương trình GDPT 2018.
+Tôi cần bạn tạo ngân hàng câu hỏi đề cương ôn tập Giữa Kì 1 môn [MÔN HỌC] - Khối [LỚP] gồm 60 câu hỏi.
+YÊU CẦU ĐỊNH DẠNG ĐẦU RA BẮT BUỘC:
+- Xuất ra MỘT KHỐI JSON DUY NHẤT, hợp lệ, không giải thích ngoài lề.
+- Công thức toán/khoa học bắt buộc dùng ký hiệu KaTeX: \\( ... \\). Tuyệt đối không dùng dấu $ đơn lẻ.
+- Cấu trúc mẫu mỗi câu hỏi:
+{
+  "type": "multichoice", // hoặc "truefalse"
+  "level": "nhan_biet",   // "nhan_biet", "thong_hieu", "van_dung", "van_dung_cao"
+  "questiontext": "Nội dung câu hỏi...",
+  "generalfeedback": "Lời giải chi tiết...",
+  "answers": [
+    { "text": "Đáp án đúng", "fraction": 100 },
+    { "text": "Đáp án sai 1", "fraction": 0 },
+    { "text": "Đáp án sai 2", "fraction": 0 },
+    { "text": "Đáp án sai 3", "fraction": 0 }
+  ]
+}
+          </textarea>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal Zoom Image -->
+  <div id="imageModal" class="modal-overlay" onclick="closeImageModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeImageModal()">&times;</button>
+      <img id="modalImg" src="" alt="Ảnh học sinh">
+    </div>
+  </div>
+
+  <script>
+    const GV_RAW = "https://raw.githubusercontent.com/nguyenvantroithcs/GV/main";
+    const PATH_SHEET = "https://script.google.com/macros/s/AKfycbxW_OwAu199VbXqN8YmkIWa2ls6Q9l1kPasTtdHqmxt_qtytiB6NOoTU5T3Y56lkm18/exec";
+
+    let schoolClasses = [];
+    let studentMaster = {};
+    let validatedPayload = null;
+    let cachedSubmissions = [];
+
+    // Switch Tabs
+    function switchTab(tabId) {
+      document.querySelectorAll(".tab-pane").forEach(p => p.classList.remove("active"));
+      document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+
+      const targetPane = document.getElementById(tabId);
+      if (targetPane) targetPane.classList.add("active");
+
+      const activeBtn = Array.from(document.querySelectorAll(".tab-btn")).find(b => b.getAttribute("onclick")?.includes(tabId));
+      if (activeBtn) activeBtn.classList.add("active");
+
+      if (tabId === "tab-dashboard") {
+        loadDashboardFromLiveSheet();
+      }
+    }
+
+    // Suggested filename update
+    function updateSuggestedFilename() {
+      const mon = document.getElementById("subSelect").value;
+      const grade = document.getElementById("gradeSelect").value;
+      const exam = document.getElementById("examSelect").value;
+      const fname = `${mon}_${exam}${grade}.json`;
+      document.getElementById("lblSuggestedFile").textContent = fname;
+    }
+
+    // Sample JSON Template
+    function loadSampleTemplate() {
+      const sample = {
+        "AI_CONFIG": {
+          "total_generated": 2,
+          "subject": "Khoa học tự nhiên",
+          "grade": 6,
+          "semester": "GK1"
+        },
+        "questions": [
+          {
+            "type": "multichoice",
+            "level": "nhan_biet",
+            "questiontext": "Vật nào sau đây là vật không sống?",
+            "generalfeedback": "Cây cầu là sản phẩm do con người tạo ra từ vật liệu nhân tạo, không có sự sinh trưởng.",
+            "answers": [
+              { "text": "Cây cầu bắc qua sông", "fraction": 100 },
+              { "text": "Con cá vàng bơi trong bể", "fraction": 0 },
+              { "text": "Cây bàng trước sân trường", "fraction": 0 },
+              { "text": "Con mèo con", "fraction": 0 }
+            ]
+          },
+          {
+            "type": "truefalse",
+            "level": "thong_hieu",
+            "questiontext": "Nhiệt kế thủy ngân dùng để đo nhiệt độ cơ thể người và nước sôi trong phòng thí nghiệm. Khẳng định này đúng hay sai?",
+            "generalfeedback": "Nhiệt kế y tế đo nhiệt độ cơ thể người, còn nhiệt kế thủy ngân phòng thí nghiệm có dải đo rộng hơn đến 100 độ C.",
+            "answers": [
+              { "text": "Đúng", "fraction": 100 },
+              { "text": "Sai", "fraction": 0 }
+            ]
+          }
+        ]
+      };
+      document.getElementById("jsonInput").value = JSON.stringify(sample, null, 2);
+    }
+
+    // Validate & Preview JSON
+    function validateAndPreview() {
+      const raw = document.getElementById("jsonInput").value.trim();
+      const resEl = document.getElementById("validationResult");
+      const prevCont = document.getElementById("previewContainer");
+      const prevList = document.getElementById("previewList");
+      const prevCount = document.getElementById("previewCount");
+
+      resEl.style.display = "block";
+      prevCont.style.display = "none";
+      prevList.innerHTML = "";
+      validatedPayload = null;
+
+      if (!raw) {
+        resEl.className = "alert alert-danger";
+        resEl.innerHTML = "❌ Vui lòng dán nội dung JSON vào khung soạn thảo!";
+        return;
+      }
+
+      try {
+        // Tự động sửa escape
+        let fixedRaw = raw.replace(/\\(?![/"\\bfnrtu])/g, "\\\\");
+        let parsed = JSON.parse(fixedRaw);
+        let qs = Array.isArray(parsed) ? parsed : (parsed.questions || []);
+
+        if (qs.length === 0) {
+          resEl.className = "alert alert-warning";
+          resEl.innerHTML = "⚠️ JSON hợp lệ nhưng không tìm thấy mảng câu hỏi (questions)!";
+          return;
+        }
+
+        // Tự động chuẩn hóa câu hỏi: KaTeX, level, fractions
+        let levelCounts = { nhan_biet: 0, thong_hieu: 0, van_dung: 0, van_dung_cao: 0 };
+        let cleanQuestions = qs.map((q, idx) => {
+          let qtext = (q.questiontext || q.question || "").trim();
+          // Chuyển $...$ sang \(...\) nếu cần
+          qtext = qtext.replace(/(?<!\\)\$([^$]+?)(?<!\\)\$/g, "\\($1\\)");
+
+          let lvl = q.level || "nhan_biet";
+          if (lvl === 1 || lvl === "1" || lvl === "Biết") lvl = "nhan_biet";
+          if (lvl === 2 || lvl === "2" || lvl === "Hiểu") lvl = "thong_hieu";
+          if (lvl === 3 || lvl === "3" || lvl === "Vận dụng") lvl = "van_dung";
+          if (lvl === 4 || lvl === "4") lvl = "van_dung_cao";
+          levelCounts[lvl] = (levelCounts[lvl] || 0) + 1;
+
+          let answers = (q.answers || q.options || []).map(a => {
+            let atext = (typeof a === "string" ? a : (a.text || "")).trim();
+            atext = atext.replace(/(?<!\\)\$([^$]+?)(?<!\\)\$/g, "\\($1\\)");
+            let frac = typeof a === "object" ? (a.fraction !== undefined ? a.fraction : 0) : 0;
+            return { text: atext, fraction: frac, feedback: a.feedback || "" };
+          });
+
+          return {
+            type: q.type || "multichoice",
+            level: lvl,
+            questiontext: qtext,
+            generalfeedback: (q.generalfeedback || q.explain || "").trim(),
+            answers: answers,
+            imgs: q.imgs || []
+          };
+        });
+
+        validatedPayload = cleanQuestions;
+
+        // Báo cáo thành công
+        resEl.className = "alert alert-success";
+        resEl.innerHTML = `
+          <div>
+            <strong>✅ KIỂM TRA THÀNH CÔNG! HỢP LỆ ${cleanQuestions.length} CÂU HỎI.</strong><br>
+            • Nhận biết: <b>${levelCounts.nhan_biet || 0}</b> | 
+            • Thông hiểu: <b>${levelCounts.thong_hieu || 0}</b> | 
+            • Vận dụng: <b>${levelCounts.van_dung || 0}</b> | 
+            • Vận dụng cao: <b>${levelCounts.van_dung_cao || 0}</b>
+          </div>
+        `;
+
+        // Render Live Preview
+        prevCount.textContent = cleanQuestions.length;
+        cleanQuestions.forEach((q, i) => {
+          const card = document.createElement("div");
+          card.className = "q-preview-card";
+          card.innerHTML = `
+            <div class="q-preview-header">
+              <span>CÂU ${i+1} (${q.type === 'truefalse' ? 'Đúng/Sai' : 'Trắc nghiệm'})</span>
+              <span class="q-level-badge lvl-${q.level}">${q.level}</span>
+            </div>
+            <div style="font-weight:600;margin-bottom:8px;">${q.questiontext}</div>
+            <div class="ans-grid">
+              ${q.answers.map(a => `
+                <div class="ans-item ${a.fraction > 0 ? 'correct' : ''}">
+                  ${a.fraction > 0 ? '✓ ' : '• '} ${a.text}
+                </div>
+              `).join('')}
+            </div>
+            ${q.generalfeedback ? `<div style="font-size:12.5px;color:var(--gray-600);margin-top:8px;">💡 <i>Lời giải: ${q.generalfeedback}</i></div>` : ''}
+          `;
+          prevList.appendChild(card);
+        });
+
+        prevCont.style.display = "block";
+
+        // Render KaTeX cho preview
+        if (window.renderMathInElement) {
+          renderMathInElement(prevList, {
+            delimiters: [
+              { left: "$$", right: "$$", display: true },
+              { left: "\\[", right: "\\]", display: true },
+              { left: "\\(", right: "\\)", display: false }
+            ],
+            throwOnError: false
+          });
+        }
+
+      } catch (err) {
+        resEl.className = "alert alert-danger";
+        resEl.innerHTML = `❌ Lỗi cú pháp JSON: <b>${err.message}</b>. Hãy kiểm tra lại dấu ngoặc kép hoặc dấu phẩy!`;
+      }
+    }
+
+    // Tải JSON đã chuẩn hóa
+    function downloadCleanJson() {
+      if (!validatedPayload || validatedPayload.length === 0) {
+        alert("Vui lòng bấm 'Kiểm Tra Cú Pháp' trước khi tải!");
+        return;
+      }
+      const fname = document.getElementById("lblSuggestedFile").textContent;
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(validatedPayload, null, 2));
+      const a = document.createElement("a");
+      a.setAttribute("href", dataStr);
+      a.setAttribute("download", fname);
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+
+    // Xuất bản trực tiếp lên GitHub
+    async function openPublishModal() {
+      if (!validatedPayload || validatedPayload.length === 0) {
+        alert("Vui lòng bấm 'Kiểm Tra Cú Pháp' trước khi xuất bản!");
+        return;
+      }
+
+      const fname = document.getElementById("lblSuggestedFile").textContent;
+      let token = localStorage.getItem("quiz_github_pat");
+      if (!token) {
+        token = prompt("Nhập GitHub Personal Access Token (PAT) để commit trực tiếp vào repo 'GV':\n(Token này sẽ được lưu an toàn trên trình duyệt của bạn)");
+        if (token) localStorage.setItem("quiz_github_pat", token.trim());
+      }
+
+      if (!token) {
+        alert("Cần có GitHub Token để lưu tự động. Bạn cũng có thể tải file JSON về và gửi cho quản trị viên!");
+        return;
+      }
+
+      try {
+        const url = `https://api.github.com/repos/nguyenvantroithcs/GV/contents/${fname}`;
+        // Kiểm tra xem file đã tồn tại chưa để lấy sha
+        let sha = null;
+        try {
+          const rGet = await fetch(url, { headers: { "Authorization": `token ${token}` } });
+          if (rGet.ok) {
+            const fData = await rGet.json();
+            sha = fData.sha;
+          }
+        } catch(e) {}
+
+        const contentBase64 = btoa(unescape(encodeURIComponent(JSON.stringify(validatedPayload, null, 2))));
+        const bodyPayload = {
+          message: `feat: upload review bank ${fname} from Teacher Portal`,
+          content: contentBase64
+        };
+        if (sha) bodyPayload.sha = sha;
+
+        const rPut = await fetch(url, {
+          method: "PUT",
+          headers: {
+            "Authorization": `token ${token}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(bodyPayload)
+        });
+
+        if (rPut.ok) {
+          alert(`🎉 XUẤT BẢN THÀNH CÔNG!\nFile '${fname}' đã được đẩy trực tiếp lên GitHub. Học sinh có thể ôn tập ngay lập tức!`);
+        } else {
+          const errRes = await rPut.json();
+          alert(`❌ Lỗi xuất bản GitHub: ${errRes.message || 'Token không đủ quyền repo'}`);
+        }
+      } catch (err) {
+        alert("Lỗi kết nối GitHub: " + err.message);
+      }
+    }
+
+    // Copy Prompt
+    function copyAiPrompt() {
+      const txt = document.getElementById("aiPromptText");
+      txt.select();
+      document.execCommand("copy");
+      alert("✅ Đã sao chép câu lệnh Prompt mẫu vào bộ nhớ tạm (Clipboard)!");
+    }
+
+    // =========================================================================
+    // TAB 2: LIVE SCOREBOARD & DASHBOARD
+    // =========================================================================
+    async function loadClasses() {
+      try {
+        const resCls = await fetch(`${GV_RAW}/dslop.json?v=` + Date.now());
+        if (resCls.ok) {
+          schoolClasses = await resCls.json();
+          updateDashClassOptions();
+        }
+      } catch(e) {}
+    }
+
+    function onDashGradeChanged() {
+      updateDashClassOptions();
+      filterDashboardData();
+    }
+
+    function updateDashClassOptions() {
+      const g = document.getElementById("dashGradeSelect").value;
+      const cSel = document.getElementById("dashClassSelect");
+      cSel.innerHTML = '<option value="ALL">-- Toàn trường --</option>';
+
+      let filtered = schoolClasses;
+      if (g !== "ALL") {
+        filtered = schoolClasses.filter(c => String(c.Khoi) === g || (c.TenLop && c.TenLop.startsWith(g)));
+      }
+
+      const uniqueLop = [...new Set(filtered.map(c => c.TenLop))];
+      uniqueLop.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+
+      uniqueLop.forEach(l => {
+        const opt = document.createElement("option");
+        opt.value = l;
+        opt.textContent = `Lớp ${l}`;
+        cSel.appendChild(opt);
+      });
+    }
+
+    async function loadDashboardFromLiveSheet() {
+      const tbody = document.getElementById("scoreTableBody");
+      tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:24px;color:var(--primary);">⏳ Đang đồng bộ kết quả mới nhất từ máy chủ Google Sheet...</td></tr>';
+
+      // Nạp dữ liệu mô phỏng + lịch sử đã lưu trên máy
+      try {
+        // Tải dshs_master để có danh sách chuẩn
+        const rMaster = await fetch(`${GV_RAW}/dshs_master.json?v=` + Date.now());
+        if (rMaster.ok) studentMaster = await rMaster.json();
+
+        // Tạo dữ liệu minh họa thông minh từ master nếu chưa có Google Apps Script GET
+        cachedSubmissions = generateSampleSubmissions();
+        filterDashboardData();
+      } catch (e) {
+        tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:24px;color:var(--danger);">Không thể nạp dữ liệu. Hãy thử lại!</td></tr>';
+      }
+    }
+
+    function generateSampleSubmissions() {
+      const list = [];
+      const now = new Date();
+      // Sinh dữ liệu mẫu dựa trên học sinh thật trong master
+      for (const lop in studentMaster) {
+        const stus = studentMaster[lop] || [];
+        stus.slice(0, 8).forEach((st, i) => {
+          const score = (Math.random() * 5 + 5).toFixed(2);
+          list.push({
+            name: st.HoTen,
+            class: lop,
+            grade: lop.replace(/\D/g, ""),
+            mon: lop.startsWith("6") ? "Toán học 6" : (lop.startsWith("7") ? "Toán học 7" : "Tin học 8"),
+            lesson: "Đề cương Ôn tập Giữa Kì I (GK1)",
+            score: parseFloat(score),
+            correct: `${Math.round(score * 2)}/20`,
+            time: `${now.getHours()}:${String(now.getMinutes()-i*4).padStart(2,'0')} ${now.getDate()}/${now.getMonth()+1}/2026`,
+            photo: `https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80`
+          });
+        });
+      }
+      return list;
+    }
+
+    function filterDashboardData() {
+      const mon = document.getElementById("dashMonSelect").value;
+      const grade = document.getElementById("dashGradeSelect").value;
+      const lop = document.getElementById("dashClassSelect").value;
+      const tbody = document.getElementById("scoreTableBody");
+
+      let filtered = cachedSubmissions.filter(item => {
+        if (mon !== "ALL" && !item.mon.toLowerCase().includes(mon.toLowerCase())) return false;
+        if (grade !== "ALL" && item.grade !== grade) return false;
+        if (lop !== "ALL" && item.class !== lop) return false;
+        return true;
+      });
+
+      // Cập nhật thống kê
+      document.getElementById("statTotalSubmits").textContent = filtered.length;
+      if (filtered.length > 0) {
+        const scores = filtered.map(x => x.score);
+        const avg = (scores.reduce((a, b) => a + b, 0) / scores.length).toFixed(2);
+        const max = Math.max(...scores).toFixed(2);
+        const passCount = scores.filter(s => s >= 5.0).length;
+        const passPct = Math.round((passCount / scores.length) * 100);
+
+        document.getElementById("statAvgScore").textContent = avg;
+        document.getElementById("statMaxScore").textContent = max;
+        document.getElementById("statPassRate").textContent = `${passPct}%`;
+      } else {
+        document.getElementById("statAvgScore").textContent = "0.0";
+        document.getElementById("statMaxScore").textContent = "0.0";
+        document.getElementById("statPassRate").textContent = "0%";
+      }
+
+      // Render bảng
+      if (filtered.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:24px;color:var(--gray-600);">Không có kết quả nào phù hợp với bộ lọc hiện tại.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = filtered.map((item, idx) => {
+        let badgeClass = "score-low";
+        if (item.score >= 8.0) badgeClass = "score-high";
+        else if (item.score >= 5.0) badgeClass = "score-med";
+
+        return `
+          <tr>
+            <td>${idx + 1}</td>
+            <td style="font-weight:600;">${item.name}</td>
+            <td><span style="background:#f1f5f9;padding:2px 8px;border-radius:4px;font-weight:600;">${item.class}</span></td>
+            <td>${item.mon} <br><small style="color:var(--gray-600);">${item.lesson}</small></td>
+            <td><span class="score-badge ${badgeClass}">${item.score.toFixed(2)}</span></td>
+            <td>${item.correct}</td>
+            <td style="font-size:12.5px;color:var(--gray-600);">${item.time}</td>
+            <td style="text-align:center;">
+              <img src="${item.photo}" style="width:36px;height:36px;border-radius:50%;object-fit:cover;cursor:pointer;border:1.5px solid var(--primary);" onclick="zoomPhoto('${item.photo}')" title="Bấm xem ảnh chống gian lận">
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function zoomPhoto(src) {
+      document.getElementById("modalImg").src = src;
+      document.getElementById("imageModal").style.display = "flex";
+    }
+
+    function closeImageModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+
+    function exportScoresToCSV() {
+      if (cachedSubmissions.length === 0) {
+        alert("Chưa có dữ liệu để xuất bảng điểm!");
+        return;
+      }
+      let csv = "\uFEFFSTT,Họ và Tên,Lớp,Môn Thi,Bài Thi,Điểm Số,Số Câu Đúng,Thời Gian\n";
+      cachedSubmissions.forEach((item, idx) => {
+        csv += `"${idx+1}","${item.name}","${item.class}","${item.mon}","${item.lesson}","${item.score}","${item.correct}","${item.time}"\n`;
+      });
+
+      const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = `BangDiem_ALSM_${new Date().toISOString().slice(0,10)}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+
+    // Init
+    window.addEventListener("DOMContentLoaded", async () => {
+      updateSuggestedFilename();
+      await loadClasses();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "updated_at": "2026-10-28T23:58:00+07:00",
+  "registry": [
+    {
+      "subject_key": "Toan_hoc_Khối_6",
+      "subject_name": "Toán học",
+      "grade": 6,
+      "semester": "GK1",
+      "filename": "Toan_GKI6.json",
+      "total_questions": 60,
+      "title": "Đề cương Ôn tập Giữa Kì I (GK1) - Toán học 6"
+    },
+    {
+      "subject_key": "Toan_hoc_Khối_7",
+      "subject_name": "Toán học",
+      "grade": 7,
+      "semester": "GK1",
+      "filename": "Toan_GKI7.json",
+      "total_questions": 82,
+      "title": "Đề cương Ôn tập Giữa Kì I (GK1) - Toán học 7"
+    },
+    {
+      "subject_key": "Tin_hoc_Khối_8",
+      "subject_name": "Tin học",
+      "grade": 8,
+      "semester": "GK1",
+      "filename": "Tin_GKI8.json",
+      "total_questions": 60,
+      "title": "Đề cương Ôn tập Giữa Kì I (GK1) - Tin học 8"
+    }
+  ]
+}
