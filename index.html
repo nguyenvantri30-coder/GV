@@ -78,6 +78,40 @@
       border-radius: 20px;
     }
 
+    /* Floating Live Camera Box (Mobile & Desktop) */
+    .cam-floating-box {
+      position: fixed;
+      top: 60px;
+      right: 12px;
+      width: 100px;
+      height: 125px;
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid var(--primary);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      z-index: 90;
+      display: none;
+      touch-action: none;
+    }
+    .cam-floating-box video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scaleX(-1);
+    }
+    .cam-floating-status {
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.65);
+      color: #fff;
+      font-size: 10px;
+      text-align: center;
+      padding: 1px 0;
+    }
+
     /* Container */
     .app-container {
       max-width: 800px;
@@ -528,6 +562,12 @@
     </div>
   </header>
 
+  <!-- FLOATING LIVE CAMERA BOX DURING QUIZ -->
+  <div class="cam-floating-box" id="floatingCamBox">
+    <video id="floatingCamVideo" autoplay playsinline muted></video>
+    <div class="cam-floating-status" id="floatingCamStatus">📷 Giám sát</div>
+  </div>
+
   <div class="app-container">
 
     <!-- START SCREEN -->
@@ -795,7 +835,8 @@
     }
 
     function startFaceMonitoring() {
-      const video = document.getElementById("cameraVideo");
+      const video = document.getElementById("floatingCamVideo");
+      const statusEl = document.getElementById("floatingCamStatus");
       if (!video || !window.faceapi) return;
 
       faceMonitorInterval = setInterval(async () => {
@@ -803,17 +844,25 @@
         try {
           const detections = await faceapi.detectAllFaces(
             video,
-            new faceapi.TinyFaceDetectorOptions({ inputSize: 128, scoreThreshold: 0.5 })
+            new faceapi.TinyFaceDetectorOptions({ inputSize: 128, scoreThreshold: 0.4 })
           );
 
           if (detections.length === 0) {
             faceLostCount++;
+            if (statusEl) {
+              statusEl.textContent = "⚠️ Mất mặt (" + faceLostCount + "/3)";
+              statusEl.style.background = "rgba(220,53,69,0.8)";
+            }
             if (faceLostCount >= 3) {
               faceLostCount = 0;
               alert("Cảnh báo: Không phát hiện khuôn mặt trước màn hình!");
             }
           } else {
             faceLostCount = 0;
+            if (statusEl) {
+              statusEl.textContent = "✅ Tốt (" + detections.length + " mặt)";
+              statusEl.style.background = "rgba(40,167,69,0.8)";
+            }
           }
 
           if (detections.length > 1) {
@@ -828,7 +877,7 @@
         } catch (e) {
           console.log("Monitor error:", e);
         }
-      }, 6000); // 6s cycle for low CPU/battery usage on mobile
+      }, 5000); // 5s cycle
     }
 
     // Anti-cheat: tab switch detection (Mobile & Desktop)
@@ -1061,6 +1110,15 @@
         document.getElementById("quizScreen").style.display = "block";
         document.getElementById("bottomBar").style.display = "flex";
         document.getElementById("topLessonTitle").textContent = studentInfo.lessonTitle;
+
+        // Show floating camera preview during quiz
+        const floatBox = document.getElementById("floatingCamBox");
+        const floatVideo = document.getElementById("floatingCamVideo");
+        if (floatBox && floatVideo && cameraStream) {
+          floatBox.style.display = "block";
+          floatVideo.srcObject = cameraStream;
+          floatVideo.play().catch(e => console.log(e));
+        }
 
         currentIndex = 0;
         renderQuestion(currentIndex);
@@ -1563,7 +1621,7 @@
 
     async function captureAndSendResult(score, correctCount) {
       const statusTxt = document.getElementById("resultStatusTxt");
-      const video = document.getElementById("cameraVideo");
+      const video = document.getElementById("floatingCamVideo") || document.getElementById("cameraVideo");
       const canvas = document.getElementById("snapshotCanvas");
 
       if (!video || !cameraStream) {
