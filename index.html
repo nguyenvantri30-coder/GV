@@ -739,6 +739,74 @@
     let studentMaster = null;
     let schoolClasses = [];
     let isStudentVerified = false;
+    let cachedRawQuestions = [];
+    let cachedFolderPath = "";
+
+    function shuffleArray(arr) {
+      if (!Array.isArray(arr)) return arr;
+      const copy = JSON.parse(JSON.stringify(arr));
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function generateQuizQuestions() {
+      if (!cachedRawQuestions || cachedRawQuestions.length === 0) return;
+
+      // 1. Sinh lại số ngẫu nhiên cho các câu có biến {k}, {a}, {b}...
+      const processed = cachedRawQuestions.map(processQuestionWildcards);
+
+      // 2. Trộn thứ tự các câu hỏi (Fisher-Yates) và lấy tối đa 25 câu
+      const shuffledQ = shuffleArray(processed).slice(0, Math.min(25, processed.length));
+
+      // 3. Trộn ngẫu nhiên các phương án đáp án của từng câu
+      shuffledQ.forEach(q => {
+        q._imgBase = `${GITHUB_RAW}/${cachedFolderPath}/images/`;
+
+        // Trộn các lựa chọn trắc nghiệm A, B, C, D (multichoice, calculatedmulti)
+        // (Không trộn truefalse để Đúng / Sai giữ nguyên trực quan)
+        if ((q.type === "multichoice" || q.type === "calculatedmulti") && Array.isArray(q.answers)) {
+          q.answers = shuffleArray(q.answers);
+        }
+
+        // Trộn các từ/cụm từ trong khay lựa chọn điền khuyết
+        if ((q.type === "ddwtos" || q.type === "gapselect") && Array.isArray(q.choices)) {
+          q.choices = shuffleArray(q.choices);
+        }
+
+        // Trộn các cặp ghép nối (matching)
+        if (q.type === "matching" && Array.isArray(q.subquestions)) {
+          q.subquestions = shuffleArray(q.subquestions);
+        }
+      });
+
+      currentQuestions = shuffledQ;
+
+      // Reset toàn bộ câu trả lời
+      userAnswers = {};
+      currentQuestions.forEach((q, i) => {
+        userAnswers[i] = null;
+      });
+
+      currentIndex = 0;
+      renderQuestion(0);
+      renderPalette();
+    }
+
+    function triggerRegenViolation(reason) {
+      if (isSubmitted) return;
+      alert(`🚨 VI PHẠM QUY CHẾ THI!\n\nLý do: ${reason}\n\nToàn bộ kết quả bài đang làm đã bị HỦY BỎ. Hệ thống tự động xáo trộn và SINH BỘ ĐỀ MỚI TINH! Vui lòng bắt đầu làm lại từ đầu.`);
+
+      // Reset các bộ đếm vi phạm
+      tabWarnings = 0;
+      faceLostCount = 0;
+      multiFaceCount = 0;
+
+      // Tự động sinh đề mới, tráo đổi câu hỏi và đáp án
+      generateQuizQuestions();
+    }
 
     /* =========================================================================
        INITIALIZATION & CATALOG LOADING
@@ -1005,7 +1073,7 @@
             }
             if (faceLostCount >= 3) {
               faceLostCount = 0;
-              alert("Cảnh báo: Không phát hiện khuôn mặt trước màn hình!");
+              triggerRegenViolation("Không phát hiện khuôn mặt trước camera quá 3 lần liên tiếp!");
             }
           } else {
             faceLostCount = 0;
@@ -1019,7 +1087,7 @@
             multiFaceCount++;
             if (multiFaceCount >= 2) {
               multiFaceCount = 0;
-              alert("Cảnh báo: Phát hiện nhiều khuôn mặt trong khung hình!");
+              triggerRegenViolation("Phát hiện nhiều người trước camera (nghi vấn có người trợ giúp)!");
             }
           } else {
             multiFaceCount = 0;
@@ -1034,10 +1102,11 @@
     document.addEventListener("visibilitychange", () => {
       if (document.hidden && !isSubmitted && currentQuestions.length > 0) {
         tabWarnings++;
-        alert(`Cảnh báo [Lần ${tabWarnings}]: Bạn vừa rời khỏi màn hình làm bài!`);
-        if (tabWarnings >= 2) {
-          alert("Bạn đã vi phạm quy chế thi do chuyển tab quá 2 lần! Bài thi sẽ tự động nộp.");
-          submitQuiz();
+        if (tabWarnings < 2) {
+          alert(`⚠️ CẢNH BÁO [Lần ${tabWarnings}/2]: Bạn vừa rời khỏi màn hình làm bài! Nếu rời màn hình thêm 1 lần nữa, bài thi sẽ bị hủy và tự động sinh đề mới!`);
+        } else {
+          tabWarnings = 0;
+          triggerRegenViolation("Rời khỏi màn hình làm bài / Chuyển tab quá 2 lần!");
         }
       }
     });
@@ -1306,23 +1375,12 @@
         localStorage.setItem("quiz_hoten", hoten);
         localStorage.setItem("quiz_lop", lop);
 
-        // Process wildcards & prepare questions
-        const rawList = questionsToLoad.map(processQuestionWildcards);
+        // Lưu ngân hàng đề vào bộ nhớ cache để phục vụ sinh đề mới khi vi phạm
+        cachedRawQuestions = questionsToLoad;
+        cachedFolderPath = folderPath;
 
-        // Shuffle and limit to 25 questions per test
-        const shuffled = rawList.sort(() => Math.random() - 0.5);
-        currentQuestions = shuffled.slice(0, Math.min(25, shuffled.length));
-
-        // Save image base URL for SGK pictures
-        currentQuestions.forEach(q => {
-          q._imgBase = `${GITHUB_RAW}/${folderPath}/images/`;
-        });
-
-        // Initialize user answers state
-        userAnswers = {};
-        currentQuestions.forEach((q, i) => {
-          userAnswers[i] = null;
-        });
+        // Xáo trộn câu hỏi, xáo trộn đáp án và tạo bộ đề thi
+        generateQuizQuestions();
 
         // Switch to Quiz Screen
         document.getElementById("startScreen").style.display = "none";
@@ -1339,9 +1397,6 @@
           floatVideo.play().catch(e => console.log(e));
         }
 
-        currentIndex = 0;
-        renderQuestion(currentIndex);
-        renderPalette();
         startTimer();
         startFaceMonitoring();
 
@@ -1529,7 +1584,10 @@
     function renderMatching(q, idx) {
       if (!userAnswers[idx]) userAnswers[idx] = {};
       const subq = q.subquestions || [];
-      const distinctAnswers = [...new Set(subq.map(s => s.answer))];
+      if (!q._shuffledDistinct) {
+        q._shuffledDistinct = shuffleArray([...new Set(subq.map(s => s.answer))]);
+      }
+      const distinctAnswers = q._shuffledDistinct;
 
       let out = "";
       subq.forEach((sq, sIdx) => {
