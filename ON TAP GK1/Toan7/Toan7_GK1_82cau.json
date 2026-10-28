@@ -1,0 +1,2324 @@
+{
+  "AI_CONFIG": {
+    "total_generated": 82,
+    "subject": "Toán học",
+    "grade": 7,
+    "semester": "Giữa Kì 1",
+    "school_year": "2026-2027",
+    "types_used": {
+      "multichoice": 81,
+      "truefalse": 1
+    }
+  },
+  "TARGET_COVERAGE_REPORT": {
+    "total_questions": 82,
+    "levels": {
+      "nhan_biet": 24,
+      "thong_hieu": 33,
+      "van_dung": 21,
+      "van_dung_cao": 4
+    }
+  },
+  "questions": [
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Cách viết nào sau đây cho ta một số hữu tỉ?",
+      "generalfeedback": "Số hữu tỉ được viết dưới dạng phân số \\(rac{a}{b}\\) với \\(a, b \\in \\mathbb{Z}\\) và \\(b \neq 0\\).",
+      "answers": [
+        {
+          "text": "\\(rac{-1}{3}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{2}{0}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{1{,}5}{2}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{\\sqrt{2}}{3}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Cách viết nào sau đây KHÔNG cho ta một số hữu tỉ?",
+      "generalfeedback": "Phân số có mẫu số bằng 0 không xác định, do đó không phải là số hữu tỉ.",
+      "answers": [
+        {
+          "text": "\\(rac{5}{0}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(0\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-2{,}5\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(2\frac{1}{4}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Số đối của số hữu tỉ \\(rac{2}{3}\\) là:",
+      "generalfeedback": "Số đối của \\(a\\) là \\(-a\\).",
+      "answers": [
+        {
+          "text": "\\(rac{-2}{3}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{3}{2}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{-3}{2}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{2}{3}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Số đối của số hữu tỉ \\(-0{,}75\\) là:",
+      "generalfeedback": "Số đối của một số âm là một số dương có cùng giá trị tuyệt đối.",
+      "answers": [
+        {
+          "text": "\\(0{,}75\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-0{,}75\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{4}{3}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-\frac{4}{3}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Tập hợp các số hữu tỉ được kí hiệu là:",
+      "generalfeedback": "Kí hiệu chuẩn của tập hợp số hữu tỉ là \\(\\mathbb{Q}\\).",
+      "answers": [
+        {
+          "text": "\\(\\mathbb{Q}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\mathbb{Z}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\mathbb{N}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\mathbb{R}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Trong luỹ thừa \\((-2)^{20}\\), cơ số là:",
+      "generalfeedback": "Trong biểu thức \\(a^n\\), \\(a\\) là cơ số và \\(n\\) là số mũ.",
+      "answers": [
+        {
+          "text": "\\(-2\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(20\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-20\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(2\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Kết quả của phép tính \\((-3)^3\\) là:",
+      "generalfeedback": "Luỹ thừa bậc lẻ của số âm cho kết quả âm: \\((-3) \\cdot (-3) \\cdot (-3) = -27\\).",
+      "answers": [
+        {
+          "text": "\\(-27\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(27\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-9\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(9\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Viết biểu thức \\(2^3 \\cdot 2^4\\) dưới dạng một luỹ thừa ta được:",
+      "generalfeedback": "Nhân hai luỹ thừa cùng cơ số, ta cộng số mũ: \\(a^m \\cdot a^n = a^{m+n}\\).",
+      "answers": [
+        {
+          "text": "\\(2^7\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(2^{12}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(4^7\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(4^{12}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Viết biểu thức \\((5^2)^3\\) dưới dạng một luỹ thừa ta được:",
+      "generalfeedback": "Luỹ thừa của luỹ thừa ta nhân hai số mũ: \\((a^m)^n = a^{m \\cdot n}\\).",
+      "answers": [
+        {
+          "text": "\\(5^6\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(5^5\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(5^8\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(25^3\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Quy ước nào sau đây đúng với mọi số hữu tỉ \\(x \neq 0\\)?",
+      "generalfeedback": "Mọi số hữu tỉ khác 0 mũ 0 đều bằng 1.",
+      "answers": [
+        {
+          "text": "\\(x^0 = 1\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(x^0 = 0\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(x^0 = x\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(x^1 = 1\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Kết quả của phép tính \\(5^2 - 10 : 2\\) là:",
+      "generalfeedback": "Thực hiện luỹ thừa, sau đó phép chia, cuối cùng là phép trừ: \\(25 - 5 = 20\\).",
+      "answers": [
+        {
+          "text": "\\(20\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(7{,}5\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(0\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-20\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Thứ tự thực hiện các phép tính trong biểu thức không có dấu ngoặc là:",
+      "generalfeedback": "Luôn thực hiện luỹ thừa trước, rồi đến nhân chia, cuối cùng là cộng trừ.",
+      "answers": [
+        {
+          "text": "Luỹ thừa \\(ightarrow\\) Nhân và chia \\(ightarrow\\) Cộng và trừ",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "Nhân và chia \\(ightarrow\\) Luỹ thừa \\(ightarrow\\) Cộng và trừ",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Cộng và trừ \\(ightarrow\\) Nhân và chia \\(ightarrow\\) Luỹ thừa",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Luỹ thừa \\(ightarrow\\) Cộng và trừ \\(ightarrow\\) Nhân và chia",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Kí hiệu (68) trong số thập phân \\(12{,}56(68)\\) có ý nghĩa gì?",
+      "generalfeedback": "Phần trong ngoặc biểu thị chu kì, nghĩa là nhóm chữ số đó lặp lại vô hạn lần.",
+      "answers": [
+        {
+          "text": "Chữ số 68 được lặp lại vô hạn lần",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "Chữ số 68 là số lớn nhất",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Chữ số 68 là số nhỏ nhất",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Chữ số 68 không được lặp lại",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Cách viết gọn đúng của số thập phân vô hạn tuần hoàn \\(0{,}545454...\\) là:",
+      "generalfeedback": "Nhóm số lặp lại là 54, nên ta đặt nó trong ngoặc đơn.",
+      "answers": [
+        {
+          "text": "\\(0,(54)\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(0,(4)\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(0,54\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(0,4\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Khẳng định nào sau đây đúng về số vô tỉ?",
+      "generalfeedback": "Số vô tỉ là số thập phân vô hạn không tuần hoàn.",
+      "answers": [
+        {
+          "text": "Số vô tỉ là số thập phân vô hạn không tuần hoàn.",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "Số vô tỉ là số thập phân vô hạn tuần hoàn.",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Số vô tỉ là số thập phân hữu hạn.",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Số vô tỉ là phân số.",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Tập hợp các số thực được kí hiệu là:",
+      "generalfeedback": "Số thực gồm cả số hữu tỉ và số vô tỉ, kí hiệu là \\(\\mathbb{R}\\).",
+      "answers": [
+        {
+          "text": "\\(\\mathbb{R}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\mathbb{Z}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\mathbb{I}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\mathbb{Q}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Số nào sau đây là số vô tỉ?",
+      "generalfeedback": "Căn bậc hai của một số tự nhiên không chính phương là một số vô tỉ. Khác với các số hữu tỉ.",
+      "answers": [
+        {
+          "text": "\\(\\sqrt{2}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-1{,}5\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{3}{4}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\sqrt{9}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Căn bậc hai số học của 9 bằng bao nhiêu?",
+      "generalfeedback": "Căn bậc hai số học của một số không âm \\(a\\) là số không âm \\(x\\) sao cho \\(x^2 = a\\). \\(3^2 = 9\\).",
+      "answers": [
+        {
+          "text": "\\(3\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-3\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(81\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-81\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Căn bậc hai số học của 16 bằng bao nhiêu?",
+      "generalfeedback": "Giá trị không âm bình phương lên bằng 16 là 4.",
+      "answers": [
+        {
+          "text": "\\(4\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-4\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(8\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(256\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Giá trị tuyệt đối của \\(-2\\) bằng bao nhiêu?",
+      "generalfeedback": "Giá trị tuyệt đối của một số âm là số đối của nó.",
+      "answers": [
+        {
+          "text": "\\(2\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-2\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(0\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(4\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Giá trị tuyệt đối của một số dương luôn là:",
+      "generalfeedback": "Giá trị tuyệt đối của số dương bằng chính nó.",
+      "answers": [
+        {
+          "text": "Chính số đó",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "Số đối của nó",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Số 0",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Một số âm",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Tìm \\(x\\), biết \\(x + 7{,}25 = 15{,}75\\).",
+      "generalfeedback": "Chuyển vế và đổi dấu: \\(x = 15{,}75 - 7{,}25 = 8{,}5\\).",
+      "answers": [
+        {
+          "text": "\\(8{,}5\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-8{,}5\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(23{,}0\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-23{,}0\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Tìm \\(x\\), biết \\(x - \frac{3}{4} = \frac{1}{4}\\).",
+      "generalfeedback": "Chuyển vế: \\(x = \frac{1}{4} + \frac{3}{4} = \frac{4}{4} = 1\\).",
+      "answers": [
+        {
+          "text": "\\(1\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-1\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{1}{2}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{-1}{2}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Làm tròn số thập phân \\(5{,}48275...\\) với độ chính xác \\(0{,}005\\).",
+      "generalfeedback": "Độ chính xác 0,005 nghĩa là làm tròn đến hàng phần trăm. Số kế tiếp là 2 < 5 nên giữ nguyên \\(5{,}48\\).",
+      "answers": [
+        {
+          "text": "\\(5{,}48\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(5{,}49\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(5{,}5\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(5{,}483\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Làm tròn số \\(\\pi \\approx 3{,}14159...\\) đến chữ số thập phân thứ hai.",
+      "generalfeedback": "Chữ số thập phân thứ ba là 1 < 5 nên ta giữ nguyên chữ số thứ hai: \\(3{,}14\\).",
+      "answers": [
+        {
+          "text": "\\(3{,}14\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(3{,}15\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(3{,}1\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(3{,}142\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Diện tích của một hình vuông là \\(36 \text{ cm}^2\\). Cạnh của hình vuông là bao nhiêu?",
+      "generalfeedback": "Gọi cạnh hình vuông là \\(a\\) (\\(a>0\\)). Ta có \\(a^2 = 36\\), nên \\(a = \\sqrt{36} = 6\\).",
+      "answers": [
+        {
+          "text": "\\(6 \text{ cm}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(18 \text{ cm}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(72 \text{ cm}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-6 \text{ cm}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Diện tích một sân thi đấu hình vuông là \\(144 \text{ m}^2\\). Chu vi sân đó là:",
+      "generalfeedback": "Cạnh bằng \\(\\sqrt{144} = 12 \text{ m}\\). Chu vi bằng \\(12 \\cdot 4 = 48 \text{ m}\\).",
+      "answers": [
+        {
+          "text": "\\(48 \text{ m}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(12 \text{ m}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(24 \text{ m}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(144 \text{ m}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Khẳng định nào sau đây đúng về hai góc kề bù?",
+      "generalfeedback": "Hai góc kề bù là hai góc vừa kề nhau vừa bù nhau, tổng số đo luôn bằng \\(180^{\\circ}\\).",
+      "answers": [
+        {
+          "text": "\\(\\widehat{A} + \\widehat{B} = 180^{\\circ}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\widehat{A} + \\widehat{B} = 90^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\widehat{A} + \\widehat{B} = 360^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\widehat{A} + \\widehat{B} = 100^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Khi tia \\(Oz\\) là tia phân giác của góc \\(xOy\\) thì đẳng thức nào sau đây đúng?",
+      "generalfeedback": "Tia phân giác chia một góc thành hai góc bằng nhau và bằng một nửa góc ban đầu.",
+      "answers": [
+        {
+          "text": "\\(\\widehat{xOz} = \\widehat{yOz} = \frac{1}{2} \\widehat{xOy}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\widehat{xOz} = \\widehat{yOz} = \frac{1}{3} \\widehat{xOy}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\widehat{xOz} + \\widehat{yOz} = \frac{1}{2} \\widehat{xOy}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\widehat{xOy} = \frac{1}{2} \\widehat{xOz}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Đặc điểm của hai góc đối đỉnh là:",
+      "generalfeedback": "Theo tính chất, hai góc đối đỉnh luôn có số đo bằng nhau.",
+      "answers": [
+        {
+          "text": "Bằng nhau",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "Kề bù",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Phụ nhau",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Tổng bằng \\(360^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Cho hai đường thẳng cắt nhau tạo thành một góc \\(60^{\\circ}\\). Số đo góc đối đỉnh với nó là:",
+      "generalfeedback": "Hai góc đối đỉnh thì bằng nhau nên có số đo là \\(60^{\\circ}\\).",
+      "answers": [
+        {
+          "text": "\\(60^{\\circ}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(120^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(90^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(30^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Cho góc \\(\\widehat{xOy} = 80^{\\circ}\\) và tia \\(Ot\\) là tia phân giác. Số đo góc \\(\\widehat{xOt}\\) là:",
+      "generalfeedback": "Tia phân giác chia đôi góc ban đầu: \\(80^{\\circ} : 2 = 40^{\\circ}\\).",
+      "answers": [
+        {
+          "text": "\\(40^{\\circ}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(80^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(160^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(50^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Nếu đường thẳng \\(c\\) cắt hai đường thẳng song song \\(a\\) và \\(b\\), thì hai góc so le trong có đặc điểm gì?",
+      "generalfeedback": "Theo tính chất, chúng sẽ bằng nhau.",
+      "answers": [
+        {
+          "text": "Bằng nhau",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "Tổng bằng \\(180^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Kề bù",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Tổng bằng \\(90^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Dấu hiệu nhận biết hai đường thẳng song song là nếu một đường thẳng cắt hai đường thẳng phân biệt và tạo thành một cặp góc:",
+      "generalfeedback": "Tiên đề và dấu hiệu nhận biết nêu rõ: so le trong bằng nhau hoặc đồng vị bằng nhau.",
+      "answers": [
+        {
+          "text": "Đồng vị bằng nhau",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "So le trong bù nhau",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Kề bù bằng nhau",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Trong cùng phía bằng nhau",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "[img:de_thi_image11.png]<br>Cho hai đường thẳng song song. Một góc đồng vị có số đo \\(45^{\\circ}\\) thì góc đồng vị còn lại trong cặp đó bằng:",
+      "generalfeedback": "Hai góc đồng vị của hai đường thẳng song song thì bằng nhau.",
+      "answers": [
+        {
+          "text": "\\(45^{\\circ}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(135^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(90^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(55^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ],
+      "imgs": [
+        "de_thi_image11.png"
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Phát biểu nào sau đây diễn đạt đúng nội dung tiên đề Euclid?",
+      "generalfeedback": "Tiên đề Euclid khẳng định tính duy nhất của đường thẳng song song đi qua một điểm nằm ngoài đường thẳng cho trước.",
+      "answers": [
+        {
+          "text": "Qua điểm M nằm ngoài đường thẳng a, chỉ có một đường thẳng song song với a.",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "Có vô số đường thẳng đi qua M và song song với a.",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Không thể vẽ được đường thẳng nào qua M và song song với a.",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Mọi đường thẳng qua M đều cắt a.",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Nếu \\(a \\perp c\\) và \\(b \\perp c\\) thì hai đường thẳng \\(a\\) và \\(b\\) có quan hệ gì?",
+      "generalfeedback": "Hai đường thẳng phân biệt cùng vuông góc với một đường thẳng thứ ba thì chúng song song với nhau.",
+      "answers": [
+        {
+          "text": "\\(a \\parallel b\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(a \\perp b\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(a\\) trùng \\(b\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(a\\) cắt \\(b\\) nhưng không vuông góc",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "Một cửa hàng nhập về \\(rac{3}{4}\\) tấn gạo buổi sáng và \\(rac{2}{3}\\) tấn gạo buổi chiều. Khẳng định nào sau đây so sánh đúng khối lượng hai buổi?",
+      "generalfeedback": "Đưa về cùng mẫu số: \\(rac{3}{4} = \frac{9}{12}\\) và \\(rac{2}{3} = \frac{8}{12}\\). Do \\(9 > 8\\) nên buổi sáng nhập nhiều hơn.",
+      "answers": [
+        {
+          "text": "Buổi sáng nhập nhiều hơn buổi chiều",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "Buổi sáng nhập ít hơn buổi chiều",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Hai buổi nhập bằng nhau",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Không thể so sánh được",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "Tiếp tục bài toán cửa hàng: Cả ngày cửa hàng nhập về bao nhiêu tấn gạo?",
+      "generalfeedback": "Tính tổng: \\(rac{3}{4} + \frac{2}{3} = \frac{9}{12} + \frac{8}{12} = \frac{17}{12}\\).",
+      "answers": [
+        {
+          "text": "\\(rac{17}{12}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{5}{7}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{1}{12}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{6}{12}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "Cửa hàng xuất bán \\(rac{5}{6}\\) tấn gạo. Biểu thức đúng biểu diễn lượng gạo còn lại (\\(x\\)) là:",
+      "generalfeedback": "Lượng gạo còn lại = Nhập sáng + Nhập chiều - Xuất bán.",
+      "answers": [
+        {
+          "text": "\\(x = \frac{3}{4} + \frac{2}{3} - \frac{5}{6}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(x = \frac{3}{4} - \frac{2}{3} + \frac{5}{6}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(x = \frac{3}{4} + \frac{2}{3} + \frac{5}{6}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(x = \frac{5}{6} - \frac{3}{4} - \frac{2}{3}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "Tính khối lượng gạo còn lại trong cửa hàng (đơn vị: tấn).",
+      "generalfeedback": "\\(rac{17}{12} - \frac{5}{6} = \frac{17}{12} - \frac{10}{12} = \frac{7}{12}\\).",
+      "answers": [
+        {
+          "text": "\\(rac{7}{12}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{5}{12}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{22}{12}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{1}{12}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "truefalse",
+      "level": "van_dung",
+      "questiontext": "Trong bài toán cửa hàng, lượng gạo còn lại sau khi xuất bán là \\(rac{5}{12}\\) tấn. Khẳng định này đúng hay sai?",
+      "generalfeedback": "Kết quả tính được là \\(rac{7}{12}\\), nên khẳng định là sai.",
+      "answers": [
+        {
+          "text": "Đúng",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Sai",
+          "fraction": 100,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Cho góc \\(\\widehat{zOt} = 70^{\\circ}\\) và \\(\\widehat{xOy} = 55^{\\circ}\\) sao cho \\(Oz, Ot\\) và \\(Ox, Oy\\) tạo thành các cặp tia cắt nhau [img:de_thi_image12.jpeg]. Nếu \\(\\widehat{xOy}\\) và \\(\\widehat{zOy}\\) kề bù, số đo \\(\\widehat{zOy}\\) là:",
+      "generalfeedback": "Hai góc kề bù có tổng bằng 180 độ. \\(180 - 55 = 125^{\\circ}\\).",
+      "answers": [
+        {
+          "text": "\\(125^{\\circ}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(55^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(70^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(110^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ],
+      "imgs": [
+        "de_thi_image12.jpeg"
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "[img:de_thi_image12.jpeg]<br>Nếu \\(\\widehat{xOz} = 110^{\\circ}\\) và \\(Oy\\) nằm trong góc đó sao cho \\(\\widehat{xOy} = 55^{\\circ}\\), thì khẳng định nào sau đây đúng?",
+      "generalfeedback": "Vì \\(\\widehat{xOy} = 55^{\\circ} = \frac{110^{\\circ}}{2}\\) và tia nằm trong, nên \\(Oy\\) là phân giác của \\(\\widehat{xOz}\\).",
+      "answers": [
+        {
+          "text": "\\(Oy\\) là tia phân giác của \\(\\widehat{xOz}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(Ox\\) là tia phân giác của \\(\\widehat{yOz}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Hai góc kề bù",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Hai góc đối đỉnh",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ],
+      "imgs": [
+        "de_thi_image12.jpeg"
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "Bước 1 của bài tính \\(rac{1}{5} \\cdot \frac{15}{21} + \frac{1}{5} \\cdot \frac{6}{21}\\), ta áp dụng tính chất phân phối để được:",
+      "generalfeedback": "Áp dụng tính chất phân phối: \\(a \\cdot b + a \\cdot c = a \\cdot (b+c)\\).",
+      "answers": [
+        {
+          "text": "\\(rac{1}{5} \\cdot \\left( \frac{15}{21} + \frac{6}{21} \right)\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{1}{5} \\cdot \frac{15+6}{21+21}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\left( \frac{1}{5} + \frac{1}{5} \right) \\cdot \frac{15+6}{21}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{1}{5} \\cdot \frac{15 \\cdot 6}{21}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "Kết quả cuối cùng của phép tính \\(rac{1}{5} \\cdot \\left( \frac{15}{21} + \frac{6}{21} \right)\\) là:",
+      "generalfeedback": "Tính trong ngoặc: \\(rac{21}{21} = 1\\). Kết quả là \\(rac{1}{5} \\cdot 1 = \frac{1}{5}\\).",
+      "answers": [
+        {
+          "text": "\\(rac{1}{5}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(1\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{21}{105}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{2}{5}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "Trong biểu thức \\(\\sqrt{9} + (-4)^2\\), giá trị của từng phần hạng tử là:",
+      "generalfeedback": "\\(\\sqrt{9} = 3\\) và \\((-4)^2 = 16\\).",
+      "answers": [
+        {
+          "text": "\\(3\\) và \\(16\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(3\\) và \\(-16\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-3\\) và \\(16\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(9\\) và \\(8\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "Kết quả tổng của biểu thức \\(\\sqrt{9} + (-4)^2\\) là:",
+      "generalfeedback": "Tổng của 3 và 16 là 19.",
+      "answers": [
+        {
+          "text": "\\(19\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-13\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(13\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(25\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "Trong biểu thức \\(rac{1}{2} + \\left(\frac{1}{6}\right)^2 - \\left| \frac{-4}{9} \right|\\), giá trị lũy thừa và trị tuyệt đối là:",
+      "generalfeedback": "\\((\frac{1}{6})^2 = \frac{1}{36}\\) và \\(|\frac{-4}{9}| = \frac{4}{9}\\).",
+      "answers": [
+        {
+          "text": "\\(rac{1}{36}\\) và \\(rac{4}{9}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{1}{12}\\) và \\(rac{4}{9}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{1}{36}\\) và \\(rac{-4}{9}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{2}{6}\\) và \\(rac{4}{9}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "Khi quy đồng mẫu số biểu thức \\(rac{1}{2} + \frac{1}{36} - \frac{4}{9}\\), mẫu chung nhỏ nhất là bao nhiêu?",
+      "generalfeedback": "BCNN của 2, 36 và 9 là 36.",
+      "answers": [
+        {
+          "text": "\\(36\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(18\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(72\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(9\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "Kết quả cuối cùng của phép tính \\(rac{1}{2} + \frac{1}{36} - \frac{4}{9}\\) (đã rút gọn) là:",
+      "generalfeedback": "Quy đồng: \\(rac{18}{36} + \frac{1}{36} - \frac{16}{36} = \frac{3}{36} = \frac{1}{12}\\).",
+      "answers": [
+        {
+          "text": "\\(rac{1}{12}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{3}{36}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{-1}{36}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{5}{12}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "[img:de_thi_image13.jpeg]<br>Cho tam giác ABC. Tia \\(Ay\\) là tia đối của tia \\(AB\\). Biết góc ngoài tại đỉnh A là \\(\\widehat{yAC}\\). Góc \\(\\widehat{yAC}\\) có mối quan hệ gì với \\(\\widehat{BAC}\\)?",
+      "generalfeedback": "Hai góc tạo bởi một tia và hai tia đối nhau là hai góc kề bù, có tổng bằng 180 độ.",
+      "answers": [
+        {
+          "text": "Kề bù",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "Phụ nhau",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Đối đỉnh",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Đồng vị",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ],
+      "imgs": [
+        "de_thi_image13.jpeg"
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "[img:de_thi_image13.jpeg]<br>Biết \\(\\widehat{BAC} = 80^{\\circ}\\). Số đo góc \\(\\widehat{yAC}\\) kề bù với nó là:",
+      "generalfeedback": "\\(180^{\\circ} - 80^{\\circ} = 100^{\\circ}\\).",
+      "answers": [
+        {
+          "text": "\\(100^{\\circ}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(80^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(50^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(10^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ],
+      "imgs": [
+        "de_thi_image13.jpeg"
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "[img:de_thi_image13.jpeg]<br>Biết tia \\(Ax\\) là phân giác của \\(\\widehat{yAC} = 100^{\\circ}\\). Số đo góc \\(\\widehat{xAC}\\) là:",
+      "generalfeedback": "Tia phân giác chia đôi góc: \\(100 : 2 = 50^{\\circ}\\).",
+      "answers": [
+        {
+          "text": "\\(50^{\\circ}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(40^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(100^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(80^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ],
+      "imgs": [
+        "de_thi_image13.jpeg"
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "[img:de_thi_image13.jpeg]<br>Biết \\(\\widehat{xAC} = 50^{\\circ}\\) và góc \\(\\widehat{ACB}\\) trong tam giác cũng bằng \\(50^{\\circ}\\). Nhận xét vị trí của hai góc này đối với đường thẳng \\(AC\\) cắt đường thẳng \\(Ax\\) và \\(BC\\)?",
+      "generalfeedback": "Hai góc nằm ở hai phía của đường thẳng cắt và bên trong khoảng giữa hai đường thẳng là so le trong.",
+      "answers": [
+        {
+          "text": "So le trong",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "Đồng vị",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Trong cùng phía",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Đối đỉnh",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ],
+      "imgs": [
+        "de_thi_image13.jpeg"
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "[img:de_thi_image13.jpeg]<br>Từ việc hai góc so le trong \\(\\widehat{xAC}\\) và \\(\\widehat{ACB}\\) bằng nhau, ta kết luận được điều gì?",
+      "generalfeedback": "Theo dấu hiệu nhận biết, khi hai góc so le trong bằng nhau, hai đường thẳng song song.",
+      "answers": [
+        {
+          "text": "\\(Ax \\parallel BC\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(Ax \\perp BC\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(Ax\\) cắt \\(BC\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(AC \\parallel BC\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ],
+      "imgs": [
+        "de_thi_image13.jpeg"
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung_cao",
+      "questiontext": "Cho tổng \\(A = \frac{1}{3} + \\left(\frac{1}{3}\right)^2 + \\left(\frac{1}{3}\right)^3 + \\dots + \\left(\frac{1}{3}\right)^{2026}\\). Để tính tổng này, người ta thường xét biểu thức nào sau đây?",
+      "generalfeedback": "Nhân tổng với nghịch đảo của cơ số (tức là 3) hoặc cơ số để tạo dạng trừ cho nhau. Xét \\(3A\\).",
+      "answers": [
+        {
+          "text": "\\(3 \\cdot A\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(2 \\cdot A\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(A + 3\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(A^2\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung_cao",
+      "questiontext": "Tính giá trị của hiệu \\(3A - A\\) (tức là \\(2A\\)) theo chuỗi phép trừ?",
+      "generalfeedback": "Các số hạng ở giữa sẽ bị triệt tiêu, chỉ còn lại số hạng đầu và cuối: \\(1 - \\left(\frac{1}{3}\right)^{2026}\\).",
+      "answers": [
+        {
+          "text": "\\(1 - \\left(\frac{1}{3}\right)^{2026}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(1 + \\left(\frac{1}{3}\right)^{2026}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{1}{3} - \\left(\frac{1}{3}\right)^{2027}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(1 - \\left(\frac{1}{3}\right)^{2027}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung_cao",
+      "questiontext": "Từ \\(2A = 1 - \\left(\frac{1}{3}\right)^{2026}\\), ta suy ra \\(A\\) bằng:",
+      "generalfeedback": "Chia hai vế cho 2, ta được \\(A = \frac{1 - \\left(\frac{1}{3}\right)^{2026}}{2}\\).",
+      "answers": [
+        {
+          "text": "\\(rac{1 - \\left(\frac{1}{3}\right)^{2026}}{2}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{1}{2} - \\left(\frac{1}{3}\right)^{2026}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{1 + \\left(\frac{1}{3}\right)^{2026}}{2}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(2 - 2\\left(\frac{1}{3}\right)^{2026}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung_cao",
+      "questiontext": "Dựa vào biểu thức tính \\(A\\) ở trên, kết luận nào sau đây đúng để chứng minh bất đẳng thức của bài toán?",
+      "generalfeedback": "Vì \\(\\left(\frac{1}{3}\right)^{2026} > 0\\), nên phần tử số bé hơn 1. Suy ra phân số \\(A < \frac{1}{2}\\).",
+      "answers": [
+        {
+          "text": "\\(A < \frac{1}{2}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(A > \frac{1}{2}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(A = \frac{1}{2}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(A > 1\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Làm tròn số \\(12{,}59127\\) với độ chính xác \\(50\\) ta thu được:",
+      "generalfeedback": "Độ chính xác 50 nghĩa là làm tròn đến hàng trăm. \\(12591{,}27 \\approx 12600\\).",
+      "answers": [
+        {
+          "text": "\\(12600\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(12500\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(12590\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(13000\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Theo dữ liệu trong SGK, nếu điểm \\(a\\) nằm trước điểm \\(b\\) trên trục số thì:",
+      "generalfeedback": "Trên trục số, điểm nằm bên trái biểu diễn số nhỏ hơn.",
+      "answers": [
+        {
+          "text": "\\(a < b\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(a > b\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(a = b\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(a \\geq b\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Kết quả của phép tính \\((-5)^{5} : (-5)^{5}\\) là:",
+      "generalfeedback": "Chia hai luỹ thừa cùng cơ số (khác 0), số mũ trừ nhau: \\(5 - 5 = 0\\). Mà \\(a^0 = 1\\).",
+      "answers": [
+        {
+          "text": "\\(1\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(0\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-5\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-1\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Tính giá trị của biểu thức \\(rac{(-14)^2}{7^2}\\).",
+      "generalfeedback": "Có thể gộp thành \\((\frac{-14}{7})^2 = (-2)^2 = 4\\).",
+      "answers": [
+        {
+          "text": "\\(4\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-4\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(2\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(-2\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Biểu thức \\((-0{,}5) \\cdot (-0{,}5)\\) có thể viết dưới dạng lũy thừa là:",
+      "generalfeedback": "Tích của 2 thừa số giống nhau là lũy thừa bậc 2.",
+      "answers": [
+        {
+          "text": "\\((-0{,}5)^2\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\((0{,}5)^2\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\((-0{,}5)^3\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(2 \\cdot (-0{,}5)\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Làm tròn số vô tỉ \\(\\sqrt{5} \\approx 2{,}23606...\\) đến chữ số thập phân thứ hai.",
+      "generalfeedback": "Chữ số thập phân thứ ba là 6 > 5 nên ta cộng 1 vào chữ số thứ hai: \\(2{,}24\\).",
+      "answers": [
+        {
+          "text": "\\(2{,}24\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(2{,}23\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(2{,}25\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(2{,}2\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Nếu \\(x\\) là độ dài cạnh của hình vuông có diện tích là \\(81 \text{ dm}^2\\), thì giá trị của \\(x\\) là:",
+      "generalfeedback": "Cạnh bằng căn bậc hai số học của diện tích: \\(\\sqrt{81} = 9\\).",
+      "answers": [
+        {
+          "text": "\\(9 \text{ dm}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(81 \text{ dm}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(18 \text{ dm}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(40{,}5 \text{ dm}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Cho điểm \\(A\\) nằm ngoài đường thẳng \\(a\\), có bao nhiêu đường thẳng đi qua \\(A\\) và song song với \\(a\\)?",
+      "generalfeedback": "Theo Tiên đề Euclid, chỉ có một đường thẳng duy nhất.",
+      "answers": [
+        {
+          "text": "Chỉ có 1 đường thẳng",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "Có vô số đường thẳng",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Có 2 đường thẳng",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Không có đường thẳng nào",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Trong hình học, nếu đường thẳng \\(c\\) cắt hai đường thẳng song song \\(a\\) và \\(b\\), thì tổng số đo hai góc trong cùng phía là:",
+      "generalfeedback": "Hai góc trong cùng phía của hai đường thẳng song song sẽ bù nhau (tổng 180 độ).",
+      "answers": [
+        {
+          "text": "\\(180^{\\circ}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(90^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(360^{\\circ}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Bằng nhau",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "Tập hợp các số vô tỉ được kí hiệu bằng chữ cái nào?",
+      "generalfeedback": "Kí hiệu của tập số vô tỉ là \\(\\mathbb{I}\\).",
+      "answers": [
+        {
+          "text": "\\(\\mathbb{I}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\mathbb{R}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\mathbb{Q}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(\\mathbb{Z}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Tính tổng: \\(rac{-2}{3} + \frac{5}{2}\\).",
+      "generalfeedback": "Quy đồng mẫu 6: \\(rac{-4}{6} + \frac{15}{6} = \frac{11}{6}\\).",
+      "answers": [
+        {
+          "text": "\\(rac{11}{6}\\)",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{3}{5}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{-7}{6}\\)",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "\\(rac{3}{6}\\)",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "Khi chuyển một số hạng từ vế này sang vế kia của một đẳng thức, ta phải:",
+      "generalfeedback": "Quy tắc chuyển vế: Chuyển vế phải đổi dấu số hạng đó.",
+      "answers": [
+        {
+          "text": "Đổi dấu số hạng đó",
+          "fraction": 100,
+          "feedback": ""
+        },
+        {
+          "text": "Giữ nguyên dấu",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Nhân với -1",
+          "fraction": 0,
+          "feedback": ""
+        },
+        {
+          "text": "Chia cho -1",
+          "fraction": 0,
+          "feedback": ""
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "[img:hinh_songsong_bien_the_1.png]<br>Quan sát hình vẽ bên. Cho tam giác \\(MNP\\), tia \\(Mt\\) là tia đối của tia \\(MN\\). Biết góc trong \\(\\widehat{NMP} = 60^{\\circ}\\). Số đo của góc ngoài \\(\\widehat{tMP}\\) kề bù với nó là:",
+      "generalfeedback": "Hai góc kề bù có tổng số đo bằng \\(180^{\\circ}\\). Do đó: \\(\\widehat{tMP} = 180^{\\circ} - \\widehat{NMP} = 180^{\\circ} - 60^{\\circ} = 120^{\\circ}\\).",
+      "imgs": [
+        "hinh_songsong_bien_the_1.png"
+      ],
+      "answers": [
+        {
+          "text": "\\(120^{\\circ}\\)",
+          "fraction": 100
+        },
+        {
+          "text": "\\(60^{\\circ}\\)",
+          "fraction": 0
+        },
+        {
+          "text": "\\(90^{\\circ}\\)",
+          "fraction": 0
+        },
+        {
+          "text": "\\(30^{\\circ}\\)",
+          "fraction": 0
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "[img:hinh_songsong_bien_the_1.png]<br>Tiếp tục bài toán: Biết tia \\(Mz\\) là tia phân giác của góc \\(\\widehat{tMP} = 120^{\\circ}\\). Số đo của góc \\(\\widehat{zMP}\\) là:",
+      "generalfeedback": "Tia phân giác chia góc \\(\\widehat{tMP}\\) thành hai góc bằng nhau: \\(\\widehat{zMP} = 120^{\\circ} : 2 = 60^{\\circ}\\).",
+      "imgs": [
+        "hinh_songsong_bien_the_1.png"
+      ],
+      "answers": [
+        {
+          "text": "\\(60^{\\circ}\\)",
+          "fraction": 100
+        },
+        {
+          "text": "\\(120^{\\circ}\\)",
+          "fraction": 0
+        },
+        {
+          "text": "\\(30^{\\circ}\\)",
+          "fraction": 0
+        },
+        {
+          "text": "\\(45^{\\circ}\\)",
+          "fraction": 0
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "[img:hinh_songsong_bien_the_1.png]<br>Quan sát hình vẽ, xét vị trí của góc \\(\\widehat{zMP}\\) và góc \\(\\widehat{MPN}\\) đối với đường thẳng \\(MP\\) cắt hai đường thẳng \\(Mz\\) và \\(NP\\). Hai góc này là cặp góc:",
+      "generalfeedback": "Hai góc nằm ở hai phía của cát tuyến MP và nằm bên trong khoảng giữa hai đường thẳng Mz và NP nên là cặp góc so le trong.",
+      "imgs": [
+        "hinh_songsong_bien_the_1.png"
+      ],
+      "answers": [
+        {
+          "text": "So le trong",
+          "fraction": 100
+        },
+        {
+          "text": "Đồng vị",
+          "fraction": 0
+        },
+        {
+          "text": "Trong cùng phía",
+          "fraction": 0
+        },
+        {
+          "text": "Đối đỉnh",
+          "fraction": 0
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "[img:hinh_songsong_bien_the_1.png]<br>Từ kết quả \\(\\widehat{zMP} = \\widehat{MPN} = 60^{\\circ}\\) (hai góc so le trong bằng nhau), theo dấu hiệu nhận biết ta kết luận được:",
+      "generalfeedback": "Nếu đường thẳng cắt hai đường thẳng và trong các góc tạo thành có một cặp góc so le trong bằng nhau thì hai đường thẳng đó song song: \\(Mz \\parallel NP\\).",
+      "imgs": [
+        "hinh_songsong_bien_the_1.png"
+      ],
+      "answers": [
+        {
+          "text": "\\(Mz \\parallel NP\\)",
+          "fraction": 100
+        },
+        {
+          "text": "\\(Mz \\perp NP\\)",
+          "fraction": 0
+        },
+        {
+          "text": "\\(Mz\\) cắt \\(NP\\)",
+          "fraction": 0
+        },
+        {
+          "text": "\\(MN \\parallel NP\\)",
+          "fraction": 0
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "nhan_biet",
+      "questiontext": "[img:hinh_dongvi_songsong.png]<br>Cho hình vẽ bên, đường thẳng \\(c\\) cắt hai đường thẳng \\(a\\) và \\(b\\) tại \\(A\\) và \\(B\\). Cặp góc \\(\\widehat{A}_1\\) và \\(\\widehat{B}_1\\) ở vị trí nào?",
+      "generalfeedback": "Cặp góc \\(\\widehat{A}_1\\) và \\(\\widehat{B}_1\\) nằm cùng phía đối với đường thẳng c và cùng ở phía trên so với hai đường thẳng a, b nên là cặp góc đồng vị.",
+      "imgs": [
+        "hinh_dongvi_songsong.png"
+      ],
+      "answers": [
+        {
+          "text": "Đồng vị",
+          "fraction": 100
+        },
+        {
+          "text": "So le trong",
+          "fraction": 0
+        },
+        {
+          "text": "Trong cùng phía",
+          "fraction": 0
+        },
+        {
+          "text": "Kề bù",
+          "fraction": 0
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "[img:hinh_dongvi_songsong.png]<br>Biết \\(\\widehat{A}_1 = 70^{\\circ}\\). Số đo của góc kề bù \\(\\widehat{A}_2\\) với nó bằng:",
+      "generalfeedback": "Hai góc kề bù có tổng bằng \\(180^{\\circ}\\), nên \\(\\widehat{A}_2 = 180^{\\circ} - 70^{\\circ} = 110^{\\circ}\\).",
+      "imgs": [
+        "hinh_dongvi_songsong.png"
+      ],
+      "answers": [
+        {
+          "text": "\\(110^{\\circ}\\)",
+          "fraction": 100
+        },
+        {
+          "text": "\\(70^{\\circ}\\)",
+          "fraction": 0
+        },
+        {
+          "text": "\\(90^{\\circ}\\)",
+          "fraction": 0
+        },
+        {
+          "text": "\\(140^{\\circ}\\)",
+          "fraction": 0
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "[img:hinh_dongvi_songsong.png]<br>Nếu \\(\\widehat{A}_1 = \\widehat{B}_1 = 70^{\\circ}\\) (cặp góc đồng vị bằng nhau), thì khẳng định nào sau đây là ĐÚNG?",
+      "generalfeedback": "Theo dấu hiệu nhận biết, nếu một đường thẳng cắt hai đường thẳng tạo thành một cặp góc đồng vị bằng nhau thì hai đường thẳng đó song song: \\(a \\parallel b\\).",
+      "imgs": [
+        "hinh_dongvi_songsong.png"
+      ],
+      "answers": [
+        {
+          "text": "\\(a \\parallel b\\)",
+          "fraction": 100
+        },
+        {
+          "text": "\\(a \\perp b\\)",
+          "fraction": 0
+        },
+        {
+          "text": "\\(a\\) cắt \\(b\\)",
+          "fraction": 0
+        },
+        {
+          "text": "\\(a\\) trùng \\(b\\)",
+          "fraction": 0
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "thong_hieu",
+      "questiontext": "[img:hinh_vuonggoc_songsong.png]<br>Quan sát hình vẽ, biết đường thẳng \\(a \\perp c\\) tại \\(A\\) và \\(b \\perp c\\) tại \\(B\\). Kết luận nào sau đây đúng về quan hệ giữa \\(a\\) và \\(b\\)?",
+      "generalfeedback": "Định lý: Hai đường thẳng phân biệt cùng vuông góc với một đường thẳng thứ ba thì chúng song song với nhau: \\(a \\parallel b\\).",
+      "imgs": [
+        "hinh_vuonggoc_songsong.png"
+      ],
+      "answers": [
+        {
+          "text": "\\(a \\parallel b\\)",
+          "fraction": 100
+        },
+        {
+          "text": "\\(a \\perp b\\)",
+          "fraction": 0
+        },
+        {
+          "text": "\\(a\\) cắt \\(b\\)",
+          "fraction": 0
+        },
+        {
+          "text": "\\(a\\) trùng \\(b\\)",
+          "fraction": 0
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "[img:hinh_vuonggoc_songsong.png]<br>Vì \\(a \\parallel b\\), đường thẳng \\(d\\) cắt \\(a\\) và \\(b\\) tại \\(C\\) và \\(D\\). Biết góc \\(\\widehat{C}_1 = 110^{\\circ}\\). Số đo góc đồng vị \\(\\widehat{D}_1\\) tại đỉnh \\(D\\) là:",
+      "generalfeedback": "Vì hai đường thẳng song song nên các cặp góc đồng vị có số đo bằng nhau: \\(\\widehat{D}_1 = \\widehat{C}_1 = 110^{\\circ}\\).",
+      "imgs": [
+        "hinh_vuonggoc_songsong.png"
+      ],
+      "answers": [
+        {
+          "text": "\\(110^{\\circ}\\)",
+          "fraction": 100
+        },
+        {
+          "text": "\\(70^{\\circ}\\)",
+          "fraction": 0
+        },
+        {
+          "text": "\\(90^{\\circ}\\)",
+          "fraction": 0
+        },
+        {
+          "text": "\\(180^{\\circ}\\)",
+          "fraction": 0
+        }
+      ]
+    },
+    {
+      "type": "multichoice",
+      "level": "van_dung",
+      "questiontext": "[img:hinh_vuonggoc_songsong.png]<br>Biết \\(a \\parallel b\\) và \\(\\widehat{C}_1 = 110^{\\circ}\\). Góc trong cùng phía với \\(\\widehat{C}_1\\) tại đỉnh \\(D\\) có số đo bằng bao nhiêu?",
+      "generalfeedback": "Hai góc trong cùng phía của hai đường thẳng song song thì bù nhau (tổng bằng \\(180^{\\circ}\\)): \\(180^{\\circ} - 110^{\\circ} = 70^{\\circ}\\).",
+      "imgs": [
+        "hinh_vuonggoc_songsong.png"
+      ],
+      "answers": [
+        {
+          "text": "\\(70^{\\circ}\\)",
+          "fraction": 100
+        },
+        {
+          "text": "\\(110^{\\circ}\\)",
+          "fraction": 0
+        },
+        {
+          "text": "\\(80^{\\circ}\\)",
+          "fraction": 0
+        },
+        {
+          "text": "\\(90^{\\circ}\\)",
+          "fraction": 0
+        }
+      ]
+    }
+  ]
+}

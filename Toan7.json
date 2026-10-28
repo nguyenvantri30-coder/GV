@@ -954,7 +954,7 @@
   {
     "type": "multichoice",
     "level": "thong_hieu",
-    "questiontext": "Cho hai đường thẳng song song. Một góc đồng vị có số đo \\(45^{\\circ}\\) thì góc đồng vị còn lại trong cặp đó bằng:",
+    "questiontext": "[img:de_thi_image11.png]<br>Cho hai đường thẳng song song. Một góc đồng vị có số đo \\(45^{\\circ}\\) thì góc đồng vị còn lại trong cặp đó bằng:",
     "generalfeedback": "Hai góc đồng vị của hai đường thẳng song song thì bằng nhau.",
     "answers": [
       {
@@ -977,6 +977,9 @@
         "fraction": 0,
         "feedback": ""
       }
+    ],
+    "imgs": [
+      "de_thi_image11.png"
     ]
   },
   {
@@ -1168,7 +1171,7 @@
   {
     "type": "multichoice",
     "level": "thong_hieu",
-    "questiontext": "Cho góc \\(\\widehat{zOt} = 70^{\\circ}\\) và \\(\\widehat{xOy} = 55^{\\circ}\\) sao cho \\(Oz, Ot\\) và \\(Ox, Oy\\) tạo thành các cặp tia cắt nhau (như hình minh họa trong đề). Nếu \\(\\widehat{xOy}\\) và \\(\\widehat{zOy}\\) kề bù, số đo \\(\\widehat{zOy}\\) là:",
+    "questiontext": "Cho góc \\(\\widehat{zOt} = 70^{\\circ}\\) và \\(\\widehat{xOy} = 55^{\\circ}\\) sao cho \\(Oz, Ot\\) và \\(Ox, Oy\\) tạo thành các cặp tia cắt nhau [img:de_thi_image12.jpeg]. Nếu \\(\\widehat{xOy}\\) và \\(\\widehat{zOy}\\) kề bù, số đo \\(\\widehat{zOy}\\) là:",
     "generalfeedback": "Hai góc kề bù có tổng bằng 180 độ. \\(180 - 55 = 125^{\\circ}\\).",
     "answers": [
       {
@@ -1191,12 +1194,15 @@
         "fraction": 0,
         "feedback": ""
       }
+    ],
+    "imgs": [
+      "de_thi_image12.jpeg"
     ]
   },
   {
     "type": "multichoice",
     "level": "van_dung",
-    "questiontext": "Nếu \\(\\widehat{xOz} = 110^{\\circ}\\) và \\(Oy\\) nằm trong góc đó sao cho \\(\\widehat{xOy} = 55^{\\circ}\\), thì khẳng định nào sau đây đúng?",
+    "questiontext": "[img:de_thi_image12.jpeg]<br>Nếu \\(\\widehat{xOz} = 110^{\\circ}\\) và \\(Oy\\) nằm trong góc đó sao cho \\(\\widehat{xOy} = 55^{\\circ}\\), thì khẳng định nào sau đây đúng?",
     "generalfeedback": "Vì \\(\\widehat{xOy} = 55^{\\circ} = \frac{110^{\\circ}}{2}\\) và tia nằm trong, nên \\(Oy\\) là phân giác của \\(\\widehat{xOz}\\).",
     "answers": [
       {
@@ -1219,6 +1225,9 @@
         "fraction": 0,
         "feedback": ""
       }
+    ],
+    "imgs": [
+      "de_thi_image12.jpeg"
     ]
   },
   {
@@ -1420,7 +1429,7 @@
   {
     "type": "multichoice",
     "level": "van_dung",
-    "questiontext": "Cho tam giác ABC. Tia \\(Ay\\) là tia đối của tia \\(AB\\). Biết góc ngoài tại đỉnh A là \\(\\widehat{yAC}\\). Góc \\(\\widehat{yAC}\\) có mối quan hệ gì với \\(\\widehat{BAC}\\)?",
+    "questiontext": "[img:de_thi_image13.jpeg]<br>Cho tam giác ABC. Tia \\(Ay\\) là tia đối của tia \\(AB\\). Biết góc ngoài tại đỉnh A là \\(\\widehat{yAC}\\). Góc \\(\\widehat{yAC}\\) có mối quan hệ gì với \\(\\widehat{BAC}\\)?",
     "generalfeedback": "Hai góc tạo bởi một tia và hai tia đối nhau là hai góc kề bù, có tổng bằng 180 độ.",
     "answers": [
       {
@@ -1443,12 +1452,15 @@
         "fraction": 0,
         "feedback": ""
       }
+    ],
+    "imgs": [
+      "de_thi_image13.jpeg"
     ]
   },
   {
     "type": "multichoice",
     "level": "van_dung",
-    "questiontext": "Biết \\(\\widehat{BAC} = 80^{\\circ}\\). Số đo góc \\(\\widehat{yAC}\\) kề bù với nó là:",
+    "questiontext": "[img:de_thi_image13.jpeg]<br>Biết \\(\\widehat{BAC} = 80^{\\circ}\\). Số đo góc \\(\\widehat{yAC}\\) kề bù với nó là:",
     "generalfeedback": "\\(180^{\\circ} - 80^{\\circ} = 100^{\\circ}\\).",
     "answers": [
       {
@@ -1471,12 +1483,15 @@
         "fraction": 0,
         "feedback": ""
       }
+    ],
+    "imgs": [
+      "de_thi_image13.jpeg"
     ]
   },
   {
     "type": "multichoice",
     "level": "van_dung",
-    "questiontext": "Biết tia \\(Ax\\) là phân giác của \\(\\widehat{yAC} = 100^{\\circ}\\). Số đo góc \\(\\widehat{xAC}\\) là:",
+    "questiontext": "[img:de_thi_image13.jpeg]<br>Biết tia \\(Ax\\) là phân giác của \\(\\widehat{yAC} = 100^{\\circ}\\). Số đo góc \\(\\widehat{xAC}\\) là:",
     "generalfeedback": "Tia phân giác chia đôi góc: \\(100 : 2 = 50^{\\circ}\\).",
     "answers": [
       {
@@ -1499,12 +1514,15 @@
         "fraction": 0,
         "feedback": ""
       }
+    ],
+    "imgs": [
+      "de_thi_image13.jpeg"
     ]
   },
   {
     "type": "multichoice",
     "level": "van_dung",
-    "questiontext": "Biết \\(\\widehat{xAC} = 50^{\\circ}\\) và góc \\(\\widehat{ACB}\\) trong tam giác cũng bằng \\(50^{\\circ}\\). Nhận xét vị trí của hai góc này đối với đường thẳng \\(AC\\) cắt đường thẳng \\(Ax\\) và \\(BC\\)?",
+    "questiontext": "[img:de_thi_image13.jpeg]<br>Biết \\(\\widehat{xAC} = 50^{\\circ}\\) và góc \\(\\widehat{ACB}\\) trong tam giác cũng bằng \\(50^{\\circ}\\). Nhận xét vị trí của hai góc này đối với đường thẳng \\(AC\\) cắt đường thẳng \\(Ax\\) và \\(BC\\)?",
     "generalfeedback": "Hai góc nằm ở hai phía của đường thẳng cắt và bên trong khoảng giữa hai đường thẳng là so le trong.",
     "answers": [
       {
@@ -1527,12 +1545,15 @@
         "fraction": 0,
         "feedback": ""
       }
+    ],
+    "imgs": [
+      "de_thi_image13.jpeg"
     ]
   },
   {
     "type": "multichoice",
     "level": "van_dung",
-    "questiontext": "Từ việc hai góc so le trong \\(\\widehat{xAC}\\) và \\(\\widehat{ACB}\\) bằng nhau, ta kết luận được điều gì?",
+    "questiontext": "[img:de_thi_image13.jpeg]<br>Từ việc hai góc so le trong \\(\\widehat{xAC}\\) và \\(\\widehat{ACB}\\) bằng nhau, ta kết luận được điều gì?",
     "generalfeedback": "Theo dấu hiệu nhận biết, khi hai góc so le trong bằng nhau, hai đường thẳng song song.",
     "answers": [
       {
@@ -1555,6 +1576,9 @@
         "fraction": 0,
         "feedback": ""
       }
+    ],
+    "imgs": [
+      "de_thi_image13.jpeg"
     ]
   },
   {
@@ -2002,6 +2026,276 @@
         "text": "Chia cho -1",
         "fraction": 0,
         "feedback": ""
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "[img:hinh_songsong_bien_the_1.png]<br>Quan sát hình vẽ bên. Cho tam giác \\(MNP\\), tia \\(Mt\\) là tia đối của tia \\(MN\\). Biết góc trong \\(\\widehat{NMP} = 60^{\\circ}\\). Số đo của góc ngoài \\(\\widehat{tMP}\\) kề bù với nó là:",
+    "generalfeedback": "Hai góc kề bù có tổng số đo bằng \\(180^{\\circ}\\). Do đó: \\(\\widehat{tMP} = 180^{\\circ} - \\widehat{NMP} = 180^{\\circ} - 60^{\\circ} = 120^{\\circ}\\).",
+    "imgs": [
+      "hinh_songsong_bien_the_1.png"
+    ],
+    "answers": [
+      {
+        "text": "\\(120^{\\circ}\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(60^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(90^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(30^{\\circ}\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "[img:hinh_songsong_bien_the_1.png]<br>Tiếp tục bài toán: Biết tia \\(Mz\\) là tia phân giác của góc \\(\\widehat{tMP} = 120^{\\circ}\\). Số đo của góc \\(\\widehat{zMP}\\) là:",
+    "generalfeedback": "Tia phân giác chia góc \\(\\widehat{tMP}\\) thành hai góc bằng nhau: \\(\\widehat{zMP} = 120^{\\circ} : 2 = 60^{\\circ}\\).",
+    "imgs": [
+      "hinh_songsong_bien_the_1.png"
+    ],
+    "answers": [
+      {
+        "text": "\\(60^{\\circ}\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(120^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(30^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(45^{\\circ}\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "[img:hinh_songsong_bien_the_1.png]<br>Quan sát hình vẽ, xét vị trí của góc \\(\\widehat{zMP}\\) và góc \\(\\widehat{MPN}\\) đối với đường thẳng \\(MP\\) cắt hai đường thẳng \\(Mz\\) và \\(NP\\). Hai góc này là cặp góc:",
+    "generalfeedback": "Hai góc nằm ở hai phía của cát tuyến MP và nằm bên trong khoảng giữa hai đường thẳng Mz và NP nên là cặp góc so le trong.",
+    "imgs": [
+      "hinh_songsong_bien_the_1.png"
+    ],
+    "answers": [
+      {
+        "text": "So le trong",
+        "fraction": 100
+      },
+      {
+        "text": "Đồng vị",
+        "fraction": 0
+      },
+      {
+        "text": "Trong cùng phía",
+        "fraction": 0
+      },
+      {
+        "text": "Đối đỉnh",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "[img:hinh_songsong_bien_the_1.png]<br>Từ kết quả \\(\\widehat{zMP} = \\widehat{MPN} = 60^{\\circ}\\) (hai góc so le trong bằng nhau), theo dấu hiệu nhận biết ta kết luận được:",
+    "generalfeedback": "Nếu đường thẳng cắt hai đường thẳng và trong các góc tạo thành có một cặp góc so le trong bằng nhau thì hai đường thẳng đó song song: \\(Mz \\parallel NP\\).",
+    "imgs": [
+      "hinh_songsong_bien_the_1.png"
+    ],
+    "answers": [
+      {
+        "text": "\\(Mz \\parallel NP\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(Mz \\perp NP\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(Mz\\) cắt \\(NP\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(MN \\parallel NP\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "[img:hinh_dongvi_songsong.png]<br>Cho hình vẽ bên, đường thẳng \\(c\\) cắt hai đường thẳng \\(a\\) và \\(b\\) tại \\(A\\) và \\(B\\). Cặp góc \\(\\widehat{A}_1\\) và \\(\\widehat{B}_1\\) ở vị trí nào?",
+    "generalfeedback": "Cặp góc \\(\\widehat{A}_1\\) và \\(\\widehat{B}_1\\) nằm cùng phía đối với đường thẳng c và cùng ở phía trên so với hai đường thẳng a, b nên là cặp góc đồng vị.",
+    "imgs": [
+      "hinh_dongvi_songsong.png"
+    ],
+    "answers": [
+      {
+        "text": "Đồng vị",
+        "fraction": 100
+      },
+      {
+        "text": "So le trong",
+        "fraction": 0
+      },
+      {
+        "text": "Trong cùng phía",
+        "fraction": 0
+      },
+      {
+        "text": "Kề bù",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "[img:hinh_dongvi_songsong.png]<br>Biết \\(\\widehat{A}_1 = 70^{\\circ}\\). Số đo của góc kề bù \\(\\widehat{A}_2\\) với nó bằng:",
+    "generalfeedback": "Hai góc kề bù có tổng bằng \\(180^{\\circ}\\), nên \\(\\widehat{A}_2 = 180^{\\circ} - 70^{\\circ} = 110^{\\circ}\\).",
+    "imgs": [
+      "hinh_dongvi_songsong.png"
+    ],
+    "answers": [
+      {
+        "text": "\\(110^{\\circ}\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(70^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(90^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(140^{\\circ}\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "[img:hinh_dongvi_songsong.png]<br>Nếu \\(\\widehat{A}_1 = \\widehat{B}_1 = 70^{\\circ}\\) (cặp góc đồng vị bằng nhau), thì khẳng định nào sau đây là ĐÚNG?",
+    "generalfeedback": "Theo dấu hiệu nhận biết, nếu một đường thẳng cắt hai đường thẳng tạo thành một cặp góc đồng vị bằng nhau thì hai đường thẳng đó song song: \\(a \\parallel b\\).",
+    "imgs": [
+      "hinh_dongvi_songsong.png"
+    ],
+    "answers": [
+      {
+        "text": "\\(a \\parallel b\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(a \\perp b\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(a\\) cắt \\(b\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(a\\) trùng \\(b\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "[img:hinh_vuonggoc_songsong.png]<br>Quan sát hình vẽ, biết đường thẳng \\(a \\perp c\\) tại \\(A\\) và \\(b \\perp c\\) tại \\(B\\). Kết luận nào sau đây đúng về quan hệ giữa \\(a\\) và \\(b\\)?",
+    "generalfeedback": "Định lý: Hai đường thẳng phân biệt cùng vuông góc với một đường thẳng thứ ba thì chúng song song với nhau: \\(a \\parallel b\\).",
+    "imgs": [
+      "hinh_vuonggoc_songsong.png"
+    ],
+    "answers": [
+      {
+        "text": "\\(a \\parallel b\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(a \\perp b\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(a\\) cắt \\(b\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(a\\) trùng \\(b\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "[img:hinh_vuonggoc_songsong.png]<br>Vì \\(a \\parallel b\\), đường thẳng \\(d\\) cắt \\(a\\) và \\(b\\) tại \\(C\\) và \\(D\\). Biết góc \\(\\widehat{C}_1 = 110^{\\circ}\\). Số đo góc đồng vị \\(\\widehat{D}_1\\) tại đỉnh \\(D\\) là:",
+    "generalfeedback": "Vì hai đường thẳng song song nên các cặp góc đồng vị có số đo bằng nhau: \\(\\widehat{D}_1 = \\widehat{C}_1 = 110^{\\circ}\\).",
+    "imgs": [
+      "hinh_vuonggoc_songsong.png"
+    ],
+    "answers": [
+      {
+        "text": "\\(110^{\\circ}\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(70^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(90^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(180^{\\circ}\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "[img:hinh_vuonggoc_songsong.png]<br>Biết \\(a \\parallel b\\) và \\(\\widehat{C}_1 = 110^{\\circ}\\). Góc trong cùng phía với \\(\\widehat{C}_1\\) tại đỉnh \\(D\\) có số đo bằng bao nhiêu?",
+    "generalfeedback": "Hai góc trong cùng phía của hai đường thẳng song song thì bù nhau (tổng bằng \\(180^{\\circ}\\)): \\(180^{\\circ} - 110^{\\circ} = 70^{\\circ}\\).",
+    "imgs": [
+      "hinh_vuonggoc_songsong.png"
+    ],
+    "answers": [
+      {
+        "text": "\\(70^{\\circ}\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(110^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(80^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(90^{\\circ}\\)",
+        "fraction": 0
       }
     ]
   }

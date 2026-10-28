@@ -1114,7 +1114,7 @@
         if (keys.subKey === "Toan_hoc_Khối_6" && (keys.lessonId.includes("GK1") || keys.lessonId.includes("GKI"))) {
           totalQuestionsInBank = 60;
         } else if (keys.subKey === "Toan_hoc_Khối_7" && (keys.lessonId.includes("GK1") || keys.lessonId.includes("GKI"))) {
-          totalQuestionsInBank = 72;
+          totalQuestionsInBank = 82;
         }
       }
 
@@ -1885,7 +1885,7 @@
               throw new Error("Không thể tải bộ 60 câu hỏi ôn tập GK1 Toán 6 mới nhất từ máy chủ!");
             }
             if (subKey === "Toan_hoc_Khối_7" && (decuongKey === "GK1" || decuongKey === "GKI")) {
-              throw new Error("Không thể tải bộ 72 câu hỏi ôn tập GK1 Toán 7 mới nhất từ máy chủ!");
+              throw new Error("Không thể tải bộ 82 câu hỏi ôn tập GK1 Toán 7 mới nhất từ máy chủ!");
             }
             const lessons = catalog.subjects[subKey]?.lessons || [];
             const pickLessons = lessons.slice(0, Math.min(8, lessons.length));
@@ -2018,16 +2018,28 @@
       // Process Question Text: LaTeX Gap Fixer + Images
       let qText = fixLatexGaps(q.questiontext || "");
 
+      function resolveImgUrl(imgFile) {
+        if (!imgFile) return "";
+        if (imgFile.startsWith("http://") || imgFile.startsWith("https://") || imgFile.startsWith("data:")) {
+          return imgFile;
+        }
+        if (imgFile.startsWith("de_thi_") || imgFile.startsWith("hinh_")) {
+          const g = (studentInfo?.subKey || "").replace(/\D/g, "") || "7";
+          return `${GV_RAW}/ON%20TAP%20GK1/Toan${g}/images/${imgFile}`;
+        }
+        return `${q._imgBase || ''}${imgFile}`;
+      }
+
       // Replace [img:xxx.jpeg] tags
       qText = qText.replace(/\[img:([^\]]+)\]/g, (m, imgFile) => {
-        return `<img src="${q._imgBase}${imgFile}" class="q-img" alt="Hình SGK" onerror="this.style.display='none'" onclick="zoomImage(this.src)">`;
+        return `<img src="${resolveImgUrl(imgFile)}" class="q-img" alt="Hình minh họa" onerror="this.style.display='none'" onclick="zoomImage(this.src)">`;
       });
 
       // Also append images from imgs array if not present in text
       if (q.imgs && q.imgs.length > 0) {
         q.imgs.forEach(imgFile => {
           if (!qText.includes(imgFile)) {
-            qText += `<br><img src="${q._imgBase}${imgFile}" class="q-img" alt="Hình SGK" onerror="this.style.display='none'" onclick="zoomImage(this.src)">`;
+            qText += `<br><img src="${resolveImgUrl(imgFile)}" class="q-img" alt="Hình minh họa" onerror="this.style.display='none'" onclick="zoomImage(this.src)">`;
           }
         });
       }
