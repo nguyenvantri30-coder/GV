@@ -576,44 +576,48 @@
       <div class="start-sub">Ngân hàng Đề Tương tác GDPT 2018 (ALSM QuizBank)</div>
 
       <div class="form-group">
+        <label>Chế độ ôn tập:</label>
+        <select id="modeSelect" class="form-control" onchange="onModeChanged()">
+          <option value="LESSON">📖 Ôn tập theo từng Bài học (Tiết PPCT)</option>
+          <option value="DECUONG">📑 Đề cương Ôn tập Tổng hợp (GK1, CK1, GK2, CK2)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
         <label>Chọn Môn & Khối Lớp:</label>
         <select id="subjectSelect" class="form-control" onchange="onSubjectChanged()">
           <option value="">-- Đang nạp danh mục môn... --</option>
         </select>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" id="groupLesson">
         <label>Chọn Bài học (Tiết PPCT):</label>
         <select id="lessonSelect" class="form-control" disabled>
           <option value="">-- Vui lòng chọn môn trước --</option>
         </select>
       </div>
 
-      <div class="form-group">
-        <label>Lớp học:</label>
-        <select id="lopSelect" class="form-control">
-          <option value="">-- Chọn Lớp --</option>
-          <option value="6A1">6A1</option>
-          <option value="6A2">6A2</option>
-          <option value="6A3">6A3</option>
-          <option value="6A4">6A4</option>
-          <option value="7A1">7A1</option>
-          <option value="7A2">7A2</option>
-          <option value="7A3">7A3</option>
-          <option value="7A4">7A4</option>
-          <option value="8A1">8A1</option>
-          <option value="8A2">8A2</option>
-          <option value="8A3">8A3</option>
-          <option value="8A4">8A4</option>
-          <option value="9A1">9A1</option>
-          <option value="9A2">9A2</option>
-          <option value="9A3">9A3</option>
+      <div class="form-group" id="groupDecuong" style="display:none;">
+        <label>Chọn Đề cương ôn tập:</label>
+        <select id="decuongSelect" class="form-control">
+          <option value="GK1">Đề cương Ôn tập Giữa Kì I (GK1)</option>
+          <option value="CK1">Đề cương Ôn tập Cuối Kì I (CK1)</option>
+          <option value="GK2">Đề cương Ôn tập Giữa Kì II (GK2)</option>
+          <option value="CK2">Đề cương Ôn tập Cuối Kì II (CK2)</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label>Họ và tên học sinh (nhập đúng có dấu):</label>
+        <label>Lớp học (Dữ liệu toàn trường vnEdu):</label>
+        <select id="lopSelect" class="form-control" onchange="onClassChanged()">
+          <option value="">-- Đang nạp danh sách lớp... --</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Họ và tên học sinh (nhập đúng có dấu để kiểm tra danh sách):</label>
         <input type="text" id="hotenInput" class="form-control" placeholder="Ví dụ: Nguyễn Văn An">
+        <div id="studentValidateMsg" style="font-size:13px;margin-top:6px;font-weight:600;"></div>
       </div>
 
       <!-- CAMERA PREVIEW & PROCTORING -->
@@ -708,6 +712,10 @@
     let faceLostCount = 0;
     let multiFaceCount = 0;
 
+    let studentMaster = null;
+    let schoolClasses = [];
+    let isStudentVerified = false;
+
     /* =========================================================================
        INITIALIZATION & CATALOG LOADING
        ========================================================================= */
@@ -716,12 +724,114 @@
       const savedName = localStorage.getItem("quiz_hoten");
       const savedLop = localStorage.getItem("quiz_lop");
       if (savedName) document.getElementById("hotenInput").value = savedName;
-      if (savedLop) document.getElementById("lopSelect").value = savedLop;
 
       await initCamera();
+      await loadClassesAndStudents();
+      if (savedLop) {
+        document.getElementById("lopSelect").value = savedLop;
+        onClassChanged();
+      }
       await loadCatalog();
       await loadFaceModels();
     });
+
+    async function loadClassesAndStudents() {
+      try {
+        // 1. Tải danh sách lớp toàn trường
+        const resCls = await fetch(`${GV_RAW}/dslop.json?v=` + Date.now());
+        if (resCls.ok) {
+          schoolClasses = await resCls.json();
+          const lopSel = document.getElementById("lopSelect");
+          lopSel.innerHTML = '<option value="">-- Chọn Lớp --</option>';
+
+          // Gom duy nhất tên lớp và sắp xếp chuẩn
+          const uniqueLop = [...new Set(schoolClasses.map(c => c.TenLop))];
+          uniqueLop.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+
+          uniqueLop.forEach(l => {
+            const opt = document.createElement("option");
+            opt.value = l;
+            opt.textContent = `Lớp ${l}`;
+            lopSel.appendChild(opt);
+          });
+        }
+
+        // 2. Tải master danh sách học sinh toàn trường
+        const resStus = await fetch(`${GV_RAW}/dshs_master.json?v=` + Date.now());
+        if (resStus.ok) {
+          studentMaster = await resStus.json();
+          console.log("Đã tải xong dshs_master.json toàn trường");
+        }
+      } catch (e) {
+        console.warn("Lỗi nạp dslop/dshs:", e);
+      }
+    }
+
+    function onModeChanged() {
+      const mode = document.getElementById("modeSelect").value;
+      if (mode === "DECUONG") {
+        document.getElementById("groupLesson").style.display = "none";
+        document.getElementById("groupDecuong").style.display = "block";
+      } else {
+        document.getElementById("groupLesson").style.display = "block";
+        document.getElementById("groupDecuong").style.display = "none";
+      }
+      checkCanStart();
+    }
+
+    function onClassChanged() {
+      validateStudentName();
+      checkCanStart();
+    }
+
+    function normalizeVietnamese(str) {
+      if (!str) return "";
+      return str.toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/đ/g, "d")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function validateStudentName() {
+      const lop = document.getElementById("lopSelect").value;
+      const rawName = document.getElementById("hotenInput").value.trim();
+      const msgEl = document.getElementById("studentValidateMsg");
+      isStudentVerified = false;
+
+      if (!lop || !rawName) {
+        msgEl.textContent = "";
+        return false;
+      }
+
+      if (!studentMaster || !studentMaster[lop]) {
+        // Nếu chưa nạp được master, cho phép qua nếu tên đủ dài
+        isStudentVerified = (rawName.length >= 3);
+        msgEl.textContent = "ℹ️ Đang chạy chế độ xác thực mềm";
+        msgEl.style.color = "var(--gray-700)";
+        return isStudentVerified;
+      }
+
+      const classStudents = studentMaster[lop] || [];
+      const searchNorm = normalizeVietnamese(rawName);
+
+      const found = classStudents.find(st => {
+        return normalizeVietnamese(st.HoTen) === searchNorm;
+      });
+
+      if (found) {
+        isStudentVerified = true;
+        msgEl.textContent = `✅ Xác thực thành công: ${found.HoTen} (Mã HS: ${found.MaHs || found.HsId || 'OK'})`;
+        msgEl.style.color = "var(--success)";
+        return true;
+      } else {
+        isStudentVerified = false;
+        msgEl.textContent = `❌ Không tìm thấy tên "${rawName}" trong danh sách lớp ${lop} từ vnEdu!`;
+        msgEl.style.color = "var(--danger)";
+        return false;
+      }
+    }
 
     async function loadCatalog() {
       try {
@@ -781,19 +891,35 @@
     }
 
     // Input listeners to enable start button
-    ["subjectSelect", "lessonSelect", "lopSelect", "hotenInput"].forEach(id => {
-      document.getElementById(id).addEventListener("input", checkCanStart);
-      document.getElementById(id).addEventListener("change", checkCanStart);
+    ["subjectSelect", "lessonSelect", "decuongSelect", "lopSelect", "hotenInput"].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener("input", () => {
+          if (id === "hotenInput" || id === "lopSelect") validateStudentName();
+          checkCanStart();
+        });
+        el.addEventListener("change", () => {
+          if (id === "hotenInput" || id === "lopSelect") validateStudentName();
+          checkCanStart();
+        });
+      }
     });
 
     function checkCanStart() {
+      const mode = document.getElementById("modeSelect").value;
       const s = document.getElementById("subjectSelect").value;
       const l = document.getElementById("lessonSelect").value;
       const lop = document.getElementById("lopSelect").value;
-      const name = document.getElementById("hotenInput").value.trim();
       const btn = document.getElementById("startBtn");
 
-      if (s && l && lop && name.length >= 3 && cameraReady) {
+      let contentReady = false;
+      if (mode === "DECUONG") {
+        contentReady = (s !== "");
+      } else {
+        contentReady = (s !== "" && l !== "");
+      }
+
+      if (contentReady && lop && isStudentVerified && cameraReady) {
         btn.disabled = false;
       } else {
         btn.disabled = true;
@@ -1040,20 +1166,13 @@
        START QUIZ WORKFLOW
        ========================================================================= */
     async function startQuiz() {
+      const mode = document.getElementById("modeSelect").value;
       const subKey = document.getElementById("subjectSelect").value;
-      const filename = document.getElementById("lessonSelect").value;
       const lop = document.getElementById("lopSelect").value;
       const hoten = document.getElementById("hotenInput").value.trim();
 
-      studentInfo = {
-        hoten: hoten,
-        lop: lop,
-        mon: subKey,
-        lessonTitle: document.getElementById("lessonSelect").selectedOptions[0].text
-      };
-
-      localStorage.setItem("quiz_hoten", hoten);
-      localStorage.setItem("quiz_lop", lop);
+      let lessonTitle = "";
+      let questionsToLoad = [];
 
       // Map folder path in GitHub
       const folderMap = {
@@ -1069,28 +1188,101 @@
       };
 
       const folderPath = folderMap[subKey] || subKey.replace("_Khối_", "/Khối_");
-      const encodedFilename = encodeURIComponent(filename);
-      const url = `${GITHUB_RAW}/${folderPath}/${encodedFilename}`;
 
       document.getElementById("startBtn").textContent = "⏳ Đang tải câu hỏi...";
       document.getElementById("startBtn").disabled = true;
 
       try {
-        const res = await fetch(url);
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        const data = await res.json();
+        if (mode === "DECUONG") {
+          const decuongKey = document.getElementById("decuongSelect").value;
+          const decuongText = document.getElementById("decuongSelect").selectedOptions[0].text;
+          lessonTitle = `${decuongText} (${subKey.replace(/_/g, " ")})`;
 
-        if (!data.questions || data.questions.length === 0) {
-          alert("Bài học này chưa có câu hỏi!");
+          // 1. Thử tìm file đề cương chuyên dụng trên repo GV (ví dụ Toan6.json, Tin8.json, Toan_GKII8.json...)
+          let monShort = subKey.toLowerCase().includes("tin") ? "Tin" : "Toan";
+          let khoiShort = subKey.replace(/\D/g, "");
+          let decuongFiles = [
+            `${GV_RAW}/${monShort}_${decuongKey}${khoiShort}.json`,
+            `${GV_RAW}/${monShort}${khoiShort}.json`
+          ];
+
+          let loaded = false;
+          for (let fUrl of decuongFiles) {
+            try {
+              let rDc = await fetch(fUrl);
+              if (rDc.ok) {
+                let dcData = await rDc.json();
+                if (Array.isArray(dcData) && dcData.length > 0) {
+                  // Format adapter for decuongontap legacy format: [{q, options, answer, explain}]
+                  questionsToLoad = dcData.map(item => {
+                    if (item.questiontext) return item; // Already moodle format
+                    return {
+                      type: "multichoice",
+                      questiontext: item.q || item.question || "",
+                      generalfeedback: item.explain || "",
+                      answers: (item.options || []).map((opt, oIdx) => ({
+                        text: opt,
+                        fraction: (oIdx === item.answer) ? 100 : 0
+                      }))
+                    };
+                  });
+                  loaded = true;
+                  break;
+                }
+              }
+            } catch(e) {}
+          }
+
+          // 2. Nếu chưa có file đề cương riêng, tự động tổng hợp câu hỏi từ các bài học của môn đó
+          if (!loaded) {
+            const lessons = catalog.subjects[subKey]?.lessons || [];
+            const pickLessons = lessons.slice(0, Math.min(8, lessons.length));
+            let pool = [];
+            for (let les of pickLessons) {
+              try {
+                let rLes = await fetch(`${GITHUB_RAW}/${folderPath}/${encodeURIComponent(les.filename)}`);
+                if (rLes.ok) {
+                  let lData = await rLes.json();
+                  if (lData.questions) pool.push(...lData.questions);
+                }
+              } catch(e) {}
+            }
+            questionsToLoad = pool;
+          }
+
+        } else {
+          // MODE LESSON: Tải bài học cụ thể
+          const filename = document.getElementById("lessonSelect").value;
+          lessonTitle = document.getElementById("lessonSelect").selectedOptions[0].text;
+          const url = `${GITHUB_RAW}/${folderPath}/${encodeURIComponent(filename)}`;
+
+          const res = await fetch(url);
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          const data = await res.json();
+          questionsToLoad = data.questions || [];
+        }
+
+        if (questionsToLoad.length === 0) {
+          alert("Không tìm thấy câu hỏi cho phần ôn tập này!");
           document.getElementById("startBtn").textContent = "BẮT ĐẦU LÀM BÀI";
           document.getElementById("startBtn").disabled = false;
           return;
         }
 
-        // Process wildcards & prepare questions
-        const rawList = data.questions.map(processQuestionWildcards);
+        studentInfo = {
+          hoten: hoten,
+          lop: lop,
+          mon: subKey,
+          lessonTitle: lessonTitle
+        };
 
-        // Shuffle and limit to 20 questions if large
+        localStorage.setItem("quiz_hoten", hoten);
+        localStorage.setItem("quiz_lop", lop);
+
+        // Process wildcards & prepare questions
+        const rawList = questionsToLoad.map(processQuestionWildcards);
+
+        // Shuffle and limit to 25 questions per test
         const shuffled = rawList.sort(() => Math.random() - 0.5);
         currentQuestions = shuffled.slice(0, Math.min(25, shuffled.length));
 
