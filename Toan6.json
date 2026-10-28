@@ -1,506 +1,646 @@
-﻿[
+[
   {
-    "q": "Trong các cách viết sau, cách viết nào cho ta phân số?",
-    "options": ["$\\frac{1,5}{3}$", "$\\frac{2}{-5}$", "$\\frac{4}{0}$", "$\\frac{7}{2,4}$"],
-    "answer": 1,
-    "explain": "Phân số phải có tử và mẫu là các số nguyên, mẫu số khác 0."
-  },
-  {
-    "q": "Làm tròn số $78,4562$ đến chữ số thập phân thứ hai?",
-    "options": ["78,45", "78,46", "78,50", "78,456"],
-    "answer": 1,
-    "explain": "Chữ số hàng thập phân thứ ba là 6 > 5 nên ta cộng thêm 1 vào chữ số hàng thập phân thứ hai."
-  },
-  {
-    "q": "Kết quả của phép tính $1,2 + 0,45$ là?",
-    "options": ["1,65", "0,57", "1,47", "5,7"],
+    "q": "Cho tập hợp \\(A = \\{1; 3; 5; 7; 9\\}\\). Khẳng định nào sau đây là đúng?",
+    "options": [
+      "\\(5 \\in A\\)",
+      "\\(2 \\in A\\)",
+      "\\(3 \\notin A\\)",
+      "\\(9 \\notin A\\)"
+    ],
     "answer": 0,
-    "explain": "$1,20 + 0,45 = 1,65$."
+    "explain": "Tập hợp \\(A\\) gồm các phần tử 1, 3, 5, 7, 9. Do đó khẳng định \\(5 \\in A\\) là đúng."
   },
   {
-    "q": "Điền dấu thích hợp vào chỗ chấm: $\\frac{-3}{4} \\dots \\frac{-5}{6}$",
-    "options": [">", "<", "=", "$\\\\ge$"],
+    "q": "Tập hợp \\(M\\) các số tự nhiên nhỏ hơn 12 có thể viết dưới dạng chỉ ra tính chất đặc trưng là:",
+    "options": [
+      "\\(M = \\{x \\in \\mathbb{N} \\mid x < 12\\}\\)",
+      "\\(M = \\{x \\in \\mathbb{N} \\mid x > 12\\}\\)",
+      "\\(M = \\{x \\in \\mathbb{N} \\mid x \\le 12\\}\\)",
+      "\\(M = \\{x \\in \\mathbb{N} \\mid x \\ge 12\\}\\)"
+    ],
     "answer": 0,
-    "explain": "Quy đồng mẫu: $\\frac{-9}{12} > \\frac{-10}{12}$."
+    "explain": "Các số tự nhiên nhỏ hơn 12 được viết dưới dạng tính chất đặc trưng là \\(M = \\{x \\in \\mathbb{N} \\mid x < 12\\}\\)."
   },
   {
-    "q": "Cho hình vẽ gồm điểm $B$ nằm giữa hai điểm $A$ và $C$. Hai tia đối nhau là:",
-    "options": ["Tia $BA$ và tia $BC$", "Tia $AB$ và tia $AC$", "Tia $AC$ và tia $BC$", "Tia $BA$ và tia $CA$"],
+    "q": "Viết tích \\(7 \\cdot 7 \\cdot 7 \\cdot 7 \\cdot 7\\) dưới dạng một lũy thừa ta được:",
+    "options": [
+      "\\(7^5\\)",
+      "\\(7^4\\)",
+      "\\(7 \\cdot 5\\)",
+      "\\(5^7\\)"
+    ],
     "answer": 0,
-    "explain": "Hai tia chung gốc $B$ và tạo thành đường thẳng $AC$ là hai tia đối nhau."
+    "explain": "Tích của 5 thừa số 7 bằng \\(7^5\\)."
   },
   {
-    "q": "Một góc có số đo bằng $125^{\\circ}$ là loại góc nào?",
-    "options": ["Góc nhọn", "Góc vuông", "Góc tù", "Góc bẹt"],
-    "answer": 2,
-    "explain": "Góc tù có số đo lớn hơn $90^{\\circ}$ và nhỏ hơn $180^{\\circ}$."
-  },
-  {
-    "q": "Cho đường thẳng $d$ và điểm $M$ không nằm trên $d$. Khẳng định nào sau đây đúng?",
-    "options": ["$M \\in d$", "$M \\notin d$", "$d \\subset M$", "$M = d$"],
-    "answer": 1,
-    "explain": "Điểm không thuộc đường thẳng ký hiệu là $\\notin$."
-  },
-  {
-    "q": "Trong các số đo sau: $45^{\\circ}, 90^{\\circ}, 120^{\\circ}, 15^{\\circ}, 89^{\\circ}, 180^{\\circ}$. Có bao nhiêu góc nhọn?",
-    "options": ["2", "3", "4", "5"],
-    "answer": 1,
-    "explain": "Các góc nhọn là $45^{\\circ}, 15^{\\circ}, 89^{\\circ}$."
-  },
-  {
-    "q": "Góc nhọn là góc có số đo:",
-    "options": ["Bằng $90^{\\circ}$", "Lớn hơn $0^{\\circ}$ và nhỏ hơn $90^{\\circ}$", "Lớn hơn $90^{\\circ}$", "Bằng $180^{\\circ}$"],
-    "answer": 1,
-    "explain": "Định nghĩa góc nhọn."
-  },
-  {
-    "q": "Bảng thống kê số lượng hoa bán trong ngày: Hồng (15), Cúc (20), Lan (10), Ly (12). Loại hoa nào bán chạy nhất?",
-    "options": ["Hoa Hồng", "Hoa Cúc", "Hoa Lan", "Hoa Ly"],
-    "answer": 1,
-    "explain": "Hoa Cúc có số lượng lớn nhất (20)."
-  },
-  {
-    "q": "Trong biểu đồ tranh, nếu một biểu tượng ngôi sao tương ứng 5 học sinh. Vậy 4 ngôi sao tương ứng bao nhiêu học sinh?",
-    "options": ["9", "15", "20", "25"],
-    "answer": 2,
-    "explain": "$4 \\times 5 = 20$."
-  },
-  {
-    "q": "Tung một đồng xu 50 lần, thấy có 20 lần mặt ngửa. Xác suất thực nghiệm xuất hiện mặt ngửa là?",
-    "options": ["$\\frac{2}{5}$", "$\\frac{3}{5}$", "$\\frac{1}{2}$", "$\\frac{20}{100}$"],
+    "q": "Kết quả của phép tính \\(5^4 \\cdot 5^3\\) dưới dạng một lũy thừa là:",
+    "options": [
+      "\\(5^7\\)",
+      "\\(25^7\\)",
+      "\\(5^{12}\\)",
+      "\\(25^{12}\\)"
+    ],
     "answer": 0,
-    "explain": "Xác suất là $\\frac{20}{50} = \\frac{2}{5}$."
+    "explain": "Áp dụng quy tắc nhân hai lũy thừa cùng cơ số: \\(a^m \\cdot a^n = a^{m+n}\\). Ta có \\(5^4 \\cdot 5^3 = 5^{4+3} = 5^7\\)."
   },
   {
-    "q": "Dựa trên câu 13 của đề gốc, nếu tổng số học sinh là 50, có 10 học sinh loại Tốt. Tỷ lệ học sinh loại Tốt là bao nhiêu?",
-    "options": ["10%", "20%", "25%", "50%"],
-    "answer": 1,
-    "explain": "$\\frac{10}{50} \\times 100\\% = 20\\%$."
-  },
-  {
-    "q": "Nếu lớp có 50 học sinh, số học sinh Khá là 20, Đạt là 15, Tốt là 10. Số học sinh Chưa đạt là bao nhiêu?",
-    "options": ["5", "10", "15", "0"],
+    "q": "Kết quả của phép tính \\(3^3 - 2^3 + 5^2\\) là:",
+    "options": [
+      "44",
+      "34",
+      "15",
+      "24"
+    ],
     "answer": 0,
-    "explain": "$50 - (20 + 15 + 10) = 5$."
+    "explain": "Thực hiện phép tính lũy thừa trước: \\(3^3 = 27\\), \\(2^3 = 8\\), \\(5^2 = 25\\). Sau đó tính: \\(27 - 8 + 25 = 19 + 25 = 44\\)."
   },
   {
-    "q": "Số học sinh xếp loại từ Đạt trở lên (gồm Tốt, Khá, Đạt) của lớp trên là bao nhiêu?",
-    "options": ["35", "45", "10", "20"],
-    "answer": 1,
-    "explain": "$10 + 20 + 15 = 45$."
-  },
-  {
-    "q": "Tỷ lệ phần trăm học sinh xếp loại Chưa đạt (5 học sinh trên tổng 50) là?",
-    "options": ["5%", "10%", "15%", "20%"],
-    "answer": 1,
-    "explain": "$\\frac{5}{50} = 10\\%$."
-  },
-  {
-    "q": "Trên tia $Ox$, lấy điểm $A$ sao cho $OA = 4$ cm. Trên tia đối của tia $Ox$ lấy điểm $B$ sao cho $OB = 4$ cm. Khẳng định nào đúng?",
-    "options": ["$O$ là trung điểm $AB$", "$A$ là trung điểm $OB$", "$B$ nằm giữa $O$ và $A$", "$OA$ và $OB$ là hai tia trùng nhau"],
+    "q": "Viết số 24 bằng chữ số La Mã ta được:",
+    "options": [
+      "XXIV",
+      "XXVI",
+      "XXIIII",
+      "IXXV"
+    ],
     "answer": 0,
-    "explain": "$O$ nằm giữa $A, B$ và $OA = OB$ nên $O$ là trung điểm."
+    "explain": "Số 20 là XX, số 4 là IV. Do đó 24 viết là XXIV."
   },
   {
-    "q": "Nếu $M$ là trung điểm của đoạn thẳng $PQ = 10$ cm thì độ dài $MP$ là?",
-    "options": ["5 cm", "10 cm", "2,5 cm", "20 cm"],
+    "q": "Sắp xếp các số sau theo thứ tự tăng dần, cách sắp xếp nào sau đây là đúng? \\(7; 15; 0; -2; -25\\)",
+    "options": [
+      "\\(-25; -2; 0; 7; 15\\)",
+      "\\(15; 7; 0; -2; -25\\)",
+      "\\(0; -2; 7; 15; -25\\)",
+      "\\(-2; -25; 0; 7; 15\\)"
+    ],
     "answer": 0,
-    "explain": "$MP = PQ / 2 = 5$ cm."
+    "explain": "Số nguyên âm nhỏ hơn 0 và nhỏ hơn số nguyên dương. So sánh hai số nguyên âm ta có \\(-25 < -2\\). Thứ tự tăng dần đúng là: \\(-25; -2; 0; 7; 15\\)."
   },
   {
-    "q": "Cho ba điểm $D, E, F$ thẳng hàng. Nếu $DE + EF = DF$ thì điểm nào nằm giữa?",
-    "options": ["Điểm $D$", "Điểm $E$", "Điểm $F$", "Không có điểm nào"],
-    "answer": 1,
-    "explain": "Theo tính chất cộng đoạn thẳng."
-  },
-  {
-    "q": "Điểm $K$ thuộc đoạn thẳng $GH$. Biết $GH = 8$ cm, $GK = 3$ cm. Tính $KH$?",
-    "options": ["11 cm", "5 cm", "3 cm", "8 cm"],
-    "answer": 1,
-    "explain": "$KH = GH - GK = 8 - 3 = 5$ cm."
-  },
-  {
-    "q": "Kết quả của phép tính $0,8 + (-0,3)$ là?",
-    "options": ["1,1", "0,5", "-0,5", "-1,1"],
-    "answer": 1,
-    "explain": "$0,8 - 0,3 = 0,5$."
-  },
-  {
-    "q": "Tìm $x$ biết $x - 0,5 = 1,5$?",
-    "options": ["1,0", "2,0", "-1,0", "0,75"],
-    "answer": 1,
-    "explain": "$x = 1,5 + 0,5 = 2,0$."
-  },
-  {
-    "q": "Trong bảng thống kê sút bóng của 4 bạn, bạn A được 5 tích, mỗi tích là 2 bàn. Tổng số bàn của A là?",
-    "options": ["5", "7", "10", "2"],
-    "answer": 2,
-    "explain": "$5 \\times 2 = 10$."
-  },
-  {
-    "q": "Cho 4 tia chung gốc. Có bao nhiêu góc được tạo thành?",
-    "options": ["4", "5", "6", "8"],
-    "answer": 2,
-    "explain": "Số góc là $\\frac{4 \\times 3}{2} = 6$."
-  },
-  {
-    "q": "Trong các cách viết sau, cách viết nào cho ta phân số?",
-    "options": ["$\\frac{2,5}{4}$", "$\\frac{5}{0}$", "$\\frac{-3}{7}$", "$\\frac{8}{1,2}$"],
-    "answer": 2,
-    "explain": "Phân số có dạng $\\frac{a}{b}$ với $a, b \\in \\mathbb{Z}$ và $b \\ne 0$. Ở đây $-3$ và $7$ là số nguyên."
-  },
-  {
-    "q": "Làm tròn số $74,583$ đến chữ số thập phân thứ hai?",
-    "options": ["$74,58$", "$74,59$", "$74,60$", "$75,00$"],
+    "q": "Số nào sau đây là bội của 7?",
+    "options": [
+      "21",
+      "1",
+      "16",
+      "34"
+    ],
     "answer": 0,
-    "explain": "Chữ số sau hàng làm tròn (số 3) nhỏ hơn 5 nên ta giữ nguyên chữ số hàng làm tròn."
+    "explain": "Ta thấy \\(21 : 7 = 3\\) (chia hết) nên 21 là bội của 7."
   },
   {
-    "q": "Kết quả của phép tính $\\frac{-5}{12} + \frac{1}{12}$ là?",
-    "options": ["$\\frac{-1}{2}$", "$\\frac{-1}{3}$", "$\\frac{1}{3}$", "$\\frac{1}{2}$"],
-    "answer": 1,
-    "explain": "$\\frac{-5+1}{12} = \\frac{-4}{12} = \\frac{-1}{3}$."
-  },
-  {
-    "q": "Điền dấu thích hợp vào chỗ chấm: $\\frac{-2}{5} \\dots \\frac{-3}{5}$?",
-    "options": ["$>$", "$<$", "$=$", "$\\le$"],
+    "q": "Biết \\(x + 8 = 45\\). Giá trị của số tự nhiên \\(x\\) là:",
+    "options": [
+      "37",
+      "53",
+      "-37",
+      "-53"
+    ],
     "answer": 0,
-    "explain": "Vì $-2 > -3$ nên $\\frac{-2}{5} > \\frac{-3}{5}$."
+    "explain": "Ta có \\(x = 45 - 8 = 37\\)."
   },
   {
-    "q": "Cho điểm $O$ nằm giữa hai điểm $A$ và $B$. Hai tia nào sau đây là hai tia đối nhau?",
-    "options": ["Tia $OA$ và tia $OB$", "Tia $AB$ và tia $BA$", "Tia $AO$ và tia $AB$", "Tia $BO$ và tia $BA$"],
+    "q": "Tập hợp các ước tự nhiên của 20 là:",
+    "options": [
+      "\\(\\{1; 2; 4; 5; 10; 20\\}\\)",
+      "\\(\\{0; 2; 4; 5; 10; 20\\}\\)",
+      "\\(\\{1; 2; 4; 5; 20\\}\\)",
+      "\\(\\{1; 2; 4; 10; 20\\}\\)"
+    ],
     "answer": 0,
-    "explain": "Hai tia chung gốc và tạo thành một đường thẳng là hai tia đối nhau."
+    "explain": "Các số tự nhiên mà 20 chia hết là 1, 2, 4, 5, 10, 20. Do đó tập hợp ước là \\(\\{1; 2; 4; 5; 10; 20\\}\\)."
   },
   {
-    "q": "Nếu kim đồng hồ chỉ đúng 3 giờ thì góc tạo bởi kim giờ và kim phút có số đo là?",
-    "options": ["$45^\\circ$", "$60^\\circ$", "$90^\\circ$", "$180^\\circ$"],
-    "answer": 2,
-    "explain": "Tại thời điểm 3 giờ, hai kim vuông góc với nhau."
-  },
-  {
-    "q": "Cho điểm $M$ thuộc đường thẳng $d$. Khẳng định nào sau đây là đúng?",
-    "options": ["$M \\notin d$", "$d \\in M$", "$M \\subset d$", "$M \\in d$"],
-    "answer": 3,
-    "explain": "Điểm thuộc đường thẳng được ký hiệu bằng ký hiệu thuộc ($\\in$)."
-  },
-  {
-    "q": "Trong các góc sau, góc nào là góc nhọn?",
-    "options": ["$90^\\circ$", "$120^\\circ$", "$75^\\circ$", "$180^\\circ$"],
-    "answer": 2,
-    "explain": "Góc nhọn là góc có số đo lớn hơn $0^\\circ$ và nhỏ hơn $90^\\circ$."
-  },
-  {
-    "q": "Góc có số đo bằng $180^\\circ$ là góc gì?",
-    "options": ["Góc nhọn", "Góc vuông", "Góc tù", "Góc bẹt"],
-    "answer": 3,
-    "explain": "Góc bẹt có số đo bằng $180^\\circ$."
-  },
-  {
-    "q": "Một hộp có 5 viên bi xanh và 3 viên bi đỏ. Lấy ngẫu nhiên 1 viên bi, khả năng lấy được bi xanh là?",
-    "options": ["$\\frac{3}{8}$", "$\\frac{5}{8}$", "$\\frac{5}{3}$", "$\\frac{3}{5}$"],
-    "answer": 1,
-    "explain": "Tổng số bi là 8. Số bi xanh là 5 nên xác suất là $5/8$."
-  },
-  {
-    "q": "Nếu biểu đồ tranh sử dụng biểu tượng $\\bigcirc$ đại diện cho 5 học sinh, vậy 3 biểu tượng $\\bigcirc$ đại diện cho bao nhiêu học sinh?",
-    "options": ["10 học sinh", "15 học sinh", "20 học sinh", "25 học sinh"],
-    "answer": 1,
-    "explain": "$3 \\times 5 = 15$."
-  },
-  {
-    "q": "Dữ liệu nào sau đây là dữ liệu định lượng (số liệu)?",
-    "options": ["Họ và tên học sinh", "Nơi sinh", "Chiều cao (cm)", "Màu sắc yêu thích"],
-    "answer": 2,
-    "explain": "Chiều cao được biểu diễn bằng các con số cụ thể."
-  },
-  {
-    "q": "Lớp 6B có 40 học sinh, trong đó có 8 học sinh chưa đạt. Tỉ lệ học sinh chưa đạt là bao nhiêu?",
-    "options": ["10%", "20%", "25%", "30%"],
-    "answer": 1,
-    "explain": "$\\frac{8}{40} \\times 100\\% = 20\\%$."
-  },
-  {
-    "q": "Tiếp tục dữ liệu lớp 6B (40 học sinh), nếu có 12 học sinh đạt loại Tốt. Tỉ lệ học sinh Tốt là?",
-    "options": ["20%", "25%", "30%", "35%"],
-    "answer": 2,
-    "explain": "$\\frac{12}{40} \\times 100\\% = 30\\%$."
-  },
-  {
-    "q": "Nếu số học sinh Khá chiếm 40% lớp 6B (40 học sinh), thì số học sinh Khá là?",
-    "options": ["14 học sinh", "16 học sinh", "18 học sinh", "20 học sinh"],
-    "answer": 1,
-    "explain": "$40 \\times 40\\% = 16$."
-  },
-  {
-    "q": "Tổng số học sinh Khá và Tốt của lớp 6B (40 học sinh) là bao nhiêu nếu Tốt là 12 và Khá là 16?",
-    "options": ["24", "26", "28", "30"],
-    "answer": 2,
-    "explain": "$12 + 16 = 28$."
-  },
-  {
-    "q": "Cho đoạn thẳng $PQ = 10$ cm. Gọi $K$ là trung điểm của $PQ$. Độ dài đoạn $PK$ là?",
-    "options": ["4 cm", "5 cm", "6 cm", "10 cm"],
-    "answer": 1,
-    "explain": "Trung điểm chia đoạn thẳng thành 2 phần bằng nhau: $10 / 2 = 5$."
-  },
-  {
-    "q": "Cho tia $Mx$ và $My$ là hai tia trùng nhau. Điểm $A$ thuộc tia $Mx$ ($A$ khác $M$). Khẳng định nào đúng?",
-    "options": ["$A$ không thuộc tia $My$", "$A$ thuộc tia $My$", "$M$ nằm giữa $A$ và $x$", "$x$ là gốc của tia"],
-    "answer": 1,
-    "explain": "Hai tia trùng nhau thì mọi điểm thuộc tia này cũng thuộc tia kia."
-  },
-  {
-    "q": "Cho 3 điểm $D, E, F$ thẳng hàng theo thứ tự đó. Khẳng định nào sau đây sai?",
-    "options": ["Tia $ED$ và $EF$ đối nhau", "Tia $DE$ và $DF$ trùng nhau", "Điểm $E$ nằm giữa $D$ và $F$", "Tia $FE$ và $FD$ đối nhau"],
-    "answer": 3,
-    "explain": "$FE$ và $FD$ là hai tia trùng nhau vì chung gốc $F$ và đi qua cùng các điểm $E, D$."
-  },
-  {
-    "q": "Nếu đoạn thẳng $MN = 8$ cm và điểm $I$ nằm trên $MN$ sao cho $MI = 4$ cm. $I$ có là trung điểm của $MN$ không?",
-    "options": ["Có", "Không", "Chỉ khi $M, I, N$ không thẳng hàng", "Không đủ dữ kiện"],
+    "q": "Số đối của số nguyên 15 là:",
+    "options": [
+      "-15",
+      "15",
+      "0",
+      "\\(\\frac{1}{15}\\)"
+    ],
     "answer": 0,
-    "explain": "$MI = 4$ cm và $I$ nằm trên $MN$ nên $IN = 8 - 4 = 4$ cm. Vì $MI = IN = 4$ nên $I$ là trung điểm."
+    "explain": "Số đối của số nguyên \\(a\\) là \\(-a\\). Do đó số đối của 15 là \\(-15\\)."
   },
   {
-    "q": "Tính giá trị biểu thức: $12,5 \\times 0,4$?",
-    "options": ["4", "5", "6", "50"],
-    "answer": 1,
-    "explain": "$12,5 \\times 0,4 = 5,0$."
-  },
-  {
-    "q": "Tìm $x$ biết: $x + 2,5 = 4,1$?",
-    "options": ["1,5", "1,6", "2,6", "6,6"],
-    "answer": 1,
-    "explain": "$x = 4,1 - 2,5 = 1,6$."
-  },
-  {
-    "q": "Kết quả tung đồng xu 20 lần thấy có 12 lần xuất hiện mặt Ngửa. Xác suất thực nghiệm mặt Sấp là?",
-    "options": ["$\\frac{3}{5}$", "$\\frac{2}{5}$", "$\\frac{12}{20}$", "$\\frac{8}{12}$"],
-    "answer": 1,
-    "explain": "Số lần mặt Sấp là $20 - 12 = 8$. Xác suất là $8/20 = 2/5$."
-  },
-  {
-    "q": "Trong hình vẽ có 4 tia chung gốc. Số lượng góc tạo thành là?",
-    "options": ["4", "5", "6", "8"],
-    "answer": 2,
-    "explain": "Số góc tạo bởi $n$ tia là $\\frac{n(n-1)}{2}$. Với $n=4$, ta có $4 \\times 3 / 2 = 6$."
-  },
-  {
-    "q": "Tính nhanh: $\\frac{3}{7} \\cdot \\frac{8}{11} + \\frac{3}{7} \\cdot \\frac{3}{11}$?",
-    "options": ["$\\frac{3}{7}$", "$\\frac{11}{11}$", "$\\frac{9}{77}$", "$\\frac{6}{7}$"],
+    "q": "Kết quả của phép tính \\(6 + (-14)\\) là:",
+    "options": [
+      "-8",
+      "-20",
+      "8",
+      "20"
+    ],
     "answer": 0,
-    "explain": "$\\frac{3}{7}(\\frac{8}{11} + \\frac{3}{11}) = \\frac{3}{7} \\cdot 1 = \\frac{3}{7}$."
+    "explain": "Quy tắc cộng hai số nguyên khác dấu: \\(6 + (-14) = -(14 - 6) = -8\\)."
   },
   {
-    "q": "Giá trị của biểu thức $A = \\frac{-5}{9} + \\frac{8}{15} + \\frac{-4}{9} + \\frac{7}{15}$ là?",
-    "options": ["0", "1", "-1", "2"],
+    "q": "Cho các số: 2; 5; 15; 17; 49. Khẳng định 'Các số nguyên tố là 2; 5; 17' là đúng hay sai?",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
     "answer": 0,
-    "explain": "$(\\frac{-5}{9} + \\frac{-4}{9}) + (\\frac{8}{15} + \\frac{7}{15}) = -1 + 1 = 0$."
+    "explain": "Các số 2, 5, 17 là số nguyên tố vì chỉ có hai ước dương là 1 và chính nó. Còn 15 và 49 là hợp số. Do đó khẳng định trên là Đúng."
   },
   {
-    "q": "Tính $B = \\frac{1}{3} + \\frac{1}{6} + \\frac{1}{10} + \\dots + \\frac{1}{45}$ (tương tự bài toán dãy số quy luật)?",
-    "options": ["$\\frac{4}{5}$", "$\\frac{9}{11}$", "$\\frac{8}{10}$", "$\\frac{2}{3}$"],
+    "q": "Khẳng định 'Số 49 chia cho 4 có thương là 12 và dư 2' là đúng hay sai?",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
+    "answer": 1,
+    "explain": "Ta có \\(49 = 4 \\cdot 12 + 1\\), nên số dư phải là 1. Do đó khẳng định trên là Sai."
+  },
+  {
+    "q": "Khẳng định '\\(\\text{ƯCLN}(4, 16) = 4\\)' là đúng hay sai?",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
     "answer": 0,
-    "explain": "Đây là dạng tổng phân số quy luật $\\frac{2}{n(n+1)}$."
+    "explain": "Vì 16 chia hết cho 4 nên ước chung lớn nhất của 4 và 16 chính là 4. Khẳng định trên là Đúng."
   },
   {
-    "q": "Tìm $x$ biết $\\frac{2}{3}x - \\frac{1}{2} = \\frac{1}{6}$?",
-    "options": ["$x = 1$", "$x = \\frac{1}{2}$", "$x = 2$", "$x = \\frac{3}{2}$"],
+    "q": "Khẳng định '\\(\\text{BCNN}(16, 48) = 16\\)' là đúng hay sai?",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
+    "answer": 1,
+    "explain": "Vì 48 chia hết cho 16 nên \\(\\text{BCNN}(16, 48) = 48\\), không phải 16. Khẳng định trên là Sai."
+  },
+  {
+    "q": "Cho các số: 130; 35; 52; 29. Khẳng định 'Các số chia hết cho 5 là 130 và 35' là đúng hay sai?",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
     "answer": 0,
-    "explain": "$\\frac{2}{3}x = \\frac{1}{6} + \\frac{3}{6} = \\frac{4}{6} = \\frac{2}{3} \\implies x = 1$."
+    "explain": "Dấu hiệu chia hết cho 5 là chữ số tận cùng là 0 hoặc 5. Trong các số trên, 130 và 35 có tận cùng 0 và 5 nên chia hết cho 5. Khẳng định là Đúng."
   },
   {
-    "q": "Tìm $x$ biết $|x - 0,5| = 1,2$?",
-    "options": ["$x=1,7$", "$x=-0,7$", "$x=1,7$ hoặc $x=-0,7$", "$x=0,7$"],
-    "answer": 2,
-    "explain": "$x-0,5 = 1,2$ hoặc $x-0,5 = -1,2$."
-  },
-  {
-    "q": "Phân số nào sau đây bằng phân số $\\frac{3}{4}$?",
-    "options": ["$\\frac{6}{12}$", "$\\frac{9}{12}$", "$\\frac{12}{9}$", "$\\frac{15}{16}$"],
+    "q": "Cho hai số 130 và 52. Khẳng định 'Tổng \\(130 + 52\\) không chia hết cho 2' là đúng hay sai?",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
     "answer": 1,
-    "explain": "$\\frac{3 \\times 3}{4 \\times 3} = \\frac{9}{12}$."
+    "explain": "Vì 130 chia hết cho 2 và 52 chia hết cho 2 nên tổng của chúng chia hết cho 2. Khẳng định 'không chia hết' là Sai."
   },
   {
-    "q": "Kết quả của phép chia $\\frac{4}{5} : 2$ là?",
-    "options": ["$\\frac{8}{5}$", "$\\frac{2}{5}$", "$\\frac{4}{10}$", "$\\frac{1}{5}$"],
+    "q": "Khẳng định 'Số 52 chia hết cho 9' là đúng hay sai?",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
     "answer": 1,
-    "explain": "$\\frac{4}{5} \\times \\frac{1}{2} = \\frac{2}{5}$."
+    "explain": "Tổng các chữ số của 52 là \\(5 + 2 = 7\\) không chia hết cho 9 nên 52 không chia hết cho 9. Khẳng định trên là Sai."
   },
   {
-    "q": "Hỗn số $2\\frac{3}{4}$ viết dưới dạng phân số là?",
-    "options": ["$\\frac{9}{4}$", "$\\frac{11}{4}$", "$\\frac{6}{4}$", "$\\frac{5}{4}$"],
+    "q": "Cho hai số 35 và 27. Khẳng định 'Cả hai số 35 và 27 đều chia hết cho 3' là đúng hay sai?",
+    "options": [
+      "Đúng",
+      "Sai"
+    ],
     "answer": 1,
-    "explain": "$(2 \\times 4 + 3)/4 = 11/4$."
+    "explain": "Số 35 có tổng các chữ số là 8 không chia hết cho 3, nên 35 không chia hết cho 3. Khẳng định trên là Sai."
   },
   {
-    "q": "Tính $25\\%$ của $80$ là?",
-    "options": ["10", "20", "30", "40"],
-    "answer": 1,
-    "explain": "$80 \\times 0,25 = 20$."
-  },
-  {
-    "q": "Biết $40\\%$ của một số là 16. Số đó là?",
-    "options": ["32", "40", "64", "80"],
-    "answer": 1,
-    "explain": "$16 : 0,4 = 40$."
-  },
-  {
-    "q": "Số đối của số thập phân $-3,25$ là?",
-    "options": ["$3,25$", "$-3,25$", "$0,25$", "$3,52$"],
+    "q": "Kết quả của phép chia lũy thừa \\(4^5 : 4^4\\) là:",
+    "options": [
+      "4",
+      "1",
+      "\\(4^9\\)",
+      "16"
+    ],
     "answer": 0,
-    "explain": "Số đối của $-a$ là $a$."
+    "explain": "Áp dụng quy tắc chia hai lũy thừa cùng cơ số: \\(4^5 : 4^4 = 4^{5-4} = 4^1 = 4\\)."
   },
   {
-    "q": "Số thập phân $0,75$ được viết dưới dạng phân số tối giản là?",
-    "options": ["$\\frac{75}{100}$", "$\\frac{15}{20}$", "$\\frac{3}{4}$", "$\\frac{3}{5}$"],
-    "answer": 2,
-    "explain": "$75/100 = 3/4$."
-  },
-  {
-    "q": "Sắp xếp các số sau theo thứ tự tăng dần: $-1,2; 0,5; -2,3; 1,1$?",
-    "options": ["$-1,2; -2,3; 0,5; 1,1$", "$-2,3; -1,2; 0,5; 1,1$", "$1,1; 0,5; -1,2; -2,3$", "$0,5; 1,1; -1,2; -2,3$"],
-    "answer": 1,
-    "explain": "Số âm càng lớn thì giá trị càng nhỏ."
-  },
-  {
-    "q": "Cho đoạn thẳng $AB = 6$ cm. Điểm $C$ nằm giữa $A$ và $B$ sao cho $AC = 2$ cm. Độ dài $BC$ là?",
-    "options": ["2 cm", "3 cm", "4 cm", "8 cm"],
-    "answer": 2,
-    "explain": "$BC = AB - AC = 6 - 2 = 4$ cm."
-  },
-  {
-    "q": "Cho $\\angle xOy = 60^\\circ$ và $\\angle yOz = 30^\\circ$. Nếu tia $Oy$ nằm giữa $Ox$ và $Oz$ thì $\\angle xOz = $?",
-    "options": ["$30^\\circ$", "$60^\\circ$", "$90^\\circ$", "$120^\\circ$"],
-    "answer": 2,
-    "explain": "$\\angle xOz = \\angle xOy + \\angle yOz = 60 + 30 = 90^\\circ$."
-  },
-  {
-    "q": "Khẳng định nào đúng về hình tia?",
-    "options": ["Tia bị giới hạn ở hai đầu", "Tia có độ dài vô hạn", "Tia chỉ có một gốc và kéo dài vô tận về một phía", "Hai tia chung gốc luôn đối nhau"],
-    "answer": 2,
-    "explain": "Định nghĩa về tia trong hình học cơ bản."
-  },
-  {
-    "q": "Nếu điểm $M$ nằm giữa $A$ và $B$ thì:",
-    "options": ["$AM + MB = AB$", "$AM = MB$", "$AM + AB = MB$", "$AB + MB = AM$"],
+    "q": "Cho tập hợp \\(D\\) gồm các số tự nhiên nhỏ hơn 5. Hỏi tập hợp \\(D\\) có bao nhiêu phần tử?",
+    "options": [
+      "5 phần tử",
+      "4 phần tử",
+      "6 phần tử",
+      "3 phần tử"
+    ],
     "answer": 0,
-    "explain": "Hệ thức cộng đoạn thẳng khi có điểm nằm giữa."
+    "explain": "Các số tự nhiên nhỏ hơn 5 là: 0; 1; 2; 3; 4. Có tất cả 5 phần tử."
   },
   {
-    "q": "Góc vuông có số đo là?",
-    "options": ["$0^\\circ$", "$45^\\circ$", "$90^\\circ$", "$180^\\circ$"],
-    "answer": 2,
-    "explain": "Định nghĩa góc vuông."
-  },
-  {
-    "q": "Số đo góc tù là góc $a$ thỏa mãn?",
-    "options": ["$a < 90^\\circ$", "$a = 90^\\circ$", "$90^\\circ < a < 180^\\circ$", "$a = 180^\\circ$"],
-    "answer": 2,
-    "explain": "Định nghĩa góc tù."
-  },
-  {
-    "q": "Cho đường tròn $(O; 3cm)$. Một điểm $A$ nằm trên đường tròn thì đoạn $OA$ bằng?",
-    "options": ["1,5 cm", "3 cm", "6 cm", "Không xác định"],
-    "answer": 1,
-    "explain": "Khoảng cách từ tâm đến mọi điểm trên đường tròn bằng bán kính."
-  },
-  {
-    "q": "Trong biểu đồ cột, trục nằm ngang thường biểu diễn?",
-    "options": ["Số liệu", "Đối tượng thống kê", "Tên biểu đồ", "Đơn vị tính"],
-    "answer": 1,
-    "explain": "Trục ngang biểu diễn các danh mục hoặc đối tượng."
-  },
-  {
-    "q": "Để so sánh dân số hai tỉnh qua các năm, loại biểu đồ nào phù hợp nhất?",
-    "options": ["Biểu đồ tranh", "Biểu đồ cột đơn", "Biểu đồ cột kép", "Bảng số liệu đơn giản"],
-    "answer": 2,
-    "explain": "Biểu đồ cột kép dùng để so sánh hai nhóm đối tượng cùng tiêu chí."
-  },
-  {
-    "q": "Dữ liệu 'Xếp loại học lực: Giỏi, Khá, Trung bình' là loại dữ liệu gì?",
-    "options": ["Dữ liệu số", "Dữ liệu không là số", "Dữ liệu định lượng", "Số nguyên"],
-    "answer": 1,
-    "explain": "Đây là các nhãn tên, không phải con số tính toán được."
-  },
-  {
-    "q": "Tính xác suất thực nghiệm xuất hiện mặt ngửa khi tung đồng xu 50 lần, biết có 26 lần ngửa?",
-    "options": ["0,5", "0,52", "0,48", "0,26"],
-    "answer": 1,
-    "explain": "26 / 50 = 0,52."
-  },
-  {
-    "q": "Gieo con xúc xắc 6 mặt, sự kiện 'số chấm xuất hiện là 7' là:",
-    "options": ["Sự kiện chắc chắn", "Sự kiện không thể", "Sự kiện có thể", "Sự kiện ngẫu nhiên"],
-    "answer": 1,
-    "explain": "Xúc xắc chỉ có từ 1 đến 6 chấm."
-  },
-  {
-    "q": "Số nguyên âm lớn nhất là?",
-    "options": ["0", "-1", "Không tồn tại", "-999"],
-    "answer": 1,
-    "explain": "Trong các số nguyên âm, -1 là số gần 0 nhất về phía bên phải."
-  },
-  {
-    "q": "Kết quả của $(-5) \\times (-4)$ là?",
-    "options": ["-20", "20", "9", "-9"],
-    "answer": 1,
-    "explain": "Nhân hai số cùng dấu kết quả dương."
-  },
-  {
-    "q": "Số thập phân nào lớn nhất trong các số: $0,12; 0,102; 0,11; 0,2$?",
-    "options": ["0,12", "0,102", "0,11", "0,2"],
-    "answer": 3,
-    "explain": "So sánh phần mười: 2 là lớn nhất."
-  },
-  {
-    "q": "Phân số $\\frac{4}{5}$ viết dưới dạng số thập phân là?",
-    "options": ["0,4", "0,5", "0,8", "1,2"],
-    "answer": 2,
-    "explain": "4 : 5 = 0,8."
-  },
-  {
-    "q": "Cho góc $\\angle ABC$. Đỉnh của góc là?",
-    "options": ["Điểm A", "Điểm B", "Điểm C", "Đoạn AB"],
-    "answer": 1,
-    "explain": "Đỉnh là điểm chung của hai tia."
-  },
-  {
-    "q": "Nếu tia $Ot$ là tia phân giác của góc $\\angle xOy$ và $\\angle xOy = 80^\\circ$ thì $\\angle xOt = $?",
-    "options": ["$40^\\circ$", "$80^\\circ$", "$160^\\circ$", "$20^\\circ$"],
+    "q": "Kết quả của phép tính trừ hai số nguyên \\(-8 - 5\\) là:",
+    "options": [
+      "-13",
+      "-3",
+      "3",
+      "13"
+    ],
     "answer": 0,
-    "explain": "Tia phân giác chia góc thành 2 phần bằng nhau: $80/2 = 40$."
+    "explain": "Ta có \\(-8 - 5 = -8 + (-5) = -13\\)."
   },
   {
-    "q": "Hai tia chung gốc tạo thành một đường thẳng được gọi là:",
-    "options": ["Hai tia trùng nhau", "Hai tia đối nhau", "Hai tia song song", "Hai tia vuông góc"],
-    "answer": 1,
-    "explain": "Định nghĩa hai tia đối nhau."
+    "q": "Khối 6 có 420 học sinh đi tham quan. Nhà trường phải thuê ít nhất bao nhiêu xe ô tô 45 chỗ ngồi để chở hết số học sinh đó?",
+    "options": [
+      "10 xe",
+      "9 xe",
+      "8 xe",
+      "11 xe"
+    ],
+    "answer": 0,
+    "explain": "Ta thực hiện phép chia có dư: \\(420 : 45 = 9\\) (dư 15). Cần 9 xe chở được 405 học sinh và thêm 1 xe nữa để chở 15 học sinh còn lại. Vậy cần ít nhất 10 xe ô tô."
   },
   {
-    "q": "Muốn tìm $\\frac{m}{n}$ của số $a$, ta tính:",
-    "options": ["$a + \\frac{m}{n}$", "$a : \\frac{m}{n}$", "$a \\cdot \\frac{m}{n}$", "$a - \\frac{m}{n}$"],
-    "answer": 2,
-    "explain": "Quy tắc tìm giá trị phân số của một số cho trước."
+    "q": "Thực hiện phép tính: \\(8 + (-20) + 15\\). Kết quả là:",
+    "options": [
+      "3",
+      "43",
+      "-3",
+      "13"
+    ],
+    "answer": 0,
+    "explain": "Ta tính từ trái sang phải: \\(8 + (-20) + 15 = (-12) + 15 = 3\\)."
   },
   {
-    "q": "Số thập phân gồm 5 đơn vị và 3 phần trăm viết là?",
-    "options": ["5,3", "5,03", "53", "0,53"],
-    "answer": 1,
-    "explain": "Hàng đơn vị là 5, hàng phần mười là 0, hàng phần trăm là 3."
+    "q": "Thực hiện phép tính biểu thức có ngoặc: \\(\\{20 - [50 : (5 \\cdot 3^2 - 20) \\cdot 2]\\} + 1^{2026}\\). Kết quả là:",
+    "options": [
+      "17",
+      "16",
+      "18",
+      "15"
+    ],
+    "answer": 0,
+    "explain": "Thực hiện theo thứ tự: Trong ngoặc tròn: \\(5 \\cdot 9 - 20 = 45 - 20 = 25\\). Trong ngoặc vuông: \\(50 : 25 \\cdot 2 = 2 \\cdot 2 = 4\\). Trong ngoặc nhọn: \\(20 - 4 = 16\\). Cuối cùng: \\(16 + 1^{2026} = 16 + 1 = 17\\)."
   },
   {
-    "q": "Tỉ số phần trăm của 5 và 20 là?",
-    "options": ["20%", "25%", "40%", "50%"],
-    "answer": 1,
-    "explain": "5 / 20 = 0,25 = 25%."
+    "q": "Học sinh lớp 6B khi xếp thành hàng 3, hàng 4 đều vừa đủ hàng. Gọi \\(x\\) là số học sinh của lớp 6B. Mối quan hệ giữa \\(x\\) với 3 và 4 là gì?",
+    "options": [
+      "\\(x \\in \\text{BC}(3, 4)\\)",
+      "\\(x \\in \\text{BCNN}(3, 4)\\)",
+      "\\(x \\in \\text{ƯC}(3, 4)\\)",
+      "\\(x \\in \\text{ƯCLN}(3, 4)\\)"
+    ],
+    "answer": 0,
+    "explain": "Vì xếp hàng 3, hàng 4 đều vừa đủ nên \\(x\\) chia hết cho 3 và \\(x\\) chia hết cho 4. Do đó \\(x\\) là bội chung của 3 và 4: \\(x \\in \\text{BC}(3, 4)\\)."
   },
   {
-    "q": "Cho tập hợp dữ liệu: {Cam, Xoài, Ổi, Mận}. Đây là dữ liệu:",
-    "options": ["Định lượng", "Định tính", "Số thực", "Số nguyên"],
-    "answer": 1,
-    "explain": "Dữ liệu mô tả tính chất, chủng loại (không phải số)."
+    "q": "Biết rằng số học sinh lớp 6B thỏa mãn \\(x \\in \\text{BC}(3, 4)\\) và số học sinh nằm trong khoảng từ 30 đến 40 em. Số học sinh của lớp 6B là:",
+    "options": [
+      "36 học sinh",
+      "32 học sinh",
+      "30 học sinh",
+      "40 học sinh"
+    ],
+    "answer": 0,
+    "explain": "Ta có \\(\\text{BCNN}(3, 4) = 12\\). Tập hợp các bội chung là \\(\\text{BC}(3, 4) = \\{0; 12; 24; 36; 48; \\dots\\}\\). Trong khoảng từ 30 đến 40 chỉ có số 36 thỏa mãn."
+  },
+  {
+    "q": "Để tìm số tự nhiên \\(x\\) biết \\((x + 25) \\;\\vdots\\; (x + 10)\\), ta phân tích biểu thức \\((x + 25)\\) thành tổng xuất hiện đại lượng \\((x + 10)\\). Phép tách nào sau đây là đúng?",
+    "options": [
+      "\\(x + 25 = (x + 10) + 15\\)",
+      "\\(x + 25 = (x + 10) + 25\\)",
+      "\\(x + 25 = (x + 10) + 10\\)",
+      "\\(x + 25 = (x + 10) + 5\\)"
+    ],
+    "answer": 0,
+    "explain": "Ta tách số hạng tự do: \\(25 = 10 + 15\\), do đó \\(x + 25 = (x + 10) + 15\\)."
+  },
+  {
+    "q": "Từ phân tích \\(x + 25 = (x + 10) + 15\\), để \\((x + 25) \\;\\vdots\\; (x + 10)\\) thì \\(15 \\;\\vdots\\; (x + 10)\\). Giá trị của số tự nhiên \\(x\\) là:",
+    "options": [
+      "\\(x = 5\\)",
+      "\\(x = 15\\)",
+      "\\(x = 1\\)",
+      "\\(x = 0\\)"
+    ],
+    "answer": 0,
+    "explain": "Vì \\(15 \\;\\vdots\\; (x + 10)\\) nên \\(x + 10 \\in \\text{Ư}(15) = \\{1; 3; 5; 15\\}\\). Vì \\(x\\) là số tự nhiên nên \\(x + 10 \\ge 10\\), suy ra \\(x + 10 = 15 \\Rightarrow x = 5\\)."
+  },
+  {
+    "q": "Cho tập hợp \\(B = \\{2; 4; 6; 8; 10\\}\\). Khẳng định nào sau đây là SAI?",
+    "options": [
+      "\\(5 \\in B\\)",
+      "\\(2 \\in B\\)",
+      "\\(6 \\in B\\)",
+      "\\(7 \\notin B\\)"
+    ],
+    "answer": 0,
+    "explain": "Số 5 không nằm trong tập hợp B, nên khẳng định \\(5 \\in B\\) là khẳng định sai."
+  },
+  {
+    "q": "Viết tập hợp \\(P = \\{x \\in \\mathbb{N}^* \\mid x \\le 5\\}\\) bằng cách liệt kê các phần tử:",
+    "options": [
+      "\\(P = \\{1; 2; 3; 4; 5\\}\\)",
+      "\\(P = \\{0; 1; 2; 3; 4; 5\\}\\)",
+      "\\(P = \\{1; 2; 3; 4\\}\\)",
+      "\\(P = \\{0; 1; 2; 3; 4\\}\\)"
+    ],
+    "answer": 0,
+    "explain": "\\(\\mathbb{N}^*\\) là tập hợp các số tự nhiên khác 0. Các số nhỏ hơn hoặc bằng 5 là 1, 2, 3, 4, 5. Vậy \\(P = \\{1; 2; 3; 4; 5\\}\\)."
+  },
+  {
+    "q": "Số La Mã XIX biểu diễn số tự nhiên nào sau đây?",
+    "options": [
+      "19",
+      "21",
+      "14",
+      "29"
+    ],
+    "answer": 0,
+    "explain": "X là 10, IX là 9. Do đó XIX biểu diễn số 19."
+  },
+  {
+    "q": "Số tự nhiên 29 được viết dưới dạng số La Mã là:",
+    "options": [
+      "XXIX",
+      "XXVIIII",
+      "XIX",
+      "XXXI"
+    ],
+    "answer": 0,
+    "explain": "Số 20 là XX, số 9 là IX. Do đó 29 viết là XXIX."
+  },
+  {
+    "q": "Kết quả của phép tính nhân các lũy thừa \\(2^3 \\cdot 2^2 \\cdot 2^4\\) là:",
+    "options": [
+      "\\(2^9\\)",
+      "\\(2^{24}\\)",
+      "\\(8^9\\)",
+      "\\(2^8\\)"
+    ],
+    "answer": 0,
+    "explain": "Áp dụng công thức cộng số mũ: \\(2^{3+2+4} = 2^9\\)."
+  },
+  {
+    "q": "Giá trị của lũy thừa \\(10^4\\) bằng:",
+    "options": [
+      "10 000",
+      "1 000",
+      "40",
+      "100 000"
+    ],
+    "answer": 0,
+    "explain": "\\(10^4 = 10 \\cdot 10 \\cdot 10 \\cdot 10 = 10\\,000\\)."
+  },
+  {
+    "q": "Thứ tự thực hiện các phép tính đối với biểu thức có dấu ngoặc là:",
+    "options": [
+      "\\(( \\; ) \\rightarrow [ \\; ] \\rightarrow \\{ \\; \\}\\)",
+      "\\([ \\; ] \\rightarrow ( \\; ) \\rightarrow \\{ \\; \\}\\)",
+      "\\(\\{ \\; \\} \\rightarrow [ \\; ] \\rightarrow ( \\; )\\)",
+      "\\(( \\; ) \\rightarrow \\{ \\; \\} \\rightarrow [ \\; ]\\)"
+    ],
+    "answer": 0,
+    "explain": "Quy tắc: Ngoặc tròn ( ) thực hiện trước, sau đó đến ngoặc vuông [ ], cuối cùng là ngoặc nhọn { }."
+  },
+  {
+    "q": "Giá trị của biểu thức \\(120 - [30 - (4 - 1)^2]\\) là:",
+    "options": [
+      "99",
+      "111",
+      "81",
+      "91"
+    ],
+    "answer": 0,
+    "explain": "Tính trong ngoặc tròn: \\((4 - 1)^2 = 3^2 = 9\\). Trong ngoặc vuông: \\(30 - 9 = 21\\). Kết quả: \\(120 - 21 = 99\\)."
+  },
+  {
+    "q": "Tổng nào sau đây chia hết cho 5?",
+    "options": [
+      "\\(125 + 350 + 20\\)",
+      "\\(10 + 25 + 34\\)",
+      "\\(50 + 15 + 11\\)",
+      "\\(5 + 10 + 23\\)"
+    ],
+    "answer": 0,
+    "explain": "Vì 125, 350, 20 đều có chữ số tận cùng là 0 hoặc 5 nên mỗi số đều chia hết cho 5. Do đó tổng của chúng chia hết cho 5."
+  },
+  {
+    "q": "Biết \\(a \\;\\vdots\\; 6\\) và \\(b \\;\\vdots\\; 6\\). Khẳng định nào sau đây là chắc chắn đúng?",
+    "options": [
+      "\\((a + b) \\;\\vdots\\; 6\\)",
+      "\\((a + b) \\;\\vdots\\; 12\\)",
+      "\\((a - b) \\;\\vdots\\; 12\\)",
+      "\\((a + b) \\;\\vdots\\; 36\\)"
+    ],
+    "answer": 0,
+    "explain": "Theo tính chất chia hết của một tổng: Nếu cả hai số hạng cùng chia hết cho một số thì tổng của chúng cũng chia hết cho số đó."
+  },
+  {
+    "q": "Trong các số: 0; 1; 2; 9; 13; 27, số nào là số nguyên tố chẵn duy nhất?",
+    "options": [
+      "2",
+      "0",
+      "1",
+      "9"
+    ],
+    "answer": 0,
+    "explain": "Số 2 là số nguyên tố chẵn duy nhất trong tập hợp các số nguyên tố."
+  },
+  {
+    "q": "Phân tích số 60 ra thừa số nguyên tố ta được kết quả là:",
+    "options": [
+      "\\(2^2 \\cdot 3 \\cdot 5\\)",
+      "\\(4 \\cdot 3 \\cdot 5\\)",
+      "\\(2 \\cdot 3 \\cdot 10\\)",
+      "\\(2^3 \\cdot 3 \\cdot 5\\)"
+    ],
+    "answer": 0,
+    "explain": "Ta có: \\(60 = 4 \\cdot 15 = 2^2 \\cdot 3 \\cdot 5\\)."
+  },
+  {
+    "q": "Ước chung lớn nhất của 18 và 24 là:",
+    "options": [
+      "6",
+      "12",
+      "3",
+      "72"
+    ],
+    "answer": 0,
+    "explain": "Phân tích: \\(18 = 2 \\cdot 3^2\\); \\(24 = 2^3 \\cdot 3\\). Do đó \\(\\text{ƯCLN}(18, 24) = 2 \\cdot 3 = 6\\)."
+  },
+  {
+    "q": "Bội chung nhỏ nhất của 12 và 18 là:",
+    "options": [
+      "36",
+      "72",
+      "6",
+      "18"
+    ],
+    "answer": 0,
+    "explain": "Phân tích: \\(12 = 2^2 \\cdot 3\\); \\(18 = 2 \\cdot 3^2\\). Do đó \\(\\text{BCNN}(12, 18) = 2^2 \\cdot 3^2 = 4 \\cdot 9 = 36\\)."
+  },
+  {
+    "q": "Hai bạn An và Bình cùng trực nhật vào một ngày. An cứ 6 ngày trực nhật một lần, Bình cứ 8 ngày trực nhật một lần. Hỏi ít nhất sau bao nhiêu ngày thì hai bạn lại cùng trực nhật vào một ngày?",
+    "options": [
+      "24 ngày",
+      "48 ngày",
+      "14 ngày",
+      "16 ngày"
+    ],
+    "answer": 0,
+    "explain": "Số ngày để hai bạn lại cùng trực nhật là bội chung nhỏ nhất của 6 và 8. Ta có \\(\\text{BCNN}(6, 8) = 24\\). Vậy sau ít nhất 24 ngày."
+  },
+  {
+    "q": "Một đội y tế gồm 24 bác sĩ và 108 y tá. Đội có thể chia thành nhiều nhất bao nhiêu tổ để số bác sĩ và y tá ở mỗi tổ là bằng nhau?",
+    "options": [
+      "12 tổ",
+      "6 tổ",
+      "24 tổ",
+      "4 tổ"
+    ],
+    "answer": 0,
+    "explain": "Số tổ nhiều nhất có thể chia là ước chung lớn nhất của 24 và 108. Ta có \\(\\text{ƯCLN}(24, 108) = 12\\). Vậy chia được nhiều nhất 12 tổ."
+  },
+  {
+    "q": "Số đối của các số \\(-7; 0; 12\\) lần lượt là:",
+    "options": [
+      "\\(7; 0; -12\\)",
+      "\\(-7; 0; 12\\)",
+      "\\(7; 0; 12\\)",
+      "\\(-7; 0; -12\\)"
+    ],
+    "answer": 0,
+    "explain": "Số đối của \\(-7\\) là 7; số đối của 0 là 0; số đối của 12 là \\(-12\\)."
+  },
+  {
+    "q": "Khẳng định nào sau đây là đúng về mối quan hệ giữa các số nguyên?",
+    "options": [
+      "\\(-15 < -8 < 0 < 3\\)",
+      "\\(-8 < -15 < 0 < 3\\)",
+      "\\(0 < -8 < -15 < 3\\)",
+      "\\(-15 < 0 < -8 < 3\\)"
+    ],
+    "answer": 0,
+    "explain": "Ta có: \\(-15 < -8 < 0 < 3\\) là khẳng định hoàn toàn chính xác."
+  },
+  {
+    "q": "Nhiệt độ buổi sáng ở Sa Pa là \\(-2^\\circ\\text{C}\\), đến trưa nhiệt độ tăng thêm \\(5^\\circ\\text{C}\\). Hỏi nhiệt độ buổi trưa ở Sa Pa là bao nhiêu?",
+    "options": [
+      "\\(3^\\circ\\text{C}\\)",
+      "\\(-7^\\circ\\text{C}\\)",
+      "\\(7^\\circ\\text{C}\\)",
+      "\\(-3^\\circ\\text{C}\\)"
+    ],
+    "answer": 0,
+    "explain": "Nhiệt độ buổi trưa là: \\(-2 + 5 = 3^\\circ\\text{C}\\)."
+  },
+  {
+    "q": "Kết quả của phép nhân hai số nguyên âm \\((-4) \\cdot (-25)\\) là:",
+    "options": [
+      "100",
+      "-100",
+      "-29",
+      "29"
+    ],
+    "answer": 0,
+    "explain": "Quy tắc: Nhân hai số nguyên cùng dấu cho kết quả là số nguyên dương: \\((-4) \\cdot (-25) = 100\\)."
+  },
+  {
+    "q": "Trong một tam giác đều, khẳng định nào sau đây là đúng?",
+    "options": [
+      "Ba cạnh bằng nhau và ba góc bằng nhau",
+      "Chỉ có hai cạnh bằng nhau",
+      "Ba cạnh có độ dài khác nhau",
+      "Có một góc vuông"
+    ],
+    "answer": 0,
+    "explain": "Tam giác đều là tam giác có ba cạnh bằng nhau và ba góc bằng nhau (mỗi góc bằng \\(60^\\circ\\))."
+  },
+  {
+    "q": "Một hình vuông có độ dài cạnh bằng \\(6\\text{ cm}\\). Chu vi và diện tích của hình vuông đó lần lượt là:",
+    "options": [
+      "\\(24\\text{ cm}\\) và \\(36\\text{ cm}^2\\)",
+      "\\(36\\text{ cm}\\) và \\(24\\text{ cm}^2\\)",
+      "\\(12\\text{ cm}\\) và \\(36\\text{ cm}^2\\)",
+      "\\(24\\text{ cm}\\) và \\(24\\text{ cm}^2\\)"
+    ],
+    "answer": 0,
+    "explain": "Chu vi hình vuông: \\(C = 4 \\cdot 6 = 24\\text{ cm}\\). Diện tích hình vuông: \\(S = 6^2 = 36\\text{ cm}^2\\)."
+  },
+  {
+    "q": "Hình lục giác đều có bao nhiêu đường chéo chính nối các đỉnh đối diện?",
+    "options": [
+      "3 đường chéo chính",
+      "6 đường chéo chính",
+      "4 đường chéo chính",
+      "2 đường chéo chính"
+    ],
+    "answer": 0,
+    "explain": "Hình lục giác đều có đúng 3 đường chéo chính cắt nhau tại trung điểm của mỗi đường."
+  },
+  {
+    "q": "Một hình thoi có độ dài hai đường chéo là \\(8\\text{ cm}\\) và \\(10\\text{ cm}\\). Diện tích của hình thoi đó là:",
+    "options": [
+      "\\(40\\text{ cm}^2\\)",
+      "\\(80\\text{ cm}^2\\)",
+      "\\(36\\text{ cm}^2\\)",
+      "\\(20\\text{ cm}^2\\)"
+    ],
+    "answer": 0,
+    "explain": "Diện tích hình thoi bằng nửa tích hai đường chéo: \\(S = \\frac{1}{2} \\cdot 8 \\cdot 10 = 40\\text{ cm}^2\\)."
+  },
+  {
+    "q": "Một mảnh vườn hình chữ nhật có chiều dài \\(15\\text{ m}\\) và chiều rộng \\(8\\text{ m}\\). Chu vi của mảnh vườn đó là:",
+    "options": [
+      "\\(46\\text{ m}\\)",
+      "\\(120\\text{ m}\\)",
+      "\\(23\\text{ m}\\)",
+      "\\(92\\text{ m}\\)"
+    ],
+    "answer": 0,
+    "explain": "Chu vi hình chữ nhật bằng: \\((15 + 8) \\cdot 2 = 23 \\cdot 2 = 46\\text{ m}\\)."
+  },
+  {
+    "q": "Một hình bình hành có độ dài một cạnh đáy là \\(12\\text{ cm}\\) và chiều cao tương ứng là \\(7\\text{ cm}\\). Diện tích của hình bình hành đó là:",
+    "options": [
+      "\\(84\\text{ cm}^2\\)",
+      "\\(42\\text{ cm}^2\\)",
+      "\\(38\\text{ cm}^2\\)",
+      "\\(19\\text{ cm}^2\\)"
+    ],
+    "answer": 0,
+    "explain": "Diện tích hình bình hành bằng cạnh đáy nhân chiều cao: \\(S = 12 \\cdot 7 = 84\\text{ cm}^2\\)."
+  },
+  {
+    "q": "Trong một hình thang cân, khẳng định nào sau đây là SAI?",
+    "options": [
+      "Hai cạnh đáy bằng nhau",
+      "Hai cạnh bên bằng nhau",
+      "Hai đường chéo bằng nhau",
+      "Hai góc kề một đáy bằng nhau"
+    ],
+    "answer": 0,
+    "explain": "Hình thang cân có hai cạnh bên bằng nhau, hai đường chéo bằng nhau, hai góc kề một đáy bằng nhau. Hai cạnh đáy song song nhưng có độ dài khác nhau (không bằng nhau)."
+  },
+  {
+    "q": "Tìm số tự nhiên \\(x\\) biết: \\(3 \\cdot (x - 4) = 27\\). Giá trị của \\(x\\) là:",
+    "options": [
+      "\\(x = 13\\)",
+      "\\(x = 5\\)",
+      "\\(x = 7\\)",
+      "\\(x = 9\\)"
+    ],
+    "answer": 0,
+    "explain": "Ta có: \\(x - 4 = 27 : 3 \\Rightarrow x - 4 = 9 \\Rightarrow x = 9 + 4 = 13\\)."
+  },
+  {
+    "q": "Tìm số tự nhiên \\(x\\) biết: \\(2^x = 32\\). Giá trị của \\(x\\) là:",
+    "options": [
+      "\\(x = 5\\)",
+      "\\(x = 4\\)",
+      "\\(x = 6\\)",
+      "\\(x = 16\\)"
+    ],
+    "answer": 0,
+    "explain": "Ta viết số 32 dưới dạng lũy thừa cơ số 2: \\(32 = 2^5\\). Do đó \\(2^x = 2^5 \\Rightarrow x = 5\\)."
+  },
+  {
+    "q": "Tìm số tự nhiên \\(n\\) để biểu thức \\((n + 7)\\) chia hết cho \\((n + 2)\\).",
+    "options": [
+      "\\(n = 3\\)",
+      "\\(n = 5\\)",
+      "\\(n = 2\\)",
+      "\\(n = 7\\)"
+    ],
+    "answer": 0,
+    "explain": "Ta tách \\(n + 7 = (n + 2) + 5\\). Để \\((n + 7) \\;\\vdots\\; (n + 2)\\) thì \\(5 \\;\\vdots\\; (n + 2)\\). Vì \\(n\\) là số tự nhiên nên \\(n + 2 \\in \\text{Ư}(5) = \\{1; 5\\}\\). Do \\(n + 2 \\ge 2\\) nên \\(n + 2 = 5 \\Rightarrow n = 3\\)."
   }
 ]

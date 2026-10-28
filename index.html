@@ -1844,9 +1844,10 @@
               let rDc = await fetch(`${GV_RAW}/${targetFile}?v=` + Date.now());
               if (rDc.ok) {
                 let dcData = await rDc.json();
-                if (Array.isArray(dcData) && dcData.length > 0) {
-                  // Format adapter for decuongontap legacy format: [{q, options, answer, explain}]
-                  questionsToLoad = dcData.map(item => {
+                let rawList = Array.isArray(dcData) ? dcData : (dcData && Array.isArray(dcData.questions) ? dcData.questions : []);
+                if (rawList.length > 0) {
+                  // Format adapter for decuongontap legacy format: [{q, options, answer, explain}] or moodle JSON
+                  questionsToLoad = rawList.map(item => {
                     if (item.questiontext) return item; // Already moodle format
                     return {
                       type: "multichoice",
