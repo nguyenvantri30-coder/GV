@@ -1,0 +1,58 @@
+﻿[
+  {
+    "LopId": "5005478904",
+    "TenLop": "6A11",
+    "Khoi": "6",
+    "MonId": "1",
+    "TenMon": "Toán"
+  },
+  {
+    "LopId": "5005478984",
+    "TenLop": "7A10",
+    "Khoi": "7",
+    "MonId": "1",
+    "TenMon": "Toán"
+  },
+  {
+    "LopId": "5005478964",
+    "TenLop": "7A9",
+    "Khoi": "7",
+    "MonId": "1",
+    "TenMon": "Toán"
+  },
+  {
+    "LopId": "5005479404",
+    "TenLop": "8A10",
+    "Khoi": "8",
+    "MonId": "11",
+    "TenMon": "Tin"
+  },
+  {
+    "LopId": "5005479404",
+    "TenLop": "8A10",
+    "Khoi": "8",
+    "MonId": "1",
+    "TenMon": "Toán"
+  },
+  {
+    "LopId": "5005479284",
+    "TenLop": "8A7",
+    "Khoi": "8",
+    "MonId": "11",
+    "TenMon": "Tin"
+  },
+  {
+    "LopId": "5005479364",
+    "TenLop": "8A8",
+    "Khoi": "8",
+    "MonId": "11",
+    "TenMon": "Tin"
+  },
+  {
+    "LopId": "5005479384",
+    "TenLop": "8A9",
+    "Khoi": "8",
+    "MonId": "11",
+    "TenMon": "Tin"
+  }
+]
