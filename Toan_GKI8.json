@@ -1,0 +1,1458 @@
+[
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Khai triển \\((2x - y)^3\\), ta được:",
+    "generalfeedback": "Áp dụng hằng đẳng thức lập phương của một hiệu: \\((A - B)^3 = A^3 - 3A^2B + 3AB^2 - B^3\\).<br>Ta có: \\((2x - y)^3 = (2x)^3 - 3(2x)^2y + 3(2x)y^2 - y^3 = 8x^3 - 12x^2y + 6xy^2 - y^3\\).",
+    "answers": [
+      {
+        "text": "\\(8x^3 - 12x^2y + 6xy^2 - y^3\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(8x^3 - 6x^2y + 12xy^2 - y^3\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(8x^3 + 12x^2y + 6xy^2 - y^3\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(8x^3 + 12x^2y - 6xy^2 - y^3\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Đơn thức nào đồng dạng với \\(7a^2b^3\\)?",
+    "generalfeedback": "Hai đơn thức đồng dạng là hai đơn thức có hệ số khác 0 và có cùng phần biến. Đơn thức \\(7a^2b^3\\) có phần biến là \\(a^2b^3\\), nên đồng dạng với \\(5a^2b^3\\).",
+    "answers": [
+      {
+        "text": "\\(5a^2b^3\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(-4a^3b^2\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(7ab^3\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(2a^2b^2\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Hệ số của đơn thức \\(-12x^3y^2\\) là:",
+    "generalfeedback": "Trong đơn thức thu gọn \\(-12x^3y^2\\), phần hệ số là \\(-12\\) và phần biến là \\(x^3y^2\\).",
+    "answers": [
+      {
+        "text": "\\(-12\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(12\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(-12x^3\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(12y^2\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Tổng số đo các góc trong của một tứ giác là:",
+    "generalfeedback": "Định lí: Tổng các góc của một tứ giác bằng \\(360^{\\circ}\\).",
+    "answers": [
+      {
+        "text": "\\(360^{\\circ}\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(180^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(90^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(270^{\\circ}\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Biểu thức \\(49a^2 - 70ab + 25b^2\\) bằng:",
+    "generalfeedback": "Ta có: \\(49a^2 - 70ab + 25b^2 = (7a)^2 - 2 \\cdot (7a) \\cdot (5b) + (5b)^2 = (7a - 5b)^2\\).",
+    "answers": [
+      {
+        "text": "\\((7a - 5b)^2\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\((7a + 5b)^2\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((49a - 25b)^2\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((7a - 25b)^2\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Giá trị của \\(P = -x^3y^2\\) tại \\(x = -2, y = 3\\) là:",
+    "generalfeedback": "Thay \\(x = -2\\) và \\(y = 3\\) vào biểu thức: \\(P = -(-2)^3 \\cdot 3^2 = -(-8) \\cdot 9 = 8 \\cdot 9 = 72\\).",
+    "answers": [
+      {
+        "text": "\\(72\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(-72\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(36\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(-36\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Đẳng thức nào sau đây đúng?",
+    "generalfeedback": "Công thức lập phương của một hiệu: \\((a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3\\).",
+    "answers": [
+      {
+        "text": "\\((a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\((a - b)^3 = a^3 + 3a^2b + 3ab^2 - b^3\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((a + b)^3 = a^3 - b^3\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((a + b)^3 = a^3 + 3ab^2 + b^3\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Biểu thức \\(16x^2 - 24xy + 9y^2\\) được viết dưới dạng bình phương của một hiệu là:",
+    "generalfeedback": "Ta có: \\(16x^2 - 24xy + 9y^2 = (4x)^2 - 2 \\cdot (4x) \\cdot (3y) + (3y)^2 = (4x - 3y)^2\\).",
+    "answers": [
+      {
+        "text": "\\((4x - 3y)^2\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\((4x + 3y)^2\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((8x - 3y)^2\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((4x - 9y)^2\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Giá trị của \\(A = x^2 - 2xy + y^2\\) tại \\(x = 4, y = 1\\) là:",
+    "generalfeedback": "Thu gọn \\(A = (x - y)^2\\). Thay \\(x = 4, y = 1\\) ta được \\(A = (4 - 1)^2 = 3^2 = 9\\).",
+    "answers": [
+      {
+        "text": "\\(9\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(25\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(15\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(7\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Khai triển biểu thức \\((2x - y)^3\\) ta được kết quả là:",
+    "generalfeedback": "\\((2x - y)^3 = (2x)^3 - 3(2x)^2y + 3(2x)y^2 - y^3 = 8x^3 - 12x^2y + 6xy^2 - y^3\\).",
+    "answers": [
+      {
+        "text": "\\(8x^3 - 12x^2y + 6xy^2 - y^3\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(8x^3 - 6x^2y + 12xy^2 - y^3\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(8x^3 + 12x^2y + 6xy^2 - y^3\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(8x^3 + 12x^2y - 6xy^2 - y^3\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Giá trị của \\(M = -2x^2y^3z\\) tại \\(x = 1, y = -2, z = 3\\) là:",
+    "generalfeedback": "Thay \\(x = 1, y = -2, z = 3\\): \\(M = -2 \\cdot (1)^2 \\cdot (-2)^3 \\cdot 3 = -2 \\cdot 1 \\cdot (-8) \\cdot 3 = 48\\).",
+    "answers": [
+      {
+        "text": "\\(48\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(-48\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(96\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(-96\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Một tứ giác có bao nhiêu đường chéo?",
+    "generalfeedback": "Một tứ giác lồi luôn có đúng 2 đường chéo nối các cặp đỉnh đối diện.",
+    "answers": [
+      {
+        "text": "\\(2\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(1\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(3\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(4\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Biểu thức nào sau đây là đơn thức thu gọn?",
+    "generalfeedback": "Đơn thức thu gọn là đơn thức chỉ gồm tích của một số với các biến mà mỗi biến chỉ được viết một lần dưới dạng nâng lên lũy thừa với số mũ nguyên dương. Vậy \\(-4x^3y^3\\) là đơn thức thu gọn.",
+    "answers": [
+      {
+        "text": "\\(-4x^3y^3\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(3x + 2y\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(x^2(y + 1)\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(2a - b\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Bậc của đa thức \\(P = 3x^2y + 5xy^2 - 2x^3y^2\\) là:",
+    "generalfeedback": "Bậc của từng hạng tử: \\(3x^2y\\) có bậc 3; \\(5xy^2\\) có bậc 3; \\(-2x^3y^2\\) có bậc \\(3 + 2 = 5\\). Bậc của đa thức là bậc của hạng tử có bậc cao nhất, tức là 5.",
+    "answers": [
+      {
+        "text": "\\(5\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(3\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(4\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(6\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Trong các biểu thức sau, biểu thức nào là đơn thức?",
+    "generalfeedback": "Đơn thức là biểu thức đại số chỉ gồm một số, hoặc một biến, hoặc một tích giữa các số và các biến. Vậy \\(5x^2y\\) là đơn thức.",
+    "answers": [
+      {
+        "text": "\\(5x^2y\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(2x + 3y\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(x(y + 1)\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(x^2 - y^2\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Khẳng định nào sau đây SAI?",
+    "generalfeedback": "Khẳng định \\((a + b)^3 = a^3 + b^3\\) là sai vì đúng phải là: \\((a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3\\).",
+    "answers": [
+      {
+        "text": "\\((a + b)^3 = a^3 + b^3\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\((a + b)^2 = a^2 + 2ab + b^2\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((a - b)^2 = a^2 - 2ab + b^2\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(a^2 - b^2 = (a - b)(a + b)\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Trong các khẳng định sau, khẳng định nào SAI?",
+    "generalfeedback": "Khẳng định 'Tổng các góc trong của tứ giác bằng 180°' là sai vì tổng các góc trong của tứ giác bằng 360°.",
+    "answers": [
+      {
+        "text": "Tổng các góc trong của tứ giác bằng \\(180^{\\circ}\\)",
+        "fraction": 100
+      },
+      {
+        "text": "Tứ giác có bốn cạnh",
+        "fraction": 0
+      },
+      {
+        "text": "Tứ giác có bốn đỉnh",
+        "fraction": 0
+      },
+      {
+        "text": "Tứ giác có hai đường chéo",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Một tứ giác có ba góc bằng \\(80^{\\circ}, 100^{\\circ}, 90^{\\circ}\\). Góc còn lại bằng:",
+    "generalfeedback": "Tổng bốn góc của tứ giác là \\(360^{\\circ}\\). Do đó góc còn lại là: \\(360^{\\circ} - (80^{\\circ} + 100^{\\circ} + 90^{\\circ}) = 360^{\\circ} - 270^{\\circ} = 90^{\\circ}\\).",
+    "answers": [
+      {
+        "text": "\\(90^{\\circ}\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(70^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(80^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(100^{\\circ}\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Biểu thức nào sau đây là đơn thức thu gọn?",
+    "generalfeedback": "Đơn thức thu gọn là \\(-4x^3y^3\\). Các biểu thức khác là đa thức hoặc tích chứa phép cộng.",
+    "answers": [
+      {
+        "text": "\\(-4x^3y^3\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(3x + 2y\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(x^2(y + 1)\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(2a - b\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Tứ giác \\(ABCD\\) có hai đường chéo là:",
+    "generalfeedback": "Trong tứ giác \\(ABCD\\), hai đường chéo nối các cặp đỉnh đối diện là \\(AC\\) và \\(BD\\).",
+    "answers": [
+      {
+        "text": "\\(AC\\) và \\(BD\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(AB\\) và \\(CD\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(AD\\) và \\(BC\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(AC\\) và \\(CD\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Cho đa thức \\(Q = 3x^2y - 5xy + 7\\).<br>Xét khẳng định sau:<br><b>a) Đa thức \\(Q\\) là đa thức thu gọn.</b>",
+    "generalfeedback": "Đúng, vì trong đa thức \\(Q\\) không có hai hạng tử nào đồng dạng.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100
+      },
+      {
+        "text": "Sai",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Cho đa thức \\(Q = 3x^2y - 5xy + 7\\).<br>Xét khẳng định sau:<br><b>b) Bậc của đa thức \\(Q\\) bằng 3.</b>",
+    "generalfeedback": "Đúng, hạng tử \\(3x^2y\\) có bậc \\(2 + 1 = 3\\) là bậc cao nhất trong đa thức.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100
+      },
+      {
+        "text": "Sai",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Cho đa thức \\(Q = 3x^2y - 5xy + 7\\).<br>Xét khẳng định sau:<br><b>c) Hệ số của hạng tử có bậc cao nhất là 3.</b>",
+    "generalfeedback": "Đúng, hạng tử có bậc cao nhất là \\(3x^2y\\) và có hệ số là 3.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100
+      },
+      {
+        "text": "Sai",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "thong_hieu",
+    "questiontext": "Cho đa thức \\(Q = 3x^2y - 5xy + 7\\).<br>Xét khẳng định sau:<br><b>d) Giá trị của \\(Q\\) tại \\(x = 0, y = 2\\) bằng 7.</b>",
+    "generalfeedback": "Đúng, thay \\(x = 0, y = 2\\) vào \\(Q\\): \\(Q = 3(0)^2(2) - 5(0)(2) + 7 = 0 - 0 + 7 = 7\\).",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100
+      },
+      {
+        "text": "Sai",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Cho hai đa thức \\(P = 2x^2y - 3xy + x^2 - 1\\) và \\(Q = -2x^2y + xy + 3\\).<br>Xét khẳng định sau:<br><b>a) Đa thức \\(P\\) có bậc là 3.</b>",
+    "generalfeedback": "Đúng, hạng tử \\(2x^2y\\) có bậc \\(2 + 1 = 3\\) là bậc cao nhất của đa thức \\(P\\).",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100
+      },
+      {
+        "text": "Sai",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "thong_hieu",
+    "questiontext": "Cho hai đa thức \\(P = 2x^2y - 3xy + x^2 - 1\\) và \\(Q = -2x^2y + xy + 3\\).<br>Xét khẳng định sau:<br><b>b) \\(P + Q = x^2 - 2xy + 2\\).</b>",
+    "generalfeedback": "Đúng, \\(P + Q = (2x^2y - 2x^2y) + (-3xy + xy) + x^2 + (-1 + 3) = x^2 - 2xy + 2\\).",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100
+      },
+      {
+        "text": "Sai",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "thong_hieu",
+    "questiontext": "Cho hai đa thức \\(P = 2x^2y - 3xy + x^2 - 1\\) và \\(Q = -2x^2y + xy + 3\\).<br>Xét khẳng định sau:<br><b>c) Giá trị của \\(P + Q\\) tại \\(x = 1, y = -1\\) bằng 1.</b>",
+    "generalfeedback": "Sai, thay \\(x = 1, y = -1\\) vào \\(P + Q\\): \\(1^2 - 2(1)(-1) + 2 = 1 + 2 + 2 = 5 \\neq 1\\).",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 0
+      },
+      {
+        "text": "Sai",
+        "fraction": 100
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "van_dung",
+    "questiontext": "Cho hai đa thức \\(P = 2x^2y - 3xy + x^2 - 1\\) và \\(Q = -2x^2y + xy + 3\\).<br>Xét khẳng định sau:<br><b>d) \\(P + Q \\ge 2\\) với mọi giá trị của \\(x, y\\).</b>",
+    "generalfeedback": "Sai, ví dụ khi \\(x = 1, y = 2\\) thì \\(P + Q = 1^2 - 2(1)(2) + 2 = 1 - 4 + 2 = -1 < 2\\).",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 0
+      },
+      {
+        "text": "Sai",
+        "fraction": 100
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "Cho biểu thức \\(B = (2x - 1)^3\\).<br>Xét khẳng định sau:<br><b>a) Biểu thức \\(B\\) có dạng lập phương của một hiệu.</b>",
+    "generalfeedback": "Đúng, biểu thức có dạng \\((A - B)^3\\) với \\(A = 2x\\) và \\(B = 1\\).",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100
+      },
+      {
+        "text": "Sai",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "thong_hieu",
+    "questiontext": "Cho biểu thức \\(B = (2x - 1)^3\\).<br>Xét khẳng định sau:<br><b>b) Khai triển \\(B\\) ta được \\(B = 8x^3 - 12x^2 + 6x - 1\\).</b>",
+    "generalfeedback": "Đúng, \\((2x - 1)^3 = (2x)^3 - 3(2x)^2(1) + 3(2x)(1)^2 - 1^3 = 8x^3 - 12x^2 + 6x - 1\\).",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100
+      },
+      {
+        "text": "Sai",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "thong_hieu",
+    "questiontext": "Cho biểu thức \\(B = (2x - 1)^3\\).<br>Xét khẳng định sau:<br><b>c) Với \\(x = 1\\), biểu thức \\(B\\) nhận giá trị bằng 1.</b>",
+    "generalfeedback": "Đúng, với \\(x = 1\\) thì \\(B = (2 \\cdot 1 - 1)^3 = 1^3 = 1\\).",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100
+      },
+      {
+        "text": "Sai",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "thong_hieu",
+    "questiontext": "Cho biểu thức \\(B = (2x - 1)^3\\).<br>Xét khẳng định sau:<br><b>d) Để \\(B\\) nhận giá trị bằng 0 thì \\(x = \\frac12\\).</b>",
+    "generalfeedback": "Đúng, \\((2x - 1)^3 = 0 \\Leftrightarrow 2x - 1 = 0 \\Leftrightarrow x = \\frac{1}{2}\\).",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100
+      },
+      {
+        "text": "Sai",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "thong_hieu",
+    "questiontext": "[img:hinh_toan8_bai4_hinhthang.png]<br>Cho hình thang \\(MNPQ\\) (\\(MN // PQ\\)), có \\(MP = NQ\\). Qua \\(N\\) kẻ đường thẳng song song với \\(MP\\), cắt đường thẳng \\(PQ\\) tại \\(K\\).<br>Xét khẳng định sau:<br><b>a) \\(\\Delta NKQ\\) là tam giác đều.</b>",
+    "imgs": [
+      "hinh_toan8_bai4_hinhthang.png"
+    ],
+    "generalfeedback": "Sai, vì \\(NK // MP\\) và \\(MN // PK\\) nên \\(MNKP\\) là hình bình hành \\(\\Rightarrow NK = MP\\). Mà \\(MP = NQ\\) nên \\(NK = NQ\\), do đó \\(\\Delta NKQ\\) là tam giác cân tại \\(N\\), chưa đủ điều kiện để là tam giác đều.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 0
+      },
+      {
+        "text": "Sai",
+        "fraction": 100
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "thong_hieu",
+    "questiontext": "[img:hinh_toan8_bai4_hinhthang.png]<br>Cho hình thang \\(MNPQ\\) (\\(MN // PQ\\)), có \\(MP = NQ\\). Qua \\(N\\) kẻ đường thẳng song song với \\(MP\\), cắt đường thẳng \\(PQ\\) tại \\(K\\).<br>Xét khẳng định sau:<br><b>b) \\(\\Delta MPQ = \\Delta NQP\\).</b>",
+    "imgs": [
+      "hinh_toan8_bai4_hinhthang.png"
+    ],
+    "generalfeedback": "Đúng, hình thang \\(MNPQ\\) có hai đường chéo bằng nhau \\(MP = NQ\\) nên là hình thang cân \\(\\Rightarrow MQ = NP\\). Hai tam giác \\(\\Delta MPQ\\) và \\(\\Delta NQP\\) có: \\(MQ = NP\\), \\(MP = NQ\\), cạnh \\(PQ\\) chung nên \\(\\Delta MPQ = \\Delta NQP\\) (c-c-c).",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100
+      },
+      {
+        "text": "Sai",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "nhan_biet",
+    "questiontext": "[img:hinh_toan8_bai4_hinhthang.png]<br>Cho hình thang \\(MNPQ\\) (\\(MN // PQ\\)), có \\(MP = NQ\\). Qua \\(N\\) kẻ đường thẳng song song với \\(MP\\), cắt đường thẳng \\(PQ\\) tại \\(K\\).<br>Xét khẳng định sau:<br><b>c) \\(MNPQ\\) là hình thang cân.</b>",
+    "imgs": [
+      "hinh_toan8_bai4_hinhthang.png"
+    ],
+    "generalfeedback": "Đúng, hình thang có hai đường chéo bằng nhau là hình thang cân.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 100
+      },
+      {
+        "text": "Sai",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "truefalse",
+    "level": "thong_hieu",
+    "questiontext": "[img:hinh_toan8_bai4_hinhthang.png]<br>Cho hình thang \\(MNPQ\\) (\\(MN // PQ\\)), có \\(MP = NQ\\). Qua \\(N\\) kẻ đường thẳng song song với \\(MP\\), cắt đường thẳng \\(PQ\\) tại \\(K\\).<br>Xét khẳng định sau:<br><b>d) \\(MNKP\\) là hình thang cân.</b>",
+    "imgs": [
+      "hinh_toan8_bai4_hinhthang.png"
+    ],
+    "generalfeedback": "Sai, vì \\(MN // PK\\) và \\(NK // MP\\) nên tứ giác \\(MNKP\\) có các cạnh đối song song, đây là hình bình hành, không phải hình thang cân.",
+    "answers": [
+      {
+        "text": "Đúng",
+        "fraction": 0
+      },
+      {
+        "text": "Sai",
+        "fraction": 100
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Tìm tổng của hai đơn thức \\(4x^2y^3\\) và \\(7x^2y^3\\).",
+    "generalfeedback": "Cộng hai đơn thức đồng dạng: \\(4x^2y^3 + 7x^2y^3 = (4 + 7)x^2y^3 = 11x^2y^3\\).",
+    "answers": [
+      {
+        "text": "\\(11x^2y^3\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(11x^4y^6\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(28x^2y^3\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(3x^2y^3\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Tứ giác \\(MNPQ\\) có \\(\\widehat{M} = 80^{\\circ}\\), \\(\\widehat{N} = 110^{\\circ}\\), \\(\\widehat{P} = 75^{\\circ}\\). Số đo của \\(\\widehat{Q}\\) là:",
+    "generalfeedback": "Tổng các góc trong tứ giác bằng \\(360^{\\circ}\\):<br>\\(\\widehat{Q} = 360^{\\circ} - (80^{\\circ} + 110^{\\circ} + 75^{\\circ}) = 360^{\\circ} - 265^{\\circ} = 95^{\\circ}\\).",
+    "answers": [
+      {
+        "text": "\\(95^{\\circ}\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(85^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(105^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(115^{\\circ}\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Hệ số của đơn thức \\(-15x^3y^2\\) là:",
+    "generalfeedback": "Hệ số của đơn thức \\(-15x^3y^2\\) là phần số đứng trước phần biến, tức là \\(-15\\).",
+    "answers": [
+      {
+        "text": "\\(-15\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(15\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(-15x^3\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(5\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "Tìm \\(m\\) để biểu thức \\(x^3 + 9x^2 + 27x + m\\) là lập phương của một tổng.",
+    "generalfeedback": "Ta so sánh với hằng đẳng thức \\((x + a)^3 = x^3 + 3ax^2 + 3a^2x + a^3\\):<br>Ta có \\(3a = 9 \\Rightarrow a = 3\\). Khi đó \\(3a^2 = 3 \\cdot 3^2 = 27\\) (khớp hệ số của \\(x\\)), và \\(m = a^3 = 3^3 = 27\\).",
+    "answers": [
+      {
+        "text": "\\(m = 27\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(m = 9\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(m = 3\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(m = 81\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Tính giá trị của biểu thức \\(A = x^3 - 3x^2 + 3x - 1\\) tại \\(x = 4\\).",
+    "generalfeedback": "Thu gọn theo hằng đẳng thức: \\(A = (x - 1)^3\\). Thay \\(x = 4\\): \\(A = (4 - 1)^3 = 3^3 = 27\\).",
+    "answers": [
+      {
+        "text": "\\(27\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(9\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(64\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(125\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Phân tích đa thức \\(x^2 - 16\\) thành nhân tử ta được:",
+    "generalfeedback": "Áp dụng hằng đẳng thức hiệu hai bình phương: \\(x^2 - 16 = x^2 - 4^2 = (x - 4)(x + 4)\\).",
+    "answers": [
+      {
+        "text": "\\((x - 4)(x + 4)\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\((x - 4)^2\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((x + 4)^2\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((x - 16)(x + 16)\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Bậc của đa thức \\(P = 4x^3y^3 - 2xy + 7\\) là:",
+    "generalfeedback": "Hạng tử \\(4x^3y^3\\) có bậc \\(3 + 3 = 6\\), \\(-2xy\\) có bậc 2, \\(7\\) có bậc 0. Bậc cao nhất là 6.",
+    "answers": [
+      {
+        "text": "\\(6\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(3\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(5\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(7\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Hình thang cân có một góc ở đáy bằng \\(68^{\\circ}\\). Tính số đo của góc kề với góc đó nằm trên cùng một cạnh bên.",
+    "generalfeedback": "Trong hình thang, hai đáy song song với nhau nên hai góc kề cùng một cạnh bên là hai góc trong cùng phía, có tổng số đo bằng \\(180^{\\circ}\\).<br>Do đó góc kề nằm trên cùng cạnh bên là: \\(180^{\\circ} - 68^{\\circ} = 112^{\\circ}\\).",
+    "answers": [
+      {
+        "text": "\\(112^{\\circ}\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(68^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(22^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(124^{\\circ}\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Khai triển \\((x - 2)^3\\), hệ số của hạng tử chứa \\(x^2\\) là:",
+    "generalfeedback": "\\((x - 2)^3 = x^3 - 3 \\cdot x^2 \\cdot 2 + 3 \\cdot x \\cdot 2^2 - 2^3 = x^3 - 6x^2 + 12x - 8\\).<br>Hệ số của hạng tử chứa \\(x^2\\) là \\(-6\\).",
+    "answers": [
+      {
+        "text": "\\(-6\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(6\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(-2\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(-12\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Tính giá trị của \\(2022^2 - 198^2\\) bằng cách áp dụng hằng đẳng thức:",
+    "generalfeedback": "Áp dụng hiệu hai bình phương: \\(2022^2 - 198^2 = (2022 - 198)(2022 + 198) = 1824 \\cdot 2220 = 4\\,049\\,280\\).",
+    "answers": [
+      {
+        "text": "\\(4\\,049\\,280\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(4\\,000\\,000\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(3\\,840\\,000\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(4\\,240\\,000\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Tìm \\(x\\) biết: \\(x^2 - 25 = 0\\).",
+    "generalfeedback": "Ta có: \\(x^2 - 25 = 0 \\Leftrightarrow (x - 5)(x + 5) = 0 \\Leftrightarrow x = 5\\) hoặc \\(x = -5\\).",
+    "answers": [
+      {
+        "text": "\\(x = 5\\) hoặc \\(x = -5\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(x = 5\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(x = -5\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(x = 25\\) hoặc \\(x = -25\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Cho hai đa thức \\(A = 3x^2y + 2xy - 5x + 3\\) và \\(B = 2x^2y - 5xy + 6y - 7\\). Kết quả của phép tính \\(A + B\\) là:",
+    "generalfeedback": "\\(A + B = (3x^2y + 2x^2y) + (2xy - 5xy) - 5x + 6y + (3 - 7) = 5x^2y - 3xy - 5x + 6y - 4\\).",
+    "answers": [
+      {
+        "text": "\\(5x^2y - 3xy - 5x + 6y - 4\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(5x^2y + 7xy - 5x + 6y - 4\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(x^2y - 3xy - 5x - 6y + 10\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(5x^2y - 3xy + 5x + 6y - 4\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Cho hai đa thức \\(A = 3x^2y + 2xy - 5x + 3\\) và \\(B = 2x^2y - 5xy + 6y - 7\\). Kết quả của phép tính \\(A - B\\) là:",
+    "generalfeedback": "\\(A - B = (3x^2y - 2x^2y) + [2xy - (-5xy)] - 5x - 6y + [3 - (-7)] = x^2y + 7xy - 5x - 6y + 10\\).",
+    "answers": [
+      {
+        "text": "\\(x^2y + 7xy - 5x - 6y + 10\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(x^2y - 3xy - 5x + 6y - 4\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(5x^2y + 7xy - 5x - 6y + 10\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(x^2y + 7xy + 5x - 6y + 10\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Tìm đơn thức \\(M\\), biết rằng \\(-\\frac{1}{3}x^2y^2 : M = 7xy^2\\).",
+    "generalfeedback": "\\(M = \\left(-\\frac{1}{3}x^2y^2\\right) : (7xy^2) = \\left(-\\frac{1}{3} : 7\\right) \\cdot (x^2 : x) \\cdot (y^2 : y^2) = -\\frac{1}{21}x\\).",
+    "answers": [
+      {
+        "text": "\\(M = -\\frac{1}{21}x\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(M = -\\frac{7}{3}x\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(M = -\\frac{1}{21}xy\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(M = \\frac{1}{21}x\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Tìm đơn thức \\(N\\) sao cho \\(N : 0{,}5xy^2z = -xy\\).",
+    "generalfeedback": "\\(N = (-xy) \\cdot (0{,}5xy^2z) = -0{,}5x^2y^3z\\).",
+    "answers": [
+      {
+        "text": "\\(N = -0{,}5x^2y^3z\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(N = -2x^2y^3z\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(N = 0{,}5x^2y^3z\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(N = -0{,}5xy^3z\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Thực hiện phép chia: \\((7y^5z^2 - 14y^4z^3 + 2{,}1y^3z^4) : (-7y^3z^2)\\).",
+    "generalfeedback": "Chia từng hạng tử của đa thức cho đơn thức:<br>\\(= \\frac{7y^5z^2}{-7y^3z^2} + \\frac{-14y^4z^3}{-7y^3z^2} + \\frac{2{,}1y^3z^4}{-7y^3z^2} = -y^2 + 2yz - 0{,}3z^2\\).",
+    "answers": [
+      {
+        "text": "\\(-y^2 + 2yz - 0{,}3z^2\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(-y^2 - 2yz - 0{,}3z^2\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(y^2 - 2yz + 0{,}3z^2\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(-y^2 + 2yz + 0{,}3z^2\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Phân tích đa thức \\(x^2 - 9x\\) thành nhân tử:",
+    "generalfeedback": "Đặt nhân tử chung \\(x\\): \\(x^2 - 9x = x(x - 9)\\).",
+    "answers": [
+      {
+        "text": "\\(x(x - 9)\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\((x - 3)(x + 3)\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(x(x + 9)\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((x - 9)^2\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Phân tích đa thức \\(x^2 + 6x + 9 - y^2\\) thành nhân tử:",
+    "generalfeedback": "Nhóm ba hạng tử đầu thành bình phương của một tổng rồi dùng hiệu hai bình phương:<br>\\((x^2 + 6x + 9) - y^2 = (x + 3)^2 - y^2 = (x + 3 - y)(x + 3 + y)\\).",
+    "answers": [
+      {
+        "text": "\\((x + 3 - y)(x + 3 + y)\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\((x - 3 - y)(x - 3 + y)\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((x + y + 3)(x + y - 3)\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((x + 3)^2 - y^2\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Phân tích đa thức \\(8x^3 - 27\\) thành nhân tử:",
+    "generalfeedback": "Áp dụng hằng đẳng thức hiệu hai lập phương \\(A^3 - B^3 = (A - B)(A^2 + AB + B^2)\\):<br>\\((2x)^3 - 3^3 = (2x - 3)[(2x)^2 + (2x)(3) + 3^2] = (2x - 3)(4x^2 + 6x + 9)\\).",
+    "answers": [
+      {
+        "text": "\\((2x - 3)(4x^2 + 6x + 9)\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\((2x - 3)(4x^2 - 6x + 9)\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((2x + 3)(4x^2 - 6x + 9)\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((2x - 3)^3\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "nhan_biet",
+    "questiontext": "Phân tích đa thức \\(3x^2 + 12x\\) thành nhân tử:",
+    "generalfeedback": "Đặt nhân tử chung là \\(3x\\): \\(3x^2 + 12x = 3x(x + 4)\\).",
+    "answers": [
+      {
+        "text": "\\(3x(x + 4)\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(3x(x + 12)\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(3(x^2 + 4x)\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(x(3x + 4)\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Phân tích đa thức \\(25x^2 - 10xy + y^2\\) thành nhân tử:",
+    "generalfeedback": "Áp dụng hằng đẳng thức bình phương của một hiệu:<br>\\(25x^2 - 10xy + y^2 = (5x)^2 - 2 \\cdot (5x) \\cdot y + y^2 = (5x - y)^2\\).",
+    "answers": [
+      {
+        "text": "\\((5x - y)^2\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\((5x + y)^2\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((25x - y)^2\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((5x - y)(5x + y)\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "Phân tích đa thức \\(x^3 + 8 + (x + 2)(x - 1)\\) thành nhân tử:",
+    "generalfeedback": "Phân tích \\(x^3 + 8 = x^3 + 2^3 = (x + 2)(x^2 - 2x + 4)\\).<br>Khi đó biểu thức trở thành:<br>\\((x + 2)(x^2 - 2x + 4) + (x + 2)(x - 1) = (x + 2)[(x^2 - 2x + 4) + (x - 1)] = (x + 2)(x^2 - x + 3)\\).",
+    "answers": [
+      {
+        "text": "\\((x + 2)(x^2 - x + 3)\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\((x + 2)(x^2 - 3x + 3)\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((x + 2)(x^2 + x + 3)\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\((x + 2)(x^2 - x + 5)\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "Rút gọn biểu thức \\((x + 3)^2 - (x - 3)^2\\):",
+    "generalfeedback": "Áp dụng hiệu hai bình phương:<br>\\([(x + 3) - (x - 3)][(x + 3) + (x - 3)] = (x + 3 - x + 3)(x + 3 + x - 3) = 6 \\cdot 2x = 12x\\).",
+    "answers": [
+      {
+        "text": "\\(12x\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(2x^2 + 18\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(6x\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(0\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "Rút gọn biểu thức \\((2x - 1)^3 - (2x - 1)(4x^2 - 4x + 1)\\):",
+    "generalfeedback": "Nhận xét: \\(4x^2 - 4x + 1 = (2x - 1)^2\\).<br>Do đó \\((2x - 1)(4x^2 - 4x + 1) = (2x - 1)(2x - 1)^2 = (2x - 1)^3\\).<br>Vậy biểu thức bằng \\((2x - 1)^3 - (2x - 1)^3 = 0\\).",
+    "answers": [
+      {
+        "text": "\\(0\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(2(2x - 1)^3\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(8x^3 - 1\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(4x^2 - 1\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "Rút gọn biểu thức \\(x^3 + 3x^2 + 3x + 1 - (x + 1)^2\\):",
+    "generalfeedback": "Ta có: \\(x^3 + 3x^2 + 3x + 1 = (x + 1)^3\\).<br>Do đó biểu thức bằng: \\((x + 1)^3 - (x + 1)^2 = (x + 1)^2[(x + 1) - 1] = x(x + 1)^2\\).",
+    "answers": [
+      {
+        "text": "\\(x(x + 1)^2\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\((x + 1)^3\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(x^2(x + 1)\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(x^3 + 2x^2 - x\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "van_dung",
+    "questiontext": "[img:hinh_toan8_bai6_goc30.png]<br>Cho hình thang cân \\(ABCD\\) (\\(AB // CD\\)) có \\(AB = AD\\). Biết góc \\(\\widehat{ABD} = 30^{\\circ}\\), số đo các góc của hình thang đó là:",
+    "imgs": [
+      "hinh_toan8_bai6_goc30.png"
+    ],
+    "generalfeedback": "Vì \\(AB = AD\\) nên \\(\\Delta ABD\\) cân tại \\(A \\Rightarrow \\widehat{ADB} = \\widehat{ABD} = 30^{\\circ}\\).<br>Góc \\(\\widehat{A} = 180^{\\circ} - (30^{\\circ} + 30^{\\circ}) = 120^{\\circ}\\).<br>Vì \\(ABCD\\) là hình thang cân (\\(AB // CD\\)) nên hai góc kề đáy \\(AB\\) bằng nhau: \\(\\widehat{B} = \\widehat{A} = 120^{\\circ}\\).<br>Hai góc ở đáy \\(CD\\) bù với hai góc ở đáy \\(AB\\): \\(\\widehat{C} = \\widehat{D} = 180^{\\circ} - 120^{\\circ} = 60^{\\circ}\\).",
+    "answers": [
+      {
+        "text": "\\(\\widehat{A} = \\widehat{B} = 120^{\\circ}; \\; \\widehat{C} = \\widehat{D} = 60^{\\circ}\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(\\widehat{A} = \\widehat{B} = 110^{\\circ}; \\; \\widehat{C} = \\widehat{D} = 70^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(\\widehat{A} = \\widehat{D} = 120^{\\circ}; \\; \\widehat{B} = \\widehat{C} = 60^{\\circ}\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(\\widehat{A} = \\widehat{B} = 130^{\\circ}; \\; \\widehat{C} = \\widehat{D} = 50^{\\circ}\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "[img:hinh_toan8_bai7_hinhthangcan.png]<br>Cho hình thang \\(ABCD\\) (\\(AB // CD\\)) có \\(\\widehat{ACD} = \\widehat{BDC}\\). Khẳng định nào sau đây là đúng nhất?",
+    "imgs": [
+      "hinh_toan8_bai7_hinhthangcan.png"
+    ],
+    "generalfeedback": "Gọi \\(O\\) là giao điểm của \\(AC\\) và \\(BD\\). Vì \\(\\widehat{ACD} = \\widehat{BDC}\\) nên \\(\\Delta OCD\\) cân tại \\(O \\Rightarrow OC = OD\\).<br>Do \\(AB // CD\\) nên \\(\\widehat{OAB} = \\widehat{OCD}\\) và \\(\\widehat{OBA} = \\widehat{ODC}\\) (so le trong) \\(\\Rightarrow \\widehat{OAB} = \\widehat{OBA} \\Rightarrow \\Delta OAB\\) cân tại \\(O \\Rightarrow OA = OB\\).<br>Do đó \\(AC = OA + OC = OB + OD = BD\\).<br>Hình thang có hai đường chéo bằng nhau là hình thang cân.",
+    "answers": [
+      {
+        "text": "\\(ABCD\\) là hình thang cân vì có hai đường chéo bằng nhau \\(AC = BD\\)",
+        "fraction": 100
+      },
+      {
+        "text": "\\(ABCD\\) là hình bình hành",
+        "fraction": 0
+      },
+      {
+        "text": "\\(ABCD\\) là hình thang vuông",
+        "fraction": 0
+      },
+      {
+        "text": "\\(ABCD\\) chỉ là hình thang thường, không phải hình thang cân",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "[img:hinh_toan8_bai8_tamgiac.png]<br>Cho tam giác \\(MNP\\) cân tại \\(M\\). Lấy điểm \\(E \\in MN\\) (\\(E \\neq N\\)), điểm \\(F \\in MP\\) (\\(F \\neq P\\)) sao cho \\(\\widehat{MEF} = \\widehat{MNP}\\). Vị trí tương đối giữa \\(EF\\) và \\(NP\\) là:",
+    "imgs": [
+      "hinh_toan8_bai8_tamgiac.png"
+    ],
+    "generalfeedback": "Vì \\(\\widehat{MEF} = \\widehat{MNP}\\) mà hai góc này ở vị trí đồng vị, do đó \\(EF // NP\\).",
+    "answers": [
+      {
+        "text": "\\(EF // NP\\) vì có hai góc đồng vị bằng nhau",
+        "fraction": 100
+      },
+      {
+        "text": "\\(EF\\) cắt \\(NP\\) tại trung điểm của \\(NP\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(EF \\perp NP\\)",
+        "fraction": 0
+      },
+      {
+        "text": "\\(EF\\) không song song với \\(NP\\)",
+        "fraction": 0
+      }
+    ]
+  },
+  {
+    "type": "multichoice",
+    "level": "thong_hieu",
+    "questiontext": "[img:hinh_toan8_bai8_tamgiac.png]<br>Trong giả thiết của Bài 8 (\\(\\Delta MNP\\) cân tại \\(M\\), \\(E \\in MN, F \\in MP\\), \\(EF // NP\\)), tứ giác \\(NEFP\\) là hình gì?",
+    "imgs": [
+      "hinh_toan8_bai8_tamgiac.png"
+    ],
+    "generalfeedback": "Vì \\(EF // NP\\) nên tứ giác \\(NEFP\\) là hình thang.<br>Mặt khác tam giác \\(MNP\\) cân tại \\(M\\) nên hai góc kề đáy \\(\\widehat{N} = \\widehat{P}\\).<br>Hình thang có hai góc kề một đáy bằng nhau là hình thang cân. Vậy \\(NEFP\\) là hình thang cân.",
+    "answers": [
+      {
+        "text": "\\(NEFP\\) là hình thang cân",
+        "fraction": 100
+      },
+      {
+        "text": "\\(NEFP\\) là hình bình hành",
+        "fraction": 0
+      },
+      {
+        "text": "\\(NEFP\\) là hình chữ nhật",
+        "fraction": 0
+      },
+      {
+        "text": "\\(NEFP\\) là hình thang vuông",
+        "fraction": 0
+      }
+    ]
+  }
+]

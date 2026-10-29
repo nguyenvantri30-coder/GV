@@ -1984,7 +1984,7 @@
 
           // 1. Danh sách các file đề cương ôn tập thực tế có trên repo GV (tránh gọi URL không tồn tại sinh lỗi 404)
           const KNOWN_DECUONG_FILES = [
-            "Toan_GKI6.json", "Toan6.json", "Toan_GKI7.json", "Toan7.json", "Toan8.json", "Toan_GKII8.json",
+            "Toan_GKI6.json", "Toan6.json", "Toan_GKI7.json", "Toan7.json", "Toan_GKI8.json", "Toan8.json", "Toan_GKII8.json",
             "Tin_GKI8.json", "Tin8.json", "Tin6.json", "Tin7.json", "Tin_GKII6.json", "Tin_GKII7.json"
           ];
 
@@ -1998,6 +1998,8 @@
             targetFile = "Toan_GKI6.json";
           } else if (subKey === "Toan_hoc_Khối_7" && (decuongKey === "GK1" || decuongKey === "GKI")) {
             targetFile = "Toan_GKI7.json";
+          } else if (subKey === "Toan_hoc_Khối_8" && (decuongKey === "GK1" || decuongKey === "GKI")) {
+            targetFile = "Toan_GKI8.json";
           } else if (subKey === "Tin_hoc_Khối_8" && (decuongKey === "GK1" || decuongKey === "GKI")) {
             targetFile = "Tin_GKI8.json";
           } else {
