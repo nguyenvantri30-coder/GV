@@ -946,6 +946,7 @@
     let studentMaster = null;
     let schoolClasses = [];
     let isStudentVerified = false;
+    let isAdminMode = false;
     let cachedRawQuestions = [];
     let cachedFolderPath = "";
 
@@ -1283,7 +1284,7 @@
     }
 
     function triggerRegenViolation(reason) {
-      if (isSubmitted) return;
+      if (isSubmitted || isAdminMode) return;
       alert(`🚨 VI PHẠM QUY CHẾ THI!\n\nLý do: ${reason}\n\nToàn bộ kết quả bài đang làm đã bị HỦY BỎ. Hệ thống tự động xáo trộn và SINH BỘ ĐỀ MỚI TINH! Vui lòng bắt đầu làm lại từ đầu.`);
 
       // Reset các bộ đếm vi phạm
@@ -1456,8 +1457,33 @@
       const rawName = document.getElementById("hotenInput").value.trim();
       const msgEl = document.getElementById("studentValidateMsg");
       isStudentVerified = false;
+      isAdminMode = false;
 
-      if (!lop || !rawName) {
+      if (!rawName) {
+        msgEl.textContent = "";
+        return false;
+      }
+
+      // ĐẶC QUYỀN GIÁO VIÊN / ADMIN TEST: Cho phép Nguyễn Văn Trị hoặc Admin vào làm bất kì bài nào
+      const normName = normalizeVietnamese(rawName);
+      if (normName === "nguyen van tri" || normName === "admin" || normName === "nguyenvantri" || normName === "gv" || normName === "giao vien") {
+        isStudentVerified = true;
+        isAdminMode = true;
+        currentStudentData = { HoTen: rawName, MaHs: "ADMIN_TEST", Lop: lop || "GV_TEST" };
+        msgEl.innerHTML = "👑 <b>Chế độ Giáo viên / Admin Test:</b> Đã mở khóa quyền làm bài kiểm tra cho mọi môn và khối lớp!";
+        msgEl.style.color = "#7c3aed";
+
+        const card = document.getElementById("siblingChallengeCard");
+        if (card) card.style.display = "none";
+        siblingChallengePending = false;
+        siblingChallengeResolved = true;
+        siblingStatusTag = "ADMIN_TEST";
+
+        checkCanStart();
+        return true;
+      }
+
+      if (!lop) {
         msgEl.textContent = "";
         return false;
       }
@@ -1637,6 +1663,14 @@
         contentReady = (s !== "");
       } else {
         contentReady = (s !== "" && l !== "");
+      }
+
+      // Đặc quyền Giáo viên / Admin Test: Chỉ cần chọn môn/bài là được bấm Bắt đầu ngay
+      if (isAdminMode) {
+        if (contentReady) {
+          btn.disabled = false;
+          return;
+        }
       }
 
       const siblingOk = (!siblingChallengePending || siblingChallengeResolved);
@@ -1914,8 +1948,12 @@
     async function startQuiz() {
       const mode = document.getElementById("modeSelect").value;
       const subKey = document.getElementById("subjectSelect").value;
-      const lop = document.getElementById("lopSelect").value;
+      let lop = document.getElementById("lopSelect").value;
       const hoten = document.getElementById("hotenInput").value.trim();
+
+      if (isAdminMode && !lop) {
+        lop = "GV_TEST";
+      }
 
       let lessonTitle = "";
       let questionsToLoad = [];
@@ -2063,7 +2101,7 @@
 
         studentInfo = {
           hoten: hoten,
-          lop: lop,
+          lop: lop || (isAdminMode ? "GV_TEST" : lop),
           mon: subKey.toLowerCase().includes("tin") ? "Tin học" : "Toán học",
           lessonTitle: lessonTitle,
           mode: mode,
@@ -2837,15 +2875,22 @@
       const canvas = document.getElementById("snapshotCanvas");
 
       if (!video || !cameraStream) {
-        statusTxt.textContent = "Không có camera để chụp ảnh báo cáo.";
-        return;
+        if (!isAdminMode) {
+          statusTxt.textContent = "Không có camera để chụp ảnh báo cáo.";
+          return;
+        }
       }
 
       try {
-        canvas.width = video.videoWidth || 640;
-        canvas.height = video.videoHeight || 480;
+        canvas.width = (video && video.videoWidth) ? video.videoWidth : 640;
+        canvas.height = (video && video.videoHeight) ? video.videoHeight : 480;
         const ctx = canvas.getContext("2d");
-        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        if (video && cameraStream && video.videoWidth > 0) {
+          ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        } else {
+          ctx.fillStyle = "#1e293b";
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+        }
 
         // Watermark on photo
         ctx.fillStyle = "rgba(0,0,0,0.6)";
