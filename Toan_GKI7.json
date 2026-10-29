@@ -3,25 +3,25 @@
     "type": "multichoice",
     "level": "nhan_biet",
     "questiontext": "Cách viết nào sau đây cho ta một số hữu tỉ?",
-    "generalfeedback": "Số hữu tỉ được viết dưới dạng phân số \\(rac{a}{b}\\) với \\(a, b \\in \\mathbb{Z}\\) và \\(b \neq 0\\).",
+    "generalfeedback": "Số hữu tỉ được viết dưới dạng phân số \\(\\frac{a}{b}\\) với \\(a, b \\in \\mathbb{Z}\\) và \\(b \\neq 0\\).",
     "answers": [
       {
-        "text": "\\(rac{-1}{3}\\)",
+        "text": "\\(\\frac{-1}{3}\\)",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "\\(rac{2}{0}\\)",
+        "text": "\\(\\frac{2}{0}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{1{,}5}{2}\\)",
+        "text": "\\(\\frac{1{,}5}{2}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{\\sqrt{2}}{3}\\)",
+        "text": "\\(\\frac{\\sqrt{2}}{3}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -34,7 +34,7 @@
     "generalfeedback": "Phân số có mẫu số bằng 0 không xác định, do đó không phải là số hữu tỉ.",
     "answers": [
       {
-        "text": "\\(rac{5}{0}\\)",
+        "text": "\\(\\frac{5}{0}\\)",
         "fraction": 100,
         "feedback": ""
       },
@@ -49,7 +49,7 @@
         "feedback": ""
       },
       {
-        "text": "\\(2\frac{1}{4}\\)",
+        "text": "\\(2\\frac{1}{4}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -58,26 +58,26 @@
   {
     "type": "multichoice",
     "level": "nhan_biet",
-    "questiontext": "Số đối của số hữu tỉ \\(rac{2}{3}\\) là:",
+    "questiontext": "Số đối của số hữu tỉ \\(\\frac{2}{3}\\) là:",
     "generalfeedback": "Số đối của \\(a\\) là \\(-a\\).",
     "answers": [
       {
-        "text": "\\(rac{-2}{3}\\)",
+        "text": "\\(\\frac{-2}{3}\\)",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "\\(rac{3}{2}\\)",
+        "text": "\\(\\frac{3}{2}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{-3}{2}\\)",
+        "text": "\\(\\frac{-3}{2}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{2}{3}\\)",
+        "text": "\\(\\frac{2}{3}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -100,12 +100,12 @@
         "feedback": ""
       },
       {
-        "text": "\\(rac{4}{3}\\)",
+        "text": "\\(\\frac{4}{3}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(-\frac{4}{3}\\)",
+        "text": "\\(-\\frac{4}{3}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -254,7 +254,7 @@
   {
     "type": "multichoice",
     "level": "nhan_biet",
-    "questiontext": "Quy ước nào sau đây đúng với mọi số hữu tỉ \\(x \neq 0\\)?",
+    "questiontext": "Quy ước nào sau đây đúng với mọi số hữu tỉ \\(x \\neq 0\\)?",
     "generalfeedback": "Mọi số hữu tỉ khác 0 mũ 0 đều bằng 1.",
     "answers": [
       {
@@ -314,22 +314,22 @@
     "generalfeedback": "Luôn thực hiện luỹ thừa trước, rồi đến nhân chia, cuối cùng là cộng trừ.",
     "answers": [
       {
-        "text": "Luỹ thừa \\(ightarrow\\) Nhân và chia \\(ightarrow\\) Cộng và trừ",
+        "text": "Luỹ thừa \\(\\rightarrow\\) Nhân và chia \\(\\rightarrow\\) Cộng và trừ",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "Nhân và chia \\(ightarrow\\) Luỹ thừa \\(ightarrow\\) Cộng và trừ",
+        "text": "Nhân và chia \\(\\rightarrow\\) Luỹ thừa \\(\\rightarrow\\) Cộng và trừ",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "Cộng và trừ \\(ightarrow\\) Nhân và chia \\(ightarrow\\) Luỹ thừa",
+        "text": "Cộng và trừ \\(\\rightarrow\\) Nhân và chia \\(\\rightarrow\\) Luỹ thừa",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "Luỹ thừa \\(ightarrow\\) Cộng và trừ \\(ightarrow\\) Nhân và chia",
+        "text": "Luỹ thừa \\(\\rightarrow\\) Cộng và trừ \\(\\rightarrow\\) Nhân và chia",
         "fraction": 0,
         "feedback": ""
       }
@@ -464,7 +464,7 @@
         "feedback": ""
       },
       {
-        "text": "\\(rac{3}{4}\\)",
+        "text": "\\(\\frac{3}{4}\\)",
         "fraction": 0,
         "feedback": ""
       },
@@ -618,8 +618,8 @@
   {
     "type": "multichoice",
     "level": "thong_hieu",
-    "questiontext": "Tìm \\(x\\), biết \\(x - \frac{3}{4} = \frac{1}{4}\\).",
-    "generalfeedback": "Chuyển vế: \\(x = \frac{1}{4} + \frac{3}{4} = \frac{4}{4} = 1\\).",
+    "questiontext": "Tìm \\(x\\), biết \\(x - \\frac{3}{4} = \\frac{1}{4}\\).",
+    "generalfeedback": "Chuyển vế: \\(x = \\frac{1}{4} + \\frac{3}{4} = \\frac{4}{4} = 1\\).",
     "answers": [
       {
         "text": "\\(1\\)",
@@ -632,12 +632,12 @@
         "feedback": ""
       },
       {
-        "text": "\\(rac{1}{2}\\)",
+        "text": "\\(\\frac{1}{2}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{-1}{2}\\)",
+        "text": "\\(\\frac{-1}{2}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -702,26 +702,26 @@
   {
     "type": "multichoice",
     "level": "thong_hieu",
-    "questiontext": "Diện tích của một hình vuông là \\(36 \text{ cm}^2\\). Cạnh của hình vuông là bao nhiêu?",
+    "questiontext": "Diện tích của một hình vuông là \\(36 \\text{ cm}^2\\). Cạnh của hình vuông là bao nhiêu?",
     "generalfeedback": "Gọi cạnh hình vuông là \\(a\\) (\\(a>0\\)). Ta có \\(a^2 = 36\\), nên \\(a = \\sqrt{36} = 6\\).",
     "answers": [
       {
-        "text": "\\(6 \text{ cm}\\)",
+        "text": "\\(6 \\text{ cm}\\)",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "\\(18 \text{ cm}\\)",
+        "text": "\\(18 \\text{ cm}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(72 \text{ cm}\\)",
+        "text": "\\(72 \\text{ cm}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(-6 \text{ cm}\\)",
+        "text": "\\(-6 \\text{ cm}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -730,26 +730,26 @@
   {
     "type": "multichoice",
     "level": "thong_hieu",
-    "questiontext": "Diện tích một sân thi đấu hình vuông là \\(144 \text{ m}^2\\). Chu vi sân đó là:",
-    "generalfeedback": "Cạnh bằng \\(\\sqrt{144} = 12 \text{ m}\\). Chu vi bằng \\(12 \\cdot 4 = 48 \text{ m}\\).",
+    "questiontext": "Diện tích một sân thi đấu hình vuông là \\(144 \\text{ m}^2\\). Chu vi sân đó là:",
+    "generalfeedback": "Cạnh bằng \\(\\sqrt{144} = 12 \\text{ m}\\). Chu vi bằng \\(12 \\cdot 4 = 48 \\text{ m}\\).",
     "answers": [
       {
-        "text": "\\(48 \text{ m}\\)",
+        "text": "\\(48 \\text{ m}\\)",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "\\(12 \text{ m}\\)",
+        "text": "\\(12 \\text{ m}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(24 \text{ m}\\)",
+        "text": "\\(24 \\text{ m}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(144 \text{ m}\\)",
+        "text": "\\(144 \\text{ m}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -790,22 +790,22 @@
     "generalfeedback": "Tia phân giác chia một góc thành hai góc bằng nhau và bằng một nửa góc ban đầu.",
     "answers": [
       {
-        "text": "\\(\\widehat{xOz} = \\widehat{yOz} = \frac{1}{2} \\widehat{xOy}\\)",
+        "text": "\\(\\widehat{xOz} = \\widehat{yOz} = \\frac{1}{2} \\widehat{xOy}\\)",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "\\(\\widehat{xOz} = \\widehat{yOz} = \frac{1}{3} \\widehat{xOy}\\)",
+        "text": "\\(\\widehat{xOz} = \\widehat{yOz} = \\frac{1}{3} \\widehat{xOy}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(\\widehat{xOz} + \\widehat{yOz} = \frac{1}{2} \\widehat{xOy}\\)",
+        "text": "\\(\\widehat{xOz} + \\widehat{yOz} = \\frac{1}{2} \\widehat{xOy}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(\\widehat{xOy} = \frac{1}{2} \\widehat{xOz}\\)",
+        "text": "\\(\\widehat{xOy} = \\frac{1}{2} \\widehat{xOz}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -1041,8 +1041,8 @@
   {
     "type": "multichoice",
     "level": "van_dung",
-    "questiontext": "Một cửa hàng nhập về \\(rac{3}{4}\\) tấn gạo buổi sáng và \\(rac{2}{3}\\) tấn gạo buổi chiều. Khẳng định nào sau đây so sánh đúng khối lượng hai buổi?",
-    "generalfeedback": "Đưa về cùng mẫu số: \\(rac{3}{4} = \frac{9}{12}\\) và \\(rac{2}{3} = \frac{8}{12}\\). Do \\(9 > 8\\) nên buổi sáng nhập nhiều hơn.",
+    "questiontext": "Một cửa hàng nhập về \\(\\frac{3}{4}\\) tấn gạo buổi sáng và \\(\\frac{2}{3}\\) tấn gạo buổi chiều. Khẳng định nào sau đây so sánh đúng khối lượng hai buổi?",
+    "generalfeedback": "Đưa về cùng mẫu số: \\(\\frac{3}{4} = \\frac{9}{12}\\) và \\(\\frac{2}{3} = \\frac{8}{12}\\). Do \\(9 > 8\\) nên buổi sáng nhập nhiều hơn.",
     "answers": [
       {
         "text": "Buổi sáng nhập nhiều hơn buổi chiều",
@@ -1070,25 +1070,25 @@
     "type": "multichoice",
     "level": "van_dung",
     "questiontext": "Tiếp tục bài toán cửa hàng: Cả ngày cửa hàng nhập về bao nhiêu tấn gạo?",
-    "generalfeedback": "Tính tổng: \\(rac{3}{4} + \frac{2}{3} = \frac{9}{12} + \frac{8}{12} = \frac{17}{12}\\).",
+    "generalfeedback": "Tính tổng: \\(\\frac{3}{4} + \\frac{2}{3} = \\frac{9}{12} + \\frac{8}{12} = \\frac{17}{12}\\).",
     "answers": [
       {
-        "text": "\\(rac{17}{12}\\)",
+        "text": "\\(\\frac{17}{12}\\)",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "\\(rac{5}{7}\\)",
+        "text": "\\(\\frac{5}{7}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{1}{12}\\)",
+        "text": "\\(\\frac{1}{12}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{6}{12}\\)",
+        "text": "\\(\\frac{6}{12}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -1097,26 +1097,26 @@
   {
     "type": "multichoice",
     "level": "van_dung",
-    "questiontext": "Cửa hàng xuất bán \\(rac{5}{6}\\) tấn gạo. Biểu thức đúng biểu diễn lượng gạo còn lại (\\(x\\)) là:",
+    "questiontext": "Cửa hàng xuất bán \\(\\frac{5}{6}\\) tấn gạo. Biểu thức đúng biểu diễn lượng gạo còn lại (\\(x\\)) là:",
     "generalfeedback": "Lượng gạo còn lại = Nhập sáng + Nhập chiều - Xuất bán.",
     "answers": [
       {
-        "text": "\\(x = \frac{3}{4} + \frac{2}{3} - \frac{5}{6}\\)",
+        "text": "\\(x = \\frac{3}{4} + \\frac{2}{3} - \\frac{5}{6}\\)",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "\\(x = \frac{3}{4} - \frac{2}{3} + \frac{5}{6}\\)",
+        "text": "\\(x = \\frac{3}{4} - \\frac{2}{3} + \\frac{5}{6}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(x = \frac{3}{4} + \frac{2}{3} + \frac{5}{6}\\)",
+        "text": "\\(x = \\frac{3}{4} + \\frac{2}{3} + \\frac{5}{6}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(x = \frac{5}{6} - \frac{3}{4} - \frac{2}{3}\\)",
+        "text": "\\(x = \\frac{5}{6} - \\frac{3}{4} - \\frac{2}{3}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -1126,25 +1126,25 @@
     "type": "multichoice",
     "level": "van_dung",
     "questiontext": "Tính khối lượng gạo còn lại trong cửa hàng (đơn vị: tấn).",
-    "generalfeedback": "\\(rac{17}{12} - \frac{5}{6} = \frac{17}{12} - \frac{10}{12} = \frac{7}{12}\\).",
+    "generalfeedback": "\\(\\frac{17}{12} - \\frac{5}{6} = \\frac{17}{12} - \\frac{10}{12} = \\frac{7}{12}\\).",
     "answers": [
       {
-        "text": "\\(rac{7}{12}\\)",
+        "text": "\\(\\frac{7}{12}\\)",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "\\(rac{5}{12}\\)",
+        "text": "\\(\\frac{5}{12}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{22}{12}\\)",
+        "text": "\\(\\frac{22}{12}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{1}{12}\\)",
+        "text": "\\(\\frac{1}{12}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -1153,8 +1153,8 @@
   {
     "type": "truefalse",
     "level": "van_dung",
-    "questiontext": "Trong bài toán cửa hàng, lượng gạo còn lại sau khi xuất bán là \\(rac{5}{12}\\) tấn. Khẳng định này đúng hay sai?",
-    "generalfeedback": "Kết quả tính được là \\(rac{7}{12}\\), nên khẳng định là sai.",
+    "questiontext": "Trong bài toán cửa hàng, lượng gạo còn lại sau khi xuất bán là \\(\\frac{5}{12}\\) tấn. Khẳng định này đúng hay sai?",
+    "generalfeedback": "Kết quả tính được là \\(\\frac{7}{12}\\), nên khẳng định là sai.",
     "answers": [
       {
         "text": "Đúng",
@@ -1203,7 +1203,7 @@
     "type": "multichoice",
     "level": "van_dung",
     "questiontext": "[img:de_thi_image12.jpeg]<br>Nếu \\(\\widehat{xOz} = 110^{\\circ}\\) và \\(Oy\\) nằm trong góc đó sao cho \\(\\widehat{xOy} = 55^{\\circ}\\), thì khẳng định nào sau đây đúng?",
-    "generalfeedback": "Vì \\(\\widehat{xOy} = 55^{\\circ} = \frac{110^{\\circ}}{2}\\) và tia nằm trong, nên \\(Oy\\) là phân giác của \\(\\widehat{xOz}\\).",
+    "generalfeedback": "Vì \\(\\widehat{xOy} = 55^{\\circ} = \\frac{110^{\\circ}}{2}\\) và tia nằm trong, nên \\(Oy\\) là phân giác của \\(\\widehat{xOz}\\).",
     "answers": [
       {
         "text": "\\(Oy\\) là tia phân giác của \\(\\widehat{xOz}\\)",
@@ -1233,26 +1233,26 @@
   {
     "type": "multichoice",
     "level": "van_dung",
-    "questiontext": "Bước 1 của bài tính \\(rac{1}{5} \\cdot \frac{15}{21} + \frac{1}{5} \\cdot \frac{6}{21}\\), ta áp dụng tính chất phân phối để được:",
+    "questiontext": "Bước 1 của bài tính \\(\\frac{1}{5} \\cdot \\frac{15}{21} + \\frac{1}{5} \\cdot \\frac{6}{21}\\), ta áp dụng tính chất phân phối để được:",
     "generalfeedback": "Áp dụng tính chất phân phối: \\(a \\cdot b + a \\cdot c = a \\cdot (b+c)\\).",
     "answers": [
       {
-        "text": "\\(rac{1}{5} \\cdot \\left( \frac{15}{21} + \frac{6}{21} \right)\\)",
+        "text": "\\(\\frac{1}{5} \\cdot \\left( \\frac{15}{21} + \\frac{6}{21} \\right)\\)",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "\\(rac{1}{5} \\cdot \frac{15+6}{21+21}\\)",
+        "text": "\\(\\frac{1}{5} \\cdot \\frac{15+6}{21+21}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(\\left( \frac{1}{5} + \frac{1}{5} \right) \\cdot \frac{15+6}{21}\\)",
+        "text": "\\(\\left( \\frac{1}{5} + \\frac{1}{5} \\right) \\cdot \\frac{15+6}{21}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{1}{5} \\cdot \frac{15 \\cdot 6}{21}\\)",
+        "text": "\\(\\frac{1}{5} \\cdot \\frac{15 \\cdot 6}{21}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -1261,11 +1261,11 @@
   {
     "type": "multichoice",
     "level": "van_dung",
-    "questiontext": "Kết quả cuối cùng của phép tính \\(rac{1}{5} \\cdot \\left( \frac{15}{21} + \frac{6}{21} \right)\\) là:",
-    "generalfeedback": "Tính trong ngoặc: \\(rac{21}{21} = 1\\). Kết quả là \\(rac{1}{5} \\cdot 1 = \frac{1}{5}\\).",
+    "questiontext": "Kết quả cuối cùng của phép tính \\(\\frac{1}{5} \\cdot \\left( \\frac{15}{21} + \\frac{6}{21} \\right)\\) là:",
+    "generalfeedback": "Tính trong ngoặc: \\(\\frac{21}{21} = 1\\). Kết quả là \\(\\frac{1}{5} \\cdot 1 = \\frac{1}{5}\\).",
     "answers": [
       {
-        "text": "\\(rac{1}{5}\\)",
+        "text": "\\(\\frac{1}{5}\\)",
         "fraction": 100,
         "feedback": ""
       },
@@ -1275,12 +1275,12 @@
         "feedback": ""
       },
       {
-        "text": "\\(rac{21}{105}\\)",
+        "text": "\\(\\frac{21}{105}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{2}{5}\\)",
+        "text": "\\(\\frac{2}{5}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -1345,26 +1345,26 @@
   {
     "type": "multichoice",
     "level": "van_dung",
-    "questiontext": "Trong biểu thức \\(rac{1}{2} + \\left(\frac{1}{6}\right)^2 - \\left| \frac{-4}{9} \right|\\), giá trị lũy thừa và trị tuyệt đối là:",
-    "generalfeedback": "\\((\frac{1}{6})^2 = \frac{1}{36}\\) và \\(|\frac{-4}{9}| = \frac{4}{9}\\).",
+    "questiontext": "Trong biểu thức \\(\\frac{1}{2} + \\left(\\frac{1}{6}\\right)^2 - \\left| \\frac{-4}{9} \\right|\\), giá trị lũy thừa và trị tuyệt đối là:",
+    "generalfeedback": "\\((\\frac{1}{6})^2 = \\frac{1}{36}\\) và \\(|\\frac{-4}{9}| = \\frac{4}{9}\\).",
     "answers": [
       {
-        "text": "\\(rac{1}{36}\\) và \\(rac{4}{9}\\)",
+        "text": "\\(\\frac{1}{36}\\) và \\(\\frac{4}{9}\\)",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "\\(rac{1}{12}\\) và \\(rac{4}{9}\\)",
+        "text": "\\(\\frac{1}{12}\\) và \\(\\frac{4}{9}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{1}{36}\\) và \\(rac{-4}{9}\\)",
+        "text": "\\(\\frac{1}{36}\\) và \\(\\frac{-4}{9}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{2}{6}\\) và \\(rac{4}{9}\\)",
+        "text": "\\(\\frac{2}{6}\\) và \\(\\frac{4}{9}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -1373,7 +1373,7 @@
   {
     "type": "multichoice",
     "level": "van_dung",
-    "questiontext": "Khi quy đồng mẫu số biểu thức \\(rac{1}{2} + \frac{1}{36} - \frac{4}{9}\\), mẫu chung nhỏ nhất là bao nhiêu?",
+    "questiontext": "Khi quy đồng mẫu số biểu thức \\(\\frac{1}{2} + \\frac{1}{36} - \\frac{4}{9}\\), mẫu chung nhỏ nhất là bao nhiêu?",
     "generalfeedback": "BCNN của 2, 36 và 9 là 36.",
     "answers": [
       {
@@ -1401,26 +1401,26 @@
   {
     "type": "multichoice",
     "level": "van_dung",
-    "questiontext": "Kết quả cuối cùng của phép tính \\(rac{1}{2} + \frac{1}{36} - \frac{4}{9}\\) (đã rút gọn) là:",
-    "generalfeedback": "Quy đồng: \\(rac{18}{36} + \frac{1}{36} - \frac{16}{36} = \frac{3}{36} = \frac{1}{12}\\).",
+    "questiontext": "Kết quả cuối cùng của phép tính \\(\\frac{1}{2} + \\frac{1}{36} - \\frac{4}{9}\\) (đã rút gọn) là:",
+    "generalfeedback": "Quy đồng: \\(\\frac{18}{36} + \\frac{1}{36} - \\frac{16}{36} = \\frac{3}{36} = \\frac{1}{12}\\).",
     "answers": [
       {
-        "text": "\\(rac{1}{12}\\)",
+        "text": "\\(\\frac{1}{12}\\)",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "\\(rac{3}{36}\\)",
+        "text": "\\(\\frac{3}{36}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{-1}{36}\\)",
+        "text": "\\(\\frac{-1}{36}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{5}{12}\\)",
+        "text": "\\(\\frac{5}{12}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -1584,7 +1584,7 @@
   {
     "type": "multichoice",
     "level": "van_dung_cao",
-    "questiontext": "Cho tổng \\(A = \frac{1}{3} + \\left(\frac{1}{3}\right)^2 + \\left(\frac{1}{3}\right)^3 + \\dots + \\left(\frac{1}{3}\right)^{2026}\\). Để tính tổng này, người ta thường xét biểu thức nào sau đây?",
+    "questiontext": "Cho tổng \\(A = \\frac{1}{3} + \\left(\\frac{1}{3}\\right)^2 + \\left(\\frac{1}{3}\\right)^3 + \\dots + \\left(\\frac{1}{3}\\right)^{2026}\\). Để tính tổng này, người ta thường xét biểu thức nào sau đây?",
     "generalfeedback": "Nhân tổng với nghịch đảo của cơ số (tức là 3) hoặc cơ số để tạo dạng trừ cho nhau. Xét \\(3A\\).",
     "answers": [
       {
@@ -1613,25 +1613,25 @@
     "type": "multichoice",
     "level": "van_dung_cao",
     "questiontext": "Tính giá trị của hiệu \\(3A - A\\) (tức là \\(2A\\)) theo chuỗi phép trừ?",
-    "generalfeedback": "Các số hạng ở giữa sẽ bị triệt tiêu, chỉ còn lại số hạng đầu và cuối: \\(1 - \\left(\frac{1}{3}\right)^{2026}\\).",
+    "generalfeedback": "Các số hạng ở giữa sẽ bị triệt tiêu, chỉ còn lại số hạng đầu và cuối: \\(1 - \\left(\\frac{1}{3}\\right)^{2026}\\).",
     "answers": [
       {
-        "text": "\\(1 - \\left(\frac{1}{3}\right)^{2026}\\)",
+        "text": "\\(1 - \\left(\\frac{1}{3}\\right)^{2026}\\)",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "\\(1 + \\left(\frac{1}{3}\right)^{2026}\\)",
+        "text": "\\(1 + \\left(\\frac{1}{3}\\right)^{2026}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{1}{3} - \\left(\frac{1}{3}\right)^{2027}\\)",
+        "text": "\\(\\frac{1}{3} - \\left(\\frac{1}{3}\\right)^{2027}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(1 - \\left(\frac{1}{3}\right)^{2027}\\)",
+        "text": "\\(1 - \\left(\\frac{1}{3}\\right)^{2027}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -1640,26 +1640,26 @@
   {
     "type": "multichoice",
     "level": "van_dung_cao",
-    "questiontext": "Từ \\(2A = 1 - \\left(\frac{1}{3}\right)^{2026}\\), ta suy ra \\(A\\) bằng:",
-    "generalfeedback": "Chia hai vế cho 2, ta được \\(A = \frac{1 - \\left(\frac{1}{3}\right)^{2026}}{2}\\).",
+    "questiontext": "Từ \\(2A = 1 - \\left(\\frac{1}{3}\\right)^{2026}\\), ta suy ra \\(A\\) bằng:",
+    "generalfeedback": "Chia hai vế cho 2, ta được \\(A = \\frac{1 - \\left(\\frac{1}{3}\\right)^{2026}}{2}\\).",
     "answers": [
       {
-        "text": "\\(rac{1 - \\left(\frac{1}{3}\right)^{2026}}{2}\\)",
+        "text": "\\(\\frac{1 - \\left(\\frac{1}{3}\\right)^{2026}}{2}\\)",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "\\(rac{1}{2} - \\left(\frac{1}{3}\right)^{2026}\\)",
+        "text": "\\(\\frac{1}{2} - \\left(\\frac{1}{3}\\right)^{2026}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{1 + \\left(\frac{1}{3}\right)^{2026}}{2}\\)",
+        "text": "\\(\\frac{1 + \\left(\\frac{1}{3}\\right)^{2026}}{2}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(2 - 2\\left(\frac{1}{3}\right)^{2026}\\)",
+        "text": "\\(2 - 2\\left(\\frac{1}{3}\\right)^{2026}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -1669,20 +1669,20 @@
     "type": "multichoice",
     "level": "van_dung_cao",
     "questiontext": "Dựa vào biểu thức tính \\(A\\) ở trên, kết luận nào sau đây đúng để chứng minh bất đẳng thức của bài toán?",
-    "generalfeedback": "Vì \\(\\left(\frac{1}{3}\right)^{2026} > 0\\), nên phần tử số bé hơn 1. Suy ra phân số \\(A < \frac{1}{2}\\).",
+    "generalfeedback": "Vì \\(\\left(\\frac{1}{3}\\right)^{2026} > 0\\), nên phần tử số bé hơn 1. Suy ra phân số \\(A < \\frac{1}{2}\\).",
     "answers": [
       {
-        "text": "\\(A < \frac{1}{2}\\)",
+        "text": "\\(A < \\frac{1}{2}\\)",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "\\(A > \frac{1}{2}\\)",
+        "text": "\\(A > \\frac{1}{2}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(A = \frac{1}{2}\\)",
+        "text": "\\(A = \\frac{1}{2}\\)",
         "fraction": 0,
         "feedback": ""
       },
@@ -1780,8 +1780,8 @@
   {
     "type": "multichoice",
     "level": "thong_hieu",
-    "questiontext": "Tính giá trị của biểu thức \\(rac{(-14)^2}{7^2}\\).",
-    "generalfeedback": "Có thể gộp thành \\((\frac{-14}{7})^2 = (-2)^2 = 4\\).",
+    "questiontext": "Tính giá trị của biểu thức \\(\\frac{(-14)^2}{7^2}\\).",
+    "generalfeedback": "Có thể gộp thành \\((\\frac{-14}{7})^2 = (-2)^2 = 4\\).",
     "answers": [
       {
         "text": "\\(4\\)",
@@ -1864,26 +1864,26 @@
   {
     "type": "multichoice",
     "level": "thong_hieu",
-    "questiontext": "Nếu \\(x\\) là độ dài cạnh của hình vuông có diện tích là \\(81 \text{ dm}^2\\), thì giá trị của \\(x\\) là:",
+    "questiontext": "Nếu \\(x\\) là độ dài cạnh của hình vuông có diện tích là \\(81 \\text{ dm}^2\\), thì giá trị của \\(x\\) là:",
     "generalfeedback": "Cạnh bằng căn bậc hai số học của diện tích: \\(\\sqrt{81} = 9\\).",
     "answers": [
       {
-        "text": "\\(9 \text{ dm}\\)",
+        "text": "\\(9 \\text{ dm}\\)",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "\\(81 \text{ dm}\\)",
+        "text": "\\(81 \\text{ dm}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(18 \text{ dm}\\)",
+        "text": "\\(18 \\text{ dm}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(40{,}5 \text{ dm}\\)",
+        "text": "\\(40{,}5 \\text{ dm}\\)",
         "fraction": 0,
         "feedback": ""
       }
@@ -1976,26 +1976,26 @@
   {
     "type": "multichoice",
     "level": "thong_hieu",
-    "questiontext": "Tính tổng: \\(rac{-2}{3} + \frac{5}{2}\\).",
-    "generalfeedback": "Quy đồng mẫu 6: \\(rac{-4}{6} + \frac{15}{6} = \frac{11}{6}\\).",
+    "questiontext": "Tính tổng: \\(\\frac{-2}{3} + \\frac{5}{2}\\).",
+    "generalfeedback": "Quy đồng mẫu 6: \\(\\frac{-4}{6} + \\frac{15}{6} = \\frac{11}{6}\\).",
     "answers": [
       {
-        "text": "\\(rac{11}{6}\\)",
+        "text": "\\(\\frac{11}{6}\\)",
         "fraction": 100,
         "feedback": ""
       },
       {
-        "text": "\\(rac{3}{5}\\)",
+        "text": "\\(\\frac{3}{5}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{-7}{6}\\)",
+        "text": "\\(\\frac{-7}{6}\\)",
         "fraction": 0,
         "feedback": ""
       },
       {
-        "text": "\\(rac{3}{6}\\)",
+        "text": "\\(\\frac{3}{6}\\)",
         "fraction": 0,
         "feedback": ""
       }

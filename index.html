@@ -1788,6 +1788,13 @@
     function fixLatexGaps(text) {
       if (!text) return "";
 
+      // Tự động sửa lỗi escape phổ biến trong JSON trước khi KaTeX render
+      text = text.replace(/\x0crac/g, "\\frac");
+      text = text.replace(/\x0c/g, "");
+      text = text.replace(/(?<![a-zA-Z\\])rac\{/g, "\\frac{");
+      text = text.replace(/(?<![a-zA-Z\\])ightarrow\b/g, "\\rightarrow");
+      text = text.replace(/([a-zA-Z0-9])\s*\n\s*eq\b/g, "$1 \\neq");
+
       // 1. Unblock \[ ... \] containing [[n]] into inline \( ... \)
       text = text.replace(/\\\[(.*?)\\\]/gs, (m, inner) => {
         return /\[\[\d+\]\]/.test(inner) ? `\\(${inner}\\)` : m;
@@ -1832,7 +1839,8 @@
         delimiters: [
           { left: "$$", right: "$$", display: true },
           { left: "\\[", right: "\\]", display: true },
-          { left: "\\(", right: "\\)", display: false }
+          { left: "\\(", right: "\\)", display: false },
+          { left: "$", right: "$", display: false }
         ],
         ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"],
         throwOnError: false
