@@ -28,17 +28,35 @@
   let quizStarted=false;
   /* ===== NGÂN HÀNG 45 CÂU TEST ===================================================== */
 
+  function normalizeDecuongItem(item) {
+    if (item.options && item.q) return item;
+    const qText = item.questiontext || item.q || "";
+    const answers = item.answers || [];
+    let correctIdx = answers.findIndex(a => a.fraction > 0);
+    if (correctIdx < 0) correctIdx = 0;
+    return {
+      q: qText,
+      options: answers.map(a => a.text),
+      answer: correctIdx,
+      explain: item.generalfeedback || item.explain || ""
+    };
+  }
+
   async function loadQuestions(mon, lop) {
     let khoi= lop.charAt(0)
-    const url =`https://raw.githubusercontent.com/nguyenvantroithcs/GV/main/${mon}${khoi}.json`;
+    let url =`https://raw.githubusercontent.com/nguyenvantroithcs/GV/main/${mon}${khoi}.json`;
+    if (mon.toLowerCase().includes("toan") && khoi === "8") {
+      url = `https://raw.githubusercontent.com/nguyenvantroithcs/GV/main/Toan_GKI8.json`;
+    }
     
-    const res = await fetch(url);
+    const res = await fetch(url + "?v=" + Date.now());
     if (!res.ok) {
       alert("Không tải được câu hỏi");
       return [];
     }
     const data = await res.json();
-    return data;
+    const rawList = Array.isArray(data) ? data : (data.questions || []);
+    return rawList.map(normalizeDecuongItem);
   }
   
   let questions=[];
@@ -434,7 +452,11 @@ let ql=document.getElementById("qList")
 function showQuestion(i){
   current=i
   let q=selected[i]
-  let html=`<b>Câu ${i+1}: ${q.q}</b><br><br>`
+  let qContent = q.q || "";
+  qContent = qContent.replace(/\[img:([^\]]+)\]/g, (m, imgFile) => {
+    return `<br><img src="https://raw.githubusercontent.com/nguyenvantroithcs/GV/main/ON%20TAP%20GK1/Toan8/images/${imgFile}" style="max-width:100%;border-radius:8px;margin:8px 0;border:1px solid #ccc;" onerror="this.src='https://raw.githubusercontent.com/nguyenvantroithcs/GV/main/images/${imgFile}'" alt="Hình minh họa"><br>`;
+  });
+  let html=`<b>Câu ${i+1}: ${qContent}</b><br><br>`
   q.options.forEach((o,j)=>{
     let ck = (answers[i]===j)?"checked":""
     html+=`

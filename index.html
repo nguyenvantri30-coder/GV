@@ -2105,6 +2105,7 @@
           hoten: hoten,
           lop: lop || (isAdminMode ? "GV_TEST" : lop),
           mon: subKey.toLowerCase().includes("tin") ? "Tin học" : "Toán học",
+          subKey: subKey,
           lessonTitle: lessonTitle,
           mode: mode,
           decuongType: (mode === "DECUONG") ? document.getElementById("decuongSelect").value : ""
@@ -2193,7 +2194,14 @@
           return imgFile;
         }
         if (imgFile.startsWith("de_thi_") || imgFile.startsWith("hinh_")) {
-          const g = (studentInfo?.subKey || "").replace(/\D/g, "") || "7";
+          let g = "";
+          const mImg = imgFile.match(/(?:toan|tin)(\d)/i);
+          if (mImg) {
+            g = mImg[1];
+          } else {
+            const currentSubKey = studentInfo?.subKey || document.getElementById("subjectSelect")?.value || "";
+            g = currentSubKey.replace(/\D/g, "") || (studentInfo?.lop || "").replace(/\D/g, "") || "8";
+          }
           return `${GV_RAW}/ON%20TAP%20GK1/Toan${g}/images/${imgFile}`;
         }
         return `${q._imgBase || ''}${imgFile}`;
@@ -2201,14 +2209,18 @@
 
       // Replace [img:xxx.jpeg] tags
       qText = qText.replace(/\[img:([^\]]+)\]/g, (m, imgFile) => {
-        return `<img src="${resolveImgUrl(imgFile)}" class="q-img" alt="Hình minh họa" onerror="this.style.display='none'" onclick="zoomImage(this.src)">`;
+        const pUrl = resolveImgUrl(imgFile);
+        const fbUrl = `${GV_RAW}/images/${imgFile}`;
+        return `<img src="${pUrl}" class="q-img" alt="Hình minh họa" onerror="if(this.src!=='${fbUrl}'){this.src='${fbUrl}';}else{this.style.display='none';}" onclick="zoomImage(this.src)">`;
       });
 
       // Also append images from imgs array if not present in text
       if (q.imgs && q.imgs.length > 0) {
         q.imgs.forEach(imgFile => {
           if (!qText.includes(imgFile)) {
-            qText += `<br><img src="${resolveImgUrl(imgFile)}" class="q-img" alt="Hình minh họa" onerror="this.style.display='none'" onclick="zoomImage(this.src)">`;
+            const pUrl = resolveImgUrl(imgFile);
+            const fbUrl = `${GV_RAW}/images/${imgFile}`;
+            qText += `<br><img src="${pUrl}" class="q-img" alt="Hình minh họa" onerror="if(this.src!=='${fbUrl}'){this.src='${fbUrl}';}else{this.style.display='none';}" onclick="zoomImage(this.src)">`;
           }
         });
       }
@@ -2591,6 +2603,11 @@
         btn.textContent = i + 1;
 
         if (i === currentIndex) btn.classList.add("current");
+
+        if ((q.imgs && q.imgs.length > 0) || (q.questiontext && q.questiontext.includes('[img:'))) {
+          btn.title = "Câu hỏi có hình minh họa";
+          btn.innerHTML = `${i + 1}<span style="font-size:9px;vertical-align:top;margin-left:1px;">🖼️</span>`;
+        }
 
         const ans = userAnswers[i];
         const isAnswered = ans !== null && ans !== undefined && ans !== "" && (typeof ans !== "object" || Object.keys(ans).length > 0);
