@@ -332,6 +332,45 @@
       box-shadow: none;
     }
 
+    /* Nút Tải Bộ Đề Word */
+    .btn-download-bank {
+      width: 100%;
+      padding: 13px;
+      background: #f0fdf4;
+      color: #166534;
+      border: 1.8px solid #86efac;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(22, 101, 52, 0.08);
+    }
+    .btn-download-bank:hover {
+      background: #dcfce7;
+      border-color: #22c55e;
+      color: #14532d;
+      box-shadow: 0 4px 10px rgba(34, 197, 94, 0.2);
+      transform: translateY(-1px);
+    }
+    .btn-download-bank:active {
+      transform: scale(0.98);
+      background: #bbf7d0;
+    }
+    .btn-download-bank:disabled {
+      background: #f3f4f6;
+      color: #9ca3af;
+      border-color: #d1d5db;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
     /* Question Screen */
     .q-card {
       background: #ffffff;
@@ -940,6 +979,9 @@
       </div>
 
       <button id="startBtn" class="btn-main" onclick="startQuiz()" disabled>BẮT ĐẦU LÀM BÀI</button>
+      <button id="downloadBankBtn" type="button" class="btn-download-bank" onclick="downloadExamDoc()" title="Tải toàn bộ câu hỏi và các phương án lựa chọn về máy dưới dạng file Word">
+        📥 TẢI BỘ ĐỀ (WORD)
+      </button>
     </div>
 
     <!-- QUIZ SCREEN -->
@@ -2159,6 +2201,380 @@
       }
 
       return processed;
+    }
+
+    /* =========================================================================
+       EXPORT EXAM TO WORD DOCUMENT (.DOC) ENGINE
+       ========================================================================= */
+    function formatLatexForWord(text, grade = 8) {
+      if (!text) return "";
+
+      // 1. Chèn ảnh minh họa thực tế từ repo
+      text = text.replace(/\[img:([^\]]+)\]/g, (m, imgFile) => {
+        let g = grade;
+        const mImg = imgFile.match(/(?:toan|tin)(\d)/i);
+        if (mImg) g = mImg[1];
+        const url = `${GV_RAW}/ON%20TAP%20GK1/Toan${g}/images/${imgFile}`;
+        return `<div style="text-align:center;margin:12px 0;"><img src="${url}" style="max-width:350px;max-height:220px;" alt="Hình minh họa" /><br><i style="font-size:10pt;color:#555;">(Hình minh họa)</i></div>`;
+      });
+
+      // 2. Chuyển đổi công thức toán LaTeX sang định dạng hiển thị Word
+      text = text.replace(/(?:góc\s*)?\\widehat\{([^}]+)\}/gi, "góc $1");
+      text = text.replace(/\^\{\\circ\}|\\circ/g, "°");
+      text = text.replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, '<span style="display:inline-block;vertical-align:middle;text-align:center;margin:0 2px;"><span style="display:block;border-bottom:1px solid #000;padding:0 3px;">$1</span><span style="display:block;padding:0 3px;">$2</span></span>');
+      text = text.replace(/\\cdot/g, " · ");
+      text = text.replace(/\\times/g, " × ");
+      text = text.replace(/\\div/g, " : ");
+      text = text.replace(/\\pm/g, " ± ");
+      text = text.replace(/\\Delta\s*/g, "Δ");
+      text = text.replace(/\\in/g, " ∈ ");
+      text = text.replace(/\\notin/g, " ∉ ");
+      text = text.replace(/\\ne(q)?\b/g, " ≠ ");
+      text = text.replace(/\\le(q)?\b/g, " ≤ ");
+      text = text.replace(/\\ge(q)?\b/g, " ≥ ");
+      text = text.replace(/\\parallel|\/\//g, " // ");
+      text = text.replace(/\\approx/g, " ≈ ");
+      text = text.replace(/\\sqrt\{([^}]+)\}/g, "√($1)");
+      text = text.replace(/\\[;,]|\s*\\quad\s*/g, " ");
+      text = text.replace(/\\\((.*?)\\\)/gs, "$1");
+      text = text.replace(/\$\$(.*?)\$\$/gs, "$1");
+      text = text.replace(/\$([^$]+)\$/g, "$1");
+      text = text.replace(/\\left|\\right/g, "");
+      text = text.replace(/\\text\{([^}]+)\}/g, "$1");
+
+      // Khử lặp góc
+      text = text.replace(/góc\s+góc\s+/gi, "góc ");
+
+      // Số mũ & chỉ số dưới
+      text = text.replace(/\^(\d+)/g, "<sup>$1</sup>");
+      text = text.replace(/_(\d+)/g, "<sub>$1</sub>");
+      text = text.replace(/\[\[(\d+)\]\]/g, "($1) ....................");
+
+      return text;
+    }
+
+    function generateWordDocument(questions, title, subTitle, gradeNum) {
+      let htmlDoc = `<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<meta charset='utf-8'>
+<title>${title}</title>
+<style>
+  @page Section1 {
+    size: 21.0cm 29.7cm;
+    margin: 2.0cm 2.0cm 2.0cm 2.0cm;
+    mso-page-orientation: portrait;
+  }
+  div.Section1 { page: Section1; }
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13pt;
+    line-height: 1.35;
+    color: #000000;
+  }
+  table.header-tb {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 12px;
+  }
+  table.header-tb td {
+    vertical-align: top;
+    font-size: 11pt;
+  }
+  .title-main {
+    font-size: 15pt;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 8px 0 4px 0;
+  }
+  .title-sub {
+    font-size: 12.5pt;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  .q-block {
+    margin-bottom: 14px;
+    page-break-inside: avoid;
+  }
+  .q-title {
+    font-weight: bold;
+  }
+  .opt-table {
+    width: 100%;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-collapse: collapse;
+  }
+  .opt-table td {
+    padding: 2px 8px 2px 18px;
+    font-size: 13pt;
+    vertical-align: top;
+  }
+</style>
+</head>
+<body>
+<div class="Section1">
+  <table class="header-tb">
+    <tr>
+      <td style="text-align:center;width:45%;">
+        <b>TRƯỜNG THCS NGUYỄN VĂN TRỖI</b><br>
+        <b>TỔ TOÁN - TIN</b>
+      </td>
+      <td style="text-align:center;width:55%;">
+        <b>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</b><br>
+        <u>Độc lập - Tự do - Hạnh phúc</u>
+      </td>
+    </tr>
+  </table>
+
+  <div class="title-main">${title}</div>
+  <div class="title-sub">${subTitle}</div>
+  <div style="margin-bottom:12px;text-align:center;font-size:11pt;font-style:italic;">(Tài liệu học tập - Tổng số câu hỏi: ${questions.length} câu)</div>
+  <hr style="border:0.5px solid #000;margin-bottom:16px;">
+`;
+
+      questions.forEach((q, idx) => {
+        const rawStem = q.questiontext || q.q || q.question || "";
+        const stem = formatLatexForWord(rawStem, gradeNum);
+        const answers = q.answers || q.options || [];
+        const qType = q.type || "";
+
+        htmlDoc += `<div class="q-block">`;
+        htmlDoc += `<span class="q-title">Câu ${idx + 1}:</span> ${stem}<br>`;
+
+        // Append extra imgs if provided in imgs array and not in stem
+        if (Array.isArray(q.imgs) && q.imgs.length > 0) {
+          q.imgs.forEach(imgFile => {
+            if (!rawStem.includes(imgFile)) {
+              const url = `${GV_RAW}/ON%20TAP%20GK1/Toan${gradeNum}/images/${imgFile}`;
+              htmlDoc += `<div style="text-align:center;margin:10px 0;"><img src="${url}" style="max-width:350px;max-height:220px;" alt="Hình minh họa" /><br><i style="font-size:10pt;color:#555;">(Hình minh họa)</i></div>`;
+            }
+          });
+        }
+
+        if (answers && answers.length > 0) {
+          const cleanOpts = answers.map(a => {
+            const txt = (typeof a === "object" ? a.text : a) || "";
+            return formatLatexForWord(txt, gradeNum);
+          });
+
+          if (cleanOpts.length === 4) {
+            const plainLens = cleanOpts.map(o => o.replace(/<[^>]+>/g, "").length);
+            const totalLen = plainLens.reduce((a, b) => a + b, 0);
+
+            if (totalLen < 60) {
+              htmlDoc += `<table class="opt-table"><tr>`;
+              cleanOpts.forEach((opt, oIdx) => {
+                htmlDoc += `<td style="width:25%;"><b>${String.fromCharCode(65 + oIdx)}.</b> ${opt}</td>`;
+              });
+              htmlDoc += `</tr></table>`;
+            } else if (totalLen < 140) {
+              htmlDoc += `<table class="opt-table">`;
+              htmlDoc += `<tr><td style="width:50%;"><b>A.</b> ${cleanOpts[0]}</td><td style="width:50%;"><b>B.</b> ${cleanOpts[1]}</td></tr>`;
+              htmlDoc += `<tr><td style="width:50%;"><b>C.</b> ${cleanOpts[2]}</td><td style="width:50%;"><b>D.</b> ${cleanOpts[3]}</td></tr>`;
+              htmlDoc += `</table>`;
+            } else {
+              htmlDoc += `<table class="opt-table">`;
+              cleanOpts.forEach((opt, oIdx) => {
+                htmlDoc += `<tr><td><b>${String.fromCharCode(65 + oIdx)}.</b> ${opt}</td></tr>`;
+              });
+              htmlDoc += `</table>`;
+            }
+          } else if (cleanOpts.length === 2) {
+            htmlDoc += `<table class="opt-table"><tr>`;
+            htmlDoc += `<td style="width:50%;"><b>A.</b> ${cleanOpts[0]}</td><td style="width:50%;"><b>B.</b> ${cleanOpts[1]}</td>`;
+            htmlDoc += `</tr></table>`;
+          } else {
+            htmlDoc += `<table class="opt-table">`;
+            cleanOpts.forEach((opt, oIdx) => {
+              htmlDoc += `<tr><td><b>${String.fromCharCode(65 + oIdx)}.</b> ${opt}</td></tr>`;
+            });
+            htmlDoc += `</table>`;
+          }
+        } else if (qType === "truefalse") {
+          htmlDoc += `<table class="opt-table"><tr><td style="width:50%;"><b>A.</b> Đúng</td><td style="width:50%;"><b>B.</b> Sai</td></tr></table>`;
+        } else if (qType === "matching" && Array.isArray(q.subquestions)) {
+          htmlDoc += `<table style="width:100%;margin-top:6px;border-collapse:collapse;"><tr>`;
+          htmlDoc += `<td style="width:50%;vertical-align:top;padding-left:18px;"><b>Cột A:</b><br>`;
+          q.subquestions.forEach((sq, sIdx) => {
+            htmlDoc += `${sIdx + 1}. ${formatLatexForWord(sq.question || "", gradeNum)}<br>`;
+          });
+          htmlDoc += `</td>`;
+          htmlDoc += `<td style="width:50%;vertical-align:top;padding-left:18px;"><b>Cột B:</b><br>`;
+          q.subquestions.forEach((sq, sIdx) => {
+            htmlDoc += `${String.fromCharCode(97 + sIdx)}. ${formatLatexForWord(sq.answer || "", gradeNum)}<br>`;
+          });
+          htmlDoc += `</td></tr></table>`;
+        } else if (qType === "shortanswer" || qType === "numerical") {
+          htmlDoc += `<div style="margin-left:18px;margin-top:4px;"><i>Trả lời: .....................................................................................................................</i></div>`;
+        } else if ((qType === "gapselect" || qType === "ddwtos") && Array.isArray(q.choices)) {
+          const choiceTexts = q.choices.map(c => formatLatexForWord(c.text || "", gradeNum)).join(", ");
+          htmlDoc += `<div style="margin-left:18px;margin-top:4px;font-style:italic;">* Các từ/cụm từ lựa chọn: [ ${choiceTexts} ]</div>`;
+        }
+
+        htmlDoc += `</div>\n`;
+      });
+
+      htmlDoc += `
+  <div style="text-align:center;margin-top:30px;font-weight:bold;font-style:italic;">
+    --- HẾT ---
+  </div>
+</div>
+</body>
+</html>`;
+
+      return htmlDoc;
+    }
+
+    async function downloadExamDoc() {
+      const btn = document.getElementById("downloadBankBtn");
+      const origText = btn ? btn.innerHTML : "📥 TẢI BỘ ĐỀ (WORD)";
+      if (btn) {
+        btn.innerHTML = "⏳ Đang trích xuất câu hỏi...";
+        btn.disabled = true;
+      }
+
+      try {
+        const subKey = document.getElementById("subjectSelect").value;
+        const mode = document.getElementById("modeSelect").value;
+        const subName = document.getElementById("subjectSelect").selectedOptions[0]?.text || "Môn học";
+        let questionsList = [];
+        let docTitle = "";
+        let docSub = "";
+        let fileName = "";
+        let gradeNum = subKey.replace(/\D/g, "") || "8";
+
+        if (mode === "DECUONG") {
+          const decuongKey = document.getElementById("decuongSelect").value;
+          const decuongText = document.getElementById("decuongSelect").selectedOptions[0]?.text || "Đề cương ôn tập";
+          docTitle = `${decuongText.toUpperCase()} - MÔN ${subName.toUpperCase()}`;
+          docSub = `Năm học 2026 - 2027 (Trường THCS Nguyễn Văn Trỗi)`;
+          fileName = `De_cuong_${subKey.replace(/[^a-zA-Z0-9]/g, "_")}_${decuongKey}.doc`;
+
+          const KNOWN_DECUONG_FILES = [
+            "Toan_GKI6.json", "Toan6.json", "Toan_GKI7.json", "Toan7.json", "Toan_GKI8.json", "Toan8.json", "Toan_GKII8.json",
+            "Tin_GKI8.json", "Tin8.json", "Tin6.json", "Tin7.json", "Tin_GKII6.json", "Tin_GKII7.json"
+          ];
+          let monShort = subKey.toLowerCase().includes("tin") ? "Tin" : "Toan";
+          let khoiShort = subKey.replace(/\D/g, "");
+          const romanKey = decuongKey.replace("1", "I").replace("2", "II");
+
+          let targetFile = null;
+          if (subKey === "Toan_hoc_Khối_6" && (decuongKey === "GK1" || decuongKey === "GKI")) {
+            targetFile = "Toan_GKI6.json";
+          } else if (subKey === "Toan_hoc_Khối_7" && (decuongKey === "GK1" || decuongKey === "GKI")) {
+            targetFile = "Toan_GKI7.json";
+          } else if (subKey === "Toan_hoc_Khối_8" && (decuongKey === "GK1" || decuongKey === "GKI")) {
+            targetFile = "Toan_GKI8.json";
+          } else if (subKey === "Tin_hoc_Khối_8" && (decuongKey === "GK1" || decuongKey === "GKI")) {
+            targetFile = "Tin_GKI8.json";
+          } else {
+            const candidates = [
+              `${monShort}_${romanKey}${khoiShort}.json`,
+              `${monShort}_${decuongKey}${khoiShort}.json`,
+              `${monShort}${khoiShort}.json`
+            ];
+            for (let cand of candidates) {
+              if (KNOWN_DECUONG_FILES.includes(cand)) {
+                targetFile = cand;
+                break;
+              }
+            }
+          }
+
+          if (targetFile) {
+            let rDc = await fetch(`${GV_RAW}/${targetFile}?v=` + Date.now());
+            if (rDc.ok) {
+              let dcData = await rDc.json();
+              questionsList = Array.isArray(dcData) ? dcData : (dcData && Array.isArray(dcData.questions) ? dcData.questions : []);
+            }
+          }
+
+          if (questionsList.length === 0) {
+            const folderMap = {
+              "Tin_hoc_Khối_8": "Tin_hoc/Khối_8",
+              "Toán_hoc_Khối_6": "Toán_hoc/Khối_6",
+              "Toán_hoc_Khối_7": "Toán_hoc/Khối_7",
+              "Toán_hoc_Khối_8": "Toán_hoc/Khối_8",
+              "Toán_hoc_Khối_9": "Toán_hoc/Khối_9",
+              "Toan_hoc_Khối_6": "Toán_hoc/Khối_6",
+              "Toan_hoc_Khối_7": "Toán_hoc/Khối_7",
+              "Toan_hoc_Khối_8": "Toán_hoc/Khối_8",
+              "Toan_hoc_Khối_9": "Toán_hoc/Khối_9"
+            };
+            const folderPath = folderMap[subKey] || subKey.replace("_Khối_", "/Khối_");
+            const lessons = catalog?.subjects[subKey]?.lessons || [];
+            const pickLessons = lessons.slice(0, Math.min(8, lessons.length));
+            for (let les of pickLessons) {
+              try {
+                let rLes = await fetch(`${GITHUB_RAW}/${folderPath}/${encodeURIComponent(les.filename)}?v=` + Date.now());
+                if (rLes.ok) {
+                  let lData = await rLes.json();
+                  if (lData.questions) questionsList.push(...lData.questions);
+                }
+              } catch(e) {}
+            }
+          }
+
+        } else {
+          // MODE LESSON
+          const filename = document.getElementById("lessonSelect").value;
+          const rawText = document.getElementById("lessonSelect").selectedOptions[0]?.text || "Bài học";
+          const cleanT = extractCleanLessonTitle(rawText);
+          docTitle = `BÀI TẬP: ${cleanT.toUpperCase()} - MÔN ${subName.toUpperCase()}`;
+          docSub = `Năm học 2026 - 2027 (Trường THCS Nguyễn Văn Trỗi)`;
+          fileName = `Bai_tap_${cleanT.replace(/[^a-zA-Z0-9]/g, "_")}.doc`;
+
+          const folderMap = {
+            "Tin_hoc_Khối_8": "Tin_hoc/Khối_8",
+            "Toán_hoc_Khối_6": "Toán_hoc/Khối_6",
+            "Toán_hoc_Khối_7": "Toán_hoc/Khối_7",
+            "Toán_hoc_Khối_8": "Toán_hoc/Khối_8",
+            "Toán_hoc_Khối_9": "Toán_hoc/Khối_9",
+            "Toan_hoc_Khối_6": "Toán_hoc/Khối_6",
+            "Toan_hoc_Khối_7": "Toán_hoc/Khối_7",
+            "Toan_hoc_Khối_8": "Toán_hoc/Khối_8",
+            "Toan_hoc_Khối_9": "Toán_hoc/Khối_9"
+          };
+          const folderPath = folderMap[subKey] || subKey.replace("_Khối_", "/Khối_");
+          const url = `${GITHUB_RAW}/${folderPath}/${encodeURIComponent(filename)}?v=` + Date.now();
+          const res = await fetch(url);
+          if (res.ok) {
+            const data = await res.json();
+            questionsList = data.questions || [];
+          }
+        }
+
+        if (!questionsList || questionsList.length === 0) {
+          alert("Chưa tìm thấy câu hỏi cho phần này để tải về. Vui lòng thử lại!");
+          return;
+        }
+
+        // Chuyển đổi các câu có biến ngẫu nhiên {a}, {b} thành giá trị cụ thể
+        const processedList = questionsList.map(processQuestionWildcards);
+
+        // Xuất tài liệu Word
+        const wordHtml = generateWordDocument(processedList, docTitle, docSub, gradeNum);
+        const blob = new Blob(['\ufeff' + wordHtml], { type: 'application/msword;charset=utf-8' });
+        const blobUrl = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+
+      } catch (err) {
+        console.error("Lỗi tải bộ đề:", err);
+        alert("Có lỗi khi tạo file Word: " + err.message);
+      } finally {
+        if (btn) {
+          btn.innerHTML = origText;
+          btn.disabled = false;
+        }
+      }
     }
 
     /* =========================================================================
