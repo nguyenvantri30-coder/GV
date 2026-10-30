@@ -2219,35 +2219,77 @@
       });
 
       // 2. Chuyển đổi công thức toán LaTeX sang định dạng hiển thị Word
+      // 2.1 Hình học & góc
       text = text.replace(/(?:góc\s*)?\\widehat\{([^}]+)\}/gi, "góc $1");
+      text = text.replace(/\\angle\s*([A-Za-z0-9]+)/g, "∠$1");
       text = text.replace(/\^\{\\circ\}|\\circ/g, "°");
-      text = text.replace(/\\frac\{([^{}]+)\}\{([^{}]+)\}/g, '<span style="display:inline-block;vertical-align:middle;text-align:center;margin:0 2px;"><span style="display:block;border-bottom:1px solid #000;padding:0 3px;">$1</span><span style="display:block;padding:0 3px;">$2</span></span>');
+      text = text.replace(/\\Delta\s*/g, "Δ");
+      text = text.replace(/\\perp/g, " ⊥ ");
+      text = text.replace(/\\sim\b/g, " ∽ ");
+      text = text.replace(/\\cong\b/g, " ≅ ");
+      text = text.replace(/\\parallel|\/\//g, " // ");
+
+      // 2.2 Phân số (đệ quy hỗ trợ cả phân thức lồng nhau)
+      let fracRegex = /\\frac\{([^{}]+)\}\{([^{}]+)\}/;
+      let depth = 0;
+      while (fracRegex.test(text) && depth < 5) {
+        text = text.replace(new RegExp(fracRegex, 'g'), '<span style="display:inline-block;vertical-align:middle;text-align:center;margin:0 2px;"><span style="display:block;border-bottom:1px solid #000;padding:0 3px;">$1</span><span style="display:block;padding:0 3px;">$2</span></span>');
+        depth++;
+      }
+
+      // 2.3 Căn bậc n và căn bậc 2
+      text = text.replace(/\\sqrt\[([^\]]+)\]\{([^}]+)\}/g, "<sup>$1</sup>√($2)");
+      text = text.replace(/\\sqrt\{([^}]+)\}/g, "√($1)");
+
+      // 2.4 Ký hiệu tập hợp chuẩn SGK
+      text = text.replace(/\\mathbb\{R\}/g, "ℝ");
+      text = text.replace(/\\mathbb\{N\}/g, "ℕ");
+      text = text.replace(/\\mathbb\{Z\}/g, "ℤ");
+      text = text.replace(/\\mathbb\{Q\}/g, "ℚ");
+      text = text.replace(/\\varnothing|\\emptyset/g, "∅");
+      text = text.replace(/\\in/g, " ∈ ");
+      text = text.replace(/\\notin/g, " ∉ ");
+      text = text.replace(/\\subset/g, " ⊂ ");
+      text = text.replace(/\\supset/g, " ⊃ ");
+      text = text.replace(/\\cap/g, " ∩ ");
+      text = text.replace(/\\cup/g, " ∪ ");
+
+      // 2.5 Phép toán & quan hệ so sánh
       text = text.replace(/\\cdot/g, " · ");
       text = text.replace(/\\times/g, " × ");
       text = text.replace(/\\div/g, " : ");
       text = text.replace(/\\pm/g, " ± ");
-      text = text.replace(/\\Delta\s*/g, "Δ");
-      text = text.replace(/\\in/g, " ∈ ");
-      text = text.replace(/\\notin/g, " ∉ ");
+      text = text.replace(/\\mp/g, " ∓ ");
       text = text.replace(/\\ne(q)?\b/g, " ≠ ");
       text = text.replace(/\\le(q)?\b/g, " ≤ ");
       text = text.replace(/\\ge(q)?\b/g, " ≥ ");
-      text = text.replace(/\\parallel|\/\//g, " // ");
       text = text.replace(/\\approx/g, " ≈ ");
-      text = text.replace(/\\sqrt\{([^}]+)\}/g, "√($1)");
-      text = text.replace(/\\[;,]|\s*\\quad\s*/g, " ");
+      text = text.replace(/\\pi\b/g, "π");
+      text = text.replace(/\\infty\b/g, "∞");
+
+      // 2.6 Khoảng trắng & Dấu LaTeX
+      text = text.replace(/\\[;,]|\s*\\quad\s*|\s*\\qquad\s*/g, " ");
+      text = text.replace(/\\left|\\right/g, "");
+      text = text.replace(/\\text\{([^}]+)\}/g, "$1");
+      text = text.replace(/\\mathrm\{([^}]+)\}/g, "$1");
+      text = text.replace(/\\mathbf\{([^}]+)\}/g, "<b>$1</b>");
+      text = text.replace(/\\mathit\{([^}]+)\}/g, "<i>$1</i>");
+
+      // Khử bao bọc LaTeX inline: \(...\), $$...$$, $...$
       text = text.replace(/\\\((.*?)\\\)/gs, "$1");
       text = text.replace(/\$\$(.*?)\$\$/gs, "$1");
       text = text.replace(/\$([^$]+)\$/g, "$1");
-      text = text.replace(/\\left|\\right/g, "");
-      text = text.replace(/\\text\{([^}]+)\}/g, "$1");
 
-      // Khử lặp góc
+      // Khử lặp từ góc
       text = text.replace(/góc\s+góc\s+/gi, "góc ");
 
-      // Số mũ & chỉ số dưới
-      text = text.replace(/\^(\d+)/g, "<sup>$1</sup>");
-      text = text.replace(/_(\d+)/g, "<sub>$1</sub>");
+      // 2.7 Số mũ (lũy thừa) & chỉ số dưới (hỗ trợ cả {2n+1}, số âm, và số thường)
+      text = text.replace(/\^\{([^}]+)\}/g, "<sup>$1</sup>");
+      text = text.replace(/\^([0-9a-zA-Z+-]+)/g, "<sup>$1</sup>");
+      text = text.replace(/_\{([^}]+)\}/g, "<sub>$1</sub>");
+      text = text.replace(/_([0-9a-zA-Z]+)/g, "<sub>$1</sub>");
+
+      // 2.8 Chỗ trống điền từ
       text = text.replace(/\[\[(\d+)\]\]/g, "($1) ....................");
 
       return text;
