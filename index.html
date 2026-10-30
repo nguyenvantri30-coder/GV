@@ -2218,8 +2218,32 @@
         return `<div style="text-align:center;margin:12px 0;"><img src="${url}" style="max-width:350px;max-height:220px;" alt="Hình minh họa" /><br><i style="font-size:10pt;color:#555;">(Hình minh họa)</i></div>`;
       });
 
-      // 2. Chuyển đổi công thức toán LaTeX sang định dạng hiển thị Word
-      // 2.1 Hình học & góc
+      // 2. Thoát dấu so sánh < và > trong biểu thức toán để tránh bị HTML parser của Word cắt cụt
+      function escapeMathLtGt(m, inner) {
+        return inner.replace(/</g, " &lt; ").replace(/>/g, " &gt; ");
+      }
+      text = text.replace(/\\\((.*?)\\\)/gs, escapeMathLtGt);
+      text = text.replace(/\$\$(.*?)\$\$/gs, escapeMathLtGt);
+      text = text.replace(/\$([^$]+)\$/g, escapeMathLtGt);
+
+      // Thoát các dấu < và > ngoài LaTeX mà không phải thẻ <b>, </b>, <br>
+      text = text.replace(/<(?!\s*\/?(?:b|br)\b)/gi, " &lt; ");
+      text = text.replace(/(?<=\s|[-0-9a-zA-Z])>(?=\s*[-0-9a-zA-Z])/g, " &gt; ");
+
+      // 3. Mũi tên & suy luận (Thực hiện TRƯỚC \left / \right để không bị cắt thành 'arrow')
+      text = text.replace(/\\?(?:rightarrow|to|ightarrow)\b/g, " → ");
+      text = text.replace(/\\leftarrow\b/g, " ← ");
+      text = text.replace(/\\Leftrightarrow\b/g, " ⇔ ");
+      text = text.replace(/\\Rightarrow\b/g, " ⇒ ");
+
+      // 4. Ký hiệu phân cách, chia hết & ngoặc nhọn
+      text = text.replace(/\\\{/g, "{");
+      text = text.replace(/\\\}/g, "}");
+      text = text.replace(/\\mid\b/g, " | ");
+      text = text.replace(/\\vdots\b/g, " ⋮ ");
+      text = text.replace(/\\dots\b/g, "...");
+
+      // 5. Hình học & góc
       text = text.replace(/(?:góc\s*)?\\widehat\{([^}]+)\}/gi, "góc $1");
       text = text.replace(/\\angle\s*([A-Za-z0-9]+)/g, "∠$1");
       text = text.replace(/\^\{\\circ\}|\\circ/g, "°");
@@ -2229,7 +2253,12 @@
       text = text.replace(/\\cong\b/g, " ≅ ");
       text = text.replace(/\\parallel|\/\//g, " // ");
 
-      // 2.2 Phân số (đệ quy hỗ trợ cả phân thức lồng nhau)
+      // 6. Chuẩn hóa phân số dạng ngắn: \frac12 -> \frac{1}{2}
+      text = text.replace(/\\frac\s*([0-9a-zA-Z])\s*([0-9a-zA-Z])/g, "\\frac{$1}{$2}");
+      text = text.replace(/\\frac\s*([0-9a-zA-Z])\s*\{([^{}]+)\}/g, "\\frac{$1}{$2}");
+      text = text.replace(/\\frac\s*\{([^{}]+)\}\s*([0-9a-zA-Z])/g, "\\frac{$1}{$2}");
+
+      // Phân số (đệ quy hỗ trợ cả phân thức lồng nhau)
       let fracRegex = /\\frac\{([^{}]+)\}\{([^{}]+)\}/;
       let depth = 0;
       while (fracRegex.test(text) && depth < 5) {
@@ -2237,11 +2266,13 @@
         depth++;
       }
 
-      // 2.3 Căn bậc n và căn bậc 2
+      // 7. Căn bậc n và căn bậc 2
       text = text.replace(/\\sqrt\[([^\]]+)\]\{([^}]+)\}/g, "<sup>$1</sup>√($2)");
       text = text.replace(/\\sqrt\{([^}]+)\}/g, "√($1)");
 
-      // 2.4 Ký hiệu tập hợp chuẩn SGK
+      // 8. Ký hiệu tập hợp chuẩn SGK
+      text = text.replace(/\\mathbb\{N\}\s*\^?\*/g, "ℕ*");
+      text = text.replace(/\\mathbb\{I\}/g, "I");
       text = text.replace(/\\mathbb\{R\}/g, "ℝ");
       text = text.replace(/\\mathbb\{N\}/g, "ℕ");
       text = text.replace(/\\mathbb\{Z\}/g, "ℤ");
@@ -2254,7 +2285,7 @@
       text = text.replace(/\\cap/g, " ∩ ");
       text = text.replace(/\\cup/g, " ∪ ");
 
-      // 2.5 Phép toán & quan hệ so sánh
+      // 9. Phép toán & quan hệ so sánh
       text = text.replace(/\\cdot/g, " · ");
       text = text.replace(/\\times/g, " × ");
       text = text.replace(/\\div/g, " : ");
@@ -2267,32 +2298,32 @@
       text = text.replace(/\\pi\b/g, "π");
       text = text.replace(/\\infty\b/g, "∞");
 
-      // 2.6 Khoảng trắng & Dấu LaTeX
+      // 10. Khoảng trắng & Dấu LaTeX
       text = text.replace(/\\[;,]|\s*\\quad\s*|\s*\\qquad\s*/g, " ");
-      text = text.replace(/\\left|\\right/g, "");
+      text = text.replace(/\\left\s*([([{|.])/g, "$1");
+      text = text.replace(/\\right\s*([)\]}|.])/g, "$1");
+      text = text.replace(/\\left\b|\\right\b/g, "");
       text = text.replace(/\\text\{([^}]+)\}/g, "$1");
       text = text.replace(/\\mathrm\{([^}]+)\}/g, "$1");
       text = text.replace(/\\mathbf\{([^}]+)\}/g, "<b>$1</b>");
       text = text.replace(/\\mathit\{([^}]+)\}/g, "<i>$1</i>");
 
-      // Khử bao bọc LaTeX inline: \(...\), $$...$$, $...$
-      text = text.replace(/\\\((.*?)\\\)/gs, "$1");
-      text = text.replace(/\$\$(.*?)\$\$/gs, "$1");
-      text = text.replace(/\$([^$]+)\$/g, "$1");
-
       // Khử lặp từ góc
       text = text.replace(/góc\s+góc\s+/gi, "góc ");
 
-      // 2.7 Số mũ (lũy thừa) & chỉ số dưới (hỗ trợ cả {2n+1}, số âm, và số thường)
+      // 11. Số mũ (lũy thừa) & chỉ số dưới (hỗ trợ cả {2n+1}, số âm, và số thường)
       text = text.replace(/\^\{([^}]+)\}/g, "<sup>$1</sup>");
       text = text.replace(/\^([0-9a-zA-Z+-]+)/g, "<sup>$1</sup>");
       text = text.replace(/_\{([^}]+)\}/g, "<sub>$1</sub>");
       text = text.replace(/_([0-9a-zA-Z]+)/g, "<sub>$1</sub>");
 
-      // 2.8 Chỗ trống điền từ
+      // 12. Chỗ trống điền từ
       text = text.replace(/\[\[(\d+)\]\]/g, "($1) ....................");
 
-      return text;
+      // Làm sạch khoảng trắng thừa
+      text = text.replace(/[ \t]{2,}/g, " ");
+
+      return text.trim();
     }
 
     function generateWordDocument(questions, title, subTitle, gradeNum) {
