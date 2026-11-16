@@ -789,17 +789,89 @@
       padding: 6px 14px;
       border-radius: 20px;
     }
+
+    /* MENU NGANG HEADER */
+    .header-nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(241, 245, 249, 0.95);
+      padding: 3px 4px;
+      border-radius: 10px;
+      border: 1px solid var(--gray-300);
+    }
+    .header-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gray-700);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .header-nav-item:hover {
+      color: #1e40af;
+      background: rgba(255, 255, 255, 0.85);
+    }
+    .header-nav-item.active {
+      color: #ffffff;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.35);
+    }
+    .nav-badge-hot {
+      font-size: 9.5px;
+      font-weight: 800;
+      color: #dc2626;
+      background: #fee2e2;
+      border: 1px solid #fecaca;
+      padding: 1px 5px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+    .header-nav-item.active .nav-badge-hot {
+      background: #fef08a;
+      color: #854d0e;
+      border-color: #fde047;
+    }
+    @media (max-width: 640px) {
+      .header-nav-item {
+        padding: 5px 8px;
+        font-size: 12px;
+      }
+      .nav-badge-hot {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
 
   <!-- Header -->
   <header>
-    <div style="display:flex;align-items:center;gap:8px;min-width:0;">
+    <div style="display:flex;align-items:center;gap:10px;min-width:0;">
       <button id="headerHomeBtn" onclick="confirmGoHome()" title="Về màn hình chính" style="display:none;background:rgba(255,255,255,0.22);color:#fff;border:1px solid rgba(255,255,255,0.6);border-radius:8px;padding:4px 8px;font-size:15px;cursor:pointer;flex-shrink:0;">
         🏠
       </button>
-      <div class="header-title" id="topLessonTitle">Đề Cương Ôn Tập</div>
+
+      <!-- MENU NGANG -->
+      <nav class="header-nav-menu" id="headerNavMenu">
+        <a href="index.html" class="header-nav-item active" id="navDeCuong" title="Đề cương ôn tập">
+          <span>📚</span>
+          <span>Đề Cương Ôn Tập</span>
+        </a>
+        <a href="https://nguyenvantroithcs.github.io/GV/xem_diem.html" class="header-nav-item" id="navXemDiem" title="Xem kết quả thi &amp; bài chấm">
+          <span>📊</span>
+          <span>Xem Kết Quả Thi</span>
+          <span class="nav-badge-hot">Mới</span>
+        </a>
+      </nav>
+
+      <div class="header-title" id="topLessonTitle" style="display:none;">Đề Cương Ôn Tập</div>
     </div>
     
     <div style="display:flex;align-items:center;gap:8px;position:relative;flex-shrink:0;">
@@ -2881,6 +2953,10 @@
         document.getElementById("topLessonTitle").textContent = studentInfo.lessonTitle;
         const headerHome = document.getElementById("headerHomeBtn");
         if (headerHome) headerHome.style.display = "block";
+        const navMenu = document.getElementById("headerNavMenu");
+        if (navMenu) navMenu.style.display = "none";
+        const topTitle = document.getElementById("topLessonTitle");
+        if (topTitle) topTitle.style.display = "block";
         const revBanner = document.getElementById("reviewBanner");
         if (revBanner) revBanner.style.display = "none";
 
@@ -3768,6 +3844,10 @@
       document.getElementById("bottomBar").style.display = "none";
       const headerHome = document.getElementById("headerHomeBtn");
       if (headerHome) headerHome.style.display = "none";
+      const navMenu = document.getElementById("headerNavMenu");
+      if (navMenu) navMenu.style.display = "flex";
+      const topTitle = document.getElementById("topLessonTitle");
+      if (topTitle) topTitle.style.display = "none";
 
       hideCamWarningToast();
       const floatBox = document.getElementById("floatingCamBox");
